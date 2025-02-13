@@ -1,0 +1,260 @@
+/* Fond de la page entier */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff; /* Fond blanc pour tout le site */
+    margin: 0;
+    padding: 0;
+}
+/* Style de base du menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: none; /* Supprime toute bordure */
+    box-shadow: none; /* Supprime toute ombre */
+}
+
+
+
+
+/* Style des éléments de menu */
+nav ul li {
+    position: relative; /* Important pour le sous-menu */
+    padding: 0px; /* Réduit l'espace entre les éléments du menu */
+}
+
+/* Liens du menu */
+nav ul li a {
+    color: rgb(125, 125, 125);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:bold;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a {
+    color: #333; /* Couleur du texte du menu */
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet de survol du menu : texte rouge et effet de montée */
+nav ul li a:hover {
+    color: rgb(173,12,12);
+    font-weight:bold;
+}
+
+
+
+/* Sous-menu : agrandir pour s'adapter au texte */
+.dropdown-menu {
+    display: none; /* Masqué par défaut */
+    position: absolute;
+    background-color: #ffffff;
+    padding : 5px;
+    list-style-type: none;
+    margin: 0;
+    white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Ombre légère */
+    border-radius: 15px; /* Ajoute un léger arrondi */
+    
+}
+
+/* Assurez-vous que les sous-catégories ne débordent pas */
+.dropdown-menu li {
+    width: auto; /* Laissez la largeur s'ajuster en fonction du contenu */
+    padding: 10px 10px;
+    text-align: center; /* Centrer le texte */
+    word-wrap: break-word; /* Retour à la ligne automatique si nécessaire */
+}
+
+/* Sous-menu caché par défaut avec transition */
+.dropdown-menu {
+    display: block; /* Permet d'animer sans utiliser "display: none" */
+    opacity: 0;
+    visibility: hidden;
+
+    left: 50%; /* Positionner au centre de l'élément parent */
+    transform: translateX(-50%) translateY(-10px); /* Centrage horizontal et animation verticale */
+    
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+/* Affichage progressif au survol */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* Revient à la position normale */
+}
+
+
+/* Liens dans le sous-menu - gris par défaut */
+.dropdown-menu li a {
+    color: #5f5f5f; /* Gris par défaut */
+    font-size: 16px;
+    text-align: left;
+
+    text-decoration: none;
+    display: block;
+    /*padding: 5px 10px; /* Ajoute du padding pour un meilleur espacement */
+}
+
+/* Affichage du sous-menu au survol */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hover sur une sous-catégorie */
+.dropdown-menu li a:hover {
+    color: rgb(173,12,12); /* Change la couleur au survol */
+
+}
+
+
+/* Header avec logo et texte Safety Cards */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: white; /* Vous pouvez ajuster la couleur de fond */
+    z-index: 1000; /* Assurez-vous que le header est au-dessus des autres éléments */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre pour le header */
+}
+
+/* Conteneur du logo et du texte Safety Cards */
+header .logo {
+    display: flex;
+    flex-direction: column; /* Organise les éléments en colonne */
+    justify-content: center;
+    align-items: center; /* Centre tout horizontalement */
+}
+
+/* Le logo lui-même */
+header .logo img {
+    width: 100px; /* Limite la taille du logo */
+    height: auto;
+    margin-bottom: 10px; /* Espacement de 10px entre le logo et le texte */
+    margin-top: 10px;
+}
+
+/* Style pour le texte Safety Cards */
+header .logo h1 {
+    font-size: 2rem; /* Taille de la police du texte */
+    color: #333;
+    font-weight: 600;
+    margin: 0; /* Retirer toute marge autour du texte */
+}
+
+/* Barre de navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Marge au-dessus du menu pour l'espacement */
+    margin-bottom: 50px;
+}
+
+/* Style des éléments du menu */
+nav ul li {
+    margin: 0 1%; /* Espacement entre les éléments du menu */
+}
+
+
+
+
+
+
+
+/* Cache le menu burger par défaut sur grand écran */
+.menu-burger,
+.menu {
+    display: none;
+}
+
+/* Cache le menu normal sur tablette et mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Cache le menu normal */
+    }
+    
+    .menu-burger {
+        display: block; /* Affiche le burger */
+    }
+}
+
+.menu.show {
+    display: flex; /* Affiche le menu burger lorsqu'on clique */
+    flex-direction: column;
+    background-color: #dddddd; /* Ajoute une couleur de fond */
+    width: 100%;
+}
+
+
+/* Burger menu (caché par défaut) */
+.menu-burger {
+    display: none;
+    cursor: pointer;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+}
+
+
+
+/* Sous-menus */
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #ffffff;
+    width: 180px;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+/* ➡️ Version responsive */
+@media (max-width: 768px) {
+    .menu {
+      display: none; /* Cacher le menu normal */
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .menu.show {
+      display: flex; /* Afficher le menu burger quand on clique dessus */
+      background-color: #dddddd;
+    }
+  
+    .menu-burger {
+      display: block; /* Afficher le burger menu */
+    }
+  
+    /* Style pour le menu actif */
+    .submenu {
+      position: static;
+      background-color: #ffffff;
+      width: 100%;
+    }
+  
+    /* Ajout d'une couleur au menu principal quand ouvert */
+    .submenu-parent.active > a {
+      background-color: #ffffff;
+      font-weight: bold;
+    }
+  }

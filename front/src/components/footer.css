@@ -1,0 +1,18 @@
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Section */
+section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
