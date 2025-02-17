@@ -5,9 +5,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Style de base du menu */
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Supprime les puces */
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,56 +16,50 @@ nav ul {
     background-color: #ffffff;
     border-bottom: none; /* Supprime toute bordure */
     box-shadow: none; /* Supprime toute ombre */
+    margin-top: 50px; /* Marge au-dessus du menu pour l'espacement */
+    margin-bottom: 50px;
 }
-
-
-
 
 /* Style des éléments de menu */
 nav ul li {
     position: relative; /* Important pour le sous-menu */
     padding: 0px; /* Réduit l'espace entre les éléments du menu */
+    margin: 0 1%; /* Espacement entre les éléments du menu */
+    list-style: none; /* Supprime les puces */
 }
 
 /* Liens du menu */
 nav ul li a {
-    color: rgb(125, 125, 125);
-    text-decoration: none;
+    color: #333; /* Couleur du texte du menu */
+    text-decoration: none; /* Supprime la couleur bleue et le soulignement */
     font-size: 16px;
-    font-weight:bold;
+    font-weight: bold;
     display: block;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a {
-    color: #333; /* Couleur du texte du menu */
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Effet de survol du menu : texte rouge et effet de montée */
+/* Effet de survol du menu : texte rouge */
 nav ul li a:hover {
-    color: rgb(173,12,12);
-    font-weight:bold;
+    color: rgb(173, 12, 12);
+    font-weight: bold;
 }
-
-
 
 /* Sous-menu : agrandir pour s'adapter au texte */
 .dropdown-menu {
-    display: none; /* Masqué par défaut */
+    display: block; /* Permet d'animer sans utiliser "display: none" */
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     background-color: #ffffff;
-    padding : 5px;
+    padding: 5px;
     list-style-type: none;
     margin: 0;
     white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Ombre légère */
     border-radius: 15px; /* Ajoute un léger arrondi */
-    
+    left: 50%; /* Positionner au centre de l'élément parent */
+    transform: translateX(-50%) translateY(-10px); /* Centrage horizontal et animation verticale */
 }
 
 /* Assurez-vous que les sous-catégories ne débordent pas */
@@ -73,18 +68,7 @@ nav ul li a:hover {
     padding: 10px 10px;
     text-align: center; /* Centrer le texte */
     word-wrap: break-word; /* Retour à la ligne automatique si nécessaire */
-}
-
-/* Sous-menu caché par défaut avec transition */
-.dropdown-menu {
-    display: block; /* Permet d'animer sans utiliser "display: none" */
-    opacity: 0;
-    visibility: hidden;
-
-    left: 50%; /* Positionner au centre de l'élément parent */
-    transform: translateX(-50%) translateY(-10px); /* Centrage horizontal et animation verticale */
-    
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
+    list-style: none; /* Supprime les puces */
 }
 
 /* Affichage progressif au survol */
@@ -94,29 +78,19 @@ nav ul li a:hover {
     transform: translateX(-50%) translateY(0); /* Revient à la position normale */
 }
 
-
 /* Liens dans le sous-menu - gris par défaut */
 .dropdown-menu li a {
     color: #5f5f5f; /* Gris par défaut */
     font-size: 16px;
     text-align: left;
-
-    text-decoration: none;
-    display: block;
-    /*padding: 5px 10px; /* Ajoute du padding pour un meilleur espacement */
-}
-
-/* Affichage du sous-menu au survol */
-.dropdown:hover .dropdown-menu {
+    text-decoration: none; /* Supprime la couleur bleue et le soulignement */
     display: block;
 }
 
 /* Hover sur une sous-catégorie */
 .dropdown-menu li a:hover {
-    color: rgb(173,12,12); /* Change la couleur au survol */
-
+    color: rgb(173, 12, 12); /* Change la couleur au survol */
 }
-
 
 /* Header avec logo et texte Safety Cards */
 header {
@@ -154,52 +128,32 @@ header .logo h1 {
     margin: 0; /* Retirer toute marge autour du texte */
 }
 
-/* Barre de navigation */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px; /* Marge au-dessus du menu pour l'espacement */
-    margin-bottom: 50px;
-}
-
-/* Style des éléments du menu */
-nav ul li {
-    margin: 0 1%; /* Espacement entre les éléments du menu */
-}
-
-
-
-
-
-
-
 /* Cache le menu burger par défaut sur grand écran */
 .menu-burger,
 .menu {
     display: none;
 }
 
-/* Cache le menu normal sur tablette et mobile */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Cache le menu normal */
-    }
-    
-    .menu-burger {
-        display: block; /* Affiche le burger */
-    }
-}
 
-.menu.show {
-    display: flex; /* Affiche le menu burger lorsqu'on clique */
+.menu {
+    display: none; /* Cacher le menu par défaut */
     flex-direction: column;
     background-color: #dddddd; /* Ajoute une couleur de fond */
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding-top: 60px; /* Ajouter un espacement en haut */
 }
 
+.menu.show {
+    display: flex; /* Afficher le menu burger lorsqu'on clique */
+    transform: translateX(0);
+}
 
 /* Burger menu (caché par défaut) */
 .menu-burger {
@@ -209,7 +163,23 @@ nav ul li {
     color: rgb(0, 0, 0);
 }
 
+.menu.show .menu-burger {
+    display: none; /* Cacher l'icône du burger lors de l'ouverture */
+}
 
+/* Bouton de fermeture */
+.menu-close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu.show .menu-close {
+    display: block;
+}
 
 /* Sous-menus */
 .submenu {
@@ -228,33 +198,107 @@ nav ul li {
     padding: 10px;
 }
 
+
+
+
+
+
+
 /* ➡️ Version responsive */
 @media (max-width: 768px) {
-    .menu {
-      display: none; /* Cacher le menu normal */
-      flex-direction: column;
-      width: 100%;
+
+    nav ul {
+        display: none; /* Cache le menu normal */
     }
-  
-    .menu.show {
-      display: flex; /* Afficher le menu burger quand on clique dessus */
-      background-color: #dddddd;
-    }
-  
+
     .menu-burger {
-      display: block; /* Afficher le burger menu */
+        display: block; /* Affiche le burger */
     }
-  
-    /* Style pour le menu actif */
-    .submenu {
-      position: static;
-      background-color: #ffffff;
-      width: 100%;
+    .menu-burger {
+        display: block;
+        cursor: pointer;
+        font-size: 40px;
+        color: #000;
+        position: absolute; /* Change relative en absolute */
+        top: 10px; /* Ajuste cette valeur pour monter le burger */
+        left: 20px;
+        z-index: 1100;
     }
-  
-    /* Ajout d'une couleur au menu principal quand ouvert */
-    .submenu-parent.active > a {
-      background-color: #ffffff;
-      font-weight: bold;
+    
+    
+
+    header .logo {
+        flex-direction: row; /* Organise les éléments en ligne */
+        justify-content: center; /* Aligne les éléments à gauche */
+        padding: 10px; /* Ajoute un peu de padding */
+        align-items: center;
     }
-  }
+
+    header .logo img {
+        width: 50px; /* Ajuste la taille du logo pour mobile */
+        margin-bottom: 0; /* Supprime la marge inférieure */
+        margin-right: 10px; /* Ajoute une marge à droite */
+    }
+
+    header .logo h1 {
+        font-size: 1.5rem; /* Ajuste la taille de la police pour mobile */
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 80%;
+        max-width: 320px;
+        height:100dvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 0 20px 20px 0;
+        padding: 20px;
+        padding-top: 60px; /* Ajouter un espacement en haut */
+    }
+    
+    .menu.show {
+        transform: translateX(0);
+    }
+    
+    .menu-close {
+        display: block;
+        font-size: 40px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .menu ul li {
+        margin-bottom: 20px; /* Ajouter un espacement entre les éléments du menu */
+        list-style: none; /* Supprime les puces */
+    }
+    
+    .menu ul li a {
+        font-size: 24px; /* Augmenter la taille du texte */
+        padding: 10px 0; /* Ajouter un espacement interne */
+        color: #333; /* Couleur du texte du menu */
+        font-weight: 600; /* Poids de la police */
+        text-decoration: none; /* Supprime la couleur bleue et le soulignement */
+    }
+
+    .back-button {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .back-button span {
+        margin-left: 10px;
+    }
+}

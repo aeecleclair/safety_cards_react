@@ -1,7 +1,7 @@
 const Sexe_amour = () => {
     return (
       <div>
-        <h1>Risques addictifs</h1>
+        <h1>Sexualité et vie amoureuse </h1>
         <p>Voici la page Sexualité et vie amoureuse</p>
       </div>
     );

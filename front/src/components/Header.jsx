@@ -57,20 +57,19 @@ const menuItems = [
       { title: "Addiction aux écrans et réseaux sociaux", link: "/risques-addictifs/ecrans" },
     ],
   },
-  
 ];
 
-const DropdownMenu = ({ item }) => {
+const DropdownMenu = ({ item, closeMenu }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <li className="dropdown" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <Link to={item.link}>{item.title}</Link>
+      <Link to={item.link} onClick={closeMenu}>{item.title}</Link>
       {open && (
         <ul className="dropdown-menu">
           {item.submenu.map((sub, index) => (
             <li key={index}>
-              <Link to={sub.link}>{sub.title}</Link>
+              <Link to={sub.link} onClick={closeMenu}>{sub.title}</Link>
             </li>
           ))}
         </ul>
@@ -95,6 +94,10 @@ const Header = () => {
     };
   }, []);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header>
       <div className="logo">
@@ -105,33 +108,36 @@ const Header = () => {
       {/* Navigation principale */}
       <nav>
         <ul>
-          <li><Link to="/">Accueil</Link></li>
+          <li><Link to="/" onClick={closeMenu}>Accueil</Link></li>
           {menuItems.map((item, index) => (
-            <DropdownMenu key={index} item={item} />
+            <DropdownMenu key={index} item={item} closeMenu={closeMenu} />
           ))}
         </ul>
       </nav>
 
       {/* Menu Burger pour mobile */}
-      <div className="menu-burger" onClick={() => setMenuOpen(!menuOpen)}>
+      <div className={`menu-burger ${menuOpen ? 'hidden' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
         &#9776;
       </div>
       {menuOpen && (
-        <ul className="menu show">
-          <li><Link to="/">Accueil</Link></li>
-          {menuItems.map((item, index) => (
-            <li key={index} className="submenu-parent">
-              <Link to={item.link} className="submenu-toggle">{item.title}</Link>
-              <ul className="submenu">
-                {item.submenu.map((sub, subIndex) => (
-                  <li key={subIndex}>
-                    <Link to={sub.link}>{sub.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+        <div className="menu show">
+          <span className="menu-close" onClick={closeMenu}>&times;</span>
+          <ul>
+            <li><Link to="/" onClick={closeMenu}>Accueil</Link></li>
+            {menuItems.map((item, index) => (
+              <li key={index} className="submenu-parent">
+                <Link to={item.link} className="submenu-toggle" onClick={closeMenu}>{item.title}</Link>
+                <ul className="submenu">
+                  {item.submenu.map((sub, subIndex) => (
+                    <li key={subIndex}>
+                      <Link to={sub.link} onClick={closeMenu}>{sub.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </header>
   );
