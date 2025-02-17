@@ -22,54 +22,59 @@ const menuItems = [
     ],
   },
   {
-    title: "⚕️Santé",
+    title: "⚕️ Santé",
     link: "/Sante-main",
     submenu: [
-      { title: "Addiction à la pornographie", link: "/risques-addictifs/pornographie" },
-      { title: "Addictions aux drogues", link: "/risques-addictifs/drogues" },
-      { title: "Addiction aux écrans et réseaux sociaux", link: "/risques-addictifs/ecrans" },
+      { title: "Hygiène et bien-être", link: "/sante/hygiene" },
+      { title: "Sommeil et alimentation", link: "/sante/sommeil-alimentation" },
+      { title: "Activité physique", link: "/sante/activite-physique" },
     ],
   },
   {
     title: "💖 Sexualité et vie amoureuse",
     link: "/Sexe-amour-main",
     submenu: [
-      { title: "Addiction à la pornographie", link: "/risques-addictifs/pornographie" },
-      { title: "Addictions aux drogues", link: "/risques-addictifs/drogues" },
-      { title: "Addiction aux écrans et réseaux sociaux", link: "/risques-addictifs/ecrans" },
+      { title: "Consentement", link: "/sexe-amour/consentement" },
+      { title: "Contraception", link: "/sexe-amour/contraception" },
+      { title: "IST et prévention", link: "/sexe-amour/ist-prevention" },
     ],
   },
   {
     title: "🕰️ Vie courante",
     link: "/Vie-courante-main",
     submenu: [
-      { title: "Addiction à la pornographie", link: "/risques-addictifs/pornographie" },
-      { title: "Addictions aux drogues", link: "/risques-addictifs/drogues" },
-      { title: "Addiction aux écrans et réseaux sociaux", link: "/risques-addictifs/ecrans" },
+      { title: "Gestion du temps", link: "/vie-courante/gestion-temps" },
+      { title: "Budget et finances", link: "/vie-courante/budget" },
+      { title: "Autonomie", link: "/vie-courante/autonomie" },
     ],
   },
   {
     title: "🧑‍🤝‍🧑 Vie de groupe",
     link: "/Vie-groupe-main",
     submenu: [
-      { title: "Addiction à la pornographie", link: "/risques-addictifs/pornographie" },
-      { title: "Addictions aux drogues", link: "/risques-addictifs/drogues" },
-      { title: "Addiction aux écrans et réseaux sociaux", link: "/risques-addictifs/ecrans" },
+      { title: "Travail d'équipe", link: "/vie-groupe/travail-equipe" },
+      { title: "Communication", link: "/vie-groupe/communication" },
+      { title: "Conflits et résolution", link: "/vie-groupe/conflits" },
     ],
   },
 ];
 
-const DropdownMenu = ({ item, closeMenu }) => {
+// Composant Dropdown (menu déroulant pour le desktop)
+const DropdownMenu = ({ item }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <li className="dropdown" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <Link to={item.link} onClick={closeMenu}>{item.title}</Link>
+    <li
+      className="dropdown"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <Link to={item.link}>{item.title}</Link>
       {open && (
         <ul className="dropdown-menu">
           {item.submenu.map((sub, index) => (
             <li key={index}>
-              <Link to={sub.link} onClick={closeMenu}>{sub.title}</Link>
+              <Link to={sub.link}>{sub.title}</Link>
             </li>
           ))}
         </ul>
@@ -78,8 +83,10 @@ const DropdownMenu = ({ item, closeMenu }) => {
   );
 };
 
+// Composant principal Header
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -94,10 +101,6 @@ const Header = () => {
     };
   }, []);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
   return (
     <header>
       <div className="logo">
@@ -105,38 +108,47 @@ const Header = () => {
         <h1>Safety Cards</h1>
       </div>
 
-      {/* Navigation principale */}
-      <nav>
+      {/* Menu Desktop */}
+      <nav className="desktop-menu">
         <ul>
-          <li><Link to="/" onClick={closeMenu}>Accueil</Link></li>
+          <li><Link to="/">Accueil</Link></li>
           {menuItems.map((item, index) => (
-            <DropdownMenu key={index} item={item} closeMenu={closeMenu} />
+            <DropdownMenu key={index} item={item} />
           ))}
         </ul>
       </nav>
 
       {/* Menu Burger pour mobile */}
-      <div className={`menu-burger ${menuOpen ? 'hidden' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+      <div className="menu-burger" onClick={() => setMenuOpen(true)}>
         &#9776;
       </div>
+
       {menuOpen && (
         <div className="menu show">
-          <span className="menu-close" onClick={closeMenu}>&times;</span>
-          <ul>
-            <li><Link to="/" onClick={closeMenu}>Accueil</Link></li>
-            {menuItems.map((item, index) => (
-              <li key={index} className="submenu-parent">
-                <Link to={item.link} className="submenu-toggle" onClick={closeMenu}>{item.title}</Link>
-                <ul className="submenu">
-                  {item.submenu.map((sub, subIndex) => (
-                    <li key={subIndex}>
-                      <Link to={sub.link} onClick={closeMenu}>{sub.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
+          <span className="menu-close" onClick={() => setMenuOpen(false)}>&times;</span>
+          {activeMenu ? (
+            <div className="submenu-container">
+              <button className="back-button" onClick={() => setActiveMenu(null)}>← Retour</button>
+              <ul>
+                {activeMenu.submenu.map((sub, subIndex) => (
+                  <li key={subIndex}>
+                    <Link to={sub.link} onClick={() => setMenuOpen(false)}>{sub.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <ul>
+              <li><Link to="/" onClick={() => setMenuOpen(false)}>Accueil</Link></li>
+              {menuItems.map((item, index) => (
+                <li key={index}>
+                  <button className="submenu-toggle" onClick={() => setActiveMenu(item)}>
+                    {item.title} 
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
     </header>
