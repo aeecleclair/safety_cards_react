@@ -16,8 +16,7 @@ nav ul {
     background-color: #ffffff;
     border-bottom: none; /* Supprime toute bordure */
     box-shadow: none; /* Supprime toute ombre */
-    margin-top: 50px; /* Marge au-dessus du menu pour l'espacement */
-    margin-bottom: 50px;
+    margin-top: 30px; /* Marge au-dessus du menu pour l'espacement */
 }
 
 /* Style des éléments de menu */
@@ -39,7 +38,7 @@ nav ul li a {
 }
 
 /* Effet de survol du menu : texte rouge */
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
     color: rgb(173, 12, 12);
     font-weight: 600;
 }
@@ -60,6 +59,7 @@ nav ul li a:hover {
     border-radius: 15px; /* Ajoute un léger arrondi */
     left: 50%; /* Positionner au centre de l'élément parent */
     transform: translateX(-50%) translateY(-10px); /* Centrage horizontal et animation verticale */
+    z-index: 1000;
 }
 
 /* Assurez-vous que les sous-catégories ne débordent pas */
@@ -94,14 +94,12 @@ nav ul li a:hover {
 
 /* Header avec logo et texte Safety Cards */
 header {
-    position: fixed;
+    position: relative;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
     background-color: white; /* Vous pouvez ajuster la couleur de fond */
-    z-index: 1000; /* Assurez-vous que le header est au-dessus des autres éléments */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre pour le header */
+    padding-bottom: 20px;
 }
 
 /* Conteneur du logo et du texte Safety Cards */
@@ -110,14 +108,14 @@ header .logo {
     flex-direction: column; /* Organise les éléments en colonne */
     justify-content: center;
     align-items: center; /* Centre tout horizontalement */
-}
+    }
 
 /* Le logo lui-même */
 header .logo img {
     width: 100px; /* Limite la taille du logo */
     height: auto;
     margin-bottom: 10px; /* Espacement de 10px entre le logo et le texte */
-    margin-top: 10px;
+margin-top: 10px;
 }
 
 /* Style pour le texte Safety Cards */
@@ -127,9 +125,6 @@ header .logo h1 {
     font-weight: 600;
     margin: 0; /* Retirer toute marge autour du texte */
 }
-
-
-
 
 /* Cache le menu burger par défaut sur grand écran */
 .menu-burger,
@@ -149,25 +144,31 @@ header .logo h1 {
 
     .menu-burger {
         display: block; /* Affiche le burger */
-    }
-    .menu-burger {
-        display: block;
         cursor: pointer;
         font-size: 40px;
         color: #000;
         position: absolute; /* Change relative en absolute */
         top: 10px; /* Ajuste cette valeur pour monter le burger */
         left: 20px;
-        z-index: 1100;
+        z-index: 10;
     }
-    
-    
+
+
+    header {
+        position: fixed; /* Fixe le header en haut de la page */
+        top: 0;
+        width: 100%;
+        background-color: white; /* Vous pouvez ajuster la couleur de fond */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre pour le header */
+        padding: 10px 0; /* Ajoute un padding pour éviter que le contenu ne soit rogné */
+        z-index: 1000; /* Assurez-vous que le header est au-dessus des autres éléments */
+    }
 
     header .logo {
         flex-direction: row; /* Organise les éléments en ligne */
-        justify-content: center; /* Aligne les éléments à gauche */
+        justify-content: center; /* Centre les éléments horizontalement */
+        align-items: center; /* Centre les éléments verticalement */
         padding: 10px; /* Ajoute un peu de padding */
-        align-items: center;
     }
 
     header .logo img {
@@ -179,14 +180,14 @@ header .logo h1 {
     header .logo h1 {
         font-size: 1.5rem; /* Ajuste la taille de la police pour mobile */
     }
-    
+
     .menu {
         display: flex;
         flex-direction: column;
         background-color: #ffffff;
         width: 80%;
         max-width: 320px;
-        height:100dvh;
+        height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
@@ -198,11 +199,11 @@ header .logo h1 {
         padding: 20px;
         padding-top: 60px; /* Ajouter un espacement en haut */
     }
-    
+
     .menu.show {
         transform: translateX(0);
     }
-    
+
     .menu-close {
         display: block;
         cursor: pointer;
@@ -213,37 +214,33 @@ header .logo h1 {
         right: 20px;
         z-index: 1100;
     }
-    
+
     .menu ul li {
         margin-bottom: 20px; /* Ajouter un espacement entre les éléments du menu */
         list-style: none; /* Supprime les puces */
-        
     }
-    
 
     .menu ul li a {
-        display: flex; 
-        align-items: center; 
+        display: flex;
+        align-items: center;
         justify-content: space-between;
-        background-color: #0000001a; 
-        color: #000000; 
+        background-color: #0000001a;
+        color: #000000;
         font-weight: 600;
         padding: 12px 16px;
         border-radius: 10px;
         text-decoration: none;
         transition: background 0.3s ease-in-out;
     }
-    
+
     .menu ul li a:hover {
-        background-color: #000000; 
+        background-color: #000000;
         color: rgb(255, 255, 255);
     }
-    
 
     /*Boutons pour ouvrir les sous menus*/
-
     .submenu-toggle {
-        background-color: #0000001a; 
+        background-color: #0000001a;
         color: rgb(0, 0, 0);
         font-weight: 600;
         border: none;
@@ -257,22 +254,20 @@ header .logo h1 {
         border-radius: 10px;
         transition: background 0.3s ease-in-out;
         text-align: left;
-      }
-      
-      .submenu-toggle:hover {
-        background-color: #000000; 
-        color: rgb(255, 255, 255);
+    }
 
-      }
-      
-      .submenu-toggle::after {
+    .submenu-toggle:hover {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+    }
+
+    .submenu-toggle::after {
         content: " →";
         font-weight: bold;
-      }
-      
+    }
 
     .back-button {
-        color: #000000; 
+        color: #000000;
         font-size: 24px;
         font-weight: bold;
         cursor: pointer;
@@ -280,9 +275,8 @@ header .logo h1 {
         border: none;
         text-align: left;
     }
-    
+
     .back-button:hover {
         color: #00000085; /* Rouge plus foncé au survol */
     }
-    
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Importation de Link pour les liens
 import "./header.css";
 
 const menuItems = [
@@ -25,13 +25,18 @@ const menuItems = [
     title: "⚕️ Santé",
     link: "/Sante-main",
     submenu: [
-      { title: "Hygiène et bien-être", link: "/sante/hygiene" },
-      { title: "Sommeil et alimentation", link: "/sante/sommeil-alimentation" },
-      { title: "Activité physique", link: "/sante/activite-physique" },
+      { title: "Automutilation", link: "/automutil" },
+      { title: "Dépression", link: "/depression" },
+      { title: "Déracinement culturel", link: "/deracinement" },
+      { title: "Endométriose & douleurs menstruelles", link: "/endom" },
+      { title: "Situation de handicap", link: "/handicap" },
+      { title: "Sommeil", link: "/sommeil" },
+      { title: "TCA", link: "/tca" },
+      { title: "Tentative de suicide", link: "/suicide" },
     ],
   },
   {
-    title: "💖 Sexualité et vie amoureuse",
+    title: "💖 Sexualité et amour",
     link: "/Sexe-amour-main",
     submenu: [
       { title: "Consentement", link: "/sexe-amour/consentement" },
@@ -43,9 +48,16 @@ const menuItems = [
     title: "🕰️ Vie courante",
     link: "/Vie-courante-main",
     submenu: [
-      { title: "Gestion du temps", link: "/vie-courante/gestion-temps" },
-      { title: "Budget et finances", link: "/vie-courante/budget" },
-      { title: "Autonomie", link: "/vie-courante/autonomie" },
+      { title: "🚗 Accidents de la circulation", link: "/accident" },
+      { title: "🥬 Alimentation", link: "/aliment" },
+      { title: "😶‍🌫️ Anxiété", link: "/anxiete" },
+      { title: "🌿 Démarches écologiques", link: "/ecolo" },
+      { title: "🧘 Détente & relaxation", link: "/detente" },
+      { title: "💰 Précarité économique", link: "/prec_eco" },
+      { title: "🩸 Précarité menstruelle", link: "/prec_mens" },
+      { title: "⛹️ Santé physique & sport", link: "/sport" },
+      { title: "🏠 Sédentarité", link: "/sedentarite" },
+      { title: "🔥 Risques d'incendies", link: "/incendie" },
     ],
   },
   {
@@ -111,9 +123,18 @@ const Header = () => {
       {/* Menu Desktop */}
       <nav className="desktop-menu">
         <ul>
-          <li><Link to="/">Accueil</Link></li>
+          <li><Link to="/" className={location.pathname === "/" ? "active" : ""}>Accueil</Link></li>
           {menuItems.map((item, index) => (
-            <DropdownMenu key={index} item={item} />
+            <li key={index} className="dropdown">
+              <Link to={item.link} className={location.pathname.startsWith(item.link) ? "active" : ""}>{item.title}</Link>
+              <ul className="dropdown-menu">
+                {item.submenu.map((sub, subIndex) => (
+                  <li key={subIndex}>
+                    <Link to={sub.link} className={location.pathname === sub.link ? "active" : ""}>{sub.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
           ))}
         </ul>
       </nav>
