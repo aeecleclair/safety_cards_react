@@ -99,6 +99,8 @@ const DropdownMenu = ({ item }) => {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null); //texte rouge lorsque sous menu ouvert
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -123,19 +125,25 @@ const Header = () => {
       {/* Menu Desktop */}
       <nav className="desktop-menu">
         <ul>
-          <li><Link to="/" className={location.pathname === "/" ? "active" : ""}>Accueil</Link></li>
+          <li><Link to="/">Accueil</Link></li>
+
           {menuItems.map((item, index) => (
-            <li key={index} className="dropdown">
-              <Link to={item.link} className={location.pathname.startsWith(item.link) ? "active" : ""}>{item.title}</Link>
-              <ul className="dropdown-menu">
+            <li key={index} className="dropdown" >
+              <Link to={item.link} className={`a ${hoveredIndex === index ? "hovered" : ""}`}>{item.title}</Link>
+
+              <ul className="dropdown-menu" 
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}>
                 {item.submenu.map((sub, subIndex) => (
                   <li key={subIndex}>
-                    <Link to={sub.link} className={location.pathname === sub.link ? "active" : ""}>{sub.title}</Link>
+                    <Link to={sub.link}>{sub.title}</Link>
                   </li>
                 ))}
               </ul>
+
             </li>
           ))}
+
         </ul>
       </nav>
 

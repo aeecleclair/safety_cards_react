@@ -1,11 +1,11 @@
 .quote-card {
-    width:70%;
+    width:100%;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
   }
   
   .quote-text {

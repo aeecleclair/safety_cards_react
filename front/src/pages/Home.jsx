@@ -1,9 +1,18 @@
 import QuoteCard from "../components/Citation"; 
 import ImageTextPopup from "../components/Cartes"; 
 import ListeNumerotee from "../components/Listes";
+import ExternalLinkBlock from "../components/Liens-ext";
+import React from "react";
+import "../App.css";
 
 
-const items = ["Élément 1", "Élément 2", "Élément 3"];
+const items = [
+  { title: "Approcher", subtitle: "Approcher la personne, évaluer et assister" },
+  { title: "Écouter", subtitle: "Écouter, activement et sans jugement" },
+  { title: "Réconforter", subtitle: "Réconforter et informer" },
+  { title: "Encourager", subtitle: "Encourager à aller vers des professionnels" },
+  { title: "Renseigner", subtitle: "Renseigner sur les autres ressources disponibles" },
+];
 
 
 
@@ -13,12 +22,34 @@ const quotes = [
   { text: "On ne voit bien qu’avec le cœur. L’essentiel est invisible pour les yeux.", author: "Antoine de Saint-Exupéry" },
 ];
 
+const resources = [
+  {
+    link: "https://www.nightline.fr/lyon",
+    imageSrc: "/src/assets/nightline_logo.png",
+    label: "Nightline",
+    description: "Un service d'écoute nocturne tous les soirs de 21h à 2h30",
+  },
+  {
+    link: "https://www.github.com",
+    
+    label: "GitHub",
+    description: "Plateforme de gestion de code source",
+  },
+  {
+    link: "https://www.wikipedia.org",
+    label: "Wikipedia",
+    description: "Encyclopédie en ligne gratuite",
+  },
+];
+
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
-      <h1 className="text-3xl font-bold mb-4">Bienvenue sur Safety Cards</h1>
-
-      <p className="text-lg mb-8">Ceci est la page d'accueil.</p>
+    <div className = "page">
+      <h1 className="titre-page">Bienvenue sur Safety Cards</h1>
+      <h2 className="sous-titre-page">Des cartes pour apprendre à se protéger</h2>
+      <p className="text-classic">Bienvenue sur Safety Cards, un site pour apprendre à se protéger et à protéger les autres. Vous trouverez ici des cartes sur différents sujets, des citations inspirantes et des listes numérotées pour vous aider à mieux comprendre les risques et les enjeux de la vie quotidienne.
+        <em> Généré par IA.</em>
+      </p>
       <QuoteCard quotes={quotes} />
       <ImageTextPopup
         image="./src/assets/feu.jpg"
@@ -31,10 +62,17 @@ const Home = () => {
     
 
         <ListeNumerotee 
-         title="Ma Liste Numérotée" 
-          subtitle="Voici quelques éléments" 
+         title="Plan d'action pour les Premiers Secours en Santé Mentale" 
+          subtitle="Comment agir face à une personne en détresse ?" 
           items={items} 
         />
+
+
+      <ExternalLinkBlock
+        title="Ressources utiles"
+        subtitle="Quelques sites utiles à visiter"
+        resources={resources}
+      />
 
     </div>
   );

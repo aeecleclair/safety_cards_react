@@ -1,0 +1,74 @@
+/* ExternalLinkBlock.css */
+/* ExternalLinkBlock.css */
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+  }
+  
+.link-block {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px); /* Ajustement pour 3 colonnes */
+    min-width: 200px;
+}
+  
+  @media (max-width: 1000px) {
+    .link-block {
+      flex: 1 1 calc(50% - 10px); /* 2 colonnes en tablette */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .link-block {
+      flex: 1 1 100%; /* 1 colonne sur mobile */
+    }
+  }
+
+.block-title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.block-subtitle{
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0;
+}
+  
+  
+.link-block:hover {
+    background: #ddd;
+}
+  
+.link-image {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+  
+.link-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+  
+.link-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 5px;
+}
+  
