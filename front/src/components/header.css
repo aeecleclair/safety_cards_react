@@ -39,7 +39,7 @@ nav ul li a {
 
 /* Effet de survol du menu : texte rouge */
 nav ul li a:hover, nav ul li a.hovered {
-    color: rgb(173, 12, 12);
+    color: #b22133;
     font-weight: 600;
 }
 
@@ -89,7 +89,7 @@ nav ul li a:hover, nav ul li a.hovered {
 
 /* Hover sur une sous-catégorie */
 .dropdown-menu li a:hover {
-    color: rgb(173, 12, 12); /* Change la couleur au survol */
+    color: #b22133; /* Change la couleur au survol */
 }
 
 /* Header avec logo et texte Safety Cards */
@@ -132,6 +132,19 @@ header .logo h1 {
     display: none;
 }
 
+/*Bouton quitter le site*/
+
+
+.quit-site {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.close-website-icon {
+    color: #b22133;
+    
+}
 
 
 
@@ -293,4 +306,23 @@ header .logo h1 {
         color: #ffffff; 
         background-color: #000000;
     }
+
+    /*Bouton quitter le site*/
+
+
+    .quit-site {
+        display: block;
+        position: absolute;
+        top: 90%;
+        padding:0;
+        font-size: 0.8rem;
+    
+    }
+    .close-website-icon {
+        color: #b22133;
+        margin-right: 5px; /* Ajustez cette valeur selon vos besoins */
+        font-size: 1.2em; /* Ajustez la taille de la croix */
+        cursor: pointer;
+    
+}
 }

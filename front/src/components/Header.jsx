@@ -119,7 +119,7 @@ const Header = () => {
     <header>
       <div className="logo">
         <img src="/logo.png" alt="Logo Safety Cards" />
-        <h1>Safety Cards</h1>
+        <h1>safety cards</h1>
       </div>
 
       {/* Menu Desktop */}
@@ -142,7 +142,9 @@ const Header = () => {
               </ul>
 
             </li>
+
           ))}
+          <li className="quit-site"><Link to="https://campus.ec-lyon.fr/"><span className="close-website-icon">&times;</span> Quitter le site</Link></li>
 
         </ul>
       </nav>
@@ -176,6 +178,7 @@ const Header = () => {
                   </button>
                 </li>
               ))}
+              <li className="quit-site"><Link to="https://campus.ec-lyon.fr/" ><span className="close-website-icon">&times;</span> Quitter le site</Link></li>
             </ul>
           )}
         </div>

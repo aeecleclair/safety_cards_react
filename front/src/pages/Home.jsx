@@ -2,8 +2,10 @@ import QuoteCard from "../components/Citation";
 import ImageTextPopup from "../components/Cartes"; 
 import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
+import ContactCard from "../components/Contact";
 import React from "react";
 import "../App.css";
+
 
 
 const items = [
@@ -61,11 +63,50 @@ const Home = () => {
       />
     
 
-        <ListeNumerotee 
+      <ListeNumerotee 
          title="Plan d'action pour les Premiers Secours en Santé Mentale" 
           subtitle="Comment agir face à une personne en détresse ?" 
           items={items} 
-        />
+      />
+
+      <ContactCard
+        image="/src/assets/nightline_logo.png" 
+        title="Nightline Lyon"
+        subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
+        phone="04 85 30 00 10"
+        email=""
+        hours="Tous les soirs de 21h à 2h30"
+        textButton="Voir le site web"
+        link="https://www.nightline.fr/lyon"
+      />
+
+      <ContactCard
+        image="/src/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        title="Infirmerie"
+        subtitle="Infirmerie de Centrale Lyon"
+        phone="Voir les informations"
+        email="Voir les informations"
+        hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
+        textButton="Voir les informations"
+        link="https://www.nightline.fr/lyon"
+
+        bgColor="#ffffff"    //informations facultatives
+        textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+
+      />
+
+      <ContactCard
+        image="/src/assets/3114.jpg" 
+        title="3114"
+        subtitle="Numéro national de prévention du suicide"
+        phone="3114"
+        email=""
+        hours="24h/24 et 7j/7"
+        textButton="Voir le site web"
+        link="https://3114.fr/"
+
+      />
 
 
       <ExternalLinkBlock

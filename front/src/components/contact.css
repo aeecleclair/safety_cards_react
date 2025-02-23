@@ -1,0 +1,82 @@
+.contact-card {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+    border: 2px solid;
+    margin-bottom : 40px;
+    
+  }
+  
+  .contact-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+
+    .contact-info h2 {
+        font-size: 2rem;
+        margin : 0;
+        font-weight: bold
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+        margin : 5px 0;
+    }
+
+  .link-button{
+    background-color: #ffffff00;
+    border: 2px solid white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.link-button:hover {
+    background-color: #ffffff;
+    border: 2px solid white;
+}
+
+
+ 
+@media (max-width: 480px) {
+    .contact-card {
+      flex-direction: column; /* Change la direction des éléments en colonne */
+      align-items: flex-start; /* Aligne les éléments au début */
+    }
+  
+    .contact-image {
+      margin-right: 0; /* Supprime la marge droite */
+      margin-bottom: 20px; /* Ajoute une marge en bas */
+      margin : auto;
+    }
+  
+    .link-block {
+      flex: 1 1 100%;
+    }
+
+    .link-button{
+        display: block;
+        margin: auto; /* Centre horizontalement et ajoute un espace */
+        margin-top: 20px;
+        text-align: center;
+        
+    }
+  }
