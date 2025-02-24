@@ -59,7 +59,7 @@ nav ul li a:hover, nav ul li a.hovered {
     border-radius: 15px; /* Ajoute un léger arrondi */
     left: 50%; /* Positionner au centre de l'élément parent */
     transform: translateX(-50%) translateY(-10px); /* Centrage horizontal et animation verticale */
-    z-index: 1000;
+    z-index: 10000;
 }
 
 /* Assurez-vous que les sous-catégories ne débordent pas */

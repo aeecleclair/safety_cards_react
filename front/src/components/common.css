@@ -1,0 +1,132 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .bullet-list,
+  .numbered-list {
+    padding: 10px;
+  }
+  
+
+  .bullet-list li,
+  .numbered-list li {
+    margin: 5px 0;
+  }
+  
+
+  
+  .text-image-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacement entre texte et image */
+    margin: 20px 0;
+}
+
+/* Le texte prend tout l'espace possible */
+.text-content {
+    flex: 1;
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+/* L'image s'adapte au conteneur */
+.image-content {
+  width: 40%; /* Taille de l'image sur PC */
+  flex-shrink: 0; /* Empêche le rétrécissement */
+  max-width: 300px;
+  min-width: 150px;
+    width: 100%;
+    height: auto; /* Conserve les proportions */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 🌍 Responsive : image au-dessus du texte en version mobile */
+@media (max-width: 1000px) {
+    .text-image-container {
+        flex-direction: column; /* Met l'image au-dessus */
+        align-items: center; /* Centre les éléments */
+        text-align: center; /* Centre le texte */
+    }
+
+    .image-content {
+        width: 50%; /* L'image prend toute la largeur sur mobile */
+        max-width: none; /* Supprime la limite de largeur */
+    }
+}
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom:50px;
+    width : auto;
+  }
+  
+  .navbar button {
+    background-color:#b2213200;
+    color: #b22133;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-family : "Poppins", sans-serif;
+    font-weight: bold;
+    border: #b22133 2px solid;
+    margin:0;
+  }
+  
+  .navbar button:hover {
+    background-color:#b22133;
+    color:white;
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      display: flex;
+      justify-content: left;
+      gap: 10px;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      flex-wrap: wrap; /* Permet aux boutons de passer à la ligne suivante */
+    }
+
+    .text-image-container {
+      display: block;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+  .text-content {
+      flex: 1;
+    }
+    
+  .image-container {
+      width: 50%;
+      height: auto;
+      display: flex;
+      object-fit: cover;
+      border-radius: 8px;
+      margin : 0 auto;
+    }
+  
+
+    
+  }
+
+  
+  

@@ -56,7 +56,7 @@
 
 
  
-@media (max-width: 480px) {
+@media (max-width: 680px) {
     .contact-card {
       flex-direction: column; /* Change la direction des éléments en colonne */
       align-items: flex-start; /* Aligne les éléments au début */
