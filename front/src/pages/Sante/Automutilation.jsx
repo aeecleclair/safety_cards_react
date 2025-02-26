@@ -1,3 +1,4 @@
+import "../../App.css";
 const Automutilation = () => {
     return (
       <div>

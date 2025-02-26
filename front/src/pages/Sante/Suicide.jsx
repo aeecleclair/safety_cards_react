@@ -1,3 +1,4 @@
+import "../../App.css";
 const Suicide = () => {
     return (
       <div>
