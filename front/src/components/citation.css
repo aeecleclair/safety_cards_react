@@ -1,22 +1,59 @@
-.quote-card {
-    width:100%;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    background-color: white;
-    border: 1px solid #ddd;
+/* Conteneur principal */
+.quote-container {
+  position: relative;
+  background: #f4f4f4; /* Fond clair */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Grand guillemet en arrière-plan */
+.quote-background {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 120px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.103); /* Couleur très discrète */
+  z-index: 0;
+}
+
+/* Texte de la citation */
+.quote-text {
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1.6;
+  color: #000000;
+  position: relative;
+  z-index: 1; /* Passe au-dessus du guillemet */
+  width:80%;
+  margin: 10px auto;
+}
+
+/* Auteur */
+.quote-author {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #666;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .quote-container {
+      padding: 30px;
   }
-  
+
+  .quote-background {
+      font-size: 80px;
+      top: -10px;
+  }
+
   .quote-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
+      font-size: 1.2rem;
+      width:90%;
   }
-  
-  .quote-author {
-    display: block;
-    margin-top: 10px;
-    color: #777;
-  }
-  
+}

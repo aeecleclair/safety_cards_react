@@ -41,5 +41,30 @@ const Navbar = ({ links }) => {
   
 
 
+function YouTubeVideo({ url }) {
+    const getYouTubeEmbedUrl = (url) => {
+      const videoId = url.split("v=")[1]?.split("&")[0];
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : "";
+    };
+  
+    return (
+      <div className="video-container">
+        {url ? (
+          <iframe
+            className="video-frame"
+            src={getYouTubeEmbedUrl(url)}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <p>Aucune vidéo disponible</p>
+        )}
+      </div>
+    );
+  }
 
-export default { BulletList, NumberedList, TextImageRight, Navbar };
+
+
+export default { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo };

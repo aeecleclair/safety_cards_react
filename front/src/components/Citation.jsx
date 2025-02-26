@@ -1,22 +1,17 @@
 
-import { useState, useEffect } from "react";
 import "./citation.css";
+import React from "react";
 
-export default function QuoteCard({ quotes }) {
-  const [quote, setQuote] = useState(quotes[0]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [quotes]);
-
+const Quote = ({ text, author }) => {
   return (
-    <div className="quote-card">
-      <p className="quote-text">{quote.text}</p>
-      <span className="quote-author">— {quote.author}</span>
+    <div className="quote-container">
+      <div className="quote-background">❝</div> {/* Guillemets en arrière-plan */}
+      <p className="quote-text">{text}</p>
+      {author && <p className="quote-author">— {author}</p>}
     </div>
   );
-}
+};
+
+export default Quote;
 

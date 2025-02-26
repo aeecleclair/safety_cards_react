@@ -1,4 +1,4 @@
-import QuoteCard from "../components/Citation"; 
+import Quote from "../components/Citation"; 
 import ImageTextPopup from "../components/Cartes"; 
 import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
@@ -7,7 +7,7 @@ import ContactCard from "../components/Contact";
 import React from "react";
 import "../App.css";
 
-const { BulletList, NumberedList, TextImageRight, Navbar } = Components;
+const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
   { label: "Plan d'action", target: "Plan_action" },
@@ -24,12 +24,6 @@ const items = [
 ];
 
 
-
-const quotes = [
-  { text: "Le succès, c'est tomber sept fois et se relever huit.", author: "Proverbe japonais" },
-  { text: "La meilleure façon de prédire l’avenir, c’est de le créer.", author: "Peter Drucker" },
-  { text: "On ne voit bien qu’avec le cœur. L’essentiel est invisible pour les yeux.", author: "Antoine de Saint-Exupéry" },
-];
 
 const resources = [
   {
@@ -59,11 +53,21 @@ const Home = () => {
       <h1 className="titre-page">Bienvenue sur Safety Cards</h1>
 
       <Navbar links={navLinks} />
-      <h2 className="sous-titre-page">Des cartes pour apprendre à se protéger</h2>
+      <h2 className="sous-titre-page">Des cartes pour apprendre à se protéger et à protéger les autres</h2>
       <p className="text-classic">Bienvenue sur Safety Cards, un site pour apprendre à se protéger et à protéger les autres. Vous trouverez ici des cartes sur différents sujets, des citations inspirantes et des listes numérotées pour vous aider à mieux comprendre les risques et les enjeux de la vie quotidienne.
         <em> Généré par IA.</em>
       </p>
-      <QuoteCard quotes={quotes} />
+      
+
+      <Quote 
+        text="La seule façon de faire du bon travail est d’aimer ce que vous faites. Enfin pas sûr en vrai mais bon à voir quoi." 
+        author="Steve Jobs"
+      />
+      <Quote 
+        text="Nul n'est censé ignorer la loi." 
+      />
+
+
       <ImageTextPopup
         image="./src/assets/feu.jpg"
         title="La carte 3♠"
@@ -150,6 +154,9 @@ const Home = () => {
       Donec sed tortor vel purus gravida convallis nec sit amet justo. 
       Vestibulum euismod tincidunt risus, id laoreet ligula sagittis et." 
       imageSrc="/src/assets/sexo.webp" />
+
+
+      <YouTubeVideo url="https://www.youtube.com/watch?v=HUngLgGRJpo" />
 
     </div>
   );
