@@ -1,11 +1,15 @@
+import React from "react";
+import "../App.css";
+
 import Quote from "../components/Citation"; 
 import ImageTextPopup from "../components/Cartes"; 
 import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
 import Components from "../components/Common";
 import ContactCard from "../components/Contact";
-import React from "react";
-import "../App.css";
+import { Chiffre, ChiffresGroup } from "../components/Chiffres";
+
+
 
 const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
@@ -23,7 +27,18 @@ const items = [
   { title: "Renseigner", subtitle: "Renseigner sur les autres ressources disponibles" },
 ];
 
-
+const items2 = [
+  {  subtitle: "Approcher la personne, évaluer et assister" },
+  { subtitle: "Écouter, activement et sans jugement" },
+  {  subtitle: "Réconforter et informer" },
+  { subtitle: " Encourager à aller vers des professionnels" ,
+    subitems: [
+      { subtitle: "Description du sous-élément 1" },
+      { subtitle: "Description du sous-élément 2" },
+    ],
+  },
+  {  subtitle: "Renseigner sur les autres ressources disponibles" },
+];
 
 const resources = [
   {
@@ -45,16 +60,24 @@ const resources = [
   },
 ];
 
+
+const data = [
+  { number: "22%", title: "Accidents fatals", description: "Causés par l'alcool" },
+  { number: "71.5%", title: "Fréquentation du RU", description: "Par les étudiants" },
+  { number: 210000, title: "Viols ou tentatives", description: "Chaque année" },
+  { number: "9/10", title: "Femmes", description: "Connaissent leur agresseur" }
+];
+
 const Home = () => {
   return (
     <div className = "page">
 
 
-      <h1 className="titre-page">Bienvenue sur Safety Cards</h1>
+      <h1 className="titre">Bienvenue sur Safety Cards</h1>
 
       <Navbar links={navLinks} />
-      <h2 className="sous-titre-page">Des cartes pour apprendre à se protéger et à protéger les autres</h2>
-      <p className="text-classic">Bienvenue sur Safety Cards, un site pour apprendre à se protéger et à protéger les autres. Vous trouverez ici des cartes sur différents sujets, des citations inspirantes et des listes numérotées pour vous aider à mieux comprendre les risques et les enjeux de la vie quotidienne.
+      <h2 className="sous-titre-2">Des cartes pour apprendre à se protéger et à protéger les autres</h2>
+      <p className="texte">Bienvenue sur Safety Cards, un site pour apprendre à se protéger et à protéger les autres. Vous trouverez ici des cartes sur différents sujets, des citations inspirantes et des listes numérotées pour vous aider à mieux comprendre les risques et les enjeux de la vie quotidienne.
         <em> Généré par IA.</em>
       </p>
       
@@ -86,6 +109,14 @@ const Home = () => {
           title="Plan d'action pour les Premiers Secours en Santé Mentale" 
           subtitle="Comment agir face à une personne en détresse ?" 
           items={items} //on fait appel à des constantes de début de la page
+          
+      />
+
+<ListeNumerotee 
+          
+          title="Plan d'action pour les Premiers Secours en Santé Mentale" 
+          subtitle="Comment agir face à une personne en détresse ?" 
+          items={items2} //on fait appelle à des constantes de début de la page
           
       />
       </div>
@@ -157,6 +188,11 @@ const Home = () => {
 
 
       <YouTubeVideo url="https://www.youtube.com/watch?v=HUngLgGRJpo" />
+
+
+      <h1>Chiffres clés</h1>
+      <ChiffresGroup chiffres={data} />
+
 
     </div>
   );
