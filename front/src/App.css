@@ -21,7 +21,7 @@ html, body, #root, .app {
   max-width: 1100px;
 }
 
-.titre-page{
+.titre{
   text-align: left;
   margin-top: 50px;
   margin-bottom:10px;
@@ -29,14 +29,21 @@ html, body, #root, .app {
   font-size: 3em;
 }
 
-.sous-titre-page{
+.sous-titre-1{
+  text-align: left;
+  margin-top: 20px;
+  color:rgb(0, 0, 0);
+  font-size : 2em;
+}
+
+.sous-titre-2{
   text-align: left;
   margin-top: 20px;
   color:rgb(0, 0, 0);
   font-size : 1.5em;
 }
 
-.text-classic{
+.texte{
   font-size: 1em;
   color:rgb(0, 0, 0);
 }

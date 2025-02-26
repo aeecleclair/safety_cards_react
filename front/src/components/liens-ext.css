@@ -1,5 +1,4 @@
-/* ExternalLinkBlock.css */
-/* ExternalLinkBlock.css */
+
 .links-container {
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +19,6 @@
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33.333% - 20px); /* Ajustement pour 3 colonnes */
-    min-width: 200px;
 }
   
   @media (max-width: 1000px) {

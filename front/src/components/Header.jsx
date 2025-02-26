@@ -129,7 +129,9 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <img src="/logo.png" alt="Logo Safety Cards" />
+        <Link to="/">
+          <img src="/logo.png" alt="Logo Safety Cards" />
+        </Link>
         <h1>safety cards</h1>
       </div>
 

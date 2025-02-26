@@ -114,8 +114,8 @@ header .logo {
 header .logo img {
     width: 100px; /* Limite la taille du logo */
     height: auto;
-    margin-bottom: 10px; /* Espacement de 10px entre le logo et le texte */
-    margin-top: 10px;
+    margin-bottom: 0px; /* Espacement de 10px entre le logo et le texte */
+    margin-top: 30px;
 }
 
 /* Style pour le texte Safety Cards */
@@ -188,10 +188,12 @@ header .logo h1 {
     header .logo img {
         width: 50px; /* Ajuste la taille du logo pour mobile */
         margin-right: 10px; /* Ajoute une marge à droite */
+        margin-top:10px;
     }
 
     header .logo h1 {
         font-size: 1.5rem; /* Ajuste la taille de la police pour mobile */
+        text-decoration: none;
     }
 
     .menu {
