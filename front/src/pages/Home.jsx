@@ -29,6 +29,7 @@ const quotes = [
   { text: "Le succès, c'est tomber sept fois et se relever huit.", author: "Proverbe japonais" },
   { text: "La meilleure façon de prédire l’avenir, c’est de le créer.", author: "Peter Drucker" },
   { text: "On ne voit bien qu’avec le cœur. L’essentiel est invisible pour les yeux.", author: "Antoine de Saint-Exupéry" },
+  { text: "C'est quand un moustique se pose sur tes couilles que tu te rends compte que la violence n'est pas toujours la bonne solution", author: "proverbe asiatique"}
 ];
 
 const resources = [
