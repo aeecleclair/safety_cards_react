@@ -34,14 +34,14 @@ const resources = [
   },
   {
     link: "https://pimp-my-party.fr/",
-    
+    imageSrc: "/src/assets/pimp-my-party.png",
     label: "Pimp my party",
     description: "Un 2ème outil pour organiser des soirées en toute sécurité",
   },
   {
-    link: "https://www.wikipedia.org",
-    label: "Wikipedia",
-    description: "Encyclopédie en ligne gratuite",
+    link: "https://www.alcool-info-service.fr/",
+    label: "Alcool info service",
+    description: "Un site pour s'informer sur l'alcool et ses conséquences",
   },
 ];
 
@@ -50,12 +50,11 @@ const Alcool = () => {
       <div className="page">
         <h1 className="titre-page">Alcool</h1>
         <Navbar links={navLinks} />
-        <p className="text-classic">Bienvenue sur la page traitant de la thématique de l'alcool, sa banalisation et sa consommation.
+        <p className="text-classic">Bienvenue sur la page traitant de la thématique de l'alcool, sa consommation et sa banalisation.
       </p>
       
       <Quote 
-        text="Il ne faut pas que j'oublie de modifier cette citation." 
-        author="Loraline"
+        text="Les meilleures soirées sont celles dont tu te souviens." 
       />
       
       
@@ -78,7 +77,7 @@ const Alcool = () => {
 
       
       <ImageTextPopup
-        image="./src/assets/alcool.jpg"
+        image="./src/assets/Alcool.webp"
         title="La carte 6♣"
         shortText="Prévention sur la banalisation de l'alcool en soirée"
         longText="1 verre, 2 verres, 3 verres... En soirée, on perd vite le compte.
@@ -89,17 +88,8 @@ const Alcool = () => {
 
 
 
-    <TextImageRight  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula 
-      ullamcorper metus, id facilisis felis tincidunt id. Nam tristique sapien 
-      sit amet mauris fermentum, vel placerat lacus blandit. Integer dapibus, 
-      lacus non rhoncus aliquet, lorem risus maximus ligula, id vehicula arcu 
-      ligula eu nisl. Phasellus at tristique odio, eget hendrerit lacus. 
-      Pellentesque non sagittis libero, sed dictum justo. Sed fermentum, 
-      risus ut gravida fermentum, augue est facilisis mi, id fringilla 
-      quam purus at libero. Nulla facilisi. In hac habitasse platea dictumst. 
-      Donec sed tortor vel purus gravida convallis nec sit amet justo. 
-      Vestibulum euismod tincidunt risus, id laoreet ligula sagittis et." 
-      imageSrc="/src/assets/sexo.webp" />
+    <TextImageRight  text="Boire un coup entre amis doit rester un moment de convivialité où chacun doit se sentir à l'aise avec sa consommation." 
+      imageSrc="/src/assets/alcool.jpg" />
 
 
 
