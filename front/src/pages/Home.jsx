@@ -1,5 +1,5 @@
 import QuoteCard from "../components/Citation"; 
-import ImageTextPopup from "../components/Cartes"; 
+import ImageTextPopup from "../components/Cartes"; //comme pour la carte 3
 import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
 import Components from "../components/Common";
@@ -64,7 +64,7 @@ const Home = () => {
         <em> Généré par IA.</em>
       </p>
       <QuoteCard quotes={quotes} />
-      <ImageTextPopup
+      <ImageTextPopup  //carte rouge qui s'ouvre
         image="./src/assets/feu.jpg"
         title="La carte 3♠"
         shortText="Prévention sur les risques d'incendie"
@@ -81,7 +81,7 @@ const Home = () => {
           
           title="Plan d'action pour les Premiers Secours en Santé Mentale" 
           subtitle="Comment agir face à une personne en détresse ?" 
-          items={items} 
+          items={items} //on fait appelle à des constantes de début de la page
           
       />
       </div>
