@@ -8,6 +8,7 @@
   .numbered-list {
     padding: 10px;
   }
+
   
 
   .bullet-list li,
@@ -87,9 +88,27 @@
     border: #b22133 2px solid;
     margin:0;
   }
+  body.dark-mode .navbar button{
+    background-color:#b2213200;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-family : "Poppins", sans-serif;
+    font-weight: bold;
+    border: #ff0000 2px solid;
+    margin:0;
+  }
   
   .navbar button:hover {
     background-color:#b22133;
+    color:white;
+  }
+  body.dark-mode .navbar button:hover{
+    background-color:#ff0000;
     color:white;
   }
 

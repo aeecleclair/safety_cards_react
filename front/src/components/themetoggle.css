@@ -1,0 +1,35 @@
+.theme-toggle-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: rgb(0, 0, 0) 1px solid ;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 100;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: #000000;
+    color: white;
+  }
+  
+  body.dark-mode .theme-toggle-button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: rgb(255, 255, 255) 1px solid 
+  }
+  
+  body.dark-mode .theme-toggle-button:hover {
+    background-color: #ffffff;
+    color: #1e1e1e;
+  }
+
+  @media (max-width: 1000px) {
+    .theme-toggle-button {
+        padding: 10px 20px;
+    }
+  }
+

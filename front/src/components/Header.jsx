@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Importation de Link pour les liens
+import ThemeToggle from "./ThemeToggle";
 import "./header.css";
 
 const menuItems = [
@@ -157,10 +158,17 @@ const Header = () => {
             </li>
 
           ))}
-          <li className="quit-site"><Link to="https://campus.ec-lyon.fr/"><span className="close-website-icon">&times;</span> Quitter le site</Link></li>
 
         </ul>
       </nav>
+
+      <div className= "boutons_haut" >
+            <ThemeToggle/>
+          <button className="quit-site" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+          <span className="close-website-icon">&times;</span> Quitter le site
+        </button>
+            
+        </div>
 
       {/* Menu Burger pour mobile */}
       <div className="menu-burger" onClick={() => setMenuOpen(true)}>
@@ -191,9 +199,16 @@ const Header = () => {
                   </button>
                 </li>
               ))}
-              <li className="quit-site"><Link to="https://campus.ec-lyon.fr/" ><span className="close-website-icon">&times;</span> Quitter le site</Link></li>
+              
             </ul>
           )}
+          <div className= "boutons_bas" >
+            <ThemeToggle/>
+          <button className="quit-site-mobile" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+          <span className="close-website-icon">&times;</span> Quitter le site
+        </button>
+            
+        </div>
         </div>
       )}
     </header>
