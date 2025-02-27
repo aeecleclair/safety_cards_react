@@ -72,7 +72,7 @@ const Ecrans_reseaux = () => {
           
           title="Plan d'action pour aider une personne fortement alcoolisée" 
           subtitle="Comment agir face à une personne en détresse ?" 
-          items={items} //on fait appelle à des constantes de début de la page
+          items={items} //on fait appel à des constantes de début de la page
           
       />
 

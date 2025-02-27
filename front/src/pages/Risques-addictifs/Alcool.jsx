@@ -5,6 +5,7 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import Components from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import React from "react";
+import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import "../../App.css";
 
 const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
@@ -16,13 +17,18 @@ const navLinks = [
 ];
 
 const items = [
-  { title: "Approcher", subtitle: "Approcher la personne, évaluer et assister" },
-  { title: "Écouter", subtitle: "Écouter, activement et sans jugement" },
-  { title: "Réconforter", subtitle: "Réconforter et informer" },
-  { title: "Encourager", subtitle: "Encourager à aller vers des professionnels" },
-  { title: "Renseigner", subtitle: "Renseigner sur les autres ressources disponibles" },
+  { title: "Evaluer", subtitle: "Vérifier son état : consciente ? Respiration normale ? Réactive ?" },
+  { title: "Sécuriser", subtitle: "L'éloigner du danger, l'installer sur le côté (PLS)" },
+  { title: "Surveiller", subtitle: "La garder au chaud, éveillée, rester et parler avec elle" },
+  { title: "Eviter les erreurs", subtitle: "Ne pas lui donner de café, ni la forcer à vomir" },
+  { title: "Alerter", subtitle: "Si perte de conscience ou respiration anormale : appeler le 112 ou le 15" },
+  {title : "📢 Attention", subtitle : "En cas de soirée sur le campus, s'adresser au personnel Peer'Care afin d'appeler le numéro d'astreinte"}
 ];
 
+const data = [
+  { number: "8/10", title: "étudiants de l'école", description: "consomment de l'alcool" },
+  { number: "21.8%", title: "considèrent leur scolarité impactée", description: "par une consommation excessive" }
+];
 
 
 const resources = [
@@ -48,16 +54,19 @@ const resources = [
 const Alcool = () => {
     return (
       <div className="page">
-        <h1 className="titre-page">Alcool</h1>
+        <h1 className="titre">Alcool</h1>
         <Navbar links={navLinks} />
-        <p className="text-classic">Bienvenue sur la page traitant de la thématique de l'alcool, sa consommation et sa banalisation.
+        <p className="sous-titre-page">Sujets traités sur cette page : 
       </p>
+      
+      <BulletList items={["Consommation excessive d'alcool", "Banalisation de sa consommation"]} />
       
       <Quote 
         text="Les meilleures soirées sont celles dont tu te souviens." 
       />
-      
-      
+
+      <p className="titre">Consommation excessive d'alcool</p>
+
       <ImageTextPopup
         image="./src/assets/bouteilles.jpg"
         title="La carte 3♣"
@@ -67,15 +76,38 @@ const Alcool = () => {
       />
       
       <div id = "Plan_action">
+
+      <p className="sous-titre-1"> Boire, c'est bien... Savoir s'arrêter, c'est mieux !</p>
+      <p className="texte"> Une soirée, un verre, puis un autre… et parfois, ça dérape. L’alcool en excès, c’est pas juste une gueule de bois : ça peut mener à des accidents, des comportements à risque et des pertes de contrôle. Le binge drinking (boire beaucoup, très vite) fatigue ton corps et augmente le risque de dépendance. Même une grosse cuite occasionnelle peut abîmer ton cœur et provoquer un AVC. La vraie bonne soirée, c’est celle dont tu te souviens et où tu restes maître de tes choix. Bois à ton rythme, écoute-toi, et pense à demain !</p>
+
+      <h1 className="">Comment agir ?</h1>
       <ListeNumerotee 
           
-          title="Plan d'action pour aider une personne fortement alcoolisée" 
-          subtitle="Comment agir face à une personne en détresse ?" 
-          items={items} //on fait appelle à des constantes de début de la page
+          title="Plan d'action pour aider une personne fortement alcoolisée"
+          items={items} //on fait appel à des constantes de début de la page
           
       />
+      <h1 className="">Chiffres clés</h1>
+      <ChiffresGroup chiffres={data} />
 
-      
+
+      <h1 className="">Besoin d'en parler ?</h1>
+      <div id = "Contacts">
+      <ContactCard
+        image="/src/assets/nightline_logo.png" 
+        title="Nightline Lyon"
+        subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
+        phone="04 85 30 00 10"
+        email=""
+        hours="Tous les soirs de 21h à 2h30"
+        textButton="Voir le site web"
+        link="https://www.nightline.fr/lyon"
+      />
+      </div>
+
+
+      <p className="titre">Banalisation de l'alcool en soirée</p>
+
       <ImageTextPopup
         image="./src/assets/Alcool.webp"
         title="La carte 6♣"
@@ -90,21 +122,6 @@ const Alcool = () => {
 
     <TextImageRight  text="Boire un coup entre amis doit rester un moment de convivialité où chacun doit se sentir à l'aise avec sa consommation." 
       imageSrc="/src/assets/alcool.jpg" />
-
-
-
-      <div id = "Contacts">
-      <ContactCard
-        image="/src/assets/nightline_logo.png" 
-        title="Nightline Lyon"
-        subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
-        phone="04 85 30 00 10"
-        email=""
-        hours="Tous les soirs de 21h à 2h30"
-        textButton="Voir le site web"
-        link="https://www.nightline.fr/lyon"
-      />
-      </div>
 
 
       </div>
