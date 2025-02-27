@@ -18,8 +18,8 @@ const menuItems = [
     submenu: [
       { title: "🔞 Addiction à la pornographie", link: "/add_porno" },
       { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
-      { title: "🍺Consommation d'alcool", link: "/alcool" },
-      { title: "🎆Consommation de stupéfiants", link: "/stup" },
+      { title: "🍺 Consommation d'alcool", link: "/alcool" },
+      { title: "🎆 Consommation de stupéfiants", link: "/stup" },
       { title: "🚬 Tabac & vapotage", link: "/tabac" },
     ],
   },
