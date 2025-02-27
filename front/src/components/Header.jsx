@@ -76,7 +76,7 @@ const menuItems = [
       { title: "Effet de groupe", link: "/groupe" },
       { title: "Empathie", link: "/empathie" },
       { title: "Harcèlement", link: "/harcel" },
-      { title: "🍾Pratiques d'intégration", link: "/inte" },
+      { title: "🍾 Pratiques d'intégration", link: "/inte" },
       { title: "Soumission chimique", link: "/soumission" },
       { title: "VSS", link: "/vss" },
     ],
