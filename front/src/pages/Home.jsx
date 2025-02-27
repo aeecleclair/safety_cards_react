@@ -116,7 +116,7 @@ const Home = () => {
           
           title="Plan d'action pour les Premiers Secours en Santé Mentale" 
           subtitle="Comment agir face à une personne en détresse ?" 
-          items={items2} //on fait appelle à des constantes de début de la page
+          items={items2} //on fait appel à des constantes de début de la page
           
       />
       </div>
