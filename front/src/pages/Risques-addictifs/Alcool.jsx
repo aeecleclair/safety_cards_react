@@ -6,6 +6,7 @@ import Components from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import React from "react";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
+import Separateur from "../../components/Separateur";
 import "../../App.css";
 
 const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
@@ -105,7 +106,7 @@ const Alcool = () => {
       />
       </div>
 
-
+      <Separateur />
       <p className="titre">Banalisation de l'alcool en soirée</p>
 
       <ImageTextPopup

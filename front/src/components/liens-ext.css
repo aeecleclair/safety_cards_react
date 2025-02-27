@@ -40,6 +40,10 @@
     margin-bottom: 0;
 }
 
+body.dark-mode .block-title {
+  color: #ffffff;
+}
+
 .block-subtitle{
     font-size: 1rem;
     color: #666;

@@ -1,7 +1,7 @@
 
 
 html, body, #root, .app {
-  height: 100%;
+
   width: 100vw;
   margin: 0;
   padding: 0;  
@@ -60,7 +60,7 @@ html, body, #root, .app {
 /* ➡️ Version responsive */
 @media (max-width: 1000px) {
 
-  .titre-page {
+  .titre {
     font-size: 3.2em;
     line-height: 1.1;
     color: rgb(0, 0, 0);
@@ -68,3 +68,65 @@ html, body, #root, .app {
   }
 }
 
+/* Styles pour le mode sombre */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .titre,
+body.dark-mode .sous-titre-1,
+body.dark-mode .sous-titre-2,
+body.dark-mode .texte {
+  color: #ffffff;
+}
+
+body.dark-mode .chiffre-container {
+  background-color: #333333;
+}
+
+body.dark-mode .navbar button {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar button:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode header .logo h1 {
+  color: #ffffff;
+}
+
+body.dark-mode header a {
+  color: #ffffff;
+}
+
+body.dark-mode .menu {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .menu a {
+  color: #ffffff;
+}
+
+body.dark-mode ul {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+
+body.dark-mode .menu-burger {
+  color: #ffffff;
+}
+
+body.dark-mode .menu-close {
+  color: #ffffff;
+}

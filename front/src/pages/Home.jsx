@@ -7,6 +7,7 @@ import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
 import Components from "../components/Common";
 import ContactCard from "../components/Contact";
+import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
 
 
@@ -188,6 +189,7 @@ const Home = () => {
 
 
       <YouTubeVideo url="https://www.youtube.com/watch?v=HUngLgGRJpo" />
+      <Separateur />
 
 
       <h1>Chiffres clés</h1>
