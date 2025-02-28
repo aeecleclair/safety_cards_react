@@ -17,11 +17,11 @@ const navLinks = [
 ];
 
 const items = [
-  { title: "Fixer des horaires", subtitle: "Limiter le temps accordé devant les écrans chaque jour" },
-  { title: "Désactiver les notifications", subtitle: "Réduire les distractions en coupant les alertes" },
-  { title: "Faire des pauses", subtitle: "Prendre 10-15 minutes sans écran toutes les heures" },
-  { title: "Privilégier le réel", subtitle: "Opter pour des activités sans écran (sport, lecture, sorties...)" },
-  { title: "Créer des zones sans écran", subtitle: "Réserver certaines pièces pour des moments sans technologie" },
+  { title: "Fixer des horaires", subtitle: "Limiter le temps accordé devant les écrans avant d'aller se coucher, en moyenne 1 heure" },
+  { title: "Mettre son portable en mode avion", subtitle: "Réduire les dérangements en coupant les notifications" },
+  { title: "Faire de la relaxation", subtitle: "Faire des exercices de repiration, de visualisation avant de s'endormir peut aider" },
+  { title: "Se fixer des couvres feu", subtitle: "Se fixer une heure limite sur se coucher et pourquoi pas se donner une sorte de punition en cas de non respect (pompes...)" },
+  { title: "Penser à son confort", subtitle: "Le confort est essentiel, par exemple il faut s'assurer que son oreiller est de bonne qualité, d'utiliser un masque pour les yeux, des boules quies..." },
 ];
 
 const resources = [
@@ -103,11 +103,11 @@ const Sommeil = () => {
       </div>
 
 
-      <p className="titre">Addiction aux réseaux sociaux</p>
+      <p className="titre">Les insomnies</p>
 
 
 
-    <TextImageRight  text="Les réseaux sociaux, c’est comme une sorte de boucle sans fin où on se retrouve souvent piégé. Au départ, ça paraît anodin : on veut juste voir ce qui se passe, discuter avec des amis ou se détendre un peu. Mais petit à petit, on finit par passer des heures à scroller, à attendre des notifications, et à comparer nos vies à celles des autres. Le problème, c’est que ça affecte notre confiance en nous et notre bien-être mental. On se met à chercher la validation à travers les likes et les commentaires, ce qui peut créer de l’anxiété et du stress. En plus, on oublie qu’on ne voit que les « bonnes » facettes de la vie des autres, et pas la réalité derrière l'écran. Pour éviter ça, il faut vraiment apprendre à prendre du recul : se fixer des limites sur le temps passé en ligne, couper les notifications, et surtout profiter de moments sans écran. C’est à nous de reprendre le contrôle et de ne pas laisser les réseaux sociaux définir notre quotidien." 
+    <TextImageRight  text="" 
       imageSrc="../src/assets/Reseaux.png" />
 
     <YouTubeVideo url="https://www.youtube.com/watch?v=9qLREeJs__A" />
