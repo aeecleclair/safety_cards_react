@@ -33,7 +33,7 @@
     color: #444;
     margin-bottom: 5px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .liste-number {
@@ -44,9 +44,23 @@
     height: 24px;
     display: flex;
     justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+    
+  }
+
+  .sub-liste-number{
+    background-color: #b22132b6;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
     align-items: center;
     font-weight: bold;
     margin-right: 10px;
+
   }
 
   .item-title {

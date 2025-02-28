@@ -13,6 +13,18 @@ const ListeNumerotee = ({ title, subtitle, items }) => {
             <div className="liste-content">
               <h3 className="item-title">{item.title}</h3>
               <p className="item-subtitle">{item.subtitle}</p>
+              {item.subitems && (
+                <ol className="sub-liste-items" type="a">
+                  {item.subitems.map((subitem, subindex) => (
+                    <li key={subindex} className="sub-liste-item">
+                      <div className="sub-liste-content">
+                        <h4 className="sub-item-title">{subitem.title}</h4>
+                        <p className="sub-item-subtitle">{subitem.subtitle}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              )}
             </div>
           </li>
         ))}

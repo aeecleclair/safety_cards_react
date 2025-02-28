@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Importation de Link pour les liens
+import ThemeToggle from "./ThemeToggle";
 import "./header.css";
 
 const menuItems = [
@@ -16,23 +17,23 @@ const menuItems = [
     title: "💉 Risques addictifs",
     link: "/Risques-addictifs-main",
     submenu: [
-      { title: "Addiction à la pornographie", link: "/add_porno" },
-      { title: "Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
-      { title: "Consommation d'alcool", link: "/alcool" },
-      { title: "Consommation de stupéfiants", link: "/stup" },
-      { title: "Tabac & vapotage", link: "/tabac" },
+      { title: "🔞 Addiction à la pornographie", link: "/add_porno" },
+      { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
+      { title: "🍺 Consommation d'alcool", link: "/alcool" },
+      { title: "🎆 Consommation de stupéfiants", link: "/stup" },
+      { title: "🚬 Tabac & vapotage", link: "/tabac" },
     ],
   },
   {
     title: "⚕️ Santé",
     link: "/Sante-main",
     submenu: [
-      { title: "🦓 Automutilation", link: "/automutil" },
+      { title: "Automutilation", link: "/automutil" },
       { title: "Dépression", link: "/depression" },
       { title: "Déracinement culturel", link: "/deracinement" },
       { title: "Endométriose & douleurs menstruelles", link: "/endom" },
       { title: "Situation de handicap", link: "/handicap" },
-      { title: "😴 Sommeil", link: "/sommeil" },
+      { title: "Sommeil", link: "/sommeil" },
       { title: "TCA", link: "/tca" },
       { title: "Tentative de suicide", link: "/suicide" },
     ],
@@ -75,7 +76,7 @@ const menuItems = [
       { title: "Effet de groupe", link: "/groupe" },
       { title: "Empathie", link: "/empathie" },
       { title: "Harcèlement", link: "/harcel" },
-      { title: "Pratiques d'intégration", link: "/inte" },
+      { title: "🍾 Pratiques d'intégration", link: "/inte" },
       { title: "Soumission chimique", link: "/soumission" },
       { title: "VSS", link: "/vss" },
     ],
@@ -129,7 +130,9 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <img src="/logo.png" alt="Logo Safety Cards" />
+        <Link to="/">
+          <img src="/logo.png" alt="Logo Safety Cards" />
+        </Link>
         <h1>safety cards</h1>
       </div>
 
@@ -155,10 +158,17 @@ const Header = () => {
             </li>
 
           ))}
-          <li className="quit-site"><Link to="https://campus.ec-lyon.fr/"><span className="close-website-icon">&times;</span> Quitter le site</Link></li>
 
         </ul>
       </nav>
+
+      <div className= "boutons_haut" >
+            <ThemeToggle/>
+          <button className="quit-site" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+          <span className="close-website-icon">&times;</span> Quitter le site
+        </button>
+            
+        </div>
 
       {/* Menu Burger pour mobile */}
       <div className="menu-burger" onClick={() => setMenuOpen(true)}>
@@ -189,9 +199,16 @@ const Header = () => {
                   </button>
                 </li>
               ))}
-              <li className="quit-site"><Link to="https://campus.ec-lyon.fr/" ><span className="close-website-icon">&times;</span> Quitter le site</Link></li>
+              
             </ul>
           )}
+          <div className= "boutons_bas" >
+            <ThemeToggle/>
+          <button className="quit-site-mobile" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+          <span className="close-website-icon">&times;</span> Quitter le site
+        </button>
+            
+        </div>
         </div>
       )}
     </header>

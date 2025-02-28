@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { ThemeProvider, useTheme } from "./ThemeProvider";
+
 
 import Home from "./pages/Home";
 
@@ -64,8 +66,10 @@ import Confiance from "./pages/Connaissance-soi/Confiance";
 import Genre from "./pages/Connaissance-soi/Genre";
 import Isolement from "./pages/Connaissance-soi/Isolement";
 
+
 function App() {
   return (
+    <ThemeProvider>
     <Router>
       <Header />
 
@@ -137,6 +141,7 @@ function App() {
 
       <Footer />
     </Router>
+    </ThemeProvider>
   );
 }
 
