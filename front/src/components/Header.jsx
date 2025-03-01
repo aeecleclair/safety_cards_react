@@ -10,7 +10,7 @@ const menuItems = [
     submenu: [
       { title: "💛 Confiance & estime de soi", link: "/conf" },
       { title: "🏳️‍⚧️ Identité de genre", link: "/genre" },
-      { title: "Isolement", link: "/isolement" },
+      { title: "🧍 Isolement", link: "/isolement" },
     ],
   },
   {
@@ -43,7 +43,7 @@ const menuItems = [
     link: "/Sexe-amour-main",
     submenu: [
       { title: "✅ Consentement", link: "/consent" },
-      { title: "IVG", link: "/ivg" },
+      { title: "♀️ IVG", link: "/ivg" },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient" },
       { title: "⚠️ Pratiques sexuelles dangereuses", link: "/pratiques_sex" },
       { title: "💑 Relations de couple", link: "/couple" },
@@ -63,8 +63,8 @@ const menuItems = [
       { title: "💰 Précarité économique", link: "/prec_eco" },
       { title: "💸 Précarité menstruelle", link: "/prec_mens" },
       { title: "⛹️ Santé physique & sport", link: "/sport" },
-      { title: "🏠 Sédentarité", link: "/sedentarite" },
-      { title: "🔥 Risques d'incendies", link: "/incendie" },
+      { title: "🛋️ Sédentarité", link: "/sedentarite" },
+      { title: "🏠 Risques domestiques", link: "/domestique" },
     ],
   },
   {

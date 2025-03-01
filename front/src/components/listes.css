@@ -6,6 +6,9 @@
     margin: auto;
     margin-bottom: 40px;
   }
+  body.dark-mode .liste-container{
+    background-color: #1e1e1e ;
+  }
   
   .liste-title {
     font-size: 2rem;
@@ -15,12 +18,18 @@
     margin-top: 0;
     padding:0;
   }
+  body.dark-mode .liste-title{
+    color: #ffffff ;
+  }
   
 
   .liste-subtitle {
     font-size: 1rem;
     color: #666;
     margin-bottom: 15px;
+  }
+  body.dark-mode .liste-subtitle{
+    color: #acaaaa ;
   }
   
   .liste-items {
@@ -35,6 +44,9 @@
     display: flex;
     align-items: flex-start;
   }
+  body.dark-mode .liste-item{
+    color: #ffffff ;
+  }
   
   .liste-number {
     background-color: #b22133;
@@ -48,19 +60,8 @@
     margin-right: 10px;
     
   }
-
-  .sub-liste-number{
-    background-color: #b22132b6;
-    color: white;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    margin-right: 10px;
-
+  body.dark-mode .liste-number{
+    background-color: #ff0000 ;
   }
 
   .item-title {

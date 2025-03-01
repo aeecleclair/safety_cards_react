@@ -18,6 +18,10 @@ nav ul {
     box-shadow: none; /* Supprime toute ombre */
     margin-top: 30px; /* Marge au-dessus du menu pour l'espacement */
 }
+body.dark-mode nav ul {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
 
 
 /* Style des éléments de menu */

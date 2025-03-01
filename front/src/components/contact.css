@@ -7,6 +7,9 @@
     margin-bottom : 40px;
     
   }
+body.dark-mode{
+  border:none;
+}
   
   .contact-image {
     width: 150px;

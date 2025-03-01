@@ -7,6 +7,9 @@
   margin: 20px auto;
   text-align: center;
 }
+body.dark-mode .quote-container{
+  background-color: #1e1e1e ;
+}
 
 /* Grand guillemet en arrière-plan */
 .quote-background {
@@ -15,8 +18,11 @@
   left: 10px;
   font-size: 120px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.103); /* Couleur très discrète */
+  color: #0000001a; /* Couleur très discrète */
   z-index: 0;
+}
+body.dark-mode .quote-background{
+  color: #c6c6c61a ;
 }
 
 /* Texte de la citation */
@@ -30,6 +36,9 @@
   width:80%;
   margin: 10px auto;
 }
+body.dark-mode .quote-text{
+  color: #ffffff ;
+}
 
 /* Auteur */
 .quote-author {
@@ -39,6 +48,9 @@
   color: #666;
   position: relative;
   z-index: 1;
+}
+body.dark-mode .quote-author{
+  color: #acaaaa ;
 }
 
 /* Responsive */

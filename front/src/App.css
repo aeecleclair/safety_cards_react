@@ -81,9 +81,7 @@ body.dark-mode .texte {
   color: #ffffff;
 }
 
-body.dark-mode .chiffre-container {
-  background-color: #333333;
-}
+
 
 body.dark-mode .navbar button {
   background-color: #444444;
@@ -117,10 +115,6 @@ body.dark-mode .menu a {
   color: #ffffff;
 }
 
-body.dark-mode ul {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
 
 
 body.dark-mode .menu-burger {

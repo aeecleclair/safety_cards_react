@@ -16,7 +16,7 @@ import Demarches_eco from "./pages/Vie-courante/Demarches-eco";
 import Detente_relax from "./pages/Vie-courante/Detente-relax";
 import Precarite_eco from "./pages/Vie-courante/Precarite-eco";
 import Precarite_mens from "./pages/Vie-courante/Precarite-mens";
-import Risques_incendies from "./pages/Vie-courante/Risque-incendies";
+import Risques_domestiques from "./pages/Vie-courante/Risques-domestiques";
 import Sante_physique from "./pages/Vie-courante/Sante-physique";
 import Sedentarite from "./pages/Vie-courante/Sedentarite";
 
@@ -85,7 +85,7 @@ function App() {
         <Route path="/detente" element={<Detente_relax />} />
         <Route path="/prec_eco" element={<Precarite_eco />} />
         <Route path="/prec_mens" element={<Precarite_mens />} />
-        <Route path="/incendie" element={<Risques_incendies />} />
+        <Route path="/domestique" element={<Risques_domestiques />} />
         <Route path="/sport" element={<Sante_physique />} />
         <Route path="/sedentarite" element={<Sedentarite />} />
 

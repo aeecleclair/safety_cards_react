@@ -15,6 +15,9 @@
     width: 30%;
     margin-bottom:20px;
   }
+  body.dark-mode .chiffre-container {
+    background-color: #1e1e1e;
+  }
   
   .chiffre-number {
     font-size: 3rem;
