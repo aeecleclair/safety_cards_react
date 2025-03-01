@@ -12,9 +12,8 @@ import "../../App.css";
 const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
-  { label: "Plan d'action", target: "Plan_action" },
-  { label: "Contacts utiles", target: "Contacts" },
-  { label: "Ressources utiles", target: "Ressources_utiles" }
+  { label: "Consommation excessive", target: "consommation" },
+  { label: "Banalisation de la consommation", target: "banalisation" }
 ];
 
 const items = [
@@ -66,7 +65,9 @@ const Alcool = () => {
         text="Les meilleures soirées sont celles dont tu te souviens." 
       />
 
-      <p className="titre">Consommation excessive d'alcool</p>
+    <div id = "consommation">
+      <h1 className="titre">Consommation excessive d'alcool</h1>
+    </div>
 
       <ImageTextPopup
         image="./src/assets/bouteilles.jpg"
@@ -76,24 +77,24 @@ const Alcool = () => {
         textButton="⤢ Agrandir la carte"
       />
       
-      <div id = "Plan_action">
+     
 
-      <p className="sous-titre-1"> Boire, c'est bien... Savoir s'arrêter, c'est mieux !</p>
+      <h1 className="sous-titre-1"> Boire, c'est bien... Savoir s'arrêter, c'est mieux !</h1>
       <p className="texte"> Une soirée, un verre, puis un autre… et parfois, ça dérape. L’alcool en excès, c’est pas juste une gueule de bois : ça peut mener à des accidents, des comportements à risque et des pertes de contrôle. Le binge drinking (boire beaucoup, très vite) fatigue ton corps et augmente le risque de dépendance. Même une grosse cuite occasionnelle peut abîmer ton cœur et provoquer un AVC. La vraie bonne soirée, c’est celle dont tu te souviens et où tu restes maître de tes choix. Bois à ton rythme, écoute-toi, et pense à demain !</p>
 
-      <h1 className="">Comment agir ?</h1>
+      <h1 className="sous-titre-1">Comment agir ?</h1>
       <ListeNumerotee 
           
           title="Plan d'action pour aider une personne fortement alcoolisée"
           items={items} //on fait appel à des constantes de début de la page
           
       />
-      <h1 className="">Chiffres clés</h1>
+      <h1 className="sous-titre-1">Chiffres clés</h1>
       <ChiffresGroup chiffres={data} />
 
 
-      <h1 className="">Besoin d'en parler ?</h1>
-      <div id = "Contacts">
+      <h1 className="sous-titre-1">Besoin d'en parler ?</h1>
+     
       <ContactCard
         image="/src/assets/nightline_logo.png" 
         title="Nightline Lyon"
@@ -104,10 +105,12 @@ const Alcool = () => {
         textButton="Voir le site web"
         link="https://www.nightline.fr/lyon"
       />
-      </div>
-
+      
       <Separateur />
-      <p className="titre">Banalisation de l'alcool en soirée</p>
+
+      <div id = "banalisation">
+        <h1 className="titre">Banalisation de l'alcool en soirée</h1>
+      </div>
 
       <ImageTextPopup
         image="./src/assets/Alcool.webp"
@@ -125,14 +128,14 @@ const Alcool = () => {
       imageSrc="/src/assets/alcool.jpg" />
 
 
-      </div>
-      <div id = "Ressources_utiles">
+      
+    
       <ExternalLinkBlock
         title="Ressources utiles"
         subtitle="Quelques sites utiles à visiter"
         resources={resources}
       />
-      </div>
+      
       </div>
 
     );
