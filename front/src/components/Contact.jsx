@@ -4,6 +4,7 @@ import "./contact.css";
 const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, link, bgColor: propBgColor, textColor: propTextColor }) => {
   const [bgColor, setBgColor] = useState(propBgColor || "#ffffff");
   const [textColor, setTextColor] = useState(propTextColor || "#000000");
+  const [isDarkMode, setIsDarkMode] = useState(document.body.classList.contains("dark-mode"));
 
   useEffect(() => {
     if (!propBgColor || !propTextColor) {
@@ -28,8 +29,19 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
       };
     }
   }, [image, propBgColor, propTextColor]);
+  
 
-  const isDarkMode = document.body.classList.contains("dark-mode");
+  useEffect(() => {
+    const handleModeChange = () => {
+      setIsDarkMode(document.body.classList.contains("dark-mode"));
+    };
+
+    window.addEventListener("dark-mode-change", handleModeChange);
+
+    return () => {
+      window.removeEventListener("dark-mode-change", handleModeChange);
+    };
+  }, []);
 
   return (
     <div className="contact-card" style={{ backgroundColor: isDarkMode && propBgColor ? "#1e1e1e" : bgColor, borderColor: isDarkMode ? "#121212" : textColor }}>

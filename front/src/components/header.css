@@ -129,7 +129,7 @@ header .logo img {
 /* Style pour le texte Safety Cards */
 header .logo h1 {
     font-size: 2rem; /* Taille de la police du texte */
-    color: #333;
+    color: #000000;
     font-weight: 600;
     margin: 0; /* Retirer toute marge autour du texte */
 }

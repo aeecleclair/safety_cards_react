@@ -1,0 +1,26 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #ffffff;
+    border : #000000 2px solid;
+    color: #000000;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000; /* Assurez-vous que le bouton est au premier plan */
+  }
+  
+  .scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #000000;
+    color:white;
+  }
