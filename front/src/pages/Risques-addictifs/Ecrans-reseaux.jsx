@@ -13,9 +13,8 @@ import "../../App.css";
 const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
-  { label: "Plan d'action", target: "Plan_action" },
-  { label: "Contacts utiles", target: "Contacts" },
-  { label: "Ressources utiles", target: "Ressources_utiles" }
+  { label: "Addiction aux écrans", target: "addiction" },
+  { label: "Banalisation de la consommation", target: "banalisation" }
 ];
 
 const items = [
@@ -66,7 +65,9 @@ const Ecrans_reseaux = () => {
           text="Être toujours en ligne, c’est ne jamais être pleinement présent." 
         />
 
-        <p className="titre">Addiction aux écrans</p>
+    <div id = "addiction">
+      <h1 className="titre">Addiction aux écrans</h1>
+    </div>
 
         <ImageTextPopup
           image="./src/assets/accro-reseaux.jpg"
