@@ -57,7 +57,7 @@ const data = [
 const Stupefiants = () => {
   return (
     <div className="page">
-      <h1 className="titre">Stupéfiants</h1>
+      <h1 className="titre">Consommation de stupéfiants</h1>
       <Navbar links={navLinks} />
       <p className="sous-titre-page">Sujets traités sur cette page : 
       </p>
