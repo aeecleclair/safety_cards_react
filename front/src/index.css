@@ -4,13 +4,14 @@
 
 
 html, body {
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 :root {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
