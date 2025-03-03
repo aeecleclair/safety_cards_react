@@ -12,10 +12,9 @@ import "../../App.css";
 const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
-  { label: "Addiction à l'alcool", target: "addiction" },
-  { label: "Banalisation de la consommation", target: "banalisation" },
-  { label: "Consommation excessive ponctuelle", target: "consommation" }
-];
+  { label: "L'alcool, moi et les autres", target: "soirees" },
+  { label: "Je suis consommateur", target: "conso" },
+  { label: "Je suis témoin", target: "temoin" }];
 
 const items = [
   { title: "Evaluer", subtitle: "Vérifier son état : consciente ? Respiration normale ? Réactive ?" },
@@ -58,27 +57,65 @@ const Alcool = () => {
         <h1 className="titre-page">Consommation d'alcool</h1>
         <Navbar links={navLinks} />
         
-        <TextImageRight text="Sujets traités sur cette page :" imageSrc={"/src/assets/alcool.jpg"}>
-  <p className="sous-titre-page">Sujets traités sur cette page :</p>
-  <BulletList items={["Consommation excessive d'alcool", "Banalisation de sa consommation"]} />
-</TextImageRight>
+        <div id = "soirees">
+          <h1 className="titre">L'alcool, moi et les autres</h1>
+        </div>
+
+        <h2 className="sous-titre-2">Quels sont les effets de l'alcool ?</h2>
+
+      <p className="texte">REV!!!!!! On considère qu’une personne est sous l’effet de l’alcool si elle ressent <b>plusieurs de ces symptômes</b>, quasi systématiquement et <b>pendant plusieurs heures après consommation</b>:</p>
+      <BulletList items={[
+    "Troubles de la coordination",
+    "Altération du jugement et risques",
+    "Difficultés de concentration",
+    "Modification de l’humeur (euphorie, agressivité)",
+    "Ralentissement des réflexes",
+    "Fatigue, nausées et vertiges"
+]} />
+
+<p className="texte">A l'école, l'alcool n'est pas un sujet anodin et sa consommation y est bien souvent <b>banalisée</b>, comme le montrent les chiffres suivants :</p>
+      <ChiffresGroup chiffres={data} />
 
 
+      <h2 className="sous-titre-2">Quels sont les risques ?</h2>
+     <p className="texte">Ce que je risque sur <b>moi</b> :</p>
+      <BulletList items={[
+    "Dépendance et addiction",
+    "Dégâts au foie et aux organes",
+    "Troubles mentaux (dépression, anxiété)",
+    "Problèmes de mémoire et de cognition",
+    "Troubles du sommeil",
+    "Accidents et blessures physiques"
+]} />
+
+<Quote text="Quand je consomme, je reste responsable de mes actes.//Bourré.e ou pas, c'était bien moi." />
       
-      
-      <Quote 
-        text="Les meilleures soirées sont celles dont tu te souviens." 
-      />
+      <p className="texte">Ce que je risque sur <b>les autres</b> :</p>
+      <BulletList items={[
+    "Accidents de la route et du travail",
+    "Violences et agressions (VSS, conjugales, etc.)",
+    "Décisions et comportements à risque",
+    "Sanctions légales (amendes, prison, retrait de permis)",
+    "Impact sur les relations et la santé"
+]} />
+
+      <p className="texte">L’alcool ne doit pas être une excuse et ne justifie en aucun cas des comportements inappropriés ou dangereux. Aux yeux de la loi, la consommation d'alcool est un facteur <b>aggravant</b>.</p>
+
+        <Separateur />
 
 
-    <div id = "addiction">
-      <h1 className="titre">Addiction à l'alcool</h1>
+
+
+
+
+        <div id = "conso">
+      <h1 className="titre">Je suis consommateur</h1>
     </div>
 
       <Separateur />
 
-      <div id = "banalisation">
-        <h1 className="titre">Banalisation de l'alcool en soirée</h1>
+      <div id = "temoin">
+        <h1 className="titre">Je suis témoin</h1>
       </div>
 
       <ImageTextPopup
@@ -97,6 +134,13 @@ const Alcool = () => {
       imageSrc="/src/assets/alcool.jpg" />
 
       <Separateur />
+
+      
+      
+      <Quote 
+        text="Les meilleures soirées sont celles dont tu te souviens." 
+      />
+
       
     <div id = "consommation">
       <h1 className="titre">Consommation excessive d'alcool</h1>
@@ -122,9 +166,7 @@ const Alcool = () => {
           items={items} //on fait appel à des constantes de début de la page
           
       />
-      <h1 className="sous-titre-1">Chiffres clés</h1>
-      <ChiffresGroup chiffres={data} />
-
+      
 
       <h1 className="sous-titre-1">Besoin d'en parler ?</h1>
      
