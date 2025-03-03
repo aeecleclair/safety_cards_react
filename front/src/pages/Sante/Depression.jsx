@@ -185,7 +185,7 @@ const Depression = () => {
           <ContactCard
             image="/src/assets/logo-cosa.svg" 
             title="Comment on s'aime ?"
-            subtitle="Tchat avec des professionnels qui t'écoutent et répondent à tes questions"
+            subtitle="Écoute et réponse à tes questions par des professionnels"
             hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
             textButton="Voir le site web"
             link="https://commentonsaime.fr/"
@@ -253,8 +253,9 @@ const Depression = () => {
       La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
       imageSrc="/src/assets/logo-pssm.svg" />
 
+      <Separateur />
+
       <p className="texte"><em> <b>Sources :</b> Manuel des Premiers Secours en Santé Mentale pour les jeunes , Portail Santé de l'Université de Lyon, PAI 22 : Qualité de vie en études à l'ECL, https://commentonsaime.fr/, https://www.etudiant.gouv.fr/fr/cnae</em>
-         
          </p>
       </div>
     );

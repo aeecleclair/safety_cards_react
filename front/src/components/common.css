@@ -44,6 +44,7 @@
     height: auto; /* Conserve les proportions */
     object-fit: cover;
     border-radius: 8px;
+    background-color: white;
 }
 
 /* 🌍 Responsive : image au-dessus du texte en version mobile */
