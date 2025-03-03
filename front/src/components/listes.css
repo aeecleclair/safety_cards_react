@@ -52,8 +52,9 @@
     background-color: #b22133;
     color: white;
     border-radius: 50%;
-    width: 24px;
+    min-width: 24px; /* Définit une largeur minimale */
     height: 24px;
+    line-height: 24px; /* Centre verticalement le contenu */
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -73,4 +74,19 @@
   .item-subtitle {
     font-size: 1rem;
     margin: 0;
+  }
+
+
+
+  .sub-liste-items{
+    padding : 0 0 0 10px;
+  }
+
+  .sub-item-title{
+    margin-top:10px;
+    margin-bottom:0;
+  }
+
+  .sub-item-subtitle{
+    margin:0;
   }

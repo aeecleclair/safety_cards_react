@@ -55,7 +55,7 @@ const resources = [
 const Alcool = () => {
     return (
       <div className="page">
-        <h1 className="titre">Consommation d'alcool</h1>
+        <h1 className="titre-page">Consommation d'alcool</h1>
         <Navbar links={navLinks} />
         <p className="sous-titre-page">Sujets traités sur cette page : 
       </p>

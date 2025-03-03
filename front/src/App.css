@@ -21,10 +21,18 @@ html, body, #root, .app {
   max-width: 1100px;
 }
 
+.titre-page{ /*1er titre de chaque page*/
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom:10px;
+  color:rgb(0, 0, 0);
+  font-size: 2.2em;
+}
+
 .titre{
   text-align: left;
-  margin-top: 50px;
-  margin-bottom:10px;
+  margin-top: 20px;
+  margin-bottom:20px;
   color:rgb(0, 0, 0);
   font-size: 2.2em;
 }
@@ -61,13 +69,24 @@ html, body, #root, .app {
 /* ➡️ Version responsive */
 @media (max-width: 1000px) {
 
-  .titre {
-    font-size: 3em;
+  .titre-page {
+    font-size: 2em;
     line-height: 1.1;
     color: rgb(0, 0, 0);
-    margin-top: 120px;
+    margin-top: 130px;
+  }
+  .titre {
+    font-size: 2em;
+    line-height: 1.1;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
+
+
+
+
 
 /* Styles pour le mode sombre */
 body.dark-mode {

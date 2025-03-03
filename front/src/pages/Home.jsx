@@ -33,8 +33,8 @@ const items2 = [
   { subtitle: "Écouter, activement et sans jugement" },
   {  subtitle: "Réconforter et informer" },
   { subtitle: " Encourager à aller vers des professionnels" ,
-    subitems: [
-      { subtitle: "Description du sous-élément 1" },
+    subitems: [ 
+      {title : "Titre", subtitle: "Description du sous-élément 1" },
       { subtitle: "Description du sous-élément 2" },
     ],
   },
