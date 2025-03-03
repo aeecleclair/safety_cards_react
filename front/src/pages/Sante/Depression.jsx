@@ -87,7 +87,7 @@ const resources_aide = [
     description: "de l'Université de Lyon : accompagnement, suivi, urgences...",
   },
   {
-    link: "https://commentonsaime.fr/",
+    link: "https://www.nightline.fr/soutien-etudiant",
     imageSrc:"/src/assets/nightline_logo.png",
     label: "Annuaire",
     description: "de la Nigtline : les aides gratuites autour de toi",
