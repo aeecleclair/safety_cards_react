@@ -12,7 +12,13 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
     opacity: 0;
     visibility: hidden;
-    z-index: 1000; /* Assurez-vous que le bouton est au premier plan */
+    z-index: 100; /* Assurez-vous que le bouton est au premier plan */
+  }
+  body.dark-mode .scroll-to-top{
+    background-color: black;
+    border-color:white;
+    color : white;
+
   }
   
   .scroll-to-top.visible {
@@ -23,4 +29,11 @@
   .scroll-to-top:hover {
     background-color: #000000;
     color:white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  body.dark-mode .scroll-to-top:hover{
+    background-color: #ffffff;
+    border-color:white;
+    color : #000000;
+
   }

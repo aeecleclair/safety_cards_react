@@ -48,9 +48,9 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
       <img src={image} alt={title} className="contact-image" />
       <div className="contact-info">
         <h2 style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}>{title}</h2>
-        <h3 style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}>{subtitle}</h3>
-        <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Téléphone :</strong> {phone}</p>
-        <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Email :</strong> {email}</p>
+        {subtitle && <h3 style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}>{subtitle}</h3>}
+        {phone && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Téléphone :</strong> {phone}</p>}
+        {email && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Email :</strong> {email}</p>}
         {hours && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Horaires :</strong> {hours}</p>}
         <a
           className="link-button" style={{ backgroundColor: isDarkMode && propBgColor ? "#1e1e1e" : bgColor, borderColor: isDarkMode && propTextColor ? "#ffffff" : textColor, color: isDarkMode && propTextColor ? "#ffffff" : textColor }}

@@ -3,7 +3,8 @@
     gap: 5%;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top:20px;
     
   }
   
@@ -27,7 +28,7 @@
     margin-top:0;
   }
   body.dark-mode .chiffre-number{
-    color: #ff0000;
+    color: #b00000;
 }
   
   .chiffre-title {

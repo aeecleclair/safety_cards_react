@@ -37,7 +37,7 @@ body.dark-mode .link-block{
   }
 
 .block-title{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #000000;
     margin-bottom: 0;
@@ -74,6 +74,12 @@ body.dark-mode .link-block:hover{
     font-size: 24px;
     margin-right: 10px;
 }
+
+.link-emoji {
+  font-size : 30px;
+  margin-right : 10px;
+}
+
   
 .link-label {
     font-size: 16px;

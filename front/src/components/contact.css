@@ -4,7 +4,8 @@
     border-radius: 8px;
     padding: 20px;
     border: 2px solid;
-    margin-bottom : 40px;
+    margin-bottom : 20px;
+    margin-top:20px;
     
   }
 body.dark-mode{
@@ -23,7 +24,9 @@ body.dark-mode{
     .contact-info h2 {
         font-size: 2rem;
         margin : 0;
-        font-weight: bold
+        font-weight: bold;
+        line-height: 1.2 ;
+        
     }
 
     .contact-info h3 {
@@ -31,6 +34,7 @@ body.dark-mode{
         font-weight: bold;
         margin: 0;
         margin-bottom: 10px;
+        
     }
 
     .contact-info p {

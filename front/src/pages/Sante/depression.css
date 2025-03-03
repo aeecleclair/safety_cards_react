@@ -1,0 +1,22 @@
+.two-column-container {
+    display: flex;
+    width: 100%;
+    border:0;
+    padding:0;
+    gap:10px;
+  }
+  
+  .column {
+    flex: 2;
+    padding: 0; /* Optionnel : ajoutez du padding pour l'espacement */
+    align-content: center;
+  }
+
+  @media (max-width: 1000px) {
+    .two-column-container {
+        display: flex;
+        flex-direction: column;
+        gap:0;
+      }
+}
+  

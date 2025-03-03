@@ -16,7 +16,7 @@ nav ul {
     background-color: #ffffff;
     border-bottom: none; /* Supprime toute bordure */
     box-shadow: none; /* Supprime toute ombre */
-    margin-top: 30px; /* Marge au-dessus du menu pour l'espacement */
+    margin-top: 20px; /* Marge au-dessus du menu pour l'espacement */
 }
 body.dark-mode nav ul {
     background-color: #1e1e1e;
@@ -48,7 +48,7 @@ nav ul li a:hover, nav ul li a.hovered {
     font-weight: 600;
 }
 body.dark-mode nav ul li a:hover, nav ul li a.hovered{
-    color: #ff0000;
+    color: #b00000;
 }
 
 /* Sous-menu : agrandir pour s'adapter au texte */
@@ -95,10 +95,6 @@ body.dark-mode nav ul li a:hover, nav ul li a.hovered{
     display: block;
 }
 
-/* Hover sur une sous-catégorie */
-.dropdown-menu li a:hover {
-    color: #b22133; /* Change la couleur au survol */
-}
 
 /* Header avec logo et texte Safety Cards */
 header {
@@ -113,9 +109,10 @@ header {
 /* Conteneur du logo et du texte Safety Cards */
 header .logo {
     display: flex;
-    flex-direction: column; /* Organise les éléments en colonne */
+    flex-direction: row; /* Organise les éléments en colonne */
     justify-content: center;
     align-items: center; /* Centre tout horizontalement */
+    padding-top:20px;
     }
 
 /* Le logo lui-même */
@@ -123,7 +120,7 @@ header .logo img {
     width: 100px; /* Limite la taille du logo */
     height: auto;
     margin-bottom: 0px; /* Espacement de 10px entre le logo et le texte */
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 /* Style pour le texte Safety Cards */
@@ -131,7 +128,8 @@ header .logo h1 {
     font-size: 2rem; /* Taille de la police du texte */
     color: #000000;
     font-weight: 600;
-    margin: 0; /* Retirer toute marge autour du texte */
+    margin-left : 20px;
+    
 }
 
 /* Cache le menu burger par défaut sur grand écran */
@@ -140,15 +138,15 @@ header .logo h1 {
     display: none;
 }
 
-/*Bouton quitter le site*/
 
+/*Bouton quitter le site*/
 
 .boutons_haut {
     position: absolute;
     top: 20px;
     right: 20px;
     display:flex;
-    gap:20px;
+    gap:10px;
 }
 
 .quit-site{
@@ -240,6 +238,7 @@ body.dark-mode .quit-site {
     header .logo h1 {
         font-size: 1.5rem; /* Ajuste la taille de la police pour mobile */
         text-decoration: none;
+        margin-left:0;
     }
 
     .menu {
