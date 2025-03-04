@@ -291,6 +291,7 @@ const Alcool = () => {
 
       <Separateur />
 
+      <p className="texte"><em><b>Sources :</b> Addict'Aide, Alcool Info Service, Fil Santé Jeunes</em></p>
       
   
       
