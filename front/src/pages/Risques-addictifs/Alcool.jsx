@@ -27,9 +27,9 @@ const items = [
 ];
 
 const items2 = [
-  { title: "Limiter la consommation à un maximum de 10 verres par semaine"},
-  { title: "Ne pas consommer plus de 2 verres par jour"},
-  { title: "Prévoir au moins deux jours sans alcool par semaine"}];
+  { subtitle: "Limiter la consommation à un maximum de 10 verres par semaine"},
+  { subtitle: "Ne pas consommer plus de 2 verres par jour"},
+  { subtitle: "Prévoir au moins deux jours sans alcool par semaine"}];
 
 const data = [
   { number: "8/10", title: "étudiants de l'école", description: "consomment de l'alcool" },
@@ -193,8 +193,16 @@ const Alcool = () => {
         textButton="⤢ Agrandir la carte"
       />
 
+<p>N'oublie pas que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>
+
+<ChiffresGroup chiffres={data2} />
+
+<ExternalLinkBlock
+  resources={resources3}
+/>
+
       <div>
-  <p>N'oublie pas que toutes les boissons ne contiennent pas la même quantité d'alcool. <b>Attention</b>, à la maison ou chez des amis, on a tendance à se servir de plus grands verres !</p>
+  <p>N'oublie pas non plus que toutes les boissons ne contiennent pas la même quantité d'alcool. <b>Attention</b>, à la maison ou chez des amis, on a tendance à se servir de plus grands verres !</p>
   <img className="mx-auto" src="/src/assets/verres.png" alt="Description" />
 </div>
 
@@ -253,13 +261,6 @@ const Alcool = () => {
           
       />
 
-      <p>N'oublie pas que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>
-
-      <ChiffresGroup chiffres={data2} />
-
-      <ExternalLinkBlock
-        resources={resources3}
-      />
 
       <Separateur />
 
