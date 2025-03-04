@@ -177,7 +177,7 @@ const Alcool = () => {
       />
 
 
-      <h1 className="sous-titre-1">Le binge drinking</h1>
+      <h1 className="sous-titre-2">Le binge drinking</h1>
       
       <p className="texte"> 
       Boire, c'est bien... Savoir s'arrêter, c'est mieux ! Le binge drinking désigne une <b>consommation excessive et rapide</b> d'alcool dans le but d’<b>atteindre l'ivresse</b> en un minimum de temps. Ce phénomène, particulièrement répandu en soirée et présent sous forme de <b>jeux et défis</b>, expose à de nombreux risques : perte de contrôle, comportements dangereux, coma éthylique, voire des conséquences graves sur la santé à long terme. En plus des dangers physiques, il peut aussi entraîner des troubles du comportement et des accidents. Même une <b>grosse cuite occasionnelle</b> peut abîmer ton coeur et provoquer un AVC.</p>
@@ -210,7 +210,7 @@ const Alcool = () => {
       />
 
 
-      <h1 className="sous-titre-1">Comment savoir si je bois trop (souvent) ?</h1>
+      <h1 className="sous-titre-2">Comment savoir si je bois trop (souvent) ?</h1>
       
       <p className="texte">Pour savoir si ta consommation d'alcool est raisonnable, tu peux te référer à ces indicateurs :</p>
       <ListeNumerotee 
@@ -225,7 +225,7 @@ const Alcool = () => {
         subtitle="Fais le point avec des tests de dépistage et informe-toi à ces adresses :"
         resources={resources2}></ExternalLinkBlock>
 
-      <h1 className="sous-titre-1">Besoin d'en parler ?</h1>
+      <h1 className="sous-titre-2">Besoin d'en parler ?</h1>
      
       <ContactCard
         image="/src/assets/nightline_logo.png" 
@@ -256,7 +256,7 @@ const Alcool = () => {
       </div>
 
       <p>Si tu es témoin d'un comportement dangereux ou irresponsable d'une personne en état d'ivresse, garde <b>un oeil sur elle</b> en veillant à <b>ne pas te mettre en danger</b>.</p>
-      <h1 className="sous-titre-1">Comment agir face à une personne très alcoolisée ?</h1>
+      <h1 className="sous-titre-2">Comment agir face à une personne très alcoolisée ?</h1>
       <ListeNumerotee 
           
           title="Plan d'action pour aider une personne ivre et en danger"
@@ -294,6 +294,7 @@ const Alcool = () => {
 
       <Separateur />
 
+      <p className="texte"><em><b>Sources :</b> Addict'Aide, Alcool Info Service, Fil Santé Jeunes</em></p>
       
   
       
