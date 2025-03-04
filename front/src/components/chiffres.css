@@ -1,7 +1,7 @@
 .chiffres-group {
     display: flex;
     gap: 5%;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     margin-bottom: 20px;
     margin-top:20px;

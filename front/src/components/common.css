@@ -31,6 +31,7 @@
     font-size: 1rem;
     text-align: left;
     margin:0;
+    line-height: 2;
 }
 
 
@@ -70,11 +71,11 @@
 }
 
 .image-content-center {
-  width:70%;
+  width:80%;
   border-radius: 8px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
 
   .image-container-center {
     display: flex;
@@ -89,7 +90,7 @@
 }
 
 
-
+/*Navbar*/
 .navbar {
     display: flex;
     justify-content: left;
@@ -176,7 +177,7 @@
 
   
   
-
+/*Vidéo*/
   .video-container {
     display: flex;
     justify-content: center;

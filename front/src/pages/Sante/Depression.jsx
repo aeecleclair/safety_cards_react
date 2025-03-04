@@ -235,9 +235,9 @@ const Depression = () => {
         <h1 className="titre">Je m'inquiète pour quelqu'un</h1>
       </div>
 
-      <p className="texte">Si vous êtes en présence d’une personne en dépression, votre soutien peut faire toute la différence.  
-      En tant que secouriste, il est normal que certaines journées soient plus éprouvantes que d’autres.  
-      Avant d’intervenir pour aider les autres, prenez donc un moment pour vous assurer que vous êtes en mesure d’écouter avec bienveillance et sans jugement.
+      <p className="texte">Si vous êtes en présence d’une personne en dépression, votre <b>soutien</b> peut faire toute la différence.  
+      En tant que secouriste, <b>il est normal que certaines journées soient plus éprouvantes que d’autres. </b> 
+      Avant d’intervenir pour aider les autres, prenez donc un moment pour vous assurer que vous êtes en mesure d’écouter avec <b>bienveillance</b> et <b>sans jugement</b>.
          
       </p>
 

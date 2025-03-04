@@ -148,6 +148,8 @@ const Alcool = () => {
     "Troubles mentaux (dépression, anxiété)"
 ]} />
 
+<YouTubeVideo url="https://www.youtube.com/watch?v=Xo0x_85pERo" />
+
 <Quote text="Bourré·e ou pas, c'était bien moi." />
       
       <p className="texte">Ce que je risque sur <b>les autres</b> :</p>
@@ -218,8 +220,6 @@ const Alcool = () => {
           title="Repères de consommation"
           items={items2}
       />
-
-     <YouTubeVideo url="https://www.youtube.com/watch?v=Xo0x_85pERo" />
 
      <ExternalLinkBlock
         title="Ta consommation ne respecte pas l'un ou plusieurs de ces critères ?"
