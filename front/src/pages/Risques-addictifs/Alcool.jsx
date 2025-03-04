@@ -37,7 +37,8 @@ const data = [
 ];
 
 const data2 = [
-  { number: "6 mois de prison", title: "et 7500€ d'amende", description: "pour quiconque pousse autrui à consommer de l'alcool de manière excessive" }
+  { number: "6 ", title: "mois de prison", description: "pour quiconque pousse autrui à consommer de l'alcool de manière excessive" },
+  { number: "7500€ ", title: "d'amende", description: "pour quiconque pousse autrui à consommer de l'alcool de manière excessive" }
 ];
 
 const resources = [
@@ -101,7 +102,7 @@ const resources4 = [
 const Alcool = () => {
     return (
       <div className="page">
-        <h1 className="titre-page">REVOIR LA PAGE !!!!! Consommation d'alcool</h1>
+        <h1 className="titre-page">Consommation d'alcool</h1>
         <Navbar links={navLinks} />
         
         <div id = "soirees">
@@ -159,7 +160,7 @@ const Alcool = () => {
 <TextImageRight
   text={
     <>
-      Choisir de consommer au-delà de ses limites, ce n'est pas seulement assumer ce qu'on se fait à soi-même, c'est aussi assumer <b>sa responsabilité envers les autres</b>. L’alcool ne doit pas être une excuse et ne justifie en aucun cas des comportements inappropriés ou dangereux. Aux yeux de la loi, la consommation d'alcool est un facteur <b>aggravant</b>.
+      Choisir de consommer au-delà de ses limites, ce n'est pas seulement assumer ce qu'on se fait à soi-même, c'est aussi assumer <b>sa responsabilité envers les autres</b>. L’alcool ne doit pas être une excuse et ne justifie en aucun cas des comportements inappropriés ou dangereux. <b>Aux yeux de la loi, la consommation d'alcool est un facteur aggravant</b>.
     </>
   }
   imageSrc="/src/assets/justice.png"
@@ -294,7 +295,7 @@ const Alcool = () => {
 
       <Separateur />
 
-      <p className="texte"><em><b>Sources :</b> Addict'Aide, Alcool Info Service, Fil Santé Jeunes</em></p>
+      <p className="texte"><em><b>Sources :</b> Addict'Aide, Alcool Info Service, Fil Santé Jeunes, Guide 2024 : Les événements festifs et d'intégration étudiants</em></p>
       
   
       

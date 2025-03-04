@@ -44,7 +44,6 @@
     height: auto; /* Conserve les proportions */
     object-fit: cover;
     border-radius: 8px;
-    background-color: white;
 }
 
 /* 🌍 Responsive : image au-dessus du texte en version mobile */
@@ -67,7 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: 20px 0 40px  0;
 }
 
 .image-content-center {
@@ -76,6 +75,13 @@
 }
 
 @media (max-width: 1000px) {
+
+  .image-container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
   
   .image-content-center {
     width:100%;
