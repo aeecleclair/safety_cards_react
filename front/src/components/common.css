@@ -61,7 +61,26 @@
     }
 }
 
+ 
+/*Image au centre*/
+.image-container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
 
+.image-content-center {
+  width:70%;
+  border-radius: 8px;
+}
+
+@media (max-width: 1000px) {
+  
+  .image-content-center {
+    width:100%;
+  }
+}
 
 
 

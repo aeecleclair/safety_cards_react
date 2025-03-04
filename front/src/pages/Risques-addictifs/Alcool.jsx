@@ -9,7 +9,7 @@ import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Separateur from "../../components/Separateur";
 import "../../App.css";
 
-const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
+const { BulletList, NumberedList, TextImageRight, ImageCenter, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
   { label: "L'alcool, moi et les autres", target: "soirees" },
@@ -193,18 +193,21 @@ const Alcool = () => {
         textButton="⤢ Agrandir la carte"
       />
 
-<p>N'oublie pas que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>
+      <p>N'oublie pas que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>
 
-<ChiffresGroup chiffres={data2} />
+      <ChiffresGroup chiffres={data2} />
 
-<ExternalLinkBlock
-  resources={resources3}
-/>
+      <ExternalLinkBlock
+        resources={resources3}
+      />
 
-      <div>
-  <p>N'oublie pas non plus que toutes les boissons ne contiennent pas la même quantité d'alcool. <b>Attention</b>, à la maison ou chez des amis, on a tendance à se servir de plus grands verres !</p>
-  <img className="mx-auto" src="/src/assets/verres.png" alt="Description" />
-</div>
+            
+      <p className="text">N'oublie pas non plus que toutes les boissons ne contiennent pas la même quantité d'alcool. <b>Attention</b>, à la maison ou chez des amis, on a tendance à se servir de plus grands verres !</p>
+        
+
+      <ImageCenter
+        imageSrc="/src/assets/doses-alcool.png"
+      />
 
 
       <h1 className="sous-titre-1">Comment savoir si je bois trop (souvent) ?</h1>

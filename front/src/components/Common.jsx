@@ -26,6 +26,14 @@ export const TextImageRight = ({ text, imageSrc }) => (
 );
 
 
+export const ImageCenter = ({imageSrc }) => (
+  <div className="image-container-center">
+    <img className="image-content-center" src={imageSrc} alt="Illustration" />
+    
+  </div>
+);
+
+
 
 const Navbar = ({ links }) => {
     return (
@@ -67,4 +75,4 @@ function YouTubeVideo({ url }) {
 
 
 
-export default { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo };
+export default { BulletList, NumberedList, TextImageRight, ImageCenter, Navbar, YouTubeVideo };

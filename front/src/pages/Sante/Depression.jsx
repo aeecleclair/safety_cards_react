@@ -126,7 +126,7 @@ const Depression = () => {
          "Baisse de l'estime de soi, culpabilité injustifiée",
          "Idées suicidaires ou morbides",
          "Difficultés à se concentrer ou à prendre des décisions",
-         "Ralentissement des mouvements ou agitaion et inacapacité à se poser",
+         "Ralentissement des mouvements ou agitaion et incapacité à se poser",
          "Troubles du sommeil (perte comme augmentation)",
          "Troubles de l'appétit (perte ou excès)"]} />
 
@@ -137,6 +137,14 @@ const Depression = () => {
         title="Ressources utiles"
         subtitle="Quelques sites à visiter pour continuer à se renseigner sur la dépression"
         resources={resources_infos}
+      />
+
+      <ImageTextPopup
+        image="./src/assets/feu.jpg"
+        title="La carte 4♠"
+        shortText="Santé mentale et dépression : agir en tant que victime"
+        longText="Santé mentale et dépression : agir en tant que victime"
+        textButton="⤢ Agrandir la carte"
       />
 
 
@@ -246,6 +254,14 @@ const Depression = () => {
         resources={resources_aerer}
       />
 
+      <ImageTextPopup
+        image="./src/assets/feu.jpg"
+        title="La carte 6&diams;"
+        shortText="Santé mentale et dépression : agir en tant que témoin"
+        longText="Santé mentale et dépression : agir en tant que témoin"
+        textButton="⤢ Agrandir la carte"
+      />
+
       <h2 className="sous-titre-2">Pour aller + loin : la formation PSSM</h2>
 
       <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l’aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu’à ce qu’une aide professionnelle puisse être apportée ou jusqu’à ce que la crise soit résolue. Ils sont l’équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
@@ -255,7 +271,7 @@ const Depression = () => {
 
       <Separateur />
 
-      <p className="texte"><em> <b>Sources :</b> Manuel des Premiers Secours en Santé Mentale pour les jeunes , Portail Santé de l'Université de Lyon, PAI 22 : Qualité de vie en études à l'ECL, https://commentonsaime.fr/, https://www.etudiant.gouv.fr/fr/cnae</em>
+      <p className="texte"><em> <b>Sources :</b> Manuel des Premiers Secours en Santé Mentale pour les jeunes , Portail Santé de l'Université de Lyon, PAI 22 : Qualité de vie en études à l'ECL, Comment on s'aime ?, CNAE </em>
          </p>
       </div>
     );
