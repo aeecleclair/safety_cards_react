@@ -13,8 +13,8 @@ import "../../App.css";
 const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
-  { label: "Addiction aux écrans", target: "addiction" },
-  { label: "Banalisation de la consommation", target: "banalisation" }
+  { label: "Addiction aux écrans", target: "écrans" },
+  { label: "Addiction aux réseaux sociaux", target: "réseaux" }
 ];
 
 const items = [
@@ -29,21 +29,22 @@ const items = [
 
 const resources = [
   {
-    link: "https://montetasoiree.com/",
-    imageSrc: "/src/assets/monte-ta-soiree.png",
-    label: "Monte ta soirée",
-    description: "Un 1er outil pour organiser des soirées plus responsables",
+    link: "/isolement",
+    emoji: "🧍",
+    label: "Tu te sens seul·e ?",
+    description: "Quelques conseils pour sortir de l'isolement",
   },
   {
-    link: "https://pimp-my-party.fr/",
-    imageSrc: "/src/assets/pimp-my-party.png",
-    label: "Pimp my party",
-    description: "Un 2ème outil pour organiser des soirées en toute sécurité",
+    link: "/sedentarite",
+    emoji: "🛋️",
+    label: "Tu ne sors presque plus ?",
+    description: "Des astuces pour bouger plus au quotidien",
   },
   {
-    link: "https://www.alcool-info-service.fr/",
-    label: "Alcool info service",
-    description: "Un site pour s'informer sur l'alcool et ses conséquences",
+    link: "/sommeil",
+    emoji: "💤",
+    label: "Difficile de s'endormir ?",
+    description: "Comment lutter contre l'insomnie et mieux dormir",
   },
 ];
 
@@ -56,16 +57,9 @@ const Ecrans_reseaux = () => {
     <div className="page">
       <h1 className="titre">Addiction aux écrans & réseaux sociaux</h1>
       <Navbar links={navLinks} />
-      <p className="sous-titre-page">Sujets traités sur cette page : 
-      </p>
-      
-      <BulletList items={["Addiction aux écrans", "Addictions aux réseaux sociaux"]} />
         
-        <Quote 
-          text="Être toujours en ligne, c’est ne jamais être pleinement présent." 
-        />
 
-    <div id = "addiction">
+    <div id = "écrans">
       <h1 className="titre">Addiction aux écrans</h1>
     </div>
 
@@ -77,10 +71,41 @@ const Ecrans_reseaux = () => {
           textButton="⤢ Agrandir la carte"
         />
         
+        
+      <p className="sous-titre-2"> Les effets des écrans</p>
+      <p className="texte"> Les écrans captent ton attention, souvent sans que tu t’en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
+
+        <Quote 
+          text="Être toujours en ligne, c’est ne jamais être pleinement présent." 
+        />
+
+      <p className="texte">A terme, <b>trop d'écran</b> peut provoquer :</p>
+      <BulletList
+        items={["Troubles du sommeil",
+    "Fatigue visuelle",
+    "Douleurs posturales",
+    "Diminution de la concentration",
+    "Stress et anxiété",
+    "Isolement social"]}
+      />
+
+      <p className="texte">Alors, si tu as l'impression de :</p>
+      <BulletList
+        items={["Constamment vérifier tes notifications",
+    "Passer ton temps devant ton ordinateur, ta tablette, ton téléphone",
+    "Ouvrir des apps/sites par réflexe et te distraire",
+    "T'isoler pour être sur ton écran",
+    "Te sentir mal lorsque tu n'y as pas accès"]}
+      />
+
+      <p className="texte">Il est peut-être temps de <b>revoir ta relation avec les écrans</b>. </p>
         <div id="Plan_action"></div>
 
-      <p className="sous-titre-1"> Trop d’écrans, pas assez de vraie vie !</p>
-      <p className="texte"> Les écrans captent ton attention, souvent sans que tu t’en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Résultat : fatigue, troubles du sommeil, baisse de concentration et isolement. Prends le contrôle : fixe-toi des limites, fais des pauses, privilégie le réel. Les meilleurs moments ne se vivent pas à travers un écran !</p>
+
+
+      <ExternalLinkBlock 
+        resources={resources}
+      />
 
       <h1 className="">Comment agir ?</h1>
       <ListeNumerotee 
@@ -107,7 +132,7 @@ const Ecrans_reseaux = () => {
       />
       </div>
 
-
+      <div id="réseaux"></div>
       <p className="titre">Addiction aux réseaux sociaux</p>
 
 
