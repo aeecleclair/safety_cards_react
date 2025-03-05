@@ -26,7 +26,6 @@ const items = [
 ];
 
 
-
 const resources = [
   {
     link: "/isolement",
@@ -40,11 +39,20 @@ const resources = [
     label: "Tu ne sors presque plus ?",
     description: "Des astuces pour bouger plus au quotidien",
   },
+];
+
+const resources2 = [
   {
     link: "/sommeil",
     emoji: "💤",
-    label: "Difficile de s'endormir ?",
+    label: "Difficile de trouver le sommeil ?",
     description: "Comment lutter contre l'insomnie et mieux dormir",
+  },
+  {
+    link: "/detente",
+    emoji: "🧘",
+    label: "Les écrans t'aident à décompresser ?",
+    description: "D'autres moyens de se relaxer sans écran",
   },
 ];
 
@@ -62,16 +70,7 @@ const Ecrans_reseaux = () => {
     <div id = "écrans">
       <h1 className="titre">Addiction aux écrans</h1>
     </div>
-
-        <ImageTextPopup
-          image="./src/assets/accro-reseaux.jpg"
-          title="La carte 6♠"
-          shortText="Prévention sur l'utilisation excessive des écrans"
-          longText="Que dire ?"
-          textButton="⤢ Agrandir la carte"
-        />
-        
-        
+          
       <p className="sous-titre-2"> Les effets des écrans</p>
       <p className="texte"> Les écrans captent ton attention, souvent sans que tu t’en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
 
@@ -89,7 +88,16 @@ const Ecrans_reseaux = () => {
     "Isolement social"]}
       />
 
-      <p className="texte">Alors, si tu as l'impression de :</p>
+      
+<ImageTextPopup
+          image="./src/assets/accro-reseaux.jpg"
+          title="La carte 6♠"
+          shortText="Prévention sur l'utilisation excessive des écrans"
+          longText="Que dire ?"
+          textButton="⤢ Agrandir la carte"
+        />
+
+      <p className="texte">Si tu as l'impression de :</p>
       <BulletList
         items={["Constamment vérifier tes notifications",
     "Passer ton temps devant ton ordinateur, ta tablette, ton téléphone",
@@ -107,16 +115,25 @@ const Ecrans_reseaux = () => {
         resources={resources}
       />
 
-      <h1 className="">Comment agir ?</h1>
+      <h1 className="sous-titre-2">Comment agir ?</h1>
+      
+      <p className="texte">Les écrans ne sont pas mauvais en soi, mais il est important de <b>trouver un équilibre</b> pour ne pas se laisser submerger. Pour cela, adopte de bonnes habitudes au quotidien : </p>
+
       <ListeNumerotee 
           
-          title="Plan d'action pour réduire son exposition aux écrans"
-          items={items} //on fait appel à des constantes de début de la page
+          title="Plan d'action pour limiter son exposition aux écrans"
+          items={items} 
           
       />
-      <h1 className="">Chiffres clés</h1>
+      <p className="texte">Il est aussi possible d'installer des applications de <b>contrôle du temps d'écran</b>, d'utiliser les <b>modes de concentration</b> intégrés à certains téléphones ou encore d'installer des applications qui <b>bloquent les éventuelles distractions</b> (notifications, applications) selon l'heure et la durée d'utilisation.</p>
+
+      <p className="texte">Enfin, n'oublie pas de protéger ta vue en <b>diminuant la luminosité de ton écran</b> dans la pénombre et en activant le <b>filtre anti lumière-bleue.</b></p>
+      <h1 className="sous-titre-2">Chiffres clés</h1>
       <ChiffresGroup chiffres={data} />
 
+      <ExternalLinkBlock
+        resources={resources2}
+        />
 
       <h1 className="">Besoin d'en parler ?</h1>
       <div id = "Contacts">
@@ -150,6 +167,13 @@ const Ecrans_reseaux = () => {
         resources={resources}
       />
       </div>
+
+      
+            <Separateur />
+      
+            <p className="texte"><em><b>Sources :</b> e-enfance</em></p>
+            
+        
     </div>
     );
   };
