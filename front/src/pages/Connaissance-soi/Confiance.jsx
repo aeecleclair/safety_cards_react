@@ -1,3 +1,5 @@
+import Quote from "../../components/Citation";
+
 const Confiance = () => {
     return (
       <div>
@@ -7,4 +9,11 @@ const Confiance = () => {
     );
   };
   
+
+  <Quote
+  text="Soyez vous-même, tous les autres sont déjà pris."
+  author="Oscar Wilde"
+/>
+
+
   export default Confiance;

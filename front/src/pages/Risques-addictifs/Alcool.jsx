@@ -121,7 +121,7 @@ const Alcool = () => {
     "Fatigue, nausées et vertiges"
 ]} />
 
-<p className="texte">Tu ressens ces symptômes, alors que tu n'as (presque) pas bu ? Tu as peut-être été drogué·e à ton insu.</p>
+<p className="texte">Tu ressens ces symptômes, alors que tu n'as (presque) pas bu ? Tu as peut-être été <b>drogué·e à ton insu</b>.</p>
 <ExternalLinkBlock resources={resources4} />
 
       <ImageTextPopup
