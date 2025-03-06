@@ -74,7 +74,7 @@ const resources_infos = [
     { title: "Au cours de la conversation", subtitle: "L'arrêt de l'automutilation ne doit pas être au centre de la conversation. Cherchez plutôt des moyens pour rendre la vie de la personne plus agréable : mettre un terme à l'automutilation est un processus long, qui ne s'accomplit pas du jour au lendemain." },
     { title: "Exprimez votre inquiétude et écoutez activement", subtitle: "Signifiez à la personne ce que vous ressentez en faisant usage du «Je» : «Je m'inquiète» et non «Tu m'inquiètes». Montrez que vous êtes à l'écoute en reprenant ses propos. Réagissez avec calme, sans juger la personne et sans prendre ses sentiments à la légère." },
     { title: "Offrez votre soutien et votre réconfort", subtitle: "Faites preuve d'empathie, dites-lui que vous comprenez ce qu'elle ou il vit. Signifiez-lui qu'elle ou il n'est pas seul·e et que vous êtes là pour l'aider." },
-    { title: "Encouragez à aller voir des professionnels", subtitle: "Par exemple l'infirmière de Centrale, un médecin généraliste, un psychologue... Si vous devez en parler avec quelqu'un pour sa sécurité, demandez-lui son accord avant. Ne contactez les secours (15 ou 112) que si la blessure est grave. Gardez en tête que la plupart des personnes qui s’automutilent ne souhaitent pas mettre fin à leurs jours.  " },
+    { title: "Encouragez à aller voir des professionnels", subtitle: "Par exemple l'infirmière de Centrale, un·e médecin généraliste, un·e psychologue... Si vous devez en parler avec quelqu'un pour sa sécurité, demandez-lui son accord avant. Ne contactez les secours (15 ou 112) que si la blessure est grave. Gardez en tête que la plupart des personnes qui s’automutilent ne souhaitent pas mettre fin à leurs jours.  " },
   ];
   
 
@@ -140,10 +140,10 @@ const Automutilation = () => {
       </div>
 
       <h2 className="sous-titre-2">Quand tu as envie de te faire mal</h2>
-      <p className="texte">Les idées suicidaires passent après un certain temps. Si tu parviens à les surmonter pendant une certaine période, ce sera plu simple de te retenir après. Pour faire passer ces idées, tu peux : </p>
+      <p className="texte">Les envies d'automutilation passent après un certain temps. Si tu parviens à les surmonter pendant une certaine période, ce sera plus simple de te retenir après. Pour faire passer ces idées, tu peux : </p>
 
       <BulletList items={[
-          "Parler à quelqu’un : que ce soit à des memebres de ta famille, à des amis ou en appelant une ligne d'écoute (voir contacts plus bas).",
+          "Parler à quelqu’un : que ce soit à des membres de ta famille, à des amis ou en appelant une ligne d'écoute (voir contacts plus bas).",
           "Te distraire en trouvant une activité qui te change les idées : tu peux sortir te balader, écouter de la musique, faire du sport ou n'importe quelle autre activité qui t'intéresse.",
           "Te détendre et concentrer ton esprit sur des pensées agréables et positives. Prends soin de toi et autorise-toi à faire quelque chose que tu aimes.",
           "Trouver un environnement qui te mette en confiance.",
@@ -183,7 +183,7 @@ const Automutilation = () => {
 
       <h2 className="sous-titre-2">Lorsque l'envie de te faire du mal est passée</h2>
 
-      <p className="texte">Lorsque l'envie est passée et que tu te sens en sécurité, tu peux réfléchir aux poits suivants :</p>
+      <p className="texte">Lorsque l'envie est passée et que tu te sens en sécurité, tu peux réfléchir aux points suivants :</p>
 
       <BulletList items={[
           "Rappelle-toi de la dernière fois où tu n'avais pas envie de t'automutiler : quelles étaient tes pensées, que ressentais-tu, où et avec qui étais-tu ?",
@@ -237,20 +237,20 @@ const Automutilation = () => {
         </div>
 
         <h2 className="sous-titre-2">Les signes à repérer</h2>
-        <p className="text">Si quelqu'un s'automutile, elle ou il peut :</p>
+        <p className="text">Si une personne s'automutile, elle peut :</p>
         <BulletList items={[
           "Présenter des coupures, des brûlures, des hématomes ou des cicatrices, notamment au niveau des bras, du ventre ou des cuisses. ",
           "Porter des vêtements qui masquent ces signes physiques, comme des hauts à manches longues. ",
           "Inventer des excuses pour expliquer ces blessures. ",
           "Transporter des objets coupants (couteaux, ciseaux...)",
-          "Evoquer des senssations de douleur,de faiblesse ou d'étourdissements.",
-          "Ressentir de la confusion, du dégoût, de la peur, ou montre des signes d'une mauvaise estime personnelle.",
+          "Evoquer des sensations de douleur, de faiblesse ou d'étourdissements.",
+          "Ressentir de la confusion, du dégoût, de la peur, ou montrer des signes d'une mauvaise estime personnelle.",
           "Avoir la sensation de ne rien maitriser, d'être isolé·e ou seul·e."
       ]} />
 
 
         <h2 className="sous-titre-2">Comment réagir ?</h2>
-        <p className="text">Si vous pensez qu'une personne s'automutile, <b>vous devez en parler avec elle ou lui</b>. Faites tout d'abord un point avec vos émotions. <b>Si vous ne vous sentez pas capable d'aborder le sujet</b>, essayez de trouver quelqu'un qui pourra le faire. Cela peut être un ami ou l'infirmière de Centrale. <br/> <b>Si vous vous sentez à même d'avoir cette conversation,</b> voici quelques étapes à suivre : </p>
+        <p className="text">Si vous pensez qu'une personne s'automutile, <b>vous devez en parler avec elle</b>. Faites tout d'abord un point avec vos émotions. <b>Si vous ne vous sentez pas capable d'aborder le sujet</b>, essayez de trouver quelqu'un qui pourra le faire. Cela peut être un·e ami·e ou l'infirmière de Centrale. <br/> <b>Si vous vous sentez à même d'avoir cette conversation,</b> voici quelques étapes à suivre : </p>
       
 
         <ListeNumerotee 
@@ -264,13 +264,13 @@ const Automutilation = () => {
       <h2 className="sous-titre-2"> Ce qu'il faut éviter de faire</h2>
 
       <BulletList items={[
-          "Essayer d'être son thérapeute. La meilleure façon de l’aider est d'être son ami, son parent ou son partenaire. ",
-          "Réagir fortement, en vous montrant en colère, blessé ou bouleversé. Ceci l’amènera probablement à se sentir encore plus mal, ce qui rendra le changement plus difficile.",
-          "Vous pouvez, honnêtement et ouvertement, parler à votre ami ou parent de l'effet que son automutilation a sur vous. Mais pour cela, vous devez être calme, afin de pouvoir parler d'une manière qui montre à quel point vous vous souciez d'eux.",
-          "S’attendre à ce qu'elle s’arrête du jour au lendemain, cela demande généralement du temps et des efforts. ",
-          "Luttez avec eux lorsqu'ils sont sur le point de s'automutiler. Il vaut mieux s'éloigner et leur suggérer de venir vous en parler plutôt que de se faire du mal. ",
-          "Leur faire promettre de ne pas recommencer. ",
-          "Leur dire que vous ne les verrez plus à moins qu'ils n'arrêtent de s'automutiler.  ",
+          "Essayer d'être sa ou son thérapeute. La meilleure façon de l’aider est d'être son ami·e, son parent ou sa/son partenaire. ",
+          "Réagir fortement, en vous montrant en colère, blessé·e ou bouleversé·e. Ceci l’amènera probablement à se sentir encore plus mal, ce qui rendra le changement plus difficile.",
+          "Vous pouvez, honnêtement et ouvertement, parler à votre ami·e ou parent de l'effet que son automutilation a sur vous. Mais pour cela, vous devez être calme, afin de pouvoir parler d'une manière qui montre à quel point vous vous souciez d'eux.",
+          "S’attendre à ce qu'elle ou il s’arrête du jour au lendemain, cela demande généralement du temps et des efforts. ",
+          "Luttez avec eux lorsqu'elle ou il est sur le point de s'automutiler. Il vaut mieux s'éloigner et lui suggérer de venir vous en parler plutôt que de se faire du mal. ",
+          "Lui faire promettre de ne pas recommencer. ",
+          "Lui dire que vous ne la ou le verrez plus à moins qu'elle ou il n'arrête de s'automutiler.  ",
           "Se sentir responsable de leur automutilation ou devenir la personne qui est censée les arrêter. Assurez-vous aussi d'avoir quelqu'un à qui parler afin d'obtenir le soutien dont vous avez aussi besoin."
       ]} />
 
