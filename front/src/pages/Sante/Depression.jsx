@@ -59,10 +59,10 @@ const resources_infos = [
     description: "de l'Université de Lyon : Conseils, explications et ressources ",
   },
   {
-    link: "https://3114.fr/",
-    imageSrc:"/src/assets/3114.png",
-    label: "3114",
-    description: "Le site de conseils et de ressources du numéro national de prévention du suicide",
+    link: "https://www.filsantejeunes.com/",
+    imageSrc:"/src/assets/fsj.png",
+    label: "Fil santé Jeunes",
+    description: "Des conseils et des articles sur la dépression",
   },
   {
     link: "https://commentonsaime.fr/",
