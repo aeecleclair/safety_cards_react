@@ -55,13 +55,13 @@ const resources_infos = [
     },
     {
       link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/",
-      imageSrc:"/src/assets/logo_UDL.png",
+      imageSrc:"/public/assets/logo_UDL.png",
       label: "Annuaire",
       description: "de l'Université de Lyon : accompagnement, suivi, urgences...",
     },
     {
       link: "https://www.nightline.fr/soutien-etudiant",
-      imageSrc:"/src/assets/nightline_logo.png",
+      imageSrc:"/public/assets/nightline_logo.png",
       label: "Annuaire",
       description: "de la Nigtline : les aides gratuites autour de toi",
     }
@@ -106,7 +106,7 @@ const Automutilation = () => {
 
       
       <TextImageRight  text="De nombreuses personnes qui s’automutilent sont en grande détresse ou dans des situations insupportables. Elles souffrent souvent de cette manière pendant un certain temps avant de s’automutiler. L'automutilation peut par exemple être utilisée pour faire retomber le stress, exprimer leur douleur ou échapper à des souvenirs traumatisants. Dans certains cas, c’est leur sentiment de culpabilité qui les pousse à s’infliger une punition. " 
-      imageSrc="/src/assets/zebre.jpg" />
+      imageSrc="/public/assets/zebre.jpg" />
 
       <p className="texte"> <b>Important</b> : la plupart des personnes qui s'automutilent <b>ne cherchent pas à mettre fin à leurs jours.</b> Si le doute se pose, n'hésitez pas à <b>poser la question à la personne.</b> </p>
 
@@ -124,7 +124,7 @@ const Automutilation = () => {
 
 
       <ImageTextPopup
-        image="./src/assets/feu.jpg"
+        image="./public/assets/feu.jpg"
         title="La carte 3♠"
         shortText="Automutilation : agir en tant que victime et témoin"
         longText="Automutilation : agir en tant que victime et témoin"
@@ -156,7 +156,7 @@ const Automutilation = () => {
       <div className="two-column-container">
         <div className="column">
           <ContactCard
-          image="/src/assets/nightline_logo.png" 
+          image="/public/assets/nightline_logo.png" 
           title="Nightline Lyon"
           subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
           phone="04 85 30 00 10"
@@ -168,7 +168,7 @@ const Automutilation = () => {
         </div>
         <div className="column">
           <ContactCard
-            image="/src/assets/logo-cosa.svg" 
+            image="/public/assets/logo-cosa.svg" 
             title="Comment on s'aime ?"
             subtitle="Écoute et réponse à tes questions par des professionnels"
             hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
@@ -210,7 +210,7 @@ const Automutilation = () => {
       <p className="texte"><b>Tu n'es pas seul·e</b> et de nombreuses initiatives sont mises en place pour t'écouter et t'aider. Si tu le souhaites, tu peux en parler à des membres de ta famille ou à des amis. Tu peux aussi prendre rendez-vous avec <b>l'infirmière de l'Ecole</b>, et ce même si tu as juste besoin de parler.</p>
 
       <ContactCard
-        image="/src/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        image="/public/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
         title="Infirmerie"
         subtitle="Infirmerie de Centrale Lyon"
         phone="Voir les informations"
@@ -280,7 +280,7 @@ const Automutilation = () => {
             <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l’aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu’à ce qu’une aide professionnelle puisse être apportée ou jusqu’à ce que la crise soit résolue. Ils sont l’équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
             Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.
             La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
-            imageSrc="/src/assets/logo-pssm.svg" />
+            imageSrc="/public/assets/logo-pssm.svg" />
       
             <Separateur />
       

@@ -30,7 +30,7 @@ const items = [
 const resources2 = [
   {
     link: "https://lebonusagedesecrans.fr/",
-    imageSrc: "/src/assets/lebonusagedesecrans.png",
+    imageSrc: "/public/assets/lebonusagedesecrans.png",
     label: "Le bon usage des écrans",
     description: "Retrouver le contrôle sur son temps d'écran",
   },
@@ -96,7 +96,7 @@ const Ecrans_reseaux = () => {
 
       
       <ImageTextPopup
-          image="./src/assets/accro-reseaux.jpg"
+          image="./public/assets/accro-reseaux.jpg"
           title="La carte 6♠"
           shortText="Prévention sur l'utilisation excessive des écrans"
           longText="Que dire ?"
@@ -148,7 +148,7 @@ const Ecrans_reseaux = () => {
       />
 
     <TextImageRight
-      imageSrc="/src/assets/phone-night.jpg"
+      imageSrc="/public/assets/phone-night.jpg"
       text={
         <>Il est aussi possible d'installer des applications de <strong>contrôle du temps d'écran</strong>, d'utiliser les <strong>modes de concentration</strong> intégrés à certains téléphones ou encore d'installer des applications qui <strong>bloquent les éventuelles distractions</strong> (notifications, applications) selon l'heure et la durée d'utilisation. Enfin, n'oublie pas de protéger ta vue en <strong>diminuant la luminosité de ton écran</strong> dans la pénombre et en activant le <strong>filtre anti lumière bleue</strong>.
         </>}
@@ -167,7 +167,7 @@ const Ecrans_reseaux = () => {
       <div id = "Contacts">
         
       <ContactCard
-        image="/src/assets/nightline_logo.png" 
+        image="/public/assets/nightline_logo.png" 
         title="Nightline Lyon"
         subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
         phone="04 85 30 00 10"
@@ -230,7 +230,7 @@ Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b
 <h1 className="">Besoin d'en parler ?</h1>
 <div id="Contacts">
 <ContactCard
-  image="/src/assets/ffab.png" 
+  image="/public/assets/ffab.png" 
   title="Anorexie Boulimie, Info Ecoute"
   subtitle="Posez vos questions à des spécialistes des TCA"
   phone="09 69 325 900"

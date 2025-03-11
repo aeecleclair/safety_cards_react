@@ -34,13 +34,13 @@ const data = [
 const resources = [
   {
     link: "https://montetasoiree.com/",
-    imageSrc: "/src/assets/monte-ta-soiree.png",
+    imageSrc: "/public/assets/monte-ta-soiree.png",
     label: "Monte ta soirée",
     description: "Un 1er outil pour organiser des soirées plus responsables",
   },
   {
     link: "https://pimp-my-party.fr/",
-    imageSrc: "/src/assets/pimp-my-party.png",
+    imageSrc: "/public/assets/pimp-my-party.png",
     label: "Pimp my party",
     description: "Un 2ème outil pour organiser des soirées en toute sécurité",
   },
@@ -70,7 +70,7 @@ const Tabac = () => {
     </div>
 
       <ImageTextPopup
-        image="./src/assets/bouteilles.jpg"
+        image="./public/assets/bouteilles.jpg"
         title="La carte 3♣"
         shortText="Prévention sur la consommation excessive d'alcool"
         longText="Que dire ?"
@@ -96,7 +96,7 @@ const Tabac = () => {
       <h1 className="sous-titre-1">Besoin d'en parler ?</h1>
      
       <ContactCard
-        image="/src/assets/nightline_logo.png" 
+        image="/public/assets/nightline_logo.png" 
         title="Nightline Lyon"
         subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
         phone="04 85 30 00 10"
@@ -113,7 +113,7 @@ const Tabac = () => {
       </div>
 
       <ImageTextPopup
-        image="./src/assets/Alcool.webp"
+        image="./public/assets/Alcool.webp"
         title="La carte 6♣"
         shortText="Prévention sur la banalisation de l'alcool en soirée"
         longText="1 verre, 2 verres, 3 verres... En soirée, on perd vite le compte.
@@ -125,7 +125,7 @@ const Tabac = () => {
 
 
     <TextImageRight  text="Boire un coup entre amis doit rester un moment de convivialité où chacun doit se sentir à l'aise avec sa consommation." 
-      imageSrc="/src/assets/alcool.jpg" />
+      imageSrc="/public/assets/alcool.jpg" />
 
 
       
