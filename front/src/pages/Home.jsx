@@ -44,7 +44,7 @@ const items2 = [
 const resources = [
   {
     link: "https://www.nightline.fr/lyon",
-    imageSrc: "/public/assets/nightline_logo.png",
+    imageSrc: "/assets/nightline_logo.png",
     label: "Nightline",
     description: "Un service d'écoute nocturne tous les soirs de 21h à 2h30",
   },
@@ -93,7 +93,7 @@ const Home = () => {
 
 
       <ImageTextPopup
-        image="./public/assets/feu.jpg"
+        image="./assets/feu.jpg"
         title="La carte 3♠"
         shortText="Prévention sur les risques d'incendie"
         longText="Ceci est une phrase qui vise à rallonger la  longueur du texte. L’image présente un paysage naturel captivant où la lumière douce du matin baigne l'ensemble de la scène. Au premier plan, une prairie verdoyante s'étend à perte de vue, avec des herbes hautes qui dansent lentement sous l'effet d’une brise légère. Les couleurs du sol, d’un vert tendre, se mélangent subtilement aux fleurs sauvages de toutes sortes : des marguerites blanches, des coquelicots rouges éclatants, et des boutons d’or jaunes, ajoutant une touche de couleur vive au tableau. Plus loin, un sentier sinueux se fraye un chemin à travers cette végétation, invitant à l’exploration.
@@ -125,7 +125,7 @@ const Home = () => {
 
       <div id = "Contacts">
       <ContactCard
-        image="/public/assets/nightline_logo.png" 
+        image="/assets/nightline_logo.png" 
         title="Nightline Lyon"
         subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
         phone="04 85 30 00 10"
@@ -136,7 +136,7 @@ const Home = () => {
       />
 
       <ContactCard
-        image="/public/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
         title="Infirmerie"
         subtitle="Infirmerie de Centrale Lyon"
         phone="Voir les informations"
@@ -152,7 +152,7 @@ const Home = () => {
       />
 
       <ContactCard
-        image="/public/assets/3114.jpg" 
+        image="/assets/3114.jpg" 
         title="3114"
         subtitle="Numéro national de prévention du suicide"
         phone="3114"
@@ -185,7 +185,7 @@ const Home = () => {
       quam purus at libero. Nulla facilisi. In hac habitasse platea dictumst. 
       Donec sed tortor vel purus gravida convallis nec sit amet justo. 
       Vestibulum euismod tincidunt risus, id laoreet ligula sagittis et." 
-      imageSrc="/public/assets/sexo.webp" />
+      imageSrc="/assets/sexo.webp" />
 
 
       <YouTubeVideo url="https://www.youtube.com/watch?v=HUngLgGRJpo" />

@@ -54,19 +54,19 @@ const resources_infos = [
 
   {
     link: "https://masante.universite-lyon.fr/sante-mentale/",
-    imageSrc: "/public/assets/logo_UDL.png",
+    imageSrc: "/assets/logo_UDL.png",
     label: "Portail Santé mentale",
     description: "de l'Université de Lyon : Conseils, explications et ressources ",
   },
   {
     link: "https://www.filsantejeunes.com/",
-    imageSrc:"/public/assets/fsj.png",
+    imageSrc:"/assets/fsj.png",
     label: "Fil santé Jeunes",
     description: "Des conseils et des articles sur la dépression",
   },
   {
     link: "https://commentonsaime.fr/",
-    imageSrc:"/public/assets/logo-cosa.svg",
+    imageSrc:"/assets/logo-cosa.svg",
     label: "Comment on s'aime ?",
     description: "Un site internet pour répondre à toutes vos questions",
   }
@@ -82,13 +82,13 @@ const resources_aide = [
   },
   {
     link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/",
-    imageSrc:"/public/assets/logo_UDL.png",
+    imageSrc:"/assets/logo_UDL.png",
     label: "Annuaire",
     description: "de l'Université de Lyon : accompagnement, suivi, urgences...",
   },
   {
     link: "https://www.nightline.fr/soutien-etudiant",
-    imageSrc:"/public/assets/nightline_logo.png",
+    imageSrc:"/assets/nightline_logo.png",
     label: "Annuaire",
     description: "de la Nigtline : les aides gratuites autour de toi",
   }
@@ -140,7 +140,7 @@ const Depression = () => {
       />
 
       <ImageTextPopup
-        image="./public/assets/feu.jpg"
+        image="./assets/feu.jpg"
         title="La carte 4♠"
         shortText="Santé mentale et dépression : agir en tant que victime"
         longText="Santé mentale et dépression : agir en tant que victime"
@@ -160,7 +160,7 @@ const Depression = () => {
       <p className="texte"><b>Tu n'es pas seul·e</b> et de nombreuses initiatives sont mises en place pour t'écouter et t'aider. Si tu le souhaites, tu peux en parler à des membres de ta famille ou à des amis. Tu peux aussi prendre rendez-vous avec <b>l'infirmière de l'Ecole</b>, et ce même si tu as juste besoin de parler.</p>
 
       <ContactCard
-        image="/public/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
         title="Infirmerie"
         subtitle="Infirmerie de Centrale Lyon"
         phone="Voir les informations"
@@ -179,7 +179,7 @@ const Depression = () => {
       <div className="two-column-container">
         <div className="column">
           <ContactCard
-          image="/public/assets/nightline_logo.png" 
+          image="/assets/nightline_logo.png" 
           title="Nightline Lyon"
           subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
           phone="04 85 30 00 10"
@@ -191,7 +191,7 @@ const Depression = () => {
         </div>
         <div className="column">
           <ContactCard
-            image="/public/assets/logo-cosa.svg" 
+            image="/assets/logo-cosa.svg" 
             title="Comment on s'aime ?"
             subtitle="Écoute et réponse à tes questions par des professionnels"
             hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
@@ -216,7 +216,7 @@ const Depression = () => {
       <h2 className="sous-titre-2">Tu es en détresse ou tu as des pensées suicidaires ?</h2>
       
       <ContactCard
-        image="/public/assets/3114.jpg" 
+        image="/assets/3114.jpg" 
         title="3114"
         subtitle="Numéro national de prévention du suicide"
         phone="3114"
@@ -255,7 +255,7 @@ const Depression = () => {
       />
 
       <ImageTextPopup
-        image="./public/assets/feu.jpg"
+        image="./assets/feu.jpg"
         title="La carte 6&diams;"
         shortText="Santé mentale et dépression : agir en tant que témoin"
         longText="Santé mentale et dépression : agir en tant que témoin"
@@ -267,7 +267,7 @@ const Depression = () => {
       <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l’aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu’à ce qu’une aide professionnelle puisse être apportée ou jusqu’à ce que la crise soit résolue. Ils sont l’équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
       Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.
       La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
-      imageSrc="/public/assets/logo-pssm.svg" />
+      imageSrc="/assets/logo-pssm.svg" />
 
       <Separateur />
 

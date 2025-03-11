@@ -27,7 +27,7 @@ const items = [
 const resources = [
   {
     link: "https://www.nightline.fr/lyon",
-    //imageSrc: "/public/assets/nightline_logo.png",
+    //imageSrc: "/assets/nightline_logo.png",
     label: "Nightline",
     description: "Un service d'écoute nocturne tous les soirs de 21h à 2h30",
   },
@@ -65,7 +65,7 @@ const Sommeil = () => {
         <p className="titre">Un "bon" rythme de sommeil</p>
 
         <ImageTextPopup
-          image="./public/assets/Sommeil 1.jpg"
+          image="./assets/Sommeil 1.jpg"
           title="La carte 9♠"
           shortText="Prévention quant au sommeil des étudiants"
           longText="Tout le monde expérimente des nuits plus ou moins calme au cours de sa scolarité..."
@@ -91,7 +91,7 @@ const Sommeil = () => {
       <h1 className="">Besoin d'en parler ?</h1>
       <div id = "Contacts">
       <ContactCard
-        image="/public/assets/nightline_logo.png" 
+        image="/assets/nightline_logo.png" 
         title="Nightline Lyon"
         subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
         phone="04 85 30 00 10"
@@ -108,7 +108,7 @@ const Sommeil = () => {
 
 
     <TextImageRight  text="" 
-      imageSrc="../public/assets/Reseaux.png" />
+      imageSrc="../assets/Reseaux.png" />
 
     <YouTubeVideo url="https://www.youtube.com/watch?v=9qLREeJs__A" />
 
