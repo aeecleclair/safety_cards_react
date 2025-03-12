@@ -34,6 +34,11 @@ const resources2 = [
     label: "Le bon usage des écrans",
     description: "Retrouver le contrôle sur son temps d'écran",
   },
+  {link: "https://youtube.com/playlist?list=PL8Ax_z5vzflz8JveM9VetLiZ3LPtFsttW&si=GZMy1ZTr3JaKGWsD",
+  imageSrc: "/src/assets/dopamine.png",
+  label: "Dopamine (série arte)",
+  description: "Découvre toutes les techniques employées pour retenir ton attention",
+  },
 ];
 
 const resources = [
@@ -66,13 +71,6 @@ const resources3 = [
   },
 ];
 
-const resources4 = [
-  {
-    link: "https://www.e-enfance.org/",
-    label: "e-enfance",
-    description: "Association de protection de l'enfance sur Internet",
-  },
-];
 
 const data = [
   { number: "1/2", title: "élève considère que son temps d'écran", description: "impacte négativement son sommeil" },
@@ -83,7 +81,7 @@ const data = [
 const Ecrans_reseaux = () => {
   return (
     <div className="page">
-      <h1 className="titre">Addiction aux écrans & réseaux sociaux</h1>
+      <h1 className="titre-page">Addiction aux écrans & réseaux sociaux</h1>
       <Navbar links={navLinks} />
         
 
@@ -239,7 +237,7 @@ Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b
   link="https://www.ffab.fr/"
 />
 </div>
-          
+  
       <Separateur />
       <p className="texte"><em><b>Sources : </b></em>e-enfance, FFAB,</p>
     </div>
