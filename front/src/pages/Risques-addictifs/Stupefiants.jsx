@@ -31,13 +31,13 @@ const items = [
 const resources = [
   {
     link: "https://montetasoiree.com/",
-    imageSrc: "/src/assets/monte-ta-soiree.png",
+    imageSrc: "/assets/monte-ta-soiree.png",
     label: "Monte ta soirée",
     description: "Un 1er outil pour organiser des soirées plus responsables",
   },
   {
     link: "https://pimp-my-party.fr/",
-    imageSrc: "/src/assets/pimp-my-party.png",
+    imageSrc: "/assets/pimp-my-party.png",
     label: "Pimp my party",
     description: "Un 2ème outil pour organiser des soirées en toute sécurité",
   },
@@ -74,7 +74,7 @@ const Stupefiants = () => {
         />
 
         <ImageTextPopup
-          image="./src/assets/accro-reseaux.jpg"
+          image="./assets/accro-reseaux.jpg"
           title="La carte 10♣"
           shortText="Prévention sur l'addiction aux stupéfiants"
           longText="Que dire ?"
@@ -100,7 +100,7 @@ const Stupefiants = () => {
       <h1 className="">Besoin d'en parler ?</h1>
       <div id = "Contacts">
       <ContactCard
-        image="/src/assets/nightline_logo.png" 
+        image="/assets/nightline_logo.png" 
         title="Nightline Lyon"
         subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
         phone="04 85 30 00 10"
@@ -115,7 +115,7 @@ const Stupefiants = () => {
       <p className="titre">Addiction aux réseaux sociaux</p>
 
       <ImageTextPopup
-          image="./src/assets/accro-reseaux.jpg"
+          image="./assets/accro-reseaux.jpg"
           title="La carte Valet♣"
           shortText="Prévention sur la consommation occasionnelle de stupéfiants"
           longText="Que dire ?"
@@ -123,7 +123,7 @@ const Stupefiants = () => {
         />
 
     <TextImageRight  text="Les réseaux sociaux, c’est comme une sorte de boucle sans fin où on se retrouve souvent piégé. Au départ, ça paraît anodin : on veut juste voir ce qui se passe, discuter avec des amis ou se détendre un peu. Mais petit à petit, on finit par passer des heures à scroller, à attendre des notifications, et à comparer nos vies à celles des autres. Le problème, c’est que ça affecte notre confiance en nous et notre bien-être mental. On se met à chercher la validation à travers les likes et les commentaires, ce qui peut créer de l’anxiété et du stress. En plus, on oublie qu’on ne voit que les « bonnes » facettes de la vie des autres, et pas la réalité derrière l'écran. Pour éviter ça, il faut vraiment apprendre à prendre du recul : se fixer des limites sur le temps passé en ligne, couper les notifications, et surtout profiter de moments sans écran. C’est à nous de reprendre le contrôle et de ne pas laisser les réseaux sociaux définir notre quotidien." 
-      imageSrc="../src/assets/Reseaux.png" />
+      imageSrc="../assets/Reseaux.png" />
 
     <YouTubeVideo url="https://www.youtube.com/watch?v=9qLREeJs__A" />
 

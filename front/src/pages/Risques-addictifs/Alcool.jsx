@@ -44,13 +44,13 @@ const data2 = [
 const resources = [
   {
     link: "https://montetasoiree.com/",
-    imageSrc: "/src/assets/monte-ta-soiree.png",
+    imageSrc: "/assets/monte-ta-soiree.png",
     label: "Monte ta soirée",
     description: "Un 1er outil pour organiser des soirées plus responsables",
   },
   {
     link: "https://pimp-my-party.fr/",
-    imageSrc: "/src/assets/pimp-my-party.png",
+    imageSrc: "/assets/pimp-my-party.png",
     label: "Pimp my party",
     description: "Un 2ème outil pour organiser des soirées en toute sécurité",
   },
@@ -59,19 +59,19 @@ const resources = [
 const resources2 = [
   {
     link: "https://www.alcool-info-service.fr/",
-    imageSrc: "/src/assets/alcoolinfoservice.jpg",
+    imageSrc: "/assets/alcoolinfoservice.jpg",
     label: "Alcool info service",
     description: "Un site pour s'informer sur l'alcool et ses conséquences",
   },
   {
     link: "https://www.addictaide.fr/",
-    imageSrc: "/src/assets/addictaide.jpg",
+    imageSrc: "/assets/addictaide.jpg",
     label: "Addict'aide",
     description: "Trouve des outils et des ressources pour ne plus être seul·e face à l’addiction",
   },
   {
     link: "https://addictions-france.org/etablissements/",
-    imageSrc: "/src/assets/cjc.png",
+    imageSrc: "/assets/cjc.png",
     label: "Consultations jeunes consommateurs",
     description: "Trouve une CJC pour t'accompagner près de chez toi",
   }
@@ -125,7 +125,7 @@ const Alcool = () => {
 <ExternalLinkBlock resources={resources4} />
 
       <ImageTextPopup
-        image="./src/assets/Alcool.webp"
+        image="./assets/Alcool.webp"
         title="La carte 6♣"
         shortText="Prévention sur la banalisation de l'alcool en soirée"
         longText="1 verre, 2 verres, 3 verres... En soirée, on perd vite le compte.
@@ -165,7 +165,7 @@ const Alcool = () => {
       Choisir de consommer au-delà de ses limites, ce n'est pas seulement assumer ce qu'on se fait à soi-même, c'est aussi assumer <b>sa responsabilité envers les autres</b>. L’alcool ne doit pas être une excuse et ne justifie en aucun cas des comportements inappropriés ou dangereux. <b>Aux yeux de la loi, la consommation d'alcool est un facteur aggravant</b>.
     </>
   }
-  imageSrc="/src/assets/justice.png"
+  imageSrc="/assets/justice.png"
 />
 
 
@@ -189,7 +189,7 @@ const Alcool = () => {
 
 
       <ImageTextPopup
-        image="./src/assets/bouteilles.jpg"
+        image="./assets/bouteilles.jpg"
         title="La carte 3♣"
         shortText="Prévention sur la consommation excessive d'alcool"
         longText="Que dire ?"
@@ -209,7 +209,7 @@ const Alcool = () => {
         
 
       <ImageCenter
-        imageSrc="/src/assets/doses-alcool.png"
+        imageSrc="/assets/doses-alcool.png"
       />
 
 
@@ -229,7 +229,7 @@ const Alcool = () => {
       <h1 className="sous-titre-2">Besoin d'en parler ?</h1>
      
       <ContactCard
-        image="/src/assets/nightline_logo.png" 
+        image="/assets/nightline_logo.png" 
         title="Nightline Lyon"
         subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
         phone="04 85 30 00 10"
@@ -240,7 +240,7 @@ const Alcool = () => {
       />
 
 <ContactCard
-        image="/src/assets/fsj.png" 
+        image="/assets/fsj.png" 
         title="Fil santé jeunes"
         subtitle="Service d'écoute anonyme et gratuit pour les 12-25 ans"
         phone="0 800 235 236"
@@ -279,7 +279,7 @@ const Alcool = () => {
             Pour faire attention à chacun, tu peux trouver des outils pour organiser des <b>soirées plus responsables et sécurisées</b> sur les sites suivants :
           </>
         }
-        imageSrc="/src/assets/alcool.jpg"
+        imageSrc="/assets/alcool.jpg"
       />
 
     
