@@ -204,7 +204,7 @@ body.dark-mode .quit-site {
         font-size: 40px;
         color: #000;
         position: absolute; 
-        top: 20%;
+        top: 15px;
         left: 20px;
         z-index: 10;
 
@@ -225,7 +225,7 @@ body.dark-mode .quit-site {
         flex-direction: row; /* Organise les éléments en ligne */
         justify-content: center; /* Centre les éléments horizontalement */
         align-items: center; /* Centre les éléments verticalement */
-        padding: 10px; /* Ajoute un peu de padding */
+        padding: 0px; /* Ajoute un peu de padding */
     }
 
     header .logo img {
@@ -385,13 +385,12 @@ body.dark-mode .quit-site {
         display: none;
       }
 
-    /*Bouton quitter le site*/
 
-
+    /*Bouton quitter le site et dark theme*/
     .boutons_bas {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
+        top: 20px;
+        left: 20px;
         display:flex;
         gap:10px;
     }

@@ -214,7 +214,7 @@ body.dark-mode .close-button:hover {
     }
 
     .modal-content p {
-        font-size: 1.25rem;
+        font-size: 1rem;
         color: black;
         margin-bottom: 4px;
         text-align: left;
@@ -237,6 +237,10 @@ body.dark-mode .close-button:hover {
         background-color: white;
         border-radius: 1000px;
         
+    }
+
+    body.dark-mode .close-button {
+        background-color: #1e1e1e;
     }
 
 }

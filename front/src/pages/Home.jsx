@@ -74,7 +74,7 @@ const Home = () => {
     <div className = "page">
 
 
-      <h1 className="titre">Bienvenue sur Safety Cards</h1>
+      <h1 className="titre-page">Bienvenue sur Safety Cards</h1>
 
       <Navbar links={navLinks} />
       <h2 className="sous-titre-2">Des cartes pour apprendre à se protéger et à protéger les autres</h2>
