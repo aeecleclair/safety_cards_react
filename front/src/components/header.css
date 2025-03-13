@@ -256,7 +256,7 @@ body.dark-mode .quit-site {
         box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
         border-radius: 0 20px 20px 0;
         padding: 20px;
-        padding-top: 60px; /* Ajouter un espacement en haut */
+        padding-top: 80px; /* Ajouter un espacement en haut */
         overflow-y: auto; /* Permet le défilement vertical */
         max-height: 100vh; /* Limite la hauteur à 100% de la hauteur de la fenêtre */
     }
