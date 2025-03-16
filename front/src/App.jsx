@@ -67,6 +67,13 @@ import Confiance from "./pages/Connaissance-soi/Confiance";
 import Genre from "./pages/Connaissance-soi/Genre";
 import Isolement from "./pages/Connaissance-soi/Isolement";
 
+//Contacts
+import Cellule_ecoute from "./pages/Contact/Cellule-ecoute";
+import Infirmerie from "./pages/Contact/Infirmerie";
+import Pole_handicap from "./pages/Contact/pole-handicap";
+import Service_social from "./pages/Contact/Service-social";
+import Vie_etudiante from "./pages/Contact/Vie-etudiante";
+
 
 function App() {
   return (
@@ -135,6 +142,15 @@ function App() {
         <Route path="/conf" element={<Confiance />} />
         <Route path="/genre" element={<Genre />} />
         <Route path="/isolement" element={<Isolement />} />
+
+        //contacts
+        <Route path="/cellule-ecoute" element={<Cellule_ecoute />} />
+        <Route path="/infirmerie" element={<Infirmerie />} />
+        <Route path="/pole-handicap" element={<Pole_handicap />} />
+        <Route path="/service-social" element={<Service_social />} />
+        <Route path="/vie-etudiante" element={<Vie_etudiante />} />
+
+
 
 
 
