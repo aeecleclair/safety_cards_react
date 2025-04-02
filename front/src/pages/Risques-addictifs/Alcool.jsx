@@ -284,8 +284,7 @@ const Alcool = () => {
 
     
       <ExternalLinkBlock
-        title="Ressources utiles"
-        subtitle="Quelques sites utiles à visiter"
+
         resources={resources}
       />
 
