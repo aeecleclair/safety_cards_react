@@ -70,7 +70,7 @@ import Isolement from "./pages/Connaissance-soi/Isolement";
 //Contacts
 import Cellule_ecoute from "./pages/Contact/Cellule-ecoute";
 import Infirmerie from "./pages/Contact/Infirmerie";
-import Pole_handicap from "./pages/Contact/pole-handicap";
+import Pole_handicap from "./pages/Contact/Pole-handicap";
 import Service_social from "./pages/Contact/Service-social";
 import Vie_etudiante from "./pages/Contact/Vie-etudiante";
 
