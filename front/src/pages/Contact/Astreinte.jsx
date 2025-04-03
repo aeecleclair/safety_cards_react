@@ -13,14 +13,13 @@ const { BulletList, NumberedList, TextImageRight, ImageCenter, Navbar, YouTubeVi
 
  
 
-const Service_social = () => {
+const Astreinte = () => {
     return (
       <div className="page">
-        <h1 className="titre-page">Service social</h1>
+        <h1 className="titre-page">Astreinte</h1>
         
-          <h1 className="sous-titre-2">Contact</h1>
 
-          <p className="texte"> Mail :</p>
+          <h1 className="sous-titre-2">Contact</h1>
 
           <p className="texte"> Téléphone :</p>
 
@@ -28,5 +27,5 @@ const Service_social = () => {
     );
   };
   
-  export default Service_social;
+  export default Astreinte;
 

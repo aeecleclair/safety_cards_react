@@ -162,7 +162,7 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
       <h2 className="sous-titre-2">Quels sont les symptômes ?</h2>
      
       <p>
-        Les symptômes décrits par les victimes de soumission chimique et de vulnérabilité chimique sont les mêmes. Il n’existe donc pas de signes spécifiques d’une soumission chimique. Seules des analyses toxicologiques permettent de mettre en évidence l’administration d’un médicament ou d’une drogue par l’agresseur.
+        Seules des analyses toxicologiques permettent de mettre en évidence l’administration d’un médicament ou d’une drogue par l’agresseur. Voici tout de même les symptômes récurrents d'une soumission chimique : 
       </p>
 
       <BulletList

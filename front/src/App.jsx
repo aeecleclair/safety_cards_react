@@ -68,6 +68,7 @@ import Genre from "./pages/Connaissance-soi/Genre";
 import Isolement from "./pages/Connaissance-soi/Isolement";
 
 //Contacts
+import Astreinte from "./pages/Contact/Astreinte";
 import Cellule_ecoute from "./pages/Contact/Cellule-ecoute";
 import Infirmerie from "./pages/Contact/Infirmerie";
 import Pole_handicap from "./pages/Contact/Pole-handicap";
@@ -144,6 +145,7 @@ function App() {
         <Route path="/isolement" element={<Isolement />} />
 
         //contacts
+        <Route path="/astreinte" element={<Astreinte/>} />
         <Route path="/cellule-ecoute" element={<Cellule_ecoute />} />
         <Route path="/infirmerie" element={<Infirmerie />} />
         <Route path="/pole-handicap" element={<Pole_handicap />} />
