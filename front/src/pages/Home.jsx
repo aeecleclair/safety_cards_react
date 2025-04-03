@@ -9,6 +9,8 @@ import Components from "../components/Common";
 import ContactCard from "../components/Contact";
 import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
+import RandomPageSelector from "../components/Randompage";
+import Carrousel from "../components/Carrousel";
 
 
 
@@ -62,6 +64,40 @@ const resources = [
 ];
 
 
+const resources_contacts = [
+  {
+    link: "/astreinte",
+    emoji: "🌙",
+    label: "Astreinte"
+  },
+  {
+    link: "/cellule-ecoute",
+    emoji: "📞",
+    label: "Cellule d'écoute",
+
+  },
+  {
+    link: "/infirmerie",
+    emoji: "🏥",
+    label: "Infirmerie",
+  },
+  {
+    link: "/pole-handicap",
+    emoji: "♿",
+    label: "Pôle handicap",
+  },
+  {
+    link: "/service-social",
+    emoji: "🤝",
+    label: "Service social",
+  },
+  {
+    link: "/vie-etudiante",
+    emoji: "🎓",
+    label: "Vie étudiante",
+  },
+];
+
 const data = [
   { number: "22%", title: "Accidents fatals", description: "Causés par l'alcool" },
   { number: "71.5%", title: "Fréquentation du RU", description: "Par les étudiants" },
@@ -77,10 +113,17 @@ const Home = () => {
       <h1 className="titre-page">Bienvenue sur Safety Cards</h1>
 
       <Navbar links={navLinks} />
-      <h2 className="sous-titre-2">Des cartes pour apprendre à se protéger et à protéger les autres</h2>
-      <p className="texte">Bienvenue sur Safety Cards, un site pour apprendre à se protéger et à protéger les autres. Vous trouverez ici des cartes sur différents sujets, des citations inspirantes et des listes numérotées pour vous aider à mieux comprendre les risques et les enjeux de la vie quotidienne.
-        <em> Généré par IA.</em>
-      </p>
+      
+      <h1 className = "titre">Découvre une thématique aléatoire</h1>
+      <RandomPageSelector />
+
+
+      <Carrousel
+        title="Contacts de Centrale Lyon"
+        subtitle="Voici tous les contacts utiles pour les étudiants"
+        resources={resources_contacts}
+      />
+
       
 
       <Quote 
@@ -192,9 +235,11 @@ const Home = () => {
       <Separateur />
 
 
-      <h1>Chiffres clés</h1>
+      <h1 className="titre">Chiffres clés</h1>
       <ChiffresGroup chiffres={data} />
 
+
+      
 
     </div>
   );

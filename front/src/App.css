@@ -79,7 +79,7 @@ html, body, #root, .app {
 
 
 /* ➡️ Version responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1040px) {
 
   .page{
     width:90%;

@@ -54,6 +54,7 @@ body.dark-mode{
     margin-top: 10px;
     display: inline-block;
     transition: background 0.3s ease-in-out;
+    font-weight: 600;
 }
 
 .link-button:hover {

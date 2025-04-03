@@ -29,18 +29,15 @@ const resources = [
     link: "https://www.nightline.fr/lyon",
     //imageSrc: "/assets/nightline_logo.png",
     label: "Nightline",
-    description: "Un service d'écoute nocturne tous les soirs de 21h à 2h30",
+    description: "Un service d'écoute nocturne tous les soirs de 21h à 2h30"
   },
   {
-    mail: "catherine@",//à voir
+    link: "catherine@",//à voir
     label: "Infirmerie",
-    description: "Ateliers de sophrologie/détente/relaxation et écoute",
+    description: "Ateliers de sophrologie/détente/relaxation et écoute"
   },
-  {
-    link: "", //chaine youtube de relaxation à trouver
-    label: "",
-    description: "",
-  },
+//chaine youtube de relaxation à trouver
+
 ];
 
 const data = [
