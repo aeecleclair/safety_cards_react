@@ -6,7 +6,6 @@ import "./header.css";
 const menuItems = [
   {
     title: "🙆 Connaissance de soi",
-    link: "/Connaissance-de-soi-main",
     submenu: [
       { title: "💛 Confiance & estime de soi", link: "/conf" },
       { title: "🏳️‍⚧️ Identité de genre", link: "/genre" },
@@ -15,7 +14,6 @@ const menuItems = [
   },
   {
     title: "💉 Risques addictifs",
-    link: "/Risques-addictifs-main",
     submenu: [
       { title: "🔞 Addiction à la pornographie", link: "/add_porno" },
       { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
@@ -26,7 +24,6 @@ const menuItems = [
   },
   {
     title: "⚕️ Santé",
-    link: "/Sante-main",
     submenu: [
       { title: "🦓 Automutilation", link: "/automutil" },
       { title: "🥹 Dépression", link: "/depression" },
@@ -40,7 +37,6 @@ const menuItems = [
   },
   {
     title: "💖 Sexualité et amour",
-    link: "/Sexe-amour-main",
     submenu: [
       { title: "✅ Consentement", link: "/consent" },
       { title: "♀️ IVG", link: "/ivg" },
@@ -53,7 +49,6 @@ const menuItems = [
   },
   {
     title: "🕰️ Vie courante",
-    link: "/Vie-courante-main",
     submenu: [
       { title: "🚗 Accidents de la circulation", link: "/accident" },
       { title: "🥬 Alimentation", link: "/aliment" },
@@ -69,7 +64,6 @@ const menuItems = [
   },
   {
     title: "🧑‍🤝‍🧑 Vie de groupe",
-    link: "/Vie-groupe-main",
     submenu: [
       { title: "📵 Cyberharcèlement", link: "/cyber_harcel" },
       { title: "🟰 Discriminations", link: "/discri" },
@@ -83,29 +77,7 @@ const menuItems = [
   },
 ];
 
-// Composant Dropdown (menu déroulant pour le desktop)
-const DropdownMenu = ({ item }) => {
-  const [open, setOpen] = useState(false);
 
-  return (
-    <li
-      className="dropdown"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-    >
-      <Link to={item.link}>{item.title}</Link>
-      {open && (
-        <ul className="dropdown-menu">
-          {item.submenu.map((sub, index) => (
-            <li key={index}>
-              <Link to={sub.link}>{sub.title}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </li>
-  );
-};
 
 // Composant principal Header
 const Header = () => {
@@ -158,6 +130,8 @@ const Header = () => {
             </li>
 
           ))}
+
+          <li className="exemple"><Link to="/Exemple">Page_exemple</Link></li>
 
         </ul>
       </nav>

@@ -5,6 +5,7 @@ import { ThemeProvider, useTheme } from "./ThemeProvider";
 import ScrollToTopButton from "./components/ScrollTop";
 
 
+import Exemple from "./pages/Exemple-page";
 import Home from "./pages/Home";
 
 
@@ -84,6 +85,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Exemple" element={<Exemple />} />
         
         //Vie courante
         <Route path="/Vie-courante-main" element={<Vie_courante />} />

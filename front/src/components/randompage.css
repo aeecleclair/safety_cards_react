@@ -10,6 +10,9 @@
     position: relative;
     border-radius:10px;
   }
+  body.dark-mode .random-container{
+    background-color: #1e1e1e ;
+  }
   
   /* Style du bouton principal */
   .random-button {
@@ -24,10 +27,19 @@
     font-family: Poppins, sans-serif;
     font-weight: 600;
   }
+  body.dark-mode .random-button{
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #b00000;
+  }
   
   .random-button:hover {
     background-color: #b22133;
     color: white;
+  }
+  body.dark-mode .random-button:hover{
+    background-color: #b00000;
+    color: #ffffff;
   }
   
   .random-button:active {
@@ -57,6 +69,10 @@
     position: relative;
     animation: fadeInScale 0.5s ease-out forwards;
   }
+    body.dark-mode .random-card{
+        background-color: #1e1e1e;
+
+    }
   
   /* Titre de la carte */
   .random-card-titre {
@@ -64,7 +80,9 @@
     color: #333;
     margin: 0 auto;
     width:80%;
-
+  }
+  body.dark-mode .random-card-titre{
+    color: #ffffff;
   }
   
   /* Texte de la catégorie */
@@ -73,29 +91,11 @@
     margin-bottom: 20px;
     color: #666;
   }
-  
-  /* Bouton pour naviguer */
-  .linkButton {
-    background-color: white;
-    color: #b22133;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: 2px solid #b22133;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-family: Poppins, sans-serif;
-    font-weight: 600;
+  body.dark-mode .category-text{
+    color: #ffffff;
   }
   
-  .linkButton:hover {
-    background-color: #b22133;
-    color: white;
-  }
-  
-  .linkButton:active {
-    transform: scale(0.95);
-  }
+
   
   /* Bouton pour relancer */
   .refresh-button {
@@ -108,6 +108,9 @@
     cursor: pointer;
     transition: transform 0.2s ease;
     color : #b22133;
+  }
+  body.dark-mode .refresh-button{
+    color: #b00000;
   }
   
   .refresh-button:hover {

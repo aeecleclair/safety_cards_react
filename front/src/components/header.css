@@ -33,6 +33,11 @@ nav ul li {
     list-style: none; /* Supprime les puces */
 }
 
+nav ul li.dropdown {
+    padding-bottom: 10px; 
+  }
+  
+
 /* Liens du menu */
 nav ul li a {
     color: #333; /* Couleur du texte du menu */
@@ -65,16 +70,17 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
     opacity: 0;
     visibility: hidden;
     position: absolute;
+    margin-top:5px;
     background-color: #ffffff;
     padding: 0px;
     list-style-type: none;
-    margin: 0;
     white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Ombre légère */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15); /* Ombre légère */
     border-radius: 10px; /* Ajoute un léger arrondi */
     left: 50%; /* Positionner au centre de l'élément parent */
     transition: opacity 0.3s ease-out;
     z-index: 10000;
+    border :#b22133 2px solid;
 }
 
 /* Assurez-vous que les sous-catégories ne débordent pas */
@@ -86,10 +92,10 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
     list-style: none; /* Supprime les puces */
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu  {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0) scale(1);
+    transform: translateX(-50%) translateY(0) ;
 }
 
 /* Liens dans le sous-menu - gris par défaut */
@@ -445,3 +451,4 @@ body.dark-mode .quit-site {
     
     
 }
+

@@ -33,8 +33,8 @@ const RandomPageSelector = () => {
           </button>
           <h1 className="random-card-titre">{randomPage.name}</h1>
           <p className="category-text">Catégorie : {randomPage.category}</p>
-          <button onClick={() => navigate(randomPage.path)} className="linkButton">
-            Aller à la page
+          <button onClick={() => navigate(randomPage.path)} className="random-button">
+            Découvrir la page
           </button>
         </div>
       )}
