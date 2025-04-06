@@ -124,7 +124,7 @@ const Automutilation = () => {
 
 
       <ImageTextPopup
-        image="./assets/feu.jpg"
+        image="./assets/work_in_progress.jpg"
         title="La carte 3♠"
         shortText="Automutilation : agir en tant que victime et témoin"
         longText="Automutilation : agir en tant que victime et témoin"
@@ -217,7 +217,7 @@ const Automutilation = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link=""
+        link="/infirmerie"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées

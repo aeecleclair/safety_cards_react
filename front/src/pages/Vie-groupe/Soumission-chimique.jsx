@@ -228,7 +228,7 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
       <YouTubeVideo url="https://www.youtube.com/watch?v=hA7FrcTaTjo" />
 
       <ImageTextPopup
-        image="./assets/feu.jpg"
+        image="./assets/work_in_progress.jpg"
         title="La carte 7&clubs;"
         shortText="Soumission chimique : informations et conseils"
         longText="Soumission chimique : informations et conseils"

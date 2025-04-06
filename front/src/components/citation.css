@@ -8,7 +8,7 @@
   text-align: center;
 }
 body.dark-mode .quote-container{
-  background-color: #1e1e1e ;
+  background-color: #343434 ;
 }
 
 /* Grand guillemet en arrière-plan */
@@ -22,7 +22,7 @@ body.dark-mode .quote-container{
   z-index: 0;
 }
 body.dark-mode .quote-background{
-  color: #c6c6c61a ;
+  color: #dedede1a ;
 }
 
 /* Texte de la citation */
@@ -50,7 +50,7 @@ body.dark-mode .quote-text{
   z-index: 1;
 }
 body.dark-mode .quote-author{
-  color: #acaaaa ;
+  color: #c7c7c7 ;
 }
 
 /* Responsive */
