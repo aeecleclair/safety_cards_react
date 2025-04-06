@@ -64,15 +64,15 @@ const resources_infos = [
 const resources_victime = [
   {
     link: "https://www.murielle-cahen.com/publications/revengeporn.asp",
-    label: "Droit à l'oubli et au déréférencement",
-    description: "Comment faire retirer des contenus illicites d'internet ?",
-  },
-  {
-    link: "https://www.village-justice.com/articles/Publication-non-consentie-photos,17744.html",
-    imageSrc:"/assets/village_justice.png",
     label: "Aspect juridique",
     description: "Comment porter plainte ?",
   },
+  {
+    link: "https://stopfisha.org/",
+    imageSrc:"/assets/StopFisha.png",
+    label:"Stop Fisha",
+    description: "Tout ce qui peut être fait en cas de revenge porn "
+  }
 ];
 
 
@@ -93,7 +93,7 @@ const resources4 = [
     link: "/couple",
     emoji: "💑",
     label: "Relations de couple",
-    description: "Être en couple n'excuse pas certains comportements.",}
+    description: "Mon/ma partenaire insiste pour que je lui envoie des nudes, que faire ?",}
   ];
 
 
@@ -117,6 +117,20 @@ const resources4 = [
     }
   ];
 
+
+const resources_NCII = [
+  {
+    imageSrc: "/assets/Stop-NCII.png",
+    link: "https://stopncii.org/fr",
+    label: "StopNCII.org",
+    description: "Organisme britannique à portée internationale retirant des contenus intimes non consensuelles"
+  },
+  {
+    imageSrc: "/assets/Disrupt.jpg",
+    link: "https://www.pointdecontact.net/disrupt/",
+    label: "Disrupt",
+    description: "Signaler une personne qui menace de divulguer vos contenus intimes afin d'en empêcher la diffusion",
+  }]
 
 
 const Revenge_porn = () => {
@@ -217,49 +231,77 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
       <Separateur />
       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
       <div id = "victime">
         <h1 className="titre">Je suis victime</h1>
       </div>
 
       <h2 className="sous-titre-2">Comment réagir ?</h2>
       
-      <p className="texte"> Parles-en à des personnes de confiance pour qu'elles te prennent en charge. En soirée, rapproche-toi de la <b>sécurité</b>, des <b>rondes Peer Care</b>, de la <b>Zone Chill</b> ou du <b>Bar</b>. En cas de doute ou d’agression, il est important de parler de ce qui est arrivé, à des <b>personnes de confiance</b> et à des <b>professionnels et professionnelles de santé</b> qui pourront écouter et accompagner chaque victime de soumission chimique ou de vulnérabilité chimique.</p>
+      <p className="texte">Parles-en à des personnes de confiance pour qu'elles te soutiennent et t'accompagnent dans cette épreuve. N'hésite pas non plus à faire appel à des associations ou à prendre rendez-vous avec un psychologue car le revenge porn peut avoir de grosses conséquences sur ta santé mentale et ton estime de toi.</p>
+      <div className="two-column-container">
+        <div className="column">
+          <ContactCard
+          image="/assets/nightline_logo.png" 
+          title="Nightline Lyon"
+          subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
+          phone="04 85 30 00 10"
+          email=""
+          hours="Tous les soirs, de 21h à 2h30"
+          textButton="Voir le site web"
+          link="https://www.nightline.fr/lyon"
+        />
+        </div>
+        <div className="column">
+          <ContactCard
+            image="/assets/france-victimes.webp" 
+            title="France Victimes"
+            subtitle="Aide et redirection vers des associations concernant tout fait vous ayant porté préjudice"
+            hours="24h/24h, 7j/7"
+            phone="116 006"
+            textButton="Voir le site web"
+            link="https://www.france-victimes.fr/index.php/informations-pratiques/52-appeler-le-08-victimes"
+
+            bgColor="#f6a21e"    //informations facultatives
+            textColor="#ffffff"
+          />
+        </div>
+      </div>
+
+
+      <p className="texte">Si tu es victime de revenge porn, voici les étapes à suivre pour garder des preuves :</p>
+      <BulletList
+        items={[
+          "Faire des captures d'écran des contenus (photos, vidéos, messages) et les sauvegarder sur un support sécurisé.",
+          "Conserver les messages et les noms d'utilisateur de la personne qui a diffusé le contenu.",
+          "Conserver les URL des pages où les images et les vidéos ont été publiées pour prouver leur diffusion sur des sites spécifiques",
+          "Noter la date et l'heure à laquelle les contenus ont été publiés",
+          
+        ]} />
+
+        <p className="texte"> Il est aussi important de ne pas supprimer les preuves des contenus diffusés, même si cela peut être difficile. Toutes ces preuves te seront utiles si tu souhaites porter plainte ou faire retirer ces contenus d'internet.</p>
+
+
+      <h2 className="sous-titre-2">Comment faire retirer des images publiées sans consentement ? </h2>
+      <p className="texte">Pour faire retirer les contenus publiés sans votre accord, vous pouvez dans un premier temps <b>contacter directement l’auteur</b> (si vous le connaissez) pour lui demander de supprimer les contenus. Vous pouvez lui <b>rappeler que ses actes sont punis par la loi</b>, et qu’il risque jusqu’à 2 ans de prison et 60 000 € d’amende. </p>
+      
+      <p className="texte">Si tes <i>nudes</i> ou messages privés intimes sont publiés sur des réseaux sociaux tels que Snapchat, Instagram, Facebook, Twitter, etc., commence par signaler ces contenus comme <i><b>inappropriés</b></i> ou <i><b>violents</b></i> auprès de ces plateformes et précise que tu apparais contre ton gré sur ces contenus. </p>
+      
+      <p className="texte">Certaines <b>associations</b> peuvent t'aider à faire supprimer les images et vidéos de toi qui ont été publiées sur internet. Celles-ci ont besoin des <b>images ou vidéos concernées</b> ainsi que des preuves de diffusion afin de cibler ces publications et les effacer d'internet. Voici deux outils qui te permettront d'entamer cette démarche :</p>
+
+      <ExternalLinkBlock
+        resources={resources_NCII}
+      />
+
 
     
-      <h2 className="sous-titre-2">Numéros à contacter en cas d'urgence</h2>
-      <ChiffresGroup chiffres={data} />
 
-      <h2 className="sous-titre-2">Tu es victime d'agressions facilitées par les substances ?</h2>
+      <h2 className="sous-titre-2">Tu souhaites porter plainte ?</h2>
 
-      <p className="texte">La détection de ces substances dans le corps est souvent difficile, leur durée de présence est souvent courte (de quelques heures à quelques jours). C’est pourquoi le recours rapide aux services d’urgences est essentiel afin que des prélèvements soient effectués avant la disparition du produit dans l’organisme. La réaction doit aussi être rapide sur le plan sanitaire (évaluation médicale, contraception d'urgence en maximum 5 jours, suivi infectieux pour prévenir une contamination VIH/hépatite B en 48h maximum, accompganement psychologique...)</p>
+      <p className="texte">La diffusion d’images ou de vidéos intimes sans votre consentement constitue une <b>infraction pénale</b>. En tant que victime, vous avez le droit de porter plainte contre la personne responsable.
+La plainte peut être déposée dans n’importe quel <b>commissariat de police</b> ou <b>brigade de gendarmerie</b>.</p>
+
+<p className="texte">Même si vous ne connaissez pas l’identité de la personne à l’origine de la diffusion, vous pouvez <b>porter plainte contre X.</b></p>
       
-
-      <ListeNumerotee 
-          
-          title="Parcours de prise en charge des agressions facilitées par les substances" 
-          subtitle="Quelles sont les étapes à suivre en cas d'agression facilitée par les substances ?" 
-          items={items_agressions} 
-          
-      />
 
       <ExternalLinkBlock
         resources={resources_victime}
@@ -272,52 +314,24 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
       <div id = "aidant">
         <h1 className="titre">Je suis témoin ou proche de la victime</h1>
       </div>
-
-    <p><b>Si vous êtes en soirée,</b> rapprochez-vous de la <b>sécurité et des organisateurs</b> pour signaler le cas de soumission chimique.</p>
-    <p>
-      En tant que témoin ou proche, il est crucial de <b>soutenir la victime</b> en premier lieu. Rassurez-la, informez-la des démarches possibles et accompagnez-la si elle décide de les entreprendre. La bienveillance et l'écoute sont essentielles. 
-    </p>
-
-    <p>
-      Accompagner une victime, c'est aussi <b>respecter ses choix</b>, même s'ils diffèrent des vôtres. Si elle ne souhaite pas porter plainte, respectez sa décision.
-    </p>
-
-    <p>
-      Cependant, pour les personnes vulnérables (mineurs, personnes âgées, personnes en situation de handicap, sous protection juridique…), il est impératif d'agir.
-    </p>
-
-    <p>
-    <b>Les conseils de cette page s'adressent également à vous</b>. Les dispositifs mentionnés dans les parties précédentes sont aussi à votre service en tant que témoins ou proches. Le soutien psychologique est important non seulement pour les victimes, mais aussi pour vous.
-    </p>
-
-    <ExternalLinkBlock resources={resources4} />
+      <p className="texte">
+  Si tu es témoin de revenge porn, ta réaction peut faire une vraie différence. <b>Ne partage jamais</b> les contenus, même pour « prévenir » quelqu’un : cela te rend <b>complice</b> de leur diffusion, ce qui est illégal.
+  Tu peux signaler les publications directement sur les réseaux sociaux concernés ou via la plateforme gouvernementale <a href="https://www.internet-signalement.gouv.fr" target="_blank" rel="noopener noreferrer">Pharos</a>.
+</p>
+<p className="texte">
+  <b>Soutiens la victime</b> si tu la connais : propose ton aide, écoute-la sans jugement, et encourage-la à ne pas rester seule. Tu peux aussi l’aider à réunir des preuves ou à contacter des structures de soutien. En parler, c’est déjà commencer à agir.
+</p>
 
 
-    <Separateur />
-
-    <div id = "organiser">
-        <h1 className="titre">J'organise une soirée</h1>
-      </div>
-
-      <TextImageRight  
-        text={
-          <>
-            De nombreux outils sont disponibles pour réduire entre autres le risque de soumission chimique lors de soirées. En tant qu'organisateur, tu peux mettre en place des mesures de prévention et de sécurité pour protéger les participants. Voici quelques conseils :
-          </>
-        }
-        imageSrc="/assets/alcool.jpg"
-      />
-
-    
-      <ExternalLinkBlock
-        resources={resources_orga}
-      />
+    <ExternalLinkBlock 
+    title="Sujets associés"
+    resources={resources4} />
 
 
 
       <Separateur />
 
-      <p className="texte"><em> <b>Sources :</b> e-enfance, Association CVM, violences-sexuelles.info</em>
+      <p className="texte"><em> <b>Sources :</b> e-enfance, Association CVM, violences-sexuelles.info, Stop Fisha</em>
          </p>
       </div>
     );
