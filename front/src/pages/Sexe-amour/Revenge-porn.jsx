@@ -94,6 +94,13 @@ const resources4 = [
     emoji: "💑",
     label: "Relations de couple",
     description: "Mon/ma partenaire insiste pour que je lui envoie des nudes, que faire ?",}
+    ,
+    {
+      link:"cyberharcelement",
+      emoji: "📵",
+      label: "Cyberharcèlement",
+      description: "Je suis victime d'une campagne de cyberharcèlement, que faire ?",
+    }
   ];
 
 
