@@ -217,7 +217,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
         items={["Y réfléchir à deux fois avant de partager une photo/vidéo intime : suis-je reconnaissable sur ce contenu ?",
 "Eviter à tout prix les signes distinctifs sur les contenus intimes (tatouages, piercings, vêtements, lieux reconnaissables...)",
 "Ne pas partager de contenu intime avec des personnes que l'on ne connaît pas bien, même si elles sont de confiance",
-"En as vraiment envie ou est-ce uniquement pour faire plaisir à ton/ta partenaire ? Est-ce qu'il ou elle a beaucoup insisté pour cela ?",
+"En as-tu vraiment envie ou est-ce uniquement pour faire plaisir à ton/ta partenaire ? Est-ce qu'il ou elle a beaucoup insisté pour cela ?",
         ]}
         />
 
