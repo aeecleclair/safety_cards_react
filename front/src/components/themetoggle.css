@@ -1,7 +1,7 @@
 .theme-toggle-button {
     background-color: #ffffff;
     color: #000000;
-    border: rgb(0, 0, 0) 1px solid ;
+    border: #000000 1px solid ;
     padding: 5px 10px;
     font-size: rem;
     font-weight: 100;
@@ -17,14 +17,14 @@
   }
   
   body.dark-mode .theme-toggle-button {
-    background-color: #1e1e1e;
+    background-color: #131313;
     color: #ffffff;
     border: rgb(255, 255, 255) 1px solid 
   }
   
   body.dark-mode .theme-toggle-button:hover {
     background-color: #ffffff;
-    color: #1e1e1e;
+    color: #131313;
   }
 
   @media (max-width: 1000px) {

@@ -44,7 +44,7 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
   }, []);
 
   return (
-    <div className="contact-card" style={{ backgroundColor: isDarkMode && propBgColor ? "#1e1e1e" : bgColor, borderColor: isDarkMode ? "#121212" : textColor }}>
+    <div className="contact-card" style={{ backgroundColor: isDarkMode && propBgColor ? "#343434" : bgColor, borderColor: isDarkMode ? "#343434" : textColor }}>
       <img src={image} alt={title} className="contact-image" />
       <div className="contact-info">
         <h2 style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}>{title}</h2>
@@ -53,15 +53,15 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
         {email && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Email :</strong> {email}</p>}
         {hours && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Horaires :</strong> {hours}</p>}
         <a
-          className="link-button" style={{ backgroundColor: isDarkMode && propBgColor ? "#1e1e1e" : bgColor, borderColor: isDarkMode && propTextColor ? "#ffffff" : textColor, color: isDarkMode && propTextColor ? "#ffffff" : textColor }}
+          className="link-button" style={{ backgroundColor: isDarkMode && propBgColor ? "#343434" : bgColor, borderColor: isDarkMode && propTextColor ? "#ffffff" : textColor, color: isDarkMode && propTextColor ? "#ffffff" : textColor }}
           href={link}
           onMouseEnter={(e) => {
-            e.target.style.color = isDarkMode && propTextColor ? "#1e1e1e" : bgColor;
+            e.target.style.color = isDarkMode && propTextColor ? "#343434" : bgColor;
             e.target.style.backgroundColor = isDarkMode && propBgColor ? "#ffffff" : textColor;
           }}
           onMouseLeave={(e) => {
             e.target.style.color = isDarkMode && propTextColor ? "#ffffff" : textColor;
-            e.target.style.backgroundColor = isDarkMode && propBgColor ? "#1e1e1e" : bgColor;
+            e.target.style.backgroundColor = isDarkMode && propBgColor ? "#343434" : bgColor;
           }}
         >
           {textButton}

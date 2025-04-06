@@ -35,7 +35,6 @@ const resources2 = [
     description: "Retrouver le contrôle sur son temps d'écran",
   },
   {link: "https://youtube.com/playlist?list=PL8Ax_z5vzflz8JveM9VetLiZ3LPtFsttW&si=GZMy1ZTr3JaKGWsD",
-  imageSrc: "/src/assets/dopamine.png",
   label: "Dopamine (série arte)",
   description: "Découvre toutes les techniques employées pour retenir ton attention",
   },
@@ -235,6 +234,8 @@ Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b
   hours="Tous les jours de 16h à 18h les lundis, mardis, jeudis et vendredis"
   textButton="Voir le site web"
   link="https://www.ffab.fr/"
+  bgColor="#ffffff"
+  textColor="#e94e77"
 />
 </div>
   

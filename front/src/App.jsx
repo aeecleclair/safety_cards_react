@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider, useTheme } from "./ThemeProvider";
 import ScrollToTopButton from "./components/ScrollTop";
+import ScrollToTop from './components/ScrollTopImmediate';
 
 
 import Exemple from "./pages/Exemple-page";
@@ -81,8 +82,8 @@ function App() {
   return (
     <ThemeProvider>
     <Router>
+      <ScrollToTop />
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Exemple" element={<Exemple />} />

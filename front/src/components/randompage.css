@@ -11,7 +11,7 @@
     border-radius:10px;
   }
   body.dark-mode .random-container{
-    background-color: #1e1e1e ;
+    background-color: #343434 ;
   }
   
   /* Style du bouton principal */
@@ -28,7 +28,7 @@
     font-weight: 600;
   }
   body.dark-mode .random-button{
-    background-color: #000000;
+    background-color: #343434;
     color: #ffffff;
     border: 2px solid #b00000;
   }
@@ -70,7 +70,8 @@
     animation: fadeInScale 0.5s ease-out forwards;
   }
     body.dark-mode .random-card{
-        background-color: #1e1e1e;
+        background-color: #343434;
+        border: 2px solid #b00000;
 
     }
   

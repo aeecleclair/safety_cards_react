@@ -140,7 +140,7 @@ const Depression = () => {
       />
 
       <ImageTextPopup
-        image="./assets/feu.jpg"
+        image="./assets/work_in_progress.jpg"
         title="La carte 4♠"
         shortText="Santé mentale et dépression : agir en tant que victime"
         longText="Santé mentale et dépression : agir en tant que victime"
@@ -167,7 +167,7 @@ const Depression = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link=""
+        link="/infirmerie"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -255,7 +255,7 @@ const Depression = () => {
       />
 
       <ImageTextPopup
-        image="./assets/feu.jpg"
+        image="./assets/work_in_progress.jpg"
         title="La carte 6&diams;"
         shortText="Santé mentale et dépression : agir en tant que témoin"
         longText="Santé mentale et dépression : agir en tant que témoin"
