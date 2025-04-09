@@ -326,7 +326,7 @@ La plainte peut être déposée dans n’importe quel <b>commissariat de police<
   Tu peux signaler les publications directement sur les réseaux sociaux concernés ou via la plateforme gouvernementale <a href="https://www.internet-signalement.gouv.fr" target="_blank" rel="noopener noreferrer">Pharos</a>.
 </p>
 <p className="texte">
-  <b>Soutiens la victime</b> si tu la connais : propose ton aide, écoute-la sans jugement, et encourage-la à ne pas rester seule. Tu peux aussi l’aider à réunir des preuves ou à contacter des structures de soutien. En parler, c’est déjà commencer à agir.
+  <b>Soutiens la victime</b> si tu la connais : propose ton aide, écoute-la sans jugement, et encourage-la à ne pas rester seule. Tu peux aussi l’aider à réunir des preuves ou à contacter des <b>structures de soutien</b>. En parler, c’est déjà commencer à agir.
 </p>
 
 
