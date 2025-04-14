@@ -83,6 +83,10 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
     border :#b22133 2px solid;
 }
 
+body.dark-mode .dropdown-menu {
+    border :none;
+}
+
 /* Assurez-vous que les sous-catégories ne débordent pas */
 .dropdown-menu li {
     width: auto; /* Laissez la largeur s'ajuster en fonction du contenu */
@@ -156,7 +160,7 @@ header .logo h1 {
 .boutons_haut {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 40px;
     display:flex;
     gap:10px;
 }
@@ -165,7 +169,7 @@ header .logo h1 {
     color: #000000;
     background-color: white;
     font-weight: 600;
-    border: rgb(0, 0, 0) 1px solid ;
+    border: rgb(0, 0, 0) 2px solid ;
     padding: 5px 10px;
     font-size: 0.8rem;
     font-style: none;;
@@ -194,7 +198,7 @@ body.dark-mode .close-website-icon {
 body.dark-mode .quit-site {
     background-color: #131313;
     color: #ffffff;
-    border: rgb(255, 255, 255) 1px solid 
+    border: rgb(255, 255, 255) 2px solid 
   }
   
   body.dark-mode .quit-site:hover {
@@ -418,8 +422,8 @@ body.dark-mode .quit-site {
     .quit-site-mobile{
         color: #000000;
         background-color: white;
-        font-weight: 400;
-        border: rgb(0, 0, 0) 1px solid ;
+        font-weight: 600;
+        border: rgb(0, 0, 0) 2px solid ;
         padding: 10px 10px;
         font-size: 0.8rem;
         font-style: none;;

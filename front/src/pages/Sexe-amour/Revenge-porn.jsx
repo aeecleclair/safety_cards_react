@@ -14,34 +14,9 @@ const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Compon
 const navLinks = [
   { label: "Qu'est-ce que le revenge porn ?", target: "revenge" },
   { label: "Je suis victime", target: "victime" },
-  { label: "Je suis témoin ou proche de la victime", target: "aidant" },
-  { label: "J'organise une soirée", target: "organiser" }
+  { label: "Je suis témoin ou proche de la victime", target: "aidant" }
 ];
 
-
-const items_agressions = [
-  { title: "Déposer plainte", subtitle:"Vous pouvez déposer plainte dans tout commissariat/gendarmerie (voir lien 1 ci-dessous). "},
-  { title: "Faire une consultation médicolégale", subtitle: "Le rendez-vous est donné à la suite du dépôt de plainte. Cette consultation permet d’accéder à des prises en charges médicales (traitement de prévention infectieux et contraception d’urgence) et de conduire la recherche d’éventuels éléments de preuve (constat des lésions, recherche d’ADN étranger et de spermatozoïdes, prélèvements à visée toxicologique…). Tu peux aussi te faire dépister gratuitement (VIH et IST) dans un centre CeGIDD (lien 2 ci-dessous) " },
-  { title: "Se faire accompagner par une association d'aide aux victimes", subtitle: "Les associations d’aides aux victimes vous propose un accompagnement gratuit, pluridisciplinaire (juridique, psychologique, social) et confidentiel. (Annuaire en suivant le lien 3 ci-dessous)" },
-
-];
-
-const resources_aerer = [
-
-  {
-    link: "/suicide",
-    emoji : "🗣️",
-    label: "Suicide",
-    description: "Comment réagir face à quelqu'un qui évoque des idées suicidaires ?",
-  },
-
-  {
-    link: "/automutil",
-    emoji : "🦓",
-    label: "Automutilation non suicidaire",
-    description: "Comment réagir face à quelqu'un qui s'automutile ?",
-  }
-];
 
 
 const resources_infos = [
@@ -104,25 +79,6 @@ const resources4 = [
   ];
 
 
-  const resources_orga = [
-    {
-      link: "https://montetasoiree.com/",
-      imageSrc: "/assets/monte-ta-soiree.png",
-      label: "Monte ta soirée",
-      description: "Un 1er outil pour organiser des soirées plus responsables",
-    },
-    {
-      link: "https://pimp-my-party.fr/",
-      imageSrc: "/assets/pimp-my-party.png",
-      label: "Pimp my party",
-      description: "Un 2ème outil pour organiser des soirées en toute sécurité",
-    },
-    {
-      link: "https://www.cpas1option.com/",
-      label: "Cpas1option.com",
-      description: "Le guide pratique avec des outils de prévention et de réduction des risques",
-    }
-  ];
 
 
 const resources_NCII = [

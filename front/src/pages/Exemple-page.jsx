@@ -10,7 +10,7 @@ import ContactCard from "../components/Contact";
 import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
 import RandomPageSelector from "../components/Randompage";
-import { desc } from "framer-motion/client";
+import Workinprogress from "../components/WorkInProgress";
 
 
 
@@ -285,6 +285,8 @@ const Exemple = () => {
 
       <h1 className="titre">Chiffres clés</h1>
       <ChiffresGroup chiffres={data} />
+
+      <Workinprogress />
 
 
       

@@ -1,7 +1,7 @@
 .theme-toggle-button {
     background-color: #ffffff;
     color: #000000;
-    border: #000000 1px solid ;
+    border: #000000 2px solid ;
     padding: 5px 10px;
     font-size: rem;
     font-weight: 100;
@@ -19,7 +19,7 @@
   body.dark-mode .theme-toggle-button {
     background-color: #131313;
     color: #ffffff;
-    border: rgb(255, 255, 255) 1px solid 
+    border: rgb(255, 255, 255) 2px solid 
   }
   
   body.dark-mode .theme-toggle-button:hover {
