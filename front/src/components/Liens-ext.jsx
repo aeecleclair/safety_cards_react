@@ -8,7 +8,7 @@ const ExternalLinkBlock = ({ title, subtitle, resources }) => {
       <p className="block-subtitle">{subtitle}</p>
       <div className="links-container">
         {resources.map((resource, index) => {
-          const isExternal = resource.link.startsWith("http");
+          const isExternal = resource.link.startsWith("http")|| resource.link.includes("/docs");
           return (
             <a
               key={index}
