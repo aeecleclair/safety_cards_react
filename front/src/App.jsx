@@ -77,6 +77,8 @@ import Pole_handicap from "./pages/Contact/Pole-handicap";
 import Service_social from "./pages/Contact/Service-social";
 import Vie_etudiante from "./pages/Contact/Vie-etudiante";
 
+import PE5 from "./pages/PE5";
+
 
 function App() {
   return (
@@ -154,6 +156,8 @@ function App() {
         <Route path="/pole-handicap" element={<Pole_handicap />} />
         <Route path="/service-social" element={<Service_social />} />
         <Route path="/vie-etudiante" element={<Vie_etudiante />} />
+
+        <Route path = "/pe5" element={<PE5 />} />
 
 
 
