@@ -78,6 +78,7 @@ import Service_social from "./pages/Contact/Service-social";
 import Vie_etudiante from "./pages/Contact/Vie-etudiante";
 
 import PE5 from "./pages/PE5";
+import NotFound from "./pages/Error";
 
 
 function App() {
@@ -158,6 +159,7 @@ function App() {
         <Route path="/vie-etudiante" element={<Vie_etudiante />} />
 
         <Route path = "/pe5" element={<PE5 />} />
+        <Route path="*" element={<NotFound />} />
 
 
 
