@@ -233,7 +233,7 @@ const Effet_groupe = () => {
           <>
             Boire un coup entre amis doit rester un <b>moment de convivialité</b>.
 Mais dans un groupe, il peut être difficile de <b>dire non à un verre</b> ou de <b>suivre son propre rythme</b>.
-<b>L’effet de groupe peut amplifier la pression à consommer</b>, même inconsciemment.
+<b> L’effet de groupe peut amplifier la pression à consommer</b>, même inconsciemment.
 
 Pour que chacun se sente à l’aise, il est important de <b>favoriser un climat de respect et d’écoute</b>, où les choix de chacun sont acceptés sans jugement.
 Tu peux trouver des outils pour organiser des <b>soirées plus responsables et sécurisées</b> sur les sites suivants :
