@@ -13,14 +13,6 @@ import RandomPageSelector from "../components/Randompage";
 
 
 
-const resources_equipe = [
-  {
-    link: "/docs/Trombi.pdf",
-    emoji: "🦁",
-    label: "Trombinoscope de l'équipe"
-  },
-]
-
 
 const resources_ea = [
 
@@ -58,13 +50,6 @@ const PE5 = () => {
       <h1 className="titre-page">Le PE5</h1>
 
 
-
-      <h1 className = "titre">L'équipe</h1>
-      
-      <ExternalLinkBlock
-      subtitle={"L'équipe du PE5"}
-        resources={resources_equipe}
-      />
 
       <h1 className = "titre">L'état de l'art</h1>
       <ExternalLinkBlock
