@@ -12,15 +12,16 @@ import Components from "../../components/Common";
 const { BulletList, Navbar, YouTubeVideo } = Components;
 
 const navLinks = [
+  { label: "Douleurs menstruelles", target: "douleurs" },
   { label: "Comprendre l'endométriose", target: "definition" },
   { label: "Je suis concernée", target: "temoignages" },
   { label: "Je veux aider", target: "aidant" },
 ];
 
 const chiffres = [
-  { number: "10% des femmes", title: "", description: "sont atteintes d'endométriose" },
-  { number: "7 ans", title: "", description: "c’est le délai moyen pour obtenir un diagnostic en France" },
-  { number: "2 à 3 jours", title: "", description: "de la vie active perdus par mois à cause des douleurs menstruelles sévères" },
+  { number: "10%", title: "des femmes", description: "sont atteintes d'endométriose" },
+  { number: "7 ans", title: "c'est le délai moyen", description: "pour obtenir un diagnostic en France" },
+  { number: "2 à 3 jours", title: "de la vie active", description: "perdus par mois à cause des douleurs menstruelles sévères" },
 ];
 
 const ressources = [
@@ -45,19 +46,56 @@ const Endometriose = () => {
 
       <Navbar links={navLinks} />
 
-      <div id="definition">
-        <h1 className="titre">Comprendre l’endométriose</h1>
+
+      < div id="douleurs">
+        <h1 className="titre">Douleurs menstruelles</h1>
       </div>
 
       <p className="texte">
-      L’<b>endométriose</b> est une maladie gynécologique chronique qui reste encore mal connue. Elle se caractérise par la présence de tissu similaire à celui de l'endomètre (la muqueuse utérine) en dehors de l’utérus. Ce tissu réagit aux hormones de la même manière que l'endomètre, ce qui peut entraîner des <b>douleurs fortes</b>, particulièrement pendant les règles, mais aussi lors des rapports sexuels, en urinant, en allant à la selle, voire même en dehors des périodes de règles.
+        Les douleurs menstruelles sont fréquentes et peuvent être très intenses. Elles sont souvent considérées comme normales, mais elles peuvent être le signe d’un problème de santé sous-jacent, comme l’endométriose. Il est important de ne pas minimiser ces douleurs et de consulter un·e professionnel·le de santé si elles deviennent invalidantes.
       </p>
-
 
       <Quote 
         text="Les règles douloureuses ne sont pas normales. Elles doivent être prises au sérieux, écoutées et investiguées."
         author="Haute Autorité de Santé"
       />
+    
+    <p className="texte">
+      Des douleurs menstruelles anormalement fortes voire paralysantes ne sont <b>pas anodines</b>. Elles peuvent par exemple être le signe d'une de ces pathologies :
+    </p>
+
+      <BulletList
+        items={[
+          "Endométriose : tissu utérin hors de l'utérus provoquant des douleurs pelviennes intenses",
+          "Adénomyose : infiltration de l'endomètre dans le muscle utérin causant règles abondantes et douloureuses",
+          "Fibromes utérins : tumeurs bénignes pouvant entraîner crampes et saignements excessifs",
+          "Dysménorrhée primaire : douleurs liées à des contractions utérines excessives",
+        ]}
+      />
+
+        <p className="texte">
+          Si tu as le <b>moindre doute</b> concernant la cause de douleurs trop intenses, parles-en à ton médecin ou <b>prends rendez-vous</b> chez un gynécologue ou une sage-femme habilitée à réaliser des actes de suivi gynécologique. Ces derniers pourront te faire passer des examens complémentaires pour déterminer ou non si tu souffres d'une de ces pathologies.
+        </p>
+    
+      <Separateur/>
+
+      <div id="definition">
+        <h1 className="titre">Comprendre l’endométriose</h1>
+      </div>
+
+      <ImageTextPopup
+        image="./assets/endometriose.jpg"
+        title="La carte 3♥"
+        shortText="Une carte pour mieux comprendre cette maladie invisible"
+        longText=""
+        textButton="⤢ Agrandir la carte"
+      />
+
+      <p className="texte">
+      L’<b>endométriose</b> est une maladie gynécologique chronique qui reste encore mal connue. Elle se caractérise par la présence de tissu similaire à celui de l'endomètre (la muqueuse utérine) en dehors de l’utérus. Ce tissu réagit aux hormones de la même manière que l'endomètre, ce qui peut entraîner des <b>douleurs fortes</b>, particulièrement pendant les <b>règles</b>, mais aussi lors des <b>rapports sexuels</b>, en urinant, en allant à la selle, voire même en dehors des périodes de règles.
+      </p>
+
+
 
       <ChiffresGroup chiffres={chiffres} />
 
@@ -75,24 +113,10 @@ const Endometriose = () => {
 
       <YouTubeVideo url="https://www.youtube.com/watch?v=7fbxDcv3eLo" />
 
-      <ImageTextPopup
-        image="./assets/endometriose.jpg"
-        title="La carte 3♥"
-        shortText="Une carte pour mieux comprendre cette maladie invisible"
-        longText=""
-        textButton="⤢ Agrandir la carte"
-      />
-
-      <ExternalLinkBlock
-        title="Ressources utiles"
-        subtitle="Pour mieux comprendre la maladie, ses impacts et les accompagnements possibles"
-        resources={ressources}
-      />
-
       <Separateur />
 
       <div id="temoignages">
-        <h1 className="titre">Je suis concernée</h1>
+        <h1 className="titre">Je suis concerné·e</h1>
       </div>
 
       <p className="texte">
@@ -111,6 +135,14 @@ const Endometriose = () => {
             link="https://www.planning-familial.org/"
           />
         </div>
+
+
+
+      <ExternalLinkBlock
+        title="Ressources utiles"
+        subtitle="Pour mieux comprendre la maladie, ses impacts et les accompagnements possibles"
+        resources={ressources}
+      />
 
       <Separateur />
 
