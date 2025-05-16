@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { ThemeProvider, useTheme } from "./ThemeProvider";
+import { ThemeProvider } from "./ThemeProvider";
 import ScrollToTopButton from "./components/ScrollTop";
 import ScrollToTop from './components/ScrollTopImmediate';
 import { OAuthPopup } from "@tasoskakour/react-use-oauth2";
