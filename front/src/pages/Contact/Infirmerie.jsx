@@ -14,7 +14,16 @@ const Infirmerie = () => {
   useEffect(() => {
     async function fetchContacts() {
       if (!data?.access_token) return; // ne fetch pas si l'utilisateur n'est pas authentifié
-      try {
+
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simule un délai de 1 seconde
+      setContacts({
+        mail: "test.exemple@ex.com",
+        phone: "01 02 03 04 05",
+        adresse: "1 rue de la sécurité, 75000 Paris",
+        horaire: "Lundi au Vendredi, 9h-17h",
+      });
+
+      /*try {
         const response = await fetch("http://localhost:8000/advert/adverts", {
           headers: {
             "Content-Type": "application/json",
@@ -30,7 +39,7 @@ const Infirmerie = () => {
         setContacts(contactsData);
       } catch (err) {
         console.error("Error fetching contacts:", err);
-      }
+      }*/
     }
     fetchContacts();
   }, [data, data?.access_token, logout]);

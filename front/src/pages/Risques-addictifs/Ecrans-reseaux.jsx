@@ -38,6 +38,12 @@ const resources2 = [
   label: "Dopamine (série arte)",
   description: "Découvre toutes les techniques employées pour retenir ton attention",
   },
+  {
+    link: "https://www.addictaide.fr/ecrans/",
+    imageSrc: "/assets/addictaide.jpg",
+    label: "Addict'aide",
+    description: "Page d'informations et d'actualités sur les addictions numériques",
+  },
 ];
 
 const resources = [
@@ -224,20 +230,6 @@ Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b
 />
 
 
-<h1 className="">Besoin d'en parler ?</h1>
-<div id="Contacts">
-<ContactCard
-  image="/assets/ffab.png" 
-  title="Anorexie Boulimie, Info Ecoute"
-  subtitle="Posez vos questions à des spécialistes des TCA"
-  phone="09 69 325 900"
-  hours="Tous les jours de 16h à 18h les lundis, mardis, jeudis et vendredis"
-  textButton="Voir le site web"
-  link="https://www.ffab.fr/"
-  bgColor="#ffffff"
-  textColor="#e94e77"
-/>
-</div>
   
       <Separateur />
       <p className="texte"><em><b>Sources : </b></em>e-enfance, FFAB,</p>

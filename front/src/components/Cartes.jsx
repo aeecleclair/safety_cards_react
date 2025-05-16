@@ -9,8 +9,8 @@ const ImageTextPopup = ({ image, title, shortText, longText, textButton }) => {
       {/* Conteneur principal */}
       <div className="image-text-container">
         <div className="text-container" onClick={() => setIsOpen(true)}>
-          <h2>{title}</h2>
-          <p>{shortText}</p>
+          <h2 className = "titre-carte">{title}</h2>
+          <p className="description">{shortText}</p>
           <button className="expand-button" onClick={() => setIsOpen(true)}>
           {textButton}
         </button>

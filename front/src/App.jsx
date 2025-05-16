@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { ThemeProvider, useTheme } from "./ThemeProvider";
+import { ThemeProvider } from "./ThemeProvider";
 import ScrollToTopButton from "./components/ScrollTop";
 import ScrollToTop from './components/ScrollTopImmediate';
 import { OAuthPopup } from "@tasoskakour/react-use-oauth2";
@@ -78,6 +78,9 @@ import Infirmerie from "./pages/Contact/Infirmerie";
 import Pole_handicap from "./pages/Contact/Pole-handicap";
 import Service_social from "./pages/Contact/Service-social";
 import Vie_etudiante from "./pages/Contact/Vie-etudiante";
+
+import PE5 from "./pages/PE5";
+import NotFound from "./pages/Error";
 
 
 function App() {
@@ -157,6 +160,9 @@ function App() {
         <Route path="/pole-handicap" element={<Pole_handicap />} />
         <Route path="/service-social" element={<Service_social />} />
         <Route path="/vie-etudiante" element={<Vie_etudiante />} />
+
+        <Route path = "/pe5" element={<PE5 />} />
+        <Route path="*" element={<NotFound />} />
 
 
 

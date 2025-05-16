@@ -36,19 +36,19 @@
 /* Texte explicatif */
 .text-container {
     flex: 1;
-    color:#ffffff;
 }
 
-.text-container h2 {
+.titre-carte {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 0;
     margin-top: 0;
     padding:0;
+    color: #ffffff;
 }
 
-.text-container p {
-    color: #ffffff;
+.description{
+    color: #ffffff !important;
 }
 
 .image-container {

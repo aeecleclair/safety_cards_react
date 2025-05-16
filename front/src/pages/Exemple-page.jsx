@@ -10,7 +10,7 @@ import ContactCard from "../components/Contact";
 import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
 import RandomPageSelector from "../components/Randompage";
-import { desc } from "framer-motion/client";
+import Workinprogress from "../components/WorkInProgress";
 
 
 
@@ -52,10 +52,9 @@ const resources = [
     description: "Un service d'écoute nocturne tous les soirs de 21h à 2h30",
   },
   {
-    link: "https://www.github.com",
-    
-    label: "GitHub",
-    description: "Plateforme de gestion de code source",
+    link: "/docs/flyer-dispositif-d-ecoute-2023-2024-etrangers.pdf",
+    label: "PDF",
+    description: "Test de fonctionnement du lien",
   },
   {
     link: "https://www.wikipedia.org",
@@ -63,6 +62,7 @@ const resources = [
     description: "Encyclopédie en ligne gratuite",
   },
 ];
+
 
 
 const resources_contacts = [
@@ -285,6 +285,8 @@ const Exemple = () => {
 
       <h1 className="titre">Chiffres clés</h1>
       <ChiffresGroup chiffres={data} />
+
+      <Workinprogress />
 
 
       
