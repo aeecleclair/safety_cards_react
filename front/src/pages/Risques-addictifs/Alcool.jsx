@@ -111,7 +111,7 @@ const Alcool = () => {
 
         <h2 className="sous-titre-2">Quels sont les effets de l'alcool ?</h2>
 
-      <p className="texte">On considère qu’une personne est sous l’effet de l’alcool si elle ressent <b>plusieurs de ces symptômes</b>, quasi systématiquement et <b>pendant plusieurs heures après consommation</b>:</p>
+      <p className="texte">On considère qu’une personne est sous l’effet de l’alcool si elle ressent <b>plusieurs de ces symptômes</b>, quasi systématiquement et <b>pendant plusieurs heures après consommation</b> :</p>
       <BulletList items={[
     "Troubles de la coordination",
     "Altération du jugement et risques",
@@ -169,11 +169,11 @@ const Alcool = () => {
 />
 
 
-        <Separateur />
+  <Separateur />
 
 
         <div id = "conso">
-      <h1 className="titre">Je suis consommateur</h1>
+      <h1 className="titre">Je consomme</h1>
     </div>
       <Quote 
         text="Les meilleures soirées sont celles dont tu te souviens." 
@@ -196,7 +196,7 @@ const Alcool = () => {
         textButton="⤢ Agrandir la carte"
       />
 
-      <p>N'oublie pas que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>
+      <p>Rappelle-toi que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>
 
       <ChiffresGroup chiffres={data2} />
 
