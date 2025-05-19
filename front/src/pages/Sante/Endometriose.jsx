@@ -133,6 +133,9 @@ const Endometriose = () => {
             hours="Lundi au samedi : 9h - 20h"
             textButton="En savoir plus"
             link="https://www.planning-familial.org/"
+
+            bgColor="#ffffff"    //informations facultatives
+            textColor="#d20b1d"
           />
         </div>
 

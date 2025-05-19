@@ -193,7 +193,7 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
         ]}
       />
 
-      <p>
+      <p className="texte">
         Quand elle opère dans la sphère conjugale ou intrafamiliale, la soumission chimique s’inscrit souvent dans une routine insidieuse. La survenue des symptômes précités peut alors intervenir à répétition et à toute heure de la journée voire au long cours.
         <br/>
         <b>Quelle que soit la situation, il est nécessaire d’écouter ses doutes. N'hésitez pas à contacter les conseillers du CRAFS.</b>

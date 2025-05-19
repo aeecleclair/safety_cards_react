@@ -95,6 +95,14 @@ const resources_NCII = [
     description: "Signaler une personne qui menace de divulguer vos contenus intimes afin d'en empêcher la diffusion",
   }]
 
+  const resource_pharos = [
+  {
+    link: "https://www.internet-signalement.gouv.fr",
+    label: "Pharos",
+    description: "Plateforme gouvernementale pour signaler des contenus illicites sur internet"
+  },
+]
+
 
 const Revenge_porn = () => {
     return (
@@ -147,7 +155,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
         ]}
       />
 
-      <p>
+      <p className="texte">
         Dès lors que la victime est informée de la diffusion de son contenu, elle doit agir rapidement. En effet, plus le temps passe, plus il sera difficile de faire retirer ces contenus. Il est donc important de <b>réagir vite</b> et de <b>ne pas rester seul·e</b>. Découvrir que son contenu intime a été diffusé reste un <b>véritable choc</b> pour la victime, c'est pourquoi il est important de <b>se faire aider</b>. Il existe des associations pour être accompagné·e dans ces démarches.
       </p>
 
@@ -224,8 +232,8 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
             textButton="Voir le site web"
             link="https://www.france-victimes.fr/index.php/informations-pratiques/52-appeler-le-08-victimes"
 
-            bgColor="#f6a21e"    //informations facultatives
-            textColor="#ffffff"
+            bgColor="#ffffff"    //informations facultatives
+            textColor="#ef9322"
           />
         </div>
       </div>
@@ -279,8 +287,10 @@ La plainte peut être déposée dans n’importe quel <b>commissariat de police<
       </div>
       <p className="texte">
   Si tu es témoin de revenge porn, ta réaction peut faire une vraie différence. <b>Ne partage jamais</b> les contenus, même pour « prévenir » quelqu’un : cela te rend <b>complice</b> de leur diffusion, ce qui est illégal.
-  Tu peux signaler les publications directement sur les réseaux sociaux concernés ou via la plateforme gouvernementale <a href="https://www.internet-signalement.gouv.fr" target="_blank" rel="noopener noreferrer">Pharos</a>.
+  Tu peux signaler les publications directement sur les réseaux sociaux concernés ou via la plateforme gouvernementale Pharos.
 </p>
+<ExternalLinkBlock 
+    resources={resource_pharos} />
 <p className="texte">
   <b>Soutiens la victime</b> si tu la connais : propose ton aide, écoute-la sans jugement, et encourage-la à ne pas rester seule. Tu peux aussi l’aider à réunir des preuves ou à contacter des <b>structures de soutien</b>. En parler, c’est déjà commencer à agir.
 </p>

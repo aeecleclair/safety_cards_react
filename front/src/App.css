@@ -67,6 +67,7 @@ html, body, #root, .app {
 .texte{
   font-size: 1em;
   color:rgb(0, 0, 0);
+  line-height: 2;
 }
 
 .image{
