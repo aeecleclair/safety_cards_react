@@ -2,15 +2,12 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes"; 
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import Components from "../../components/Common";
-import ContactCard from "../../components/Contact";
-import React from "react";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Separateur from "../../components/Separateur";
+import ContactCard from "../../components/Contact";
 import "../../App.css";
-import "./automutilation.css"
 
-const { BulletList, NumberedList, TextImageRight, ImageCenter, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
   { label: "Qu'est-ce que l'automutilation ?", target: "automutilation" },
@@ -153,8 +150,6 @@ const Automutilation = () => {
 
       <p className="texte">Il existe des services en ligne. Tu peux contacter la <b>Nightline</b>, service qui te mettra en contact avec des <b>étudiants bénévoles</b> de manière gratuite et anonyme, que tu aies besoin d'aide ou simplement besoin de vider ton sac. Si tu préfères parler à des <b>professionnels</b>, toujours de manière gratuite et anonyme, alors tu peux contacter <b>Comment on s'aime ?</b>.</p>
       
-      <div className="two-column-container">
-        <div className="column">
           <ContactCard
           image="/assets/nightline_logo.png" 
           title="Nightline Lyon"
@@ -165,8 +160,6 @@ const Automutilation = () => {
           textButton="Voir le site web"
           link="https://www.nightline.fr/lyon"
         />
-        </div>
-        <div className="column">
           <ContactCard
             image="/assets/logo-cosa.svg" 
             title="Comment on s'aime ?"
@@ -178,8 +171,6 @@ const Automutilation = () => {
             bgColor="#f6a21e"    //informations facultatives
             textColor="#ffffff"
           />
-        </div>
-      </div>
 
       <h2 className="sous-titre-2">Lorsque l'envie de te faire du mal est passée</h2>
 

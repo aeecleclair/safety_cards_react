@@ -7,9 +7,7 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import Components from "../../components/Common";
-
-const { BulletList, Navbar, YouTubeVideo } = Components;
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 
 const navLinks = [
   { label: "Douleurs menstruelles", target: "douleurs" },

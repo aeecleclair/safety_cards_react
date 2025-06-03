@@ -4,10 +4,9 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import ListeNumerotee from "../../components/Listes";
-import Components from "../../components/Common";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import ImageTextPopup from "../../components/Cartes";
 
-const { BulletList, NumberedList, TextImageRight, ImageCenter, Navbar, YouTubeVideo} = Components;
 
 
 const navLinks = [

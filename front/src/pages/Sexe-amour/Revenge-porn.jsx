@@ -5,11 +5,10 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes"; 
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import Components from "../../components/Common";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
   { label: "Qu'est-ce que le revenge porn ?", target: "revenge" },
@@ -209,8 +208,6 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
       <h2 className="sous-titre-2">Comment réagir ?</h2>
       
       <p className="texte">Parles-en à des personnes de confiance pour qu'elles te soutiennent et t'accompagnent dans cette épreuve. N'hésite pas non plus à faire appel à des associations ou à prendre rendez-vous avec un psychologue car le revenge porn peut avoir de grosses conséquences sur ta santé mentale et ton estime de toi.</p>
-      <div className="two-column-container">
-        <div className="column">
           <ContactCard
           image="/assets/nightline_logo.png" 
           title="Nightline Lyon"
@@ -221,8 +218,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
           textButton="Voir le site web"
           link="https://www.nightline.fr/lyon"
         />
-        </div>
-        <div className="column">
+
           <ContactCard
             image="/assets/france-victimes.webp" 
             title="France Victimes"
@@ -235,8 +231,6 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
             bgColor="#ffffff"    //informations facultatives
             textColor="#ef9322"
           />
-        </div>
-      </div>
 
 
       <p className="texte">Si tu es victime de revenge porn, voici les étapes à suivre pour garder des preuves :</p>

@@ -1,11 +1,10 @@
 
 
 html, body, #root, .app {
-
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;  
-  
+  box-sizing: border-box;
 }
 
 
@@ -17,9 +16,10 @@ html, body, #root, .app {
 
 
 .page{
-  width:80%;
+  width:50%;
   margin: auto;
-  max-width: 1100px;
+  max-width: 900px;
+  min-width: 600px;
 }
 
 .titre-page{ /*1er titre de chaque page*/
@@ -38,6 +38,7 @@ html, body, #root, .app {
   color:rgb(0, 0, 0);
   font-size: 2.2em;
   font-weight: 700;
+  scroll-margin-top: 40px;
 }
 
 .titre-2{
@@ -47,6 +48,7 @@ html, body, #root, .app {
   color:rgb(0, 0, 0);
   font-size: 2.2em;
   font-weight: normal;
+  scroll-margin-top: 40px;
 }
 .sous-titre-1{
   text-align: left;
@@ -54,6 +56,7 @@ html, body, #root, .app {
   color:rgb(0, 0, 0);
   font-size : 1.5em;
   font-weight: normal;
+  scroll-margin-top: 40px;
 }
 
 .sous-titre-2{
@@ -62,12 +65,14 @@ html, body, #root, .app {
   color:rgb(0, 0, 0);
   font-size : 1.5em;
   font-weight: 600;
+  scroll-margin-top: 40px;
 }
 
 .texte{
   font-size: 1em;
   color:rgb(0, 0, 0);
   line-height: 2;
+  scroll-margin-top: 40px;
 }
 
 .image{
@@ -82,8 +87,11 @@ html, body, #root, .app {
 /* ➡️ Version responsive */
 @media (max-width: 1040px) {
 
+
   .page{
     width:90%;
+    margin: auto;
+    min-width: 0;
   }
   .titre-page {
     font-size: 2em;

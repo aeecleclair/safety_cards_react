@@ -4,11 +4,10 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import React from "react";
 import ImageTextPopup from "../../components/Cartes"; 
 import ListeNumerotee from "../../components/Listes";
-import Components from "../../components/Common";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 
-const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
   { label: "Plan d'action", target: "Plan_action" },

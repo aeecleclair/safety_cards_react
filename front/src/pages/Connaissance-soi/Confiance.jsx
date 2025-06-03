@@ -2,15 +2,13 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes"; 
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import Components from "../../components/Common";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import React from "react";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Separateur from "../../components/Separateur";
 import "../../App.css";
-import { i } from "framer-motion/client";
 
-const { BulletList, NumberedList, TextImageRight, ImageCenter, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
   { label: "Qu'est-ce que l'estime de soi ?", target: "definition" },
@@ -117,8 +115,6 @@ const Confiance = () => {
 
       <p className="texte">Tu n'es pas obligé·e de traverser seul·e cette démarche. Des aides existent, confidentielles et gratuites :</p>
 
-      <div className="two-column-container">
-        <div className="column">
           <ContactCard
             image="/assets/nightline_logo.png"
             title="Nightline Lyon"
@@ -129,8 +125,7 @@ const Confiance = () => {
             textButton="Voir le site web"
             link="https://www.nightline.fr/lyon"
           />
-        </div>
-        <div className="column">
+
           <ContactCard
             image="/assets/logo-cosa.svg"
             title="Comment on s'aime ?"
@@ -141,8 +136,6 @@ const Confiance = () => {
             bgColor="#f6a21e"
             textColor="#ffffff"
           />
-        </div>
-      </div>
 
       <ExternalLinkBlock resources={resources_aide} />
 

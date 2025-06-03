@@ -5,17 +5,16 @@ import Quote from "../components/Citation";
 import ImageTextPopup from "../components/Cartes"; 
 import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
-import Components from "../components/Common";
-import ContactCard from "../components/Contact";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../components/Common";
 import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
 import RandomPageSelector from "../components/Randompage";
 import Workinprogress from "../components/WorkInProgress";
+import ContactCard from "../components/Contact";
 
 
 
 
-const { BulletList, NumberedList, TextImageRight, Navbar, YouTubeVideo} = Components;
 
 const navLinks = [
   { label: "Plan d'action", target: "Plan_action" },
