@@ -115,6 +115,9 @@
   padding:10px 0;
   margin-left: 0;
 }
+.dark-mode .navbar {
+  background-color: #212121;
+}
 
 .navbar.is-sticky {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -173,6 +176,7 @@
     margin : 0;
     transition: box-shadow 0.3s, background 0.3s;
   }
+
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -188,6 +192,10 @@
   }
   .navbar.open .navbar-links {
     display: flex;
+  }
+
+  .dark-mode .navbar-links {
+    background-color: #444444;
   }
   .navbar-pill {
     display: block;
