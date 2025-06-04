@@ -105,7 +105,7 @@ const Automutilation = () => {
       <TextImageRight  text="De nombreuses personnes qui s’automutilent sont en grande détresse ou dans des situations insupportables. Elles souffrent souvent de cette manière pendant un certain temps avant de s’automutiler. L'automutilation peut par exemple être utilisée pour faire retomber le stress, exprimer leur douleur ou échapper à des souvenirs traumatisants. Dans certains cas, c’est leur sentiment de culpabilité qui les pousse à s’infliger une punition. " 
       imageSrc="/assets/zebre.jpg" />
 
-      <p className="texte"> <b>Important</b> : la plupart des personnes qui s'automutilent <b>ne cherchent pas à mettre fin à leurs jours.</b> Si le doute se pose, n'hésitez pas à <b>poser la question à la personne.</b> </p>
+      <p className="mise-avant"> <b>Important</b> : la plupart des personnes qui s'automutilent <b>ne cherchent pas à mettre fin à leurs jours.</b> Si le doute se pose, n'hésitez pas à <b>poser la question à la personne.</b> </p>
 
         <p className="texte">Tu as des idées suicidaires ? Quelqu'un t'a fait part de ses idées suicidaires ? </p>
         <ExternalLinkBlock resources={resources_suicide} />

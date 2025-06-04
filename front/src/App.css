@@ -16,9 +16,9 @@ html, body, #root, .app {
 
 
 .page{
-  width:50%;
+  width:60%;
   margin: auto;
-  max-width: 900px;
+  max-width: 800px;
   min-width: 600px;
 }
 
@@ -75,11 +75,19 @@ html, body, #root, .app {
   scroll-margin-top: 40px;
 }
 
+.mise-avant{
+  background-color: #e4a7aebb;
+  border-radius: 8px;
+  padding : 10px;
+}
+
 .image{
   border-radius: 8px;
   width:80%;
   margin : 0 auto;
 }
+
+
 
 
 
