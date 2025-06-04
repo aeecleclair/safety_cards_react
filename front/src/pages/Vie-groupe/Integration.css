@@ -1,0 +1,68 @@
+.two-column-container {
+    display: flex;
+    width: 100%;
+    border:0;
+    padding:0;
+    gap:10px;
+  }
+  
+  .column {
+    flex: 2;
+    padding: 0; /* Optionnel : ajoutez du padding pour l'espacement */
+    align-content: center;
+  }
+
+  @media (max-width: 1000px) {
+    .two-column-container {
+        display: flex;
+        flex-direction: column;
+        gap:0;
+      }
+}
+.tableau-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tableau-comparatif {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.tableau-comparatif thead {
+  background-color: #f5f5f5;
+}
+
+.tableau-comparatif th,
+.tableau-comparatif td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tableau-comparatif tr:last-child td {
+  border-bottom: none;
+}
+
+.tableau-comparatif th {
+  font-weight: 600;
+  color: #333;
+}
+
+.tableau-comparatif td {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .tableau-comparatif th,
+  .tableau-comparatif td {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+}
