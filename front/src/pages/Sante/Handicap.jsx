@@ -1,75 +1,311 @@
-import React from "react";
-import "../../App.css";
-
-import Quote from "../../components/Citation"; 
-import ImageTextPopup from "../../components/Cartes"; 
+import Quote from "../../components/Citation";
+import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
+import React from "react";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
- 
+import Separateur from "../../components/Separateur";
+import "../../App.css";
+import "./handicap.css";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 
-import Workinprogress from "../../components/WorkInProgress";
 
-const resources_sites = [
-
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
-  },
+const navLinks = [
+  { label: "Le constat", target: "constat" },
+  { label: "Réponses internes", target: "internes" },
+  { label: "Ressources externes", target: "externes" },
+  { label: "Droits", target: "droits" },
+  { label: "Jeunes aidants", target: "aidants" }
 ];
 
-const Handicap = () => {
-    return (
-      <div className="page">
-        <h1 className="titre-page">Situation de handicap</h1>
-        <Workinprogress/>
+const data = [
+  {
+    number: "8,9%",
+    title: "des personnes",
+    description:
+      "ont au moins un handicap parmi les catégories suivantes : troubles moteurs, sensoriels, du langage, psychiques, viscéraux, cognitifs et autistiques"
+  },
+  {
+    number: "12%",
+    title: "des étudiants",
+    description:
+      "déclarent avoir un trouble de santé durable ayant un impact sur leurs études (source : OVE, 2020)"
+  }
+];
 
-        <h1 className = "titre">Les ressources globales</h1>
-      <ExternalLinkBlock
-        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
-        resources={resources_sites}
+const ressourcesInternes = [
+  {
+    link: "",
+    label: "Formation LSF",
+    description: "6000 € de budget alloué pour la formation continue en Langue des Signes Française"
+  },
+  {
+    link: "",
+    label: "Actions de prévention",
+    description: "Day in the Dark, Journée des DYS, Label Handimanagement"
+  },
+  {
+    link: "",
+    label: "Référent handicap",
+    description: "Un référent est disponible pour accompagner les étudiants en situation de handicap"
+  }
+];
+
+const ressourcesUtiles = [
+  {
+    link: "https://lecollectifdesfestivals.org/collectif/2015/10/guide-pratique-de-laccessibilite-evenementielle",
+    label: "Guide accessibilité événementielle",
+    description: "Association Aditus"
+  },
+  {
+    link: "https://monparcourshandicap.gouv.fr",
+    label: "Mon parcours handicap",
+    description: "Accompagnement personnalisé en ligne"
+  },
+  {
+    link: "https://www.agefiph.fr",
+    label: "AGEFIPH",
+    description: "Aide à l'insertion professionnelle des personnes handicapées"
+  }
+];
+
+const ressourceUtile_droitausavoir = [
+  {
+    link: "https://droitausavoir.asso.fr",
+    label: "Droit au savoir",
+    description: "Comprendre les différents types de handicap"
+  }
+];
+
+const dispositifsLiens = [
+  {
+    link: "https://www.service-public.fr/particuliers/vosdroits/F12242",
+    label: "AAH – Allocation aux Adultes Handicapés"
+  },
+  {
+    link: "https://www.service-public.fr/particuliers/vosdroits/F14809",
+    label: "RQTH – Reconnaissance Travailleur Handicapé"
+  },
+  {
+    link: "https://monparcourshandicap.gouv.fr/",
+    label: "Mon Parcours Handicap"
+  }
+];
+
+const lienPauseBrindille = [
+  {
+    link: "https://lapausebrindille.org/",
+    label: "La Pause Brindille",
+    description: "Plateforme dédiée aux jeunes aidants"
+  }
+];
+
+const guideAccessibilite = [
+  {
+    link: "https://lecollectifdesfestivals.org/collectif/2015/10/guide-pratique-de-laccessibilite-evenementielle",
+    label: "Guide accessibilité événementielle",
+    description: "Ressource à destination des associations et organisateurs d'événements"
+  }
+];
+
+const ressourcesExternes = [
+  {
+    link: "https://www.handicap-job.com",
+    label: "Handicap Job",
+    description: "Plateforme d’emploi dédiée aux personnes en situation de handicap"
+  }
+];
+
+const droits = [
+  {
+    title: "AEEH – Allocation d’éducation de l’enfant handicapé",
+    subtitle: "Aide financière mensuelle pour les parents d’enfants en situation de handicap, destinée à compenser les dépenses liées au handicap."
+  },
+  {
+    title: "AAH – Allocation aux Adultes Handicapés",
+    subtitle: "Revenu minimum pour les personnes en situation de handicap ne pouvant pas ou plus travailler, sous conditions de ressources."
+  },
+  {
+    title: "Carte d’invalidité / priorité / stationnement",
+    subtitle: "Cartes permettant des avantages spécifiques : accès prioritaire, stationnement facilité ou reconnaissance administrative du handicap."
+  },
+  {
+    title: "PCH – Prestation de Compensation du Handicap",
+    subtitle: "Aide personnalisée couvrant les besoins liés à une perte d’autonomie (aide humaine, aménagement du logement, matériel, etc.)."
+  },
+  {
+    title: "RQTH – Reconnaissance de la Qualité de Travailleur Handicapé",
+    subtitle: "Statut facilitant l'accès et le maintien dans l’emploi, permettant des aménagements spécifiques et un accompagnement personnalisé."
+  },
+  {
+    title: "Projet Personnalisé de Scolarisation",
+    subtitle: "Document mis en place par l’Éducation nationale pour organiser les aides et aménagements nécessaires à la scolarité de l’élève."
+  },
+  {
+    title: "Aménagements d’examens – tiers temps, locaux adaptés, etc.",
+    subtitle: "Dispositifs accordés aux étudiants en situation de handicap pour garantir l’équité lors des examens ou concours."
+  },
+  {
+    title: "Soutien des maisons départementales des personnes handicapées (MDPH)",
+    subtitle: "Guichet unique pour l’information, l’orientation et la gestion des droits liés au handicap (aides financières, orientations, etc.)."
+  }
+];
+
+
+const jeunesAidants = [
+  {
+    title: "Brind’Écoute",
+    subtitle:
+      "Service d’écoute (chat/sms/téléphone) pour jeunes aidants"
+  },
+  {
+    title: "Brind’Partage",
+    subtitle: "Rencontres mensuelles pour jeunes aidants sur Lyon"
+  },
+  {
+    title: "Tribu Brindille",
+    subtitle: "Journée d’amusement et de répis pour les jeunes aidants"
+  },
+  {
+    title: "Plateforme Jeunes Aidants",
+    subtitle: "Informations et accompagnement dédiés aux moins de 25 ans aidants"
+  }
+];
+
+const SituationHandicap = () => (
+  <div className="page">
+    <h1 className="titre-page">Situation de Handicap</h1>
+    <Navbar links={navLinks} />
+
+    <div id="constat">
+      <h2 className="sous-titre-2">Le constat</h2>
+      <p className="texte">
+        Le handicap recouvre une grande diversité de réalités, qu’il soit visible ou invisible. 
+        Il peut être temporaire ou permanent, et concerner des fonctions physiques, mentales, 
+        cognitives ou sensorielles. Dans le contexte universitaire, cela peut impacter la mobilité, 
+        la communication, la concentration ou encore l'accès à l'information.
+      </p>
+      <ChiffresGroup chiffres={data} />
+      <Quote
+        author="Rapport OVE 2020"
+        text="Les étudiants en situation de handicap font face à des obstacles multiples, souvent invisibles, dans leur quotidien universitaire."
       />
+      <ExternalLinkBlock resources={ressourceUtile_droitausavoir} />
+    </div>
 
+    <Separateur />
 
+    <div id="internes">
+      <h2 className="sous-titre-2">Réponses internes</h2>
+      <p className="texte">
+        Centrale Lyon déploie une politique inclusive avec :
+      </p>
+      <p className="texte">
+        L’école met en œuvre des mesures concrètes pour garantir l’égalité des chances. 
+        Des actions de sensibilisation sont régulièrement proposées à l’ensemble de la communauté étudiante 
+        et enseignante pour favoriser l’inclusion. Un accompagnement individualisé peut être mis en place 
+        en fonction des besoins exprimés.
+      </p>
+      <BulletList
+        items={[
+          "Formation LSF & Label Handimanagement",
+          "Actions de prévention (Day in the Dark, Journée des DYS)",
+          "Budget de 6000 € pour la formation en Langue des Signes",
+          "Référent handicap dédié à l’accompagnement personnalisé",
+          "Accessibilité physique des locaux en amélioration continue"
+        ]}
+      />
+    </div>
+
+    <Separateur />
+
+    <div id="externes">
+      <h2 className="sous-titre-2">Ressources externes</h2>
+      <p className="texte">
+        De nombreuses structures extérieures proposent un accompagnement complémentaire, 
+        que ce soit sur le plan médical, social ou éducatif. Ces ressources sont utiles à la fois pour 
+        les démarches administratives et pour le soutien psychologique.
+      </p>
+      <ExternalLinkBlock resources={ressourcesUtiles} />
+      <div className="two-column-container">
+        {ressourcesExternes.map((r) => (
+          <div className="column" key={r.label}>
+            <ContactCard
+              title={r.label}
+              subtitle={r.description}
+              phone=""
+              textButton="Accéder"
+              link={r.link}
+            />
+          </div>
+        ))}
+        <div className="column">
+          <ContactCard
+            title="Crous Lyon"
+            subtitle="Soutien social, logement, aides financières."
+            phone="0800 73 08 15"
+            email="handicap@crous-lyon.fr"
+            textButton="Visiter le site"
+            link="https://www.crous-lyon.fr/social-et-accompagnement/"
+          />
+        </div>
       </div>
-    );
-  };
-  
-  export default Handicap;
+    </div>
+
+    <Separateur />
+
+    <div id="droits">
+      <h2 className="sous-titre-2">Droits des personnes handicapées</h2>
+      <p className="texte">
+        Il existe en France de nombreux dispositifs pour compenser les conséquences du handicap 
+        et soutenir les parcours de formation. Ces droits peuvent concerner la scolarité, le financement, 
+        l’accessibilité ou encore l’accès à l’emploi. Leur mise en œuvre dépend souvent d’une reconnaissance administrative.
+      </p>
+      <ListeNumerotee
+        title="Principaux dispositifs"
+        subtitle="Aides et allocations"
+        items={droits}
+      />
+      <ExternalLinkBlock resources={dispositifsLiens} />
+    </div>
+
+    <Separateur />
+
+    <div id="aidants">
+      <h2 className="sous-titre-2">Soutien aux jeunes aidants</h2>
+      <p className="texte">
+        Les jeunes aidants sont souvent invisibles. Ce sont des personnes entre 7 et 25 ans qui accompagnent au quotidien un proche en situation de 
+        handicap, de maladie, de dépendance ou d'addiction, tout en poursuivant leurs études. Ils sont plus d'un million en France. Ces situations peuvent générer de la fatigue, de l’isolement 
+        ou des difficultés scolaires. Des structures comme La pause Brindille visent à leur offrir un espace 
+        d’écoute, de partage et de répit.
+      </p>
+      <ListeNumerotee
+        title="La pause Brindille"
+        subtitle="Services et événements"
+        items={jeunesAidants}
+      />
+      <ExternalLinkBlock resources={lienPauseBrindille} />
+    </div>
+
+    <Separateur />
+
+    <div>
+      <h2 className="sous-titre-2">À destination des associations</h2>
+      <p className="texte">
+        Des ressources existent pour accompagner les associations dans la prise en compte du handicap dans l'organisation d'événements ou d'activités.
+      </p>
+      <ExternalLinkBlock resources={guideAccessibilite} />
+    </div>
+
+    <Separateur />
+
+    <p className="texte">
+      <em>
+        <b>Sources :</b> Mon Parcours Handicap, Droit au Savoir, MDPH, Crous Lyon, Planning Familial ARA, La pause Brindille, OVE 2020, AGEFIPH, Handicap Job
+      </em>
+    </p>
+  </div>
+);
+
+export default SituationHandicap;
