@@ -1,0 +1,52 @@
+.two-column-container {
+    display: flex;
+    width: 100%;
+    border:0;
+    padding:0;
+    gap:10px;
+  }
+  
+  .column {
+    flex: 2;
+    padding: 0; /* Optionnel : ajoutez du padding pour l'espacement */
+    align-content: center;
+  }
+
+  @media (max-width: 1000px) {
+    .two-column-container {
+        display: flex;
+        flex-direction: column;
+        gap:0;
+      }
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+  }
+  
+  .contraception-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .contraception-table th,
+  .contraception-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .contraception-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contraception-table {
+      font-size: 0.85rem;
+    }
+  }
+  
