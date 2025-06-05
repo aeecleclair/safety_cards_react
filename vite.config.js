@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/safety-cards-react/',
+  base: '/safety_cards_react/',
   plugins: [react()],
 })
