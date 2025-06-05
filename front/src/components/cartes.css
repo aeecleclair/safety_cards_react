@@ -77,6 +77,8 @@
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px); /* effet flou */
+    -webkit-backdrop-filter: blur(8px); /* pour Safari */
     z-index: 1000;
 }
 

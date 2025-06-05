@@ -31,7 +31,7 @@ const menuItems = [
       { title: "🩸 Endométriose & douleurs menstruelles", link: "/endom" },
       { title: "🧑‍🦯 Situation de handicap", link: "/handicap" },
       { title: "💤 Sommeil", link: "/sommeil" },
-      { title: "🍽️ TCA", link: "/tca" },
+      { title: "🍽️ Troubles des Conduites Alimentaires", link: "/tca" },
       { title: "🗣️ Tentative de suicide", link: "/suicide" },
     ],
   },
@@ -131,7 +131,6 @@ const Header = () => {
 
           ))}
 
-          <li className="exemple"><Link to="/Exemple">Page_exemple</Link></li>
 
         </ul>
       </nav>

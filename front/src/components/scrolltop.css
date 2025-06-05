@@ -2,8 +2,10 @@
     position: fixed;
     bottom: 40px;
     right: 20px;
-    background-color: #ffffff;
-    border : #000000 2px solid;
+    background-color: rgba(255,255,255,0.7); /* fond blanc semi-transparent */
+    backdrop-filter: blur(8px); /* effet flou */
+    -webkit-backdrop-filter: blur(8px); /* pour Safari */
+    border : #a1a1a173 2px solid;
     color: #000000;
     padding: 10px 15px;
     font-size: 1.5rem;

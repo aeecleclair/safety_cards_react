@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-import "./Risques-domestiques.css";
 
 import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
@@ -10,9 +9,11 @@ import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { image } from "framer-motion/client";
 
 
 const navLinks = [
+  { label: "Conseils clés", target: "resume-conseils" },
   { label: "Comprendre", target: "definition" },
   { label: "Prévenir", target: "prevention" },
   { label: "Agir en urgence", target: "urgence" }
@@ -73,18 +74,21 @@ const conseilsPrevention = [
 const ressourcesUtiles = [
   {
     link: "https://www.pompiers.fr/grand-public/prevention-des-risques",
-    label: "Pompiers de France – Prévention",
-    description: "Conseils pour prévenir les accidents domestiques"
+    label: "Pompiers de France",
+    description: "Conseils pour prévenir les accidents domestiques",
+    imageSrc: "/assets/logo-sp.jpg"
+
   },
   {
     link: "https://www.sdis38.fr/61-les-accidents-domestiques.htm",
-    label: "SDIS 38 – Accidents domestiques",
+    label: "SDIS 38",
     description: "Informations sur les principaux risques à domicile"
   },
   {
     link: "https://www.rhone.gouv.fr/Politiques-publiques/Securite-et-protection-de-la-population/La-securite-civile/Les-risques-domestiques",
-    label: "Préfecture du Rhône – Risques domestiques",
-    description: "Recommandations de la sécurité civile"
+    label: "Préfecture du Rhône",
+    description: "Recommandations de la sécurité civile",  
+    imageSrc: "/assets/rep-logo.png"
   }
 ];
 
@@ -92,34 +96,35 @@ const RisquesDomestiques = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Risques Domestiques</h1>
+      <Navbar links={navLinks} />
 
-      <div className="resume-conseils">
+      <div id="resume-conseils">
         <h2 className="titre">Conseils clés</h2>
-        <ul className="bullet-points">
-          <li>
-            En cas d'intoxication, <b><u>conservez l'emballage du produit en cause</u></b> pour le montrer aux secours.
-            <br />
+        
+        <p className="mise-avant">
+
+            En cas d'<b>intoxication</b>, conservez l'emballage du produit en cause pour le montrer aux secours.
+      
             Appelez le <b>Centre Antipoison au 04 72 11 69 11</b>.
-          </li>
-          <li>
-            En cas de brûlure, refroidissez la zone avec de l'eau froide pendant au moins 10 minutes.
-            <br />
+        </p>
+      <p className="mise-avant">
+            En cas de <b>brûlure</b>, refroidissez la zone avec de l'eau froide pendant au moins 10 minutes.
+
             Si nécessaire, appelez les <b>pompiers au 18</b> ou le <b>SAMU au 15</b>.
-          </li>
-          <li>
-            En cas d'étouffement, effectuez la manœuvre de Heimlich si vous la maîtrisez.
+      </p>
+      <p className="mise-avant">
+            En cas d'<b>étouffement</b>, alternez entre 5 tapes dans le dos entre les ompoplates et 5 compressions abdominales (manœuvre de Heimlich) si vous savez effectuer ce geste.
             <br />
             Si la situation ne s'améliore pas, appelez <b>le SAMU au 15</b>.
-          </li>
-          <li>
-            En cas d'électrocution, coupez immédiatement le courant sans toucher la victime.
-            <br />
+      </p>
+      <p className="mise-avant">
+            En cas d'<b>électrocution</b>, coupez immédiatement le courant sans toucher la victime.
+         
             Appelez les secours au <b>18</b> (pompiers) ou <b>112</b> (numéro d'urgence européen).
-          </li>
-        </ul>
+    
+      </p>
       </div>
 
-      <Navbar links={navLinks} />
 
       <div id="definition">
         <h1 className="titre">Comprendre les risques domestiques</h1>
@@ -129,6 +134,14 @@ const RisquesDomestiques = () => {
         <BulletList items={typesRisques} />
         <ChiffresGroup chiffres={chiffresRisquesDomestiques} />
       </div>
+
+        <ImageTextPopup
+        image="./assets/work_in_progress.jpg"
+        title="La carte 4♣"
+        shortText="Confiance en soi : renforcer et accompagner"
+        longText="Confiance en soi : renforcer et accompagner"
+        textButton="⤢ Agrandir la carte"
+      />
 
       <Separateur />
 
@@ -159,41 +172,42 @@ const RisquesDomestiques = () => {
           En cas d'accident domestique, il est crucial de réagir rapidement et efficacement. Voici les numéros d'urgence à connaître :
         </p>
 
-        <div className="two-column-container">
-          <div className="column">
+
             <ContactCard
-              image="/assets/pompiers.png"
+              image="/assets/18.png"
               title="Pompiers"
               subtitle="Incendie, accident, secours"
               phone="18"
               textButton="Voir le site"
               link="https://www.pompiers.fr"
+              bgColor="#ffffff"
+              textColor="#f5871f"
             />
-          </div>
-          <div className="column">
+
             <ContactCard
-              image="/assets/samu.png"
+              image="/assets/15.png"
               title="SAMU"
               subtitle="Urgence médicale"
               phone="15"
               textButton="Voir le site"
               link="https://www.samu-urgences-de-france.fr/fr/"
+              bgColor="#ffffff"
+              textColor="#ee3624"
             />
-          </div>
-        </div>
 
-        <div className="two-column-container">
-          <div className="column">
+
+
             <ContactCard
-              image="/assets/police.png"
+              image="/assets/17.png"
               title="Police Secours"
               subtitle="Trouble à l'ordre public"
               phone="17"
               textButton="Voir le site"
               link="https://www.police-nationale.interieur.gouv.fr"
+              bgColor="#ffffff"
+              textColor="#126782"
             />
-          </div>
-          <div className="column">
+
             <ContactCard
               image="/assets/112.png"
               title="Numéro européen"
@@ -201,12 +215,12 @@ const RisquesDomestiques = () => {
               phone="112"
               textButton="Voir le site"
               link="https://digital-strategy.ec.europa.eu/fr/policies/112"
+              bgColor="#ffffff"
+              textColor="#587b37"
             />
-          </div>
-        </div>
 
-        <div className="two-column-container">
-          <div className="column">
+
+
             <ContactCard
               image="/assets/114.png"
               title="Urgence pour sourds et malentendants"
@@ -214,19 +228,21 @@ const RisquesDomestiques = () => {
               phone="114"
               textButton="Voir le site"
               link="https://www.info.urgence114.fr/prehome/"
+              bgColor="#ffffff"
+              textColor="#737057"
             />
-          </div>
-          <div className="column">
+ 
             <ContactCard
-              image="/assets/antipoison.png"
+              image="/assets/CAP.jpg"
               title="Centre Antipoison"
               subtitle="Intoxications"
               phone="04 72 11 69 11"
               textButton="Voir le site"
               link="https://www.centres-antipoison.net"
+              bgColor="#ffffff"
+              textColor="#000000"
             />
-          </div>
-        </div>
+
       </div>
 
       <p className="texte"><em><b>Sources :</b> Pompiers de France, SDIS 38, Préfecture du Rhône, Santé publique France</em></p>

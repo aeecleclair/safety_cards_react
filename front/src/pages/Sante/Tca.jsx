@@ -57,7 +57,7 @@ const resources_sites = [
 const Tca = () => {
     return (
       <div className="page">
-        <h1 className="titre-page">Troubles du Comportement Alimentaire</h1>
+        <h1 className="titre-page">Troubles des Conduites Alimentaires</h1>
         <Workinprogress/>
 
         <h1 className = "titre">Les ressources globales</h1>

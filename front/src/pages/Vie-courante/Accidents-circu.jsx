@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-import "./Accidents-circu.css";
 
 import Quote from "../../components/Citation";
 import ListeNumerotee from "../../components/Listes";

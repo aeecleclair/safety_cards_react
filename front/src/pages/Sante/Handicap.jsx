@@ -7,16 +7,17 @@ import React from "react";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Separateur from "../../components/Separateur";
 import "../../App.css";
-import "./handicap.css";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { image, img } from "framer-motion/client";
 
 
 const navLinks = [
   { label: "Le constat", target: "constat" },
-  { label: "Réponses internes", target: "internes" },
-  { label: "Ressources externes", target: "externes" },
-  { label: "Droits", target: "droits" },
-  { label: "Jeunes aidants", target: "aidants" }
+  { label: "Les aides à Centrale", target: "internes" },
+  { label: "Les ressources externes", target: "externes" },
+  { label: "Les droits", target: "droits" },
+  { label: "Tu es jeune aidant·e ?", target: "aidants" },
+  { label: "S'adapter en tant qu'association", target: "association" }
 ];
 
 const data = [
@@ -34,41 +35,29 @@ const data = [
   }
 ];
 
-const ressourcesInternes = [
-  {
-    link: "",
-    label: "Formation LSF",
-    description: "6000 € de budget alloué pour la formation continue en Langue des Signes Française"
-  },
-  {
-    link: "",
-    label: "Actions de prévention",
-    description: "Day in the Dark, Journée des DYS, Label Handimanagement"
-  },
-  {
-    link: "",
-    label: "Référent handicap",
-    description: "Un référent est disponible pour accompagner les étudiants en situation de handicap"
-  }
-];
+
 
 const ressourcesUtiles = [
-  {
-    link: "https://lecollectifdesfestivals.org/collectif/2015/10/guide-pratique-de-laccessibilite-evenementielle",
-    label: "Guide accessibilité événementielle",
-    description: "Association Aditus"
-  },
+
   {
     link: "https://monparcourshandicap.gouv.fr",
     label: "Mon parcours handicap",
-    description: "Accompagnement personnalisé en ligne"
+    description: "Accompagnement personnalisé en ligne",
+    imageSrc: "/assets/rep-logo.png"
   },
   {
     link: "https://www.agefiph.fr",
     label: "AGEFIPH",
     description: "Aide à l'insertion professionnelle des personnes handicapées"
+  },
+  {
+    link: "https://www.handicap-job.com",
+    label: "Handicap Job",
+    description: "Plateforme d’emploi dédiée aux personnes en situation de handicap",
+    imageSrc: "/assets/logo-handicap-job.png"
   }
 ];
+
 
 const ressourceUtile_droitausavoir = [
   {
@@ -81,15 +70,18 @@ const ressourceUtile_droitausavoir = [
 const dispositifsLiens = [
   {
     link: "https://www.service-public.fr/particuliers/vosdroits/F12242",
-    label: "AAH – Allocation aux Adultes Handicapés"
+    label: "AAH – Allocation aux Adultes Handicapés",
+    imageSrc:"/assets/rep-logo.png",
   },
   {
     link: "https://www.service-public.fr/particuliers/vosdroits/F14809",
-    label: "RQTH – Reconnaissance Travailleur Handicapé"
+    label: "RQTH – Reconnaissance Travailleur Handicapé",
+    imageSrc:"/assets/rep-logo.png",
   },
   {
     link: "https://monparcourshandicap.gouv.fr/",
-    label: "Mon Parcours Handicap"
+    label: "Mon Parcours Handicap",
+    imageSrc:"/assets/rep-logo.png",
   }
 ];
 
@@ -97,7 +89,8 @@ const lienPauseBrindille = [
   {
     link: "https://lapausebrindille.org/",
     label: "La Pause Brindille",
-    description: "Plateforme dédiée aux jeunes aidants"
+    description: "Plateforme dédiée aux jeunes aidants",
+    imageSrc: "/assets/pause-brindille.png"
   }
 ];
 
@@ -105,17 +98,12 @@ const guideAccessibilite = [
   {
     link: "https://lecollectifdesfestivals.org/collectif/2015/10/guide-pratique-de-laccessibilite-evenementielle",
     label: "Guide accessibilité événementielle",
-    description: "Ressource à destination des associations et organisateurs d'événements"
+    description: "Ressource à destination des associations et organisateurs d'événements",
+    imageSrc: "/assets/collectif-festivals.png"
   }
 ];
 
-const ressourcesExternes = [
-  {
-    link: "https://www.handicap-job.com",
-    label: "Handicap Job",
-    description: "Plateforme d’emploi dédiée aux personnes en situation de handicap"
-  }
-];
+
 
 const droits = [
   {
@@ -179,7 +167,7 @@ const SituationHandicap = () => (
     <Navbar links={navLinks} />
 
     <div id="constat">
-      <h2 className="sous-titre-2">Le constat</h2>
+      <h2 className="titre">Le constat</h2>
       <p className="texte">
         Le handicap recouvre une grande diversité de réalités, qu’il soit visible ou invisible. 
         Il peut être temporaire ou permanent, et concerner des fonctions physiques, mentales, 
@@ -194,10 +182,18 @@ const SituationHandicap = () => (
       <ExternalLinkBlock resources={ressourceUtile_droitausavoir} />
     </div>
 
+      <ImageTextPopup
+        image="./assets/work_in_progress.jpg"
+        title="La carte V♠"
+        shortText="Situation de handicap : comprendre et aider"
+        longText="Situation de handicap : comprendre et aider"
+        textButton="⤢ Agrandir la carte"
+      />
+
     <Separateur />
 
     <div id="internes">
-      <h2 className="sous-titre-2">Réponses internes</h2>
+      <h2 className="titre">Les aides à Centrale</h2>
       <p className="texte">
         Centrale Lyon déploie une politique inclusive avec :
       </p>
@@ -221,42 +217,35 @@ const SituationHandicap = () => (
     <Separateur />
 
     <div id="externes">
-      <h2 className="sous-titre-2">Ressources externes</h2>
+      <h2 className="titre">Ressources externes</h2>
+    </div>
       <p className="texte">
         De nombreuses structures extérieures proposent un accompagnement complémentaire, 
         que ce soit sur le plan médical, social ou éducatif. Ces ressources sont utiles à la fois pour 
         les démarches administratives et pour le soutien psychologique.
       </p>
       <ExternalLinkBlock resources={ressourcesUtiles} />
-      <div className="two-column-container">
-        {ressourcesExternes.map((r) => (
-          <div className="column" key={r.label}>
-            <ContactCard
-              title={r.label}
-              subtitle={r.description}
-              phone=""
-              textButton="Accéder"
-              link={r.link}
-            />
-          </div>
-        ))}
-        <div className="column">
-          <ContactCard
+     
+
+
+      <ContactCard
             title="Crous Lyon"
             subtitle="Soutien social, logement, aides financières."
             phone="0800 73 08 15"
             email="handicap@crous-lyon.fr"
             textButton="Visiter le site"
             link="https://www.crous-lyon.fr/social-et-accompagnement/"
+            image="/assets/logo_crous.png"
+            bgColor="#ffffff"
+            textColor="#e30613"
+
           />
-        </div>
-      </div>
-    </div>
+
 
     <Separateur />
 
     <div id="droits">
-      <h2 className="sous-titre-2">Droits des personnes handicapées</h2>
+      <h2 className="titre">Droits des personnes en situation de handicap</h2>
       <p className="texte">
         Il existe en France de nombreux dispositifs pour compenser les conséquences du handicap 
         et soutenir les parcours de formation. Ces droits peuvent concerner la scolarité, le financement, 
@@ -273,7 +262,7 @@ const SituationHandicap = () => (
     <Separateur />
 
     <div id="aidants">
-      <h2 className="sous-titre-2">Soutien aux jeunes aidants</h2>
+      <h2 className="titre">Soutien aux jeunes aidants</h2>
       <p className="texte">
         Les jeunes aidants sont souvent invisibles. Ce sont des personnes entre 7 et 25 ans qui accompagnent au quotidien un proche en situation de 
         handicap, de maladie, de dépendance ou d'addiction, tout en poursuivant leurs études. Ils sont plus d'un million en France. Ces situations peuvent générer de la fatigue, de l’isolement 
@@ -290,8 +279,8 @@ const SituationHandicap = () => (
 
     <Separateur />
 
-    <div>
-      <h2 className="sous-titre-2">À destination des associations</h2>
+    <div id="association">
+      <h2 className="titre">S'adapter en tant qu'association</h2>
       <p className="texte">
         Des ressources existent pour accompagner les associations dans la prise en compte du handicap dans l'organisation d'événements ou d'activités.
       </p>

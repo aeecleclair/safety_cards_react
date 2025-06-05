@@ -4,6 +4,7 @@ body {
     background-color: #fff; /* Fond blanc pour tout le site */
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Style de base du menu */
@@ -14,6 +15,7 @@ nav ul {
     display: flex;
     justify-content: center;
     background-color: #ffffff;
+    
     border-bottom: none; /* Supprime toute bordure */
     box-shadow: none; /* Supprime toute ombre */
     margin-top: 20px; /* Marge au-dessus du menu pour l'espacement */
@@ -71,7 +73,9 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
     visibility: hidden;
     position: absolute;
     margin-top:5px;
-    background-color: #ffffff;
+    background-color: rgba(255,255,255,0.7); /* fond blanc semi-transparent */
+    backdrop-filter: blur(8px); /* effet flou */
+    -webkit-backdrop-filter: blur(8px); /* pour Safari */
     padding: 0px;
     list-style-type: none;
     white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
@@ -80,7 +84,7 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
     left: 50%; /* Positionner au centre de l'élément parent */
     transition: opacity 0.3s ease-out;
     z-index: 10000;
-    border :#b22133 2px solid;
+    border :#8a8a8a 1px solid;
 }
 
 body.dark-mode .dropdown-menu {

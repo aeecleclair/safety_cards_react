@@ -121,7 +121,9 @@
 
 .navbar.is-sticky {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background-color: #b22133;
+  background-color: #c07b7b80;
+  backdrop-filter: blur(8px); /* effet flou */
+  -webkit-backdrop-filter: blur(8px); /* pour Safari */
   margin-left: auto; 
   margin-right: auto;
   padding : 10px 10px;

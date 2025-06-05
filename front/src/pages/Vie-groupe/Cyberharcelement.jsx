@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-import "./Cyberharcelement.css";
 
 import Quote from "../../components/Citation";
 import ListeNumerotee from "../../components/Listes";
@@ -8,14 +7,15 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
+import ImageTextPopup from "../../components/Cartes";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { image } from "framer-motion/client";
 
 
 const navLinks = [
   { label: "Définition et constat", target: "definition" },
   { label: "Formes fréquentes et signes d'alerte", target: "formes" },
   { label: "Que faire ?", target: "agir" },
-  { label: "Droits et responsabilités", target: "droits" },
   { label: "Aides et ressources", target: "aide" },
 ];
 
@@ -115,25 +115,12 @@ const ressourceDiagnostic = [
 ];
 
 const ressourcesExterne = [
-  {
-    link: "https://www.etudiant.gouv.fr/fr/cnae",
-    label: "Dispositif CNAÉ",
-    description: "Écoute, accompagnement et signalement pour les étudiants. 0 800 737 800."
-  },
-  {
-    link: "https://www.nightline.fr/lyon",
-    label: "Nightline Lyon",
-    description: "Écoute nocturne par des étudiants, tous les jours de 21h à 2h30. 04 85 30 00 10."
-  },
-  {
-    link: "https://e-enfance.org/besoin-daide/",
-    label: "3018 – Violences numériques",
-    description: "Écoute et intervention pour les victimes. Ligne gratuite, de 9h à 20h."
-  },
+
   {
     link: "https://www.service-public.fr/particuliers/vosdroits/F32239",
     label: "Service public",
-    description: "Étapes de la démarche à suivre."
+    description: "Étapes de la démarche à suivre.",
+    imageSrc: "/assets/rep-logo.png"
   }
 ];
 
@@ -182,6 +169,14 @@ const Cyberharcelement = () => {
 
       </div>
 
+      <ImageTextPopup
+        image="./assets/work_in_progress.jpg"
+        title="La carte 5&diams;"
+        shortText="Cyberharcèlement : Comprendre et agir"
+        longText="Cyberharcèlement : Comprendre et agir"
+        textButton="⤢ Agrandir la carte"
+      />
+
       <Separateur />
 
       <div id="formes">
@@ -191,14 +186,14 @@ const Cyberharcelement = () => {
         </p>
         <BulletList items={formesFrequentes}/>
 
-        <h3>Tu penses être victime de cyberharcèlement ?</h3>
+        <h2 className = "sous-titre-2">Tu penses être victime de cyberharcèlement ?</h2>
         <p className="texte">Tu peux vérifier si ce que tu vis correspond à de la cybermalveillance grâce à cet outil du gouvernement.</p>
         <ExternalLinkBlock
           resources={ressourceDiagnostic}
         />
 
         <div id="mythes">
-          <h3>Idées reçues sur le cyberharcèlement</h3>
+         <h2 className = "sous-titre-2">Idées reçues sur le cyberharcèlement</h2>
           <ListeNumerotee title="Ce n’est pas une excuse" subtitle="Déconstruire les croyances" items={mythesCyberharcelement} />
         </div>
       </div>
@@ -227,8 +222,26 @@ const Cyberharcelement = () => {
         <h2 className="titre">Que faire ?</h2>
         <ListeNumerotee title="Réagir face au cyberharcèlement" subtitle="Étapes essentielles pour se protéger" items={conseilsAction} />
 
-        <div className="encart">
-          <h3>Comment signaler sur les réseaux sociaux ?</h3>
+        <ExternalLinkBlock resources={ressourcesExterne} />
+
+                  <ContactCard
+          image="/assets/3018.png" 
+          title="3018"
+          subtitle="Cyberharcèlement,  harcèlement scolaire, revenge porn, chantage à la webcam, usurpation d’identité, VSS, exposition à des contenus violents. "
+          phone="3018"
+          email=""
+          hours="7j/7, de 9h à 23h"
+          textButton="Voir le site web"
+          link="https://e-enfance.org/besoin-daide/"
+          bgColor="#2736f0"
+          textColor="#ffffff"
+        />
+
+
+
+      
+
+          <h2 className = "sous-titre-2">Comment signaler sur les réseaux sociaux ?</h2>
           <ul className="bullet-points">
             <li><b>Instagram :</b> options → signaler.</li>
             <li><b>Snapchat :</b> appui long → signaler.</li>
@@ -237,29 +250,56 @@ const Cyberharcelement = () => {
             <li><b>Discord :</b> clic droit + mode développeur → signaler.</li>
           </ul>
           <p className="texte">Les plateformes peuvent suspendre ou bannir les comptes nuisibles.</p>
-        </div>
-        <div className="encart">
-          <h3>Les preuves à conserver</h3>
+
+          <h2 className = "sous-titre-2">Les preuves à conserver</h2>
           <BulletList items={preuvesConserver} />
-        </div>
+
       </div>
 
-      <Separateur />
+      <h2 className = "sous-titre-2">Tes droits en tant que victime</h2>
 
-      <div id="droits">
-        <h2 className="titre">Droits des victimes et responsabilités des plateformes et établissements</h2>
-        <p className="texte">Les victimes ont des droits, et les plateformes comme les établissements ont des obligations. Comprendre ce cadre aide à mieux se défendre.</p>
         <BulletList items={droitsVictimes} />
+
+        <h2 className = "sous-titre-2">Les responsabilités des plateformes </h2>
         <BulletList items={responsabilites} />
-      </div>
+
 
       <Separateur />
+
+    
 
       <div id="aide">
-        <h2 className="titre">Aides et ressources</h2>
-        <ExternalLinkBlock title="Structures disponibles pour les étudiants" subtitle="Des dispositifs gratuits et anonymes" resources={ressourcesExterne} />
+        <h2 className="titre">Autres aides et ressources</h2>
+        
       </div>
 
+      <ContactCard
+          image="/assets/etudiant_gouv.jpg"
+          title="CNAÉ"
+          subtitle="Ecoute, accompagnement et signalement pour les étudiants"
+          hours="Lundi à vendredi : 10h à 21h, Samedi : 10h à 14h"
+          email="cnae@enseignementsup.gouv.fr"
+          phone="0800 737 800"
+          textButton="Voir le site"
+          link="https://www.etudiant.gouv.fr/fr/cnae"
+          bgColor="#ffffff"
+          textColor="#000000"
+        />
+
+                  <ContactCard
+          image="/assets/nightline_logo.png" 
+          title="Nightline Lyon"
+          subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
+          phone="04 85 30 00 10"
+          email=""
+          hours="Tous les soirs, de 21h à 2h30"
+          textButton="Voir le site web"
+          link="https://www.nightline.fr/lyon"
+        />
+
+
+
+      <Separateur />
 
       <p className="texte">
         <em><b>Sources :</b> CNAÉ, e-Enfance, Nightline, Ministère de l’Enseignement supérieur, ONPV, Santé publique France</em>
