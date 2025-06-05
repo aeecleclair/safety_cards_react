@@ -1,0 +1,8 @@
+services:
+  front:
+    build:
+      context: .  # le Dockerfile doit être dans ce dossier
+    container_name: safety_cards
+    ports:
+      - "3000:80"  # localhost:3000 → nginx:80
+    restart: unless-stopped
