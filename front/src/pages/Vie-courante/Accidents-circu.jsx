@@ -79,7 +79,7 @@ const ressourcesUtiles = [
   {
     link: "https://www.youtube.com/watch?v=cIybaOWeJlU",
     label: "Vidéo - Au revoir Maman",
-    description: "Une campagne choc sur les conséquences de la vitesse"
+    description: "Une campagne choc sur les conséquences de l'alcool au volant"
   },
   {
     link: "https://www.facebook.com/SamLeConducteurEngage",
