@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import "./sexualite.css";
+import "./Sexualite.css";
 
 import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
