@@ -190,3 +190,8 @@ body.dark-mode .menu-burger {
 body.dark-mode .menu-close {
   color: #ffffff;
 }
+
+body.dark-mode .mise-avant {
+  background-color: #343434;
+  color: #ffffff;
+}

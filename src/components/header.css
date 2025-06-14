@@ -74,8 +74,8 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
     position: absolute;
     margin-top:5px;
     background-color: rgba(255,255,255,0.7); /* fond blanc semi-transparent */
-    backdrop-filter: blur(8px); /* effet flou */
-    -webkit-backdrop-filter: blur(8px); /* pour Safari */
+    backdrop-filter: blur(10px); /* effet flou */
+    -webkit-backdrop-filter: blur(10px); /* pour Safari */
     padding: 0px;
     list-style-type: none;
     white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
@@ -89,6 +89,10 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
 
 body.dark-mode .dropdown-menu {
     border :none;
+    background-color: rgba(19, 19, 19, 0.9); /* Fond sombre semi-transparent */
+    backdrop-filter: blur(10px); /* effet flou */
+    -webkit-backdrop-filter: blur(10px); /* pour Safari */
+    border: 1px solid #444; /* Bordure sombre */
 }
 
 /* Assurez-vous que les sous-catégories ne débordent pas */
