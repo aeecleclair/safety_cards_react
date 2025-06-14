@@ -1,23 +1,13 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 
-import './index.css';
-import App from './App.jsx';
-
-// Récupère la redirection stockée par le 404.html
-const redirectPath = sessionStorage.redirect;
-delete sessionStorage.redirect;
+import './index.css'
+import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
-);
+    <App />
+  </StrictMode>,
+)
 
-// Applique la redirection dans React une fois monté
-if (redirectPath && window.location.pathname === '/') {
-  window.history.replaceState(null, '', redirectPath);
-}
+
