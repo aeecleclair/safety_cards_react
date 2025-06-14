@@ -130,6 +130,11 @@
 
 }
 
+.dark-mode .navbar.is-sticky {
+  background-color: #32202080;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .lien-navbar {
   text-decoration: none;
   border: #b22133 2px solid;

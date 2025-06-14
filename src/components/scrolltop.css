@@ -17,9 +17,11 @@
     z-index: 100; /* Assurez-vous que le bouton est au premier plan */
   }
   body.dark-mode .scroll-to-top{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.301);
     border-color:white;
     color : white;
+    backdrop-filter: blur(8px); /* effet flou */
+    -webkit-backdrop-filter: blur(8px); /* pour Safari */
 
   }
   

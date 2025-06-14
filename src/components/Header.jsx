@@ -41,7 +41,7 @@ const menuItems = [
       { title: "✅ Consentement", link: "/consent" },
       { title: "♀️ IVG", link: "/ivg" },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient" },
-      { title: "⚠️ Pratiques sexuelles dangereuses", link: "/pratiques_sex" },
+      { title: "⚠️ IST", link: "/pratiques_sex" },
       { title: "💑 Relations de couple", link: "/couple" },
       { title: "⛔ Revenge porn", link: "/revenge" },
       { title: "😘 Sexualité", link: "/sex" },
@@ -137,7 +137,7 @@ const Header = () => {
 
       <div className= "boutons_haut" >
             <ThemeToggle/>
-          <button className="quit-site" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+          <button className="quit-site" onClick={() => window.location.href = "https://www.google.com/"}>
           <span className="close-website-icon">&times;</span> Quitter le site
         </button>
             
