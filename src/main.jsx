@@ -9,3 +9,9 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+
+// Si une redirection a été stockée, navigue vers cette route
+if (redirectPath && window.location.pathname === "/") {
+  window.history.replaceState(null, "", redirectPath);
+}
