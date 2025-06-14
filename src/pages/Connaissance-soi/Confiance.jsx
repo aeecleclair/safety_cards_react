@@ -22,6 +22,7 @@ const chiffres_confiance = [
   { number: "55%", title: "des jeunes", description: "souhaiteraient  participer à des ateliers de gestion du stress et des émotions" }
 ];
 
+
 const resources_infos = [
   {
     link: "https://www.filsantejeunes.com/je-nai-pas-confiance-en-moi-7065#:~:text=Le%20propre%20du%20complexe%20est,et%20la%20confiance%20en%20soi",
