@@ -9,11 +9,6 @@ import App from './App.jsx';
 const redirectPath = sessionStorage.redirect;
 delete sessionStorage.redirect;
 
-// Applique la redirection dans React une fois monté
-if (redirectPath && window.location.pathname === '/') {
-  window.history.replaceState(null, '', redirectPath);
-}
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
@@ -22,4 +17,7 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>
 );
 
-
+// Applique la redirection dans React une fois monté
+if (redirectPath && window.location.pathname === '/') {
+  window.history.replaceState(null, '', redirectPath);
+}
