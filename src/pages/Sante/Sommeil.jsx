@@ -8,6 +8,7 @@ import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeV
 import ContactCard from "../../components/Contact";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 
+import Workinprogress from "../../components/WorkInProgress";
 
 const navLinks = [
   { label: "Plan d'action", target: "Plan_action" },
@@ -43,6 +44,69 @@ const data = [
   { number: "1/2", title: "élève considère que son temps d'écran", description: "impacte négativement son sommeil" }
 ];
 
+
+const resources_sites = [
+
+  {
+    link: "https://www.etudiant.gouv.fr/fr",
+    imageSrc: "/assets/etudiant_gouv.jpg",
+    label: "Etudiant.gouv.fr",
+    description: "Le site officiel du gouvernement pour les étudiants",
+  },
+  {
+    link: "https://www.lyoncampus.com/",
+    imageSrc: "/assets/logo_lyon_campus.png",
+    label: "Lyon Campus",
+    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
+    imageSrc: "/assets/logo_UDL.png",
+    label: "Portails Santé et Aides de l'UDL",
+    description : "Toutes les informations, dispositifs et procédures"
+
+  },
+  {
+    link: "https://commentonsaime.fr/",
+    imageSrc: "/assets/logo-cosa.svg",
+    label: "Comment on s'aime ?",
+    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
+  },
+
+  {
+    link: "https://www.crous-lyon.fr ",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous de Lyon",
+    description: "Aides, accompagnement, logements, restauration, international...",
+  },
+  {
+    link: "https://www.filsantejeunes.com/",
+    imageSrc: "/assets/fsj.png",
+    label: "Fil Santé Jeunes",
+    description: "Pour parler santé, sexualité, amour, mal être...",
+  },
+];
+
+const Sommeil = () => {
+    return (
+      <div className="page">
+        <h1 className="titre-page">Sommeil</h1>
+        <Workinprogress/>
+
+        <h1 className = "titre">Les ressources globales</h1>
+      <ExternalLinkBlock
+        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        resources={resources_sites}
+      />
+
+
+      </div>
+    );
+  };
+  
+  export default Sommeil;
+
+  {/* 
 
 const Sommeil = () => {
   return (
@@ -121,3 +185,5 @@ const Sommeil = () => {
   };
 
 export default Sommeil;
+
+*/}
