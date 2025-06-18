@@ -30,6 +30,8 @@ export const ImageCenter = ({ imageSrc }) => (
   </div>
 );
 
+
+
 export const Navbar = ({ links }) => {
   const navRef = useRef();
   const [open, setOpen] = useState(false);
