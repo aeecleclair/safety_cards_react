@@ -73,7 +73,7 @@ const PrecariteMens = () => {
       <div id="resume-conseils">
         <h2 className="titre">Les essentiels</h2>
         <p className="mise-avant"><b>Vous n’êtes pas seule.</b> À Centrale Lyon, des protections sont disponibles gratuitement et confidentiellement.</p>
-        <p className="mise-avant">Besoin d’écoute ? Contactez l’infirmerie au <b>06 72 15 74 78</b> ou l’assistante sociale.</p>
+        <p className="mise-avant">Besoin d’écoute ? Contactez l’infirmerie ou l’assistante sociale.</p>
       </div>
 
       <div id="definition">
@@ -89,7 +89,7 @@ const PrecariteMens = () => {
         image="/assets/carte_regles.jpg"
         title="Carte 5♥"
         shortText="Plus jamais dans le rouge"
-        longText="Cette carte propose à Léo d’intervenir pour aider une amie à se fournir en protections hygiéniques sans honte ni gêne. Une manière de normaliser la précarité menstruelle sur le campus."
+        longText=""
         textButton="⤢ Voir la carte"
       />
 
