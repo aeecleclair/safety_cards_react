@@ -2,16 +2,37 @@
 .random-container {
     width: 100%;
     min-height: 250px;
-    background-color: #f4f4f4;
+    background-color: #fcfcfc;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px 0;
+    border-radius: 10px;
+    overflow: hidden; /* Pour que le fond ne déborde pas */
+}
+
+/* Ajoute ce bloc pour la transparence du fond image */
+.random-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/Fond_random.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.1; /* <-- Modifie cette valeur pour régler la transparence */
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/* Pour que le contenu reste au-dessus du fond */
+.random-container > * {
     position: relative;
-    border-radius:10px;
-  }
+    z-index: 1;
+}
   body.dark-mode .random-container{
-    background-color: #343434 ;
+    background-color: #1f1f1f ;
   }
   
   /* Style du bouton principal */
@@ -63,14 +84,16 @@
     width: 90%;
     padding: 20px;
     border-radius: 10px;
-    background-color: white;
+    backdrop-filter: blur(15px); /* effet flou */
+    -webkit-backdrop-filter: blur(15px); /* pour Safari */
     border: 2px solid #b22133;
     text-align: center;
     position: relative;
     animation: fadeInScale 0.5s ease-out forwards;
   }
     body.dark-mode .random-card{
-        background-color: #343434;
+        backdrop-filter: blur(15px); /* effet flou */
+        -webkit-backdrop-filter: blur(15px); /* pour Safari */
         border: 2px solid #b00000;
 
     }
