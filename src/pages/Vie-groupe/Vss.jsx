@@ -13,22 +13,18 @@ import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 const navLinks = [
   { label: "De quoi parle-t-on ?", target: "vss" },
   { label: "Je suis victime", target: "victime" },
-  { label: "Je suis témoin", target: "temoin" }
+  { label: "Je suis témoin ou proche", target: "temoin" }
 ];
 
 
-const items_aerer = [
-  { title: "Approcher la personne, évaluer et assister", 
-    subitems: [ 
-      { title : "Approchez la victime", subtitle: "Trouvez le moment et le lieu où vous vous sentez tous les deux à l'aise pour discuter. Si la personne n'est pas disposée à parler, ne la forcez pas à parler, elle peut avoir besoin de temps pour se confier : signalez-lui simplement que vous restez à sa disposition." },
-      {title : "Si vous percevez des signes de crise", subtitle: "Si il est fait mention pendant la conversation d'idées suicidaires ou d'automutilation non suicidaire, la victime peut être en crise. Il est alors nécessaire de l'assister. Référez-vous aux pages Suicide et Automutilation." }
-      ] },
+const items_non = [
+  { title: "La sidération", subtitle: "Lorsque le cerveau est soumis à une violence trop grande, on peut se sentir comme tétanisé·e, pétrifié·e. On ne peut pas crier, ni parler et dire non, ni bouger. Le cerveau se bloque et cela peut créer une amnésie traumatique. " },
+  { title: "La dissociation", subtitle: "C’est une forme de déconnexion entre l’esprit et la réalité, donnant l’impression de sortir de son propre corps. Ce mécanisme permet de réduire l’intensité des émotions sur le moment, afin de mieux faire face à une situation traumatisante. A posteriori, cela peut donner lieu à un discours sans émotion, puisque la victime voit la situation avec une distance. Pour autant, cela ne signifie pas que ce qu’elle a vécu n’est pas grave ou ne l’a pas touchée !" },
+  { title: "La banalisation des violences", subtitle: "En focntion du milieu dans lequel on a grandi et évolué, on peut percevoir certaines violences comme plus acceptables. Là encore, ce n'est pas parce que la personne exprime un détachement qu'il ne faut pas prendre sa situation au sérieux !" },
 
-  { title: "Écouter activement et sans jugement", subtitle: "Posez des questions, reformulez ses propos pour bien comprendre, n'interrompez pas la personne, regardez-la quand elle vous parle, n'exprimez pas de jugement et évitez la confontation." },
-  { title: "Réconforter et informer", subtitle: "Rassurez le·la quant au fait qu'il·elle peut se rétablir, rappelez qu'il·elle n'est pas seul·e à faire face à ce type de situation, proposez votre aide en prenant garde à ne pas tout assumer à sa place, réfléchissez à des solutions ensemble. " },
-  { title: "Encourager à aller vers des professionnels", subtitle: "Par exemple l'infirmière de Centrale, un médecin généraliste ou un psychologue. Si la victime ne souhaite pas voir de professionnels, discutez de ce refus. Quoiqu'il en soit, signalez-lui que vous restez à sa disposition." },
-  { title: "Renseigner sur les autres ressources disponibles", subtitle: "Encouragez-le·la à communiquer avec d'autres ami·e·s ou avec des membres de leur famille. Vous pouvez aussi les orienter vers des ressources en ligne, présentes sur cette page par exemple." },
 ];
+
+
 
 const resources_consent = [
 
@@ -117,6 +113,31 @@ const barometres = [
 ];
 
 
+const cellule_ecoute = [
+  {
+    link: "/cellule-ecoute",
+    label: "Cellule d'écoute",
+    description: "Pour signaler une VSS à l'école et bénéficier d'un accompagnement",
+    emoji: "📞",
+  }
+];
+
+const liens_ext_temoins = [
+  {
+    link: "https://arretonslesviolences.gouv.fr/je-suis-temoin/que-faire-quand-j-assiste-a-une-agression",
+    label: "Pour aller + loin",
+    description: "Comment réagir en tant que témoin ?",
+    imageSrc: "/assets/arretons_violence.svg",
+  }]
+
+  const liens_ext_temoins_aidant = [
+  {
+    link: "https://arretonslesviolences.gouv.fr/je-suis-temoin",
+    label: "Arrêtons les violences",
+    description: "Agir sur le moment et a posteriori",
+    imageSrc: "/assets/arretons_violence.svg",
+  }]
+
 
 const Vss = () => {
     return (
@@ -196,6 +217,14 @@ const Vss = () => {
         resources={couple}
       />
 
+      <ImageTextPopup
+        image="./assets/9_trefle.png"
+        title="La carte 9♣"
+        shortText="VSS : L'espace vital"
+        longText="VSS : L'espace vital"
+        textButton="⤢ Agrandir la carte"
+      />
+
       
       <ExternalLinkBlock
         title="Pour en apprendre davantage"
@@ -227,6 +256,11 @@ const Vss = () => {
 
 
       <h2 className="sous-titre-2">A qui en parler ?</h2>
+
+      <p className="texte">Il est important de parler de ce que tu as vécu. Tu peux en parler à quelqu'un de confiance (ami·e, parent, professeur·e, etc.) ou à un professionnel. Il existe plusieurs ressources à Centrale Lyon et à l'extérieur pour t'aider.</p>
+      <p className="texte"><b>EN INTERNE</b></p>
+
+      <p className="texte">Tu peux contacter l'<b>infirmière de Centrale Lyon</b>, qui est formée pour t'aider et te conseiller. Elle peut aussi t'orienter vers des professionnels extérieurs si nécessaire. En tant que professionnelle de santé, elle est soumise au <b>secret médical</b>, ta confidentialité est donc garantie. Tu peux décider d’en rester là et poursuivre ton signalement plus tard si désiré. </p>
       <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
         title="Infirmerie"
@@ -242,90 +276,107 @@ const Vss = () => {
 
       />
 
-      <p className="texte">Il existe aussi des services en ligne. Tu peux contacter la <b>Nightline</b>, service qui te mettra en contact avec des <b>étudiants bénévoles</b> de manière gratuite et anonyme, que tu aies besoin d'aide ou simplement besoin de vider ton sac. Si tu préfères parler à des <b>professionnels</b>, toujours de manière gratuite et anonyme, alors tu peux contacter <b>Comment on s'aime ?</b>.</p>
-
-          <ContactCard
-          image="/assets/nightline_logo.png" 
-          title="Nightline Lyon"
-          subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
-          phone="04 85 30 00 10"
-          email=""
-          hours="Tous les soirs, de 21h à 2h30"
-          textButton="Voir le site web"
-          link="https://www.nightline.fr/lyon"
-        />
-
-          <ContactCard
-            image="/assets/logo-cosa.svg" 
-            title="Comment on s'aime ?"
-            subtitle="Écoute et réponse à tes questions par des professionnels"
-            hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
-            textButton="Voir le site web"
-            link="https://commentonsaime.fr/"
-
-            bgColor="#f6a21e"    //informations facultatives
-            textColor="#ffffff"
-          />
-
-    
-
-
-
-      <h2 className="sous-titre-2">Tu es en détresse ou tu as des pensées suicidaires ?</h2>
+      <p className="texte">Tu peux aussi faire remonter ton témoignage aux écoutants internes : <b>associations</b> (BDE, Le Mouv', Peer Care...) ou <b>cellule d'écoute.</b> </p>
+      <p className="texte">La <b>cellule d'écoute</b> est composée de 4 personnels, qui sont là pour t'accompagner et pour faire remonter l'information en interne. Tu acceptes ainsi que l'école prenne en main la situation, et qu'elle mène une <b>enquête interne</b>. En tant que fonctionnaires, ils ont aussi l'obligation de faire remonter ton témoignage au <b>procureur de la République.</b>  </p>
       
-      <ContactCard
-        image="/assets/3114.jpg" 
-        title="3114"
-        subtitle="Numéro national de prévention du suicide"
-        phone="3114"
-        email=""
-        hours="24h/24 et 7j/7"
-        textButton="Voir le site web"
-        link="https://3114.fr/"
-
+      <ExternalLinkBlock
+        resources={cellule_ecoute}
       />
 
+      <p className="texte"><b>SERVICES EXTERNES</b></p>
+
+      <p className="texte"> Tu peux aussi t'orienter vers des ressources externes, garantissant l'anonymat et la confidentialité. Aucun retour n'est transmis à l'école, tu peux donc décider d'en rester là tant que tu le souhaites. </p>
+      <p className="texte"><b>Arrêtons les violences</b> est une plateforme du gouvernement. Elle regroupe toute les ressources disponibles : le <b>3919</b> (7j/7, 24h/24, numéro d'écoute, d'information et d'orientation), un <b>tchat en ligne</b> (7j/7, 24h/24 pour signaler des violences et être accompagné·e) et un <b>annuaire des associations</b> autour de toi.</p>
+      <ContactCard
+          image="/assets/arretons_violence.svg"
+          title="Arrêtons les violences"
+          subtitle="Aide au téléphone, en ligne, ou via une association"
+          hours="24h/24, 7j/7"
+          phone="3919"
+          textButton="J'ai besoin d'aide"
+          link="https://arretonslesviolences.gouv.fr/besoin-d-aide"
+          bgColor="#ffffff"
+          textColor="#CC3C32"
+        />
+
+        <p className="texte"><b>Si tu ne souhaites pas en parler, c'est ton droit ! Se sentir prêt·e peut prendre du temps.</b></p>
+
+
+      <ImageTextPopup
+        image="./assets/5_trefle.png"
+        title="La carte 5♣"
+        shortText="Réagir face à une VSS en soirée"
+        longText="Réagir face à une VSS en soirée"
+        textButton="⤢ Agrandir la carte"
+      />
       
 
       <Separateur />
       
       <div id = "temoin">
-        <h1 className="titre">Je m'inquiète pour quelqu'un</h1>
+        <h1 className="titre">Je suis témoin ou proche</h1>
       </div>
 
-      <p className="texte">Si vous êtes en présence d’une personne en dépression, votre <b>soutien</b> peut faire toute la différence.  
-      En tant que secouriste, <b>il est normal que certaines journées soient plus éprouvantes que d’autres. </b> 
-      Avant d’intervenir pour aider les autres, prenez donc un moment pour vous assurer que vous êtes en mesure d’écouter avec <b>bienveillance</b> et <b>sans jugement</b>.
-         
+      <h2 className="sous-titre-2">Agir comme témoin</h2>
+
+      <p className="texte"> Lorsque que tu es témoin de VSS, certains réflexes simples et actions concrètes peuvent faire la différence. Mieux vaut réagir ou alerter les autres pour rien que ne pas réagir du tout. Tu peux appliquer les conseils de la section « Je suis victime » ci-dessus, tous les organismes présentés sont aussi là pour encadrer les témoins. Quoiqu’il en soit,<b> montre à la victime que tu la crois et que tu es là pour elle, informe-la des moyens à sa disposition et respecte ses souhaits, sans prendre de décision à sa place. </b>Tu peux aussi récolter des preuves (audio, vidéo...) en vue de les transmettre à la victime et aux autorités uniquement. </p>
+
+      <ExternalLinkBlock
+        resources={liens_ext_temoins}
+      />
+
+      En tant que témoin, tu peux avoir aussi vécu une situation traumatisante. Il est important de prendre soin de toi aussi. Tu peux contacter l'infirmière de Centrale Lyon ou les associations mentionnées dans la partie "Je suis victime" pour en parler.
+
+      <h2 className="sous-titre-2">Accueillir un témoignage</h2>
+
+      <p className="texte">
+        Face à une personne victime de VSS, il est essentiel d’adopter une posture bienveillante, respectueuse et soutenante. Ainsi, pour contrer les stratégies de l’auteur des VSS, souvent fondées sur l’isolement, la dévalorisation ou la culpabilisation de la victime, il est crucial de renforcer la personne dans ce qu’elle vit, sans jugement ni pression.
+
       </p>
+
+      <BulletList items={[
+        "Maintiens le lien avec la victime : garder un contact régulier permet de briser l’isolement souvent imposé par l’auteur des violences.",
+        "Valorise-la : lui rappeler sa valeur, ses qualités, ses forces contribue à reconstruire l’estime d’elle-même.",
+        "Déculpabilise-la : aide-la à comprendre qu’elle n’est jamais responsable des violences subies.",
+        "Rassure-la : rappelle-lui qu’elle est crue, qu’elle n’est pas seule et qu’il existe des ressources pour l’accompagner.",
+        "Sois de son côté : fais preuve de loyauté, sans condition, pour qu’elle se sente soutenue dans son parcours."
+      ]} />
+
+      <p className="texte">En revanche, il est important d'éviter certains comportements qui pourraient aggraver la situation de la victime ou la mettre mal à l'aise. Voici quelques exemples de ce qu'il ne faut pas faire :</p>
+
+      <BulletList items={[
+        "Mettre en doute la réalité des faits : remettre en question ce que la personne raconte peut renforcer sa détresse et isoler davantage la victime.",
+        "Culpabiliser la victime : lui faire porter la responsabilité des violences subies est une double peine injuste et destructrice.",
+        "Minimiser ou banaliser les violences subies : qualifier les faits de « pas si graves » ou de « malentendus » revient à invalider le vécu de la victime.",
+        "Exprimer un jugement moral : porter un regard moralisateur sur la situation ou sur les comportements de la victime empêche une écoute authentique.",
+        "Ramener les propos à nous : parler de notre propre vécu détourne l’attention de la personne concernée et recentre l’échange sur nous-mêmes.",
+        "Vouloir trouver des solutions immédiatement, donner des injonctions à agir : cela peut mettre une pression supplémentaire sur la victime, qui n’est peut-être pas prête à agir.",
+        "Projeter ses propres angoisses et émotions : faire peser ses propres peurs ou colères sur la victime peut alourdir sa charge émotionnelle."
+      ]} />
+
+      <p className="texte">La réaction de certaines victimes face à une VSS peut sembler irrationnelle pour quelqu'un qui n'a pas vécu la situation. Il est important de prendre en compte les 3 points suivants :</p>
+
+
+
+
 
       <ListeNumerotee 
           
-          title="Plan d'action pour les Premiers Secours en Santé Mentale (Plan AÉRER)" 
-          subtitle="Comment aider un personne qui fait face à des troubles dépressifs ?" 
-          items={items_aerer} //on fait appel à des constantes de début de la page
+          title="« Pourquoi je n'ai pas dit non ? »" 
+          subtitle="Comment expliquer cette réaction chez une victime de VSS ?" 
+          items={items_non} //on fait appel à des constantes de début de la page
           
+      />
+
+      <ExternalLinkBlock
+        resources={liens_ext_temoins_aidant}
       />
  
 
-      <ImageTextPopup
-        image="./assets/6_carreau.png"
-        title="La carte 6&diams;"
-        shortText="Dépression : aider en tant que témoin"
-        longText="Cette image nous confronte à une vérité essentielle : la dépression ne se voit pas toujours. On peut rire, parler, jouer… tout en étant profondément mal à l’intérieur. En tant qu’aidant ou simple témoin, il est important de changer son regard. Les apparences sont trompeuses et certains sourires peuvent être des masques. Si vous êtes un parent, un ami, un collègue, un professeur, il est vital de ne pas attendre des signaux évidents pour s’inquiéter et de toujours être présent pour son entourage."
-        textButton="⤢ Agrandir la carte"
-      />
-
-      <h2 className="sous-titre-2">Pour aller + loin : la formation PSSM</h2>
-
-      <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l’aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu’à ce qu’une aide professionnelle puisse être apportée ou jusqu’à ce que la crise soit résolue. Ils sont l’équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
-      Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.
-      La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
-      imageSrc="/assets/logo-pssm.svg" />
 
       <Separateur />
 
-      <p className="texte"><em> <b>Sources :</b> Manuel des Premiers Secours en Santé Mentale pour les jeunes , Portail Santé de l'Université de Lyon, PAI 22 : Qualité de vie en études à l'ECL, Comment on s'aime ?, CNAE </em>
+      <p className="texte"><em> <b>Sources :</b> Arrêtons les violences, formation Fil'Action, Portail Santé de l'Université de Lyon, PAI 22 : Qualité de vie en études à l'ECL, Comment on s'aime ?, CNAE, Charte VSS de Centrale Lyon </em>
          </p>
       </div>
     );
