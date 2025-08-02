@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Importation de Link pour les liens
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "../ThemeProvider";
 import "./header.css";
 
 const menuItems = [
@@ -84,6 +85,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); //texte rouge lorsque sous menu ouvert
+  const { darkMode, setDarkMode } = useTheme(); 
 
 
   useEffect(() => {
@@ -148,23 +150,41 @@ const Header = () => {
         &#9776;
       </div>
 
-      {menuOpen && (
-        <div className="menu show">
+      <div className={`menu ${menuOpen ? "show" : ""}`}>
           <span className="menu-close" onClick={() => setMenuOpen(false)}>&times;</span>
+          {/* Affichage du sous-menu si un menu est actif */}
+          <div className="logo-burger">
+            <Link to="/">
+              <img src="/logo.png" alt="Logo Safety Cards" />
+            </Link>
+
+          </div>
+
           {activeMenu ? (
             <div className="submenu-container">
-              <button className="back-button" onClick={() => setActiveMenu(null)}>← Retour</button>
+              <button className="menu-back" onClick={() => setActiveMenu(null)}>←</button>
               <ul>
                 {activeMenu.submenu.map((sub, subIndex) => (
                   <li key={subIndex}>
                     <Link to={sub.link} onClick={() => setMenuOpen(false)}>{sub.title}</Link>
                   </li>
                 ))}
+                
+                <li className="menu-divider"></li>
+                <li>
+                  <button className="menu-button-style" onClick={() => setDarkMode(!darkMode)}>
+                    {darkMode ? "☀️ Thème clair" : "🌙 Thème sombre"}
+                  </button>
+                </li>
+                <li>
+                  <button className="menu-button-style" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+                    <span className="close-website-icon">&times;</span> Quitter le site
+                  </button>
+                </li>
               </ul>
             </div>
           ) : (
             <ul>
-              <li><Link to="/" onClick={() => setMenuOpen(false)}>Accueil</Link></li>
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <button className="submenu-toggle" onClick={() => setActiveMenu(item)}>
@@ -173,17 +193,25 @@ const Header = () => {
                 </li>
               ))}
               
+              {/* Trait délimiteur */}
+              <li className="menu-divider"></li>
+              
+              {/* Boutons */}
+              <li>
+                <button className="menu-button-style" onClick={() => setDarkMode(!darkMode)}>
+                  {darkMode ? "☀️ Thème clair" : "🌙 Thème sombre"}
+                </button>
+              </li>
+              <li>
+                <button className="menu-button-style" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+                  <span className="close-website-icon">&times;</span> Quitter le site
+                </button>
+              </li>
             </ul>
           )}
-          <div className= "boutons_bas" >
-            <ThemeToggle/>
-          <button className="quit-site-mobile" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
-          <span className="close-website-icon">&times;</span> Quitter le site
-        </button>
-            
-        </div>
-        </div>
-      )}
+
+      </div>
+      
     </header>
   );
 };

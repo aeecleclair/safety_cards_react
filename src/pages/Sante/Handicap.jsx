@@ -195,9 +195,6 @@ const SituationHandicap = () => (
     <div id="internes">
       <h2 className="titre">Les aides à Centrale</h2>
       <p className="texte">
-        Centrale Lyon déploie une politique inclusive avec :
-      </p>
-      <p className="texte">
         L’école met en œuvre des mesures concrètes pour garantir l’égalité des chances. 
         Des actions de sensibilisation sont régulièrement proposées à l’ensemble de la communauté étudiante 
         et enseignante pour favoriser l’inclusion. Un accompagnement individualisé peut être mis en place 

@@ -17,11 +17,11 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('/assets/Fond_random.png');
-    background-size: cover;
+    background-image: url('/logo.png');
+    background-size: 30%;
     background-position: center;
     background-repeat: repeat;
-    opacity: 0.1; /* <-- Modifie cette valeur pour régler la transparence */
+  opacity: 0.1; /* <-- Modifie cette valeur pour régler la transparence */
     z-index: 0;
     border-radius: 10px;
 }
