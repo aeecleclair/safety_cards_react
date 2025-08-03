@@ -86,6 +86,7 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); //texte rouge lorsque sous menu ouvert
   const { darkMode, setDarkMode } = useTheme(); 
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
 
   useEffect(() => {
@@ -103,15 +104,18 @@ const Header = () => {
 
   return (
     <header>
-      <div className="logo">
-        <Link to="/">
-          <img src="/logo.png" alt="Logo Safety Cards" />
-        </Link>
-        <h1>safety cards</h1>
-      </div>
+      
 
       {/* Menu Desktop */}
       <nav className="desktop-menu">
+
+        <div className="logo">
+          <Link to="/">
+            <img src="/logo.png" alt="Logo Safety Cards" />
+          </Link>
+          <h1>safety cards</h1>
+        </div>
+
         <ul>
           <li><Link to="/">Accueil</Link></li>
 
@@ -138,31 +142,53 @@ const Header = () => {
       </nav>
 
       <div className= "boutons_haut" >
-            <ThemeToggle/>
+          <ThemeToggle/>
           <button className="quit-site" onClick={() => window.location.href = "https://www.google.com/"}>
-          <span className="close-website-icon">&times;</span> Quitter le site
-        </button>
+            <span className="close-website-icon">&times;</span> Quitter le site
+          </button>
             
         </div>
 
+
+
+
       {/* Menu Burger pour mobile */}
-      <div className="menu-burger" onClick={() => setMenuOpen(true)}>
-        &#9776;
+
+      <div className = "bandeau">
+        <div className="menu-burger" onClick={() => setMenuOpen(true)}>
+          ☰
+        </div>
+
+
+        <div className="logo">
+          <Link to="/">
+            <img src="/logo.png" alt="Logo Safety Cards" />
+          </Link>
+          <h1>safety cards</h1>
+        </div>
+
+        <div className="navbar-burger" onClick={() => window.toggleNavbar?.()}>
+          ⌕
+        </div>
+
       </div>
+
+      
+
 
       <div className={`menu ${menuOpen ? "show" : ""}`}>
           <span className="menu-close" onClick={() => setMenuOpen(false)}>&times;</span>
           {/* Affichage du sous-menu si un menu est actif */}
+          
           <div className="logo-burger">
             <Link to="/">
               <img src="/logo.png" alt="Logo Safety Cards" />
             </Link>
-
           </div>
 
           {activeMenu ? (
             <div className="submenu-container">
-              <button className="menu-back" onClick={() => setActiveMenu(null)}>←</button>
+              <button className="menu-back" onClick={() => setActiveMenu(null)}>‹</button>
               <ul>
                 {activeMenu.submenu.map((sub, subIndex) => (
                   <li key={subIndex}>
@@ -171,16 +197,19 @@ const Header = () => {
                 ))}
                 
                 <li className="menu-divider"></li>
+                
                 <li>
                   <button className="menu-button-style" onClick={() => setDarkMode(!darkMode)}>
                     {darkMode ? "☀️ Thème clair" : "🌙 Thème sombre"}
                   </button>
                 </li>
+
                 <li>
-                  <button className="menu-button-style" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+                  <button className="menu-button-style" onClick={() => window.location.href = "https://www.google.com/"}>
                     <span className="close-website-icon">&times;</span> Quitter le site
                   </button>
                 </li>
+
               </ul>
             </div>
           ) : (
@@ -193,20 +222,20 @@ const Header = () => {
                 </li>
               ))}
               
-              {/* Trait délimiteur */}
               <li className="menu-divider"></li>
               
-              {/* Boutons */}
               <li>
                 <button className="menu-button-style" onClick={() => setDarkMode(!darkMode)}>
                   {darkMode ? "☀️ Thème clair" : "🌙 Thème sombre"}
                 </button>
               </li>
+
               <li>
-                <button className="menu-button-style" onClick={() => window.location.href = "https://campus.ec-lyon.fr/"}>
+                <button className="menu-button-style" onClick={() => window.location.href = "https://www.google.com/"}>
                   <span className="close-website-icon">&times;</span> Quitter le site
                 </button>
               </li>
+              
             </ul>
           )}
 
