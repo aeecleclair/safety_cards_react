@@ -1,7 +1,5 @@
 import React from "react";
 import "../../App.css";
-import "./Sexualite.css";
-
 import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
@@ -103,7 +101,7 @@ const Sexualite = () => {
 
         <h2 className="soustitre">Comparatif des méthodes contraceptives</h2>
         <div className="table-container">
-          <table className="contraception-table">
+          <table className="tableau">
             <thead>
               <tr>
                 <th>Méthode</th>
@@ -174,9 +172,6 @@ const Sexualite = () => {
           bgColor="#ffffff"
           textColor="#b22133"
         />
-
-        <div className="two-column-container">
-          <div className="column">
             <ContactCard
               image="/assets/filsantejeunes.png"
               title="Fil Santé Jeunes"
@@ -186,8 +181,7 @@ const Sexualite = () => {
               textButton="Voir le site"
               link="https://www.filsantejeunes.com/"
             />
-          </div>
-          <div className="column">
+
             <ContactCard
               image="/assets/planning.png"
               title="Planning Familial"
@@ -198,8 +192,7 @@ const Sexualite = () => {
               bgColor="#ff5f63"
               textColor="#ffffff"
             />
-          </div>
-        </div>
+
 
         <div className="texte bloc-info">
           <h3>🛡️ Accès gratuit aux préservatifs</h3>

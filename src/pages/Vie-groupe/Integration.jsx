@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-import "./Integration.css";
 
 import Quote from "../../components/Citation";
 import ListeNumerotee from "../../components/Listes";
@@ -129,7 +128,7 @@ const Bizutage = () => {
 
         <h3 className="soustitre">Les différences clés</h3>
         <div className="tableau-container">
-          <table className="tableau-comparatif">
+          <table className="tableau">
             <thead>
               <tr>
                 <th>Intégration</th>

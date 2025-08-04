@@ -24,10 +24,10 @@ const ImageTextPopup = ({ image, title, shortText, longText, textButton }) => {
       {/* Popup (Modal) */}
       {isOpen && (
         <div className="modal-overlay" onClick={() => setIsOpen(false)}>
+          <button className="close-button" onClick={() => setIsOpen(false)}>
+            &times;
+          </button>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={() => setIsOpen(false)}>
-              &times;
-            </button>
 
             <div className="modal-text-image">
               <div className="modal-image-container">

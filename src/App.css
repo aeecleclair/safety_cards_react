@@ -93,6 +93,48 @@ html, body, #root, .app {
 
 
 
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+  }
+  
+  .tableau {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;     
+  }
+
+  
+  .tableau th,
+  .tableau td {
+    border: 1px solid #b22133;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .tableau th {
+    background-color: #b22133;
+    font-weight: bold;
+    color : white;
+    border-color: white;
+  }
+
+  body.dark-mode .tableau th {
+    background-color: #b00000;
+    color: #ffffff;
+  }
+
+  body.dark-mode .tableau td {
+    border-color: #ffffff;
+  }
+
+  
+
+
+
+
+
 
 
 /* ➡️ Version responsive */

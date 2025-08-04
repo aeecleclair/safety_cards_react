@@ -77,8 +77,8 @@
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px); /* effet flou */
-    -webkit-backdrop-filter: blur(8px); /* pour Safari */
+    backdrop-filter: blur(10px); /* effet flou */
+    -webkit-backdrop-filter: blur(10px); /* pour Safari */
     z-index: 1000;
 }
 
@@ -145,25 +145,35 @@ body.dark-mode .modal-content p {
 /* Bouton de fermeture */
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
+    top: 40px;
+    right: 5%;
+    background-color: #ffffff;
+    color: #b22133;
+    font-weight: 600;
     border: none;
+    padding: 0px 15px;
+    font-size: 2em;
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.623);
-    font-size: 30px;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
     z-index: 101;
 }
 body.dark-mode .close-button {
-    color: #ffffff;
+    background-color: #2c2c2c;
+    color: #b00000;
 }
 
 .close-button:hover {
-    color: #b22133;
+    background-color: #b22133;
+    color: white;
 }
 body.dark-mode .close-button:hover {
-    color: #b22133;
+    background-color: #ffffff;
+    color: #000000;
 }
+
 
 
 
@@ -225,25 +235,6 @@ body.dark-mode .close-button:hover {
         overflow-y: none; /* Ajoute un ascenseur vertical si le contenu dépasse */
     }
 
-    .close-button {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: rgba(0, 0, 0, 0.623);
-        font-size: 30px;
-        padding:0;
-        padding-left: 10px;
-        padding-right: 10px;
-        background-color: white;
-        border-radius: 1000px;
-        
-    }
 
-    body.dark-mode .close-button {
-        background-color: #1e1e1e;
-    }
 
 }
