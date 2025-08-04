@@ -2,10 +2,11 @@
     position: fixed;
     bottom: 40px;
     right: 20px;
-    background-color: rgba(255,255,255,0.7); /* fond blanc semi-transparent */
-    backdrop-filter: blur(8px); /* effet flou */
-    -webkit-backdrop-filter: blur(8px); /* pour Safari */
-    border : #a1a1a173 2px solid;
+    background-color: rgba(255,255,255,0.8); /* fond blanc semi-transparent */
+    backdrop-filter: blur(10px); /* effet flou */
+    -webkit-backdrop-filter: blur(10px); /* pour Safari */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border : none;
     color: #000000;
     padding: 10px 15px;
     font-size: 1.5rem;
@@ -16,12 +17,13 @@
     visibility: hidden;
     z-index: 100; /* Assurez-vous que le bouton est au premier plan */
   }
+
+
   body.dark-mode .scroll-to-top{
-    background-color: rgba(0, 0, 0, 0.301);
-    border-color:white;
     color : white;
-    backdrop-filter: blur(8px); /* effet flou */
-    -webkit-backdrop-filter: blur(8px); /* pour Safari */
+    background-color: rgba(19, 19, 19, 0.9); /* Fond sombre semi-transparent */
+    backdrop-filter: blur(10px); /* effet flou */
+    -webkit-backdrop-filter: blur(10px); /* pour Safari */
 
   }
   

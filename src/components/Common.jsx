@@ -36,7 +36,15 @@ export const Navbar = ({ links }) => {
   const navRef = useRef();
   const [open, setOpen] = useState(false);
 
-  // Sticky shadow logic (desktop seulement)
+
+    // Indique que le sommaire existe
+    useEffect(() => {
+      window.__hasSommaire = true;
+      return () => { window.__hasSommaire = false; };
+    }, []);
+
+
+  // Sticky shadow logic (pc seulement)
   useEffect(() => {
     const nav = navRef.current;
     const onScroll = () => {

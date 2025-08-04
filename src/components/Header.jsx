@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom"; // Importation de Link pour les liens
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "../ThemeProvider";
@@ -81,12 +82,21 @@ const menuItems = [
 
 
 // Composant principal Header
-const Header = () => {
+const Header = ({}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); //texte rouge lorsque sous menu ouvert
   const { darkMode, setDarkMode } = useTheme(); 
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [hasSommaire, setHasSommaire] = useState(window.__hasSommaire || false);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Attend la fin du rendu pour lire la variable globale
+    const timer = setTimeout(() => {
+      setHasSommaire(window.__hasSommaire || false);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [location]);
 
 
   useEffect(() => {
@@ -167,9 +177,12 @@ const Header = () => {
           <h1>safety cards</h1>
         </div>
 
+        {/* Affiche l'icône sommaire si Navbar existe */}
+        {hasSommaire && (
         <div className="navbar-burger" onClick={() => window.toggleNavbar?.()}>
           ⌕
         </div>
+        )}
 
       </div>
 

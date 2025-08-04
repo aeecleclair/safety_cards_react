@@ -149,16 +149,6 @@ body.dark-mode .texte {
 
 
 
-body.dark-mode .navbar button {
-  background-color: #444444;
-  color: #ffffff;
-}
-
-body.dark-mode .navbar button:hover {
-  background-color: #555555;
-  color: #ffffff;
-}
-
 body.dark-mode header {
   background-color: #131313;
   color: #ffffff;

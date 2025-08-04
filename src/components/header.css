@@ -73,14 +73,14 @@ body.dark-mode nav ul li a:hover, body.dark-mode nav ul li a.hovered {
     visibility: hidden;
     position: absolute;
     margin-top:5px;
-    background-color: rgba(255,255,255,0.7); /* fond blanc semi-transparent */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.8); /* fond blanc semi-transparent */
     backdrop-filter: blur(10px); /* effet flou */
     -webkit-backdrop-filter: blur(10px); /* pour Safari */
     padding: 0px;
     list-style-type: none;
     white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15); /* Ombre légère */
-    border-radius: 10px; /* Ajoute un léger arrondi */
     left: 50%; /* Positionner au centre de l'élément parent */
     transition: opacity 0.3s ease-out;
     z-index: 10000;
@@ -332,8 +332,8 @@ body.dark-mode .quit-site {
         display: flex;
         flex-direction: column;
         background-color: rgba(255,255,255,0.8); /* fond blanc semi-transparent */
-        backdrop-filter: blur(30px); /* effet flou */
-        -webkit-backdrop-filter: blur(30px); /* pour Safari */
+        backdrop-filter: blur(10px); /* effet flou */
+        -webkit-backdrop-filter: blur(10px); /* pour Safari */
         width: 100%;
         height: 100vh;
         position: fixed;
@@ -343,8 +343,6 @@ body.dark-mode .quit-site {
         transform: translateX(-100%);
         opacity: 0; /* Ajoute l'opacité à 0 par défaut */
         transition: transform 0.2s cubic-bezier(0.77,0,0.175,1), opacity 0.2s cubic-bezier(0.77,0,0.175,1);
-        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
-        border-radius: 0 10px 10px 0;
         padding: 20px;
         padding-top: 30px;
         overflow-y: auto;
@@ -353,8 +351,8 @@ body.dark-mode .quit-site {
 
     body.dark-mode .menu {
         background-color: rgba(19, 19, 19, 0.9); /* Fond sombre semi-transparent */
-        backdrop-filter: blur(30px); /* effet flou */
-        -webkit-backdrop-filter: blur(30px); /* pour Safari */
+        backdrop-filter: blur(10px); /* effet flou */
+        -webkit-backdrop-filter: blur(10px); /* pour Safari */
     }
 
     /* Ajoute cette règle pour l'animation */
@@ -411,6 +409,7 @@ body.dark-mode .quit-site {
         align-items: center;
         display : flex;
         margin-bottom : 40px;
+        max-width: 600px;;
     }
 
     .menu ul {
@@ -434,8 +433,9 @@ body.dark-mode .quit-site {
         padding: 10px 15px;
         border-radius: 10px;
         text-decoration: none;
-        transition: background 0.3s ease-in-out;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
         width: 90%;
+        max-width: 700px;
         margin : 0 auto; /* Centre le lien */
         font-size: 1em; 
         margin-bottom : 20px auto;       
@@ -465,6 +465,7 @@ body.dark-mode .quit-site {
         background-color: #cccccc;
         margin: 40px auto !important;
         width: 90%;
+        max-width: 700px;
         border: none;
     }
 
@@ -485,8 +486,9 @@ body.dark-mode .quit-site {
         border-radius: 10px;
         border: none;
         cursor: pointer;
-        transition: background 0.3s ease-in-out;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
         width: 90%;
+        max-width: 700px;
         margin: 0 auto;
         font-size: 1em;
         font-family: "Poppins", sans-serif;
@@ -523,8 +525,9 @@ body.dark-mode .quit-site {
         align-items: center;
         justify-content: space-between;
         width: 90%;
+        max-width: 700px;
         border-radius: 10px;
-        transition: background 0.3s ease-in-out;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
         text-align: left;
         font-family: "Poppins", sans-serif;
     }
