@@ -9,19 +9,19 @@ const menuItems = [
   {
     title: "🙆 Connaissance de soi",
     submenu: [
-      { title: "💛 Confiance & estime de soi", link: "/conf" },
-      { title: "🏳️‍⚧️ Identité de genre", link: "/genre" },
-      { title: "🧍 Isolement", link: "/isolement" },
+      { title: "💛 Confiance & estime de soi", link: "/conf"},
+      { title: "🏳️‍⚧️ Identité de genre", link: "/genre", inactive:true},
+      { title: "🧍 Isolement", link: "/isolement", inactive:true},
     ],
   },
   {
     title: "💉 Risques addictifs",
     submenu: [
-      { title: "🔞 Addiction à la pornographie", link: "/add_porno" },
+      { title: "🔞 Addiction à la pornographie", link: "/add_porno", inactive:true},
       { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
       { title: "🍺 Consommation d'alcool", link: "/alcool" },
-      { title: "🎆 Consommation de stupéfiants", link: "/stup" },
-      { title: "🚬 Tabac & vapotage", link: "/tabac" },
+      { title: "🎆 Consommation de stupéfiants", link: "/stup", inactive:true },
+      { title: "🚬 Tabac & vapotage", link: "/tabac", inactive:true },
     ],
   },
   {
@@ -29,38 +29,38 @@ const menuItems = [
     submenu: [
       { title: "🦓 Automutilation", link: "/automutil" },
       { title: "🥹 Dépression", link: "/depression" },
-      { title: "🗺️ Déracinement culturel", link: "/deracinement" },
+      { title: "🗺️ Déracinement culturel", link: "/deracinement", inactive:true },
       { title: "🩸 Endométriose & douleurs menstruelles", link: "/endom" },
       { title: "🧑‍🦯 Situation de handicap", link: "/handicap" },
-      { title: "💤 Sommeil", link: "/sommeil" },
-      { title: "🍽️ Troubles des Conduites Alimentaires", link: "/tca" },
-      { title: "🗣️ Tentative de suicide", link: "/suicide" },
+      { title: "💤 Sommeil", link: "/sommeil", inactive:true },
+      { title: "🍽️ Troubles des Conduites Alimentaires", link: "/tca", inactive:true },
+      { title: "🗣️ Tentative de suicide", link: "/suicide", inactive:true },
     ],
   },
   {
     title: "💖 Sexualité et amour",
     submenu: [
-      { title: "✅ Consentement", link: "/consent" },
-      { title: "♀️ IVG", link: "/ivg" },
-      { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient" },
-      { title: "⚠️ IST", link: "/pratiques_sex" },
-      { title: "💑 Relations de couple", link: "/couple" },
+      { title: "✅ Consentement", link: "/consent", inactive:true },
+      { title: "♀️ IVG", link: "/ivg", inactive:true },
+      { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient", inactive:true },
+      { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
+      { title: "💑 Relations de couple", link: "/couple", inactive:true },
       { title: "⛔ Revenge porn", link: "/revenge" },
-      { title: "😘 Sexualité", link: "/sex" },
+      { title: "😘 Sexualité", link: "/sex", inactive:true },
     ],
   },
   {
     title: "🕰️ Vie courante",
     submenu: [
-      { title: "🚗 Accidents de la circulation", link: "/accident" },
-      { title: "🥬 Alimentation", link: "/aliment" },
-      { title: "😶‍🌫️ Anxiété", link: "/anxiete" },
-      { title: "🌿 Démarches écologiques", link: "/ecolo" },
-      { title: "🧘 Détente & relaxation", link: "/detente" },
-      { title: "💰 Précarité économique", link: "/prec_eco" },
-      { title: "💸 Précarité menstruelle", link: "/prec_mens" },
-      { title: "⛹️ Santé physique & sport", link: "/sport" },
-      { title: "🛋️ Sédentarité", link: "/sedentarite" },
+      { title: "🚗 Accidents de la circulation", link: "/accident", inactive:true },
+      { title: "🥬 Alimentation", link: "/aliment", inactive:true  },
+      { title: "😶‍🌫️ Anxiété", link: "/anxiete", inactive:true  },
+      { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
+      { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },
+      { title: "💰 Précarité économique", link: "/prec_eco", inactive:true  },
+      { title: "💸 Précarité menstruelle", link: "/prec_mens", inactive:true  },
+      { title: "⛹️ Santé physique & sport", link: "/sport", inactive:true  },
+      { title: "🛋️ Sédentarité", link: "/sedentarite", inactive:true  },
       { title: "🏠 Risques domestiques", link: "/domestique" },
     ],
   },
@@ -68,11 +68,11 @@ const menuItems = [
     title: "🧑‍🤝‍🧑 Vie de groupe",
     submenu: [
       { title: "📵 Cyberharcèlement", link: "/cyber_harcel" },
-      { title: "🟰 Discriminations", link: "/discri" },
+      { title: "🟰 Discriminations", link: "/discri", inactive:true  },
       { title: "🙅 Effet de groupe", link: "/groupe" },
-      { title: "🩵 Empathie", link: "/empathie" },
-      { title: "😠 Harcèlement", link: "/harcel" },
-      { title: "🍾 Pratiques d'intégration", link: "/inte" },
+      { title: "🩵 Empathie", link: "/empathie", inactive:true  },
+      { title: "😠 Harcèlement", link: "/harcel", inactive:true  },
+      { title: "🍾 Pratiques d'intégration", link: "/inte", inactive:true  },
       { title: "💊 Soumission chimique", link: "/soumission" },
       { title: "🫂 VSS", link: "/vss" },
     ],
@@ -89,6 +89,29 @@ const Header = ({}) => {
   const { darkMode, setDarkMode } = useTheme(); 
   const [hasSommaire, setHasSommaire] = useState(window.__hasSommaire || false);
   const location = useLocation();
+
+  // Rend un lien de menu (actif/inactif) pour desktop et mobile
+  const renderMenuLink = ({ title, link, inactive }, extraClass = "") => {
+    const label = inactive ? `${title} 🚧` : title;
+    const className = `${extraClass} ${inactive ? "inactive-link" : ""}`.trim();
+    if (inactive) {
+      // Lien inactif: grisé et non cliquable
+      return (
+        <span className={className} aria-disabled="true" role="link">
+          {label}
+        </span>
+      );
+    }
+    // Titre principal de menu 
+    if (!link) {
+      return <span className={className}>{label}</span>;
+    }
+    return (
+      <Link to={link} className={className}>
+        {label}
+      </Link>
+    );
+  };
 
   useEffect(() => {
     // Attend la fin du rendu pour lire la variable globale
@@ -117,7 +140,7 @@ const Header = ({}) => {
       
 
       {/* Menu Desktop */}
-      <nav className="desktop-menu">
+  <nav className="desktop-menu">
 
         <div className="logo">
           <Link to="/">
@@ -131,14 +154,20 @@ const Header = ({}) => {
 
           {menuItems.map((item, index) => (
             <li key={index} className="dropdown" >
-              <Link to={item.link} className={`a ${hoveredIndex === index ? "hovered" : ""}`}>{item.title}</Link>
+              {renderMenuLink(
+                { title: item.title, link: item.link, inactive: item.inactive },
+                `a ${hoveredIndex === index ? "hovered" : ""}`
+              )}
 
               <ul className="dropdown-menu" 
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}>
                 {item.submenu.map((sub, subIndex) => (
                   <li key={subIndex}>
-                    <Link to={sub.link}>{sub.title}</Link>
+                    {renderMenuLink(
+                      { title: sub.title, link: sub.link, inactive: sub.inactive },
+                      "a"
+                    )}
                   </li>
                 ))}
               </ul>
@@ -205,7 +234,17 @@ const Header = ({}) => {
               <ul>
                 {activeMenu.submenu.map((sub, subIndex) => (
                   <li key={subIndex}>
-                    <Link to={sub.link} onClick={() => setMenuOpen(false)}>{sub.title}</Link>
+                    {sub.inactive
+                      ? (
+                        <span className="menu-button-style inactive-link" aria-disabled="true" role="link">
+                          {`${sub.title} 🚧`}
+                        </span>
+                      )
+                      : (
+                        <Link to={sub.link} onClick={() => setMenuOpen(false)} className="menu-button-style">
+                          {sub.title}
+                        </Link>
+                      )}
                   </li>
                 ))}
                 
