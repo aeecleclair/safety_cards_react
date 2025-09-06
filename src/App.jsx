@@ -164,7 +164,7 @@ function App() {
         <Route path = "/pe5" element={<PE5 />} />
 
         //Mode soirée
-        <Route path="/accueil-mode-soiree" element={<AccueilModeSoiree />} />
+        <Route path="/mode-soiree" element={<AccueilModeSoiree />} />
   <Route path="/contacts-urgence" element={<ContactsUrgence />} />
   <Route path="/plan-soiree" element={<PlanSoiree />} />
 

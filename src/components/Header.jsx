@@ -184,7 +184,7 @@ const Header = ({}) => {
       <div className= "boutons_haut" >
           <button
             className="mode-soiree" onClick={() => {
-              navigate("/accueil-mode-soiree"); // navigation interne
+              navigate("/mode-soiree"); // navigation interne
             }}
           >
             <span className="close-website-icon">🎉</span> Mode soirée
@@ -273,7 +273,7 @@ const Header = ({}) => {
                 </li>
 
                 <li>
-                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/accueil-mode-soiree'); }}>
+                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/mode-soiree'); }}>
                     🎉 Mode soirée
                   </button>
                 </li>
@@ -306,7 +306,7 @@ const Header = ({}) => {
               </li>
 
                 <li>
-                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/accueil-mode-soiree'); }}>
+                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/mode-soiree'); }}>
                     🎉 Mode soirée
                   </button>
                 </li>
