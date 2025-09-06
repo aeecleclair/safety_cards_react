@@ -200,7 +200,7 @@ header .logo h1 {
 .mode-soiree {
     background-color:#ffffff; /* normal */
 }
-.mode-soiree:hover{
+.mode-soiree:hover, body.dark-mode .mode-soiree:hover {
     background: linear-gradient(90deg,#ff0099,#9255ff);
     color:#ffffff;
     border-color:#c82bcd;

@@ -4,8 +4,8 @@ import './mode-soiree.css';
 
 // Placeholders temporaires (remplacer plus tard par les vrais plans)
 const PLAN_IMAGES = {
-  rdc: '/assets/4_pique.png',
-  soussol: '/assets/5_trefle.png'
+  rdc: '/assets/cartes/4_pique.png',
+  soussol: '/assets/cartes/5_trefle.png'
 };
 
 const PlanSoiree = () => {

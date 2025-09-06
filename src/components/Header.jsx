@@ -218,7 +218,7 @@ const Header = ({}) => {
         {/* Affiche l'icône sommaire si Navbar existe */}
         {hasSommaire && (
         <div className="navbar-burger" onClick={() => window.toggleNavbar?.()}>
-          ⌕
+          ⋮
         </div>
         )}
 

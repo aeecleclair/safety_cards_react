@@ -10,7 +10,9 @@
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top:20px;
-    background-color: #b22133;
+    /*fond dégradé*/
+    background: linear-gradient(135deg, #b22133, #720c18);
+
 }
 
 

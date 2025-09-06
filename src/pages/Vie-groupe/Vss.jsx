@@ -153,7 +153,7 @@ const Vss = () => {
       </div>
 
       <ImageTextPopup
-        image="./assets/9_coeur.png"
+        image="./assets/cartes/9_coeur.png"
         title="La carte 9&hearts;"
         shortText="La pyramide des VSS"
         longText=""
@@ -218,7 +218,7 @@ const Vss = () => {
       />
 
       <ImageTextPopup
-        image="./assets/9_trefle.png"
+        image="./assets/cartes/9_trefle.png"
         title="La carte 9♣"
         shortText="VSS : L'espace vital"
         longText="VSS : L'espace vital"
@@ -303,7 +303,7 @@ const Vss = () => {
 
 
       <ImageTextPopup
-        image="./assets/5_trefle.png"
+        image="./assets/cartes/5_trefle.png"
         title="La carte 5♣"
         shortText="Réagir face à une VSS en soirée"
         longText="Réagir face à une VSS en soirée"
