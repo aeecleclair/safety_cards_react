@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./contact.css";
 
-const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, link, bgColor: propBgColor, textColor: propTextColor }) => {
+const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, link, bgColor: propBgColor, textColor: propTextColor, variant }) => {
   const [bgColor, setBgColor] = useState(propBgColor || "#ffffff");
   const [textColor, setTextColor] = useState(propTextColor || "#000000");
   const [isDarkMode, setIsDarkMode] = useState(document.body.classList.contains("dark-mode"));
@@ -43,29 +43,71 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
     };
   }, []);
 
+  const baseColors = {
+    cardBg: (isDarkMode && propBgColor) ? "#343434" : bgColor,
+    border: isDarkMode ? "#343434" : textColor,
+    text: (isDarkMode && propTextColor) ? "#ffffff" : textColor,
+    btnBg: (isDarkMode && propBgColor) ? "#343434" : bgColor,
+    btnBorder: (isDarkMode && propTextColor) ? "#ffffff" : textColor,
+    btnText: (isDarkMode && propTextColor) ? "#ffffff" : textColor
+  };
+
+  if (variant === 'horizontal') {
+    return (
+      <div className="contact-card contact-card-horizontal" style={{ backgroundColor: baseColors.cardBg, borderColor: baseColors.border }}>
+        <img src={image} alt={title} className="contact-image" />
+        <div className="contact-info">
+          <h2 style={{ color: baseColors.text }}>{title}</h2>
+          {subtitle && <h3 style={{ color: baseColors.text }}>{subtitle}</h3>}
+          {phone && <h3 style={{ color: baseColors.text }}>{phone}</h3>}
+          {link && (
+            <a
+              className="link-button"
+              style={{ backgroundColor: baseColors.btnBg, borderColor: baseColors.btnBorder, color: baseColors.btnText }}
+                  href={link}
+                  onMouseEnter={(e) => {
+                    e.target.style.color = (isDarkMode && propTextColor) ? "#343434" : baseColors.btnBg;
+                    e.target.style.backgroundColor = (isDarkMode && propBgColor) ? "#ffffff" : baseColors.btnBorder;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.color = baseColors.btnText;
+                    e.target.style.backgroundColor = baseColors.btnBg;
+                  }}
+                >
+                  {textButton || 'Appeler'}
+                </a>
+              )}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="contact-card" style={{ backgroundColor: isDarkMode && propBgColor ? "#343434" : bgColor, borderColor: isDarkMode ? "#343434" : textColor }}>
+    <div className="contact-card" style={{ backgroundColor: baseColors.cardBg, borderColor: baseColors.border }}>
       <img src={image} alt={title} className="contact-image" />
       <div className="contact-info">
-        <h2 style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}>{title}</h2>
-        {subtitle && <h3 style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}>{subtitle}</h3>}
-        {phone && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Téléphone :</strong> {phone}</p>}
-        {email && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Email :</strong> {email}</p>}
-        {hours && <p style={{ color: isDarkMode && propTextColor ? "#ffffff" : textColor }}><strong>Horaires :</strong> {hours}</p>}
-        <a
-          className="link-button" style={{ backgroundColor: isDarkMode && propBgColor ? "#343434" : bgColor, borderColor: isDarkMode && propTextColor ? "#ffffff" : textColor, color: isDarkMode && propTextColor ? "#ffffff" : textColor }}
-          href={link}
-          onMouseEnter={(e) => {
-            e.target.style.color = isDarkMode && propTextColor ? "#343434" : bgColor;
-            e.target.style.backgroundColor = isDarkMode && propBgColor ? "#ffffff" : textColor;
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.color = isDarkMode && propTextColor ? "#ffffff" : textColor;
-            e.target.style.backgroundColor = isDarkMode && propBgColor ? "#343434" : bgColor;
-          }}
-        >
-          {textButton}
-        </a>
+        <h2 style={{ color: baseColors.text }}>{title}</h2>
+        {subtitle && <h3 style={{ color: baseColors.text }}>{subtitle}</h3>}
+        {phone && <p style={{ color: baseColors.text }}><strong>Téléphone :</strong> {phone}</p>}
+        {email && <p style={{ color: baseColors.text }}><strong>Email :</strong> {email}</p>}
+        {hours && <p style={{ color: baseColors.text }}><strong>Horaires :</strong> {hours}</p>}
+        {link && (
+          <a
+            className="link-button"
+            style={{ backgroundColor: baseColors.btnBg, borderColor: baseColors.btnBorder, color: baseColors.btnText }}
+            href={link}
+            onMouseEnter={(e) => {
+              e.target.style.color = (isDarkMode && propTextColor) ? "#343434" : baseColors.btnBg;
+              e.target.style.backgroundColor = (isDarkMode && propBgColor) ? "#ffffff" : baseColors.btnBorder;
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.color = baseColors.btnText;
+              e.target.style.backgroundColor = baseColors.btnBg;
+            }}
+          >
+            {textButton}
+          </a>
+        )}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"; // Importation de Link pour les liens
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "../ThemeProvider";
@@ -89,6 +89,7 @@ const Header = ({}) => {
   const { darkMode, setDarkMode } = useTheme(); 
   const [hasSommaire, setHasSommaire] = useState(window.__hasSommaire || false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Rend un lien de menu (actif/inactif) pour desktop et mobile
   const renderMenuLink = ({ title, link, inactive }, extraClass = "") => {
@@ -104,7 +105,7 @@ const Header = ({}) => {
     }
     // Titre principal de menu 
     if (!link) {
-      return <span className={className}>{label}</span>;
+      return <a className={className}>{label}</a>;
     }
     return (
       <Link to={link} className={className}>
@@ -181,6 +182,14 @@ const Header = ({}) => {
       </nav>
 
       <div className= "boutons_haut" >
+          <button
+            className="mode-soiree" onClick={() => {
+              navigate("/accueil-mode-soiree"); // navigation interne
+            }}
+          >
+            <span className="close-website-icon">🎉</span> Mode soirée
+          </button>
+
           <ThemeToggle/>
           <button className="quit-site" onClick={() => window.location.href = "https://www.google.com/"}>
             <span className="close-website-icon">&times;</span> Quitter le site
@@ -223,7 +232,7 @@ const Header = ({}) => {
           {/* Affichage du sous-menu si un menu est actif */}
           
           <div className="logo-burger">
-            <Link to="/">
+            <Link to="/" onClick={() => setMenuOpen(false)}>
               <img src="/logo.png" alt="Logo Safety Cards" />
             </Link>
           </div>
@@ -256,9 +265,16 @@ const Header = ({}) => {
                   </button>
                 </li>
 
+
                 <li>
                   <button className="menu-button-style" onClick={() => window.location.href = "https://www.google.com/"}>
                     <span className="close-website-icon">&times;</span> Quitter le site
+                  </button>
+                </li>
+
+                <li>
+                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/accueil-mode-soiree'); }}>
+                    🎉 Mode soirée
                   </button>
                 </li>
 
@@ -281,12 +297,19 @@ const Header = ({}) => {
                   {darkMode ? "☀️ Thème clair" : "🌙 Thème sombre"}
                 </button>
               </li>
+             
 
               <li>
                 <button className="menu-button-style" onClick={() => window.location.href = "https://www.google.com/"}>
                   <span className="close-website-icon">&times;</span> Quitter le site
                 </button>
               </li>
+
+                <li>
+                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/accueil-mode-soiree'); }}>
+                    🎉 Mode soirée
+                  </button>
+                </li>
               
             </ul>
           )}
