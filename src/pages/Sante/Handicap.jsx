@@ -188,6 +188,7 @@ const SituationHandicap = () => (
         shortText="Situation de handicap : comprendre et aider"
         longText="Situation de handicap : comprendre et aider"
         textButton="⤢ Agrandir la carte"
+        suit="pique"
       />
 
     <Separateur />

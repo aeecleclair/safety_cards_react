@@ -94,6 +94,7 @@ const Confiance = () => {
         shortText="Confiance en soi : renforcer et accompagner"
         longText="Confiance en soi : renforcer et accompagner"
         textButton="⤢ Agrandir la carte"
+        suit = "carreau"
       />
 
       <Separateur />

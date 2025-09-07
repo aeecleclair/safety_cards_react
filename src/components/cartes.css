@@ -1,29 +1,38 @@
 /* Conteneur principal */
 .image-text-container {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top:20px;
-    /*fond dégradé*/
-    background: linear-gradient(135deg, #b22133, #720c18);
-
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+        border-radius: 14px;
+        cursor: pointer;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top:20px;
+        background: linear-gradient(135deg, #b22133, #720c18); /* défaut coeur */
 }
 
 
+
+
+/* Variantes de couleur selon l'attribut 'suit' */
+.image-text-container.suit-coeur { background:linear-gradient(135deg, #b22133, #720c18); }
+.image-text-container.suit-carreau { background:linear-gradient(135deg,#ff8a00,#b34700 60%); }
+.image-text-container.suit-pique { background:linear-gradient(135deg,#008f5a,#003f2a 65%); }
+.image-text-container.suit-trefle { background:linear-gradient(135deg,#2f4985,#0d1117 70%); }
+
+
+
 .expand-button{
-    background-color: #b22133;
+    background-color: transparent;
     border: 2px solid white;
     color: white;
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
+    font-weight: 600;
     transition: background 0.3s ease-in-out;
     font-family: "Poppins", sans-serif;
 }
@@ -34,6 +43,12 @@
     color: #b22133;
     border: 2px solid white;
 }
+
+/* Variation couleur texte au survol selon l'attribut (suit) */
+.image-text-container.suit-coeur .expand-button:hover { color:#b22133; }
+.image-text-container.suit-carreau .expand-button:hover { color:#ff8a00; }
+.image-text-container.suit-pique .expand-button:hover { color:#008f5a; }
+.image-text-container.suit-trefle .expand-button:hover { color:#3f4c6b; }
 
 /* Texte explicatif */
 .text-container {
@@ -63,7 +78,7 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 10px;
     float:right;
 }
 
@@ -88,7 +103,7 @@
     display: flex;
     background: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 14px;
     max-width: 800px;
     width: 90%;
     position: relative;
@@ -128,7 +143,6 @@ body.dark-mode .modal-content {
     margin-top: 6px;
     opacity: .75;
     padding:6px 10px 6px 8px;
-    border-radius:6px;
     display:flex;
     align-items:flex-start;
     gap:6px;
@@ -215,7 +229,7 @@ body.dark-mode .close-button:hover {
         display: block;
         background: white;
         padding: 10px;
-        border-radius: 8px;
+        border-radius: 14px;
         max-width: 800px;
         width: 90%;
         position: relative;
@@ -236,13 +250,13 @@ body.dark-mode .close-button:hover {
         width: 80%; 
         height: auto; 
         object-fit: contain; 
-        border-radius: 8px;
+        border-radius: 10px;
         margin: 0 auto;
         
     }
 
     .modal-image-container img { 
-        border-radius: 8px;
+        border-radius: 10px;
 
     }
 

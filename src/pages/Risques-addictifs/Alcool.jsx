@@ -131,6 +131,7 @@ const Alcool = () => {
         Au début, c’est juste pour se détendre, suivre le mouvement. Puis, sans s’en rendre compte, les verres s’enchaînent et les limites disparaissent. On rigole, on danse, on se sent invincible… jusqu’au moment où ça bascule : trou noir, accident, malaise, regrets.
         On a tellement l’habitude de voir l’alcool partout en soirée qu’on ne se pose même plus la question. Mais est-ce que s’amuser, c’est forcément finir à l’envers ? Pas besoin d’être bourré pour profiter d’une bonne soirée. Chacun gère comme il veut, sans pression. L’essentiel, c’est de s'amuser et de rentrer entier."
         textButton="⤢ Agrandir la carte"
+        suit="trefle"
       />
 <p className="texte">A l'école, l'alcool n'est pas un sujet anodin et sa consommation y est bien souvent <b>banalisée</b>, comme le montrent les chiffres suivants :</p>
       <ChiffresGroup chiffres={data} />
@@ -193,6 +194,7 @@ const Alcool = () => {
         shortText="Prévention sur la consommation excessive d'alcool"
         longText="Que dire ?"
         textButton="⤢ Agrandir la carte"
+        suit="trefle"
       />
 
       <p>Rappelle-toi que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>

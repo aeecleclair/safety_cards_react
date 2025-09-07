@@ -148,6 +148,7 @@ const Effet_groupe = () => {
         shortText="Effet de groupe : informations et conseils"
         longText="Effet de groupe: informations et conseils"
         textButton="⤢ Agrandir la carte"
+        suit="carreau"
       />
 
       <Separateur />

@@ -175,6 +175,7 @@ const Cyberharcelement = () => {
         shortText="Cyberharcèlement : Comprendre et agir"
         longText="Cyberharcèlement : Comprendre et agir"
         textButton="⤢ Agrandir la carte"
+        suit="carreau"
       />
 
       <Separateur />

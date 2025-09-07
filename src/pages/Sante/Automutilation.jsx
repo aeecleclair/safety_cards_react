@@ -126,6 +126,7 @@ const Automutilation = () => {
         shortText="Automutilation : agir en tant que victime et témoin"
         longText="Automutilation : agir en tant que victime et témoin"
         textButton="⤢ Agrandir la carte"
+        suit="pique"
       />
 
 

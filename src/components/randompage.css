@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     padding: 30px 0;
-    border-radius: 10px;
+    border-radius: 14px;
     overflow: hidden; /* Pour que le fond ne déborde pas */
 }
 
@@ -23,7 +23,7 @@
     background-repeat: repeat;
   opacity: 0.1; /* <-- Modifie cette valeur pour régler la transparence */
     z-index: 0;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 /* Pour que le contenu reste au-dessus du fond */
@@ -83,7 +83,7 @@
   .random-card {
     width: 90%;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 14px;
     background-color: rgba(255,255,255,0.8); /* fond blanc semi-transparent */
     backdrop-filter: blur(10px); /* effet flou */
     -webkit-backdrop-filter: blur(10px); /* pour Safari */

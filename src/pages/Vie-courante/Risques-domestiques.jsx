@@ -9,7 +9,7 @@ import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
-import { image } from "framer-motion/client";
+import { image, title } from "framer-motion/client";
 
 
 const navLinks = [
@@ -92,6 +92,14 @@ const ressourcesUtiles = [
   }
 ];
 
+const ressourcesFeu = [
+  {
+    link: "https://campus.ec-lyon.fr/securite-incendie-et-batiment-4613.kjsp?RH=1460472206937",
+    label: "Centrale Lyon - Sécurité Incendie",
+    description: "Consignes spécifiques aux élèves et personnels de l'école",
+    imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
+  },]
+
 const RisquesDomestiques = () => {
   return (
     <div className="page">
@@ -141,6 +149,7 @@ const RisquesDomestiques = () => {
         shortText="Confiance en soi : renforcer et accompagner"
         longText="Confiance en soi : renforcer et accompagner"
         textButton="⤢ Agrandir la carte"
+        suit="trefle"
       />
 
       <Separateur />
@@ -168,6 +177,13 @@ const RisquesDomestiques = () => {
 
       <div id="urgence">
         <h1 className="titre">Agir en cas d'urgence</h1>
+
+        <ExternalLinkBlock
+          title="Procédures en cas d'évacuation des bâtiments"
+          subtitle="Consignes propres aux élèves et personnels de Centrale Lyon"
+          resources={ressourcesFeu}
+        />
+
         <p className="texte">
           En cas d'accident domestique, il est crucial de réagir rapidement et efficacement. Voici les numéros d'urgence à connaître :
         </p>

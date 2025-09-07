@@ -1,13 +1,28 @@
 import React, { useState } from "react";
 import "./cartes.css";
 
-const ImageTextPopup = ({ image, title, shortText, longText, textButton }) => {
+const ImageTextPopup = ({ image, title, shortText, longText, textButton, suit }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Couleur en fonction de l'attribut (coeur / carreau / trefle / pique)
+  const rawSuit = (suit || '').toString().trim();
+  const normalized = rawSuit
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase();
+  const suitMap = {
+    coeur: 'coeur',
+    carreau: 'carreau',
+    trefle: 'trefle',
+    pique: 'pique'
+  };
+  const suitKey = suitMap[normalized] || (rawSuit ? 'coeur' : null);
+  const containerClass = `image-text-container${suitKey ? ' suit-' + suitKey : ''}`;
 
   return (
     <>
       {/* Conteneur principal */}
-      <div className="image-text-container">
+  <div className={containerClass}>
         <div className="text-container" onClick={() => setIsOpen(true)}>
           <h2 className = "titre-carte">{title}</h2>
           <p className="description">{shortText}</p>

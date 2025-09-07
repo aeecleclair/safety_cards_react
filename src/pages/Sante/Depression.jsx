@@ -119,6 +119,7 @@ const Depression = () => {
         shortText="Dépression : réagir en tant que victime"
         longText="Quand on souffre de dépression, on devient comme prisonnier de lunettes invisibles. Le monde peut continuer à être joyeux, lumineux et rempli de belles choses, mais tout semble fade, lointain, inaccessible. A travers cette image, on comprend la déconnexion douloureuse entre la réalité extérieure et l’expérience intérieure d'une personne dépressive. Même entourée d’amour, de nature ou de moments agréables, une victime peut ne ressentir qu’un vide profond, une absence d’émotion, une sensation d’isolement. La dépression n’efface pas la beauté du monde, mais elle l’empêche d’atteindre la personne. Elle modifie la perception de la personne qui en est atteinte, c’est un trouble réel. "
         textButton="⤢ Agrandir la carte"
+        suit="pique"
       />
 
 
@@ -254,6 +255,7 @@ const Depression = () => {
         shortText="Dépression : aider en tant que témoin"
         longText="Cette image nous confronte à une vérité essentielle : la dépression ne se voit pas toujours. On peut rire, parler, jouer… tout en étant profondément mal à l’intérieur. En tant qu’aidant ou simple témoin, il est important de changer son regard. Les apparences sont trompeuses et certains sourires peuvent être des masques. Si vous êtes un parent, un ami, un collègue, un professeur, il est vital de ne pas attendre des signaux évidents pour s’inquiéter et de toujours être présent pour son entourage."
         textButton="⤢ Agrandir la carte"
+        suit="carreau"
       />
 
       <h2 className="sous-titre-2">Pour aller + loin : la formation PSSM</h2>

@@ -1,9 +1,9 @@
 /* Conteneur principal */
 .quote-container {
   position: relative;
-  background: #f4f4f4; /* Fond clair */
+  background: #ebebeb;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 14px;
   margin: 20px auto;
   text-align: center;
 }

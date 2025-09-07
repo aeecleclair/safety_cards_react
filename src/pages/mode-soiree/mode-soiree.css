@@ -97,17 +97,16 @@ body.dark-mode .peer-care-logo { filter: drop-shadow(0 4px 10px rgba(255,255,255
   flex-wrap:wrap;
 }
 .plan-tab-btn {
-  padding:12px 22px;
-  font-weight:600;
-  border-radius:10px;
-  border:2px solid #222;
-  color : black;
-  background:#fff;
-  cursor:pointer;
-  font-family:'Poppins',sans-serif;
-  position:relative;
-  overflow:hidden;
-  transition:.25s ease;
+
+
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
 }
 .plan-tab-btn.active {
   background:linear-gradient(120deg,#ff4b4b,#b000b5 55%,#5e00ff);

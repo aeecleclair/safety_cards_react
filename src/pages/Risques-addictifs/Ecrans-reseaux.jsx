@@ -103,6 +103,7 @@ const Ecrans_reseaux = () => {
           shortText="Prévention sur l'utilisation excessive des écrans"
           longText=""
           textButton="⤢ Agrandir la carte"
+          suit="pique"
         />
 
       <p className="texte">A terme, <b>trop d'écran</b> peut provoquer :</p>

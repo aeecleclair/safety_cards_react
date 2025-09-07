@@ -1,7 +1,7 @@
 .contact-card {
     display: flex;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 14px;
     padding: 20px;
     border: 2px solid;
     margin-bottom : 20px;
@@ -16,7 +16,7 @@ body.dark-mode{
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-right: 20px;
   }
   

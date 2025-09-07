@@ -223,6 +223,7 @@ const Vss = () => {
         shortText="VSS : L'espace vital"
         longText="VSS : L'espace vital"
         textButton="⤢ Agrandir la carte"
+        suit="trefle"
       />
 
       
@@ -308,6 +309,7 @@ const Vss = () => {
         shortText="Réagir face à une VSS en soirée"
         longText="Réagir face à une VSS en soirée"
         textButton="⤢ Agrandir la carte"
+        suit="trefle"
       />
       
 
