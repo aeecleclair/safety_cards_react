@@ -82,7 +82,7 @@ const Endometriose = () => {
       </div>
 
       <ImageTextPopup
-        image="./assets/endometriose.jpg"
+        image="./assets/cartes/3_coeur.png"
         title="La carte 3♥"
         shortText="Une carte pour mieux comprendre cette maladie invisible"
         longText=""

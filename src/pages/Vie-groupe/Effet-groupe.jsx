@@ -143,7 +143,7 @@ const Effet_groupe = () => {
       </div>
 
       <ImageTextPopup
-        image="./assets/work_in_progress.jpg"
+        image="./assets/cartes/dame_carreau.png"
         title="La carte D&diams;"
         shortText="Effet de groupe : informations et conseils"
         longText="Effet de groupe: informations et conseils"

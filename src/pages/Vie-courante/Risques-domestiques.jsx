@@ -136,7 +136,7 @@ const RisquesDomestiques = () => {
       </div>
 
         <ImageTextPopup
-        image="./assets/work_in_progress.jpg"
+        image="./assets/cartes/4_trefle.png"
         title="La carte 4♣"
         shortText="Confiance en soi : renforcer et accompagner"
         longText="Confiance en soi : renforcer et accompagner"

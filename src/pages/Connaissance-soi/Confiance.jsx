@@ -89,7 +89,7 @@ const Confiance = () => {
       />
 
       <ImageTextPopup
-        image="./assets/work_in_progress.jpg"
+        image="./assets/cartes/as_carreau.png"
         title="La carte A♦"
         shortText="Confiance en soi : renforcer et accompagner"
         longText="Confiance en soi : renforcer et accompagner"

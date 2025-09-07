@@ -98,10 +98,10 @@ const Ecrans_reseaux = () => {
 
       
       <ImageTextPopup
-          image="./assets/accro-reseaux.jpg"
+          image="./assets/cartes/6_pique.png"
           title="La carte 6♠"
           shortText="Prévention sur l'utilisation excessive des écrans"
-          longText="Que dire ?"
+          longText=""
           textButton="⤢ Agrandir la carte"
         />
 

@@ -124,7 +124,7 @@ const Alcool = () => {
 <ExternalLinkBlock resources={resources4} />
 
       <ImageTextPopup
-        image="./assets/Alcool.webp"
+        image="./assets/cartes/6_trefle.jpg"
         title="La carte 6♣"
         shortText="Prévention sur la banalisation de l'alcool en soirée"
         longText="1 verre, 2 verres, 3 verres... En soirée, on perd vite le compte.
@@ -188,7 +188,7 @@ const Alcool = () => {
 
 
       <ImageTextPopup
-        image="./assets/bouteilles.jpg"
+        image="./assets/cartes/3_trefle.png"
         title="La carte 3♣"
         shortText="Prévention sur la consommation excessive d'alcool"
         longText="Que dire ?"

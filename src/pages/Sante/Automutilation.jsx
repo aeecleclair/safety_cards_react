@@ -121,7 +121,7 @@ const Automutilation = () => {
 
 
       <ImageTextPopup
-        image="./assets/work_in_progress.jpg"
+        image="./assets/cartes/3_pique.png"
         title="La carte 3♠"
         shortText="Automutilation : agir en tant que victime et témoin"
         longText="Automutilation : agir en tant que victime et témoin"

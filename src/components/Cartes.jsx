@@ -31,7 +31,9 @@ const ImageTextPopup = ({ image, title, shortText, longText, textButton }) => {
 
             <div className="modal-text-image">
               <div className="modal-image-container">
-                <img src={image} alt={title} />
+                <img src={image} alt={title} />                
+                <p className="image-caption notice-caption">ⓘ  Image générée par IA à partir de nos idées, puis retouchée par nos soins :)</p>
+
               </div>
               <div className="modal-text">
                 <h2>{title}</h2>

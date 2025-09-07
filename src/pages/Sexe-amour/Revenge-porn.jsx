@@ -185,7 +185,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
         />
 
 <ImageTextPopup
-        image="./assets/RP.jpeg"
+        image="./assets/cartes/roi_coeur.png"
         title="La carte R&hearts;"
         shortText="Revenge porn : informations et conseils"
         longText="Revenge porn : informations et conseils"

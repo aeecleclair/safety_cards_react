@@ -183,7 +183,7 @@ const SituationHandicap = () => (
     </div>
 
       <ImageTextPopup
-        image="./assets/work_in_progress.jpg"
+        image="./assets/cartes/valet_pique.png"
         title="La carte V♠"
         shortText="Situation de handicap : comprendre et aider"
         longText="Situation de handicap : comprendre et aider"

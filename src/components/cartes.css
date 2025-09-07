@@ -110,6 +110,7 @@ body.dark-mode .modal-content {
     width: 100%; 
     height: auto; 
     display: flex;
+    flex-direction: column;
     align-items: center;
     flex: 0 0 40%; 
 }
@@ -118,6 +119,23 @@ body.dark-mode .modal-content {
     width: 100%; 
     height: auto; 
     border-radius: 10px;
+}
+
+.image-caption.notice-caption {
+    font-size: .8rem;
+    font-style: italic;
+    line-height: 1.3;
+    margin-top: 6px;
+    opacity: .75;
+    padding:6px 10px 6px 8px;
+    border-radius:6px;
+    display:flex;
+    align-items:flex-start;
+    gap:6px;
+    font-weight:500;
+}
+body.dark-mode .image-caption.notice-caption {
+    color:#ddd;
 }
 
 

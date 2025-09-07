@@ -170,7 +170,7 @@ const Cyberharcelement = () => {
       </div>
 
       <ImageTextPopup
-        image="./assets/work_in_progress.jpg"
+        image="./assets/cartes/5_carreau.png"
         title="La carte 5&diams;"
         shortText="Cyberharcèlement : Comprendre et agir"
         longText="Cyberharcèlement : Comprendre et agir"
