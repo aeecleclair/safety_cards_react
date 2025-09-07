@@ -58,9 +58,20 @@ const Confiance = () => {
       <h1 className="titre-page">Confiance et Estime de soi</h1>
       <Navbar links={navLinks} />
 
-      <div id="definition">
+            <div id="definition">
         <h1 className="titre">Qu'est-ce que l'estime de soi ?</h1>
       </div>
+
+      <ImageTextPopup
+        image="./assets/cartes/as_carreau.png"
+        title="La carte A♦"
+        shortText="Confiance en soi : renforcer et accompagner"
+        longText="Confiance en soi : renforcer et accompagner"
+        textButton="⤢ Agrandir la carte"
+        suit = "carreau"
+      />
+
+
 
       <h2 className="sous-titre-2">Définir confiance en soi et estime de soi</h2>
       <p className="texte">On confond souvent confiance en soi et estime de soi, mais ces notions sont différentes :</p>
@@ -88,14 +99,6 @@ const Confiance = () => {
         resources={resources_infos}
       />
 
-      <ImageTextPopup
-        image="./assets/cartes/as_carreau.png"
-        title="La carte A♦"
-        shortText="Confiance en soi : renforcer et accompagner"
-        longText="Confiance en soi : renforcer et accompagner"
-        textButton="⤢ Agrandir la carte"
-        suit = "carreau"
-      />
 
       <Separateur />
       <div id="renforcer">

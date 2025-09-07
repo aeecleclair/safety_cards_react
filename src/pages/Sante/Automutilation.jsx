@@ -85,6 +85,15 @@ const Automutilation = () => {
           <h1 className="titre">Qu'est ce que l'automutilation ?</h1>
         </div>
 
+        <ImageTextPopup
+        image="./assets/cartes/3_pique.png"
+        title="La carte 3♠"
+        shortText="Automutilation : agir en tant que victime et témoin"
+        longText="Automutilation : agir en tant que victime et témoin"
+        textButton="⤢ Agrandir la carte"
+        suit="pique"
+      />
+
 
         <h2 className="sous-titre-2">L'automutilation non suicidaire</h2>
 
@@ -118,18 +127,6 @@ const Automutilation = () => {
         subtitle="Quelques sites à visiter pour continuer à se renseigner sur l'automutilation"
         resources={resources_infos}
       />
-
-
-      <ImageTextPopup
-        image="./assets/cartes/3_pique.png"
-        title="La carte 3♠"
-        shortText="Automutilation : agir en tant que victime et témoin"
-        longText="Automutilation : agir en tant que victime et témoin"
-        textButton="⤢ Agrandir la carte"
-        suit="pique"
-      />
-
-
 
 
        <Separateur/>

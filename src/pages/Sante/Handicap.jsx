@@ -59,13 +59,6 @@ const ressourcesUtiles = [
 ];
 
 
-const ressourceUtile_droitausavoir = [
-  {
-    link: "https://droitausavoir.asso.fr",
-    label: "Droit au savoir",
-    description: "Comprendre les différents types de handicap"
-  }
-];
 
 const dispositifsLiens = [
   {
@@ -168,6 +161,15 @@ const SituationHandicap = () => (
 
     <div id="constat">
       <h2 className="titre">Le constat</h2>
+
+      <ImageTextPopup
+        image="./assets/cartes/valet_pique.png"
+        title="La carte V♠"
+        shortText="Situation de handicap : comprendre et aider"
+        longText="Situation de handicap : comprendre et aider"
+        textButton="⤢ Agrandir la carte"
+        suit="pique"
+      />
       <p className="texte">
         Le handicap recouvre une grande diversité de réalités, qu’il soit visible ou invisible. 
         Il peut être temporaire ou permanent, et concerner des fonctions physiques, mentales, 
@@ -179,17 +181,9 @@ const SituationHandicap = () => (
         author="Rapport OVE 2020"
         text="Les étudiants en situation de handicap font face à des obstacles multiples, souvent invisibles, dans leur quotidien universitaire."
       />
-      <ExternalLinkBlock resources={ressourceUtile_droitausavoir} />
     </div>
 
-      <ImageTextPopup
-        image="./assets/cartes/valet_pique.png"
-        title="La carte V♠"
-        shortText="Situation de handicap : comprendre et aider"
-        longText="Situation de handicap : comprendre et aider"
-        textButton="⤢ Agrandir la carte"
-        suit="pique"
-      />
+
 
     <Separateur />
 

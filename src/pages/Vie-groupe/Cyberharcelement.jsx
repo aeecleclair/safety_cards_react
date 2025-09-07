@@ -151,6 +151,16 @@ const Cyberharcelement = () => {
 
       <div id="definition">
         <h2 className="titre">Définition</h2>
+
+      <ImageTextPopup
+        image="./assets/cartes/5_carreau.png"
+        title="La carte 5&diams;"
+        shortText="Cyberharcèlement : Comprendre et agir"
+        longText="Cyberharcèlement : Comprendre et agir"
+        textButton="⤢ Agrandir la carte"
+        suit="carreau"
+      />
+
         <p className="texte">
           Le cyberharcèlement consiste en des agissements malveillants répétés, dans un cadre public ou restreint, qui peuvent prendre différentes formes : intimidations, insultes, menaces, rumeurs, publication de photos ou vidéos compromettantes, etc. Ils peuvent être le fait d’une seule personne ou de plusieurs individus et se dérouler sur les réseaux sociaux, messageries, forums, blogs, etc. Les conséquences du cyberharcèlement peuvent être dramatiques pour les victimes : dépression, décrochage scolaire ou professionnel, troubles psychologiques ou émotionnels, violence, suicide, etc. Le cyberharcèlement est puni par la loi qui prévoit de lourdes sanctions contre ses auteurs.
         </p>
@@ -169,14 +179,7 @@ const Cyberharcelement = () => {
 
       </div>
 
-      <ImageTextPopup
-        image="./assets/cartes/5_carreau.png"
-        title="La carte 5&diams;"
-        shortText="Cyberharcèlement : Comprendre et agir"
-        longText="Cyberharcèlement : Comprendre et agir"
-        textButton="⤢ Agrandir la carte"
-        suit="carreau"
-      />
+
 
       <Separateur />
 
@@ -198,6 +201,8 @@ const Cyberharcelement = () => {
           <ListeNumerotee title="Ce n’est pas une excuse" subtitle="Déconstruire les croyances" items={mythesCyberharcelement} />
         </div>
       </div>
+
+      <Separateur />
 
       <div id="signes">
         <h2 className="titre">Signes d’alerte</h2>

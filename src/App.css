@@ -77,9 +77,9 @@ html, body, #root, .app {
 }
 
 .mise-avant{
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  padding : 10px;
+  background-color: #ebebeb;
+  border-radius: 10px;
+  padding : 10px 20px;
   border-left: 4px solid #b22133; /* trait rouge à gauche */
 
 }

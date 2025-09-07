@@ -136,6 +136,18 @@ const Soumission_chimique = () => {
       <div id = "soumission">
         <h1 className="titre">Qu'est-ce que la soumission chimique ?</h1>
       </div>
+
+      <ImageTextPopup
+        image="./assets/cartes/7_trefle.png"
+        title="La carte 7&clubs;"
+        shortText="Soumission chimique : informations et conseils"
+        longText="Soumission chimique : informations et conseils"
+        textButton="⤢ Agrandir la carte"
+        suit="trefle"
+      />
+
+
+
       <h2 className="sous-titre-2">De quoi parle-t-on ?</h2>
 
       <p className="texte">La soumission chimique consiste à <b>administrer une ou plusieurs substances psychoactives à des victimes à leur insu ou sous la menace, dans un but criminel ou délictueux.</b> Contrairement à une idée répandue, elle ne se limite pas à l'utilisation du GHB, souvent appelé « drogue du violeur ». Les substances employées sont principalement des médicaments tels que des <b>somnifères, des sédatifs, des anxiolytiques ou des antihistaminiques.</b><br/>
@@ -225,17 +237,6 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
         />
 
       <YouTubeVideo url="https://www.youtube.com/watch?v=hA7FrcTaTjo" />
-
-      <ImageTextPopup
-        image="./assets/cartes/7_trefle.png"
-        title="La carte 7&clubs;"
-        shortText="Soumission chimique : informations et conseils"
-        longText="Soumission chimique : informations et conseils"
-        textButton="⤢ Agrandir la carte"
-        suit="trefle"
-      />
-
-
 
       <Separateur />
       

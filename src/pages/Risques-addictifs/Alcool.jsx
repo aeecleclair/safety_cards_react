@@ -103,10 +103,23 @@ const Alcool = () => {
       <div className="page">
         <h1 className="titre-page">Consommation d'alcool</h1>
         <Navbar links={navLinks} />
-        
+
         <div id = "soirees">
           <h1 className="titre">L'alcool, moi et les autres</h1>
         </div>
+
+      <ImageTextPopup
+        image="./assets/cartes/6_trefle.jpg"
+        title="La carte 6♣"
+        shortText="Prévention sur la banalisation de l'alcool en soirée"
+        longText="1 verre, 2 verres, 3 verres... En soirée, on perd vite le compte.
+        Au début, c’est juste pour se détendre, suivre le mouvement. Puis, sans s’en rendre compte, les verres s’enchaînent et les limites disparaissent. On rigole, on danse, on se sent invincible… jusqu’au moment où ça bascule : trou noir, accident, malaise, regrets.
+        On a tellement l’habitude de voir l’alcool partout en soirée qu’on ne se pose même plus la question. Mais est-ce que s’amuser, c’est forcément finir à l’envers ? Pas besoin d’être bourré pour profiter d’une bonne soirée. Chacun gère comme il veut, sans pression. L’essentiel, c’est de s'amuser et de rentrer entier."
+        textButton="⤢ Agrandir la carte"
+        suit="trefle"
+      />
+        
+
 
         <h2 className="sous-titre-2">Quels sont les effets de l'alcool ?</h2>
 
@@ -123,16 +136,7 @@ const Alcool = () => {
 <p className="texte">Tu ressens ces symptômes, alors que tu n'as (presque) pas bu ? Tu as peut-être été <b>drogué·e à ton insu</b>.</p>
 <ExternalLinkBlock resources={resources4} />
 
-      <ImageTextPopup
-        image="./assets/cartes/6_trefle.jpg"
-        title="La carte 6♣"
-        shortText="Prévention sur la banalisation de l'alcool en soirée"
-        longText="1 verre, 2 verres, 3 verres... En soirée, on perd vite le compte.
-        Au début, c’est juste pour se détendre, suivre le mouvement. Puis, sans s’en rendre compte, les verres s’enchaînent et les limites disparaissent. On rigole, on danse, on se sent invincible… jusqu’au moment où ça bascule : trou noir, accident, malaise, regrets.
-        On a tellement l’habitude de voir l’alcool partout en soirée qu’on ne se pose même plus la question. Mais est-ce que s’amuser, c’est forcément finir à l’envers ? Pas besoin d’être bourré pour profiter d’une bonne soirée. Chacun gère comme il veut, sans pression. L’essentiel, c’est de s'amuser et de rentrer entier."
-        textButton="⤢ Agrandir la carte"
-        suit="trefle"
-      />
+
 <p className="texte">A l'école, l'alcool n'est pas un sujet anodin et sa consommation y est bien souvent <b>banalisée</b>, comme le montrent les chiffres suivants :</p>
       <ChiffresGroup chiffres={data} />
 

@@ -49,6 +49,14 @@ const Endometriose = () => {
         <h1 className="titre">Douleurs menstruelles</h1>
       </div>
 
+      <ImageTextPopup
+        image="./assets/cartes/3_coeur.png"
+        title="La carte 3♥"
+        shortText="Une carte pour mieux comprendre cette maladie invisible"
+        longText=""
+        textButton="⤢ Agrandir la carte"
+      />
+
       <p className="texte">
         Les douleurs menstruelles sont fréquentes et peuvent être très intenses. Elles sont souvent considérées comme normales, mais elles peuvent être le signe d’un problème de santé sous-jacent, comme l’endométriose. Il est important de ne pas minimiser ces douleurs et de consulter un·e professionnel·le de santé si elles deviennent invalidantes.
       </p>
@@ -81,13 +89,7 @@ const Endometriose = () => {
         <h1 className="titre">Comprendre l’endométriose</h1>
       </div>
 
-      <ImageTextPopup
-        image="./assets/cartes/3_coeur.png"
-        title="La carte 3♥"
-        shortText="Une carte pour mieux comprendre cette maladie invisible"
-        longText=""
-        textButton="⤢ Agrandir la carte"
-      />
+      
 
       <p className="texte">
       L’<b>endométriose</b> est une maladie gynécologique chronique qui reste encore mal connue. Elle se caractérise par la présence de tissu similaire à celui de l'endomètre (la muqueuse utérine) en dehors de l’utérus. Ce tissu réagit aux hormones de la même manière que l'endomètre, ce qui peut entraîner des <b>douleurs fortes</b>, particulièrement pendant les <b>règles</b>, mais aussi lors des <b>rapports sexuels</b>, en urinant, en allant à la selle, voire même en dehors des périodes de règles.

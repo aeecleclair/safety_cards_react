@@ -94,6 +94,18 @@ const Effet_groupe = () => {
 
       <div id="comprendre">
         <h1 className="titre">Comprendre l’effet de groupe</h1>
+
+
+      <ImageTextPopup
+        image="./assets/cartes/dame_carreau.png"
+        title="La carte D&diams;"
+        shortText="Effet de groupe : informations et conseils"
+        longText="Effet de groupe: informations et conseils"
+        textButton="⤢ Agrandir la carte"
+        suit="carreau"
+      />
+
+      
         <p className="texte">
           L’effet de groupe, c’est cette pression sociale qui nous pousse à « faire comme tout le monde » pour être accepté·e.
           En groupe, on a souvent tendance à imiter les autres ou à obéir aux règles implicites du groupe. Parfois c’est positif
@@ -142,14 +154,6 @@ const Effet_groupe = () => {
         </p>
       </div>
 
-      <ImageTextPopup
-        image="./assets/cartes/dame_carreau.png"
-        title="La carte D&diams;"
-        shortText="Effet de groupe : informations et conseils"
-        longText="Effet de groupe: informations et conseils"
-        textButton="⤢ Agrandir la carte"
-        suit="carreau"
-      />
 
       <Separateur />
 

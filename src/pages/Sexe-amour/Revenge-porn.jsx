@@ -115,6 +115,14 @@ const Revenge_porn = () => {
       <div id = "revenge">
         <h1 className="titre">Qu'est-ce que le revenge porn ?</h1>
       </div>
+
+      <ImageTextPopup
+        image="./assets/cartes/roi_coeur.png"
+        title="La carte R&hearts;"
+        shortText="Revenge porn : informations et conseils"
+        longText="Revenge porn : informations et conseils"
+        textButton="⤢ Agrandir la carte"
+      />
       <h2 className="sous-titre-2">De quoi parle-t-on ?</h2>
 
       <p className="texte">Le <i>revenge porn</i> (ou <i>pornodivulgation</i>) désigne le fait de <b>partager, montrer ou diffuser</b> des images ou vidéos intimes d’une personne sans son accord. Cette forme de violence numérique est malheureusement de plus en plus courante, notamment après une <b>rupture conflictuelle</b>, avec pour but de <b>salir la réputation</b>, blesser ou atteindre psychologiquement la personne visée.<br/>
@@ -184,13 +192,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
         ]}
         />
 
-<ImageTextPopup
-        image="./assets/cartes/roi_coeur.png"
-        title="La carte R&hearts;"
-        shortText="Revenge porn : informations et conseils"
-        longText="Revenge porn : informations et conseils"
-        textButton="⤢ Agrandir la carte"
-      />
+
 
         <p className="texte">N'oublions pas non plus que la <b>personne qui reçoit</b> un <i>nude</i> doit y <b>avoir consenti</b> au préalable. L'envoi d'un contenu à caractère sexuel non désiré peut s'apparenter à de l'<b>exhibition sexuelle</b>. Plus connu sous le nom de <i>dick pic</i> ou <i>cyberflashing</i>, cela consiste généralement à envoyer une photographie de son pénis en érection à quelqu'un sans son consentement.</p>
 

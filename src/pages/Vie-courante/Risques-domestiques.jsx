@@ -136,6 +136,16 @@ const RisquesDomestiques = () => {
 
       <div id="definition">
         <h1 className="titre">Comprendre les risques domestiques</h1>
+
+        <ImageTextPopup
+        image="./assets/cartes/4_trefle.png"
+        title="La carte 4♣"
+        shortText="Risques d'incendie et accidents domestiques"
+        longText="Risques d'incendie et accidents domestiques"
+        textButton="⤢ Agrandir la carte"
+        suit="trefle"
+      />
+
         <p className="texte">
           Les accidents domestiques représentent une cause majeure de blessures et de décès en France. Ils touchent particulièrement les enfants et les personnes âgées. Les principaux risques incluent les chutes, les brûlures, les intoxications, les étouffements, les noyades, les électrocutions et les incendies. Une vigilance constante et des mesures de prévention adaptées peuvent significativement réduire ces dangers.
         </p>
@@ -143,14 +153,7 @@ const RisquesDomestiques = () => {
         <ChiffresGroup chiffres={chiffresRisquesDomestiques} />
       </div>
 
-        <ImageTextPopup
-        image="./assets/cartes/4_trefle.png"
-        title="La carte 4♣"
-        shortText="Confiance en soi : renforcer et accompagner"
-        longText="Confiance en soi : renforcer et accompagner"
-        textButton="⤢ Agrandir la carte"
-        suit="trefle"
-      />
+
 
       <Separateur />
 

@@ -87,16 +87,11 @@ const Ecrans_reseaux = () => {
     <div className="page">
       <h1 className="titre-page">Addiction aux écrans & réseaux sociaux</h1>
       <Navbar links={navLinks} />
-        
 
     <div id = "écrans">
       <h1 className="titre">Addiction aux écrans</h1>
     </div>
-          
-      <p className="sous-titre-2"> Les effets des écrans</p>
-      <p className="texte"> Les écrans captent ton attention, souvent sans que tu t’en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
 
-      
       <ImageTextPopup
           image="./assets/cartes/6_pique.png"
           title="La carte 6♠"
@@ -105,6 +100,14 @@ const Ecrans_reseaux = () => {
           textButton="⤢ Agrandir la carte"
           suit="pique"
         />
+        
+
+ 
+          
+      <p className="sous-titre-2"> Les effets des écrans</p>
+      <p className="texte"> Les écrans captent ton attention, souvent sans que tu t’en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
+
+      
 
       <p className="texte">A terme, <b>trop d'écran</b> peut provoquer :</p>
       <BulletList
