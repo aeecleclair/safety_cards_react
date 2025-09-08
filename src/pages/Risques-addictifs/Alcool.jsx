@@ -30,6 +30,15 @@ const items2 = [
   { subtitle: "Ne pas consommer plus de 2 verres par jour"},
   { subtitle: "Prévoir au moins deux jours sans alcool par semaine"}];
 
+const items3 = [
+  { title: "Parler", subtitle: "Aborder le sujet avec bienveillance, sans jugement ni reproche" },
+  { title: "Ecouter", subtitle: "Laisser la personne s'exprimer sur les raisons qui la poussent à boire et ses difficultés" },
+  { title: "Informer", subtitle: "Partager des informations sur les risques liés à l'alcool et les ressources disponibles" },
+  { title: "Soutenir", subtitle: "Proposer son aide pour réduire ou arrêter la consommation, sans pression" },
+  { title: "Encourager", subtitle: "Valoriser les efforts et les progrès, même petits" },
+  { title: "Consulter", subtitle: "Suggérer de parler à un professionnel de santé ou à une association spécialisée si besoin" }
+];
+
 const data = [
   { number: "8/10", title: "étudiants de l'école", description: "consomment de l'alcool" },
   { number: "21.8%", title: "considèrent leur scolarité impactée", description: "par une consommation excessive" }
@@ -112,10 +121,8 @@ const Alcool = () => {
         image="./assets/cartes/6_trefle.jpg"
         title="La carte 6♣"
         shortText="Prévention sur la banalisation de l'alcool en soirée"
-        longText="1 verre, 2 verres, 3 verres... En soirée, on perd vite le compte.
-        Au début, c’est juste pour se détendre, suivre le mouvement. Puis, sans s’en rendre compte, les verres s’enchaînent et les limites disparaissent. On rigole, on danse, on se sent invincible… jusqu’au moment où ça bascule : trou noir, accident, malaise, regrets.
-        On a tellement l’habitude de voir l’alcool partout en soirée qu’on ne se pose même plus la question. Mais est-ce que s’amuser, c’est forcément finir à l’envers ? Pas besoin d’être bourré pour profiter d’une bonne soirée. Chacun gère comme il veut, sans pression. L’essentiel, c’est de s'amuser et de rentrer entier."
         textButton="⤢ Agrandir la carte"
+        longText="Difficile de dire non face à la pression du groupe, surtout dans des situations aussi banalisées qu'en soirée, où l'alcool est omniprésent. On peut souvent se sentir poussé à boire pour s'intégrer ou parce que les autres trouvent ça cool. Pourtant, beaucoup aimeraient ne pas boire, ou ne pas finir ivres mais n'osent pas le dire. Alors si tu aimes boire en soirée, ne force pas les autres à en faire autant et respecte leurs choix. Et si tu ne bois pas, n'hésite pas à le dire clairement et à proposer d'autres activités. Une vraie soirée entre amis ne se résume pas à votre consommation d'alcool."
         suit="trefle"
       />
         
@@ -179,10 +186,23 @@ const Alcool = () => {
         <div id = "conso">
       <h1 className="titre">Je consomme</h1>
     </div>
+
+
+      <h1 className="sous-titre-2">Comment consommer de façon responsable ?</h1>
+
+      <p className="texte">Pour limiter les risques liés à la consommation d'alcool, voici <b>quelques conseils</b> à suivre :</p>
+      <BulletList items={[
+    "Ne pas boire à jeun : manger avant et pendant la consommation",
+    "Boire lentement et à son rythme : alterner avec des boissons non alcoolisées",
+    "Connaître ses limites et s'y tenir : ne pas se laisser influencer par les autres", 
+    "Eviter les mélanges avec d'autres substances (médicaments, drogues, etc.)",
+    "Ne jamais boire en conduisant ou en pratiquant une activité nécessitant de la concentration",
+    "Prévoir un moyen de rentrer en toute sécurité (taxi, VTC, transport en commun, conducteur désigné, etc.)"
+]} /> 
+
       <Quote 
         text="Les meilleures soirées sont celles dont tu te souviens." 
       />
-
 
       <h1 className="sous-titre-2">Le binge drinking</h1>
       
@@ -191,15 +211,6 @@ const Alcool = () => {
       
       <p className="texte">La vraie bonne soirée, c’est celle dont tu te souviens et où tu restes maître de tes choix. Bois à ton rythme, écoute-toi, et pense à demain !</p>
 
-
-      <ImageTextPopup
-        image="./assets/cartes/3_trefle.png"
-        title="La carte 3♣"
-        shortText="Prévention sur la consommation excessive d'alcool"
-        longText="Que dire ?"
-        textButton="⤢ Agrandir la carte"
-        suit="trefle"
-      />
 
       <p>Rappelle-toi que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>
 
@@ -218,8 +229,19 @@ const Alcool = () => {
       />
 
 
-      <h1 className="sous-titre-2">Comment savoir si je bois trop (souvent) ?</h1>
+      <h1 className="sous-titre-2">Comment savoir si je bois trop souvent ?</h1>
+
+      <p className="texte">En arrivant à l'école, on se retrouve souvent dans un nouvel environnement social où l'alcool et les fêtes sont omniprésents. Il est facile de se laisser entraîner dans des habitudes de consommation qui peuvent devenir problématiques.</p>
       
+      <ImageTextPopup
+        image="./assets/cartes/3_trefle.png"
+        title="La carte 3♣"
+        shortText="Prévention sur la consommation régulière d'alcool"
+        longText="Tu ne te vois plus passer une soirée sans alcool ? Tu bois régulièrement, même seul·e ? A force d'habitude, même en petite quantité, tu peux développer une tolérance à l'alcool. Cela signifie que ton corps s'habitue à la présence d'alcool et que tu as besoin d'en consommer davantage pour ressentir les mêmes effets. Cette tolérance peut te pousser à boire plus souvent, même en dehors d'un cadre festif, et en plus grande quantité, augmentant ainsi les risques pour ta santé. De plus, une consommation régulière peut entraîner une dépendance physique et psychologique, rendant difficile l'arrêt ou la réduction de la consommation. Il est important de rester vigilant·e quant à tes habitudes de consommation et de ne pas hésiter à demander de l'aide si tu sens que tu perds le contrôle."
+        textButton="⤢ Agrandir la carte"
+        suit="trefle"
+      />
+
       <p className="texte">Pour savoir si ta consommation d'alcool est raisonnable, tu peux te référer à ces indicateurs :</p>
       <ListeNumerotee 
           title="Repères de consommation"
@@ -261,12 +283,22 @@ const Alcool = () => {
         <h1 className="titre">Je suis témoin</h1>
       </div>
 
-      <p>Si tu es témoin d'un comportement dangereux ou irresponsable d'une personne en état d'ivresse, garde <b>un oeil sur elle</b> en veillant à <b>ne pas te mettre en danger</b>.</p>
       <h1 className="sous-titre-2">Comment agir face à une personne très alcoolisée ?</h1>
+      <p>Si tu es témoin d'un comportement dangereux ou irresponsable d'une personne en état d'ivresse, garde <b>un oeil sur elle</b> en veillant à <b>ne pas te mettre en danger</b>.</p>
+      
       <ListeNumerotee 
           
           title="Plan d'action pour aider une personne ivre et en danger"
           items={items}
+      />
+
+
+      <h1 className="sous-titre-2">Comment aider quelqu'un qui boit trop (souvent) ?</h1>
+      <p>Si tu remarques que quelqu'un s'est mis à boire de manière régulière et/ou excessive, il est important d'agir rapidement. Voici quelques étapes à suivre :</p>
+      
+      <ListeNumerotee 
+          title="Plan d'action pour aider quelqu'un sur sa consommation d'alcool"
+          items={items3}
           
       />
 
