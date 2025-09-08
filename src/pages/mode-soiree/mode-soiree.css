@@ -18,10 +18,11 @@
   border: none;
   cursor: pointer;
   background: linear-gradient(135deg,#1f1f1f,#3a3a3a);
+  background-size:200% 200%;
   color: #fff;
   position: relative;
   overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, background-position .6s ease, background .6s ease;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -35,18 +36,39 @@
 }
 
 .ms-btn:hover {
-  transform: translateY(-4px);
   box-shadow: 0 10px 25px -8px rgba(0,0,0,0.4);
+  background-position:100% 0;
 }
 
 .ms-btn:hover:before { opacity: 1; }
 
 .ms-btn.urgent {
-  background: linear-gradient(135deg,#ff4b4b,#b000b5 55%,#5e00ff);
+  background: linear-gradient(135deg,#ff4b4b 0%,#b000b5 55%,#5e00ff 100%);
+  background-size:220% 220%;
+}
+.ms-btn.urgent:hover {
+  background: linear-gradient(135deg,#5e00ff 0%,#b000b5 45%,#ff4b4b 100%);
+  background-size:220% 220%;
+  background-position:100% 0;
 }
 
+/* Plan: gradient shift plus chaud au hover */
 .ms-btn.plan {
-  background: linear-gradient(135deg,#ff8a00,#ff4bd8 55%,#7a3dff);
+  background: linear-gradient(135deg,#ff8a00 0%,#ff4bd8 55%,#7a3dff 100%);
+  background-size:220% 220%;
+}
+.ms-btn.plan:hover {
+  background: linear-gradient(135deg,#7a3dff 0%,#ff4bd8 45%,#ff8a00 100%);
+  background-size:220% 220%;
+  background-position:100% 0;
+}
+
+/* Fallback animation for reduced motion: just color swap */
+@media (prefers-reduced-motion: reduce) {
+  .ms-btn,
+  .ms-btn.urgent,
+  .ms-btn.plan { background-size:100% 100%; }
+  .ms-btn:hover { background-position:0 0; }
 }
 
 body.dark-mode .ms-btn { color:#fff; }
@@ -107,12 +129,14 @@ body.dark-mode .peer-care-logo { filter: drop-shadow(0 4px 10px rgba(255,255,255
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-family: Poppins, sans-serif;
     font-weight: 600;
+    transition: all .3s ease;
 }
 .plan-tab-btn.active {
   background:linear-gradient(120deg,#ff4b4b,#b000b5 55%,#5e00ff);
   color:#fff;
   border-color:#b000b5;
   box-shadow:0 8px 22px -8px rgba(0,0,0,.45);
+  transition: all .3s ease;
 }
 
 .plan-image-wrapper {

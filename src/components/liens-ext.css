@@ -16,7 +16,7 @@
     border-radius: 14px;
     text-decoration: none;
     color: #333;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.08);
     flex: 1 1 calc(50% - 10px); 
 }
@@ -49,7 +49,6 @@ body.dark-mode .block-title {
 
 .block-subtitle{
     font-size: 1rem;
-    color: #666;
     margin-top: 0;
 }
 body.dark-mode .block-subtitle{
@@ -58,7 +57,9 @@ body.dark-mode .block-subtitle{
   
   
 .link-block:hover {
-    background: #ddd;
+    background: #100C08;
+    color : white;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 body.dark-mode .link-block:hover{
   background: #424242;
@@ -90,7 +91,6 @@ body.dark-mode .link-block:hover{
 .link-label {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
     margin-right: 5px;
 }
 body.dark-mode .link-label{
