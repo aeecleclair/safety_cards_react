@@ -12,7 +12,7 @@ import "../../App.css";
 
 const navLinks = [
   { label: "L'alcool, moi et les autres", target: "soirees" },
-  { label: "Je suis consommateur", target: "conso" },
+  { label: "Je consomme", target: "conso" },
   { label: "Je suis témoin", target: "temoin" },
   { label: "J'organise une soirée", target: "organiser" }];
 
@@ -117,6 +117,11 @@ const Alcool = () => {
           <h1 className="titre">L'alcool, moi et les autres</h1>
         </div>
 
+      <div id="resume-conseils">
+      <p className="mise-avant"><b>Boire comporte des risques</b>, pour ta santé et celle des autres. </p>
+      <p className="mise-avant">Légalement, tu restes <b>responsable</b> de tes actes, même sous l'influence de l'alcool.</p>
+      </div>
+        
       <ImageTextPopup
         image="./assets/cartes/6_trefle.jpg"
         title="La carte 6♣"
@@ -186,6 +191,14 @@ const Alcool = () => {
         <div id = "conso">
       <h1 className="titre">Je consomme</h1>
     </div>
+
+    
+      <div id="resume-conseils2">
+      <p className="mise-avant"><b>Ne pas oublier de boire de l'eau et s'alimenter</b> pour atténuer les effets de l'alcool. </p>
+      <p className="mise-avant">Boire beaucoup te met en danger et favorise les comportements à risque. </p>
+      <p className="mise-avant">Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un professionnel de santé.</p>
+      </div>
+
 
 
       <h1 className="sous-titre-2">Comment consommer de façon responsable ?</h1>
