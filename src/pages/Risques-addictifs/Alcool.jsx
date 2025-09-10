@@ -127,7 +127,7 @@ const Alcool = () => {
         title="La carte 6♣"
         shortText="Prévention sur la banalisation de l'alcool en soirée"
         textButton="⤢ Agrandir la carte"
-        longText="Difficile de dire non face à la pression du groupe, surtout dans des situations aussi banalisées qu'en soirée, où l'alcool est omniprésent. On peut souvent se sentir poussé à boire pour s'intégrer ou parce que les autres trouvent ça cool. Pourtant, beaucoup aimeraient ne pas boire, ou ne pas finir ivres mais n'osent pas le dire. Alors si tu aimes boire en soirée, ne force pas les autres à en faire autant et respecte leurs choix. Et si tu ne bois pas, n'hésite pas à le dire clairement et à proposer d'autres activités. Une vraie soirée entre amis ne se résume pas à votre consommation d'alcool."
+        longText="Difficile de dire non face à la pression du groupe, surtout dans des situations aussi banalisées qu'en soirée, où l'alcool est omniprésent. On peut souvent se sentir poussé à boire pour s'intégrer ou parce que les autres trouvent ça cool, comme on peut le voir sur cette carte. Pourtant, beaucoup aimeraient ne pas boire, ou ne pas finir ivres mais n'osent pas le dire. Alors si tu aimes boire en soirée, ne force pas les autres à en faire autant et respecte leurs choix. Et si tu ne bois pas, n'hésite pas à le dire clairement et à proposer d'autres activités. Une vraie soirée entre amis ne se résume pas à votre consommation d'alcool."
         suit="trefle"
       />
         
@@ -195,8 +195,8 @@ const Alcool = () => {
     
       <div id="resume-conseils2">
       <p className="mise-avant"><b>Ne pas oublier de boire de l'eau et s'alimenter</b> pour atténuer les effets de l'alcool. </p>
-      <p className="mise-avant">Boire beaucoup te met en danger et favorise les comportements à risque. </p>
-      <p className="mise-avant">Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un professionnel de santé.</p>
+      <p className="mise-avant">Boire beaucoup d'alcool te met en danger et favorise les <b>comportements à risque</b>. </p>
+      <p className="mise-avant">Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un <b>professionnel de santé</b>.</p>
       </div>
 
 
@@ -212,15 +212,27 @@ const Alcool = () => {
     "Ne jamais boire en conduisant ou en pratiquant une activité nécessitant de la concentration",
     "Prévoir un moyen de rentrer en toute sécurité (taxi, VTC, transport en commun, conducteur désigné, etc.)"
 ]} /> 
-
-      <Quote 
-        text="Les meilleures soirées sont celles dont tu te souviens." 
+      <ImageTextPopup
+        image="./assets/cartes/roi_trefle.png"
+        title="La carte R♣"
+        shortText="Prévention sur la conduite en état d'ivresse"
+        textButton="⤢ Agrandir la carte"
+        longText="En tant que jeune conducteur, le moindre verre d'alcool te fait dépasser la limite légale et peut avoir des conséquences graves si tu prends le volant. L'alcool diminue tes capacités de concentration, ralentit tes réflexes et altère ton jugement, ce qui augmente considérablement le risque d'accident. Et comme la tolérance à l'alcool varie d'une personne à l'autre en fonction de plusieurs facteurs (poids, sexe, âge et consommation alimentaire), difficile de déterminer une quantité sûre d'alcool avant de prendre le volant."
+        suit="trefle"
       />
+
+      <p className="texte">Pour ta sécurité et celle des autres, il est fortement recommandé de <b>ne pas consommer d'alcool du tout avant de conduire</b>. Si tu as bu, mange, bois de l'eau et repose-toi plusieurs heures avant de prendre la route ou utilise des alternatives comme les transports en commun, un taxi ou un conducteur désigné pour rentrer chez toi en toute sécurité."
+        </p>
+      <p className="texte">Enfin, si tu te rends compte que tu as trop bu, n'hésite pas à <b>demander de l'aide</b> ou à en parler <b>à quelqu'un en qui tu as confiance</b> afin qu'il/elle veille sur toi.</p>
+
 
       <h1 className="sous-titre-2">Le binge drinking</h1>
       
+      <Quote 
+        text="Les meilleures soirées sont celles dont tu te souviens." 
+      />
       <p className="texte"> 
-      Boire, c'est bien... Savoir s'arrêter, c'est mieux ! Le binge drinking désigne une <b>consommation excessive et rapide</b> d'alcool dans le but d’<b>atteindre l'ivresse</b> en un minimum de temps. Ce phénomène, particulièrement répandu en soirée et présent sous forme de <b>jeux et défis</b>, expose à de nombreux risques : perte de contrôle, comportements dangereux, coma éthylique, voire des conséquences graves sur la santé à long terme. En plus des dangers physiques, il peut aussi entraîner des troubles du comportement et des accidents. Même une <b>grosse cuite occasionnelle</b> peut abîmer ton coeur et provoquer un AVC.</p>
+      Boire un verre entre amis, c'est bien... Savoir s'arrêter, c'est mieux ! Le binge drinking désigne une <b>consommation excessive et rapide</b> d'alcool dans le but d’<b>atteindre l'ivresse</b> en un minimum de temps. Ce phénomène, particulièrement répandu en soirée et présent sous forme de <b>jeux et défis</b>, expose à de nombreux risques : perte de contrôle, comportements dangereux, coma éthylique, voire des conséquences graves sur la santé à long terme. En plus des dangers physiques, il peut aussi entraîner des troubles du comportement et des accidents. Même une <b>grosse cuite occasionnelle</b> peut abîmer ton coeur et provoquer un AVC.</p>
       
       <p className="texte">La vraie bonne soirée, c’est celle dont tu te souviens et où tu restes maître de tes choix. Bois à ton rythme, écoute-toi, et pense à demain !</p>
 
@@ -244,13 +256,13 @@ const Alcool = () => {
 
       <h1 className="sous-titre-2">Comment savoir si je bois trop souvent ?</h1>
 
-      <p className="texte">En arrivant à l'école, on se retrouve souvent dans un nouvel environnement social où l'alcool et les fêtes sont omniprésents. Il est facile de se laisser entraîner dans des habitudes de consommation qui peuvent devenir problématiques.</p>
+      <p className="texte">En arrivant à l'école, on se retrouve souvent dans un nouvel environnement social où l'alcool et les fêtes sont omniprésents. Il est facile de se laisser entraîner dans des habitudes de consommation qui peuvent devenir problématiques. Or, une consommation régulière peut entraîner une dépendance physique et psychologique, rendant difficile l'arrêt ou la réduction de la consommation. Il est important de rester vigilant·e quant à tes habitudes de consommation et de ne pas hésiter à demander de l'aide si tu sens que tu perds le contrôle.</p>
       
       <ImageTextPopup
         image="./assets/cartes/3_trefle.png"
         title="La carte 3♣"
         shortText="Prévention sur la consommation régulière d'alcool"
-        longText="Tu ne te vois plus passer une soirée sans alcool ? Tu bois régulièrement, même seul·e ? A force d'habitude, même en petite quantité, tu peux développer une tolérance à l'alcool. Cela signifie que ton corps s'habitue à la présence d'alcool et que tu as besoin d'en consommer davantage pour ressentir les mêmes effets. Cette tolérance peut te pousser à boire plus souvent, même en dehors d'un cadre festif, et en plus grande quantité, augmentant ainsi les risques pour ta santé. De plus, une consommation régulière peut entraîner une dépendance physique et psychologique, rendant difficile l'arrêt ou la réduction de la consommation. Il est important de rester vigilant·e quant à tes habitudes de consommation et de ne pas hésiter à demander de l'aide si tu sens que tu perds le contrôle."
+        longText="Tu ne te vois plus passer une soirée sans alcool ? Tu bois régulièrement, même seul·e ? A force d'habitude, même en petite quantité, tu peux développer une tolérance à l'alcool. Cela signifie que ton corps s'habitue à la présence d'alcool et que tu as besoin d'en consommer davantage pour ressentir les mêmes effets. Cette tolérance peut te pousser à boire plus souvent, même en dehors d'un cadre festif, et en plus grande quantité, augmentant ainsi les risques pour ta santé."
         textButton="⤢ Agrandir la carte"
         suit="trefle"
       />
@@ -296,6 +308,11 @@ const Alcool = () => {
         <h1 className="titre">Je suis témoin</h1>
       </div>
 
+      <div id="resume-conseils3">
+      <p className="mise-avant">Tu remarques que quelqu'un a du mal à se tenir debout, à parler clairement ou se met en danger ? <b>Reste avec lui/elle et appelle à l'aide si nécessaire.</b></p>
+      <p className="mise-avant">Si tu as le moindre soupçon sur la consommation d'alcool d'un proche, ne lui tourne pas le dos et <b>propose-lui ton aide de manière bienveillante.</b></p>
+      </div>
+
       <h1 className="sous-titre-2">Comment agir face à une personne très alcoolisée ?</h1>
       <p>Si tu es témoin d'un comportement dangereux ou irresponsable d'une personne en état d'ivresse, garde <b>un oeil sur elle</b> en veillant à <b>ne pas te mettre en danger</b>.</p>
       
@@ -325,7 +342,7 @@ const Alcool = () => {
       <TextImageRight  
         text={
           <>
-            Boire un coup entre amis doit rester un <b>moment de convivialité</b> où chacun doit se sentir à l'aise avec sa consommation. 
+            Boire un coup entre amis doit rester un <b>moment de convivialité</b> où chacun doit se sentir à l'aise avec sa consommation. Si tu héberges ou planifies une soirée, pense à <b>prévoir des alternatives à l'alcool</b> et à <b>limiter les risques</b> pour tes invité·e·s, notamment en leur rappelant de ne pas boire s'ils doivent conduire ensuite. 
             Pour faire attention à chacun, tu peux trouver des outils pour organiser des <b>soirées plus responsables et sécurisées</b> sur les sites suivants :
           </>
         }
