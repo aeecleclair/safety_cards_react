@@ -10,15 +10,15 @@ import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 
 const navLinks = [
-  { label: "Douleurs menstruelles", target: "douleurs" },
+  { label: "Les douleurs menstruelles", target: "douleurs" },
   { label: "Comprendre l'endométriose", target: "definition" },
-  { label: "Je suis concernée", target: "temoignages" },
+  { label: "Je suis concerné·e", target: "temoignages" },
   { label: "Je veux aider", target: "aidant" },
 ];
 
 const chiffres = [
-  { number: "10%", title: "des femmes", description: "sont atteintes d'endométriose" },
-  { number: "7 ans", title: "c'est le délai moyen", description: "pour obtenir un diagnostic en France" },
+  { number: "10%", title: "des femmes", description: "sont atteintes d'endométriose. Ce chiffre ne concerne que les cas recensés." },
+  { number: "7 ans", title: "c'est le délai moyen", description: "pour obtenir un diagnostic en France actuellement" },
   { number: "2 à 3 jours", title: "de la vie active", description: "perdus par mois à cause des douleurs menstruelles sévères" },
 ];
 
@@ -49,11 +49,15 @@ const Endometriose = () => {
         <h1 className="titre">Douleurs menstruelles</h1>
       </div>
 
+
+      <div id="resume-details">
+          <p className="mise-avant">Les douleurs menstruelles sont fréquentes et peuvent parfois être très intenses. <b>Si elles deviennent invalidantes, elles peuvent révéler un problème comme l’endométriose.</b> Il ne faut pas les minimiser et consulter un·e professionnel·le de santé.</p>
+      </div>
       <ImageTextPopup
         image="./assets/cartes/3_coeur.png"
         title="La carte 3♥"
         shortText="Une carte pour mieux comprendre cette maladie invisible"
-        longText=""
+        longText="Une fois par mois, on esquisse un sourire pour garder la face devant les autres, alors qu’à l’intérieur, c’est la tempête. Tout peut sembler aller bien en apparence mais les douleurs menstruelles, souvent épuisantes voire invalidantes, ne sont jamais anodines. Ne les minimise pas : écoute ton corps, fais attention et n’hésite pas à consulter un·e professionnel·le de santé si la douleur te paraît inhabituelle."
         textButton="⤢ Agrandir la carte"
       />
 
@@ -61,11 +65,6 @@ const Endometriose = () => {
         Les douleurs menstruelles sont fréquentes et peuvent être très intenses. Elles sont souvent considérées comme normales, mais elles peuvent être le signe d’un problème de santé sous-jacent, comme l’endométriose. Il est important de ne pas minimiser ces douleurs et de consulter un·e professionnel·le de santé si elles deviennent invalidantes.
       </p>
 
-      <Quote 
-        text="Les règles douloureuses ne sont pas normales. Elles doivent être prises au sérieux, écoutées et investiguées."
-        author="Haute Autorité de Santé"
-      />
-    
     <p className="texte">
       Des douleurs menstruelles anormalement fortes voire paralysantes ne sont <b>pas anodines</b>. Elles peuvent par exemple être le signe d'une de ces pathologies :
     </p>
@@ -139,6 +138,18 @@ const Endometriose = () => {
           />
         </div>
 
+        <p className="texte">Si tu manques de moyens pour te fournir des protections menstruelles, n’hésite pas à te rendre sur la page dédiée de ce site web, qui <b>répertorie</b> des associations ou des structures qui peuvent t’aider.</p>
+
+      <ExternalLinkBlock
+        resources={[
+          {
+            link: "/prec_mens",
+            emoji: "🩸",
+            label: "Précarité menstruelle",
+            description: "Quelles solutions pour les personnes en situation de précarité ?",
+          },
+        ]}
+      />
 
 
       <ExternalLinkBlock
@@ -169,18 +180,6 @@ const Endometriose = () => {
       <p className="texte">
         L’endométriose, c’est aussi une maladie qui peut avoir un <b>impact fort sur la santé mentale</b>. Accompagner, c’est aussi parfois aider à trouver un·e thérapeute, ou simplement être présent·e.
       </p>
-
-      <ExternalLinkBlock
-        title="Autres sujets à explorer"
-        resources={[
-          {
-            link: "/prec_mens",
-            emoji: "🩸",
-            label: "Précarité menstruelle",
-            description: "Quelles solutions pour les personnes en situation de précarité ?",
-          },
-        ]}
-      />
 
       <Separateur />
 
