@@ -41,9 +41,9 @@ const menuItems = [
     title: "💖 Sexualité et amour",
     submenu: [
       { title: "✅ Consentement", link: "/consent", inactive:true },
+      { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
       { title: "♀️ IVG", link: "/ivg", inactive:true },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient", inactive:true },
-      { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
       { title: "💑 Relations de couple", link: "/couple", inactive:true },
       { title: "⛔ Revenge porn", link: "/revenge" },
       { title: "😘 Sexualité", link: "/sex", inactive:true },

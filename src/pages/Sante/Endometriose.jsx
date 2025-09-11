@@ -8,6 +8,7 @@ import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import ListeNumerotee from "../../components/Listes";
 
 const navLinks = [
   { label: "Les douleurs menstruelles", target: "douleurs" },
@@ -37,6 +38,14 @@ const ressources = [
   },
 ];
 
+
+const items3 = [
+  { title: "Crois-la", subtitle: "La douleur est réelle même si elle ne se voit pas" },
+  { title: "Sois patient·e", subtitle: "Écoute sans minimiser ce que la personne ressent et propose ton aide concrète" },
+  { title: "Informe-toi", subtitle: "Fais tes recherches sur la maladie pour mieux comprendre ce qu'elle traverse et l'accompagner" },
+  { title: "Ne minimise jamais sa douleur ou sa fatigue", subtitle: "Propose ton aide pour les tâches quotidiennes, les rendez-vous médicaux si elle le souhaite" },
+];
+
 const Endometriose = () => {
   return (
     <div className="page">
@@ -46,7 +55,7 @@ const Endometriose = () => {
 
 
       < div id="douleurs">
-        <h1 className="titre">Douleurs menstruelles</h1>
+        <h1 className="titre">Les douleurs menstruelles</h1>
       </div>
 
 
@@ -88,6 +97,9 @@ const Endometriose = () => {
         <h1 className="titre">Comprendre l’endométriose</h1>
       </div>
 
+        <div id="resume-conseils">
+          <p className="mise-avant">L’endométriose est une <b>maladie chronique</b> qui touche environ 1 femme sur 10 et provoque des douleurs souvent intenses et invalidantes. Les signes à surveiller : <b>règles très douloureuses</b>, <b>douleurs pendant les rapports</b>, <b>fatigue chronique</b>, <b>troubles digestifs ou urinaires</b>, etc.</p>
+        </div>
       
 
       <p className="texte">
@@ -165,17 +177,16 @@ const Endometriose = () => {
       </div>
 
       <p className="texte">
-        Tu connais une personne qui souffre de douleurs menstruelles intenses ou d’endométriose ? Ton soutien peut faire une vraie différence. Écoute-la, valide sa douleur, propose ton aide pour ses rendez-vous médicaux ou ses tâches quotidiennes quand elle est en crise.
-      </p>
-
-      <BulletList
-        items={[
-          "Crois-la : la douleur est réelle même si elle ne se voit pas",
-          "Sois patient·e et propose ton aide concrète",
-          "Informe-toi sur la maladie pour mieux comprendre ce qu’elle traverse",
-          "Ne minimise jamais sa douleur ou sa fatigue",
-        ]}
+        Tu connais une personne qui souffre de douleurs menstruelles intenses ou d’endométriose ? Ton soutien peut faire une vraie différence.</p>
+        
+        <ListeNumerotee 
+          title="Plan d'action pour aider une personne qui souffre de douleurs menstruelles"
+          items={items3}
+          
       />
+      
+
+
 
       <p className="texte">
         L’endométriose, c’est aussi une maladie qui peut avoir un <b>impact fort sur la santé mentale</b>. Accompagner, c’est aussi parfois aider à trouver un·e thérapeute, ou simplement être présent·e.
