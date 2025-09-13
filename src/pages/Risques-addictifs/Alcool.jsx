@@ -206,8 +206,9 @@ const Alcool = () => {
       <p className="texte">Pour limiter les risques liés à la consommation d'alcool, voici <b>quelques conseils</b> à suivre :</p>
       <BulletList items={[
     "Ne pas boire à jeun : manger avant et pendant la consommation",
-    "Boire lentement et à son rythme : alterner avec des boissons non alcoolisées",
-    "Connaître ses limites et s'y tenir : ne pas se laisser influencer par les autres", 
+    "Boire lentement et à son rythme : alterner avec de l'eau et des boissons non alcoolisées. ",
+    "Prendre en compte le délai avant le pic d'alcoolémie (30/45 minutes après le dernier verre si à jeun, 1h/1h30 si repas)",
+    "Connaître ses limites et s'y tenir : ne pas se laisser influencer par les autres.", 
     "Eviter les mélanges avec d'autres substances (médicaments, drogues, etc.)",
     "Ne jamais boire en conduisant ou en pratiquant une activité nécessitant de la concentration",
     "Prévoir un moyen de rentrer en toute sécurité (taxi, VTC, transport en commun, conducteur désigné, etc.)"
