@@ -162,7 +162,7 @@ body.dark-mode .lien-navbar:hover {
 
 
 /* Version mobile : navbar comme le menu burger */
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
     .navbar {
         display: flex;
         flex-direction: column;

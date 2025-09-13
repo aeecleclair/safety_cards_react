@@ -5,14 +5,15 @@ import "./mode-soiree.css";
 
 const AccueilModeSoiree = () => {
   const navigate = useNavigate();
-  const { darkMode, setDarkMode } = useTheme(); //le thème est toujours sombre
+  const { darkMode, enterModeSoiree, modeSoireeActive } = useTheme();
 
   useEffect(() => {
-    if (!darkMode) {
-      setDarkMode(true);
+    // Active mode soirée via l'API centralisée
+    if (!modeSoireeActive) {
+      enterModeSoiree();
       window.dispatchEvent(new Event('dark-mode-change'));
     }
-  }, [darkMode, setDarkMode]);
+  }, [modeSoireeActive, enterModeSoiree]);
   return (
     <div className="page">
       <h1 className="titre-page">Mode soirée</h1>

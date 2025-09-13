@@ -86,10 +86,18 @@ const Header = ({}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); //texte rouge lorsque sous menu ouvert
-  const { darkMode, setDarkMode } = useTheme(); 
+  const { darkMode, setDarkMode, enterModeSoiree, exitModeSoiree, modeSoireeActive } = useTheme(); 
   const [hasSommaire, setHasSommaire] = useState(window.__hasSommaire || false);
   const location = useLocation();
   const navigate = useNavigate();
+  // Pages considérées comme faisant partie du "mode soirée"
+  const modeSoireeRoutes = new Set([
+    "/mode-soiree",
+    "/contacts-urgence",
+    "/plan-soiree",
+  ]);
+  // L'étiquette du bouton dépend uniquement de l'URL
+  const inModeSoiree = modeSoireeRoutes.has(location.pathname);
 
   // Rend un lien de menu (actif/inactif) pour desktop et mobile
   const renderMenuLink = ({ title, link, inactive }, extraClass = "") => {
@@ -121,6 +129,17 @@ const Header = ({}) => {
     }, 0);
     return () => clearTimeout(timer);
   }, [location]);
+
+  // Synchronise automatiquement le "mode soirée" avec l'URL
+  useEffect(() => {
+    const onModeRoute = modeSoireeRoutes.has(location.pathname);
+    if (onModeRoute && !modeSoireeActive) {
+      enterModeSoiree();
+    } else if (!onModeRoute && modeSoireeActive) {
+      exitModeSoiree();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, modeSoireeActive]);
 
 
   useEffect(() => {
@@ -182,13 +201,27 @@ const Header = ({}) => {
       </nav>
 
       <div className= "boutons_haut" >
-          <button
-            className="mode-soiree" onClick={() => {
-              navigate("/mode-soiree"); // navigation interne
-            }}
-          >
-            <span className="close-website-icon">🎉</span> Mode soirée
-          </button>
+          {inModeSoiree ? (
+            <button
+              className="mode-soiree quit-mode-soiree"
+              onClick={() => {
+                // On navigue, l'effet ci-dessous appellera exitModeSoiree()
+                navigate("/");
+              }}
+            >
+              <span className="close-website-icon">↩️</span> Quitter le mode soirée
+            </button>
+          ) : (
+            <button
+              className="mode-soiree"
+              onClick={() => {
+                // On navigue, l'effet ci-dessous appellera enterModeSoiree()
+                navigate("/mode-soiree");
+              }}
+            >
+              <span className="close-website-icon">🎉</span> Mode soirée
+            </button>
+          )}
 
           <ThemeToggle/>
           <button className="quit-site" onClick={() => window.location.href = "https://www.google.com/"}>
@@ -273,9 +306,15 @@ const Header = ({}) => {
                 </li>
 
                 <li>
-                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/mode-soiree'); }}>
-                    🎉 Mode soirée
-                  </button>
+                  {inModeSoiree ? (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/'); }}>
+                      ↩️ Quitter le mode soirée
+                    </button>
+                  ) : (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/mode-soiree'); }}>
+                      🎉 Mode soirée
+                    </button>
+                  )}
                 </li>
 
               </ul>
@@ -306,9 +345,15 @@ const Header = ({}) => {
               </li>
 
                 <li>
-                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/mode-soiree'); }}>
-                    🎉 Mode soirée
-                  </button>
+                  {inModeSoiree ? (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/'); }}>
+                      ↩️ Quitter le mode soirée
+                    </button>
+                  ) : (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/mode-soiree'); }}>
+                      🎉 Mode soirée
+                    </button>
+                  )}
                 </li>
               
             </ul>
