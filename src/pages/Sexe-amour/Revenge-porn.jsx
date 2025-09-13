@@ -97,6 +97,7 @@ const resources_NCII = [
   const resource_pharos = [
   {
     link: "https://www.internet-signalement.gouv.fr",
+    imageSrc: "/assets/pharos.jpg",
     label: "Pharos",
     description: "Plateforme gouvernementale pour signaler des contenus illicites sur internet"
   },
@@ -108,7 +109,7 @@ const Revenge_porn = () => {
       <div className = "page">
 
         <h1 className = "titre-page">Revenge porn</h1>
-
+    
 
       <Navbar links={navLinks} />
 
@@ -116,11 +117,16 @@ const Revenge_porn = () => {
         <h1 className="titre">Qu'est-ce que le revenge porn ?</h1>
       </div>
 
+      <div id="resume-conseils">
+      <p className="mise-avant">Le revenge porn désigne la <b>diffusion d’images intimes sans consentement</b>, souvent après une rupture ou pour faire du chantage, et constitue un <b>délit puni de 2 ans de prison et 60 000 € d’amende</b>.</p>
+      <p className="mise-avant">Cela touche particulièrement les jeunes, avec des risques de diffusion massive en ligne, d’humiliation et de chantage, d’où l’importance de <b>réagir vite</b>, <b>se protéger</b> et <b>demander de l’aide</b>.  </p>
+      </div>
+
       <ImageTextPopup
         image="./assets/cartes/roi_coeur.png"
         title="La carte R&hearts;"
         shortText="Revenge porn : informations et conseils"
-        longText="Revenge porn : informations et conseils"
+        longText="On ne peut pas empêcher l’envoi de nudes. En couple ou dans une relation de confiance, il paraît impensable que l’autre puisse conserver ou diffuser nos photos et vidéos intimes à des fins de vengeance. Pourtant, le risque existe. Si tu choisis d’en envoyer, essaie de réduire au maximum les signes distinctifs : éviter d’y montrer ton visage, tes tatouages, tes piercings, des vêtements reconnaissables ou encore des lieux identifiables. L’idée est de limiter les éléments qui permettraient de prouver qu’il s’agit bien de toi, afin de mieux te protéger en cas de diffusion non consentie."
         textButton="⤢ Agrandir la carte"
       />
       <h2 className="sous-titre-2">De quoi parle-t-on ?</h2>
@@ -128,11 +134,6 @@ const Revenge_porn = () => {
       <p className="texte">Le <i>revenge porn</i> (ou <i>pornodivulgation</i>) désigne le fait de <b>partager, montrer ou diffuser</b> des images ou vidéos intimes d’une personne sans son accord. Cette forme de violence numérique est malheureusement de plus en plus courante, notamment après une <b>rupture conflictuelle</b>, avec pour but de <b>salir la réputation</b>, blesser ou atteindre psychologiquement la personne visée.<br/>
 Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>), par exemple pour obtenir d'autres nudes (photos ou vidéos dénudées), ou simplement pour humilier la victime.  
       </p>
-
-      <Quote 
-        text="Le fait de porter à la connaissance du public ou d’un tiers tout enregistrement ou document contenant des paroles ou des images à caractère sexuel, obtenus avec le consentement de la personne, mais diffusés sans son accord, est puni de deux ans d’emprisonnement et de 60 000 euros d’amende." 
-        author="Code pénal, article 226-2-1"
-      />
 
 
       <ChiffresGroup chiffres={data} />
@@ -207,9 +208,14 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
         <h1 className="titre">Je suis victime</h1>
       </div>
 
+        <div id="resume-conseils">
+          <p className="mise-avant">En cas de revenge porn : <b>parle à des proches ou à des pros</b>, <b>garde les preuves</b>, <b>signale et demande le retrait des contenus</b>, et n'oublie pas que tu peux <b>porte plainte</b> pour atteinte à la vie privée.</p>
+          <p className="mise-avant">Il existe des <b>plateformes et des associations</b> pouvant t'aider à <b>faire supprimer des réseaux sociaux les contenus</b> qui ont été diffusés à ton insu.</p>
+           </div>
+
       <h2 className="sous-titre-2">Comment réagir ?</h2>
       
-      <p className="texte">Parles-en à des personnes de confiance pour qu'elles te soutiennent et t'accompagnent dans cette épreuve. N'hésite pas non plus à faire appel à des associations ou à prendre rendez-vous avec un psychologue car le revenge porn peut avoir de grosses conséquences sur ta santé mentale et ton estime de toi.</p>
+      <p className="texte">Parles-en à des personnes de confiance pour qu'elles te soutiennent et t'accompagnent dans cette épreuve. N'hésite pas non plus à faire appel à des <b>associations</b> ou à prendre <b>rendez-vous avec un·e psychologue</b> car le revenge porn peut avoir de grosses conséquences sur ta santé mentale et ton estime de toi.</p>
           <ContactCard
           image="/assets/nightline_logo.png" 
           title="Nightline Lyon"
@@ -235,7 +241,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
           />
 
 
-      <p className="texte">Si tu es victime de revenge porn, voici les étapes à suivre pour garder des preuves :</p>
+      <p className="texte">Si tu es victime de revenge porn, voici les étapes à suivre pour <b>garder des preuves</b> :</p>
       <BulletList
         items={[
           "Faire des captures d'écran des contenus (photos, vidéos, messages) et les sauvegarder sur un support sécurisé.",
@@ -245,7 +251,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
           
         ]} />
 
-        <p className="texte"> Il est aussi important de ne pas supprimer les preuves des contenus diffusés, même si cela peut être difficile. Toutes ces preuves te seront utiles si tu souhaites porter plainte ou faire retirer ces contenus d'internet.</p>
+        <p className="texte"> En effet, il est important de <b>ne pas supprimer les preuves</b> des contenus diffusés, même si cela peut être difficile. Toutes ces preuves te seront utiles si tu souhaites porter plainte ou faire retirer ces contenus d'internet.</p>
 
 
       <h2 className="sous-titre-2">Comment faire retirer des images publiées sans consentement ? </h2>
@@ -264,6 +270,11 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
 
       <h2 className="sous-titre-2">Tu souhaites porter plainte ?</h2>
 
+      <Quote 
+        text="Le fait de porter à la connaissance du public ou d’un tiers tout enregistrement ou document contenant des paroles ou des images à caractère sexuel, obtenus avec le consentement de la personne, mais diffusés sans son accord, est puni de deux ans d’emprisonnement et de 60 000 euros d’amende." 
+        author="Code pénal, article 226-2-1"
+      />
+
       <p className="texte">La diffusion d’images ou de vidéos intimes sans votre consentement constitue une <b>infraction pénale</b>. En tant que victime, vous avez le droit de porter plainte contre la personne responsable.
 La plainte peut être déposée dans n’importe quel <b>commissariat de police</b> ou <b>brigade de gendarmerie</b>.</p>
 
@@ -281,6 +292,11 @@ La plainte peut être déposée dans n’importe quel <b>commissariat de police<
       <div id = "aidant">
         <h1 className="titre">Je suis témoin ou proche de la victime</h1>
       </div>
+
+      <div id="resume-conseils">
+      <p className="mise-avant">Si tu es témoin de revenge porn, <b>ne partage jamais les contenus</b>, <b>signale-les</b> (réseaux sociaux ou Pharos) et soutiens la victime en l’écoutant et en l’<b>aidant à chercher du soutien</b>.</p>
+      </div>
+
       <p className="texte">
   Si tu es témoin de revenge porn, ta réaction peut faire une vraie différence. <b>Ne partage jamais</b> les contenus, même pour « prévenir » quelqu’un : cela te rend <b>complice</b> de leur diffusion, ce qui est illégal.
   Tu peux signaler les publications directement sur les réseaux sociaux concernés ou via la plateforme gouvernementale Pharos.

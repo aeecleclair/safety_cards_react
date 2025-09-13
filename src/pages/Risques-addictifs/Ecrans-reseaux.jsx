@@ -91,18 +91,19 @@ const Ecrans_reseaux = () => {
     <div id = "écrans">
       <h1 className="titre">Addiction aux écrans</h1>
     </div>
-
+      <div id="resume-conseils">
+      <p className="mise-avant">Les écrans sont conçus pour <b>capter ton attention</b> et, à forte dose, peuvent entraîner des problèmes de <b>sommeil</b>, de <b>concentration</b>, de <b>stress</b> ou encore d’<b>isolement social</b>.</p>
+      <p className="mise-avant">Pour éviter d’en être dépendant, tu peux essayer de trouver un équilibre en <b>fixant des limites</b>, en <b>coupant les notifications</b> et en privilégiant des <b>activités sans écran</b>.</p>
+      </div>
       <ImageTextPopup
           image="./assets/cartes/6_pique.png"
           title="La carte 6♠"
           shortText="Prévention sur l'utilisation excessive des écrans"
-          longText=""
+          longText="Tu sors ton portable à la moindre pause ? Tu enchaînes les stories et les vidéos sans t'en rendre compte ? Tu te sens de plus en plus fatigué·e et stressé·e à force de rester scotché·e à ton écran ? Tu es peut-être en train de développer une dépendance aux écrans."
           textButton="⤢ Agrandir la carte"
           suit="pique"
         />
-        
-
- 
+         
           
       <p className="sous-titre-2"> Les effets des écrans</p>
       <p className="texte"> Les écrans captent ton attention, souvent sans que tu t’en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
@@ -124,7 +125,7 @@ const Ecrans_reseaux = () => {
           text="Être toujours en ligne, c’est ne jamais être pleinement présent." 
         />
 
-      <p className="texte">Si tu as l'impression de :</p>
+      <p className="texte">Si tu as <b>l'impression de</b> :</p>
       <BulletList
         items={["Constamment vérifier tes notifications",
     "Passer ton temps devant ton ordinateur, ta tablette, ton téléphone",
@@ -188,6 +189,11 @@ const Ecrans_reseaux = () => {
 
       <div id="réseaux"></div>
       <h1 className="titre">Addiction aux réseaux sociaux</h1>
+
+      <div id="resume-conseils">
+      <p className="mise-avant">Les réseaux sociaux créent une dépendance avec <b>likes</b>, <b>scroll infini</b> et <b>comparaisons constantes</b>.</p>
+      <p className="mise-avant">À forte dose, ils <b>nuisent à l’estime de soi et au bien-être mental</b>.</p>
+      </div>
 
 <p className="sous-titre-2">Les dangers des réseaux sociaux</p>
 <p className="texte">

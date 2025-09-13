@@ -48,13 +48,13 @@ const ressourcesUtiles = [
     link: "https://www.regleselementaires.com/",
     label: "Règles Élémentaires",
     description: "Première association française de lutte contre la précarité menstruelle",
-    imageSrc: "/assets/logo-regles-elementaires.jpg"
+    imageSrc: "/assets/regles_elementaires.png"
   },
   {
     link: "https://www.wenabi.com/ressources/precarite-menstruelle",
     label: "Wenabi",
     description: "Fiches pratiques et actions solidaires",
-    imageSrc: "/assets/logo-wenabi.png"
+    imageSrc: "/assets/wenabi.png"
   },
   {
     link: "https://www.etudiant.gouv.fr/fr",
@@ -86,7 +86,7 @@ const PrecariteMens = () => {
       </div>
 
       <ImageTextPopup
-        image="/assets/carte_regles.jpg"
+        image="/assets/cartes/2_coeur.png"
         title="Carte 5♥"
         shortText="Plus jamais dans le rouge"
         longText=""
@@ -119,10 +119,6 @@ const PrecariteMens = () => {
         />
       </div>
 
-      <Quote
-        texte="Plus jamais dans le rouge."
-        auteur="Carte 5♥ – Safety Cards"
-      />
 
       <p className="texte"><em><b>Sources :</b> État de l’art PE5 – Centrale Lyon, Règles Élémentaires, Wenabi, Ministère de l’Enseignement Supérieur</em></p>
     </div>

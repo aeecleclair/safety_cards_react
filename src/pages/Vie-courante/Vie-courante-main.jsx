@@ -8,4 +8,3 @@ const Vie_courante = () => {
   };
   
   export default Vie_courante;
-  
