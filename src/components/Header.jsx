@@ -57,7 +57,7 @@ const menuItems = [
       { title: "😶‍🌫️ Anxiété", link: "/anxiete", inactive:true  },
       { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
       { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },
-      { title: "💰 Précarité économique", link: "/prec_eco", inactive:true  },
+      { title: "💰 Précarité économique", link: "/prec_eco"  },
       { title: "💸 Précarité menstruelle", link: "/prec_mens", inactive:true  },
       { title: "⛹️ Santé physique & sport", link: "/sport", inactive:true  },
       { title: "🛋️ Sédentarité", link: "/sedentarite", inactive:true  },
