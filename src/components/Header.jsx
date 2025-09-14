@@ -5,13 +5,15 @@ import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "../ThemeProvider";
 import "./header.css";
 
+// Pour désactiver une page : attribut inactive:true
+
 const menuItems = [
   {
     title: "🙆 Connaissance de soi",
     submenu: [
       { title: "💛 Confiance & estime de soi", link: "/conf"},
       { title: "🏳️‍⚧️ Identité de genre", link: "/genre", inactive:true},
-      { title: "🧍 Isolement", link: "/isolement", inactive:true},
+      { title: "🧍 Isolement", link: "/isolement"},
     ],
   },
   {
@@ -20,7 +22,7 @@ const menuItems = [
       { title: "🔞 Addiction à la pornographie", link: "/add_porno", inactive:true},
       { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
       { title: "🍺 Consommation d'alcool", link: "/alcool" },
-      { title: "🎆 Consommation de stupéfiants", link: "/stup", inactive:true },
+      { title: "🎆 Consommation de stupéfiants", link: "/stup" },
       { title: "🚬 Tabac & vapotage", link: "/tabac", inactive:true },
     ],
   },
@@ -40,7 +42,7 @@ const menuItems = [
   {
     title: "💖 Sexualité et amour",
     submenu: [
-      { title: "✅ Consentement", link: "/consent", inactive:true },
+      { title: "✅ Consentement", link: "/consent" },
       { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
       { title: "♀️ IVG", link: "/ivg", inactive:true },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient", inactive:true },

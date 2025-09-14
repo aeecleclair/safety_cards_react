@@ -15,6 +15,7 @@ const navLinks = [
   { label: "La drogue, moi et les autres", target: "ensemble" },
   { label: "Je consomme", target: "conso" },
   { label: "Je suis témoin", target: "temoin" },
+  { label: "J'organise une soirée", target: "organiser" }
 ];
 
 const conseils = [
@@ -72,7 +73,7 @@ const resources4 = [
   { title: "Sécuriser", subtitle: "L'éloigner du danger et s'installer dans un endroit calme" },
   { title: "Surveiller", subtitle: "Assure-toi qu'il/elle respire normalement et ne le/la laisse pas seul·e" },
   { title: "Alerter", subtitle: "Si mise en danger grave : appeler le 112 ou le 15" },
-  {title : "📢 Attention", subtitle : "En cas de soirée sur le campus, s'adresser au personnel Peer'Care pour la prise en charge et l'appel au numéro d'astreinte"}
+  {title : "📢 Attention", subtitle : "Lors de soirées centraliennes, s'adresser aux memebres de Peer Care pour la prise en charge ou se diriger en zone chill"}
 ];
 
 
@@ -87,16 +88,31 @@ const resources5 = [
   const resources6 = [
   {
     link: "/sommeil",
-    emoji: "",
+    emoji: "💤",
     label: "Sommeil",
     description: "Des conseils pour améliorer la qualité de ton sommeil",
   },
   {
     link: "/depression",
-    emoji: "",
+    emoji: "🥺",
     label: "Dépression",
     description: "Des ressources pour comprendre et gérer la dépression sans l'aggraver",
   }];
+
+  const resources = [
+  {
+    link: "https://montetasoiree.com/",
+    imageSrc: "/assets/monte-ta-soiree.png",
+    label: "Monte ta soirée",
+    description: "Un 1er outil pour organiser des soirées plus responsables",
+  },
+  {
+    link: "https://pimp-my-party.fr/",
+    imageSrc: "/assets/pimp-my-party.png",
+    label: "Pimp my party",
+    description: "Un 2ème outil pour organiser des soirées en toute sécurité",
+  },
+];
 
 
 const Stupefiants = () => {
@@ -173,6 +189,7 @@ const Stupefiants = () => {
         shortText="Prévention sur la consommation occasionnelle"
         longText="Consommer une substance psychoactive, ce n’est pas anodin. Elle agit sur ton cerveau, modifie tes sensations, ta perception, ton comportement. Cela peut créer une illusion de contrôle, mais chaque prise comporte des risques – immédiats ou différés, et peut aggraver des problèmes de santé déjà existants."
         textButton="⤢ Agrandir la carte"
+        suit="trefle"
       />
 
       <h2 className="sous-titre-2">Réduire les risques</h2>
@@ -190,6 +207,7 @@ const Stupefiants = () => {
         shortText="Prévention sur l'addiction aux stupéfiants"
         longText="Une consommation régulière de stupéfiants peut facilement mener à une dépendance, qui se manifeste par un besoin impérieux de consommer, des difficultés à contrôler sa consommation, et des symptômes de sevrage en cas d'arrêt. Tu peux aussi développer une tolérance, nécessitant des doses plus élevées pour obtenir les mêmes effets. La dépendance peut avoir des conséquences graves sur ta santé physique et mentale, ainsi que sur ta vie sociale et scolaire."
         textButton="⤢ Agrandir la carte"
+        suit="trefle"
       />
 
       <p className="texte">Si tu consommes régulièrement des stupéfiants et que tu observes des <b>changements dans ton comportement</b>, notamment lorsque tu n'es plus sous l'influence, il est important de te demander si tu n'es pas en train de <b>développer une dépendance</b>.</p>
@@ -204,7 +222,7 @@ const Stupefiants = () => {
 
 
       <h2 className="sous-titre-2">Je m'informe et je me fais aider</h2>
-      <p className="texte"><b>Arrêter n'est pas facile, surtout seul·e</b> alors n'aies pas honte de demander de l'aide. Des associations existent pour t'accompagner dans cette démarche et tu peux en parler à un·e professionnel·le, sans jugement.</p>
+      <p className="texte"><b>Arrêter n'est pas facile, surtout seul·e</b> alors n'aie pas honte de demander de l'aide. Des associations existent pour t'accompagner dans cette démarche et tu peux en parler à un·e professionnel·le, sans jugement.</p>
 
       
      <ExternalLinkBlock
@@ -222,6 +240,8 @@ const Stupefiants = () => {
         hours="Sur RDV en CJC"
         textButton="Trouver une CJC"
         link="https://addictions-france.org/etablissements/"
+
+        textColor="#000000"
       />
 
       <ContactCard
@@ -256,7 +276,29 @@ const Stupefiants = () => {
       
       <Separateur />
 
-      <p className="texte"><em><b>Sources :</b> Drogues Info Service, Addict’Aide, OFDT, Santé Publique France</em></p>
+      <div id = "organiser">
+        <h1 className="titre">J'organise une soirée</h1>
+      </div>
+
+          <TextImageRight  
+        text={
+          <>
+            Les drogues sont souvent présentes lors des soirées, et il est important de veiller à la sécurité de tous. Si tu héberges ou planifies une soirée, tu peux réfléchir à des dispositifs ou des moyens de prévention.
+            Pour faire attention à chacun, tu peux trouver des outils pour organiser des <b>soirées plus responsables et sécurisées</b> sur les sites suivants :
+          </>
+        }
+        imageSrc="/assets/cartes/valet_trefle.png"
+      />
+
+    
+      <ExternalLinkBlock
+
+        resources={resources}
+      />
+
+      <Separateur />
+
+      <p className="texte"><em><b>Sources :</b> Drogues Info Service, Addict’Aide, OFDT, Santé Publique France, Qualité de vie en étude à l'ECL</em></p>
     </div>
   );
 };

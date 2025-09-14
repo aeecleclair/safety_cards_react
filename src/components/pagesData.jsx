@@ -57,7 +57,7 @@ const pagesData = [
       { name: "⛔ Revenge porn", path: "/revenge" },
       { name: "💑 Relations de couple", path: "/couple" },
       { name: "😘 Sexualité", path: "/sex" },
-      { name: "⚠️ Pratiques sexuelles dangereuses", path: "/pratiques_sex" },
+      { name: "⚠️ IST", path: "/pratiques_sex" },
       { name: "♀️ IVG", path: "/ivg" },
       { name: "✅ Consentement", path: "/consent" },
     ],
