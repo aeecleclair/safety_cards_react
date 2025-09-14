@@ -24,9 +24,8 @@ const navLinks = [
 
 /** Chiffres clés (constat local fourni) */
 const chiffresPrecarite = [
-  { number: "20,5%", title: "Boursiers", description: "des étudiants bénéficient d’une bourse" },
-  { number: "20,4%", title: "Emprunt étudiant", description: "ont eu recours à un prêt pour financer leurs études" },
-  { number: "9,7%", title: "Difficultés essentielles", description: "alimentation, loyer, électricité (18,5% boursiers ; 7,4% non-boursiers)" },
+  { number: "20,5%", title: "des étudiants", description: "bénéficient d’une bourse à Centrale Lyon" },
+  { number: "9,7%", title: "des étudiants", description: "rencontrent des difficultés financières pour subvenir à leurs besoins essentiels" },
   { number: "31,0%", title: "Étudiants étrangers", description: "touchés par la précarité (vs 8,4% Français)" },
   { number: "3,2%", title: "Matériel insuffisant", description: "pour suivre correctement les cours" },
   { number: "61,1%", title: "Manque d’info", description: "sur les prêts de matériel disponibles" },
@@ -184,11 +183,11 @@ const PrecariteEconomique = () => {
       </div>
 
       <ImageTextPopup
-        image="./assets/cartes/precarite.png"
-        title="Précarité étudiante : de quoi parle-t-on ?"
-        shortText="Difficultés financières qui affectent le logement, l’alimentation, la santé, l’équipement et la réussite."
-        longText="La précarité économique étudiante recouvre les difficultés à couvrir les besoins essentiels (logement, alimentation, énergie), à disposer du matériel nécessaire aux études (précarité numérique), et à concilier études et emploi. Elle touche plus fortement certains publics (étudiant·es boursier·ères, internationaux·ales) et impacte la réussite académique, la santé mentale et le sentiment d’appartenance."
-        textButton="⤢ Lire la synthèse"
+        image="./assets/cartes/valet_carreau.png"
+        title="La carte V♦"
+        shortText="La précarité économique étudiante et les solutions existantes"
+        longText=""
+        textButton="⤢ Voir la carte"
         suit="carreau"
       />
 

@@ -53,7 +53,7 @@ const menuItems = [
     title: "🕰️ Vie courante",
     submenu: [
       { title: "🚗 Accidents de la circulation", link: "/accident", inactive:true },
-      { title: "🥬 Alimentation", link: "/aliment", inactive:true  },
+      { title: "🥬 Alimentation", link: "/aliment"  },
       { title: "😶‍🌫️ Anxiété", link: "/anxiete", inactive:true  },
       { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
       { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },

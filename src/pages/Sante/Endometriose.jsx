@@ -31,7 +31,7 @@ const ressources = [
     description: "Association de soutien, d'information et de sensibilisation autour de l’endométriose",
   },
   {
-    link: "https://www.solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-chroniques/article/l-endometriose",
+    link: "https://sante.gouv.fr/soins-et-maladies/prises-en-charge-specialisees/endometriose/article/orientation-et-parcours-des-femmes-presentant-des-symptomes-d-endometriose",
     imageSrc: "/assets/sante-france.png",
     label: "Ministère de la Santé",
     description: "Informations officielles sur l’endométriose, ses symptômes, les traitements et le parcours de soin",
@@ -70,9 +70,6 @@ const Endometriose = () => {
         textButton="⤢ Agrandir la carte"
       />
 
-      <p className="texte">
-        Les douleurs menstruelles sont fréquentes et peuvent être très intenses. Elles sont souvent considérées comme normales, mais elles peuvent être le signe d’un problème de santé sous-jacent, comme l’endométriose. Il est important de ne pas minimiser ces douleurs et de consulter un·e professionnel·le de santé si elles deviennent invalidantes.
-      </p>
 
     <p className="texte">
       Des douleurs menstruelles anormalement fortes voire paralysantes ne sont <b>pas anodines</b>. Elles peuvent par exemple être le signe d'une de ces pathologies :
