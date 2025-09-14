@@ -14,7 +14,6 @@ import {
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
-import { image } from "framer-motion/client";
 
 const navLinks = [
   { label: "Comprendre le consentement", target: "definition" },
@@ -24,7 +23,7 @@ const navLinks = [
 
 const principes = [
   { title: "Volontaire", subtitle: "Céder face à l'insistance, la pression, le chantage affectif n'est pas consentir." },
-  { title: "Clair", subtitle: "L'absence de refus ne veut pas consentement. En cas de doute, il faut demander !" },
+  { title: "Clair", subtitle: "L'absence de refus ne vaut pas consentement. En cas de doute, il faut demander !" },
   { title: "Lucide", subtitle: "La personne doit être en capacité de consentir : si elle est très alcoolisée, endormie, inconsciente ou droguée, elle n'est pas consentante." },
   { title: "Spécifique", subtitle: "Il est donné à chaque étape et à chaque fois." },
   { title: "Révocable", subtitle: "On peut changer d'avis à n'importe quel moment d'une activité sexuelle." },
@@ -41,18 +40,18 @@ const salopettes = [
 const chiffresConsentement = [
   {
     number: "210 000",
-    title: "Viols ou tentatives",
-    description: "Chaque année en France (source INSEE 2023)",
+    title: "viols ou tentatives",
+    description: "chaque année en France",
   },
   {
     number: "32%",
-    title: "Harcèlement sexuel au travail",
-    description: "des femmes ont déjà été victimes",
+    title: "des femmes ",
+    description: "ont déjà été victimes de harcèlement sexuel au travail",
   },
   {
     number: "9/10",
-    title: "Victimes connaissaient l'agresseur",
-    description: "dans les cas de viol ou d'agression sexuelle",
+    title: "Victimes",
+    description: "connaissaient l'agresseur dans les cas de viol ou d'agression sexuelle",
   },
 ];
 
@@ -63,6 +62,24 @@ const ressourcesConsentement = [
     description:"Monter des dispositifs en milieu festifs et sensibiliser au consentement.",
       imageSrc : "/assets/consentis.png",
   }
+];
+
+const proposition_loi = [
+  {
+    link: "https://www.vie-publique.fr/loi/297985-loi-consentement-definition-penale-du-viol",
+    label: "La proposition de loi",
+    description: "visant à modifier la définition pénale du viol et des agressions sexuelles ",
+    imageSrc : "/assets/rep-logo.png",
+  }
+];
+
+const couple = [
+  {
+    link: "https://www.pourquoidocteur.fr/Articles/Question-d-actu/25071-Sexualite-Dans-un-couple-le-consentement-est-indispensable",
+    label: "Relations de couple",
+    description: "Car le consentement ne doit pas être oublié dans une relation longue.",
+    emoji: "💑",
+  },
 ];
 
 
@@ -117,6 +134,14 @@ const Consentement = () => {
 
       <ExternalLinkBlock resources={salopettes} />
 
+      <h2 className="sous-titre-2">Le consentement et la loi</h2>
+      <p className="texte">
+        Légalement, les actes sexuels avec un·e <b>mineur·e de moins de 15 ans</b> constituent une infraction, quel que soit le « consentement » allégué
+        (seuil porté à <b>18 ans</b> en cas d’<b>inceste</b>).
+      </p>
+      <p className="texte"> Au moment où nous écrivons ces lignes, la loi française ne définit pas précisément le consentement au-delà de ce cadre. Une proposition de loi a été déposée le 21 janvier 2025 afin de préciser la notion de consentement et la manière de l'apprécier. Cela devrait à terme permettre de mieux protéger les victimes. <b>Le Sénat et l'Assemblée nationale devraient bientôt s'accorder sur une version finale du texte.</b></p>
+      <ExternalLinkBlock resources={proposition_loi} />
+
 
 
 
@@ -133,6 +158,10 @@ const Consentement = () => {
       <Quote
         text="Sans un OUI clair, lucide, révocable et enthousiaste, c’est NON."
       />
+
+      <p className="texte"> Même dans une <b>relation de couple</b>, le consentement est indispensable. Il n’y a pas de droit au corps de l’autre, ni de « devoir » conjugal. Si tu sens que ton consentement n’est pas respecté, il est important d’en parler.</p>
+
+      <ExternalLinkBlock resources={couple} />
 
       <h2 className="sous-titre-2">Le consentomètre</h2>
       <p className="texte">

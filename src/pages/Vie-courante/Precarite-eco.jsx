@@ -178,7 +178,7 @@ const PrecariteEconomique = () => {
         title="La carte V♦"
         shortText="La précarité économique étudiante et les solutions existantes"
         longText=""
-        textButton="⤢ Voir la carte"
+        textButton="⤢ Agrandir la carte"
         suit="carreau"
       />
 
@@ -192,10 +192,7 @@ const PrecariteEconomique = () => {
         <h1 className="titre">Je suis en difficulté</h1>
       </div>
       <p className="texte">
-            Tu n’es pas seul·e. Dès les premiers signes (retards de loyer,
-            alimentation insuffisante, matériel défaillant, etc.), 
-            <b>parles-en rapidement</b> : le service social t’aidera à activer
-            les bons leviers (aides centraliennes et du Crous, logement, santé, exonérations, jobs étudiants).
+            Tu n’es pas seul·e. Dès les premiers signes (retards de loyer, alimentation insuffisante, matériel défaillant, etc.), <b>parles-en rapidement</b> : le service social t’aidera à activer les bons leviers (aides centraliennes et du Crous, logement, santé, exonérations, jobs étudiants).
         </p>
       <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
