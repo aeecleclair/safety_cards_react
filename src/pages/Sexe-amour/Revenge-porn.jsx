@@ -241,11 +241,27 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
 
 
       <h2 className="sous-titre-2">Comment faire retirer des images publiées sans consentement ? </h2>
-      <p className="texte">Pour faire retirer les contenus publiés sans votre accord, vous pouvez dans un premier temps <b>contacter directement l’auteur</b> (si vous le connaissez) pour lui demander de supprimer les contenus. Vous pouvez lui <b>rappeler que ses actes sont punis par la loi</b>, et qu’il risque jusqu’à 2 ans de prison et 60 000 € d’amende. </p>
+      <TextImageRight
+        text={
+          <>
+            Pour faire retirer les contenus publiés sans votre accord, vous pouvez dans un premier temps <b>contacter directement l’auteur</b> (si vous le connaissez) pour lui demander de supprimer les contenus. Vous pouvez lui <b>rappeler que ses actes sont punis par la loi</b>, et qu’il risque jusqu’à 2 ans de prison et 60 000 € d’amende.</>
+        }
+        imageSrc="/assets/justice.png"
+      />
       
       <p className="texte">Si tes <i>nudes</i> ou messages privés intimes sont publiés sur des réseaux sociaux tels que Snapchat, Instagram, Facebook, Twitter, etc., commence par signaler ces contenus comme <i><b>inappropriés</b></i> ou <i><b>violents</b></i> auprès de ces plateformes et précise que tu apparais contre ton gré sur ces contenus. </p>
       
       <p className="texte">Certaines <b>associations</b> peuvent t'aider à faire supprimer les images et vidéos de toi qui ont été publiées sur internet. Celles-ci ont besoin des <b>images ou vidéos concernées</b> ainsi que des preuves de diffusion afin de cibler ces publications et les effacer d'internet. Voici deux outils qui te permettront d'entamer cette démarche :</p>
+
+          <ContactCard
+          image="/assets/3018.png" 
+          title="3018"
+          subtitle="Numéro national contre les violences numériques"
+          phone="3018"
+          hours="Tous les jours, de 9h à 23h"
+          textButton="Voir le site web"
+          link="https://e-enfance.org/le3018/"
+        />
 
       <ExternalLinkBlock
         resources={resources_NCII}
