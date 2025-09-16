@@ -73,7 +73,7 @@ const menuItems = [
       { title: "🟰 Discriminations", link: "/discri", inactive:true  },
       { title: "🙅 Effet de groupe", link: "/groupe" },
       { title: "🩵 Empathie", link: "/empathie", inactive:true  },
-      { title: "😠 Harcèlement", link: "/harcel", inactive:true  },
+      { title: "😠 Harcèlement", link: "/harcel" },
       { title: "🍾 Pratiques d'intégration", link: "/inte" },
       { title: "💊 Soumission chimique", link: "/soumission" },
       { title: "🫂 VSS", link: "/vss" },

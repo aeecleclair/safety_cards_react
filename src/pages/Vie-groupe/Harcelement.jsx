@@ -19,14 +19,30 @@ const navLinks = [
   { label: "Comprendre le harcèlement", target: "definition" },
   { label: "Je suis victime ou témoin", target: "victime" },
   { label: "Le harcèlement de rue", target: "rue" },
-  { label: "Ressources & outils de prévention", target: "ressources" },
+];
+
+const harcelement = [
+  {
+    link: "/vss",
+    label: "VSS",
+    description:
+      "Pour développer davantage la thématique du harcèlement sexuel",
+      emoji: "🫂",
+  },
+  {
+    link: "/cyber_harcel",
+    label: "Cyberharcèlement",
+    description:
+      "Pour développer davantage la thématique du cyberharcèlement",
+    emoji: "📵",
+  },
 ];
 
 const chiffresHarcelement = [
   {
     number: "3,7%",
     title: "des étudiant·es",
-    description: "ont déclaré avoir été victimes de harcèlement dans une enquête locale (Écully, 2023).",
+    description: "ont déclaré avoir été victimes de harcèlement à Centrale.",
   },
   {
     number: "8/10",
@@ -36,43 +52,47 @@ const chiffresHarcelement = [
   {
     number: "50%",
     title: "Étudiant·es",
-    description: "connaissent l’existence des dispositifs de signalement dans leur établissement.",
+    description: "connaissent l’existence des dispositifs de signalement à Centrale.",
   },
 ];
 
 const lois = [
   {
-    link: "https://www.service-public.fr/particuliers/vosdroits/F32079",
-    label: "Code pénal – Harcèlement moral et sexuel",
+    link: "https://www.service-public.fr/particuliers/vosdroits/F2354",
+    label: "Harcèlement moral",
     description:
-      "Articles 222-33 et suivants : le harcèlement sexuel est puni jusqu’à 3 ans d’emprisonnement et 45 000 € d’amende.",
+      "Défintions et peines encourues",
     imageSrc: "/assets/rep-logo.png",
-  },
-  {
-    link: "https://www.vie-publique.fr/loi/285465-loi-du-2-mars-2022-creant-le-delit-de-harcelement-scolaire",
-    label: "Loi du 2 mars 2022",
-    description:
-      "Création du délit de harcèlement scolaire et universitaire, jusqu’à 10 ans de prison en cas de suicide de la victime.",
-    imageSrc: "/assets/rep-logo.png",
-  },
+  }
 ];
 
-const dispositifsExternes = [
-  {
-    link: "https://www.etudiant.gouv.fr/fr/cnae",
-    label: "CNAÉ",
-    description:
-      "Écoute et accompagnement des étudiant·es victimes de violences, discriminations ou harcèlement. Gratuit au 0 800 737 800.",
-    imageSrc: "/assets/cnae.png",
-  },
-  {
-    link: "https://3018.fr/",
-    label: "3018",
-    description:
-      "Numéro et application pour lutter contre le harcèlement scolaire et le cyberharcèlement. Ouvert 7j/7, 9h-23h.",
-    imageSrc: "/assets/3018.png",
-  },
 
+const barometres = [
+
+  {
+    link: "/assets/Violentomètre_relations_profs_eleves.pdf",
+    label: "Les violences dans les relations professeurs-élèves",
+    description: "",
+    emoji: "🎓",
+  },
+  {
+    link: "/assets/Violentometre_VSS_travail.pdf",
+    label: "Les violences dans le milieu professionnel",
+    description: "",
+    emoji: "💼",
+  },
+  {
+    link: "/assets/violentometre_depliant_monde_scientifique.pdf",
+    label: "Les violences dans le monde scientifique",
+    description: "",
+    emoji: "🔬",
+  },
+  {
+    link: "/assets/reglo_sport_reglette.pdf",
+    label: "Les violences dans le sport",
+    description: "",
+    emoji: "⚽",
+  }
 ];
 
 const cinqD = [
@@ -114,18 +134,10 @@ const angela = [
 
 const ressourcesPedagogiques = [
   {
-    link: "https://commentonsaime.fr/",
-    label: "CommentOnSAime.fr",
-    description:
-      "Site de prévention avec conseils sur les relations, les études, le couple et un tchat anonyme gratuit.",
-    imageSrc: "/assets/commentonsaime.png",
-  },
-  {
-    link: "https://consentis.info/",
-    label: "Consentis",
-    description:
-      "Association qui propose des outils pédagogiques et des formations pour prévenir les violences sexistes et sexuelles.",
-    imageSrc: "/assets/consentis.png",
+    link: "https://commentonsaime.fr/mes-etudes/comment-reagir-quand-je-vois-une-situation-malaisante-en-soiree/",
+    label: "Comment on s'aime ?",
+    description: "Comment réagir quand je vois une situation malaisante en soirée ?",
+    imageSrc: "/assets/logo-cosa.svg",
   },
 ];
 
@@ -135,7 +147,6 @@ const Harcelement = () => {
       <h1 className="titre-page">Harcèlement</h1>
       <Navbar links={navLinks} />
 
-      {/* 1. Comprendre le harcèlement */}
       <div id="definition">
         <h1 className="titre">Comprendre le harcèlement</h1>
       </div>
@@ -149,19 +160,32 @@ const Harcelement = () => {
         suit="carreau"
       />
 
+      <h2 className="sous-titre-2">Les formes de harcèlement</h2>
+
+
+      <p className="texte">Le harcèlement est une violence fondée sur des rapports de domination et d’intimidation qui a pour objet ou effet une dégradation des conditions de vie de la victime et un impact sur sa santé physique ou psychique. Le harcèlement qu'il soit sexuel ou moral s'exerce dans toutes les sphères de la vie : sphère privée (dans le couple, en famille ), sphère professionnelle (qu'il y ait un lien hiérarchique ou non), sphère sociale (associatif, sportif, dans la rue, etc.).</p>
+      <BulletList items={[
+        "Le harcèlement moral : fait d'imposer à autrui des gestes, paroles, comportements, attitudes répétés visant ou conduisant à dégrader ses conditions de vie et/ou de travail.",
+        "Le harcèlement sexuel : propos ou comportements à connotation sexuelle qui portent atteinte à la dignité d’une personne (propos déplacés, gestes inappropriés, pressions, etc.). Le harcèlement sexuel constitue un délit quelque soit le lien entre l'auteur et la victime.",
+        "Le cyberharcèlement : utilisation des technologies numériques pour harceler une personne (messages menaçants, diffusion de rumeurs, etc.). Le harcèlement en ligne est puni que les échanges soient publics (sur un forum par exemple) ou privés (entre amis sur un réseau social).",
+      ]} />
+
+      <ExternalLinkBlock resources={harcelement} />
+
       <h2 className="sous-titre-2">Chiffres clés</h2>
       <ChiffresGroup chiffres={chiffresHarcelement} />
 
       <h2 className="sous-titre-2">Le cadre législatif</h2>
       <p className="texte">
-        Le harcèlement est puni par la loi française, qu’il soit moral, sexuel ou scolaire.
-        Depuis 2022, un délit spécifique de harcèlement scolaire et universitaire existe, avec des peines allant jusqu’à 10 ans en cas de conséquences graves.
+        Le harcèlement est un délit, punissable d'<b>1 an de prison et de 15 000€ d'amende</b>. En cas de circonstances aggravantes (harcèlement envers une personne vulnérable, mineure, cyberharcèlement, etc.), les peines peuvent aller jusqu'à <b>2 ans de prison et 30 000€ d'amende</b>. En cas de harcèlement dans le couple, les peines peuvent aller jusqu'à <b>3 ans de prison et 45 000€ d'amende</b>.
       </p>
       <ExternalLinkBlock resources={lois} />
 
+      <YouTubeVideo url="https://www.youtube.com/watch?v=Nclf7ELuQGM" />
+
+
       <Separateur />
 
-      {/* 2. Je suis victime ou témoin */}
       <div id="victime">
         <h1 className="titre">Je suis victime ou témoin</h1>
       </div>
@@ -194,12 +218,23 @@ const Harcelement = () => {
           textColor="#000000"
         />
 
+      <h2 className="sous-titre-2">Evaluer ma situation : les violentomètres</h2>
+      <p className="texte">Si tu te sens perdu·e face à une situation, tu peux utiliser les violentomètres suivants pour évaluer ta situation et savoir si tu es victime ou témoin de violences et de harcèlement.</p>
+
+      <ExternalLinkBlock
+        resources={barometres}
+      />
+
       <h2 className="sous-titre-2">Réagir en tant que témoin</h2>
       <ListeNumerotee
         items={cinqD}
         title="La méthode des 5D"
         subtitle="Développée par l’ONG Right to Be, la méthode des 5D a été pensée pour aider les témoins à réagir au harcèlement sexiste et sexuel dans l’espace public, et elle peut servir dans plein de situations !" 
       />
+
+
+  <ExternalLinkBlock resources={ressourcesPedagogiques} />
+
 
       <Quote text="Tout geste compte : même un petit soutien peut faire une grande différence pour une victime." />
 
@@ -238,34 +273,13 @@ const Harcelement = () => {
       />
 
 
-
-      <Separateur />
-
-
-      <div id="ressources">
-        <h1 className="titre">Ressources & outils de prévention</h1>
-      </div>
-
-      <ExternalLinkBlock
-        title="Dispositifs externes"
-        subtitle="Applications et services pour t’aider ou aider un·e ami·e"
-        resources={dispositifsExternes}
-      />
-
-      <ExternalLinkBlock
-        title="Ressources pédagogiques"
-        subtitle="Pour mieux comprendre et prévenir le harcèlement"
-        resources={ressourcesPedagogiques}
-      />
-
-      <YouTubeVideo url="https://www.youtube.com/watch?v=Nclf7ELuQGM" />
       <YouTubeVideo url="https://www.youtube.com/watch?v=q9w-fJqSZpU" />
 
       <Separateur />
 
       <p className="texte">
         <em>
-          <b>Sources :</b> Ministère de l’Éducation nationale, Service Public, Vie Publique, Observatoire VSS, CNAÉ, 3018, App-Elles, UMAY, Demandez Angela, CommentOnSAime, Consentis.
+          <b>Sources :</b> Ministère de l’Éducation nationale, Service Public, Vie Publique, Observatoire VSS, CNAÉ, 3018, App-Elles, UMAY, Demandez Angela, CommentOnSAime, Rapport Qualité de Vie en Etude à l'ECL.
         </em>
       </p>
     </div>
