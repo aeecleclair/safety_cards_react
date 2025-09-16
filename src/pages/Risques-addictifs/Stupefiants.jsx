@@ -73,7 +73,7 @@ const resources4 = [
   { title: "Sécuriser", subtitle: "L'éloigner du danger et s'installer dans un endroit calme" },
   { title: "Surveiller", subtitle: "Assure-toi qu'il/elle respire normalement et ne le/la laisse pas seul·e" },
   { title: "Alerter", subtitle: "Si mise en danger grave : appeler le 112 ou le 15" },
-  {title : "📢 Attention", subtitle : "Lors de soirées centraliennes, s'adresser aux memebres de Peer Care pour la prise en charge ou se diriger en zone chill"}
+  {title : "📢 Attention", subtitle : "Lors de soirées centraliennes, s'adresser aux membres de Peer Care pour la prise en charge ou se diriger en zone chill"}
 ];
 
 
