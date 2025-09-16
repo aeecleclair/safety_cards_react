@@ -14,7 +14,7 @@ const AnnonceJeuCartes = () => {
         </p>
       </div>
       <div className="annonce-image-wrapper">
-        <img src="/assets/jeu_cartes.jpg" alt="Jeu de cartes Safety Cards" className="annonce-image" />
+        <img src="/assets/jeu_cartes_face_reduit.jpg" alt="Jeu de cartes Safety Cards" className="annonce-image" />
       </div>
     </div>
   );
