@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-
+import ImageTextPopup from "../../components/Cartes";
 import Quote from "../../components/Citation";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
@@ -74,21 +74,25 @@ const ressourcesUtiles = [
   {
     link: "https://www.securite-routiere.gouv.fr/les-medias/nos-campagnes-de-communication",
     label: "Campagnes de prévention",
+    imageSrc: "/assets/min.png",
     description: "Les vidéos et affiches officielles de la sécurité routière"
   },
   {
     link: "https://www.youtube.com/watch?v=cIybaOWeJlU",
     label: "Vidéo - Au revoir Maman",
+    imageSrc: "/assets/Youtube.jpg",
     description: "Une campagne choc sur les conséquences de l'alcool au volant"
   },
   {
     link: "https://www.facebook.com/SamLeConducteurEngage",
     label: "Sam, le conducteur désigné",
+    imageSrc: "/assets/Sam_conducteur.jpg",
     description: "Suivez-le sur Facebook pour ses conseils pratiques"
   },
   {
     link: "https://www.onisr.securite-routiere.gouv.fr/sites/default/files/2025-01/2025%2001%2030_ONISR_Accidentalit%C3%A9_Bilan_provisoire_2024_v8ter.pdf",
     label: "Chiffres 2024 – Sécurité routière",
+    imageSrc: "/assets/observatoire_secu_routiere.png",
     description: "Bilan complet des accidents en France"
   }
 ];
@@ -97,21 +101,25 @@ const stagesUtiles = [
   {
     link: "https://www.permisapoints.fr/stage-recuperation-points/",
     label: "Stage de récupération de points",
+    imageSrc: "/assets/Permis_a_point.jpg",
     description: "Permet de récupérer jusqu'à 4 points sur le permis de conduire. Durée : 2 jours. Accessible une fois par an."
   },
   {
     link: "https://www.service-public.fr/particuliers/vosdroits/F14208",
+    imageSrc: "/assets/min.png",
     label: "Stage de sensibilisation à la sécurité routière",
     description: "Obligatoire dans certains cas (décision judiciaire, composition pénale). Ne permet pas de récupérer des points."
   },
   {
     link: "https://www.actua-formation.fr/solutions/formation/conduite-hivernale/?gad_source=1&gad_campaignid=22226608776&gclid=Cj0KCQjw9O_BBhCUARIsAHQMjS59Nn2Eq0SOANFzjgxiyiWKGFDUfv36vGYJ58ZGwrGX7zcLIvoDfJcaAlkJEALw_wcB",
     label: "Stage de conduite sur neige et glace",
+    imageSrc: "/assets/Actua_formation.jpg",
     description: "Formation pratique pour apprendre à maîtriser son véhicule en conditions hivernales."
   },
   {
     link: "https://gsformation.fr/parcours-alcool-au-volant-avec-karting/#",
     label: "Atelier de sensibilisation à l'alcool au volant",
+    imageSrc: "/assets/Gs_formation.png",
     description: "Expérience pratique pour comprendre les effets de l'alcool sur la conduite."
   }
 ];
@@ -125,6 +133,13 @@ const RisquesCirculation = () => {
 
       <div id="probleme">
         <h2 className="titre">Le problème</h2>
+          <ImageTextPopup
+          image="/assets/cartes/roi_trefle.png"
+          title="La carte R♣"
+          shortText="TEXTE A FAIRE"
+          longText="TEXTE A FAIRE"
+          textButton="⤢ Voir la carte"
+        />
         <p className="texte">
           Les jeunes de 18 à 24 ans ne représentent que 8 % de la population française, mais comptent pour 17 % des tués sur la route. Le pic d’accidents mortels intervient entre 6 et 18 mois après l’obtention du permis, avec un pic critique au 3e trimestre. La combinaison vitesse, alcool, drogue et fatigue multiplie les risques.
         </p>
@@ -135,6 +150,13 @@ const RisquesCirculation = () => {
         <ChiffresGroup chiffres={chiffresCirculation} />
       </div>
 
+        <div id="ressources">
+        <ExternalLinkBlock
+          title="Pour aller plus loin"
+          subtitle="Des contenus pour mieux comprendre et sensibiliser"
+          resources={ressourcesUtiles}
+        />
+      </div>
       <Separateur />
 
       <div id="prevention">
@@ -165,6 +187,7 @@ const RisquesCirculation = () => {
               resources={[
                 {
                   link: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038954545/2023-05-01",
+                  imageSrc: "/assets/min.png",
                   label: "Article R234-1 du Code de la route"
                 }
               ]}
@@ -194,6 +217,7 @@ const RisquesCirculation = () => {
               resources={[
                 {
                   link: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422",
+                  imageSrc: "/assets/min.png",
                   label: "Article R412-6-1 du Code de la route"
                 }
               ]}
@@ -212,6 +236,7 @@ const RisquesCirculation = () => {
               resources={[
                 {
                   link: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048533039",
+                  imageSrc: "/assets/min.png",
                   label: "Article R413-14 du Code de la route"
                 }
               ]}
@@ -248,6 +273,7 @@ const RisquesCirculation = () => {
               resources={[
                 {
                   link: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037411287",
+                  imageSrc: "/assets/min.png",
                   label: "Article R412-1 du Code de la route"
                 }
               ]}
@@ -282,23 +308,12 @@ const RisquesCirculation = () => {
         </p>
 
         <ExternalLinkBlock
-          title="Formations disponibles"
+          title="Formations externes disponibles"
           subtitle="Pour améliorer vos compétences et votre sécurité"
           resources={stagesUtiles}
         />
       </div>
 
-
-      <Separateur />
-
-      <div id="ressources">
-        <h2 className="titre">Ressources utiles</h2>
-        <ExternalLinkBlock
-          title="Pour aller plus loin"
-          subtitle="Des contenus pour mieux comprendre et sensibiliser"
-          resources={ressourcesUtiles}
-        />
-      </div>
 
 
       <p className="texte source">

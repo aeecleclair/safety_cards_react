@@ -34,16 +34,19 @@ const contraceptionInfos = [
 const ressourcesGenerales = [
   {
     link: "https://www.onsexprime.fr/",
+    imageSrc: "/assets/onsexprimepng-png.png",
     label: "On s'exprime",
     description: "Site de référence sur la sexualité des jeunes, par Santé publique France"
   },
   {
     link: "https://questionsexualite.fr/choisir-sa-contraception",
+    imageSrc: "/assets/question_sexualite.png",
     label: "Choisir sa contraception",
     description: "Informations détaillées sur toutes les méthodes contraceptives"
   },
   {
     link: "https://www.questionsexualite.fr/",
+    imageSrc: "/assets/question_sexualite.png",
     label: "Question Sexualité",
     description: "Réponses d’experts sur la santé sexuelle"
   }
@@ -52,16 +55,19 @@ const ressourcesGenerales = [
 const ressourcesAide = [
   {
     link: "https://www.planning-familial.org/fr",
+    imageSrc: "/assets/planning-familial.jpg",
     label: "Planning Familial",
     description: "Écoute, accompagnement, accès à la contraception et à l'IVG"
   },
   {
     link: "https://ivg.gouv.fr/",
+    imageSrc: "/assets/min.png",
     label: "IVG.Gouv.fr",
     description: "Informations officielles sur l'interruption volontaire de grossesse"
   },
   {
     link: "https://www.filsantejeunes.com/",
+    imageSrc: "/assets/fsj.png",
     label: "Fil Santé Jeunes",
     description: "Discuter anonymement avec des professionnel·le·s"
   }
@@ -94,6 +100,13 @@ const Sexualite = () => {
 
       <div id="definition">
         <h1 className="titre">Comprendre la sexualité et la contraception</h1>
+          <ImageTextPopup
+          image="/assets/cartes/10_coeur.png"
+          title="La carte 10♥"
+          shortText="Un guide rapide pour explorer les options"
+          longText="Besoin d'un point sur les méthodes de contraception existantes, leur efficacité, leurs avantages et leurs limites ? Tu te poses des questions sur ta sexualité ? Cette page et cette carte sont idéal pour démarrer un échange sans jugement et sans tabou !"
+          textButton="⤢ Voir la carte"
+        />
         <p className="texte">
           La sexualité est une composante naturelle et intime de notre vie. S’informer sur les différentes pratiques, les moyens de contraception et la prévention permet de vivre une sexualité libre, respectueuse et responsable.
         </p>
@@ -147,7 +160,7 @@ const Sexualite = () => {
 
         <ChiffresGroup chiffres={chiffresSexualite} />
         <ExternalLinkBlock
-          title="Ressources pour s’informer"
+          title="Ressources pour aller plus loin"
           subtitle="Des sites fiables, pensés pour les jeunes"
           resources={ressourcesGenerales}
         />
@@ -161,19 +174,22 @@ const Sexualite = () => {
         Tu te poses des questions sur ta sexualité, ton orientation, tes pratiques, ou tu vis une situation particulière (grossesse, IST, IVG…) ? Tu n’es pas seul·e. Des professionnel·le·s formé·e·s sont là pour t’écouter, t’informer et t’accompagner sans jugement, à ton rythme.
         </p>
 
-        <ContactCard
-          image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
-          title="Infirmerie de Centrale Lyon"
-          phone="Voir les informations"
-          email="Voir les informations"
-          hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00"
-          textButton="Voir les informations"
-          link="https://www.ec-lyon.fr/campus/campus-lyon-ecully/sante-et-prevention-centrale-lyon"
-          bgColor="#ffffff"
-          textColor="#b22133"
-        />
+      <ContactCard
+        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        title="Infirmerie"
+        subtitle="Infirmerie de Centrale Lyon"
+        phone="Voir les informations"
+        email="Voir les informations"
+        hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
+        textButton="Voir les informations"
+        link="/infirmerie"
+
+        bgColor="#ffffff"    //informations facultatives
+        textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+      />
             <ContactCard
-              image="/assets/filsantejeunes.png"
+              image="/assets/fsj.png"
               title="Fil Santé Jeunes"
               subtitle="Anonyme, gratuit et à l’écoute"
               phone="0 800 235 236"
@@ -183,7 +199,7 @@ const Sexualite = () => {
             />
 
             <ContactCard
-              image="/assets/planning.png"
+              image="/assets/planning-familial.jpg"
               title="Planning Familial"
               subtitle="Orientation, IVG, contraception"
               hours="Selon les centres"
@@ -222,14 +238,6 @@ const Sexualite = () => {
           title="Comment soutenir ?"
           subtitle="Posture et réflexes à adopter"
           items={accompagnementInfos}
-        />
-
-        <ImageTextPopup
-          image="./assets/contraception-carte.jpg"
-          title="La carte contraceptive"
-          shortText="Un guide rapide pour explorer les options"
-          longText="Cette carte récapitule les méthodes de contraception existantes, leur efficacité, leurs avantages et leurs limites. Idéal pour démarrer un échange sans tabou."
-          textButton="⤢ Voir la carte"
         />
       </div>
 
