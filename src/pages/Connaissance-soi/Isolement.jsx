@@ -18,30 +18,46 @@ import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Workinprogress from "../../components/WorkInProgress";
 
-/* -------------------------------------------------------------------------- */
-/*                                DONNÉES                                    */
-/* -------------------------------------------------------------------------- */
 
 // Liens d'ancrage internes pour la barre de navigation de la page
 const navLinks = [
   { label: "Comprendre la solitude", target: "comprendre" },
   { label: "Rompre l’isolement", target: "rompre" },
   { label: "Besoin d’aide", target: "aide" },
+  { label: "Aider une personne isolée", target: "aider" },
 ];
 
 // Quelques chiffres clés issus de l’enquête IFOP & données Centrale Lyon (État de l’art)
 const chiffresIsolement = [
   {
     number: "28%",
-    title: "étudiants français",
-    description:
-      "déclarent se sentir souvent ou toujours seuls (IFOP, 2024)",
+    title: "des étudiant·e·s françai·e·s",
+    description:"déclarent se sentir souvent ou toujours seuls (IFOP, 2024)",
+  },
+  {
+    number: "74.2%",
+    title: "des étudiant·e·s",
+    description: "travaillent en groupe au moins une fois par mois",
   },
   {
     number: "55,8%",
-    title: "étudiants internationaux",
-    description:
-      "fréquentent les soirées du campus moins d’une fois par trimestre",
+    title: "des étudiant·e·s internationaux",
+    description: "fréquentent les soirées centraliennes moins d’une fois par trimestre",
+  },
+];
+
+const depression = [
+  {
+    link: "/depression",
+    label: "Dépression",
+    description: "Tu ressens perte d’intérêt, tristesse, fatigue, troubles du sommeil ou de l’appétit ?",
+    emoji: "🥺",
+  },
+  {
+    link: "/anxiete",
+    label: "Anxiété",
+    description: "Tu es tendu·e, inquiet·e, tu as des difficultés à te concentrer ou à dormir ?",
+    emoji: "😶‍🌫️",
   },
 ];
 
@@ -53,81 +69,38 @@ const actionsRompre = [
   },
   {
     title: "Fixer un micro-objectif",
-    subtitle: "Par ex. : déjeuner une fois cette semaine avec un camarade ou participer à un after-work associatif",
+    subtitle: "Par exemple : déjeuner une fois cette semaine avec un·e camarade ou participer à un événement associatif",
   },
   {
     title: "T’exposer progressivement",
-    subtitle: "Choisis des environnements bienveillants : permanences associatives, bibli Calm Zone, tiers-lieux AFEV…",
+    subtitle: "Choisis des environnements bienveillants : permanences associatives, bibliothèque, Skylab, etc.",
   },
   {
     title: "Demander du renfort",
-    subtitle: "Un·e buddy international, tuteur·rice de promo, infirmière ou assistant·e social·e peuvent t’épauler",
+    subtitle: "Ton parrain ou ta marraine, des ami·e·s que tu as déjà, l'infirmière ou l'assistant·e social·e peuvent t’épauler",
   },
   {
     title: "Entretenir le lien",
-    subtitle: "Bloque 1 créneau hebdo “social” dans ton agenda (sport collectif, bénévolat, jeu de société…) afin que l’habitude prenne racine",
+    subtitle: "Le sport obligatoire, le brassage associatif ou les événements (Bouffes d'étage, Souk du Bazar...) organisés régulièrement sont un bon moyen d'entretenir le lien",
   },
 ];
 
-// Ressources web généralistes (déjà fournies par l’utilisateur)
-const resources_sites = [
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Étudier, vivre, sortir et s’impliquer comme étudiant à Lyon",
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l’UDL",
-    description: "Toutes les informations, dispositifs et procédures",
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s’aime ?",
-    description: "Relations amicales, familiales, amoureuses : conseils et tchat anonyme",
-  },
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international…",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Parler santé, sexualité, amour, mal-être (12-25 ans)",
-  },
-];
 
-// Ressources externes dédiées à la vie sociale & aux tiers-lieux
 const resources_social = [
   {
-    link: "https://afev.org/actions/tiers-lieux",
-    imageSrc: "/assets/afev.svg",
+    link: "https://afev.org/auvergne-rhone-alpes/grand-lyon",
+    imageSrc: "/assets/logo-afev.svg",
     label: "Carte des tiers-lieux étudiants",
-    description: "Espaces de rencontre et coworking partout en France",
+    description: "Espaces de rencontre partout en France",
   },
   {
     link: "https://www.instagram.com/culturel_lyon/",
-    imageSrc: "/assets/culture_lyon.webp",
-    label: "Culturel Lyon (IG)",
+    imageSrc: "/assets/culturel_lyon.jpg",
+    label: "Culturel Lyon",
     description: "Idées de sorties chaque week-end dans la métropole",
   },
 ];
 
-/* -------------------------------------------------------------------------- */
-/*                               COMPONENT                                    */
-/* -------------------------------------------------------------------------- */
 
 const Isolement = () => {
   return (
@@ -139,13 +112,22 @@ const Isolement = () => {
       {/* SECTION : Comprendre */}
       <div id="comprendre">
         <h1 className="titre">Comprendre la solitude étudiante</h1>
-        <Quote text="On peut être entouré·e et pourtant se sentir terriblement seul·e." />
 
-        <h2 className="sous-titre-2">Pourquoi est-ce si fréquent&nbsp;?</h2>
+        <ImageTextPopup
+          image="/assets/cartes/2_carreau.png"
+          title="La carte 2♦"
+          shortText="La solitude étudiante"
+          longText=""
+          textButton="⤢ Agrandir la carte"
+          suit="carreau"
+        />
+
+
+        <h2 className="sous-titre-2">Pourquoi est-ce si fréquent ?</h2>
         <BulletList
           items={[
             "Nouveau cadre de vie et éloignement du cercle familial",
-            "Charge de travail intensive limitant les temps sociaux",
+            "Charge de travail intensive à certaines périodes, limitant les temps sociaux",
             "Langue & culture différentes pour les étudiant·e·s internationaux",
             "Usage excessif des écrans et sédentarité",
           ]}
@@ -154,26 +136,26 @@ const Isolement = () => {
         <p className="texte">
           L’étude IFOP 2024 révèle que <b>plus d’un quart des étudiants</b> se déclarent
           toujours ou souvent isolés. Les données internes confirment cette tendance,
-          en particulier chez les élèves internationaux et en <i>gap year</i>.
+          en particulier chez les élèves internationaux et en année de césure.
         </p>
         <ChiffresGroup chiffres={chiffresIsolement} />
       </div>
 
+      <h2 className="sous-titre-2">Tu te sens seul·e sans raison apparente ?</h2>
+      <p className="texte">La solitude peut être un symptôme de mal-être plus profond (stress, anxiété, dépression). Si tu ressens d’autres signes (tristesse, fatigue, irritabilité, troubles du sommeil ou de l’appétit…), n’hésite pas à consulter un·e professionnel·le de santé.
+      </p>
+
+      <ExternalLinkBlock resources={depression} />
+
+
       <Separateur />
 
-      {/* SECTION : Rompre l’isolement */}
       <div id="rompre">
         <h1 className="titre">Rompre l’isolement</h1>
-        <TextImageRight
-          imageSrc="/assets/friends.webp"
-          text={
-            <>
-              Se reconnecter ne signifie pas devenir extraverti·e&nbsp;: il s’agit
-              d’<b>introduire de petites interactions régulières</b> dans ton planning.
-              Voici un plan d’action progressif&nbsp;:
-            </>
-          }
-        />
+<p className="texte">
+          Se reconnecter ne signifie pas devenir extraverti·e. Il s’agit d’<b>introduire de petites interactions régulières</b> dans ton planning.
+          Voici un plan d’action progressif :
+        </p>
 
         <ListeNumerotee title="5 étapes pour briser la solitude" items={actionsRompre} />
 
@@ -186,9 +168,8 @@ const Isolement = () => {
 
       <Separateur />
 
-      {/* SECTION : Besoin d’aide */}
       <div id="aide">
-        <h1 className="titre">Besoin d’en parler&nbsp;?</h1>
+        <h1 className="titre">Besoin d’en parler ?</h1>
         <p className="texte">
           Parler de ton ressenti est souvent le premier pas pour aller mieux. Ces
           services sont gratuits, anonymes et à l’écoute 7j/7 :
@@ -213,21 +194,32 @@ const Isolement = () => {
           textButton="Voir le site web"
           link="https://www.filsantejeunes.com/"
         />
-
-        <ExternalLinkBlock
-          title="Ressources globales"
-          subtitle="Ces sites regroupent infos et aides sur de nombreuses thématiques :"
-          resources={resources_sites}
-        />
       </div>
+      <Separateur />
+
+        <div id="aider">
+      <h1 className="titre">Aider une personne isolée</h1>
+      </div>
+      <p className="texte">
+        Tu connais quelqu’un qui semble isolé ? Voici quelques conseils pour l’aider à se (re)connecter :
+      </p>
+
+      <BulletList
+        items={[
+          "Prends des nouvelles régulièrement, même un simple message peut faire la différence.",
+          "Propose des activités ensemble : une sortie, un café, ou même une visio.",
+          "Sois à l’écoute sans juger, laisse-lui exprimer ses ressentis.",
+          "Encourage-le·la à participer à des événements ou à rejoindre des groupes.",
+          "Sois patient·e, le processus d'intégration sociale peut prendre du temps, et chacun avance à son rythme.",
+          ]}
+      />
 
       <Separateur />
 
-      {/* Crédit & sources */}
       <p className="texte">
         <em>
-          <b>Sources&nbsp;:</b> IFOP 2024, enquête vie étudiante Centrale Lyon, Portail
-          Santé UDL, AFEV, Nightline
+          <b>Sources :</b> IFOP 2024, Qualité de Vie en étude à l'ECL, Portail
+          Santé UDL, AFEV, Nightline Lyon, Fil Santé Jeunes.
         </em>
       </p>
     </div>

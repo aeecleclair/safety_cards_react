@@ -239,7 +239,7 @@ body.dark-mode .quit-site, body.dark-mode .mode-soiree {
 
 
 /* ➡️ Version responsive */
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
 
     .desktop-menu {
         display: none; /* Cache le menu normal */

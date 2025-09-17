@@ -5,13 +5,15 @@ import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "../ThemeProvider";
 import "./header.css";
 
+// Pour désactiver une page : attribut inactive:true
+
 const menuItems = [
   {
     title: "🙆 Connaissance de soi",
     submenu: [
       { title: "💛 Confiance & estime de soi", link: "/conf"},
       { title: "🏳️‍⚧️ Identité de genre", link: "/genre", inactive:true},
-      { title: "🧍 Isolement", link: "/isolement", inactive:true},
+      { title: "🧍 Isolement", link: "/isolement"},
     ],
   },
   {
@@ -20,7 +22,7 @@ const menuItems = [
       { title: "🔞 Addiction à la pornographie", link: "/add_porno", inactive:true},
       { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
       { title: "🍺 Consommation d'alcool", link: "/alcool" },
-      { title: "🎆 Consommation de stupéfiants", link: "/stup", inactive:true },
+      { title: "🎆 Consommation de stupéfiants", link: "/stup" },
       { title: "🚬 Tabac & vapotage", link: "/tabac", inactive:true },
     ],
   },
@@ -40,7 +42,7 @@ const menuItems = [
   {
     title: "💖 Sexualité et amour",
     submenu: [
-      { title: "✅ Consentement", link: "/consent", inactive:true },
+      { title: "✅ Consentement", link: "/consent" },
       { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
       { title: "♀️ IVG", link: "/ivg", inactive:true },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient", inactive:true },
@@ -53,11 +55,11 @@ const menuItems = [
     title: "🕰️ Vie courante",
     submenu: [
       { title: "🚗 Accidents de la circulation", link: "/accident", inactive:true },
-      { title: "🥬 Alimentation", link: "/aliment", inactive:true  },
+      { title: "🥬 Alimentation", link: "/aliment"  },
       { title: "😶‍🌫️ Anxiété", link: "/anxiete", inactive:true  },
       { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
       { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },
-      { title: "💰 Précarité économique", link: "/prec_eco", inactive:true  },
+      { title: "💰 Précarité économique", link: "/prec_eco"  },
       { title: "💸 Précarité menstruelle", link: "/prec_mens", inactive:true  },
       { title: "⛹️ Santé physique & sport", link: "/sport", inactive:true  },
       { title: "🛋️ Sédentarité", link: "/sedentarite", inactive:true  },
@@ -71,7 +73,7 @@ const menuItems = [
       { title: "🟰 Discriminations", link: "/discri", inactive:true  },
       { title: "🙅 Effet de groupe", link: "/groupe" },
       { title: "🩵 Empathie", link: "/empathie", inactive:true  },
-      { title: "😠 Harcèlement", link: "/harcel", inactive:true  },
+      { title: "😠 Harcèlement", link: "/harcel" },
       { title: "🍾 Pratiques d'intégration", link: "/inte" },
       { title: "💊 Soumission chimique", link: "/soumission" },
       { title: "🫂 VSS", link: "/vss" },
@@ -86,10 +88,18 @@ const Header = ({}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); //texte rouge lorsque sous menu ouvert
-  const { darkMode, setDarkMode } = useTheme(); 
+  const { darkMode, setDarkMode, enterModeSoiree, exitModeSoiree, modeSoireeActive } = useTheme(); 
   const [hasSommaire, setHasSommaire] = useState(window.__hasSommaire || false);
   const location = useLocation();
   const navigate = useNavigate();
+  // Pages considérées comme faisant partie du "mode soirée"
+  const modeSoireeRoutes = new Set([
+    "/mode-soiree",
+    "/contacts-urgence",
+    "/plan-soiree",
+  ]);
+  // L'étiquette du bouton dépend uniquement de l'URL
+  const inModeSoiree = modeSoireeRoutes.has(location.pathname);
 
   // Rend un lien de menu (actif/inactif) pour desktop et mobile
   const renderMenuLink = ({ title, link, inactive }, extraClass = "") => {
@@ -121,6 +131,17 @@ const Header = ({}) => {
     }, 0);
     return () => clearTimeout(timer);
   }, [location]);
+
+  // Synchronise automatiquement le "mode soirée" avec l'URL
+  useEffect(() => {
+    const onModeRoute = modeSoireeRoutes.has(location.pathname);
+    if (onModeRoute && !modeSoireeActive) {
+      enterModeSoiree();
+    } else if (!onModeRoute && modeSoireeActive) {
+      exitModeSoiree();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, modeSoireeActive]);
 
 
   useEffect(() => {
@@ -182,13 +203,27 @@ const Header = ({}) => {
       </nav>
 
       <div className= "boutons_haut" >
-          <button
-            className="mode-soiree" onClick={() => {
-              navigate("/mode-soiree"); // navigation interne
-            }}
-          >
-            <span className="close-website-icon">🎉</span> Mode soirée
-          </button>
+          {inModeSoiree ? (
+            <button
+              className="mode-soiree quit-mode-soiree"
+              onClick={() => {
+                // On navigue, l'effet ci-dessous appellera exitModeSoiree()
+                navigate("/");
+              }}
+            >
+              <span className="close-website-icon">↩️</span> Quitter le mode soirée
+            </button>
+          ) : (
+            <button
+              className="mode-soiree"
+              onClick={() => {
+                // On navigue, l'effet ci-dessous appellera enterModeSoiree()
+                navigate("/mode-soiree");
+              }}
+            >
+              <span className="close-website-icon">🎉</span> Mode soirée
+            </button>
+          )}
 
           <ThemeToggle/>
           <button className="quit-site" onClick={() => window.location.href = "https://www.google.com/"}>
@@ -273,9 +308,15 @@ const Header = ({}) => {
                 </li>
 
                 <li>
-                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/mode-soiree'); }}>
-                    🎉 Mode soirée
-                  </button>
+                  {inModeSoiree ? (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/'); }}>
+                      ↩️ Quitter le mode soirée
+                    </button>
+                  ) : (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/mode-soiree'); }}>
+                      🎉 Mode soirée
+                    </button>
+                  )}
                 </li>
 
               </ul>
@@ -306,9 +347,15 @@ const Header = ({}) => {
               </li>
 
                 <li>
-                  <button className="menu-button-style" onClick={() => {setMenuOpen(false); navigate('/mode-soiree'); }}>
-                    🎉 Mode soirée
-                  </button>
+                  {inModeSoiree ? (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/'); }}>
+                      ↩️ Quitter le mode soirée
+                    </button>
+                  ) : (
+                    <button className="menu-button-style" onClick={() => { setMenuOpen(false); navigate('/mode-soiree'); }}>
+                      🎉 Mode soirée
+                    </button>
+                  )}
                 </li>
               
             </ul>

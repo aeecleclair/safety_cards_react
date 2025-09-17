@@ -17,7 +17,7 @@ const navLinks = [
 const items = [
   { title: "Prendre des repas réguliers", subtitle: "Éviter de sauter le petit-déjeuner ou le déjeuner" },
   { title: "Limiter les produits ultra-transformés", subtitle: "Favoriser les repas faits maison" },
-  { title: "Boire suffisamment d’eau", subtitle: "Éviter les sodas et boissons sucrées" },
+  { title: "Boire suffisamment d’eau (1 à 2L par jour)", subtitle: "Éviter les sodas et boissons sucrées" },
   { title: "Manger équilibré", subtitle: "Associer légumes, protéines, féculents dans chaque repas" },
   { title: "Écouter sa faim", subtitle: "Ne pas manger par ennui ou stress" },
 ];
@@ -25,13 +25,13 @@ const items = [
 const resources = [
   {
     link: "/tca",
-    emoji: "🍽",
+    emoji: "🍽️",
     label: "Tu grignotes ou sautes des repas très souvent ?",
     description: "Ce sont peut-être des signes de TCA",
   },
   {
     link: "/depression",
-    emoji: "",
+    emoji: "🥺",
     label: "Tu n'as plus la volonté de manger depuis des semaines ?",
     description: "Ce sont peut-être des signes de dépression",
   },
@@ -56,13 +56,13 @@ const resources2 = [
 const resources3 = [
   {
     link: "/sedentarite",
-    emoji: "",
+    emoji: "🛋️",
     label: "Tu ne pratiques aucune activité physique ?",
     description: "Combiné à une mauvaise alimentation, cela peut nuire à ta santé",
   },
   {
     link: "/sport",
-    emoji: "",
+    emoji: "⛹️",
     label: "Tu fais du sport à côté ?",
     description: "Pense à bien nourrir ton corps !",
   },
@@ -71,7 +71,7 @@ const resources3 = [
 const resources4 = [
   {
     link: "/prec_eco",
-    emoji: "",
+    emoji: "💰",
     label: "Situation de précarité économique ?",
     description: "Les solutions à ta disposition",
   }
@@ -81,6 +81,13 @@ const data = [
   { number: "30%", title: "des étudiant·e·s", description: "avouent sauter au moins un repas par jour" },
   { number: "50%", title: "des jeunes", description: "consomment trop de produits sucrés chaque semaine" },
 ];
+
+const appli = [
+  { label: "OpenFoodFacts", 
+    description: "Scanner les produits alimentaires pour connaître leur composition, leur degré de transformation et leur impact environnemental", 
+    link: "https://fr.openfoodfacts.org/",
+    imageSrc: "/assets/openfoodfacts.png"},
+]
 
 const Alimentation = () => {
   return (
@@ -103,7 +110,7 @@ const Alimentation = () => {
         shortText="Prévention sur les mauvaises habitudes alimentaires"
         longText="Tu manges toujours la même chose sans jamais varier ? Tu sautes souvent le petit-déjeuner ? Tu grignotes devant les écrans ? Tes habitudes alimentaires peuvent avoir un impact sur ta santé : fatigue, baisse de concentration, mal-être... Une &quot;mauvaise&quot; alimentation peut entraîner des carences nutritionnelles et affecter ton énergie ainsi que ton humeur au quotidien."
         textButton="⤢ Agrandir la carte"
-        suit="coeur"
+        suit="pique"
       />
 
       <div id="habitudes">
@@ -153,6 +160,9 @@ const Alimentation = () => {
         <p className="texte">Adopter une alimentation équilibrée ne veut pas dire se priver, mais apprendre à <b>mieux organiser ses repas</b> et <b>écouter son corps</b>. Voici quelques pistes :</p>
 
         <ListeNumerotee title="Plan d’action pour mieux s’alimenter" items={items} />
+
+          <h1 className="sous-titre-2">Application utile</h1>
+          <ExternalLinkBlock resources={appli} />
 
         <TextImageRight
           imageSrc="/assets/assiette.png"

@@ -17,99 +17,89 @@ import { ChiffresGroup } from "../../components/Chiffres";
 
 const navLinks = [
   { label: "Comprendre le consentement", target: "definition" },
-  { label: "Exprimer & reconnaître", target: "exprimer" },
   { label: "Je suis victime ou témoin", target: "victime" },
-  { label: "Ressources & outils", target: "ressources" },
+  { label: "Ressources & outils de prévention", target: "ressources" },
+];
+
+const principes = [
+  { title: "Volontaire", subtitle: "Céder face à l'insistance, la pression, le chantage affectif n'est pas consentir." },
+  { title: "Clair", subtitle: "L'absence de refus ne vaut pas consentement. En cas de doute, il faut demander !" },
+  { title: "Lucide", subtitle: "La personne doit être en capacité de consentir : si elle est très alcoolisée, endormie, inconsciente ou droguée, elle n'est pas consentante." },
+  { title: "Spécifique", subtitle: "Il est donné à chaque étape et à chaque fois." },
+  { title: "Révocable", subtitle: "On peut changer d'avis à n'importe quel moment d'une activité sexuelle." },
+];
+
+const salopettes = [
+  {
+    link: "https://lessalopettes.wordpress.com",
+    label: "Les Salopettes",
+    description: "Collectif étudiant de  l'ENS Lyon engagé sur les questions de consentement et de VSS.",
+  },
 ];
 
 const chiffresConsentement = [
   {
     number: "210 000",
-    title: "Viols ou tentatives",
-    description: "Chaque année en France (source INSEE 2023)",
+    title: "viols ou tentatives",
+    description: "chaque année en France",
   },
   {
     number: "32%",
-    title: "Harcèlement sexuel au travail",
-    description: "des femmes ont déjà été victimes",
+    title: "des femmes ",
+    description: "ont déjà été victimes de harcèlement sexuel au travail",
   },
   {
     number: "9/10",
-    title: "Victimes connaissaient l'agresseur",
-    description: "dans les cas de viol ou d'agression sexuelle",
+    title: "Victimes",
+    description: "connaissaient l'agresseur dans les cas de viol ou d'agression sexuelle",
   },
 ];
 
 const ressourcesConsentement = [
   {
-    link: "https://www.consenti.fr/",
+    link: "https://www.consentis.info/",
     label: "Consentis",
-    description:
-      "Association dédiée à la prévention et à l’éducation autour du consentement.",
-  },
+    description:"Monter des dispositifs en milieu festifs et sensibiliser au consentement.",
+      imageSrc : "/assets/consentis.png",
+  }
+];
+
+const proposition_loi = [
   {
-    link: "https://www.sexualite-et-consentement.fr/",
-    label: "Sexe & Consentement",
-    description:
-      "Campagne officielle « Sans oui, c’est interdit » du MESR et de l’association Sexe et Consentement.",
-  },
+    link: "https://www.vie-publique.fr/loi/297985-loi-consentement-definition-penale-du-viol",
+    label: "La proposition de loi",
+    description: "visant à modifier la définition pénale du viol et des agressions sexuelles ",
+    imageSrc : "/assets/rep-logo.png",
+  }
+];
+
+const couple = [
   {
-    link: "https://www.icicestcool.fr/",
-    label: "Ici c'est cool",
-    description:
-      "Outils pour la prévention des violences sexistes et sexuelles en contexte festif.",
-  },
-  {
-    link: "https://arretonslesviolences.gouv.fr/",
-    label: "Arrêtons les violences",
-    description:
-      "Plateforme gouvernementale : informations, conseils, numéros d’aide.",
-  },
-  {
-    link: "https://lessalopettes.wordpress.com",
-    label: "Les Salopettes",
-    description:
-      "Collectif étudiant lyonnais engagé sur les questions de consentement et de VSS.",
+    link: "https://www.pourquoidocteur.fr/Articles/Question-d-actu/25071-Sexualite-Dans-un-couple-le-consentement-est-indispensable",
+    label: "Relations de couple",
+    description: "Car le consentement ne doit pas être oublié dans une relation longue.",
+    emoji: "💑",
   },
 ];
 
-const ressourcesUrgence = [
+
+const consentometre = [
   {
-    link: "https://www.service-public.fr/particuliers/vosdroits/F3050",
-    label: "Porter plainte",
-    description: "Procédure officielle pour signaler une agression sexuelle.",
-  },
-  {
-    link: "https://www.france-victimes.fr/",
-    label: "France Victimes",
-    description:
-      "Accompagnement psychologique, juridique et social pour les victimes.",
-  },
-  {
-    link: "https://enavanttoutes.fr/",
-    label: "En Avant Toutes",
-    description: "Soutien aux victimes et accompagnement en ligne, anonyme et gratuit.",
+    link:"assets/Consentometre.pdf",
+    emoji: "📄",
+    label: "Consentomètre",
+    description: "un outil permettant aux étudiant·es de situer leur niveau de consentement dans toutes les situations de leur vie ",
   },
 ];
 
-const numUrgence = [
+const vss = [
   {
-    number: "17",
-    title: "Police / Gendarmerie",
-    description: "À contacter en cas d'urgence ou de danger immédiat.",
+    link: "/vss",
+    label: "VSS",
+    description: "Réagir face aux violences sexistes et sexuelles",
+    emoji: "🫂",
   },
-  {
-    number: "0 800 05 95 95",
-    title: "Viols Femmes Info",
-    description: "Numéro gratuit, anonyme et confidentiel, 7j/7, 24h/24.",
-  },
-  {
-    number: "3919",
-    title: "Violences Femmes Info",
-    description:
-      "Écoute, orientation et accompagnement gratuit et anonyme.",
-  },
-];
+]
 
 const Consentement = () => {
   return (
@@ -123,10 +113,10 @@ const Consentement = () => {
       </div>
 
       <ImageTextPopup
-        image="./assets/cartes/consentement.png"
-        title="Consentement : les bases"
-        shortText="Le consentement doit être libre, éclairé, explicite et révocable."
-        longText="Le consentement, c’est donner son accord à une action de manière libre, claire et volontaire. Sans consentement, un acte sexuel constitue une agression ou un viol. Le consentement doit être donné par la personne concernée, être éclairé, et il peut être retiré à tout moment."
+        image="./assets/cartes/4_coeur.png"
+        title="La carte 4♥"
+        shortText="La notion de consentement"
+        longText=""
         textButton="⤢ Agrandir la carte"
         suit="coeur"
       />
@@ -134,37 +124,44 @@ const Consentement = () => {
       <h2 className="sous-titre-2">Chiffres clés</h2>
       <ChiffresGroup chiffres={chiffresConsentement} />
 
-      <Quote
-        text="Sans un OUI clair et enthousiaste, c’est NON."
-        author="Campagne « Sans oui, c’est interdit »"
-      />
 
-      <Separateur />
+      <h2 className="sous-titre-2">Les 5 principes essentiels du consentement</h2>
 
-      {/* 2. Exprimer et reconnaître */}
-      <div id="exprimer">
-        <h1 className="titre">Exprimer & reconnaître le consentement</h1>
-      </div>
+      <ListeNumerotee 
+      items={principes} 
+      title={"Les principes du consentement"}
+      subtitle={"Le consentement doit être..."}/>
 
-      <h2 className="sous-titre-2">Les 4 principes essentiels</h2>
-      <BulletList
-        items={[
-          "Libre : donné sans pression, menace, manipulation ni contrainte.",
-          "Éclairé : la personne comprend parfaitement la situation.",
-          "Explicite : un vrai OUI clair, verbal ou non verbal.",
-          "Révocable : on peut changer d’avis à tout moment.",
-        ]}
-      />
+      <ExternalLinkBlock resources={salopettes} />
 
-      <h2 className="sous-titre-2">Faux « oui » à éviter</h2>
+      <h2 className="sous-titre-2">Le consentement et la loi</h2>
+      <p className="texte">
+        Légalement, les actes sexuels avec un·e <b>mineur·e de moins de 15 ans</b> constituent une infraction, quel que soit le « consentement » allégué
+        (seuil porté à <b>18 ans</b> en cas d’<b>inceste</b>).
+      </p>
+      <p className="texte"> Au moment où nous écrivons ces lignes, la loi française ne définit pas précisément le consentement au-delà de ce cadre. Une proposition de loi a été déposée le 21 janvier 2025 afin de préciser la notion de consentement et la manière de l'apprécier. Cela devrait à terme permettre de mieux protéger les victimes. <b>Le Sénat et l'Assemblée nationale devraient bientôt s'accorder sur une version finale du texte.</b></p>
+      <ExternalLinkBlock resources={proposition_loi} />
+
+
+
+
+      <h2 className="sous-titre-2">Le faux « oui » à éviter</h2>
       <BulletList
         items={[
           "Dire oui par peur, pour éviter un conflit ou « faire plaisir ».",
-          "Dire oui sans comprendre la situation.",
+          "Dire oui alors qu'on est alcoolisé·e, drogué·e, fatigué·e...",
           "Ne pas dire non par crainte : le silence n’est PAS un consentement.",
           "Les gestes, la tenue ou le flirt ne valent JAMAIS consentement.",
         ]}
       />
+
+      <Quote
+        text="Sans un OUI clair, lucide, révocable et enthousiaste, c’est NON."
+      />
+
+      <p className="texte"> Même dans une <b>relation de couple</b>, le consentement est indispensable. Il n’y a pas de droit au corps de l’autre, ni de « devoir » conjugal. Si tu sens que ton consentement n’est pas respecté, il est important d’en parler.</p>
+
+      <ExternalLinkBlock resources={couple} />
 
       <h2 className="sous-titre-2">Le consentomètre</h2>
       <p className="texte">
@@ -172,6 +169,9 @@ const Consentement = () => {
         situation est saine. Il repose sur des scénarios concrets et te montre
         comment reconnaître un vrai OUI.
       </p>
+      <ExternalLinkBlock resources={consentometre} />
+
+
 
       <YouTubeVideo url="https://www.youtube.com/watch?v=fGoWLWS4-kU" />
 
@@ -185,44 +185,43 @@ const Consentement = () => {
       <p className="texte">
         Si tu subis ou es témoin d’une situation où le consentement n’est pas
         respecté, il est essentiel d’en parler. Tu peux te tourner vers un·e
-        ami·e, un·e référent·e, une association ou directement les secours.
+        ami·e, un·e référent·e, une association ou directement les secours (17 pour la police).
       </p>
 
-      <h2 className="sous-titre-2">Numéros utiles</h2>
-      <ChiffresGroup chiffres={numUrgence} />
+      <ContactCard
+          image="/assets/arretons_violence.svg"
+          title="Arrêtons les violences"
+          subtitle="Aide au téléphone, en ligne, ou via une association"
+          hours="24h/24, 7j/7"
+          phone="3919"
+          textButton="J'ai besoin d'aide"
+          link="https://arretonslesviolences.gouv.fr/besoin-d-aide"
+          bgColor="#ffffff"
+          textColor="#CC3C32"
+        />
 
-      <h2 className="sous-titre-2">Associations & accompagnement</h2>
-      <ExternalLinkBlock resources={ressourcesUrgence} />
+        <ExternalLinkBlock resources={vss} />
+
 
       <Separateur />
 
       {/* 4. Ressources et outils */}
       <div id="ressources">
-        <h1 className="titre">Ressources & outils</h1>
+        <h1 className="titre">Ressources & outils de prévention</h1>
       </div>
 
       <ExternalLinkBlock
-        title="Liens utiles"
-        subtitle="Pour en savoir plus et obtenir de l'aide"
+        title="Ressources utiles"
+        subtitle="Pour faire de la prévention sur le consentement"
         resources={ressourcesConsentement}
       />
 
-      <ContactCard
-        image="/assets/consentis.png"
-        title="Consentis"
-        subtitle="Association de prévention autour du consentement"
-        phone="07 68 44 80 32"
-        textButton="Découvrir Consentis"
-        link="https://www.consenti.fr/"
-        bgColor="#ffffff"
-        textColor="#c7000b"
-      />
 
       <Separateur />
 
       <p className="texte">
         <em>
-          <b>Sources :</b> Portail santé UDL, Consentis, Ici c’est cool, Ministère
+          <b>Sources :</b> Portail santé UDL, Consentis, Ministère
           de l’Enseignement Supérieur, Arrêtons les violences, Observatoire VSS,
           Les Salopettes.
         </em>

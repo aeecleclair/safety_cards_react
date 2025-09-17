@@ -132,6 +132,7 @@
     color: #b22133;
     padding: 5px 10px;
     border-radius: 10px;
+    cursor:pointer;
 }
 
 .navbar-links {
@@ -162,7 +163,7 @@ body.dark-mode .lien-navbar:hover {
 
 
 /* Version mobile : navbar comme le menu burger */
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
     .navbar {
         display: flex;
         flex-direction: column;

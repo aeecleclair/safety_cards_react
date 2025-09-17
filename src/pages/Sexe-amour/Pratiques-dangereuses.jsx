@@ -73,7 +73,7 @@ const resources_sites = [
 const PratiquesSexuellesDangereuses = () => {
   return (
     <div className="page">
-      <h1 className="titre-page">Pratiques sexuelles dangereuses</h1>
+      <h1 className="titre-page">Infections sexuellement transmissibles</h1>
 
       <Navbar links={navLinks} />
 

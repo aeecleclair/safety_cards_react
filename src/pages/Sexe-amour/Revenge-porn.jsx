@@ -52,7 +52,7 @@ const resources_victime = [
 
 
 const data = [
-  { number: "44%", title: "des moins de 25 ans", description: "se sont déjà livrés à des pratiques d'excitation virtuelle (SMS, photos, vidéos)" },
+  { number: "44%", title: "des moins de 25 ans", description: "ont déjà envoyé des SMS, photos, vidéos à caractère sexuel" },
   { number: "4%", title: "des Français", description: "admettent avoir déjà diffusé des contenus à caractère sexuel sans consentement" },
   { number: "50%", title: "des moins de 25 ans", description: "disent avoir peur d'être victime un jour de revenge porn"},
 ];
@@ -167,20 +167,6 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
         Dès lors que la victime est informée de la diffusion de son contenu, elle doit agir rapidement. En effet, plus le temps passe, plus il sera difficile de faire retirer ces contenus. Il est donc important de <b>réagir vite</b> et de <b>ne pas rester seul·e</b>. Découvrir que son contenu intime a été diffusé reste un <b>véritable choc</b> pour la victime, c'est pourquoi il est important de <b>se faire aider</b>. Il existe des associations pour être accompagné·e dans ces démarches.
       </p>
 
-      <ContactCard
-        image="/assets/crafs.png" 
-        title="Le CRAFS"
-        subtitle="Centre de Référence sur les Agressions Facilitées par les Substances"
-        phone="01 40 05 42 70"
-        hours="Lundi à vendredi : 9h - 13h et 14h - 18h "
-        textButton="Contacter le CRAFS"
-        link="https://lecrafs.com/contact/"
-
-        bgColor="#ffffff"    //informations facultatives
-        textColor="#c7000b"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-
-      />
-
       <h2 className="sous-titre-2">Quelques conseils pour minimiser l'impact du revenge porn</h2>
 
       <p className="texte">Nul n'est à l'abri d'être victime un jour de revenge porn. En effet, les contenus à caractère explicite qui peuvent être diffusés, ont dans la grande majorité des cas été <b>envoyés dans un cadre de confiance, d'intimité</b> et de <b>respect mutuel</b>. Nul ne peut se douter de la réaction qu'aurait son/sa partenaire lors d'une rupture.</p>
@@ -197,7 +183,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
 
         <p className="texte">N'oublions pas non plus que la <b>personne qui reçoit</b> un <i>nude</i> doit y <b>avoir consenti</b> au préalable. L'envoi d'un contenu à caractère sexuel non désiré peut s'apparenter à de l'<b>exhibition sexuelle</b>. Plus connu sous le nom de <i>dick pic</i> ou <i>cyberflashing</i>, cela consiste généralement à envoyer une photographie de son pénis en érection à quelqu'un sans son consentement.</p>
 
-      <YouTubeVideo url="https://www.youtube.com/watch?v=IFAq5uXM7Qo" />
+      <YouTubeVideo url="https://www.youtube.com/watch?v=t2b3Id8nSM0" />
 
 
 
@@ -255,11 +241,27 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
 
 
       <h2 className="sous-titre-2">Comment faire retirer des images publiées sans consentement ? </h2>
-      <p className="texte">Pour faire retirer les contenus publiés sans votre accord, vous pouvez dans un premier temps <b>contacter directement l’auteur</b> (si vous le connaissez) pour lui demander de supprimer les contenus. Vous pouvez lui <b>rappeler que ses actes sont punis par la loi</b>, et qu’il risque jusqu’à 2 ans de prison et 60 000 € d’amende. </p>
+      <TextImageRight
+        text={
+          <>
+            Pour faire retirer les contenus publiés sans votre accord, vous pouvez dans un premier temps <b>contacter directement l’auteur</b> (si vous le connaissez) pour lui demander de supprimer les contenus. Vous pouvez lui <b>rappeler que ses actes sont punis par la loi</b>, et qu’il risque jusqu’à 2 ans de prison et 60 000 € d’amende.</>
+        }
+        imageSrc="/assets/justice.png"
+      />
       
       <p className="texte">Si tes <i>nudes</i> ou messages privés intimes sont publiés sur des réseaux sociaux tels que Snapchat, Instagram, Facebook, Twitter, etc., commence par signaler ces contenus comme <i><b>inappropriés</b></i> ou <i><b>violents</b></i> auprès de ces plateformes et précise que tu apparais contre ton gré sur ces contenus. </p>
       
       <p className="texte">Certaines <b>associations</b> peuvent t'aider à faire supprimer les images et vidéos de toi qui ont été publiées sur internet. Celles-ci ont besoin des <b>images ou vidéos concernées</b> ainsi que des preuves de diffusion afin de cibler ces publications et les effacer d'internet. Voici deux outils qui te permettront d'entamer cette démarche :</p>
+
+          <ContactCard
+          image="/assets/3018.png" 
+          title="3018"
+          subtitle="Numéro national contre les violences numériques"
+          phone="3018"
+          hours="Tous les jours, de 9h à 23h"
+          textButton="Voir le site web"
+          link="https://e-enfance.org/le3018/"
+        />
 
       <ExternalLinkBlock
         resources={resources_NCII}
