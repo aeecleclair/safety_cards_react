@@ -46,7 +46,7 @@ const menuItems = [
       { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
       { title: "♀️ IVG", link: "/ivg", inactive:true },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient", inactive:true },
-      { title: "💑 Relations de couple", link: "/couple", inactive:true },
+      { title: "💑 Relations de couple", link: "/couple" },
       { title: "⛔ Revenge porn", link: "/revenge" },
       { title: "😘 Sexualité", link: "/sex", inactive:true },
     ],
