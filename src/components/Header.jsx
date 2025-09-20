@@ -62,7 +62,7 @@ const menuItems = [
       { title: "💰 Précarité économique", link: "/prec_eco"  },
       { title: "💸 Précarité menstruelle", link: "/prec_mens", inactive:true  },
       { title: "⛹️ Santé physique & sport", link: "/sport", inactive:true  },
-      { title: "🛋️ Sédentarité", link: "/sedentarite", inactive:true  },
+      { title: "🛋️ Sédentarité", link: "/sedentarite"  },
       { title: "🏠 Risques domestiques", link: "/domestique" },
     ],
   },
