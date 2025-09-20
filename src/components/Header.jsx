@@ -56,7 +56,7 @@ const menuItems = [
     submenu: [
       { title: "🚗 Accidents de la circulation", link: "/accident", inactive:true },
       { title: "🥬 Alimentation", link: "/aliment"  },
-      { title: "😶‍🌫️ Anxiété", link: "/anxiete", inactive:true  },
+      { title: "😶‍🌫️ Anxiété", link: "/anxiete"  },
       { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
       { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },
       { title: "💰 Précarité économique", link: "/prec_eco"  },
