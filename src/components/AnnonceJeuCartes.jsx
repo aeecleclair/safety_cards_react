@@ -10,7 +10,7 @@ const AnnonceJeuCartes = () => {
         <p className="annonce-texte">
           Viens récupérer ton jeu de cartes Safety Cards !
           <br />
-          <span className="annonce-highlight">HH sans alcool - Nourriture et boissons gratuites</span>
+          <span className="annonce-highlight">HH - Activités - Nourriture et boissons gratuites</span>
         </p>
       </div>
       <div className="annonce-image-wrapper">

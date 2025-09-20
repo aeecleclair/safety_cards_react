@@ -35,7 +35,7 @@ const AccueilModeSoiree = () => {
       <div className="initiative-peer-care">
         <p className="texte" style={{marginBottom:'12px'}}>Une initiative de l'association <strong>Peer Care</strong></p>
         <img
-          src="/assets/peer_care_sans_fond.png"
+          src="/assets/peer_care.png"
           alt="Logo Peer Care"
           className="peer-care-logo"
         />

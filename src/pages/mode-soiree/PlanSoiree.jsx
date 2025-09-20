@@ -4,8 +4,8 @@ import './mode-soiree.css';
 
 // Placeholders temporaires (remplacer plus tard par les vrais plans)
 const PLAN_IMAGES = {
-  rdc: '/assets/cartes/4_pique.png',
-  soussol: '/assets/cartes/5_trefle.png'
+  rdc: '/assets/m16_rdc.png',
+  soussol: '/assets/m16_ss.png'
 };
 
 const PlanSoiree = () => {
@@ -44,7 +44,7 @@ const PlanSoiree = () => {
       <div className="initiative-peer-care">
         <p className="texte" style={{marginBottom:'12px'}}>Une initiative de l'association <strong>Peer Care</strong></p>
         <img
-          src="/assets/peer_care_sans_fond.png"
+          src="/assets/peer_care.png"
           alt="Logo Peer Care"
           className="peer-care-logo"
         />

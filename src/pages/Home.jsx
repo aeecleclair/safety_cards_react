@@ -100,7 +100,7 @@ const Home = () => {
 
 
 
-      <h1 className="titre-page">Bienvenue sur Safety Cards</h1>
+      <h1 className="titre-page">Bienvenue sur <span style={{ color: "#b22133" }}>safety cards</span></h1>
 
       <AnnonceJeuCartes />
 

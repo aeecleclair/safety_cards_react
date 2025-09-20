@@ -7,16 +7,6 @@ import "./mode-soiree.css";
 const ContactsUrgence = () => {
   const contacts = [
     {
-      image: "/assets/logo_wei_2025.png",
-      title: "Light",
-      subtitle: "Prez' WEI",
-      phone: "📱 07 77 26 66 12",
-      textButton: "📞 Appeler",
-      link: "tel:0777266612",
-      bgColor: "#87B7E6",
-      textColor: "#ffffff",
-    },
-    {
       image: "/assets/bde.png",
       title: "Tsuki",
       subtitle: "Prez' BDE",
@@ -58,7 +48,7 @@ const ContactsUrgence = () => {
       <div className="initiative-peer-care">
         <p className="texte" style={{marginBottom:'12px'}}>Une initiative de l'association <strong>Peer Care</strong></p>
         <img
-          src="/assets/peer_care_sans_fond.png"
+          src="/assets/peer_care.png"
           alt="Logo Peer Care"
           className="peer-care-logo"
         />
