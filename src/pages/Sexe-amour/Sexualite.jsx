@@ -9,7 +9,6 @@ import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 
-
 const navLinks = [
   { label: "Comprendre", target: "definition" },
   { label: "Je suis concerné·e", target: "personne-concernee" },
@@ -29,6 +28,24 @@ const contraceptionInfos = [
   "Implant, injection contraceptive",
   "Méthodes naturelles (moins fiables)",
   "Contraception d’urgence (pilule du lendemain)"
+];
+
+
+const resources_Autres_pages = [
+
+  {
+    link: "/ivg",
+    emoji : "??",
+    label: "IVG",
+    description: "Tout savoir sur l’interruption volontaire de grossesse et les accompagnements possibles",
+  },
+
+  {
+    link: "/pratiques_sex",
+    emoji : "??",
+    label: "IST",
+    description: "Prévention, dépistage et prise en charge des infections sexuellement transmissibles",
+  }
 ];
 
 const ressourcesGenerales = [
@@ -131,6 +148,12 @@ const Sexualite = () => {
                 <td>Peut glisser ou se déchirer</td>
               </tr>
               <tr>
+                <td>Préservatif féminin</td>
+                <td>79-95%</td>
+                <td>Protège des IST, contrôle par la personne qui le porte</td>
+                <td>Moins connu, moins disponible</td>
+              </tr>
+              <tr>
                 <td>Pilule contraceptive</td>
                 <td>92%</td>
                 <td>Régule les cycles, prise quotidienne</td>
@@ -149,6 +172,12 @@ const Sexualite = () => {
                 <td>Douleurs possibles à la pose</td>
               </tr>
               <tr>
+                <td>Vasectomie</td>
+                <td>99,9%</td>
+                <td>Contraception masculine définitive</td>
+                <td>Acte chirurgical, difficilement réversible</td>
+              </tr>
+              <tr>
                 <td>Pilule du lendemain</td>
                 <td>58–95%</td>
                 <td>Utilisable après un rapport à risque</td>
@@ -159,6 +188,7 @@ const Sexualite = () => {
         </div>
 
         <ChiffresGroup chiffres={chiffresSexualite} />
+
         <ExternalLinkBlock
           title="Ressources pour aller plus loin"
           subtitle="Des sites fiables, pensés pour les jeunes"
@@ -184,10 +214,10 @@ const Sexualite = () => {
         textButton="Voir les informations"
         link="/infirmerie"
 
-        bgColor="#ffffff"    //informations facultatives
-        textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-
+        bgColor="#ffffff"
+        textColor="#b22133"
       />
+
             <ContactCard
               image="/assets/fsj.png"
               title="Fil Santé Jeunes"
@@ -209,7 +239,6 @@ const Sexualite = () => {
               textColor="#ffffff"
             />
 
-
         <div className="texte bloc-info">
           <h3>🛡️ Accès gratuit aux préservatifs</h3>
           <p>
@@ -218,12 +247,19 @@ const Sexualite = () => {
           </p>
         </div>
 
-        
         <ExternalLinkBlock
           title="Besoin de plus d’infos ?"
           subtitle="Des professionnels répondent à toutes les questions"
           resources={ressourcesAide}
         />
+        <p>
+          Tu cherches plutôt des informations sur l'IVG ou sur les IST ? C'est par ici :
+        </p>
+        <ExternalLinkBlock
+        title=""
+        subtitle=""
+        resources={resources_Autres_pages}
+      />
       </div>
 
       <Separateur />
@@ -241,7 +277,7 @@ const Sexualite = () => {
         />
       </div>
 
-      <p className="texte"><em><b>Sources :</b> Onsexprime.fr, Santé publique France, Planning Familial, INPES, QuestionSexualité.fr</em></p>
+      <p className="texte"><em><b>Sources :</b> Onsexprime.fr, Santé publique France, Planning Familial, QuestionSexualite.fr, ivg.gouv.fr</em></p>
     </div>
   );
 };
