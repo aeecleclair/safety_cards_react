@@ -73,6 +73,15 @@ const Sedentarite = () => {
         <h1 className="titre">Qu'est-ce que la sédentarité ?</h1>
       </div>
 
+        <ImageTextPopup
+        image="./assets/cartes/8_pique.png"
+        title="La carte 8♠"
+        shortText="TEXTE A FAIRE"
+        longText="TEXTE A FAIRE"
+        textButton="⤢ Agrandir la carte"
+        suit="pique"
+      />
+
       <p className="texte">
         La <b>sédentarité</b> correspond au temps passé assis ou allongé en dehors des heures de sommeil. 
         Elle se distingue de l’<b>inactivité physique</b> : on peut pratiquer du sport et rester sédentaire 
