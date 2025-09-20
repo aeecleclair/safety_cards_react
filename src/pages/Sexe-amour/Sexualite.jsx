@@ -34,10 +34,10 @@ const contraceptionInfos = [
 const resources_Autres_pages = [
 
   {
-    link: "/consentement",
+    link: "/ivg",
     emoji : "??",
-    label: "Consentement",
-    description: "Comprendre et respecter le consentement dans les relations intimes",
+    label: "IVG",
+    description: "Tout savoir sur l’interruption volontaire de grossesse et les accompagnements possibles",
   },
 
   {
@@ -253,7 +253,7 @@ const Sexualite = () => {
           resources={ressourcesAide}
         />
         <p>
-          Tu cherches plutôt des informations sur le consentement ou sur les IST ? C'est par ici :
+          Tu cherches plutôt des informations sur l'IVG ou sur les IST ? C'est par ici :
         </p>
         <ExternalLinkBlock
         title=""
