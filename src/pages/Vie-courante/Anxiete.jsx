@@ -23,14 +23,8 @@ const chiffresAnxiete = [
 
 const ressourcesInfos = [
   {
-    link: "https://www.who.int/news-room/fact-sheets/detail/mental-disorders",
-    imageSrc: "/assets/who.png",
-    label: "WHO — Troubles mentaux (fiche)",
-    description: "Définitions, symptômes généraux et données mondiales sur les troubles anxieux."
-  },
-  {
     link: "https://santepsy.etudiant.gouv.fr/",
-    imageSrc: "/assets/santepsy.png",
+    imageSrc: "/assets/Sante_psy_etudiant.png",
     label: "Santé Psy Étudiant",
     description: "Dispositif national : consultations psychologiques prises en charge pour les étudiants (infos & annuaire)."
   },
@@ -115,7 +109,9 @@ const Anxiete = () => {
         <p className="texte">
           L'anxiété est une réaction normale face au stress : elle se manifeste par de l'inquiétude, de la vigilance et une activation corporelle (cœur qui bat plus vite, tension musculaire, etc.). Les troubles anxieux correspondent à une inquiétude excessive, persistante et qui altère le fonctionnement quotidien.
         </p>
-
+        <p className="texte">
+        On distingue l’anxiété de l’angoisse : l’anxiété est diffuse et anticipatoire, souvent liée à la peur qu’un problème survienne, tandis que l’angoisse correspond à une crise aiguë, brutale, avec des symptômes physiques intenses comme une sensation d’étouffer, des palpitations ou l’impression de perdre le contrôle.
+        </p>
         <h2 className="sous-titre-2">Signes et symptômes fréquents</h2>
         <BulletList items={[
           "Inquiétude persistante et difficile à contrôler",
@@ -175,18 +171,20 @@ const Anxiete = () => {
 
         <p className="texte">Si tu veux un suivi :</p>
 
-        <ContactCard
-          image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
-          title="Infirmerie / Service Santé Étudiant"
-          subtitle="Infirmerie de Centrale Lyon / Service de santé étudiant"
-          phone="Voir les informations"
-          email="Voir les informations"
-          hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00"
-          textButton="Voir les informations"
-          link="https://www.ec-lyon.fr/campus/campus-lyon-ecully/sante-et-prevention-centrale-lyon"
-          bgColor="#ffffff"
-          textColor="#b22133"
-        />
+      <ContactCard
+        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        title="Infirmerie"
+        subtitle="Infirmerie de Centrale Lyon"
+        phone="Voir les informations"
+        email="Voir les informations"
+        hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
+        textButton="Voir les informations"
+        link="/infirmerie"
+
+        bgColor="#ffffff"    //informations facultatives
+        textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+      />
 
         <ContactCard
           image="/assets/fsj.png"
@@ -213,7 +211,10 @@ const Anxiete = () => {
           subtitle="Liens pour compléter votre compréhension"
           resources={[
             ...ressourcesInfos,
-            { link: "https://www.youtube.com/watch?v=k1ympFJR4WU", label: "Vidéo : Comprendre le stress", description: "Une approche ludique pour comprendre le stress et ses mécanismes." }
+            { link: "https://www.youtube.com/watch?v=k1ympFJR4WU",
+              imageSrc: "/assets/Youtube.jpg",
+              label: "Vidéo : Comprendre le stress ", 
+              description: "Une approche ludique pour comprendre le stress et ses mécanismes." }
           ]}
         />
       </div>
@@ -244,7 +245,7 @@ const Anxiete = () => {
 
 <p className="texte">
   <em>
-    <b>Sources :</b> WHO — Mental disorders (fact sheet), Méta-analyses sur l’anxiété chez les étudiant·e·s, Assurance Maladie — rapport 2023 sur psychotropes 12–25 ans, Santé Psy Étudiant, Fil Santé Jeunes, Nightline Lyon, 3114 — prévention suicide
+    <b>Sources :</b> Méta-analyses sur l’anxiété chez les étudiant·e·s, Santé Psy Étudiant, Fil Santé Jeunes, Nightline Lyon, 3114 — prévention suicide
   </em>
 </p>
 
