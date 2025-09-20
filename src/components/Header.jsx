@@ -23,7 +23,7 @@ const menuItems = [
       { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
       { title: "🍺 Consommation d'alcool", link: "/alcool" },
       { title: "🎆 Consommation de stupéfiants", link: "/stup" },
-      { title: "🚬 Tabac & vapotage", link: "/tabac", inactive:true },
+      { title: "🚬 Tabac & vapotage", link: "/tabac"},
     ],
   },
   {

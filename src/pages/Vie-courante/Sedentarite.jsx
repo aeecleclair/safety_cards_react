@@ -10,8 +10,16 @@ import { ChiffresGroup } from "../../components/Chiffres";
 
 const navLinks = [
   { label: "Qu'est-ce que la sédentarité ?", target: "sedentarite" },
-  { label: "Le constat & réponses", target: "constat" },
   { label: "Je veux bouger plus", target: "etudiant" }
+];
+
+const ecrans = [
+  {
+    link: "/add_reseaux",
+    emoji: "📱",
+    label: "Tu veux réduire ton temps passé sur les écrans ?",
+    description: "Des conseils et des ressources pour t'aider",
+  }
 ];
 
 const conseilsBouger = [
@@ -37,28 +45,49 @@ const conseilsBouger = [
   }
 ];
 
-
-
-const ressourcesInfos = [
+const resources_sortir = [
   {
+    link: "https://www.lyoncampus.com/",
+    imageSrc: "/assets/logo_lyon_campus.png",
+    label: "Lyon Campus",
+    description: "Des idées pour sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.instagram.com/culturel_lyon/",
+    imageSrc: "/assets/culturel_lyon.jpg",
+    label: "Culturel Lyon",
+    description: "Idées de sorties chaque week-end dans la métropole",
+  },
+    {
     link: "https://www.mangerbouger.fr/",
     imageSrc: "/assets/MangerBouger.png",
     label: "Manger Bouger",
-    description: "Conseils pratiques pour améliorer ton hygiène de vie au quotidien"
+    description: "Des idées d'activités à découvrir"
   },
+];
+
+
+
+const ressourcesInfos = [
+
   {
     link: "https://www.anses.fr/fr/content/inactivite-physique-et-sedentarite-chez-les-jeunes-lanses-alerte-les-pouvoirs-publics",
     imageSrc:"/assets/ANSES.png",
     label: "ANSES",
     description: "Rapports et recommandations sur l’activité physique des jeunes"
+  },
+  {
+    link: "/sport",
+    emoji : "⛹️",
+    label: "Santé physique et sport",
+    description: "Pour en apprendre davantage sur le sport"
   }
 ];
 
 const chiffresSedentarite = [
   { number: "7h+", title: "Temps moyen assis", description: "Chez les étudiant·e·s et jeunes adultes en France, chaque jour" },
-  { number: "20%", title: "Adultes", description: "Passent plus de 7h/j assis selon Santé publique France" },
-  { number: "30%", title: "Jeunes", description: "Ne respectent pas les recommandations minimales d’activité physique" },
-  { number: "150 min", title: "Recommandations OMS", description: "D’activité physique modérée par semaine pour rester en bonne santé" }
+  { number: "30%", title: "des jeunes", description: "Ne respectent pas les recommandations minimales d’activité physique" },
+  { number: "150 min", title: "d'activité physique modérée", description: "par semaine pour rester en bonne santé (recommandation OMS)" }
 ];
 
 const Sedentarite = () => {
@@ -76,8 +105,8 @@ const Sedentarite = () => {
         <ImageTextPopup
         image="./assets/cartes/8_pique.png"
         title="La carte 8♠"
-        shortText="TEXTE A FAIRE"
-        longText="TEXTE A FAIRE"
+        shortText="Lutter contre la sédentarité"
+        longText="Les écrans sont la cause principale de sédentarité chez les jeunes. Essaie au maximum de ne pas rester passif devant Insta ou Tik Tok, n'hésite pas à sortir prendre l'air et faire une promenade, seul·e ou avec des ami·e·s, ou à pratiquer une activité physique régulière."
         textButton="⤢ Agrandir la carte"
         suit="pique"
       />
@@ -104,48 +133,26 @@ const Sedentarite = () => {
       <p className="texte">Quelques chiffres clés :</p>
       <ChiffresGroup chiffres={chiffresSedentarite} />
 
-      <Separateur />
-
-      <div id="constat">
-        <h1 className="titre">Sédentarité : le constat & les réponses</h1>
-      </div>
-
-      <h2 className="sous-titre-2">Le constat</h2>
-      <p className="texte">
-        Les étudiants passent une grande part de leur temps <b>sur les écrans</b>, ce qui peut les mener 
-        à s’isoler et à rester enfermés sans activité physique pendant des heures, voire des jours.
-      </p>
-
-      <h2 className="sous-titre-2">Les réponses internes</h2>
-      <BulletList 
-        items={[
-          "Promotion sport-santé et développement d’infrastructures sportives accessibles",
-          "Subvention augmentée en 2024 pour soutenir les étudiants boursiers et favoriser leur participation aux tournois sportifs",
-          "Installation de terrains de padel sur le campus pour diversifier l’offre",
-          "Ateliers de détente animés par l’infirmière pour favoriser relaxation et gestion du stress",
-          "Amélioration des lieux de vie étudiante : plus de mobilier extérieur, foyers et locaux associatifs équipés"
-        ]} 
-      />
-
-      <h2 className="sous-titre-2">Les solutions externes</h2>
-      <BulletList 
-        items={[
-          "Culturel Lyon : un compte Instagram qui informe sur les événements et activités du week-end",
-          "Large offre sportive et culturelle dans la ville de Lyon accessible aux étudiants"
-        ]} 
-      />
-
       <ExternalLinkBlock
-        title="Ressources utiles"
-        subtitle="Sites pour en savoir plus et trouver des conseils pratiques"
         resources={ressourcesInfos}
       />
 
       <Separateur />
 
+
       <div id="etudiant">
         <h1 className="titre">Je veux bouger plus</h1>
       </div>
+
+      <h2 className="sous-titre-2">Se déconnecter des écrans et des réseaux</h2>
+
+      <p className="texte">  
+        Le temps passé devant les écrans (ordinateur, smartphone, télévision) est un facteur majeur de sédentarité. 
+        En moyenne, les jeunes de 16-24 ans passent plus de 7 heures par jour devant un écran, 
+        dont une grande partie pour des activités de loisir (réseaux sociaux, streaming, jeux vidéo). 
+      </p>
+
+      <ExternalLinkBlock resources={ecrans} />
 
       <h2 className="sous-titre-2">Comment intégrer l’activité dans ton quotidien ?</h2>
 
@@ -155,18 +162,17 @@ const Sedentarite = () => {
         items={conseilsBouger}
       />
 
-      <ImageTextPopup
-        image="/assets/PauseActive.png"
-        title="Pause active"
-        shortText="Des idées rapides pour casser la sédentarité"
-        longText="Bouge toutes les 30 à 60 minutes : étirements, marche rapide, escaliers. Ces micro-pauses réduisent les effets nocifs du temps assis."
-        textButton="⤢ Voir les astuces"
-      />
-
       <p className="texte">  
         L’OMS recommande 150 à 300 minutes par semaine d’activité modérée (marche rapide, vélo tranquille, danse) ou 75 à 150 minutes d’activité intense (course, sport collectif). 
         Pour les jeunes (11-17 ans), il est recommandé au moins 60 minutes d’activité physique quotidienne, et de limiter le temps assis prolongé.
       </p>
+
+      <h2 className="sous-titre-2">Quelques idées d’activités</h2>
+
+      Si tu es à Centrale, tu peux profiter des installations sportives du campus (terrains de tennis et padel, salle de musculation, etc.) en dehors des créneaux d'EPS obligatoires. A côté du campus, tu peux te promener dans le bois de Serre pour profiter un peu de la nature. Sur Lyon, de nombreux événements sont organisés. Tu peux en retrouver l'essentiel en accédant aux 2 premières ressources ci-dessous. Si tu es en manque d'inspiration, découvre de nombreuses idées d'activités sur le site Manger Bouger.
+
+      <ExternalLinkBlock resources={resources_sortir} />
+
 
       <Separateur />
 
