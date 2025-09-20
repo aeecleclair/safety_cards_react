@@ -1,214 +1,240 @@
 import React from "react";
 import "../../App.css";
-import Quote from "../../components/Citation";
+import ExternalLinkBlock from "../../components/Liens-ext";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  NumberedList,
-  TextImageRight,
-  ImageCenter,
-  YouTubeVideo,
-} from "../../components/Common";
+import { Navbar, BulletList, TextImageRight } from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
+import { ChiffresGroup } from "../../components/Chiffres";
 
 const navLinks = [
-  { label: "Définitions & repères", target: "definitions" },
-  { label: "Sortir du silence", target: "comingout" },
-  { label: "Faire face aux discriminations", target: "discrimination" },
-  { label: "Ressources & soutien", target: "ressources" },
+  { label: "Qu'est-ce que l’orientation sexuelle ?", target: "definitions" },
+  { label: "Parler de son orientation", target: "comingout" },
+  { label: "Accompagner et soutenir", target: "soutien" },
+];
+
+const data = [
+  { number: "1/5", title: "Étudiant·es", description: "ne se définissent pas comme hétérosexuel·les (IFOP 2023)" },
+  { number: "13,3%", title: "Des élèves", description: "ont subi des propos LGBTphobes sur leur campus" },
+  { number: "+50%", title: "Des jeunes LGBT+", description: "rapportent avoir déjà souffert d’isolement ou d’anxiété liés à leur orientation" },
 ];
 
 const ressourcesSpecifiques = [
   {
     link: "https://www.mag-jeunes.org/",
     imageSrc: "/assets/mag.png",
-    label: "MAG Jeunes LGBT+",
-    description: "Écoute, entraide & événements pour jeunes LGBT+",
-  },
-  {
-    link: "https://www.asso-contact.org/pmex/gep",
-    imageSrc: "/assets/contact.png",
-    label: "Contact",
-    description: "Dialogue familles & personnes LGBT+, groupes de parole",
-  },
-  {
-    link: "https://www.le-refuge.org/",
-    imageSrc: "/assets/refuge_logo.png",
-    label: "Le Refuge",
-    description: "Soutien & hébergement d'urgence pour jeunes LGBT+",
-  },
+    label: "MAG Jeunes LGBT+ Lyon",
+    description: "Permanences, écoute, dépistage gratuit, santé sexuelle à Lyon"
+  }
 ];
 
 const resources_sites = [
   {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-  {
-    link: "https://www.crous-lyon.fr",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
     link: "https://www.filsantejeunes.com/",
     imageSrc: "/assets/fsj.png",
     label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
+    description: "Conseils santé affective, sexuelle, amour, mal-être : tu peux y poser toutes tes questions !"
   },
+  {
+    link: "https://commentonsaime.fr/ma-sexualite/lamour-et-moi/comment-connaitre-son-orientation-sexuelle/",
+    imageSrc: "/assets/logo-cosa.svg",
+    label: "Comment on s’aime ?",
+    description: "Explications, FAQ & conseils pour questionner son orientation"
+  },
+  {
+    link: "https://www.crous-lyon.fr/social-et-accompagnement/",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Service Social du CROUS de Lyon",
+    description: "Écoute, aide psychologique & administrative, changement de prénom, etc. à Lyon"
+  },
+  {
+    link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/lgbtq-rhone-309796.kjsp",
+    imageSrc: "/assets/logo_sante_lyon.png",
+    label: "Santé mentale & LGBTQI+ Rhône",
+    description: "Ligne d’écoute, violence/discriminations, aide affective & sexuelle dans le Rhône"
+  },
+];
+
+const ressourcesGenerales = [
+  {
+    link: "https://www.mag-jeunes.org/permanence-lyon-lgbt",
+    imageSrc: "/assets/MAG.png",
+    label: "MAG - LGBT+ à Lyon",
+    description: "Permanences, écoute, dépistage gratuit, santé sexuelle à Lyon"
+  },
+  {
+    link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/lgbtq-rhone-309796.kjsp",
+    imageSrc: "/assets/Universite_de_lyon.png",
+    label: "Santé mentale & LGBTQI+ Rhône",
+    description: "Ligne d’écoute, violence/discriminations, aide affective & sexuelle dans le Rhône"
+  },
+  {
+    link: "https://le-refuge.org/la-ligne-decoute/",
+    imageSrc: "/assets/le_refuge.png",
+    label: "Le Refuge – Ligne d'écoute",
+    description: "Jeunes LGBT+ en détresse — appel ou SMS"
+  }
+];
+
+const resources_Autres_pages = [
+  {
+    link: "/genre",
+    emoji : "??",
+    label: "Identité de genre",
+    description: "Comprendre le genre, les différentes identités et mieux se repérer dans son propre parcours",
+  },
+
+  {
+    link: "/discri",
+    emoji : "??",
+    label: "Discriminations",
+    description: "Comment réagir et soutenir face aux discriminations ?",
+  }
+];
+
+const localContacts = [
+  {
+    image: "/assets/refuge_logo.png",
+    title: "Le Refuge – Ligne d'écoute",
+    subtitle: "Jeunes LGBT+ en détresse — appel ou SMS",
+    phone: "06 31 59 69 50",
+    hours: "7j/7, de 8h à minuit",
+    textButton: "Voir le site web",
+    link: "https://le-refuge.org/la-ligne-decoute/"
+  }
 ];
 
 const Orientation = () => {
   return (
     <div className="page">
+
       <h1 className="titre-page">Orientation sexuelle</h1>
       <Navbar links={navLinks} />
 
+      {/* Définition */}
       <div id="definitions">
-        <h1 className="titre">Définitions & repères</h1>
+        <h1 className="titre">Qu'est-ce que l’orientation sexuelle ?</h1>
+        <ImageTextPopup
+          image="./assets/cartes/as_coeur.png"
+          title="La carte A♥"
+          shortText="TEXTE A FAIRE"
+          longText="TEXTE A FAIRE"
+          textButton="⤢ Agrandir la carte"
+          suit="coeur"
+        />
         <p className="texte">
-          L’orientation sexuelle est l’attirance affective, romantique et/ou sexuelle qu’une personne peut ressentir envers d’autres personnes.
-          Elle se distingue de l’identité de genre. Voici quelques repères pour mieux comprendre :
+          L’orientation sexuelle correspond à l’attirance affective, romantique et/ou sexuelle qu’une personne peut ressentir envers d’autres personnes. Elle n’est pas choisie, mais fait partie intégrante de l’identité d’une personne. Elle est différente de l’identité de genre, qui concerne le fait de se sentir homme, femme, les deux, aucun des deux ou autrement.
         </p>
 
+        <h2 className="sous-titre-2">Quelques repères</h2>
         <BulletList
           items={[
-            "Hétérosexualité : attirance envers un genre différent du sien",
-            "Homosexualité : attirance envers le même genre",
-            "Bisexualité : attirance envers plusieurs genres",
-            "Asexualité : absence ou faible niveau d’attirance sexuelle",
+            "Hétérosexualité : attirance affective et/ou sexuelle pour les personnes d’un genre différent du sien",
+            "Homosexualité : attirance affective et/ou sexuelle pour les personnes du même genre",
+            "Bisexualité : attirance pour plusieurs genres",
+            "Asexualité : absence ou très faible attirance sexuelle, mais possible attirance romantique",
             "Pansexualité : attirance indépendante du genre ou du sexe",
-            "Questionnement : incertitude, exploration, évolution",
+            "Questionnement : être dans une période d’incertitude, d'exploration, sans devoir tout savoir"
           ]}
         />
-
-        <Quote text="On ne choisit pas son orientation, mais on choisit d'en être fier·e." />
-
-        <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", justifyContent: "center", fontFamily: "sans-serif", marginTop: "2rem" }}>
-          <div style={{ flex: "1 1 300px", background: "#fff", padding: "1.5rem", borderRadius: "12px", boxShadow: "0 0 10px rgba(0,0,0,0.1)", textAlign: "center" }}>
-            <div style={{ color: "#c62828", fontSize: "1.5rem", fontWeight: "bold" }}>1 étudiant·e sur 5</div>
-            <div style={{ color: "#333", marginTop: "0.5rem" }}>ne se définit pas comme hétérosexuel·le</div>
-            <div style={{ color: "#666", fontSize: "0.9rem", marginTop: "0.3rem" }}>selon l’enquête IFOP 2023 chez les 18–25 ans</div>
-          </div>
-          <div style={{ flex: "1 1 300px", background: "#fff", padding: "1.5rem", borderRadius: "12px", boxShadow: "0 0 10px rgba(0,0,0,0.1)", textAlign: "center" }}>
-            <div style={{ color: "#c62828", fontSize: "1.5rem", fontWeight: "bold" }}>13,3%</div>
-            <div style={{ color: "#333", marginTop: "0.5rem" }}>des élèves interrogé·es</div>
-            <div style={{ color: "#666", fontSize: "0.9rem", marginTop: "0.3rem" }}>ont subi des propos LGBTphobes sur le campus</div>
-          </div>
-        </div>
+        <ChiffresGroup chiffres={data} />
       </div>
 
       <Separateur />
 
+      {/* Parler de son orientation */}
       <div id="comingout">
-        <h1 className="titre">Sortir du silence</h1>
-        <TextImageRight
-          text={
-            <>
-              Parler de son orientation n’est jamais une obligation. C’est un droit, pas un devoir. Ce que certain·es appellent "coming out" est souvent un chemin progressif : d’abord envers soi-même, puis peut-être envers les autres. Chaque parcours est unique.
-              <br /><br />
-              Ce qui aide :
-              <ul>
-                <li>Se sentir prêt·e, en sécurité, et soutenu·e</li>
-                <li>S’entourer de personnes bienveillantes</li>
-                <li>S’informer via des témoignages ou groupes de parole</li>
-              </ul>
-            </>
-          }
-        />
-        <YouTubeVideo url="https://www.youtube.com/watch?v=GElYZjClx9Y" />
+        <h1 className="titre">Parler de son orientation</h1>
+          <p>
+            Parler de son orientation, parfois appelé « coming out », c’est un choix personnel, libre et souvent progressif. On le fait quand on se sent prêt·e, ou on ne le fait pas : encore une fois, c'est un choix personnel. On peut commencer par soi-même, puis auprès d’un·e ami·e, proche ou d’un·e professionnel·le. Ce moment peut être source de soulagement, mais aussi de doutes : c’est normal.
+          </p>
+        
+        <h2 className="sous-titre-2">Conseils pour t’aider</h2>
+        <BulletList items={[
+          "Donne-toi ton temps : tu n’es pas obligé·e de tout dire immédiatement",
+          "Choisis une personne de confiance",
+          "Prépare ce que tu veux dire, éventuellement avec écrit ou message",
+          "Cherche des témoignages, groupes de parole pour ne pas te sentir seul·e"
+        ]} />
+
+        {/* Liens d'information */}
+        {resources_sites.slice(0, 2).map((site, idx) => (
+          <ContactCard
+            key={idx}
+            image={site.imageSrc}
+            title={site.label}
+            subtitle={site.description}
+            textButton="Voir le site web"
+            link={site.link}
+          />
+        ))}
       </div>
+
+        <ExternalLinkBlock
+          title="Ressources pour aller plus loin"
+          subtitle="Il y a également des numéros de téléphone ou des endroits dans Lyon pour discuter de ta sexualité si tu en ressens le besoin :"
+          resources={ressourcesGenerales}
+        />
+
+        <ExternalLinkBlock
+          title=""
+          subtitle="Tu te poses également des questions sur ton identité de genre ? Tu subis des discriminations ? N'hésite pas à continuer à te renseigner, tu n'es jamais seul·e."
+          resources={resources_Autres_pages}
+        />
 
       <Separateur />
 
-      <div id="discrimination">
-        <h1 className="titre">Faire face aux discriminations</h1>
+      {/* Accompagner & soutenir */}
+      <div id="soutien">
+        <h1 className="titre">Accompagner & soutenir</h1>
         <p className="texte">
-          Les propos ou actes LGBTphobes (moqueries, remarques, exclusions…) peuvent blesser durablement. À Centrale, ces comportements n’ont pas leur place. Voici quoi faire en cas de problème :
+          Que tu sois ami·e, proche, enseignant·e ou intervenant·e, voici des idées pour accompagner une personne LGBT+ de manière respectueuse et bienveillante.
         </p>
 
-        <BulletList
+        <ListeNumerotee
+          title="Gestes concrets pour un soutien efficace"
+          subtitle="À faire au quotidien"
           items={[
-            "En parler à un·e référent·e (vie étudiante, tuteur·rice, assos) ou à un pair de confiance",
-            "Documenter les faits (captures, messages, témoins)",
-            "Contacter une structure externe si besoin (Le Refuge, Fil Santé Jeunes, associations locales)"
+            { title: "Écouter sans jugement", subtitle: "Laisser la parole, ne pas minimiser, ne pas forcer" },
+            { title: "Respecter le rythme", subtitle: "Accepter qu’il y ait des moments de doutes ou de silence" },
+            { title: "Agir contre les discriminations", subtitle: "Ne pas tolérer les propos ou actes LGBTphobes, soutenir la personne à signaler ou à se faire aider" },
+            { title: "Orienter vers des ressources locales", subtitle: "Associations, services, ligne d’écoute à Lyon" },
           ]}
         />
 
-        <Quote text="Ton orientation n’est pas un sujet de débat, c’est une part de toi." />
-      </div>
+        <p>
+          L'Ecole Centrale de Lyon et le Crous proposent des dispositifs pour accompagner et soutenir : l'infirmière (qui est directement sur le campus), ou encore un service social d'écoute qui propose un accompagnement psychologique et administratif, et permet le signalement des violences et discriminations (LGBTphobes incluses) dans ses structures.
+        </p>
 
-      <Separateur />
-
-      <div id="ressources">
-        <h1 className="titre">Ressources & soutien</h1>
-
-        <ExternalLinkBlock
-          title="Associations spécialisées"
-          subtitle="Accueil, soutien, groupes de parole et écoute LGBT+"
-          resources={ressourcesSpecifiques}
-        />
-
-        <ExternalLinkBlock
-          title="Sites généralistes utiles"
-          subtitle="Ces portails regroupent aides étudiantes, infos santé et droits"
-          resources={resources_sites}
+        <ContactCard
+          image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+          title="Infirmerie"
+          subtitle="Infirmerie de Centrale Lyon"
+          phone="Voir les informations"
+          email="Voir les informations"
+          hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
+          textButton="Voir les informations"
+          link="/infirmerie"
+          bgColor="#ffffff"
+          textColor="#b22133"
         />
 
         <ContactCard
-          image="/assets/nightline_logo.png"
-          title="Nightline Lyon"
-          subtitle="Écoute nocturne gratuite pour les étudiant·es"
-          phone="04 85 30 00 10"
-          email=""
-          hours="Tous les soirs de 21h à 2h30"
-          textButton="Voir le site web"
-          link="https://www.nightline.fr/lyon"
+          image="/assets/logo_crous.png"
+          title="Service social du CROUS de Lyon"
+          subtitle="Soutien social et psychologique, et signalement des violences sexuelles, sexistes ou LGBTphobes"
+          textButton="Voir les informations"
+          link="https://www.crous-lyon.fr/social-et-accompagnement/soutien-et-ecoute/"
+          bgColor="#ffffff"
+          textColor="#e30613"
         />
 
-        <ContactCard
-          image="/assets/fsj.png"
-          title="Fil Santé Jeunes"
-          subtitle="Écoute anonyme et gratuite pour les 12–25 ans"
-          phone="0 800 235 236"
-          email=""
-          hours="Tous les jours de 9h à 23h"
-          textButton="Voir le site web"
-          link="https://www.filsantejeunes.com/"
-        />
+
       </div>
 
       <Separateur />
-
-      <p className="texte">
-        <em>
-          <b>Sources :</b> IFOP 2023, SOS Homophobie, MAG Jeunes, Le Refuge, État de l’art Centrale Lyon
-        </em>
-      </p>
+      <p className="texte"><em><b>Sources :</b> IFOP 2023, SOS Homophobie, MAG Jeunes Lyon, Le Refuge, Crous de Lyon, Santé mentale Rhône</em></p>
     </div>
   );
 };
