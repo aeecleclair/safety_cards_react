@@ -38,6 +38,12 @@ const risques = [
   "Coût financier important sur le long terme"
 ];
 
+const principes = [
+  "Ne fume pas en présence de non-fumeurs, particulièrement d'enfants.",
+  "Respecte les zones fumeurs et non-fumeurs quand tu es dans un lieu public.",
+  "Aie le réflexe de sortir quand tu es dans un endroit qui ne prévoit pas de lieux fumeurs."
+]
+
 const resources2 = [
   {
     link: "https://www.tabac-info-service.fr/",
@@ -50,7 +56,13 @@ const resources2 = [
     imageSrc: "/assets/addictaide.jpg",
     label: "Addict'aide",
     description: "Outils et soutien pour réduire ou arrêter la consommation de tabac",
-  }
+  },
+  {
+    link: "https://mois-sans-tabac.tabac-info-service.fr/",
+    imageSrc: "/assets/mois_sans_tabac.png",
+    label: "Mois sans tabac",
+    description: "Une campagne annuelle pour arrêter de fumer en novembre",
+  },
 ];
 
 const resources5 = [
@@ -77,6 +89,15 @@ const Tabac = () => {
 
       <h2 className="sous-titre-2">Quels sont les effets et risques du tabac ?</h2>
 
+      <ImageTextPopup
+        image="/assets/cartes/as_trefle.png"
+        title="La carte A♣"
+        shortText="Prévention sur la consommation de tabac"
+        longText="Une consommation régulière de tabac ou de nicotine mène très souvent à une dépendance. Elle se traduit par un besoin impérieux de fumer ou de vapoter, une difficulté à arrêter et des symptômes de manque (irritabilité, anxiété, troubles du sommeil). Plus tôt tu agis, plus il est facile de réduire ou d’arrêter."
+        textButton="⤢ Agrandir la carte"
+      />
+
+      <p className="texte">Le tabac contient <b>plus de 4000 substances chimiques</b>, dont au moins 70 sont cancérigènes. Fumer une cigarette libère environ 10 mg de nicotine, une substance très addictive qui agit rapidement sur le cerveau. Voici les principaux risques liés à la consommation de tabac :</p>
       <BulletList items={[
     "Dépendance rapide à la nicotine",
     "Essoufflement, toux et baisse des performances sportives",
@@ -87,9 +108,9 @@ const Tabac = () => {
 ]} />
 
       <h2 className="sous-titre-2">Quels sont les effets de la cigarette électronique ?</h2>
-      <p className="texte">La cigarette électronique (ou vapoteuse) chauffe un liquide mélangé à des arômes et du propylène glycol pour produire une vapeur inhalée imitant la fumée d'une cigarette. Les SEDEN (système de délivrance de la nicotine) sont des vapoteuses contenant un peu de nicotine tandis que les SEDESN (systèmes de délivrance sans nicotine) n'en contiennent pas.</p>
+      <p className="texte">La <b>cigarette électronique (ou vapoteuse)</b> chauffe un liquide mélangé à des arômes et du propylène glycol pour produire une vapeur inhalée imitant la fumée d'une cigarette. Les <b>SEDEN</b> (système de délivrance de la nicotine) sont des vapoteuses contenant un peu de <b>nicotine</b> tandis que les <b>SEDESN</b> (systèmes de délivrance sans nicotine) <b>n'en contiennent pas.</b></p>
 
-      <p className="texte">Les SEDEN contenant moins de nicotine que dans la cigarette classique, elles servent souvent de transition aux fumeurs pour réduire leur consommation de tabac. Ces deux formes de cigarettes électroniques sont composées de substances chimiques dont les effets à long terme sont encore mal connus. Les risques suivants sont néanmoins à prendre en compte :</p>
+      <p className="texte">Les SEDEN contiennent moins de nicotine que dans la cigarette classique : elles servent souvent de <b>transition aux fumeurs</b> pour réduire leur consommation de tabac. Ces deux formes de cigarettes électroniques sont composées de substances chimiques dont les effets à long terme sont encore mal connus. Les risques suivants sont néanmoins à prendre en compte :</p>
       <BulletList items={[
     "Dépendance à la nicotine (sauf e-liquide sans nicotine)",
     "Irritations de la gorge et de la bouche",
@@ -101,7 +122,7 @@ const Tabac = () => {
       <ChiffresGroup chiffres={data2} />
 
       <h2 className="sous-titre-2">Le tabagisme passif</h2>
-      <p className="texte">Fumer ou vapoter à proximité d’autres personnes les expose aux substances toxiques. Le tabagisme passif est responsable de nombreux problèmes de santé, notamment chez les enfants et les personnes vulnérables.</p>
+      <p className="texte">Fumer ou vapoter à proximité d’autres personnes <b>les expose aux substances toxiques</b>. Le tabagisme passif est responsable de nombreux problèmes de santé, notamment chez les enfants et les personnes vulnérables :</p>
       <BulletList items={[
     "Irritations des yeux, du nez et de la gorge",
     "Toux, essoufflement et risque accru d'infections respiratoires",
@@ -109,7 +130,7 @@ const Tabac = () => {
     "Augmentation du risque de maladies cardiovasculaires"
 ]} />
 
-      <p className="texte">Il est important de respecter les espaces non-fumeurs et de ne pas vapoter dans les lieux publics fermés pour protéger la santé des autres. De plus, si quelqu'un est exposé à la fumée ou à la vapeur de ta cigarette, essaye de prendre en compte son bien-être en lui demandant si cela le dérange ou bien éloigne-toi si tu sens que cela le gêne.</p>
+      <p className="texte">Il est important de <b>respecter les espaces non-fumeurs</b> et de <b>ne pas vapoter dans les lieux publics fermés</b> pour protéger la santé des autres. De plus, si quelqu'un est exposé à la fumée ou à la vapeur de ta cigarette, essaye de prendre en compte son bien-être en lui demandant si cela le dérange ou bien éloigne-toi si tu sens que cela le gêne.</p>
 
 
       <Separateur />
@@ -140,25 +161,13 @@ const Tabac = () => {
 
       <p className="texte">Il est courant de sous-estimer la dépendance. Mais plus on commence tôt, plus il est difficile d’arrêter. La nicotine agit sur le cerveau et <b>renforce rapidement l’envie de fumer ou de vapoter</b>. Les effets négatifs se voient parfois après plusieurs années, mais la dépendance s’installe dès les premières semaines.</p>
 
-      <ImageTextPopup
-        image="/assets/cartes/as_trefle.png"
-        title="La carte A♣"
-        shortText="Prévention sur la consommation de tabac"
-        longText="Une consommation régulière de tabac ou de nicotine mène très souvent à une dépendance. Elle se traduit par un besoin impérieux de fumer ou de vapoter, une difficulté à arrêter et des symptômes de manque (irritabilité, anxiété, troubles du sommeil). Plus tôt tu agis, plus il est facile de réduire ou d’arrêter."
-        textButton="⤢ Agrandir la carte"
-      />
-
-      <h2 className="sous-titre-2">Réduire les risques</h2>
-
-      <ListeNumerotee title="Réduire les risques liés au tabac et au vapotage" items={conseils} />
-
-      <h2 className="sous-titre-2">Je fume régulièrement</h2>
+      <h2 className="sous-titre-2">Je fume régulièrement (tabac ou vapotage) </h2>
 
       <ImageTextPopup
         image="/assets/cartes/2_trefle.png"
         title="La carte 2♣"
         shortText="Prévention sur le vapotage"
-        longText="Vapoter est souvent considéré comme moins nocif que fumer, mais cela ne signifie pas qu'il est sans risque. La cigarette électronique contient des milliers de substances chimiques, dont des dizaines sont cancérigènes. Vapoter réduit certes certains risques mais maintient la dépendance, au geste et à l'habitude d'achat et de consommation d'une substance chimique pouvant se révéler nocive pour la santé."
+        longText="Vapoter est souvent considéré comme moins nocif que fumer, mais cela ne signifie pas qu'il est sans risque. La cigarette électronique contient des milliers de substances chimiques, dont des dizaines sont cancérigènes. Vapoter réduit certes certains risques mais maintient la dépendance : au geste, à l'habitude d'achat et à la consommation d'une substance chimique pouvant se révéler nocive pour la santé."
         textButton="⤢ Agrandir la carte"
       />
 
@@ -171,8 +180,14 @@ const Tabac = () => {
     "Échec répété des tentatives d’arrêt"
 ]} />
 
-      <h2 className="sous-titre-2">Je m’informe et je me fais aider</h2>
+      
+      <h2 className="sous-titre-2">Je souhaite réduire ma consommation</h2>
+      <p className="texte">Réduire sa consommation de tabac ou de vapotage est un premier pas important. Voici quelques conseils pour t’aider dans cette démarche :</p>
+      <ListeNumerotee title="Réduire les risques liés au tabac et au vapotage" items={conseils} />
+
       <p className="texte"><b>Arrêter seul·e est difficile</b>, mais des ressources existent pour accompagner ta démarche. Tu n’as pas à avoir honte d’en parler : chaque tentative compte et augmente tes chances de succès.</p>
+
+      <p className="texte">Si tu souhaites arrêter de fumer, ne pas te sentir seul·e est important. Le <b>Mois sans tabac</b> est une campagne nationale qui a lieu chaque année en novembre. Elle vise à encourager les fumeurs à arrêter de fumer en leur proposant des ressources et un accompagnement. C'est l'occasion pour rencontrer et participer à des activités de soutien avec des personnes dans la même situation. </p>
 
      <ExternalLinkBlock resources={resources2} />
 
@@ -188,17 +203,21 @@ const Tabac = () => {
         textButton="Voir le site web"
         link="https://www.tabac-info-service.fr/"
       />
-
-      <ContactCard
-        image="/assets/nightline_logo.png"
-        title="Nightline Lyon"
-        subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
-        phone="04 85 30 00 10"
+<ContactCard
+        image="/assets/fsj.png" 
+        title="Fil santé jeunes"
+        subtitle="Service d'écoute anonyme et gratuit pour les 12-25 ans"
+        phone="0 800 235 236"
         email=""
-        hours="Tous les soirs de 21h à 2h30"
+        hours="Tous les jours de 9h à 23h"
         textButton="Voir le site web"
-        link="https://www.nightline.fr/lyon"
+        link="https://www.filsantejeunes.com/"
       />
+
+      <h2 className="sous-titre-2">Je ne souhaite pas arrêter de fumer</h2>
+      <p className="texte">Si tu n'envisages pas d'arrêter de fumer pour le moment, essaye tout de même de <b>respecter ces principes</b> :</p>
+      <BulletList items={principes} />
+
 
       <Separateur />
 
@@ -207,9 +226,12 @@ const Tabac = () => {
       </div>
 
       <div id='resume-conseils'>
-        <p className="mise-avant">Si tu vois un proche fumer ou vapoter de plus en plus, parle-lui <b>avec bienveillance</b> et encourage-le à chercher du soutien, <b>sans jugement</b>. Ton écoute et ton aide peuvent être décisives.</p>
+        <p className="mise-avant">Si tu vois un·e proche fumer ou vapoter de plus en plus, parle-lui <b>avec bienveillance</b> et encourage-le/la à chercher du soutien, <b>sans jugement</b>. Ton écoute et ton aide peuvent être décisives.</p>
       </div>
       <p className="texte">Parler de consommation de tabac ou de vape peut être délicat. L’important est de <b>montrer que tu te soucies de son bien-être</b> et de l’accompagner dans sa démarche s’il/elle souhaite réduire ou arrêter.</p>
+
+      <p className="texte">Si un·e ami·e se confie à toi sur sa consommation et son envie d'arrêter, apporte-lui ton soutien. L'encourager, le/la féliciter et lui rappeler que chaque petit pas compte <b>est essentiel</b>. Tu peux aussi l'encourager à chercher des ressources ou à en parler à un·e professionnel·le, ou à participer à des groupes de parole ou des opérations comme le Mois sans Tabac.</p>
+
 
       <Separateur />
 
