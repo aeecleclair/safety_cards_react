@@ -60,7 +60,7 @@ const menuItems = [
       { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
       { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },
       { title: "💰 Précarité économique", link: "/prec_eco"  },
-      { title: "💸 Précarité menstruelle", link: "/prec_mens", inactive:true  },
+      { title: "💸 Précarité menstruelle", link: "/prec_mens"  },
       { title: "⛹️ Santé physique & sport", link: "/sport", inactive:true  },
       { title: "🛋️ Sédentarité", link: "/sedentarite"  },
       { title: "🏠 Risques domestiques", link: "/domestique" },

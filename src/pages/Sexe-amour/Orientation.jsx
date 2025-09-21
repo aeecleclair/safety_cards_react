@@ -119,7 +119,7 @@ const Orientation = () => {
 
       <div id="comingout">
         <h1 className="titre">Parler de son orientation</h1>
-          <p>
+          <p className="texte">
             Parler de son orientation, parfois appelé « coming out », c’est un choix personnel, libre et souvent progressif. On le fait quand on se sent prêt·e, ou on ne le fait pas : encore une fois, c'est un choix personnel. On peut commencer par soi-même, puis auprès d’un·e ami·e, proche ou d’un·e professionnel·le. Ce moment peut être source de soulagement, mais aussi de doutes : c’est normal.
           </p>
         
@@ -188,7 +188,7 @@ const Orientation = () => {
           ]}
         />
 
-        <p>
+        <p className="texte">
           L'Ecole Centrale de Lyon et le Crous proposent des dispositifs pour accompagner et soutenir : l'infirmière (qui est directement sur le campus), ou encore un service social d'écoute qui propose un accompagnement psychologique et administratif, et permet le signalement des violences et discriminations (LGBTphobes incluses) dans ses structures.
         </p>
 
