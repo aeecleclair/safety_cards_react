@@ -116,8 +116,8 @@ const Isolement = () => {
         <ImageTextPopup
           image="/assets/cartes/2_carreau.png"
           title="La carte 2♦"
-          shortText="La solitude étudiante"
-          longText=""
+          shortText="L'isolement étudiant"
+          longText="Ce sentiment d'isolement peut découler de divers facteurs tels que le changement d'environnement, la pression académique, ou encore la difficulté à établir de nouvelles relations sociales. Comprendre les causes et les manifestations de l'isolement est essentiel pour y faire face efficacement. En tant qu'étudiant, n'hésite pas à aller vers les autres si tu remarques qu'ils sont isolés, un simple geste, une simple question peuvent faire la différence."
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />

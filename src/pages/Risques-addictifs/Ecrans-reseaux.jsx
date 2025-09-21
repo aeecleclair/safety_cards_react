@@ -36,6 +36,7 @@ const resources2 = [
   {link: "https://youtube.com/playlist?list=PL8Ax_z5vzflz8JveM9VetLiZ3LPtFsttW&si=GZMy1ZTr3JaKGWsD",
   label: "Dopamine (série arte)",
   description: "Découvre toutes les techniques employées pour retenir ton attention",
+  emoji: "💊"
   },
   {
     link: "https://www.addictaide.fr/ecrans/",
@@ -157,7 +158,7 @@ const Ecrans_reseaux = () => {
     <TextImageRight
       imageSrc="/assets/phone-night.jpg"
       text={
-        <>Il est aussi possible d'installer des applications de <strong>contrôle du temps d'écran</strong>, d'utiliser les <strong>modes de concentration</strong> intégrés à certains téléphones ou encore d'installer des applications qui <strong>bloquent les éventuelles distractions</strong> (notifications, applications) selon l'heure et la durée d'utilisation. Enfin, n'oublie pas de protéger ta vue en <strong>diminuant la luminosité de ton écran</strong> dans la pénombre et en activant le <strong>filtre anti lumière bleue</strong>.
+        <>Il est aussi possible d'installer des applications de <strong>contrôle du temps d'écran</strong> ("Temps d'écran" sur Iphone, "Bien-être numérique" sur Android), d'utiliser les <strong>modes de concentration</strong> intégrés à certains téléphones ou encore d'installer des applications qui <strong>bloquent les éventuelles distractions</strong> (notifications, applications) selon l'heure et la durée d'utilisation. Tu peux aussi basculer ton <b>écran en noir et blanc</b> afin de réduire son attrait. Enfin, n'oublie pas de protéger ta vue en <strong>diminuant la luminosité de ton écran</strong> dans la pénombre et en activant le <strong>filtre anti lumière bleue</strong>.
         </>}
     />
 

@@ -100,7 +100,7 @@ const Effet_groupe = () => {
         image="./assets/cartes/dame_carreau.png"
         title="La carte D&diams;"
         shortText="Effet de groupe : informations et conseils"
-        longText="Effet de groupe: informations et conseils"
+        longText="Il peut être compliqué de voir qu'on est soumis à l'effet de groupe. Si tu te reconnais dans les 4 situations proposées, n'hésite pas à en parler, tu trouvers de nombreuses ressources sur cette page. Dans tous les cas, souviens-toi que tu n'es jamais obligé·e de faire quelque chose qui te met mal à l'aise. "
         textButton="⤢ Agrandir la carte"
         suit="carreau"
       />

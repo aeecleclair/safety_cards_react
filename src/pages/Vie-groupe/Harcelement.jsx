@@ -155,7 +155,7 @@ const Harcelement = () => {
         image="./assets/cartes/roi_carreau.png"
         title="La carte R♦"
         shortText="La notion de harcèlement"
-        longText=""
+        longText="Face au harcèlement, il  n'y a pas de doute à avoir quant à la position à adopter. Si tu es témoin, dénonce le et essaie d'être présent·e pour la victime, en la soutenant et l'orientant vers les bons services. Ta présence peut faire toute la différence."
         textButton="⤢ Agrandir la carte"
         suit="carreau"
       />

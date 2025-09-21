@@ -25,23 +25,6 @@ const items_agressions = [
 
 ];
 
-const resources_aerer = [
-
-  {
-    link: "/suicide",
-    emoji : "🗣️",
-    label: "Suicide",
-    description: "Comment réagir face à quelqu'un qui évoque des idées suicidaires ?",
-  },
-
-  {
-    link: "/automutil",
-    emoji : "🦓",
-    label: "Automutilation non suicidaire",
-    description: "Comment réagir face à quelqu'un qui s'automutile ?",
-  }
-];
-
 
 const resources_infos = [
 
@@ -141,7 +124,7 @@ const Soumission_chimique = () => {
         image="./assets/cartes/7_trefle.png"
         title="La carte 7&clubs;"
         shortText="Soumission chimique : informations et conseils"
-        longText="Soumission chimique : informations et conseils"
+        longText="Face à la soumission chimique, il existe différents moyens de prévenir. A l'extérieur, veille toujours sur tes ami·e·s et leurs verres, et accompagne-les si elles ou ils se sentent mal. En plus de ça, différents moyens sont mis en place à Centrale lors des soirées afin de réduire le risque de soumission chimique. Tu peux demander des protèges-verres gratuits à l'entrée de la soirée. Les rondes Peer-Care (gilets roses) sont aussi là pour veiller sur toi et tes ami·e·s. Enfin, n'hésite pas à te rendre en Zone Chill si tu ne te sens pas bien ou si tu as des doutes, un gilet rose sera là pour t'accompagner. Tu pourras aussi y retrouver du matériel de prévention."
         textButton="⤢ Agrandir la carte"
         suit="trefle"
       />
