@@ -133,6 +133,8 @@
     padding: 5px 10px;
     border-radius: 10px;
     cursor:pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .navbar-links {
@@ -147,6 +149,36 @@
     color: white;
     transition: all 0.3s ease;
 }
+
+/* Progression interne */
+.lien-navbar .lien-navbar-label { position: relative; z-index: 2; }
+.lien-navbar-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(178,33,51,0.15);
+    overflow: hidden;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.lien-navbar-progress-bar {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    background: linear-gradient(90deg,#b22133,#ff4d5d);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    transition: transform .25s ease-out;
+}
+.navbar.is-sticky .lien-navbar-progress-bar { transition: transform .18s linear; }
+
+/* Dark mode ajustements */
+body.dark-mode .lien-navbar-progress { background: rgba(255,255,255,0.18); }
+body.dark-mode .lien-navbar-progress-bar { background: linear-gradient(90deg,#B00000,#ea4c61); }
 
 
 
@@ -164,6 +196,10 @@ body.dark-mode .lien-navbar:hover {
 
 /* Version mobile : navbar comme le menu burger */
 @media (max-width: 1200px) {
+    .lien-navbar-progress
+    {
+        display: none;
+    }
     .navbar {
         display: flex;
         flex-direction: column;
