@@ -23,6 +23,21 @@ const chiffres_confiance = [
 ];
 
 
+const resources = [
+  {
+    link: "/anxiete",
+    emoji: "",
+    label: "Anxiété",
+    description: "Tu te sens souvent stressé·e ou anxieux·se ? Des solutions existent.",
+  },
+  {
+    link: "/isolement",
+    emoji: "",
+    label: "Isolement",
+    description: "Comment aider des personnes isolées et qui manquent de confiance en elles ?"
+  }
+]
+
 const resources_infos = [
   {
     link: "https://www.filsantejeunes.com/je-nai-pas-confiance-en-moi-7065#:~:text=Le%20propre%20du%20complexe%20est,et%20la%20confiance%20en%20soi",
@@ -34,6 +49,7 @@ const resources_infos = [
     link: "https://www.psychologies.com/Moi/Se-connaitre/Estime-de-soi",
     label: "Psychologies - Estime de soi",
     description: "Articles pour mieux se connaître et s'aimer",
+    imageSrc: "/assets/psychologies.jpg",
   },
 ];
 
@@ -89,9 +105,12 @@ const Confiance = () => {
       <ChiffresGroup chiffres={chiffres_confiance} />
 
       <h2 className="sous-titre-2">Pourquoi la confiance et l'estime de soi sont importantes ?</h2>
-      <p className="texte">La confiance en soi et l’estime de soi jouent un rôle majeur dans la vie d’un étudiant. Elles influencent la motivation, la participation en classe, la capacité à relever des défis et le bien-être psychologique. Par exemple, un manque de confiance peut conduire à l’auto-censure : de jeunes femmes en formation avouent souvent renoncer à parler en public ou à poursuivre certains projets par manque d’assurance​.
+      <p className="texte">La confiance en soi et l’estime de soi jouent un rôle majeur dans la vie d’un étudiant. Elles influencent la motivation, la participation en classe, la capacité à relever des défis et le bien-être psychologique. Par exemple, un manque de confiance peut conduire à l’auto-censure : des jeunes femmes en formation avouent souvent renoncer à parler en public ou à poursuivre certains projets par manque d’assurance​.
       <br/>Une estime de soi solide est aussi un facteur de résilience : elle aide à mieux gérer le stress, les échecs passagers et les relations sociales. À l’inverse, une estime de soi faible s’accompagne souvent d’anxiété et peut contribuer à un mal-être plus profond​. Concrètement, cela veut dire qu’un étudiant avec une bonne confiance en soi osera plus souvent prendre la parole en classe, demander de l’aide s’il ne comprend pas quelque chose, participer à des projets collectifs, et persévérer malgré les difficultés. Au contraire, sans confiance, on peut avoir tendance à se dire « je ne suis pas à la hauteur » et à abandonner plus vite. Travailler sa confiance et son estime de soi est donc important pour réussir ses études et pour préserver sa santé mentale.</p>
 
+      <ExternalLinkBlock
+        resources={resources}
+      />
 
       <ExternalLinkBlock
         title="Ressources utiles"
@@ -111,7 +130,7 @@ const Confiance = () => {
       <BulletList items={[
         "Fixe-toi des objectifs réalistes et félicite-toi quand tu les atteins, même s'ils sont petits.",
         "Parle-toi comme tu parlerais à un·e ami·e : avec bienveillance, encouragement et patience.",
-        "Pratique une activité physique régulière. Faire du sport ou simplement marcher stimule la production de dopamine (l’hormone du bien-être) et améliore l’image que l’on a de soi​. Par exemple, une séance de sport après les cours ou une promenade chaque jour peuvent aider à se sentir plus fort et plus sûr de soi.",
+        "Pratique une activité physique régulière. Faire du sport ou simplement marcher stimule la production de dopamine (l’hormone du bien-être) et améliore l’image que l’on a de soi​. Par exemple, une séance de sport après les cours ou une promenade chaque jour peuvent aider à se sentir plus fort·e et plus sûr·e de soi.",
         "Prends soin de toi. Un bon sommeil, une alimentation équilibrée et une hygiène de vie saine aident à se sentir bien dans son corps et dans sa tête​. Bien dormir et manger sainement augmente l’énergie et la clarté mentale, ce qui facilite la confiance au quotidien.",
         "Autorise-toi à faire des erreurs. Personne n’est parfait : faire des fautes ou échouer ponctuellement ne signifie pas qu’on est « nul ». Au contraire, chaque erreur est l’occasion d’apprendre. Même si tu as une mauvaise note, rappelle-toi que tu n’es pas ta note​.",
         "Apprends à gérer ton stress et tes émotions. Des techniques simples de respiration ou de relaxation peuvent aider à calmer l’anxiété (par exemple, inspirer lentement pendant 4 secondes, bloquer 4 secondes, expirer 4 secondes). Comprendre et nommer ses émotions (colère, tristesse, etc.) permet de les réguler.",

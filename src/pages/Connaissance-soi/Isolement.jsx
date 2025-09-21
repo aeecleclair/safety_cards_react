@@ -17,6 +17,7 @@ import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Workinprogress from "../../components/WorkInProgress";
+import { label } from "framer-motion/client";
 
 
 // Liens d'ancrage internes pour la barre de navigation de la page
@@ -61,11 +62,20 @@ const depression = [
   },
 ];
 
+const resources_conf = [
+  {
+    link: "/conf",
+    label: "Confiance & Estime de soi",
+    description: "Des pistes pour prendre confiance en soi et s'affirmer",
+    emoji: "💛",
+  },
+];
+
 // Plan d’action pour se (re)connecter
 const actionsRompre = [
   {
     title: "Identifier",
-    subtitle: "Reconnais les situations où tu te sens isolé (repas seul, soirées évitées…) et note-les sur une semaine",
+    subtitle: "Reconnais les situations où tu te sens isolé·e (repas seul·e, soirées évitées…) et note-les sur une semaine",
   },
   {
     title: "Fixer un micro-objectif",
@@ -117,7 +127,7 @@ const Isolement = () => {
           image="/assets/cartes/2_carreau.png"
           title="La carte 2♦"
           shortText="L'isolement étudiant"
-          longText="Ce sentiment d'isolement peut découler de divers facteurs tels que le changement d'environnement, la pression académique, ou encore la difficulté à établir de nouvelles relations sociales. Comprendre les causes et les manifestations de l'isolement est essentiel pour y faire face efficacement. En tant qu'étudiant, n'hésite pas à aller vers les autres si tu remarques qu'ils sont isolés, un simple geste, une simple question peuvent faire la différence."
+          longText="Ce sentiment d'isolement peut découler de divers facteurs tels que le changement d'environnement, la pression académique, ou encore la difficulté à établir de nouvelles relations sociales. Comprendre les causes et les manifestations de l'isolement est essentiel pour y faire face efficacement. En tant qu'étudiant·e, n'hésite pas à aller vers les autres si tu remarques qu'ils sont isolés, un simple geste, une simple question peuvent faire la différence."
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />
@@ -130,7 +140,12 @@ const Isolement = () => {
             "Charge de travail intensive à certaines périodes, limitant les temps sociaux",
             "Langue & culture différentes pour les étudiant·e·s internationaux",
             "Usage excessif des écrans et sédentarité",
+            "Manque de confiance en soi ou timidité",
           ]}
+        />
+
+        <ExternalLinkBlock
+          resources={resources_conf}
         />
 
         <p className="texte">
@@ -142,7 +157,7 @@ const Isolement = () => {
       </div>
 
       <h2 className="sous-titre-2">Tu te sens seul·e sans raison apparente ?</h2>
-      <p className="texte">La solitude peut être un symptôme de mal-être plus profond (stress, anxiété, dépression). Si tu ressens d’autres signes (tristesse, fatigue, irritabilité, troubles du sommeil ou de l’appétit…), n’hésite pas à consulter un·e professionnel·le de santé.
+      <p className="texte">La solitude peut être un <b>symptôme de mal-être plus profond</b> (stress, anxiété, dépression). Si tu ressens d’autres signes (tristesse, fatigue, irritabilité, troubles du sommeil ou de l’appétit…), n’hésite pas à consulter un·e professionnel·le de santé.
       </p>
 
       <ExternalLinkBlock resources={depression} />
@@ -201,15 +216,15 @@ const Isolement = () => {
       <h1 className="titre">Aider une personne isolée</h1>
       </div>
       <p className="texte">
-        Tu connais quelqu’un qui semble isolé ? Voici quelques conseils pour l’aider à se (re)connecter :
+        Tu connais une personne qui semble isolée ? Voici quelques conseils pour l’aider à se (re)connecter :
       </p>
 
       <BulletList
         items={[
           "Prends des nouvelles régulièrement, même un simple message peut faire la différence.",
           "Propose des activités ensemble : une sortie, un café, ou même une visio.",
-          "Sois à l’écoute sans juger, laisse-lui exprimer ses ressentis.",
-          "Encourage-le·la à participer à des événements ou à rejoindre des groupes.",
+          "Sois à l’écoute sans juger, laisse-la exprimer ses ressentis.",
+          "Encourage-la à participer à des événements ou à rejoindre des groupes.",
           "Sois patient·e, le processus d'intégration sociale peut prendre du temps, et chacun avance à son rythme.",
           ]}
       />

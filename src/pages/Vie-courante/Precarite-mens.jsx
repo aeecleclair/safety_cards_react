@@ -144,7 +144,10 @@ const PrecariteMens = () => {
 
       </div>
       
-        <ExternalLinkBlock resources={resources} />
+        <ExternalLinkBlock         
+        title="Ressources utiles"
+        subtitle="Sites pour mieux comprendre la précarité menstruelle et agir"
+        resources={resources} />
 
       <Separateur />
 
