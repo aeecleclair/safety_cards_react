@@ -168,6 +168,15 @@ const PrecariteMens = () => {
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
 
       />
+            <ContactCard
+        image="/assets/parlons_regles.png" 
+        title="Parlons règles"
+        subtitle="Questions fréquentes sur les règles et la précarité menstruelle"
+        hours="24/7 sur le chat en ligne"
+        textButton="Voir la FAQ"
+        link="https://www.parlonsregles.fr/Jeunes/QuestionsUtilisateurs"
+      />
+
 
 
       <Separateur />
