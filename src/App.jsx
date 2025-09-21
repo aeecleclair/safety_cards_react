@@ -165,8 +165,8 @@ function App() {
 
         //Mode soirée
         <Route path="/mode-soiree" element={<AccueilModeSoiree />} />
-  <Route path="/contacts-urgence" element={<ContactsUrgence />} />
-  <Route path="/plan-soiree" element={<PlanSoiree />} />
+        <Route path="/contacts-urgence" element={<ContactsUrgence />} />
+        <Route path="/plan-soiree" element={<PlanSoiree />} />
 
 
         <Route path="*" element={<NotFound />} />

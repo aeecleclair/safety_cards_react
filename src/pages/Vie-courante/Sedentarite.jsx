@@ -25,7 +25,7 @@ const ecrans = [
 const conseilsBouger = [
   { 
     title: "Réduire le temps assis", 
-    subtitle: "Fais une pause toutes les 30 à 60 minutes : lève-toi, marche, fais quelques étirements." 
+    subtitle: "Fais une pause active toutes les 30 à 60 minutes : lève-toi, marche, fais quelques étirements." 
   },
   { 
     title: "Intégrer du mouvement au quotidien", 

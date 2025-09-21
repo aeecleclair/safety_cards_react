@@ -20,41 +20,15 @@ const data = [
   { number: "+50%", title: "Des jeunes LGBT+", description: "rapportent avoir déjà souffert d’isolement ou d’anxiété liés à leur orientation" },
 ];
 
-const ressourcesSpecifiques = [
+const genre = [
   {
-    link: "https://www.mag-jeunes.org/",
-    imageSrc: "/assets/mag.png",
-    label: "MAG Jeunes LGBT+ Lyon",
-    description: "Permanences, écoute, dépistage gratuit, santé sexuelle à Lyon"
+    link: "/genre",
+    label: "Identité de genre",
+    description: "Au fait, c'est quoi le genre ?",
+    emoji : "🏳️‍⚧️",
   }
 ];
 
-const resources_sites = [
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Conseils santé affective, sexuelle, amour, mal-être : tu peux y poser toutes tes questions !"
-  },
-  {
-    link: "https://commentonsaime.fr/ma-sexualite/lamour-et-moi/comment-connaitre-son-orientation-sexuelle/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s’aime ?",
-    description: "Explications, FAQ & conseils pour questionner son orientation"
-  },
-  {
-    link: "https://www.crous-lyon.fr/social-et-accompagnement/",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Service Social du CROUS de Lyon",
-    description: "Écoute, aide psychologique & administrative, changement de prénom, etc. à Lyon"
-  },
-  {
-    link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/lgbtq-rhone-309796.kjsp",
-    imageSrc: "/assets/logo_sante_lyon.png",
-    label: "Santé mentale & LGBTQI+ Rhône",
-    description: "Ligne d’écoute, violence/discriminations, aide affective & sexuelle dans le Rhône"
-  },
-];
 
 const ressourcesGenerales = [
   {
@@ -74,36 +48,24 @@ const ressourcesGenerales = [
     imageSrc: "/assets/le_refuge.png",
     label: "Le Refuge – Ligne d'écoute",
     description: "Jeunes LGBT+ en détresse — appel ou SMS"
+  },
+  {
+    link: "https://www.instagram.com/rainbow.ecl/?hl=fr",
+    imageSrc: "/assets/rainbow.jpg",
+    label: "Rainbow - Compte Instagram",
+    description: "Club LGBTQIA+ de l'école Centrale de Lyon"
   }
 ];
 
 const resources_Autres_pages = [
   {
-    link: "/genre",
-    emoji : "??",
-    label: "Identité de genre",
-    description: "Comprendre le genre, les différentes identités et mieux se repérer dans son propre parcours",
-  },
-
-  {
     link: "/discri",
-    emoji : "??",
+    emoji : "🟰",
     label: "Discriminations",
     description: "Comment réagir et soutenir face aux discriminations ?",
   }
 ];
 
-const localContacts = [
-  {
-    image: "/assets/refuge_logo.png",
-    title: "Le Refuge – Ligne d'écoute",
-    subtitle: "Jeunes LGBT+ en détresse — appel ou SMS",
-    phone: "06 31 59 69 50",
-    hours: "7j/7, de 8h à minuit",
-    textButton: "Voir le site web",
-    link: "https://le-refuge.org/la-ligne-decoute/"
-  }
-];
 
 const Orientation = () => {
   return (
@@ -128,6 +90,8 @@ const Orientation = () => {
         </p>
 
         <h2 className="sous-titre-2">Quelques repères</h2>
+
+        <p className="texte"> Il peut y avoir autant d'orientations sexuelles que de personnes. On dénombre toutefois le plus souvent les 6 suivantes :  </p>
         <BulletList
           items={[
             "Hétérosexualité : attirance affective et/ou sexuelle pour les personnes d’un genre différent du sien",
@@ -137,13 +101,22 @@ const Orientation = () => {
             "Pansexualité : attirance indépendante du genre ou du sexe",
             "Questionnement : être dans une période d’incertitude, d'exploration, sans devoir tout savoir"
           ]}
+
         />
+
+        <ExternalLinkBlock resources={genre} />
+
         <ChiffresGroup chiffres={data} />
+
+        <h2 className="sous-titre-2">Qu'est ce que l'hétéronormativité ?</h2>
+
+        <p className="texte">C'est le fait de considérer que tout le monde est hétérosexuel par défaut, sauf mention contraire. Ainsi, il est supposé qu'une femme sera attirée par les hommes et un homme par les femmes. </p>
+        <p className="texte">Cela pose problème pour les personnes ne se définissant pas comme hétérosexuelles, car leurs expériences et identités peuvent être invalidées ou ignorées. Il est ainsi plus difficile pour elles de s'accepter et de se faire accepter par leur entourage, ce qui peut les décourager de faire leur coming out ou de parler de leurs sentiments.</p>
+
       </div>
 
       <Separateur />
 
-      {/* Parler de son orientation */}
       <div id="comingout">
         <h1 className="titre">Parler de son orientation</h1>
           <p>
@@ -158,17 +131,28 @@ const Orientation = () => {
           "Cherche des témoignages, groupes de parole pour ne pas te sentir seul·e"
         ]} />
 
-        {/* Liens d'information */}
-        {resources_sites.slice(0, 2).map((site, idx) => (
+        <ContactCard
+          image="/assets/fsj.png"
+          title="Fil Santé Jeunes"
+          subtitle="Écoute anonyme & gratuite (12-25 ans)"
+          phone="0 800 235 236"
+          hours="Tous les jours de 9h à 23h"
+          textButton="Voir le site web"
+          link="https://www.filsantejeunes.com/"
+        />
+
           <ContactCard
-            key={idx}
-            image={site.imageSrc}
-            title={site.label}
-            subtitle={site.description}
+            image="/assets/logo-cosa.svg"
+            title="Comment on s'aime ?"
+            subtitle="Professionnels pour t'écouter et t'accompagner"
+            hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
             textButton="Voir le site web"
-            link={site.link}
+            link="https://commentonsaime.fr/"
+            bgColor="#f6a21e"
+            textColor="#ffffff"
           />
-        ))}
+
+
       </div>
 
         <ExternalLinkBlock
@@ -177,9 +161,10 @@ const Orientation = () => {
           resources={ressourcesGenerales}
         />
 
+        <h2 className="sous-titre-2">Tu subis des discriminations ?</h2>
+        <p className="texte">Si tu es victime de discriminations en raison de ton orientation sexuelle, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
+
         <ExternalLinkBlock
-          title=""
-          subtitle="Tu te poses également des questions sur ton identité de genre ? Tu subis des discriminations ? N'hésite pas à continuer à te renseigner, tu n'es jamais seul·e."
           resources={resources_Autres_pages}
         />
 
@@ -234,7 +219,7 @@ const Orientation = () => {
       </div>
 
       <Separateur />
-      <p className="texte"><em><b>Sources :</b> IFOP 2023, SOS Homophobie, MAG Jeunes Lyon, Le Refuge, Crous de Lyon, Santé mentale Rhône</em></p>
+      <p className="texte"><em><b>Sources :</b> IFOP 2023, SOS Homophobie, MAG Jeunes Lyon, Le Refuge, Crous de Lyon, Santé mentale Rhône, Question Sexualité</em></p>
     </div>
   );
 };
