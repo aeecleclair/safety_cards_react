@@ -7,6 +7,7 @@ import { Navbar, BulletList, TextImageRight } from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
+import { img } from "framer-motion/m";
 
 const navLinks = [
   { label: "Qu'est-ce que l’orientation sexuelle ?", target: "definitions" },
@@ -29,6 +30,28 @@ const genre = [
   }
 ];
 
+const outing = [
+  {
+    link: "https://www.lgbt-colors.com/outing-definition/",
+    label: "Outing : définition et impact social",
+    description: "Concept et historique, débats éthiques, sensibilisation",
+  }
+];
+
+const ressources_sex = [
+  {
+    link: "https://www.questionsexualite.fr/",
+    label: "QuestionSexualite.fr",
+    description: "Site d'information sur la sexualité et l'orientation sexuelle",
+    imageSrc: "/assets/question_sexualite.png",
+  },
+  {
+    link: "/sex",
+    label: "Sexualité",
+    description: "La page pour en apprendre davantage sur la contraception et le sexualité",
+    emoji:"😘"
+  }
+];
 
 const ressourcesGenerales = [
   {
@@ -94,12 +117,12 @@ const Orientation = () => {
         <p className="texte"> Il peut y avoir autant d'orientations sexuelles que de personnes. On dénombre toutefois le plus souvent les 6 suivantes :  </p>
         <BulletList
           items={[
-            "Hétérosexualité : attirance affective et/ou sexuelle pour les personnes d’un genre différent du sien",
-            "Homosexualité : attirance affective et/ou sexuelle pour les personnes du même genre",
-            "Bisexualité : attirance pour plusieurs genres",
-            "Asexualité : absence ou très faible attirance sexuelle, mais possible attirance romantique",
-            "Pansexualité : attirance indépendante du genre ou du sexe",
-            "Questionnement : être dans une période d’incertitude, d'exploration, sans devoir tout savoir"
+            <><b>Hétérosexualité :</b> attirance affective et/ou sexuelle pour les personnes d’un genre différent du sien</>,
+            <><b>Homosexualité :</b> attirance affective et/ou sexuelle pour les personnes du même genre</>,
+            <><b>Bisexualité :</b> attirance pour plusieurs genres</>,
+            <><b>Asexualité :</b> absence ou très faible attirance sexuelle, mais possible attirance romantique</>,
+            <><b>Pansexualité :</b> attirance indépendante du genre ou du sexe</>,
+            <><b>Questionnement :</b> être dans une période d’incertitude, d'exploration, sans devoir tout savoir</>
           ]}
 
         />
@@ -108,12 +131,43 @@ const Orientation = () => {
 
         <ChiffresGroup chiffres={data} />
 
+        <h2 className="sous-titre-2">Comment connaitre mon orientation sexuelle ?</h2>
+
+        <p className="texte">Il est normal de se poser des questions sur son orientation sexuelle, au gré de sa vie et de ses expériences. Il est donc tout à fait normal que tu aies des doutes ou des questionnements.</p>
+        <p className="texte">Mettre des mots sur ce que l'on ressent peut prendre du temps, et on ne se retrouve pas forcément dans une orientation précise. Tu as le droit ne pas savoir. Ce n'est pas parce qu'un garçon est attiré par un garçon qu'il est gay ou bisexuel. Tu as le droit d'expérimenter, cela t'aidera à te découvrir, et te permettra peut-être de découvrir de nouveaux plaisirs ! </p>
+        <p className="texte">Si tu en ressens le besoin, tu peux en parler à des personnes de confiance, ou à des professionnel·le·s, par exemple via le tchat de Comment on s'aime ?.</p>
+
+          <ContactCard
+            image="/assets/logo-cosa.svg"
+            title="Comment on s'aime ?"
+            subtitle="Professionnels pour t'écouter et t'accompagner"
+            hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
+            textButton="Voir le site web"
+            link="https://commentonsaime.fr/"
+            bgColor="#f6a21e"
+            textColor="#ffffff"
+          />
+
+
         <h2 className="sous-titre-2">Qu'est ce que l'hétéronormativité ?</h2>
 
         <p className="texte">C'est le fait de considérer que tout le monde est hétérosexuel par défaut, sauf mention contraire. Ainsi, il est supposé qu'une femme sera attirée par les hommes et un homme par les femmes. </p>
         <p className="texte">Cela pose problème pour les personnes ne se définissant pas comme hétérosexuelles, car leurs expériences et identités peuvent être invalidées ou ignorées. Il est ainsi plus difficile pour elles de s'accepter et de se faire accepter par leur entourage, ce qui peut les décourager de faire leur coming out ou de parler de leurs sentiments.</p>
 
+
+        <h2 className="sous-titre-2">Qu'est ce que l' «outing» ?</h2>
+        <p className="texte">L'outing est le fait de révéler l'orientation sexuelle ou l'identité de genre d'une personne sans son consentement. Cette pratique est généralement considérée comme une violation de la vie privée. L'orientation sexuelle est privée, et communiquer dessus doit être géré par l’individu lui-même. <b>Chaque personne a le droit de choisir quand et comment elle souhaite partager ces aspects de son identité.</b>
+          </p>
+
+          <p className="texte">L'outing peut avoir des conséquences graves sur la vie de la personne concernée, notamment en termes de sécurité, de santé mentale et de relations sociales.</p>
+
+        <ExternalLinkBlock resources={outing} />
       </div>
+
+      <ExternalLinkBlock
+          title="Pour en apprendre davantage sur la sexualité et l'orientation sexuelle"
+          resources={ressources_sex}
+        />
 
       <Separateur />
 
@@ -141,19 +195,18 @@ const Orientation = () => {
           link="https://www.filsantejeunes.com/"
         />
 
-          <ContactCard
-            image="/assets/logo-cosa.svg"
-            title="Comment on s'aime ?"
-            subtitle="Professionnels pour t'écouter et t'accompagner"
-            hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
-            textButton="Voir le site web"
-            link="https://commentonsaime.fr/"
-            bgColor="#f6a21e"
-            textColor="#ffffff"
-          />
-
 
       </div>
+
+
+        <h2 className="sous-titre-2">Tu subis des discriminations ?</h2>
+        <p className="texte">Si tu es victime de discriminations en raison de ton orientation sexuelle, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
+
+
+        
+        <ExternalLinkBlock
+          resources={resources_Autres_pages}
+        />
 
         <ExternalLinkBlock
           title="Ressources pour aller plus loin"
@@ -161,16 +214,10 @@ const Orientation = () => {
           resources={ressourcesGenerales}
         />
 
-        <h2 className="sous-titre-2">Tu subis des discriminations ?</h2>
-        <p className="texte">Si tu es victime de discriminations en raison de ton orientation sexuelle, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
 
-        <ExternalLinkBlock
-          resources={resources_Autres_pages}
-        />
 
       <Separateur />
 
-      {/* Accompagner & soutenir */}
       <div id="soutien">
         <h1 className="titre">Accompagner & soutenir</h1>
         <p className="texte">
@@ -219,7 +266,7 @@ const Orientation = () => {
       </div>
 
       <Separateur />
-      <p className="texte"><em><b>Sources :</b> IFOP 2023, SOS Homophobie, MAG Jeunes Lyon, Le Refuge, Crous de Lyon, Santé mentale Rhône, Question Sexualité</em></p>
+      <p className="texte"><em><b>Sources :</b> IFOP 2023, SOS Homophobie, MAG Jeunes Lyon, Le Refuge, Crous de Lyon, Santé mentale Rhône, Question Sexualité, Comment on s'aime ?</em></p>
     </div>
   );
 };
