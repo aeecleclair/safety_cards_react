@@ -246,8 +246,8 @@ const Anxiete = () => {
         <BulletList items={[
           "Les symptômes d'une crise de panique sont similaires à ceux d'un infarctus ou d'une autre urgence médicale. Si tu n'es pas sûr·e que la personne fait une crise de panique, applique les premiers secours physiques et appelle les urgences (15 ou 112).",
           "Dans le cas d'une attaque de panique, reste calme et rassure la personne en indiquant que tu es là pour l'aider. Si elle accepte ton aide, applique les étapes suivantes.",
-          "Invite-la à se diriger vers un endoit calme et fais-la s'asseoir.",
-          "Utilise des phrases courtes. Demande ce qui pourrait l'aider à se sentir mieux, ou s'il a un contact à appeler.",
+          "Invite-la à se diriger vers un endroit calme et fais-la s'asseoir.",
+          "Utilise des phrases courtes. Demande ce ui pourrait l'aider à se sentir mieux, ou s'il a un contact à appeler.",
           "Ne minimise pas ses sensations. Explique lui que même si la crise est effrayante, elle n'est ni dangereuse, ni mortelle. "
         ]} />
 
