@@ -53,6 +53,44 @@ const resources_pénale2 = [
   }
 ];
 
+const autres_pages_global = [
+  {
+    link: "/harcel",
+    emoji : "??",
+    label: "Harcèlement",
+    description: "Comment agir face au harcèlement ?"
+  },
+  {
+    link: "/isolement",
+    emoji : "??",
+    label: "Isolement",
+    description: "Que puis-je faire si je me sens à l'écart ?"
+  },
+  {
+    link: "/anxiete",
+    emoji : "??",
+    label: "Anxiété",
+    description: "Que puis-je faire si je me sens anxieux ?",
+  }
+];
+
+const autres_pages_sexisme = [
+  {
+    link: "/vss",
+    emoji : "??",
+    label: "Violences sexistes et sexeulles",
+    description: "Comment réagir face à une VSS ?"
+  }
+];
+
+const autres_pages_lgbtphobie = [
+  {
+    link: "/cyber_harcel",
+    emoji : "??",
+    label: "Cyberharcèlement",
+    description: "Comment réagir face à du cyberharcèlement ?"
+  }
+];
 
 const ressourcesUtiles = [
   {
@@ -204,6 +242,14 @@ const Discriminations = () => {
 
         />
       </div>
+      <p className="texte">
+        Tu subis du <b>harcèlement</b> ? Tu te sens <b>isolé</b> ? Tu es <b>anxieux</b> ? N'hésite pas à visiter d'autres pages pour continuer à te renseigner :
+      </p>
+        <ExternalLinkBlock
+        title=""
+        subtitle=""
+        resources={autres_pages_global}
+      />
 
       <Separateur />
 
@@ -211,18 +257,86 @@ const Discriminations = () => {
       {/* Partie 2 : Discriminations sexistes */}
       <div id="sexistes">
         <h1 className="titre">Discriminations sexistes</h1>
-        <TextImageRight
-          imageSrc="/assets/sexisme.jpg"
-          text="Les discriminations sexistes concernent toute inégalité ou violence basée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités dans les opportunités. Les femmes, les personnes non-binaires ou trans peuvent être particulièrement exposées."
-        />
+        <p>
+          Les discriminations sexistes concernent toute inégalité ou violence basée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités dans les opportunités. Le sexisme peut comprendre la croyance qu'un sexe ou qu'un genre serait intrinsèquement supérieur à l'autre. Les femmes, les personnes non-binaires ou les personnes trans peuvent être particulièrement exposées.
+        </p>
+        <p>
+          Discriminations ou conséquences des discriminations sexistes fréquentes :
+        </p>
         <BulletList items={[
           "Violences verbales ou sexuelles, harcèlement de rue ou dans les études",
           "Inégalités de traitement ou d’accès selon le genre",
-          "Pression sociale sur le “rôle de genre” attendu"
+          "Pression sociale sur le “rôle de genre” attendu",
+          "Modifications de comportement pour éviter les agressions (se taire, éviter certains lieux, etc.)"
         ]} />
         <p className="texte">
-          Les établissements comme le CROUS ou les universités doivent proposer des cellules d’écoute, des services sociaux ou des référent·es égalité pour accompagner les victimes.
+          Selon le rapport 2024 du Haut Conseil à l’Égalité, 9 femmes sur 10 ont déjà renoncé à certaines actions ou modifié leur comportement pour éviter le sexisme.
         </p>
+        <ExternalLinkBlock
+          title="Quelques ressources pour aller plus loin"
+          subtitle="Informations, droits, signalements"
+          resources={[
+            {
+              link: "https://questionsexualite.fr/lutter-contre-les-violences-et-discriminations/la-violence-dans-la-societe/qu-est-ce-que-le-sexisme-dans-la-societe",
+              imageSrc: "/assets/question_sexualite.png",
+              label: "Question sexualité -",
+              description: "pour plus d'informations sur le sexisme dans la société"
+            },
+            {
+              link: "https://www.service-public.fr/particuliers/actualites/A16929",
+              imageSrc: "/assets/3919.png",
+              label: "3919 -",
+              description: "numéro national de référence pour l'écoute et l'orientation des femmes victimes de violences"
+            },
+            {
+              link: "https://www.service-public.fr/particuliers/vosdroits/F34550",
+              imageSrc: "/assets/service_public.png",
+              label: "Service public -",
+              description: "pour définir, prouver et signaler un outrage sexiste"
+            }
+          ]}
+        />
+
+        <ContactCard
+          image="/assets/filactions.png" 
+          title="Filaction"
+          subtitle="Une association luttant contre le sexisme à Lyon"
+          phone=""
+          email=""
+          hours=""
+          textButton="Voir le site"
+          link="https://www.filactions.org/association-filactions-lyon-qui-sommes-nous/"
+
+          bgColor="#ffffffff"    //informations facultatives
+          textColor="#930480ff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+        />
+        <p className="texte">
+          Depuis 2023, le 25 janvier marque la Journée nationale contre le sexisme. 
+          Instituée par le Haut Conseil à l’Égalité, elle vise à sensibiliser aux comportements sexistes et à mobiliser la société contre toutes les formes d’inégalités. 
+        </p>
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={[
+            {
+              link: "https://www.egalite-femmes-hommes.gouv.fr/25-janvier-toutes-et-tous-mobilises-contre-le-sexisme",
+              imageSrc: "/assets/min_egalite.png",
+              label: "Ministère chargé de l'égalité entre les femmes et les hommes et de la lutte contre les discriminations -",
+              description: "pour en découvrir plus sur le 25 janvier"
+            }
+          ]}
+        />
+
+        <p>
+          Les discriminations sexistes peuvent être accompagnées de violences sexistes et sexuelles :
+          Qu'est-ce qu'une VSS ? Comment réagir ? Si tu te poses ces questions, n'hésite pas à t'informer juste ici : 
+        </p>
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={autres_pages_sexisme}
+        />
+
       </div>
 
       <Separateur />
@@ -238,18 +352,74 @@ const Discriminations = () => {
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />
-        <TextImageRight
-          imageSrc="/assets/racisme.jpg"
-          text="Les discriminations racistes sont fondées sur l’origine, la nationalité, la couleur de peau, ou des attributs culturels ou religieux. Elles se manifestent parfois par des propos, des exclusions sociales, des violences ou des inégalités d’accès."
-        />
+        <p className="texte">
+          Les discriminations racistes sont fondées sur l’origine, la nationalité, la couleur de peau, ou des attributs culturels ou religieux. Elles se manifestent parfois par des propos, des exclusions sociales, ou des violences, ou encore des stéréotypes dans les cours, le logement ou même stages et emplois.
+        </p>
+        <p className="texte">
+          Discriminations ou conséquences des discriminations racistes fréquentes :
+        </p>
         <BulletList items={[
           "Refus de logement ou hébergement",
           "Propos ou stéréotypes dans les cours ou au sein du campus",
-          "Discriminations dans les échanges sociaux ou dans l’évaluation"
+          "Discriminations dans l’évaluation ou accès aux stages, emplois",
+          "Isolement ou rejet des pairs, micro-agressions quotidiennes"
         ]} />
         <p className="texte">
-          Pour les étudiants racisés ou issus de l’immigration, ces discriminations peuvent s’additionner à d’autres formes — genre, orientation sexuelle — et avoir de graves conséquences psychologiques/scolaires.  
+          En France, environ 18 % des personnes de 18-49 ans déclarent avoir subi des traitements inégalitaires ou discriminatoires selon les dernières enquêtes. Ce taux est en hausse par rapport aux années précédentes, surtout parmi les personnes d’origine immigrée.
         </p>
+
+
+        {/* Solutions externes spécifiques */}
+        <ExternalLinkBlock
+          title="Associations spécialisées"
+          subtitle="Ressources locales et nationales pour signaler ou s'informer"
+          resources={[
+            {
+              link: "https://www.licra.org/signaler",
+              imageSrc: "/assets/licra.png",
+              label: "LICRA : Ligue Internationale Contre le Racisme et l'Antisémitisme -",
+              description: "Pour signaler des actes racistes"
+            },
+            {
+              link: "https://egalitecontreracisme.fr/ce-que-dit-la-loi",
+              imageSrc: "/assets/egalite_contre_racisme.png",
+              label: "Egalité contre le racisme -",
+              description: "Pour en apprendre plus sur la loi, les propos racistes et les discriminations racistes"
+            }
+          ]}
+        />
+
+        <ContactCard
+          image="/assets/egalite_contre_racisme.png"
+          title="SOS Racisme Lyon"
+          subtitle="Contact local pour les discriminations racistes"
+          phone="04 78 95 01 38"
+          email="contact@sosracismerhone.org"
+          hours="Permanences & accueil selon disponibilité"
+          textButton="Voir le site"
+          link="https://egalitecontreracisme.fr/sos-racisme-lyon"
+          
+          bgColor="#ffffffff"    //informations facultatives
+          textColor="#e90202ff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+        />
+
+
+        <p className="texte">
+          Chaque année, courant mars, a lieu la semaine d’éducation et d’actions contre le racisme et l’antisémitisme, organisée autour du 21 mars, qui est la journée internationale de lutte contre le racisme. De nombreuses initiatives éducatives, associatives et institutionnelles sont proposées à cette occasion partout en France.
+        </p>
+                <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={[
+            {
+              link: "https://www.education.gouv.fr/la-semaine-d-education-et-d-actions-contre-le-racisme-et-l-antisemitisme-5204",
+              imageSrc: "/assets/min_ed.png",
+              label: "Ministère de l'éducation nationale -",
+              description: "Pour en apprendre plus sur la semaine d'éducation et d'actions contre le racisme et l'antisémitisme"
+            }
+          ]}
+        />
       </div>
 
       <Separateur />
@@ -265,36 +435,89 @@ const Discriminations = () => {
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />
-        <TextImageRight
-          imageSrc="/assets/lgbtphobia.jpg"
-          text="Les discriminations LGBT-phobes concernent toute personne en raison de son orientation sexuelle ou identité de genre. Elles se manifestent par des propos, des refus, harcèlement, violences, exclusion sociale."
-        />
-        <BulletList items={[
-          "Propos ou gestes insultants, humiliants ou stéréotypes",
-          "Rejet ou isolement dans les sphères personnelles ou scolaires",
-          "Violences physiques ou menaces",
-          "Discriminations dans l'accès au logement, services, ou stages/emploi"
-        ]} />
+
         <p className="texte">
-          En France, les actes LGBT-phobes sont de plus en plus signalés. Par exemple, le CROUS de Lyon dispose d’un dispositif de signalement des violences, discriminations et propos discriminatoires à caractère sexiste, sexuel ou discriminatoire.  
+          Les discriminations LGBT-phobes regroupent entre autre l’homophobie, la lesbophobie, la biphobie et la transphobie. 
+          Elles sont souvent fondées sur des préjugés ou stéréotypes liés à l’orientation sexuelle ou à l’identité de genre. 
+          Ces discriminations portent atteinte aux droits fondamentaux et à la dignité des personnes concernées.
         </p>
+
+        <p className="texte">
+          Discriminations ou conséquences des discriminations LGBT-phobes fréquentes :
+        </p>
+        <BulletList items={[
+          "Propos ou gestes insultants, humiliants ou stéréotypés",
+          "Rejet ou isolement dans les sphères personnelles, scolaires ou professionnelles",
+          "Violences physiques, menaces ou harcèlement",
+          "Discriminations dans l'accès au logement, aux soins, aux stages ou à l'emploi",
+          "Cyber-harcèlement, outing forcé ou contenus haineux en ligne",
+          "Invisibilisation des identités ou refus de reconnaissance (ex. prénom d’usage)"
+        ]} />
+
+        <p className="texte">
+          En France, les enquêtes récentes montrent que les personnes LGBT+ sont encore très exposées aux discriminations, en particulier les jeunes et les personnes transgenres. 
+          Les conséquences peuvent être graves : isolement, anxiété, dépression ou difficultés d’accès aux droits.
+        </p>
+
+        {/* Solutions externes spécifiques */}
         <ExternalLinkBlock
-          title="Associations & plateformes LGBT+ utiles"
-          subtitle="Pour soutien, signalement ou information"
+          title="Associations spécialisées"
+          subtitle="Soutien, signalement et informations"
           resources={[
             {
-              link: "https://sos-homophobie.org/",
-              imageSrc: "/assets/logo_sos_homophobie.png",
-              label: "SOS Homophobie",
-              description: "Écoute, soutien & accompagnement pour les victimes LGBT-phobes"
+              link: "https://www.sos-homophobie.org/",
+              imageSrc: "/assets/SOS_homophobie.jpg",
+              label: "SOS Homophobie -",
+              description: "Ligne d’écoute, d'aide et de signalement"
             },
             {
-              link: "https://outrans.org/",
-              imageSrc: "/assets/logo_outrans.png",
-              label: "OUTrans",
-              description: "Lutte contre la transphobie & espaces ressources trans"
+              link: "https://questionsexualite.fr/lutter-contre-les-violences-et-discriminations/la-violence-dans-la-societe/que-sont-les-lgbtphobies",
+              imageSrc: "/assets/question_sexualite.png",
+              label: "Question sexualité -",
+              description: "pour s'informer sur les LGBTphobies"
             }
           ]}
+        />
+
+        {/* Ressource locale à Lyon */}
+        <ContactCard
+          image="/assets/centre_lgbti_lyon.png"
+          title="Centre LGBTI+ Lyon"
+          subtitle="Espace associatif et ressource locale"
+          phone=""
+          email="contact@centrelgbtilyon.org"
+          hours="Accueil & permanences : mardi et mercredi de 17h30 à 19h30, vendredi de 14h à 19h"
+          textButton="Voir le site"
+          link="https://www.centrelgbtilyon.org/"
+          bgColor="#ffffff"
+          textColor="#ec62f1ff"
+        />
+
+        <p className="texte">
+          Chaque année, le 17 mai est la Journée internationale de lutte contre l’homophobie, la transphobie et la biphobie. 
+          De nombreuses initiatives associatives, universitaires et institutionnelles sont organisées pour sensibiliser et promouvoir l’égalité des droits.
+        </p>
+
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={[
+            {
+              link: "https://www.fondationemergence.org/nouvelles/lhistoire-du-17-mai-origines-et-evolution-de-la-journee-internationale-contre-lhomophobie-et-la-transphobie",
+              imageSrc: "/assets/fondation_emergence.png",
+              label: "Fondation émergence",
+              description: "Histoire et importance de la Journée internationale contre l’homophobie et la transphobie"
+            }
+          ]}
+        />
+
+        <p>
+          Tu subis du cyberharcèlement et tu ne sais pas comment réagir ? Tu n'es pas seul·e :
+        </p>
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={autres_pages_lgbtphobie}
         />
       </div>
 
@@ -302,22 +525,48 @@ const Discriminations = () => {
 
       {/* Appel à l’aide / réaction */}
       <div id="temoin">
-        <h1 className="titre">Que faire en tant que témoin ?</h1>
+        <h1 className="titre">Que faire en tant que victime/témoin de discrimination ?</h1>
+        <p className="texte">
+          Être confronté·e à une discrimination, que l’on en soit directement victime ou témoin, n’est jamais simple. 
+          On peut se sentir choqué·e, impuissant·e ou craindre de mal réagir. Pourtant, il existe toujours des façons d’agir ou de chercher du soutien. 
+          Même de petits gestes comptent : parler de ce qui s’est passé, tendre une oreille attentive, ou simplement ne pas laisser la situation dans le silence. 
+          L’important est de ne pas rester isolé·e : tu n’as pas à porter cela seul·e, des personnes et des dispositifs existent pour t’accompagner.
+        </p>
+
+
         <ListeNumerotee
           title="Actions possibles"
-          subtitle=" étapes pour réagir face à une discrimination"
+          subtitle="Quelques étapes pour réagir face à une discrimination"
           items={[
-            { title: "Parler", subtitle: "Tu n’es pas seul·e — confier ce que tu vis ou ce que tu vois à une personne de confiance" },
-            { title: "Collecter des preuves", subtitle: "messages, photos, témoignages, dates et lieux, même anonymes si possible" },
-            { title: "Utiliser les dispositifs internes", subtitle: "infirmier·e, référent·e égalité, cellule de signalement du CROUS ou de l’établissement" },
-            { title: "Se tourner vers des services externes", subtitle: "Défenseur des droits, associations spécialisées (SOS Homophobie, LICRA, etc.)" },
+            { title: "Parler", subtitle: "Tu n’es pas seul·e — confie ce que tu vis ou ce que tu vois à une personne de confiance (ami·e, enseignant·e, personnel de santé, association)." },
+            { title: "Soutenir la personne", subtitle: "Ne laisse pas la victime isolée : même une parole bienveillante ou une écoute attentive peut briser le sentiment de solitude." },
+            { title: "Collecter des preuves", subtitle: "Messages, photos, témoignages, dates et lieux : ces éléments sont utiles si la personne souhaite signaler les faits, même anonymement." },
+            { title: "Utiliser les dispositifs internes", subtitle: "Infirmier·e, référent·e égalité, cellule de signalement du CROUS ou de l’établissement : ces relais existent pour accompagner les victimes et les témoins." },
+            { title: "Se tourner vers des services externes", subtitle: "Défenseur des droits, associations spécialisées (SOS Homophobie, LICRA, etc.), lignes d’écoute : tu n’as pas à porter ça seul·e." },
+            { title: "Agir si c’est possible", subtitle: "Quand tu te sens en sécurité, tu peux intervenir directement (ex. dire que ce n’est pas acceptable, détourner l’attention). Si tu ne peux pas, ton soutien en privé est déjà précieux." }
           ]}
         />
-      </div>
 
+        <p className="texte">
+          Rappelle-toi : tu n’es jamais obligé·e de tout faire seul·e. Le simple fait de ne pas fermer les yeux est déjà un premier pas important. Chacun·e peut agir à son échelle, et ensemble, ces petites actions construisent un environnement plus sûr et respectueux.
+        </p>
+      </div>
       <Separateur />
 
-      <p className="texte"><em><b>Sources :</b> Crous (Lyon signalement VSS & discriminations), Ministere de l’Enseignement supérieur et de la recherche, SOS Homophobie, Dépêche & enquêtes nationales, FRA, Plan LGBT+ France</em></p>
+      <p className="texte">
+          <b>Sources :</b> Crous, 
+          Ministère de l’Enseignement supérieur et de la Recherche, 
+          SOS Homophobie, 
+          Dépêche & enquêtes nationales,
+          Haut Conseil à l’Égalité (rapport 2024), 
+          Service-public.fr, 
+          Question Sexualité, 
+          Ministère de l’Éducation nationale, 
+          Fondation Émergence, 
+          LICRA, 
+          Égalité contre le racisme, 
+          Centre LGBTI+ Lyon
+      </p>
     </div>
   );
 };
