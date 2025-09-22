@@ -93,20 +93,20 @@ const Confiance = () => {
       <p className="texte">On confond souvent confiance en soi et estime de soi, mais ces notions sont différentes :</p>
       
       <BulletList items={[
-        "La confiance en soi est la croyance en sa capacité à réussir dans une tâche spécifique. La confiance en soi n’est pas innée : elle se construit avec l’expérience, l’entraînement et les réussites. Une personne peut avoir confiance dans un domaine (par exemple, dans ses talents au Coin-Coin) sans pour autant avoir une estime de soi globale élevée.",
-        "L'estime de soi est l’évaluation globale et affective que l’on porte sur soi-même : ce que je ressens pour moi-même. Une bonne estime de soi se manifeste généralement par un discours intérieur positif et une capacité à s’affirmer​. À l’inverse, une estime de soi faible s’accompagne souvent de pensées négatives sur soi-même, de peur du jugement des autres et d’une difficulté à s’affirmer​",
+        <><b>La confiance en soi </b> est la <b>croyance en sa capacité à réussir dans une tâche spécifique</b>. La confiance en soi n’est pas innée : elle se construit avec l’expérience, l’entraînement et les réussites. Une personne peut avoir confiance dans un domaine (par exemple, dans ses talents au Coin-Coin) sans pour autant avoir une estime de soi globale élevée.</>,
+        <><b>L'estime de soi</b> est <b>l’évaluation globale et affective que l’on porte sur soi-même</b> : ce que je ressens pour moi-même. Une bonne estime de soi se manifeste généralement par un discours intérieur positif et une capacité à s’affirmer​. À l’inverse, une estime de soi faible s’accompagne souvent de pensées négatives sur soi-même, de peur du jugement des autres et d’une difficulté à s’affirmer​</>,
       ]} />
 
       <TextImageRight
-        text="L'estime de soi repose sur trois piliers principaux : l'amour de soi (s'accepter tel qu'on est), la vision de soi (se voir de façon réaliste) et la confiance en ses capacités. Elle évolue tout au long de la vie, et peut être fragilisée par des épreuves, des échecs, des jugements extérieurs."
+        text={<><b>L'estime de soi</b> repose sur trois piliers principaux : <b>l'amour de soi</b> (s'accepter tel qu'on est), <b>la vision de soi</b> (se voir de façon réaliste) et <b>la confiance en ses capacités</b>. Elle évolue tout au long de la vie, et peut être fragilisée par des épreuves, des échecs, des jugements extérieurs.</>}
         imageSrc="/assets/miroir.png"
       />
 
       <ChiffresGroup chiffres={chiffres_confiance} />
 
       <h2 className="sous-titre-2">Pourquoi la confiance et l'estime de soi sont importantes ?</h2>
-      <p className="texte">La confiance en soi et l’estime de soi jouent un rôle majeur dans la vie d’un étudiant. Elles influencent la motivation, la participation en classe, la capacité à relever des défis et le bien-être psychologique. Par exemple, un manque de confiance peut conduire à l’auto-censure : des jeunes femmes en formation avouent souvent renoncer à parler en public ou à poursuivre certains projets par manque d’assurance​.
-      <br/>Une estime de soi solide est aussi un facteur de résilience : elle aide à mieux gérer le stress, les échecs passagers et les relations sociales. À l’inverse, une estime de soi faible s’accompagne souvent d’anxiété et peut contribuer à un mal-être plus profond​. Concrètement, cela veut dire qu’un étudiant avec une bonne confiance en soi osera plus souvent prendre la parole en classe, demander de l’aide s’il ne comprend pas quelque chose, participer à des projets collectifs, et persévérer malgré les difficultés. Au contraire, sans confiance, on peut avoir tendance à se dire « je ne suis pas à la hauteur » et à abandonner plus vite. Travailler sa confiance et son estime de soi est donc important pour réussir ses études et pour préserver sa santé mentale.</p>
+      <p className="texte">La confiance en soi et l’estime de soi jouent un rôle majeur dans la vie d’un étudiant. <b> Elles influencent la motivation, la participation en classe, la capacité à relever des défis et le bien-être psychologique</b>. Par exemple, un manque de confiance peut conduire à l’auto-censure : des jeunes femmes en formation avouent souvent renoncer à parler en public ou à poursuivre certains projets par manque d’assurance​.
+      <br/>Une estime de soi solide est aussi un facteur de résilience : <b>elle aide à mieux gérer le stress, les échecs passagers et les relations sociales</b>. À l’inverse, une estime de soi faible s’accompagne souvent d’anxiété et peut contribuer à un mal-être plus profond​. Concrètement, cela veut dire qu’un étudiant avec une bonne confiance en soi osera plus souvent prendre la parole en classe, demander de l’aide s’il ne comprend pas quelque chose, participer à des projets collectifs, et persévérer malgré les difficultés. Au contraire, sans confiance, on peut avoir tendance à se dire « je ne suis pas à la hauteur » et à abandonner plus vite. Travailler sa confiance et son estime de soi est donc important pour réussir ses études et pour préserver sa santé mentale.</p>
 
       <ExternalLinkBlock
         resources={resources}
@@ -128,13 +128,13 @@ const Confiance = () => {
       <p className="texte">Améliorer sa confiance prend du temps. Voici quelques leviers :</p>
 
       <BulletList items={[
-        "Fixe-toi des objectifs réalistes et félicite-toi quand tu les atteins, même s'ils sont petits.",
-        "Parle-toi comme tu parlerais à un·e ami·e : avec bienveillance, encouragement et patience.",
-        "Pratique une activité physique régulière. Faire du sport ou simplement marcher stimule la production de dopamine (l’hormone du bien-être) et améliore l’image que l’on a de soi​. Par exemple, une séance de sport après les cours ou une promenade chaque jour peuvent aider à se sentir plus fort·e et plus sûr·e de soi.",
-        "Prends soin de toi. Un bon sommeil, une alimentation équilibrée et une hygiène de vie saine aident à se sentir bien dans son corps et dans sa tête​. Bien dormir et manger sainement augmente l’énergie et la clarté mentale, ce qui facilite la confiance au quotidien.",
-        "Autorise-toi à faire des erreurs. Personne n’est parfait : faire des fautes ou échouer ponctuellement ne signifie pas qu’on est « nul ». Au contraire, chaque erreur est l’occasion d’apprendre. Même si tu as une mauvaise note, rappelle-toi que tu n’es pas ta note​.",
-        "Apprends à gérer ton stress et tes émotions. Des techniques simples de respiration ou de relaxation peuvent aider à calmer l’anxiété (par exemple, inspirer lentement pendant 4 secondes, bloquer 4 secondes, expirer 4 secondes). Comprendre et nommer ses émotions (colère, tristesse, etc.) permet de les réguler.",
-        "Sors de ta zone de confort avec des petits défis. Chaque fois que tu oses faire quelque chose qui te fait peur (dire ce que tu penses, changer de look, participer à un club), tu gagnes en assurance. Par exemple, n’hésite pas à exprimer ton avis en petit comité ou à dire non quand tu n’es pas d’accord. ",
+        <><b>Fixe-toi des objectifs réalistes et félicite-toi quand tu les atteins</b>, même s'ils sont petits.</>,
+        <><b>Parle-toi comme tu parlerais à un·e ami·e</b> : avec bienveillance, encouragement et patience.</>,
+        <><b>Pratique une activité physique régulière</b>. Faire du sport ou simplement marcher stimule la production de dopamine (l’hormone du bien-être) et améliore l’image que l’on a de soi​. Par exemple, une séance de sport après les cours ou une promenade chaque jour peuvent aider à se sentir plus fort·e et plus sûr·e de soi.</>,
+        <><b>Prends soin de toi</b>. Un bon sommeil, une alimentation équilibrée et une hygiène de vie saine aident à se sentir bien dans son corps et dans sa tête​. Bien dormir et manger sainement augmente l’énergie et la clarté mentale, ce qui facilite la confiance au quotidien.</>,
+        <><b>Autorise-toi à faire des erreurs</b>. Personne n’est parfait : faire des fautes ou échouer ponctuellement ne signifie pas qu’on est « nul ». Au contraire, chaque erreur est l’occasion d’apprendre. Même si tu as une mauvaise note, rappelle-toi que tu n’es pas ta note​.</>,
+        <><b>Apprends à gérer ton stress et tes émotions</b>. Des techniques simples de respiration ou de relaxation peuvent aider à calmer l’anxiété (par exemple, inspirer lentement pendant 4 secondes, bloquer 4 secondes, expirer 4 secondes). Comprendre et nommer ses émotions (colère, tristesse, etc.) permet de les réguler.</>,
+        <><b>Sors de ta zone de confort avec des petits défis</b>. Chaque fois que tu oses faire quelque chose qui te fait peur (dire ce que tu penses, changer de look, participer à un club), tu gagnes en assurance. Par exemple, n’hésite pas à exprimer ton avis en petit comité ou à dire non quand tu n’es pas d’accord. </>,
       ]} />
 
       <p className="texte">Tu n'es pas obligé·e de traverser seul·e cette démarche. Des aides existent, confidentielles et gratuites :</p>

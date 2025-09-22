@@ -35,6 +35,7 @@ export const ImageCenter = ({ imageSrc }) => (
 export const Navbar = ({ links }) => {
   const navRef = useRef();
   const [open, setOpen] = useState(false);
+  const [sectionsProgress, setSectionsProgress] = useState({}); // {target: 0..1}
 
 
     // Indique que le sommaire existe
@@ -59,6 +60,66 @@ export const Navbar = ({ links }) => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Progression mid-to-mid: 0 quand le titre de la section n'a pas encore atteint le centre de l'écran;
+  // 1 quand le titre suivant atteint le centre.
+  useEffect(() => {
+    if (window.innerWidth <= 1000) return;
+
+    const sections = links
+      .map(l => {
+        const el = document.getElementById(l.target);
+        if (!el) return null;
+        // On prend le top absolu de l'élément (décalage potentiel)
+        const rect = el.getBoundingClientRect();
+        const absTop = rect.top + window.scrollY;
+        return { id: l.target, top: absTop };
+      })
+      .filter(Boolean)
+      .sort((a,b) => a.top - b.top);
+
+    if (!sections.length) return;
+
+    const compute = () => {
+      const centerLine = window.scrollY + window.innerHeight / 2;
+      const newProgress = {};
+      for (let i = 0; i < sections.length; i++) {
+        const current = sections[i];
+        const next = sections[i + 1];
+        const start = current.top; // quand ce titre atteint le centre
+        const end = next ? next.top : (document.documentElement.scrollHeight - window.innerHeight * 0.5);
+        const span = end - start || 1;
+        const raw = (centerLine - start) / span;
+        const ratio = Math.max(0, Math.min(raw, 1));
+        newProgress[current.id] = ratio;
+      }
+      setSectionsProgress(prev => {
+        let changed = false;
+        const out = { ...prev };
+        Object.entries(newProgress).forEach(([k,v]) => {
+          if (Math.abs((prev[k] || 0) - v) > 0.015) { out[k] = v; changed = true; }
+        });
+        return changed ? out : prev;
+      });
+    };
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => { compute(); ticking = false; });
+        ticking = true;
+      }
+    };
+    const onResize = () => { compute(); };
+
+    compute();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [links]);
 
   // Exposer la fonction pour permettre au Header de contrôler la navbar
   useEffect(() => {
@@ -107,15 +168,25 @@ export const Navbar = ({ links }) => {
       
       <div className="navbar-links" id="navbar-links">
         <p className="sommaire">Sommaire</p>
-        {links.map((link, index) => (
-          <button
-            className="lien-navbar"
-            key={index}
-            onClick={() => handleNavClick(link.target)}
-          >
-            {link.label}
-          </button>
-        ))}
+        {links.map((link, index) => {
+          const p = sectionsProgress[link.target] || 0;
+          return (
+            <button
+              className="lien-navbar"
+              key={index}
+              onClick={() => handleNavClick(link.target)}
+              data-progress={p.toFixed(2)}
+            >
+              <span className="lien-navbar-label">{link.label}</span>
+              <span className="lien-navbar-progress">
+                <span
+                  className="lien-navbar-progress-bar"
+                  style={{ transform: `scaleX(${p})` }}
+                />
+              </span>
+            </button>
+          );
+        })}
       </div>
     </nav>
   );
