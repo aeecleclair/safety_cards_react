@@ -6,7 +6,6 @@ const pagesData = [
       { name: "🧘 Détente et relaxation", path: "/detente" },
       { name: "🛋️ Sédentarité", path: "/sedentarite" },
       { name: "⛹️ Santé physique & pratique du sport", path: "/sport" },
-      { name: "😶‍🌫️ Anxiété", path: "/anxiete" },
       { name: "💰 Précarité économique", path: "/prec_eco" },
       { name: "💸 Précarité menstruelle", path: "/prec_mens" },
       { name: "🌿 Démarches écologiques", path: "/ecolo" },
@@ -25,6 +24,8 @@ const pagesData = [
       { name: "🥹 Dépression", path: "/depression" },
       { name: "🦓 Automutilation", path: "/automutil" },
       { name: "🗺️ Déracinement culturel & vie des internationaux", path: "/deracinement" },
+      { name: "😶‍🌫️ Anxiété", path: "/anxiete" },
+
     ],
   },
   {

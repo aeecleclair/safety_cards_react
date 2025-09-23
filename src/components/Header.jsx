@@ -29,6 +29,7 @@ const menuItems = [
   {
     title: "⚕️ Santé",
     submenu: [
+      { title: "😶‍🌫️ Anxiété", link: "/anxiete"  },
       { title: "🦓 Automutilation", link: "/automutil" },
       { title: "🥹 Dépression", link: "/depression" },
       { title: "🗺️ Déracinement culturel", link: "/deracinement", inactive:true },
@@ -56,7 +57,6 @@ const menuItems = [
     submenu: [
       { title: "🚗 Accidents de la circulation", link: "/accident", inactive:true },
       { title: "🥬 Alimentation", link: "/aliment"  },
-      { title: "😶‍🌫️ Anxiété", link: "/anxiete"  },
       { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
       { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },
       { title: "💰 Précarité économique", link: "/prec_eco"  },

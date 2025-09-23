@@ -32,6 +32,7 @@ const Footer = () => {
         <div className='liens-footer-col'>
           <p className='titre-categorie'>Santé</p>
           <div>
+            <Link to="/anxiete">Anxiété</Link><br />
             <Link to="/automutil">Automutilation</Link><br />
             <Link to="/depression">Dépression</Link><br />
             <Link to="/deracinement">Déracinement culturel</Link><br />
@@ -61,7 +62,6 @@ const Footer = () => {
           <div>
             <Link to="/accident">Accidents de la circulation</Link><br />
             <Link to="/aliment">Alimentation</Link><br />
-            <Link to="/anxiete">Anxiété</Link><br />
             <Link to="/ecolo">Démarches écologiques</Link><br />
             <Link to="/detente">Détente & relaxation</Link><br />
             <Link to="/prec_eco">Précarité économique</Link><br />

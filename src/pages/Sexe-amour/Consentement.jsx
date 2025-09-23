@@ -92,11 +92,19 @@ const consentometre = [
   },
 ];
 
+
+
 const vss = [
+    {
+    link: "/docs/arbre-vss-centrale-lyon.pdf",
+    label: "Arbre de décision",
+    description: "Je suis victime ou témoin de VSS (étudiants et personnels de Centrale Lyon)",
+    imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
+  },
   {
     link: "/vss",
     label: "VSS",
-    description: "Réagir face aux violences sexistes et sexuelles",
+    description: "Pour accéder à l'entièreté du plan d'action et des contacts",
     emoji: "🫂",
   },
 ]
@@ -107,7 +115,6 @@ const Consentement = () => {
       <h1 className="titre-page">Consentement</h1>
       <Navbar links={navLinks} />
 
-      {/* 1. Comprendre le consentement */}
       <div id="definition">
         <h1 className="titre">Comprendre le consentement</h1>
       </div>
@@ -177,7 +184,6 @@ const Consentement = () => {
 
       <Separateur />
 
-      {/* 3. Je suis victime ou témoin */}
       <div id="victime">
         <h1 className="titre">Je suis victime ou témoin</h1>
       </div>
@@ -200,12 +206,26 @@ const Consentement = () => {
           textColor="#CC3C32"
         />
 
+      <p className="texte">Des écoutants internes sont à ta disposition : <b>associations</b> (BDE, Le Mouv', Peer Care...) ou <b>cellule d'écoute.</b> </p>
+      <p className="texte">La <b>cellule d'écoute</b> est composée de 4 personnels, qui sont là pour t'accompagner et pour faire remonter l'information en interne. Tu acceptes ainsi que l'école prenne en main la situation, et qu'elle mène une <b>enquête interne</b>. En tant que fonctionnaires, ils ont aussi l'obligation de faire remonter ton témoignage au <b>procureur de la République.</b>  </p>
+      
+
+      <ContactCard
+        image="assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
+        title="Cellule d'écoute"
+        subtitle="Dispositif d'écoute et d'accompagnement de Centrale Lyon"
+        email="Voir les informations"
+        textButton="Voir les informations"
+        link="/cellule-ecoute"
+        bgColor="#ffffff"  
+        textColor="#b22133"
+      />
+
         <ExternalLinkBlock resources={vss} />
 
 
       <Separateur />
 
-      {/* 4. Ressources et outils */}
       <div id="ressources">
         <h1 className="titre">Ressources & outils de prévention</h1>
       </div>

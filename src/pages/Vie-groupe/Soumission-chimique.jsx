@@ -9,6 +9,7 @@ import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeV
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
+import { image } from "framer-motion/m";
 
 const navLinks = [
   { label: "Qu'est-ce que la soumission chimique ?", target: "soumission" },
@@ -50,10 +51,19 @@ const resources_infos = [
 const resources_victime = [
 
   {
+    link: "/docs/depot_plainte_vss.pdf",
+    label: "Comment se passe le dépôt de plainte en cas de VSS ?",
+    description: "Explications claires et complètes",
+    imageSrc:"/assets/rep-logo.png",
+  },
+
+  {
     link: "https://www.masecurite.interieur.gouv.fr/fr/trouver-un-commissariat-une-gendarmerie",
     label: "Porter plainte",
     description: "Trouve un commissariat ou une gendarmerie près de chez toi",
+    imageSrc:"/assets/rep-logo.png",
   },
+
   {
     link: "https://vih.org/cegidd/",
     imageSrc:"/assets/cegidd.png",

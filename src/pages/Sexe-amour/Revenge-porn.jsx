@@ -256,11 +256,14 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
           <ContactCard
           image="/assets/3018.png" 
           title="3018"
-          subtitle="Numéro national contre les violences numériques"
+          subtitle="Cyberharcèlement,  harcèlement scolaire, revenge porn, chantage à la webcam, usurpation d’identité, VSS, exposition à des contenus violents. "
           phone="3018"
-          hours="Tous les jours, de 9h à 23h"
+          email=""
+          hours="7j/7, de 9h à 23h"
           textButton="Voir le site web"
-          link="https://e-enfance.org/le3018/"
+          link="https://e-enfance.org/besoin-daide/"
+          bgColor="#2736f0"
+          textColor="#ffffff"
         />
 
       <ExternalLinkBlock

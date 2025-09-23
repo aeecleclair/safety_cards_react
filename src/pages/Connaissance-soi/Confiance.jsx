@@ -26,13 +26,13 @@ const chiffres_confiance = [
 const resources = [
   {
     link: "/anxiete",
-    emoji: "",
+    emoji: "😶‍🌫️",
     label: "Anxiété",
     description: "Tu te sens souvent stressé·e ou anxieux·se ? Des solutions existent.",
   },
   {
     link: "/isolement",
-    emoji: "",
+    emoji: "🧍",
     label: "Isolement",
     description: "Comment aider des personnes isolées et qui manquent de confiance en elles ?"
   }

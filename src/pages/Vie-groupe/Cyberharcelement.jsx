@@ -230,7 +230,7 @@ const Cyberharcelement = () => {
 
         <ExternalLinkBlock resources={ressourcesExterne} />
 
-                  <ContactCard
+          <ContactCard
           image="/assets/3018.png" 
           title="3018"
           subtitle="Cyberharcèlement,  harcèlement scolaire, revenge porn, chantage à la webcam, usurpation d’identité, VSS, exposition à des contenus violents. "

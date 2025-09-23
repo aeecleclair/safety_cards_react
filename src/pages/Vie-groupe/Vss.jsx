@@ -110,7 +110,13 @@ const barometres = [
     label: "Les VSS dans le sport",
     description: "",
     emoji: "⚽",
-  }
+  },
+  {
+    link: "/assets/barometre_violences_gyneco.pdf",
+    label: "Les VSS chez le ou la gynécologue",
+    description: "",
+    emoji: "🚺",
+  },
 ];
 
 
@@ -121,6 +127,22 @@ const arbre = [
     description: "Je suis victime ou témoin de VSS (étudiants et personnels de Centrale Lyon)",
     imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
   }
+];
+
+const plainte = [
+    {
+    link: "/docs/depot_plainte_vss.pdf",
+    label: "Comment se passe le dépôt de plainte en cas de VSS ?",
+    description: "Explications claires et complètes",
+    imageSrc:"/assets/rep-logo.png",
+  },
+
+  {
+    link: "https://www.masecurite.interieur.gouv.fr/fr/trouver-un-commissariat-une-gendarmerie",
+    label: "Porter plainte",
+    description: "Trouve un commissariat ou une gendarmerie près de chez toi",
+    imageSrc:"/assets/rep-logo.png",
+  },
 ];
 
 const liens_ext_temoins = [
@@ -319,15 +341,14 @@ const Vss = () => {
         <p className="texte"><b>Si tu ne souhaites pas en parler, c'est ton droit ! Se sentir prêt·e peut prendre du temps.</b></p>
 
 
-      <ImageTextPopup
-        image="./assets/cartes/5_trefle.png"
-        title="La carte 5♣"
-        shortText="Réagir face à une VSS en soirée"
-        longText="Réagir face à une VSS en soirée"
-        textButton="⤢ Agrandir la carte"
-        suit="trefle"
+      <h2 className="sous-titre-2">Porter plainte</h2>
+
+      <p className="texte">Porter plainte est une démarche importante qui peut aider à faire cesser les violences et à protéger d'autres personnes. C'est aussi un moyen de faire reconnaître ce que tu as vécu et de chercher justice. Cependant, cette décision t'appartient entièrement et il n'y a pas de bonne ou de mauvaise réponse. Tu peux porter plainte immédiatement après les faits, ou prendre le temps de réfléchir avant de te décider. Si tu le souhaites, tu peux te faire accompagner par un proche au commissariat.</p>
+      <p className="texte">Un certificat médical <b>n'est pas nécessaire</b> pour porter plainte en cas de VSS. </p>
+
+      <ExternalLinkBlock
+        resources={plainte}
       />
-      
 
       <Separateur />
       
@@ -343,7 +364,21 @@ const Vss = () => {
         resources={liens_ext_temoins}
       />
 
+      <p className="texte">
+
       En tant que témoin, tu peux avoir aussi vécu une situation traumatisante. Il est important de prendre soin de toi aussi. Tu peux contacter l'infirmière de Centrale Lyon ou les associations mentionnées dans la partie "Je suis victime" pour en parler.
+
+      </p>
+
+      <ImageTextPopup
+        image="./assets/cartes/5_trefle.png"
+        title="La carte 5♣"
+        shortText="Réagir face à une VSS en soirée"
+        longText="Réagir face à une VSS en soirée"
+        textButton="⤢ Agrandir la carte"
+        suit="trefle"
+      />
+
 
       <h2 className="sous-titre-2">Accueillir un témoignage</h2>
 
