@@ -9,6 +9,7 @@ import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeV
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
+import { image } from "framer-motion/m";
 
 const navLinks = [
   { label: "De quoi parle-t-on ?", target: "vss" },
@@ -113,12 +114,12 @@ const barometres = [
 ];
 
 
-const cellule_ecoute = [
+const arbre = [
   {
-    link: "/cellule-ecoute",
-    label: "Cellule d'écoute",
-    description: "Pour signaler une VSS à l'école et bénéficier d'un accompagnement",
-    emoji: "📞",
+    link: "/docs/arbre-vss-centrale-lyon.pdf",
+    label: "Arbre de décision",
+    description: "Je suis victime ou témoin de VSS (étudiants et personnels de Centrale Lyon)",
+    imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
   }
 ];
 
@@ -259,6 +260,12 @@ const Vss = () => {
       <h2 className="sous-titre-2">A qui en parler ?</h2>
 
       <p className="texte">Il est important de parler de ce que tu as vécu. Tu peux en parler à quelqu'un de confiance (ami·e, parent, professeur·e, etc.) ou à un professionnel. Il existe plusieurs ressources à Centrale Lyon et à l'extérieur pour t'aider.</p>
+
+      <ExternalLinkBlock
+        resources={arbre}
+      />
+
+
       <p className="texte"><b>EN INTERNE</b></p>
 
       <p className="texte">Tu peux contacter l'<b>infirmière de Centrale Lyon</b>, qui est formée pour t'aider et te conseiller. Elle peut aussi t'orienter vers des professionnels extérieurs si nécessaire. En tant que professionnelle de santé, elle est soumise au <b>secret médical</b>, ta confidentialité est donc garantie. Tu peux décider d’en rester là et poursuivre ton signalement plus tard si désiré. </p>
@@ -280,9 +287,18 @@ const Vss = () => {
       <p className="texte">Tu peux aussi faire remonter ton témoignage aux écoutants internes : <b>associations</b> (BDE, Le Mouv', Peer Care...) ou <b>cellule d'écoute.</b> </p>
       <p className="texte">La <b>cellule d'écoute</b> est composée de 4 personnels, qui sont là pour t'accompagner et pour faire remonter l'information en interne. Tu acceptes ainsi que l'école prenne en main la situation, et qu'elle mène une <b>enquête interne</b>. En tant que fonctionnaires, ils ont aussi l'obligation de faire remonter ton témoignage au <b>procureur de la République.</b>  </p>
       
-      <ExternalLinkBlock
-        resources={cellule_ecoute}
+
+      <ContactCard
+        image="assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
+        title="Cellule d'écoute"
+        subtitle="Dispositif d'écoute et d'accompagnement de Centrale Lyon"
+        email="Voir les informations"
+        textButton="Voir les informations"
+        link="/cellule-ecoute"
+        bgColor="#ffffff"  
+        textColor="#b22133"
       />
+
 
       <p className="texte"><b>SERVICES EXTERNES</b></p>
 

@@ -162,12 +162,20 @@ const Orientation = () => {
           <p className="texte">L'outing peut avoir des conséquences graves sur la vie de la personne concernée, notamment en termes de sécurité, de santé mentale et de relations sociales.</p>
 
         <ExternalLinkBlock resources={outing} />
-      </div>
 
       <ExternalLinkBlock
           title="Pour en apprendre davantage sur la sexualité et l'orientation sexuelle"
           resources={ressources_sex}
         />
+
+        <h2 className="sous-titre-2">Tu subis des discriminations ?</h2>
+        <p className="texte">Si tu es victime de discriminations en raison de ton orientation sexuelle, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
+        <ExternalLinkBlock
+          resources={resources_Autres_pages}
+        />
+
+      </div>
+
 
       <Separateur />
 
@@ -198,15 +206,6 @@ const Orientation = () => {
 
       </div>
 
-
-        <h2 className="sous-titre-2">Tu subis des discriminations ?</h2>
-        <p className="texte">Si tu es victime de discriminations en raison de ton orientation sexuelle, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
-
-
-        
-        <ExternalLinkBlock
-          resources={resources_Autres_pages}
-        />
 
         <ExternalLinkBlock
           title="Ressources pour aller plus loin"
