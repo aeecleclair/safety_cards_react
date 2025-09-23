@@ -61,44 +61,43 @@ export const Navbar = ({ links }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Progression mid-to-mid: 0 quand le titre de la section n'a pas encore atteint le centre de l'écran;
-  // 1 quand le titre suivant atteint le centre.
+  // Progression mid-to-mid (desktop + mobile)
   useEffect(() => {
-    if (window.innerWidth <= 1000) return;
+    let sections = [];
 
-    const sections = links
-      .map(l => {
-        const el = document.getElementById(l.target);
-        if (!el) return null;
-        // On prend le top absolu de l'élément (décalage potentiel)
-        const rect = el.getBoundingClientRect();
-        const absTop = rect.top + window.scrollY;
-        return { id: l.target, top: absTop };
-      })
-      .filter(Boolean)
-      .sort((a,b) => a.top - b.top);
-
-    if (!sections.length) return;
+    const collectSections = () => {
+      sections = links
+        .map(l => {
+          const el = document.getElementById(l.target);
+          if (!el) return null;
+          const rect = el.getBoundingClientRect();
+          return { id: l.target, top: rect.top + window.scrollY };
+        })
+        .filter(Boolean)
+        .sort((a,b) => a.top - b.top);
+    };
 
     const compute = () => {
+      if (!sections.length) return;
       const centerLine = window.scrollY + window.innerHeight / 2;
       const newProgress = {};
       for (let i = 0; i < sections.length; i++) {
         const current = sections[i];
         const next = sections[i + 1];
-        const start = current.top; // quand ce titre atteint le centre
+        const start = current.top;
         const end = next ? next.top : (document.documentElement.scrollHeight - window.innerHeight * 0.5);
         const span = end - start || 1;
         const raw = (centerLine - start) / span;
-        const ratio = Math.max(0, Math.min(raw, 1));
+        const ratio = raw <= 0 ? 0 : raw >= 1 ? 1 : raw; // micro-optim
         newProgress[current.id] = ratio;
       }
       setSectionsProgress(prev => {
         let changed = false;
         const out = { ...prev };
-        Object.entries(newProgress).forEach(([k,v]) => {
-          if (Math.abs((prev[k] || 0) - v) > 0.015) { out[k] = v; changed = true; }
-        });
+        for (const k in newProgress) {
+          const v = newProgress[k];
+            if (Math.abs((prev[k] || 0) - v) > 0.012) { out[k] = v; changed = true; }
+        }
         return changed ? out : prev;
       });
     };
@@ -110,16 +109,27 @@ export const Navbar = ({ links }) => {
         ticking = true;
       }
     };
-    const onResize = () => { compute(); };
+    const onResize = () => {
+      collectSections();
+      compute();
+    };
+    const onOrientation = () => {
+      collectSections();
+      compute();
+    };
 
+    collectSections();
     compute();
+
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onResize);
+    window.addEventListener('orientationchange', onOrientation);
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onResize);
+      window.removeEventListener('orientationchange', onOrientation);
     };
-  }, [links]);
+  }, [links, open]);
 
   // Exposer la fonction pour permettre au Header de contrôler la navbar
   useEffect(() => {
@@ -189,6 +199,34 @@ export const Navbar = ({ links }) => {
         })}
       </div>
     </nav>
+  );
+};
+
+// Bouton d'ancre réutilisable (scroll lissé avec offset navbar)
+export const AnchorButton = ({
+  target,
+  children,
+  offsetDesktop = 100,
+  offsetMobile = 140,
+  className = ""
+}) => {
+  const handleClick = () => {
+    const el = document.getElementById(target);
+    if (!el) return;
+    const offset = window.innerWidth <= 1000 ? offsetMobile : offsetDesktop;
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
+  return (
+    <button
+      type="button"
+      className={`anchor-button ${className}`.trim()}
+      onClick={handleClick}
+      aria-label={`Aller à la section ${target}`}
+    >
+      {children}
+    </button>
   );
 };
 
