@@ -17,10 +17,11 @@ import { image } from "framer-motion/m";
 
 /** Navigation */
 const navLinks = [
-  { label: "Comprendre un comportement suicidaire", target: "comprendre" },
+  { label: "Comprendre le suicide", target: "comprendre" },
   { label: "Je suis en souffrance", target: "souffrance" },
   { label: "Je m'inquiète pour quelqu'un", target: "inquiet" },
-  { label: "Je suis impacté ou témoin", target: "impact" },
+  { label: "Je suis impacté·e", target: "impact" },
+  { label: "J'ai été témoin d'un suicide", target: "temoin" }
 ];
 
 const psy = [
@@ -98,9 +99,9 @@ const Suicide = () => {
         <p className="texte">
         </p>
 
-        <h2 className="sous-titre-2">Je me sens mal ou dépassé</h2>
+        <h2 className="sous-titre-2">Je me sens mal ou dépassé·e</h2>
         <p className="texte">
-          Si tu te sens mal ou dépassé, il est important de le reconnaître et d'en parler. Tu n'es pas seul·e dans cette situation, et il existe des ressources pour t'aider. Si tu es dans cette situation, tu peux :
+          Si tu te sens mal ou dépassé·e, il est important de le reconnaître et d'en parler. Tu n'es pas seul·e dans cette situation, et il existe des ressources pour t'aider. Si tu es dans cette situation, tu peux :
         </p>
         <BulletList items={[
           "Tenir un journal de tes sentiments ou des choses que tu apprécies vraiment",
@@ -194,9 +195,30 @@ const Suicide = () => {
           "Le sentiment d'être piégé ou de ne plus avoir de raisons de vivre",
         ]} />
 
-        <h2 className="sous-titre-2">Le plan d'action AERER</h2>
+        <h2 className="sous-titre-2">Entame la conversation</h2>
+        <p className="texte"><b>Interroge-toi :</b> es-tu capable de mener cette conversation, et es-tu disponible et à l’écoute ?</p>
+        <p className="texte"><b>Choisissez un cadre agréable :</b> dans un dendroit calme et isolé, au parc ou autour d'un café, au téléphone...</p>
 
-        <h2 className="sous-titre-2">Comment parler et agir une personne en détresse ?</h2>
+        <p className="texte"><b>Mentionnez ce que vous avez remarqué sans le juger ni le faire culpabiliser :</b></p>
+        <BulletList items={[
+          "« Je ne t’ai pas beaucoup vu ces derniers jours. Est-ce que tout va bien ? »",
+          "« J’ai l’impression que tu vas mal. Tu veux qu’on en parle ? »",
+          "« Tu n’es plus le même. Je m’inquiète. Qu’est-ce qu’il se passe ? »",
+          "Reconnaissez ses émotions : « Ça semble vraiment difficile. », « J’ai l’impression que tu es triste. »",
+          "Faites-lui savoir que vous êtes là pour lui : « Merci de te confier à moi. Je suis là pour toi. »",
+        ]} />
+
+        <p className="mise-avant"><b>Aborder la question du suicide :</b> <br/>
+          
+          - Il faut être direct pour lui donner la possibilité de parler de ses souffrances (cela montre que tu t’inquiètes pour lui ou elle) : « As-tu des idées suicidaires ? », « Envisages-tu de te donner la mort ? »  <br/>
+          - Pas de jugement de valeur (ex. « quelque chose de stupide »), pas de sous-entendu <br/>
+          - Reste calme et empathique
+          </p>
+
+        <p className="texte">Si tu ne te sens pas capable de mener la conversation, oriente vers quelqu’un d’autre : l’infirmière, une personne formée PSSM, un·e professionnel·le de santé ou le 3114.</p>
+
+
+
 
       <div id="plan_securite">
 
@@ -221,12 +243,16 @@ const Suicide = () => {
 
       <h2 className="sous-titre-2">Que faire si la personne envisage le suicide ?</h2>
 
+      <h2 className="sous-titre-2">Un point sur l'automutilation</h2>
+
+      <h2 className="sous-titre-2">Respecte tes propres limites et prends soin de toi</h2>
+
       </div>
 
       <Separateur />
 
       <div id="impact">
-        <h1 className="titre">Je suis impacté ou témoin d'un suicide</h1>
+        <h1 className="titre">Je suis impacté·e par un suicide</h1>
         <p className="texte">
           Perdre quelqu'un par suicide est une épreuve douloureuse. Se sentir coupable, confus, en colère ou chercher des réponses est normal. Ce n'est pas parce que la personne a agi ainsi qu'elle ne t'aimait pas.
         </p>
@@ -239,6 +265,24 @@ const Suicide = () => {
 
         <ExternalLinkBlock resources={ressourcesSuicide} />
       </div>
+
+      <div id="temoin">
+        <h1 className="titre">J'ai été témoin d'un suicide</h1>
+
+        <p className="texte">Vous ne réaliserez peut-être pas immédiatement que le suicide a eu un impact significatif sur vous – vous pouvez penser que parce que vous n’êtes pas apparenté, vous ne devriez pas être affecté de la même manière, que votre réaction n’est pas légitime. Cependant, face à ce trau-matisme, en parler peut vous aider. Il peut s’agir d’un ami ou d’une ligne d’assistance comme le 3114.</p>
+
+        <h2 className="sous-titre-2">Comment traverser le deuil ?</h2>
+
+        <p className="texte">Les premiers jours qui suivent un suicide engendrent quelque fois une perception déformée de la réalité, une sidération.
+Cette période est généralement suivie d’un chaos dans les pensées et les sentiments, engen-drant par là des questions comme « Pourquoi ? », « Aurais-je pu remarquer quelque chose ? », « Qu’aurais-je pu faire ? », « Pourquoi ne m’a-t-elle/il pas parlé de sa souffrance ? ». La douleur de la perte peut s’accompagner de réflexions relatives à l’abandon, l’impuissance, le désespoir, la culpabilité, la colère…
+Les personnes endeuillées par suicide rapportent qu’à un moment, contre toute attente, elles découvrent qu’il y a de la place pour autre chose – un projet, un espoir. Ce n’est pas tant que votre chagrin diminue ; c’est que vous grandissez avec votre chagrin.
+</p>
+
+
+
+
+      </div>
+
 
     </div>
   );
