@@ -195,6 +195,20 @@ const Suicide = () => {
           "Le sentiment d'être piégé ou de ne plus avoir de raisons de vivre",
         ]} />
 
+      <ListeNumerotee 
+      title ="Plan d'action en cas de suspicion de crise suicidaire"
+      subtitle="Voici les différentes étapes résumées pour assister une personne en cas de suspicion de crise suicidaire. Chaque étape est détaillée dans les parties suivantes. Si tu te sens dépassé·e en tant qu'aidant·e, tu peux contacter à tout moment le 3114 ou l'infirmière."
+      items={[
+          {title: "Entame la conversation", subtitle: "Si le cadre et le moment vous conviennent à tou·te·s les deux, mentionne ce que tu as remarqué sans juger ni faire culpabiliser. Si tu soupçonnes des idées suicidaires, sois direct·e en abordant la question."},
+          {title: "Écoute activement", subtitle: "Laisse la personne s'exprimer sans l'interrompre. Montre-lui que tu es là pour l'écouter, reste calme et ouvert."},
+          {title: "Détermine l'urgence de la situation", subtitle: "Si la personne a prévu un scénario suicidaire, si elle a des moyens concrets pour passer à l'acte ou si elle tient des propos inquiétants, on peut alors considérer que la situation est urgente."},
+          {title: "Ne promets jamais de garder le secret", subtitle: "Cherchez ensemble des personnes et des moyens de l'aider. Explique-lui que ce n'est pas par trahison mais par inquiétude."},
+          {title: "Si la situation ne compromet pas sa sécurité immédiate", subtitle: "Oriente-le ou la vers des professionnels (3114, hôpitaux, etc.). Vous pouvez aussi réaliser à 2 un plan de sécurité."},
+          {title: "Si la situation présente un danger immédiat de suicide", subtitle: "Contacte les services de secours (15 ou 112) ou le 3114 pour demander des conseils sur la situation."}
+
+
+      ]} />
+
         <h2 className="sous-titre-2">Entame la conversation</h2>
         <p className="texte"><b>Interroge-toi :</b> es-tu capable de mener cette conversation, et es-tu disponible et à l’écoute ?</p>
         <p className="texte"><b>Choisissez un cadre agréable :</b> dans un dendroit calme et isolé, au parc ou autour d'un café, au téléphone...</p>
@@ -217,8 +231,26 @@ const Suicide = () => {
 
         <p className="texte">Si tu ne te sens pas capable de mener la conversation, oriente vers quelqu’un d’autre : l’infirmière, une personne formée PSSM, un·e professionnel·le de santé ou le 3114.</p>
 
+        <h2 className="sous-titre-2">Ecoute activement</h2>
+        <BulletList items={[
+          "Fais preuve d'empathie lorsque la personne parle de ce qu'elle ressent, n'entre pas dans un débat.",
+          "Ecoute sans jugement et sans culpabiliser.",
+          "Pose des questions ouvertes (auxquelles on ne peut pas répondre par oui ou non) afin de maintenir une conversation.",
+          "N'hésite pas à reformuler ou à clarifier certains points, afin de montrer ton intérêt et d'être sûr·e de bien comprendre.",
+          "Récapitule ce qu'il dit : « Si je comprends bien, tu te sens... »",
+          "Ne ramène pas la conversation à toi et ne tente pas d'émettre un diagnostic de trouble psychique."
+        ]} />
 
-
+        <h2 className="sous-titre-2">Détermine l'urgence de la situation</h2>
+        <p className="texte">Afin d'évaluer l'urgence de la situation, tu peux surveiller plusieurs points. On peut considérer que la sécurité de la personne est compromise si :</p>
+        <BulletList items={[
+          "Il ou elle a prévu un scénario suicidaire (quand, où, comment)",
+          "Il ou elle a des moyens concrets pour passer à l'acte (armes, médicaments, etc.)",
+          "Il ou elle fait ses adieux",
+          "Il ou elle tient des propos évasifs : « T’as bien mieux à faire que de t’occuper de moi », « J’ai pensé à une solution, mais je ne veux pas en parler »",
+          "Il ou elle tient des propos allusifs : « J’en ai assez de me battre », « Bientôt, vous n’aurez plus à entendre parler de moi »",
+          "Il ou elle tient des propos explicites : « J’en peux plus, plutôt me tuer que de vivre ça », « Pour moi, la mort est la seule option »"
+        ]} />
 
       <div id="plan_securite">
 
@@ -241,11 +273,90 @@ const Suicide = () => {
       <p className="mise-avant"> Il vaut mieux se focaliser sur ce que la personne peut faire (et non pas sur ce qu'elle ne doit pas faire). Soyez clairs et précis. </p>
       </div>
 
-      <h2 className="sous-titre-2">Que faire si la personne envisage le suicide ?</h2>
+      <h2 className="sous-titre-2">Les contacts d'urgence</h2>
+
+        <ContactCard
+        image="/assets/3114.jpg" 
+        title="3114"
+        subtitle="Numéro national de prévention du suicide"
+        phone="3114"
+        email=""
+        hours="24h/24 et 7j/7"
+        textButton="Voir le site web"
+        link="https://3114.fr/"
+
+      />
+
+        <ContactCard
+        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        title="Infirmerie"
+        subtitle="Infirmerie de Centrale Lyon"
+        phone="Voir les informations"
+        email="Voir les informations"
+        hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
+        textButton="Voir les informations"
+        link="/infirmerie"
+
+        bgColor="#ffffff"    //informations facultatives
+        textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+      />
+
+      <ContactCard
+              image="/assets/15.png"
+              title="SAMU"
+              subtitle="Urgence médicale"
+              phone="15"
+              textButton="Appeler"
+              link="tel:15"
+              bgColor="#ffffff"
+              textColor="#ee3624"
+      />
+
+
+
+
 
       <h2 className="sous-titre-2">Un point sur l'automutilation</h2>
 
+
+        <p className="texte">L'automutilation est le fait de se faire du mal à soi-même, souvent en se coupant, en se brûlant ou en se griffant. C'est une manière pour certaines personnes de gérer des émotions intenses. <b>L'automutilation n'a pas pour but de se donner la mort, et peut même aider à éviter de passer à l'acte. Les conseils ci-dessus s'appliquent uniquement si la personne est suicidaire.</b> </p>  
+      <p className="texte"> Si ce n'est pas le cas, tu peux te référer à la page automutilation qui traite de l'automutilation non suicidaire.</p>
+
+      <ExternalLinkBlock resources={[
+          {
+            link: "/automutil",
+            label: "Automutilation",
+            description: "Savoir comment réagir en cas d'automutilation non suicidaire.",
+            emoji: "🦓"
+          }
+      ]} />
+
       <h2 className="sous-titre-2">Respecte tes propres limites et prends soin de toi</h2>
+      <p className="texte">Tu es un·e ami·e, pas un·e thérapeute.</p>
+      <BulletList
+        items={[
+          "Encourage la personne à s’ouvrir à d’autres. « À qui d’autre en as-tu parlé ? »",
+          "Appelez ensemble le numéro national de prévention du suicide au 3114",
+          "À la suite de cette conversation, et si tu t'en sens capable, maintiens un contact. « Comment te sens-tu aujourd’hui ? »",
+          "S’il planifie de façon imminente de mettre fin à sa vie, appelle le 3114, et efforce-toi de ne pas le laisser seul.",
+        ]}
+      />
+
+      <p className="texte">
+        Offrir du soutien à une personne qui vit des difficultés peut être très valorisant. Mais cela peut aussi avoir un impact sur toi : tu peux rapidement ressentir de la fatigue, voire de l’épuisement. Pour arriver à rester disponible pour l’autre, il est essentiel de prendre soin de soi et de respecter ses limites.
+      </p>
+
+      <p className="texte">Il est donc important que tu :</p>
+      <BulletList
+        items={[
+          "Détermines jusqu’où tu peux apporter ton aide",
+          "Ne fasses pas de promesse intenable",
+          "T'accordes des moments de repos où tu pourras penser à autre chose",
+          "Cherches le soutien de ton entourage",
+          "Contactes le 3114, pour toi, en cas de besoin et à tout moment.",
+        ]}
+      />
 
       </div>
 
