@@ -12,8 +12,7 @@ import Separateur from "../../components/Separateur";
 import Quote from "../../components/Citation";
 import { ChiffresGroup } from "../../components/Chiffres";
 import ListeNumerotee from "../../components/Listes";
-import { image } from "framer-motion/m";
- 
+import ImageTextPopup from "../../components/Cartes"; 
 
 /** Navigation */
 const navLinks = [
@@ -33,57 +32,54 @@ const psy = [
   },
 ];
 
-/** Ressources */
-const ressourcesSuicide = [
+
+const impacte = [
   {
-    link: "https://3114.fr/",
-    label: "3114 - Prévention suicide",
-    description: "Professionnels formés répondant 24h/24 et 7j/7, gratuit et anonyme.",
-    emoji: "📞"
-  },
-  {
-    link: "https://www.sos-amitie.com/",
-    label: "SOS Amitié",
-    description: "Accueil et écoute des personnes en détresse et de leur entourage, 7j/7 24h/24.",
-    emoji: "🫂"
-  },
-  {
-    link: "https://www.crous-lyon.fr/social-et-accompagnement/",
-    label: "Services sociaux du Crous Lyon",
-    description: "Soutien et accompagnement quotidien pour les étudiants.",
-    emoji: "🏫"
-  },
-  {
-    link: "https://www.ch-le-vinatier.fr/patients-et-entourage/live-une-ecoute-professionnelle-et-engageante-2867.html",
-    label: "LIVE - Santé mentale",
-    description: "Ligne d'aide et orientation en santé mentale, 7j/7 8h-20h.",
-    emoji: "💚"
-  },
-  {
-    link: "https://www.croix-rouge.fr/",
-    label: "Croix-Rouge Écoute",
-    description: "Service de soutien par téléphone, solitude, dépression, violence, addictions, 24h/24.",
-    emoji: "❤️"
+    link: "https://3114.fr/je-suis-eprouve-par-un-suicide/",
+    label: "Je suis impacté·e par un suicide",
+    description: "Comment comprendre et accepter ? Est-ce normal de se sentir coupable ? etc.",
+    imageSrc: "/assets/3114.png"
   }
 ];
 
-/** Page principale */
+const temoin = [
+  {
+    link: "https://3114.fr/je-suis-eprouve-par-un-suicide/jai-ete-temoin-dun-suicide/",
+    label: "Je suis témoin d'un suicide",
+    description: "Problématiques liées, contacts, etc.",
+    imageSrc: "/assets/3114.png"
+  }
+];
+
+
+
 const Suicide = () => {
   return (
     <div className="page">
-      <h1 className="titre-page">Tentative et comportement suicidaire</h1>
+      <h1 className="titre-page">Tentative et comportement suicidaires</h1>
       <Navbar links={navLinks} />
 
-      {/* Comprendre un comportement suicidaire */}
       <div id="comprendre">
         <h1 className="titre">Comprendre un comportement suicidaire ou une tentative de suicide</h1>
+        
+      <ImageTextPopup
+        image="./assets/cartes/7_pique.png"
+        title="La carte 7♠"
+        shortText="Tu n'es pas seul·e. Contacte le 3114 ou un·e psy."
+        longText=""
+        textButton="⤢ Agrandir la carte"
+        suit = "pique"
+        
+      />
+        
+        
         <p className="texte">
           Chaque année en France, environ <b>9 000 personnes</b> décèdent par suicide. Pour chaque décès, il y a environ <b>20 tentatives</b>. Parmi les étudiants français, <b>8 %</b> déclarent avoir pensé au suicide et <b>4 %</b> avoir déjà tenté d'en finir avec leur vie. La tentative de suicide est un acte dirigé contre soi-même avec l'intention de mourir, mais sans aboutir au décès.
         </p>
 
         <ChiffresGroup chiffres={[
           { number: "9 000", title: "décès par suicide", description: "en France chaque année" },
-          { number: "20", title: "tentatives par décès", description: "estimation moyenne" },
+          { number: "2ème", title: "cause de mortalité des 15-24 ans", description: "après les accidents de la route" },
           { number: "4%", title: "étudiants ayant tenté", description: "un acte suicidaire" }
         ]} />
 
@@ -91,6 +87,18 @@ const Suicide = () => {
           Le suicide est souvent précédé d'idées suicidaires. C'est le résultat d’une accumulation de souffrances et de facteurs personnels et environnementaux (il n’y a pas une « cause » unique). Ce n’est pas un acte impulsif sans signe avant-coureur. Il se développe souvent progressivement sous l’effet de la souffrance mentale. Reconnaître les facteurs de risque et en parler avec un professionnel peut aider à prévenir le passage à l’acte.
         </p>
       </div>
+
+      <h2 className="sous-titre-2">Les raisons invoquées par les personnes ayant tenté de se suicider</h2>
+
+
+      <p className="texte">
+        Les raisons invoquées par les personnes ayant tenté de se suicider sont multiples. Parmi elles, on retrouve souvent :
+      </p>
+
+      <BulletList items={[
+        "La nécessité d'échapper à une souffrance émotionnelle insupportable. Le suicide apparait comme l'unique solution à sa situation désespérée.",
+        "La volonté d'interpeller son entourage et de montrer son mal-être : c'est un appel à l'aide.",
+      ]} />
 
       <Separateur />
 
@@ -179,6 +187,18 @@ const Suicide = () => {
 
       <div id="inquiet">
         <h1 className="titre">Je m'inquiète pour quelqu'un</h1>
+
+        <ImageTextPopup
+        image="./assets/cartes/4_carreau.png"
+        title="La carte 4♦"
+        shortText="Si tu détectes que quelqu'un va mal, en parler peut tout changer."
+        longText=""
+        textButton="⤢ Agrandir la carte"
+        suit = "carreau"
+
+      />
+
+
         <h2 className="sous-titre-2">Les signes d'alerte et les facteurs de risques</h2>
 
         <p className="texte">
@@ -207,6 +227,15 @@ const Suicide = () => {
           {title: "Si la situation présente un danger immédiat de suicide", subtitle: "Contacte les services de secours (15 ou 112) ou le 3114 pour demander des conseils sur la situation."}
 
 
+      ]} />
+
+      <ExternalLinkBlock resources={[
+          {
+            link: "https://3114.fr/je-minquiete-pour-quelquun",
+            label: "Je m'inquiète pour quelqu'un",
+            description: "Conseils, réponses à tes questions et contacts.",
+            imageSrc: "/assets/3114.png"
+          }
       ]} />
 
         <h2 className="sous-titre-2">Entame la conversation</h2>
@@ -364,6 +393,18 @@ const Suicide = () => {
 
       <div id="impact">
         <h1 className="titre">Je suis impacté·e par un suicide</h1>
+
+        <ImageTextPopup
+        image="./assets/cartes/dame_pique.png"
+        title="La carte D♠"
+        shortText="Faire le deuil lorsqu'on est impacté·e ou témoin d'un suicide."
+        longText=""
+        textButton="⤢ Agrandir la carte"
+        suit = "pique"
+        
+      />
+
+
         <p className="texte">
           Perdre quelqu'un par suicide est une épreuve douloureuse. Se sentir coupable, confus, en colère ou chercher des réponses est normal. Ce n'est pas parce que la personne a agi ainsi qu'elle ne t'aimait pas.
         </p>
@@ -374,20 +415,44 @@ const Suicide = () => {
           Le deuil n'est pas linéaire : sidération, chaos émotionnel, questionnements et culpabilité sont fréquents. Avec le temps et le soutien, tu pourras trouver de l'espoir et continuer à vivre avec ton chagrin.
         </p>
 
-        <ExternalLinkBlock resources={ressourcesSuicide} />
+        <ExternalLinkBlock resources={impacte} />
+        
+          <ContactCard
+            image="/assets/nightline_logo.png"
+            title="Nightline Lyon"
+            subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s"
+            phone="04 85 30 00 10"
+            email=""
+            hours="Tous les soirs, de 21h à 2h30"
+            textButton="Voir le site web"
+            link="https://www.nightline.fr/lyon"
+          />
+
       </div>
+
+      <Separateur />
 
       <div id="temoin">
         <h1 className="titre">J'ai été témoin d'un suicide</h1>
 
-        <p className="texte">Vous ne réaliserez peut-être pas immédiatement que le suicide a eu un impact significatif sur vous – vous pouvez penser que parce que vous n’êtes pas apparenté, vous ne devriez pas être affecté de la même manière, que votre réaction n’est pas légitime. Cependant, face à ce trau-matisme, en parler peut vous aider. Il peut s’agir d’un ami ou d’une ligne d’assistance comme le 3114.</p>
+        <p className="texte">Tu ne réaliseras peut-être pas immédiatement que le suicide a eu un impact significatif sur toi, que tu ne devrais pas être affecté·e de la même manière, que ta réaction n’est pas légitime. Cependant, face à ce traumatisme, en parler peut t'aider, que ce soit à un ami ou via une ligne d’assistance comme le 3114.</p>
 
         <h2 className="sous-titre-2">Comment traverser le deuil ?</h2>
 
         <p className="texte">Les premiers jours qui suivent un suicide engendrent quelque fois une perception déformée de la réalité, une sidération.
-Cette période est généralement suivie d’un chaos dans les pensées et les sentiments, engen-drant par là des questions comme « Pourquoi ? », « Aurais-je pu remarquer quelque chose ? », « Qu’aurais-je pu faire ? », « Pourquoi ne m’a-t-elle/il pas parlé de sa souffrance ? ». La douleur de la perte peut s’accompagner de réflexions relatives à l’abandon, l’impuissance, le désespoir, la culpabilité, la colère…
-Les personnes endeuillées par suicide rapportent qu’à un moment, contre toute attente, elles découvrent qu’il y a de la place pour autre chose – un projet, un espoir. Ce n’est pas tant que votre chagrin diminue ; c’est que vous grandissez avec votre chagrin.
-</p>
+        Cette période est généralement suivie d’un chaos dans les pensées et les sentiments, engendrant par là des questions comme « Pourquoi ? », « Aurais-je pu remarquer quelque chose ? », « Qu’aurais-je pu faire ? », « Pourquoi ne m’a-t-elle/il pas parlé de sa souffrance ? ». La douleur de la perte peut s’accompagner de réflexions relatives à l’abandon, l’impuissance, le désespoir, la culpabilité, la colère…
+        Les personnes endeuillées par suicide rapportent qu’à un moment, contre toute attente, elles découvrent qu’il y a de la place pour autre chose – un projet, un espoir. Ce n’est pas tant que ton chagrin diminue ; c’est que tu grandis avec ton chagrin.
+        </p>
+
+        <ExternalLinkBlock resources={temoin} />
+
+
+        <Separateur />
+  
+        <p className="texte"><em><b>Sources :</b> Etat de l'Enseignement supérieur, de la Recherche et de l'Innovation en France n°13, 3114, PSSM France</em></p>
+  
+
+
 
 
 

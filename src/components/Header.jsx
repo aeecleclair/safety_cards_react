@@ -37,7 +37,7 @@ const menuItems = [
       { title: "🧑‍🦯 Situation de handicap", link: "/handicap" },
       { title: "💤 Sommeil", link: "/sommeil", inactive:true },
       { title: "🍽️ Troubles des Conduites Alimentaires", link: "/tca", inactive:true },
-      { title: "🗣️ Tentative de suicide", link: "/suicide", inactive:true },
+      { title: "🗣️ Tentative de suicide", link: "/suicide" },
     ],
   },
   {
