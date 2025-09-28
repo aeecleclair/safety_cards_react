@@ -1,189 +1,201 @@
-import "../../App.css";
-import Quote from "../../components/Citation"; 
-import ExternalLinkBlock from "../../components/Liens-ext";
 import React from "react";
-import ImageTextPopup from "../../components/Cartes"; 
-import ListeNumerotee from "../../components/Listes";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
-import ContactCard from "../../components/Contact";
-import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
+import "../../App.css";
 
-import Workinprogress from "../../components/WorkInProgress";
+import Quote from "../../components/Citation"; 
+import ImageTextPopup from "../../components/Cartes"; 
+import ExternalLinkBlock from "../../components/Liens-ext";
+import ContactCard from "../../components/Contact";
+import Separateur from "../../components/Separateur";
+import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
+import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import ListeNumerotee from "../../components/Listes";
 
 const navLinks = [
-  { label: "Plan d'action", target: "Plan_action" },
-  { label: "Contacts utiles", target: "Contacts" },
-  { label: "Ressources utiles", target: "Ressources_utiles" }
+  { label: "Comprendre le sommeil", target: "definition" },
+  { label: "J'ai des troubles du sommeil", target: "troubles" },
+  { label: "Comment mieux dormir ?", target: "solutions" },
 ];
 
-const items = [
-  { title: "Fixer des horaires", subtitle: "Limiter le temps accordé devant les écrans avant d'aller se coucher, en moyenne 1 heure" },
-  { title: "Mettre son portable en mode avion", subtitle: "Réduire les dérangements en coupant les notifications" },
-  { title: "Faire de la relaxation", subtitle: "Faire des exercices de repiration, de visualisation avant de s'endormir peut aider" },
-  { title: "Se fixer des couvres feu", subtitle: "Se fixer une heure limite sur se coucher et pourquoi pas se donner une sorte de punition en cas de non respect (pompes...)" },
-  { title: "Penser à son confort", subtitle: "Le confort est essentiel, par exemple il faut s'assurer que son oreiller est de bonne qualité, d'utiliser un masque pour les yeux, des boules quies..." },
+const chiffres = [
+  { number: "1/3", title: "des adultes", description: "souffrent de troubles du sommeil de façon ponctuelle" },
+  { number: "10 à 15%", title: "de la population", description: "souffre d’insomnie chronique" },
+  { number: "20 min", title: "c’est le temps moyen", description: "nécessaire pour s’endormir dans de bonnes conditions" },
 ];
 
-const resources = [
+const ressources = [
   {
-    link: "https://www.nightline.fr/lyon",
-    //imageSrc: "/assets/nightline_logo.png",
-    label: "Nightline",
-    description: "Un service d'écoute nocturne tous les soirs de 21h à 2h30"
+    link: "https://www.inserm.fr/dossier/sommeil/",
+    imageSrc: "/assets/inserm.jpg",
+    label: "Inserm – Dossier Sommeil",
+    description: "Explications scientifiques sur le sommeil et ses troubles",
   },
   {
-    link: "catherine@",//à voir
-    label: "Infirmerie",
-    description: "Ateliers de sophrologie/détente/relaxation et écoute"
-  },
-//chaine youtube de relaxation à trouver
-
-];
-
-const data = [
-  { number: "1/2", title: "élève considère que son temps d'écran", description: "impacte négativement son sommeil" }
-];
-
-
-const resources_sites = [
-
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
+    link: "https://sante.gouv.fr/",
+    imageSrc: "/assets/sante-france.png",
+    label: "Ministère de la Santé",
+    description: "Informations officielles sur les troubles du sommeil et leur prise en charge",
   },
 ];
 
-const Sommeil = () => {
-    return (
-      <div className="page">
-        <h1 className="titre-page">Sommeil</h1>
-        <Workinprogress/>
-
-        <h1 className = "titre">Les ressources globales</h1>
-      <ExternalLinkBlock
-        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
-        resources={resources_sites}
-      />
-
-
-      </div>
-    );
-  };
-  
-  export default Sommeil;
-
-  {/* 
+const items3 = [
+  { title: "Sois bienveillant·e", subtitle: "Évite de minimiser les difficultés d’endormissement, elles sont souvent très épuisantes" },
+  { title: "Écoute sans juger", subtitle: "Un sommeil perturbé est source d’anxiété, propose ton soutien avec patience" },
+  { title: "Encourage les bonnes pratiques", subtitle: "Limiter les écrans, créer un rituel calme avant le coucher" },
+  { title: "Accompagne si besoin", subtitle: "Propose de consulter un·e professionnel·le de santé si le problème devient chronique" },
+];
 
 const Sommeil = () => {
   return (
     <div className="page">
-      <h1 className="titre">Sommeil</h1>
+      <h1 className="titre-page">Sommeil</h1>
+
       <Navbar links={navLinks} />
-      <p className="sous-titre-page">Sujets traités sur cette page : 
+
+      <div id="definition">
+        <h1 className="titre">Comprendre le sommeil</h1>
+      </div>
+
+      <div id="resume-conseils">
+        <p className="mise-avant">
+          Le sommeil se déroule en <b>cycles</b> (léger, profond, paradoxal). Chaque cycle est essentiel pour une bonne récupération. Le moindre déséquilibre peut entraîner <b>fatigue chronique</b>, <b>troubles de la concentration</b> ou encore <b>irritabilité</b>.
+        </p>
+      </div>
+
+      <p className="texte">Les différentes phases du sommeil sont les suivantes : </p>
+      <BulletList
+        items={[
+          "Sommeil léger : transition entre l’éveil et le sommeil, facile à interrompre",
+          "Sommeil profond : phase de récupération physique, difficile à réveiller",
+          "Sommeil paradoxal : phase de rêves, importante pour la mémoire et la régulation émotionnelle",
+        ]}
+      />  
+     <ChiffresGroup chiffres={chiffres} />
+
+      <h2 className="sous-titre-2">Pourquoi est-il important de bien dormir ?</h2>
+      <p className="texte">En moyenne, les jeunes entre 18 et 25 ans dorment moins de 7 heures par nuit, ce qui est en dessous des recommandations (7 à 9 heures). Dormir moins de 7 heures par nuit peut avoir des conséquences sur ta santé :</p>
+      <BulletList
+        items={[
+          "Diminution de la concentration et de la mémoire",
+          "Augmentation du stress et de l’anxiété",
+          "Affaiblissement du système immunitaire",
+          "Prise de poids et troubles de l’appétit",
+          "Altération de l’humeur et risque de dépression",
+        ]}
+      />
+
+      <p className="texte">En effet, dormir permet à ton corps de récupérer et de se régénérer. Un sommeil de qualité est crucial pour maintenir un bon équilibre physique et mental.</p>
+      
+      <Separateur />
+
+      <div id="troubles">
+        <h1 className="titre">J'ai des troubles du sommeil</h1>
+      </div>
+
+      <div id="resume-details">
+        <p className="mise-avant">
+          Le sommeil est essentiel à notre santé physique et mentale. <b> Difficultés à s’endormir, réveils fréquents, anxiété nocturne ou insomnies chroniques </b> ne doivent pas être ignorés : ils peuvent altérer la qualité de vie au quotidien.
+        </p>
+      </div>
+
+      <ImageTextPopup
+        image="./assets/cartes/9_pique.png"
+        title="La carte 9♠"
+        shortText="Prévention et gestion des troubles du sommeil"
+        longText="Avoir du mal à s’endormir ou à rester endormi n’est pas qu’une question de fatigue. Cela peut être lié au stress, à l’anxiété, à une hygiène de vie inadaptée ou à des troubles médicaux. Ne banalise pas un mauvais sommeil répété : il peut avoir de lourdes conséquences sur la santé physique et mentale."
+        textButton="⤢ Agrandir la carte"
+      />
+
+      
+      <h2 className="sous-titre-2">Pourquoi ai-je du mal à m'endormir ?</h2>
+      <p className="texte">Il est parfois difficile de s'endormir car la phase de sommeil léger est souvent interrompue par des pensées incessantes ou des stimuli extérieurs (bruits ambiants, lumière). Une utilisation excessive des écrans avant le coucher peut également perturber le sommeil car les écrans émettent de la lumière bleue, qui inhibe la production de mélatonine, l'hormone du sommeil. Pour cette raison, si tu as des difficultés fréquentes à t'endormir, il est important de te créer un environnement propice au sommeil ou d'adopter des techniques de relaxation.</p>
+      <p className="texte">Un mauvais sommeil ou une difficulté à s'endormir peut aussi être lié à des facteurs tels que le stress, l'anxiété, une mauvaise hygiène de vie ou des problèmes de santé sous-jacents. Si ces difficultés persistent, il peut être utile de consulter un·e professionnel·le de santé.</p>
+
+      
+      <ExternalLinkBlock
+        resources={[
+          {
+            link: "/anxiete",
+            emoji: "😟",
+            label: "Anxiété",
+            description: "Je suis trop anxieux·se pour trouver le sommeil. Que faire ?",
+          },
+          {
+            link: "/ecrans",
+            emoji: "📱",
+            label: "Écrans",
+            description: "Je passe trop de temps devant les écrans et cela affecte mon sommeil.",
+          },
+        ]}
+      />
+
+      <h2 className="sous-titre-2">Les troubles du sommeil</h2>
+
+      <p className="texte">
+        Les troubles du sommeil peuvent avoir différentes origines, parmi lesquelles :
       </p>
 
-      <BulletList items={["Le rythme de sommeil", "Les insomnies", "Les solutions envisageables" ]} />
-        
-        <Quote 
-          text="Dormir comme un bébé 👶." 
-        />
-
-        <p className="titre">Un "bon" rythme de sommeil</p>
-
-        <ImageTextPopup
-          image="./assets/Sommeil 1.jpg"
-          title="La carte 9♠"
-          shortText="Prévention quant au sommeil des étudiants"
-          longText="Tout le monde expérimente des nuits plus ou moins calme au cours de sa scolarité..."
-          textButton="⤢ Agrandir la carte"
-        />
-        
-        <div id="Plan_action"></div>
-
-      <p className="sous-titre-1"> Ton sommeil n'est pas négligeable !</p>
-      <p className="texte"> Les troubles du sommeil sont du à plusieurs facteurs, dont certains que tu peux maîtriser. Par exemple ton temps d'écran avant d'aller te coucher, ta night routine en générale, ton niveau de stress...Prends le contrôle : fixe-toi des limites, privilégie des. Les meilleurs moments ne se vivent pas à travers un écran !</p>
-
-      <h1 className="">Comment agir ?</h1>
-      <ListeNumerotee 
-          
-          title="Plan d'action pour réduire son exposition aux écrans"
-          items={items} //on fait appel à des constantes de début de la page
-          
+      <BulletList
+        items={[
+          "Insomnie : difficulté à s’endormir ou réveils fréquents",
+          "Apnées du sommeil : pauses respiratoires nocturnes entraînant une fatigue diurne",
+          "Syndrome des jambes sans repos : besoin irrépressible de bouger les jambes la nuit",
+          "Somnambulisme et parasomnies : comportements anormaux durant le sommeil",
+        ]}
       />
-      <h1 className="">Chiffres clés</h1>
-      <ChiffresGroup chiffres={data} />
 
+      <h2 className="sous-titre-2">Les différents types d'insomnie</h2>
+      <p className="texte">Attention, l'insomnie ne désigne pas une simple mauvaise nuit. Elle se manifeste généralement par une difficulté à s'endormir, des réveils multiples pendant la nuit ou un sommeil non réparateur, au moins 3 nuits par semaine pendant 3 mois ou plus. On en distingue 3 types :</p>
 
-      <h1 className="">Besoin d'en parler ?</h1>
-      <div id = "Contacts">
-      <ContactCard
-        image="/assets/nightline_logo.png" 
-        title="Nightline Lyon"
-        subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
-        phone="04 85 30 00 10"
-        email=""
-        hours="Tous les soirs de 21h à 2h30"
-        textButton="Voir le site web"
-        link="https://www.nightline.fr/lyon"
+      <BulletList
+        items={[
+          "Insomnie d'endormissement : difficulté à s'endormir au début de la nuit",
+          "Insomnie de maintien du sommeil : réveils fréquents durant la nuit",
+          "Insomnie de fin de sommeil : réveil précoce et impossibilité de se rendormir",
+        ]}
       />
+
+      <p className="texte">
+        Si tu constates que tes nuits sont régulièrement perturbées et que cela impacte ton quotidien, <b>parles-en à un·e professionnel·le de santé</b>. 
+        Des solutions existent pour retrouver un sommeil réparateur.
+      </p>
+
+      <Separateur />
+
+      <div id="solutions">
+        <h1 className="titre">Comment mieux dormir ?</h1>
       </div>
 
+      <h2 className="sous-titre-2">Conseils pour mieux dormir</h2>
 
-      <p className="titre">Les insomnies</p>
+      <NumberedList
+        items={[
+          "Instaurer une routine de coucher (heure régulière, rituel calme)",
+          "Éviter les écrans au moins 1h avant de dormir",
+          "Favoriser une chambre fraîche, sombre et silencieuse",
+          "Limiter caféine, alcool et repas trop lourds le soir",
+          "Pratiquer la relaxation ou la respiration avant de se coucher",
+          "Faire de petites siestes (20 min maximum) en journée si besoin",
+        ]}
+      />
+      <p className="texte">
+        Si tu souffres de troubles du sommeil persistants, n’hésite pas à consulter ton médecin. 
+        Des solutions comme la thérapie comportementale, l’hypnose ou parfois un traitement médicamenteux peuvent être proposées. 
+        Tu n’es pas seul·e à vivre ces difficultés.
+      </p>
 
 
-
-    <TextImageRight  text="" 
-      imageSrc="../assets/Reseaux.png" />
-
-    <YouTubeVideo url="https://www.youtube.com/watch?v=9qLREeJs__A" />
-
-
-      <div id = "Ressources_utiles">
       <ExternalLinkBlock
         title="Ressources utiles"
-        subtitle="Quelques sites utiles à visiter"
-        resources={resources}
+        subtitle="Pour mieux comprendre et gérer les troubles du sommeil"
+        resources={ressources}
       />
-      </div>
+
+      <Separateur />
+
+
+      <p className="texte"><em><b>Sources :</b> Inserm, Ministère de la Santé, HAS, Réseau Morphée</em></p>
     </div>
-    );
-  };
+  );
+};
 
 export default Sommeil;
-
-*/}
