@@ -13,6 +13,7 @@ import Quote from "../../components/Citation";
 import { ChiffresGroup } from "../../components/Chiffres";
 import ListeNumerotee from "../../components/Listes";
 import ImageTextPopup from "../../components/Cartes"; 
+import { label } from "framer-motion/m";
 
 /** Navigation */
 const navLinks = [
@@ -21,6 +22,15 @@ const navLinks = [
   { label: "Je m'inquiète pour quelqu'un", target: "inquiet" },
   { label: "Je suis impacté·e", target: "impact" },
   { label: "J'ai été témoin d'un suicide", target: "temoin" }
+];
+
+const depression = [
+  {
+    link: "/depression",
+    label: "Dépression",
+    description: "Un état dépressif peut être un facteur de risque important.",
+    emoji: "🥺"
+  }
 ];
 
 const psy = [
@@ -84,9 +94,11 @@ const Suicide = () => {
         ]} />
 
         <p className="texte">
-          Le suicide est souvent précédé d'idées suicidaires. C'est le résultat d’une accumulation de souffrances et de facteurs personnels et environnementaux (il n’y a pas une « cause » unique). Ce n’est pas un acte impulsif sans signe avant-coureur. Il se développe souvent progressivement sous l’effet de la souffrance mentale. Reconnaître les facteurs de risque et en parler avec un professionnel peut aider à prévenir le passage à l’acte.
+          Le suicide est souvent <b>précédé d'idées suicidaires</b>. C'est le résultat d’une <b>accumulation de souffrances et de facteurs personnels</b> et environnementaux (il n’y a pas une « cause » unique). Ce n’est pas un acte impulsif sans signe avant-coureur. Il se développe souvent progressivement sous l’effet de la souffrance mentale. Reconnaître les facteurs de risque et en parler avec un professionnel peut aider à prévenir le passage à l’acte.
         </p>
-      </div>
+
+        <ExternalLinkBlock resources={depression} />
+ 
 
       <h2 className="sous-titre-2">Les raisons invoquées par les personnes ayant tenté de se suicider</h2>
 
@@ -96,9 +108,11 @@ const Suicide = () => {
       </p>
 
       <BulletList items={[
-        "La nécessité d'échapper à une souffrance émotionnelle insupportable. Le suicide apparait comme l'unique solution à sa situation désespérée.",
-        "La volonté d'interpeller son entourage et de montrer son mal-être : c'est un appel à l'aide.",
+        <>La nécessité d'<b>échapper à une souffrance émotionnelle insupportable</b>. Le suicide apparait comme l'unique solution à sa situation désespérée.</>,
+        <>La volonté d'<b>interpeller son entourage et de montrer son mal-être</b> : c'est un appel à l'aide.</>
       ]} />
+
+     </div>
 
       <Separateur />
 
@@ -109,15 +123,19 @@ const Suicide = () => {
 
         <h2 className="sous-titre-2">Je me sens mal ou dépassé·e</h2>
         <p className="texte">
-          Si tu te sens mal ou dépassé·e, il est important de le reconnaître et d'en parler. Tu n'es pas seul·e dans cette situation, et il existe des ressources pour t'aider. Si tu es dans cette situation, tu peux :
+          Si tu te sens mal ou dépassé·e, il est important de le reconnaître et d'en parler. Tu n'es pas seul·e dans cette situation, et il existe des ressources pour t'aider. 
         </p>
-        <BulletList items={[
-          "Tenir un journal de tes sentiments ou des choses que tu apprécies vraiment",
-          "Appeler un·e ami·e ou un membre de ta famille en qui tu as confiance, pour parler de ce que tu ressens ou juste pour te changer les idées",
-          "Essayer de te détendre en écoutant de la musique, en méditant, en allant te promener",
-          "Te dépenser en faisant du sport",
-          "Communiquer avec un professionnel de la santé mentale : infirmière, médecin généraliste, psychologue, 3114, etc."
-        ]} />
+        <ListeNumerotee
+          title="Que faire si tu te sens mal ou dépassé·e ?"
+          subtitle="Des actions simples pour te soulager et chercher de l'aide"
+          items={[
+            { subtitle: "Tenir un journal de tes sentiments ou des choses que tu apprécies vraiment" },
+            { subtitle: "Appeler un·e ami·e ou un membre de ta famille en qui tu as confiance, pour parler de ce que tu ressens ou juste pour te changer les idées" },
+            { subtitle: "Essayer de te détendre en écoutant de la musique, en méditant, en allant te promener" },
+            { subtitle: "Te dépenser en faisant du sport" },
+            { subtitle: "Communiquer avec un professionnel de la santé mentale : infirmière, médecin généraliste, psychologue, 3114, etc." }
+          ]}
+        />
 
         <ExternalLinkBlock resources={psy} />
 
@@ -140,13 +158,13 @@ const Suicide = () => {
 
         <h2 className="sous-titre-2">J'ai des idées suicidaires</h2>
         <p className="texte">
-          Peu importe les raisons qui vous amènent à avoir de telles idées, votre douleur est légitime. Bien des choses peuvent vous inciter à mettre fin à votre vie, par exemple : les émotions se sont accumulées avec le temps, la douleur que vous ressentez devient intolérable, un déclencheur ou événement subit… Si vous avez de telles pensées, il est important que vous demandiez de l’aide. Tu peux :
+          Peu importe les raisons qui t'amènent à avoir de telles idées, ta douleur est légitime. Bien des choses peuvent t'inciter à mettre fin à ta vie, par exemple : les émotions se sont accumulées avec le temps, la douleur que tu ressens devient intolérable, un déclencheur ou événement subit… Si tu as de telles pensées, il est important que tu demandes de l’aide. Tu peux :
         </p>
 
         <BulletList items={[
-          "Utiliser ton plan de mise en sécurité si tu en as un, ou en crééer un avec une personne formée.",
-          "Appeler un·e ami·e ou un membre de ta famille en qui tu as confiance",
-          "Contacter un professionnel du 3114",
+          <>Utiliser ton <b>plan de mise en sécurité</b> si tu en as un, ou en crééer un avec une personne formée.</>,
+          <><b>Appeler un·e ami·e ou un membre de ta famille</b> en qui tu as confiance</>,
+          <>Contacter un <b>professionnel du 3114</b></>,
         ]} />
 
         <AnchorButton target="plan_securite">Etablir mon plan de sécurité avec un secouriste ↓</AnchorButton>
@@ -163,9 +181,9 @@ const Suicide = () => {
         <h2 className="sous-titre-2">A qui en parler ?</h2>
         <BulletList items={[
           <><b>Ton entourage</b> : tes ami·e·s, ta famille, tes professeur·e·s, ton tuteur ou ta tutrice PCP, etc.</>,
-          <><b>Un élève formé aux premiers secours en santé mentale</b> ou en contactant l'association <b>Peer Care</b></>,
-          <><b>Un professionnel de santé</b> : infirmière, médecin généraliste, psychologue, etc.</>,
-          <><b>Un ou une professionnel·le de la prévention du suicide</b> via la ligne <b>3114</b>. Cela pourra t'aider à explorer des options et à trouver l’aide disponible qui correspond le mieux à ta situation et à tes besoins. Il peut s’agir, entre autres, d’une ligne d’écoute, d’un lieu de consultation près de chez toi ou encore d’un centre d’accueil et de crise.</>,
+          <><b>Un·e élève formé·e aux premiers secours en santé mentale</b> ou en contactant l'association <b>Peer Care</b></>,
+          <><b>Un·e professionnel·le de santé</b> : infirmière, médecin généraliste, psychologue, etc.</>,
+          <><b>Un·e professionnel·le de la prévention du suicide</b> via la ligne <b>3114</b>. Cela pourra t'aider à explorer des options et à trouver l’aide disponible qui correspond le mieux à ta situation et à tes besoins. Il peut s’agir, entre autres, d’une ligne d’écoute, d’un lieu de consultation près de chez toi ou encore d’un centre d’accueil et de crise.</>,
         ]} />
 
         <ContactCard
@@ -206,13 +224,13 @@ const Suicide = () => {
         </p>
 
         <BulletList items={[
-          "Les changements d'humeur soudains (colère, tristesse, etc.), l'expression de désespoir ou de vengeance",
-          "Les propos et écrits sur la mort ou le suicide, la menance de se faire du mal ou de se tuer",
-          "L'éloignement de sa famille ou de ses ami·e·s",
-          "L'anxiété, l'agitation ou la somnolence permanente",
-          "L'engagement dans des activités risquées, imprudente et apparemment irréfléchie",
-          "La recherche de moyens de mettre fin à ses jours (médicaments ou autres moyens)",
-          "Le sentiment d'être piégé ou de ne plus avoir de raisons de vivre",
+          <>Les <b>changements d'humeur soudains</b> (colère, tristesse, etc.), l'expression de désespoir ou de vengeance</>,
+          <>Les <b>propos et écrits sur la mort ou le suicide</b>, la menace de se faire du mal ou de se tuer</>,
+          <><b>L'éloignement de sa famille ou de ses ami·e·s</b></>,
+          <><b>L'anxiété, l'agitation ou la somnolence permanente</b></>,
+          <>L'engagement dans des <b>activités risquées</b>, imprudentes et apparemment irréfléchies</>,
+          <>La recherche de <b>moyens de mettre fin à ses jours</b> (médicaments ou autres moyens)</>,
+          <>Le <b>sentiment d'être piégé·e</b> ou de ne plus avoir de raisons de vivre</>,
         ]} />
 
       <ListeNumerotee 
@@ -240,9 +258,9 @@ const Suicide = () => {
 
         <h2 className="sous-titre-2">Entame la conversation</h2>
         <p className="texte"><b>Interroge-toi :</b> es-tu capable de mener cette conversation, et es-tu disponible et à l’écoute ?</p>
-        <p className="texte"><b>Choisissez un cadre agréable :</b> dans un dendroit calme et isolé, au parc ou autour d'un café, au téléphone...</p>
+        <p className="texte"><b>Choisissez un cadre agréable qui vous convienne à tou·te·s les deux :</b> dans un endroit calme et isolé, au parc ou autour d'un café, au téléphone...</p>
 
-        <p className="texte"><b>Mentionnez ce que vous avez remarqué sans le juger ni le faire culpabiliser :</b></p>
+        <p className="texte"><b>Mentionnez ce que vous avez remarqué sans juger ni culpabiliser :</b></p>
         <BulletList items={[
           "« Je ne t’ai pas beaucoup vu ces derniers jours. Est-ce que tout va bien ? »",
           "« J’ai l’impression que tu vas mal. Tu veux qu’on en parle ? »",
@@ -262,23 +280,23 @@ const Suicide = () => {
 
         <h2 className="sous-titre-2">Ecoute activement</h2>
         <BulletList items={[
-          "Fais preuve d'empathie lorsque la personne parle de ce qu'elle ressent, n'entre pas dans un débat.",
-          "Ecoute sans jugement et sans culpabiliser.",
-          "Pose des questions ouvertes (auxquelles on ne peut pas répondre par oui ou non) afin de maintenir une conversation.",
-          "N'hésite pas à reformuler ou à clarifier certains points, afin de montrer ton intérêt et d'être sûr·e de bien comprendre.",
-          "Récapitule ce qu'il dit : « Si je comprends bien, tu te sens... »",
-          "Ne ramène pas la conversation à toi et ne tente pas d'émettre un diagnostic de trouble psychique."
+          <>Fais preuve d'<b>empathie</b> lorsque la personne parle de ce qu'elle ressent, n'entre pas dans un débat.</>,
+          <>Ecoute <b>sans jugement</b> et sans culpabiliser.</>,
+          <>Pose des <b>questions ouvertes</b> (auxquelles on ne peut pas répondre par oui ou non) afin de maintenir une conversation.</>,
+          <>N'hésite pas à <b>reformuler ou à clarifier certains points</b>, afin de montrer ton intérêt et d'être sûr·e de bien comprendre.</>,
+          <><b>Récapitule ce qu'il dit</b> : « Si je comprends bien, tu te sens... »</>,
+          <><b>Ne ramène pas la conversation à toi</b> et ne tente <b>pas d'émettre un diagnostic de trouble psychique.</b></>
         ]} />
 
         <h2 className="sous-titre-2">Détermine l'urgence de la situation</h2>
         <p className="texte">Afin d'évaluer l'urgence de la situation, tu peux surveiller plusieurs points. On peut considérer que la sécurité de la personne est compromise si :</p>
         <BulletList items={[
-          "Il ou elle a prévu un scénario suicidaire (quand, où, comment)",
-          "Il ou elle a des moyens concrets pour passer à l'acte (armes, médicaments, etc.)",
-          "Il ou elle fait ses adieux",
-          "Il ou elle tient des propos évasifs : « T’as bien mieux à faire que de t’occuper de moi », « J’ai pensé à une solution, mais je ne veux pas en parler »",
-          "Il ou elle tient des propos allusifs : « J’en ai assez de me battre », « Bientôt, vous n’aurez plus à entendre parler de moi »",
-          "Il ou elle tient des propos explicites : « J’en peux plus, plutôt me tuer que de vivre ça », « Pour moi, la mort est la seule option »"
+          <>Il ou elle a prévu un <b>scénario suicidaire</b> (quand, où, comment)</>,
+          <>Il ou elle a des <b>moyens concrets pour passer à l'acte</b> (armes, médicaments, etc.)</>,
+          <>Il ou elle fait ses <b>adieux</b></>,
+          <>Il ou elle tient des <b>propos évasifs</b> : « T’as bien mieux à faire que de t’occuper de moi », « J’ai pensé à une solution, mais je ne veux pas en parler »</>,
+          <>Il ou elle tient des <b>propos allusifs</b> : « J’en ai assez de me battre », « Bientôt, vous n’aurez plus à entendre parler de moi »</>,
+          <>Il ou elle tient des <b>propos explicites</b> : « J’en peux plus, plutôt me tuer que de vivre ça », « Pour moi, la mort est la seule option »</>
         ]} />
 
       <div id="plan_securite">
@@ -291,7 +309,7 @@ const Suicide = () => {
           {title: "Enumérer les signes", subtitle: "qui indiquent qu'une crise suicidaire peut arriver."},
           {title: "Enumérer les stratégies d'adaptation", subtitle: "pour détourner les pensées suicidaires, se calmer et se réconforter."},
           {title: "Dresser la liste des lieux, des activités sociales et des personnes", subtitle: "qui peuvent t'aider à te distraire."},
-          {title: "Dresser la liste des contacts", subtitle: "pouvant être contactées en cas de crise."},
+          {title: "Dresser la liste des contacts", subtitle: "à joindre en cas de crise."},
           {title: "Enumérer les professionnels de soins de santé mentale ", subtitle: "selon leurs horaires d'ouverture et les numéros de téléphone 24h/24 7j/7 en cas de crise."},
           {title: "Sécuriser le plus possible ton environnement "},
           {title: "Énumérer tes raisons importantes de vivre", subtitle: "et pourquoi tu es toujours en vie."},
@@ -316,6 +334,17 @@ const Suicide = () => {
 
       />
 
+      <ContactCard
+              image="/assets/15.png"
+              title="SAMU"
+              subtitle="Urgence médicale"
+              phone="15"
+              textButton="Appeler"
+              link="tel:15"
+              bgColor="#ffffff"
+              textColor="#ee3624"
+      />
+
         <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
         title="Infirmerie"
@@ -330,20 +359,6 @@ const Suicide = () => {
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
 
       />
-
-      <ContactCard
-              image="/assets/15.png"
-              title="SAMU"
-              subtitle="Urgence médicale"
-              phone="15"
-              textButton="Appeler"
-              link="tel:15"
-              bgColor="#ffffff"
-              textColor="#ee3624"
-      />
-
-
-
 
 
       <h2 className="sous-titre-2">Un point sur l'automutilation</h2>
@@ -365,10 +380,10 @@ const Suicide = () => {
       <p className="texte">Tu es un·e ami·e, pas un·e thérapeute.</p>
       <BulletList
         items={[
-          "Encourage la personne à s’ouvrir à d’autres. « À qui d’autre en as-tu parlé ? »",
-          "Appelez ensemble le numéro national de prévention du suicide au 3114",
-          "À la suite de cette conversation, et si tu t'en sens capable, maintiens un contact. « Comment te sens-tu aujourd’hui ? »",
-          "S’il planifie de façon imminente de mettre fin à sa vie, appelle le 3114, et efforce-toi de ne pas le laisser seul.",
+          <><b>Encourage la personne à s’ouvrir à d’autres</b>. « À qui d’autre en as-tu parlé ? »</>,
+          <><b>Appelez ensemble le numéro national de prévention du suicide au 3114</b>.</>,
+          <><b>À la suite de cette conversation, et si tu t'en sens capable, maintiens un contact</b>. « Comment te sens-tu aujourd’hui ? »</>,
+          <><b>Si elle ou il planifie de façon imminente de mettre fin à sa vie, appelle le 3114</b>, et efforce-toi de ne pas la ou le laisser seul·e.</>,
         ]}
       />
 
@@ -376,14 +391,14 @@ const Suicide = () => {
         Offrir du soutien à une personne qui vit des difficultés peut être très valorisant. Mais cela peut aussi avoir un impact sur toi : tu peux rapidement ressentir de la fatigue, voire de l’épuisement. Pour arriver à rester disponible pour l’autre, il est essentiel de prendre soin de soi et de respecter ses limites.
       </p>
 
-      <p className="texte">Il est donc important que tu :</p>
+      <p className="texte"><b>Il est donc important que tu :</b></p>
       <BulletList
         items={[
-          "Détermines jusqu’où tu peux apporter ton aide",
-          "Ne fasses pas de promesse intenable",
-          "T'accordes des moments de repos où tu pourras penser à autre chose",
-          "Cherches le soutien de ton entourage",
-          "Contactes le 3114, pour toi, en cas de besoin et à tout moment.",
+          <><b>Détermines jusqu’où tu peux apporter ton aide</b>.</>,
+          <><b>Ne fasses pas de promesse intenable</b>.</>,
+          <><b>T'accordes des moments de repos où tu pourras penser à autre chose</b>.</>,
+          <><b>Cherches le soutien de ton entourage</b>.</>,
+          <><b>Contactes le 3114, pour toi, en cas de besoin et à tout moment</b>.</>,
         ]}
       />
 
@@ -406,10 +421,10 @@ const Suicide = () => {
 
 
         <p className="texte">
-          Perdre quelqu'un par suicide est une épreuve douloureuse. Se sentir coupable, confus, en colère ou chercher des réponses est normal. Ce n'est pas parce que la personne a agi ainsi qu'elle ne t'aimait pas.
+          Perdre quelqu'un par suicide est une épreuve douloureuse. Se sentir coupable, confus, en colère ou chercher des réponses est normal. <b>Ce n'est pas parce que la personne a agi ainsi qu'elle ne t'aimait pas.</b>
         </p>
         <p className="texte">
-          Si tu as été témoin ou trouvé le corps, tu peux ressentir stress post-traumatique, flashbacks, cauchemars. Même si tu n'étais pas apparenté, ton ressenti est légitime. Parler de ce que tu vis avec un ami ou un professionnel (ex. 3114) peut aider.
+          Si tu as été témoin ou trouvé le corps, tu peux ressentir stress post-traumatique, flashbacks, cauchemars. Même si tu n'étais pas apparenté·e, ton ressenti est légitime.<b> Parler de ce que tu vis avec un ami ou un professionnel (ex. 3114) peut aider.</b>
         </p>
         <p className="texte">
           Le deuil n'est pas linéaire : sidération, chaos émotionnel, questionnements et culpabilité sont fréquents. Avec le temps et le soutien, tu pourras trouver de l'espoir et continuer à vivre avec ton chagrin.
@@ -435,13 +450,13 @@ const Suicide = () => {
       <div id="temoin">
         <h1 className="titre">J'ai été témoin d'un suicide</h1>
 
-        <p className="texte">Tu ne réaliseras peut-être pas immédiatement que le suicide a eu un impact significatif sur toi, que tu ne devrais pas être affecté·e de la même manière, que ta réaction n’est pas légitime. Cependant, face à ce traumatisme, en parler peut t'aider, que ce soit à un ami ou via une ligne d’assistance comme le 3114.</p>
+        <p className="texte">Tu ne réaliseras peut-être pas immédiatement que le suicide a eu un impact significatif sur toi. Tu pourras penser que tu ne devrais pas être affecté·e de la même manière, que ta réaction n’est pas légitime. Cependant, face à ce traumatisme, en parler peut t'aider, que ce soit à un ami ou via une ligne d’assistance comme le 3114.</p>
 
         <h2 className="sous-titre-2">Comment traverser le deuil ?</h2>
 
-        <p className="texte">Les premiers jours qui suivent un suicide engendrent quelque fois une perception déformée de la réalité, une sidération.
+        <p className="texte"><b>Les premiers jours qui suivent un suicide engendrent quelque fois une perception déformée de la réalité, une sidération.</b>
         Cette période est généralement suivie d’un chaos dans les pensées et les sentiments, engendrant par là des questions comme « Pourquoi ? », « Aurais-je pu remarquer quelque chose ? », « Qu’aurais-je pu faire ? », « Pourquoi ne m’a-t-elle/il pas parlé de sa souffrance ? ». La douleur de la perte peut s’accompagner de réflexions relatives à l’abandon, l’impuissance, le désespoir, la culpabilité, la colère…
-        Les personnes endeuillées par suicide rapportent qu’à un moment, contre toute attente, elles découvrent qu’il y a de la place pour autre chose – un projet, un espoir. Ce n’est pas tant que ton chagrin diminue ; c’est que tu grandis avec ton chagrin.
+        <b>Les personnes endeuillées par suicide rapportent qu’à un moment, contre toute attente, elles découvrent qu’il y a de la place pour autre chose : un projet, un espoir.</b> Ce n’est pas tant que ton chagrin diminue ; c’est que tu grandis avec ton chagrin.
         </p>
 
         <ExternalLinkBlock resources={temoin} />
