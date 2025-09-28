@@ -134,6 +134,7 @@
     border-radius: 10px;
     cursor:pointer;
     position: relative;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
     overflow: hidden;
 }
 
@@ -147,7 +148,7 @@
 .lien-navbar:hover {
     background-color: #b22133;
     color: white;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Progression interne */
@@ -386,6 +387,7 @@ body.dark-mode .lien-navbar:hover {
 .anchor-button:hover {
     background-color: #b22133;
     color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body.dark-mode .anchor-button {
