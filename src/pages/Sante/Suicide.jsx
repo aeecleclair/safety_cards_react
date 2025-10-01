@@ -233,6 +233,23 @@ const Suicide = () => {
           <>Le <b>sentiment d'être piégé·e</b> ou de ne plus avoir de raisons de vivre</>,
         ]} />
 
+        <p className="mise-avant"> <b>Attention :</b> certaines personnes plus fragiles peuvent agir de manière compulsive, sans que leur mal être soit visible.</p>
+
+        <p className="texte">La consommation d'<b>alcool</b> ou de <b>substances</b> peut aussi aggraver les comportements suicidaires.</p>
+
+        <ExternalLinkBlock resources={[
+          { link: "/alcool", 
+            label: "Alcool", 
+            description: "Comment aborder la consommation d'alcool ?", 
+            emoji: "🍺"
+          },
+          { link: "/stup",
+            label: "Stupéfiants",
+            description: "Comment aborder la consommation de stupéfiants ?",
+            emoji: "🎆"
+          }
+        ]} />
+
       <ListeNumerotee 
       title ="Plan d'action en cas de suspicion de crise suicidaire"
       subtitle="Voici les différentes étapes résumées pour assister une personne en cas de suspicion de crise suicidaire. Chaque étape est détaillée dans les parties suivantes. Si tu te sens dépassé·e en tant qu'aidant·e, tu peux contacter à tout moment le 3114 ou l'infirmière."
