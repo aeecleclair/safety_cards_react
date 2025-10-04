@@ -9,11 +9,13 @@ import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import ListeNumerotee from "../../components/Listes";
+import { ExternalLink } from "lucide-react";
 
 const navLinks = [
   { label: "Comprendre le sommeil", target: "definition" },
   { label: "J'ai des troubles du sommeil", target: "troubles" },
-  { label: "Comment mieux dormir ?", target: "solutions" },
+  { label: "Les mauvais réflexes", target: "mauvais-reflexes" },
+  { label: "Comment mieux dormir ?", target: "solutions" }
 ];
 
 const chiffres = [
@@ -22,18 +24,26 @@ const chiffres = [
   { number: "20 min", title: "c’est le temps moyen", description: "nécessaire pour s’endormir dans de bonnes conditions" },
 ];
 
-const ressources = [
-  {
+const ressources1 = [  {
     link: "https://www.inserm.fr/dossier/sommeil/",
     imageSrc: "/assets/inserm.jpg",
     label: "Inserm – Dossier Sommeil",
     description: "Explications scientifiques sur le sommeil et ses troubles",
   },
+];
+
+const ressources = [
   {
-    link: "https://sante.gouv.fr/",
-    imageSrc: "/assets/sante-france.png",
-    label: "Ministère de la Santé",
-    description: "Informations officielles sur les troubles du sommeil et leur prise en charge",
+    link: "https://www.ameli.fr/assure/sante/themes/insomnie-adulte/vivre-insomnie",
+    imageSrc: "/assets/ameli.png",
+    label: "Ameli.fr – Troubles du sommeil",
+    description: "Conseils pratiques et explications de l’Assurance Maladie",
+  },
+  {
+    link: "https://reseau-morphee.fr/",
+    imageSrc: "/assets/reseau_morphee.png",
+    label: "Réseau Morphée",
+    description: "Réseau spécialisé dans les troubles du sommeil et leur accompagnement",
   },
 ];
 
@@ -43,6 +53,23 @@ const items3 = [
   { title: "Encourage les bonnes pratiques", subtitle: "Limiter les écrans, créer un rituel calme avant le coucher" },
   { title: "Accompagne si besoin", subtitle: "Propose de consulter un·e professionnel·le de santé si le problème devient chronique" },
 ];
+
+const items = [
+  { subtitle: "Instaurer une routine de coucher (heure régulière, rituel calme)" },
+  { subtitle: "Éviter les écrans au moins 1h avant de dormir" },
+  { subtitle: "Favoriser une chambre fraîche, sombre et silencieuse" },
+  { subtitle: "Limiter caféine, alcool et repas trop lourds le soir" },
+  { subtitle: "Pratiquer la relaxation ou la respiration avant de se coucher" },
+  { subtitle: "Faire de petites siestes (20 min maximum) en journée si besoin" },
+];
+
+const items2 = [
+  { title: "Respiration profonde", subtitle: "Inspire lentement par le nez, retiens ta respiration quelques secondes, puis expire lentement par la bouche. Répète plusieurs fois." },
+  { title: "Méditation guidée", subtitle: "Utilise des applications ou des vidéos en ligne pour te guider dans une méditation relaxante avant de dormir." },
+  { title: "Relaxation musculaire progressive", subtitle: "Contracte puis relâche chaque groupe musculaire de ton corps, en commençant par les pieds et en remontant jusqu’à la tête." },
+  { title: "Visualisation positive", subtitle: "Imagine un lieu ou une situation apaisante, en te concentrant sur les détails sensoriels (sons, odeurs, sensations)." },
+];
+
 
 const Sommeil = () => {
   return (
@@ -72,7 +99,7 @@ const Sommeil = () => {
      <ChiffresGroup chiffres={chiffres} />
 
       <h2 className="sous-titre-2">Pourquoi est-il important de bien dormir ?</h2>
-      <p className="texte">En moyenne, les jeunes entre 18 et 25 ans dorment moins de 7 heures par nuit, ce qui est en dessous des recommandations (7 à 9 heures). Dormir moins de 7 heures par nuit peut avoir des conséquences sur ta santé :</p>
+      <p className="texte">En moyenne, les jeunes entre 18 et 25 ans dorment moins de 7 heures par nuit, ce qui est en dessous des recommandations (7 à 9 heures). <b>Dormir moins de 7 heures par nuit</b> peut avoir des <b>conséquences sur ta santé</b> :</p>
       <BulletList
         items={[
           "Diminution de la concentration et de la mémoire",
@@ -83,8 +110,17 @@ const Sommeil = () => {
         ]}
       />
 
-      <p className="texte">En effet, dormir permet à ton corps de récupérer et de se régénérer. Un sommeil de qualité est crucial pour maintenir un bon équilibre physique et mental.</p>
+      <p className="texte">En effet, dormir permet à ton corps de <b>récupérer</b> et de <b>se régénérer</b>. Un sommeil de qualité est crucial pour maintenir un bon <b>équilibre physique et mental</b>.</p>
       
+      <ExternalLinkBlock
+        resources={ressources1}
+      />
+
+      <h2 className="sous-titre-2">Reconnaître un mauvais sommeil</h2>
+      <p className="texte">
+        Un mauvais sommeil ne se limite pas à des difficultés d’endormissement. Il peut aussi se traduire par une <b>fatigue persistante</b> tout au long de la journée, une <b>difficulté à sortir du lit le matin</b>, ou encore une <b>impression de n’avoir jamais récupéré malgré plusieurs heures de sommeil</b>. Ces signes doivent alerter, car ils témoignent d’un sommeil non réparateur.
+      </p>
+
       <Separateur />
 
       <div id="troubles">
@@ -107,8 +143,8 @@ const Sommeil = () => {
 
       
       <h2 className="sous-titre-2">Pourquoi ai-je du mal à m'endormir ?</h2>
-      <p className="texte">Il est parfois difficile de s'endormir car la phase de sommeil léger est souvent interrompue par des pensées incessantes ou des stimuli extérieurs (bruits ambiants, lumière). Une utilisation excessive des écrans avant le coucher peut également perturber le sommeil car les écrans émettent de la lumière bleue, qui inhibe la production de mélatonine, l'hormone du sommeil. Pour cette raison, si tu as des difficultés fréquentes à t'endormir, il est important de te créer un environnement propice au sommeil ou d'adopter des techniques de relaxation.</p>
-      <p className="texte">Un mauvais sommeil ou une difficulté à s'endormir peut aussi être lié à des facteurs tels que le stress, l'anxiété, une mauvaise hygiène de vie ou des problèmes de santé sous-jacents. Si ces difficultés persistent, il peut être utile de consulter un·e professionnel·le de santé.</p>
+      <p className="texte">Il est parfois difficile de s'endormir car la phase de <b>sommeil léger</b> est souvent <b>interrompue par des pensées incessantes ou des stimuli extérieurs</b> (bruits ambiants, lumière). Une utilisation excessive des <b>écrans</b> avant le coucher peut également <b>perturber le sommeil</b> car les écrans émettent de la lumière bleue, qui inhibe la production de mélatonine, l'hormone du sommeil. Pour cette raison, si tu as des difficultés fréquentes à t'endormir, il est important de te créer un environnement propice au sommeil ou d'adopter des techniques de relaxation.</p>
+      <p className="texte">Un mauvais sommeil ou une difficulté à s'endormir peut aussi être lié à des facteurs tels que le <b>stress</b>, l'<b>anxiété</b>, une <b>mauvaise hygiène de vie</b> ou des <b>problèmes de santé</b> sous-jacents. Si ces difficultés persistent, il peut être utile de consulter un·e professionnel·le de santé.</p>
 
       
       <ExternalLinkBlock
@@ -143,8 +179,20 @@ const Sommeil = () => {
         ]}
       />
 
+      <p className="texte">De manière générale, si tu passes une mauvaise nuit ou que tu te sens très fatigué·e, <b>évite à tout prix de prendre la route</b>. S'endormir au volant peut avoir des conséquences très graves, sur toi et sur les autres.</p>
+      <ExternalLinkBlock
+        resources={[
+          {
+            link: "/accident",
+            emoji: "🚗",
+            label: "Accident",
+            description: "Je suis trop fatigué·e pour conduire. Que faire ?",
+          },
+        ]}
+      />
+
       <h2 className="sous-titre-2">Les différents types d'insomnie</h2>
-      <p className="texte">Attention, l'insomnie ne désigne pas une simple mauvaise nuit. Elle se manifeste généralement par une difficulté à s'endormir, des réveils multiples pendant la nuit ou un sommeil non réparateur, au moins 3 nuits par semaine pendant 3 mois ou plus. On en distingue 3 types :</p>
+      <p className="mise-avant"><b>Attention, l'insomnie ne désigne pas une simple mauvaise nuit.</b> Elle se manifeste généralement par une difficulté à s'endormir, des réveils multiples pendant la nuit ou un sommeil non réparateur, au moins 3 nuits par semaine pendant 3 mois ou plus. On en distingue 3 types :</p>
 
       <BulletList
         items={[
@@ -154,10 +202,61 @@ const Sommeil = () => {
         ]}
       />
 
+      
       <p className="texte">
-        Si tu constates que tes nuits sont régulièrement perturbées et que cela impacte ton quotidien, <b>parles-en à un·e professionnel·le de santé</b>. 
-        Des solutions existent pour retrouver un sommeil réparateur.
+        Si tu constates que tes nuits sont régulièrement perturbées et que cela impacte ton quotidien, <b>parles-en à un·e professionnel·le de santé</b>. Il ou elle pourra t'aider à identifier les causes de tes troubles du sommeil et te proposer des solutions adaptées, comme par exemple la thérapie comportementale, l’hypnose voire un traitement médicamenteux. </p>
+
+      <h1 className="sous-titre-2">Besoin d'en parler ?</h1>
+            <ContactCard
+        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        title="Infirmerie"
+        subtitle="Infirmerie de Centrale Lyon"
+        phone="Voir les informations"
+        email="Voir les informations"
+        hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
+        textButton="Voir les informations"
+        link="/infirmerie"
+
+        bgColor="#ffffff"    //informations facultatives
+        textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+      />
+      
+      <ContactCard
+        image="/assets/nightline_logo.png" 
+        title="Nightline Lyon"
+        subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
+        phone="04 85 30 00 10"
+        email=""
+        hours="Tous les soirs de 21h à 2h30"
+        textButton="Voir le site web"
+        link="https://www.nightline.fr/lyon"
+      />
+
+
+      <Separateur />
+
+     <div id="mauvais-reflexes">
+        <h1 className="titre">Les mauvais réflexes</h1>
+      </div>
+
+      <h2 className="sous-titre-2">S'obstiner à s'endormir</h2>
+      <p className="texte">Si tu n’arrives pas à t’endormir après 20-30 minutes, il est conseillé de <b>te lever</b> et de <b>faire une activité calme</b> dans une autre pièce (lire, écouter de la musique douce, méditer). <b>Rester au lit en se tournant et se retournant peut augmenter l’anxiété</b> liée au sommeil et rendre l’endormissement encore plus difficile. Une fois que tu te sens fatigué·e, retourne au lit.</p>
+
+      <h2 className="sous-titre-2">Boire de l'alcool ou des boissons caféinées</h2>
+      <p className="texte">L’alcool peut sembler aider à s’endormir, mais il <b>perturbe en réalité les cycles de sommeil</b> et peut entraîner des réveils nocturnes. De même, la <b>caféine (présente dans le café, le thé, les sodas et certaines boissons énergisantes)</b> est un stimulant qui peut <b>retarder l’endormissement</b> et <b>réduire la qualité du sommeil</b>. Il est donc préférable d’éviter ces substances plusieurs heures avant le coucher.</p>
+
+      <h2 className="sous-titre-2">« Je ferai une grosse sieste dans l'après-midi »</h2>
+      <p className="texte">Faire une sieste peut être bénéfique pour récupérer de la fatigue accumulée, mais elle doit être courte (20-30 minutes maximum) et pas trop tardive dans la journée (idéalement avant 15h). <b>Une sieste trop longue ou trop tardive peut perturber le sommeil nocturne.</b></p>
+
+      <h2 className="sous-titre-2">Les somnifères</h2>
+      <p className="texte">
+        Les somnifères (hypnotiques, benzodiazépines, etc.) peuvent être utiles en cas d’insomnie sévère et ponctuelle. 
+        Cependant, ils ne traitent pas la cause du trouble et comportent des <b>risques de dépendance et de tolérance</b>. 
+        Leur usage doit rester <b>exceptionnel et encadré par un médecin</b>. Les approches non-médicamenteuses (thérapie comportementale, hygiène du sommeil) 
+        sont recommandées en première intention.
       </p>
+
 
       <Separateur />
 
@@ -167,33 +266,38 @@ const Sommeil = () => {
 
       <h2 className="sous-titre-2">Conseils pour mieux dormir</h2>
 
-      <NumberedList
-        items={[
-          "Instaurer une routine de coucher (heure régulière, rituel calme)",
-          "Éviter les écrans au moins 1h avant de dormir",
-          "Favoriser une chambre fraîche, sombre et silencieuse",
-          "Limiter caféine, alcool et repas trop lourds le soir",
-          "Pratiquer la relaxation ou la respiration avant de se coucher",
-          "Faire de petites siestes (20 min maximum) en journée si besoin",
-        ]}
+      <ListeNumerotee 
+          title="Plan d'action pour favoriser un bon sommeil"
+          items={items}
       />
-      <p className="texte">
-        Si tu souffres de troubles du sommeil persistants, n’hésite pas à consulter ton médecin. 
-        Des solutions comme la thérapie comportementale, l’hypnose ou parfois un traitement médicamenteux peuvent être proposées. 
-        Tu n’es pas seul·e à vivre ces difficultés.
-      </p>
 
+      <p className="texte">Essaie de garder un <b>rythme de sommeil régulier</b>, avec 7 à 9 heures par nuit pour un adulte. L’idéal est de te coucher et de te lever à des horaires fixes, y compris le week-end. <b>Respecter ton horloge biologique</b> permet d’<b>éviter les déséquilibres</b> (comme enchaîner une nuit blanche puis une grasse matinée de 10 heures), qui rendent souvent l’endormissement plus difficile la nuit suivante.</p>
+
+      <p className="texte">Pour plus de conseils sur l'hygiène du sommeil, consulte les ressources suivantes :</p>
+      <ExternalLinkBlock
+        resources={ressources}
+      />
+      
+      <h2 className="sous-titre-2">Se détendre et se relaxer</h2>
+      <p className="texte">Si tu as du mal à t’endormir, des techniques de relaxation peuvent t’aider à calmer ton esprit et à préparer ton corps au sommeil. Voici quelques méthodes efficaces :</p>
+            <ListeNumerotee
+          items={items2}
+      />
 
       <ExternalLinkBlock
-        title="Ressources utiles"
-        subtitle="Pour mieux comprendre et gérer les troubles du sommeil"
-        resources={ressources}
+        resources={[
+          {
+            link: "/detente",
+            emoji: "🧘",
+            label: "Détente et relaxation",
+            description: "Pour en savoir plus sur les techniques de relaxation",
+          },
+        ]}
       />
 
       <Separateur />
 
-
-      <p className="texte"><em><b>Sources :</b> Inserm, Ministère de la Santé, HAS, Réseau Morphée</em></p>
+      <p className="texte"><em><b>Sources :</b> Inserm, Ministère de la Santé, HAS, Réseau Morphée, Ameli.fr</em></p>
     </div>
   );
 };
