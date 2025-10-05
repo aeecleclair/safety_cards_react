@@ -35,7 +35,7 @@ const menuItems = [
       { title: "🗺️ Déracinement culturel", link: "/deracinement", inactive:true },
       { title: "🩸 Endométriose & douleurs menstruelles", link: "/endom" },
       { title: "🧑‍🦯 Situation de handicap", link: "/handicap" },
-      { title: "💤 Sommeil", link: "/sommeil", inactive:true },
+      { title: "💤 Sommeil", link: "/sommeil" },
       { title: "🍽️ Troubles des Conduites Alimentaires", link: "/tca", inactive:true },
       { title: "🗣️ Tentative de suicide", link: "/suicide" },
     ],

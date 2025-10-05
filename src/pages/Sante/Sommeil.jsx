@@ -151,7 +151,7 @@ const Sommeil = () => {
         resources={[
           {
             link: "/anxiete",
-            emoji: "😟",
+            emoji: "😶‍🌫️",
             label: "Anxiété",
             description: "Je suis trop anxieux·se pour trouver le sommeil. Que faire ?",
           },
