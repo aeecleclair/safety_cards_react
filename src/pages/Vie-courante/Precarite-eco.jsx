@@ -275,7 +275,7 @@ const PrecariteEconomique = () => {
       <h2 className="sous-titre-2">Épicerie solidaire</h2>
 
       <p className="texte">Depuis avril 2024, l'association Solidari'terre propose une épicerie solidaire aux étudiants de l'Ecole Centrale de Lyon. Elle permet d'accéder à des produits alimentaires et d'hygiène à moindre coût (6 produits laximum, à 25% du prix du marché). Pour y accéder, tu dois être boursi·er·ère, avoir un repas à 1€ au CROUS ou être autorisé·e par l'assistance sociale.</p>
-      <p className="texte">L'épicerie est ouverte tous les <b>lundis de 18h30 à 20h et les mercredis de 12h25 à 13h45, en bas du bâtiment X</b>, face à Adoma.</p>
+      <p className="texte">L'épicerie est ouverte tous les <b>lundis et mercredis de 12h25 à 13h45, en bas du bâtiment X</b>, face à Adoma.</p>
 
       <ExternalLinkBlock resources={epicerie} />
 

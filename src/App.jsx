@@ -6,7 +6,7 @@ import ScrollToTopButton from "./components/ScrollTop";
 import ScrollToTop from './components/ScrollTopImmediate';
 
 
-import Exemple from "./pages/Exemple-page";
+import Exemple from "./pages/Documentation/Exemple";
 import Home from "./pages/Home";
 
 
@@ -92,7 +92,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Exemple" element={<Exemple />} />
+  <Route path="/documentation/exemple" element={<Exemple />} />
         
         //Vie courante
         <Route path="/Vie-courante-main" element={<Vie_courante />} />
