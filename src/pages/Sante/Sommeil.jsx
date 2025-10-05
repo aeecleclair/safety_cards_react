@@ -139,6 +139,7 @@ const Sommeil = () => {
         shortText="Prévention et gestion des troubles du sommeil"
         longText="Avoir du mal à s’endormir ou à rester endormi n’est pas qu’une question de fatigue. Cela peut être lié au stress, à l’anxiété, à une hygiène de vie inadaptée ou à des troubles médicaux. Ne banalise pas un mauvais sommeil répété : il peut avoir de lourdes conséquences sur la santé physique et mentale."
         textButton="⤢ Agrandir la carte"
+        suit="pique"
       />
 
       

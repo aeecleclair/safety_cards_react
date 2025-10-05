@@ -242,7 +242,7 @@ Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b
 
   
       <Separateur />
-      <p className="texte"><em><b>Sources : </b></em>e-enfance, FFAB,</p>
+      <p className="texte"><em><b>Sources : </b></em>e-enfance, Le bon usage des écrans, Addict'aide, Rapport Qualité de Vie en Etude à l'ECL</p>
     </div>
     );
   };

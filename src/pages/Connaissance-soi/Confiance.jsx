@@ -82,7 +82,7 @@ const Confiance = () => {
         image="./assets/cartes/as_carreau.png"
         title="La carte A♦"
         shortText="Confiance en soi : renforcer et accompagner"
-        longText="Confiance en soi : renforcer et accompagner"
+        longText="Lorsqu'on se regarde dans le miroir, on voit souvent nos défauts avant nos qualités. La confiance en soi se construit en apprenant à reconnaître et valoriser ces qualités, tout en acceptant ses limites. C'est un processus qui demande du temps et de la patience, mais qui est essentiel pour se sentir bien dans sa peau."
         textButton="⤢ Agrandir la carte"
         suit = "carreau"
       />

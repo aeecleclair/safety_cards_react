@@ -76,10 +76,10 @@ const Suicide = () => {
         image="./assets/cartes/7_pique.png"
         title="La carte 7♠"
         shortText="Tu n'es pas seul·e. Contacte le 3114 ou un·e psy."
-        longText=""
+        longText="Le suicide est généralement planifié par la personne, elle a souvent réfléchi à son acte, à sa manière de mourir, au moment et au lieu de son passage à l'acte... C'est rarement une décision impulsive. Si tu abordes le sujet avec elle, il est probable qu'elle te parle de ses pensées. Il ne faut jamais oublier qu'il existe des étapes avant de passer à l'acte : ton entourage, l'infirmière, ou des professionnel·le·s comme ceux du 3114 sont là pour toi et peuvent t'aider."
         textButton="⤢ Agrandir la carte"
-        suit = "pique"
-        
+        suit="pique"
+
       />
         
         
@@ -210,7 +210,7 @@ const Suicide = () => {
         image="./assets/cartes/4_carreau.png"
         title="La carte 4♦"
         shortText="Si tu détectes que quelqu'un va mal, en parler peut tout changer."
-        longText=""
+        longText="Il ne faut pas hésiter à parler de tes inquiétudes avec la personne concernée. Parfois, le simple fait de poser la question du suicide ou de montrer son inquiétude à l'autre peut aider. Si tu sens que la situation est urgente, n'hésite pas à contacter un professionnel ou les urgences."
         textButton="⤢ Agrandir la carte"
         suit = "carreau"
 
@@ -430,10 +430,10 @@ const Suicide = () => {
         image="./assets/cartes/dame_pique.png"
         title="La carte D♠"
         shortText="Faire le deuil lorsqu'on est impacté·e ou témoin d'un suicide."
-        longText=""
+        longText="Lorsqu'on est confronté à un suicide, il est normal de ressentir une multitude d'émotions : tristesse, colère, culpabilité. Le processus de deuil peut être long et difficile, mais il est essentiel de prendre le temps de vivre ces émotions. Tu peux te faire aider par des pairs ou des professionnel·le·s."
         textButton="⤢ Agrandir la carte"
-        suit = "pique"
-        
+        suit="pique"
+
       />
 
 

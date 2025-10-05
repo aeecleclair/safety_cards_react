@@ -22,7 +22,7 @@ const items = [
   { title: "Surveiller", subtitle: "La garder au chaud, éveillée, rester et parler avec elle" },
   { title: "Eviter les erreurs", subtitle: "Ne pas lui donner de café, ni la forcer à vomir (risque d'étouffement)" },
   { title: "Alerter", subtitle: "Si perte de conscience ou respiration anormale : appeler le 112 ou le 15" },
-  {title : "📢 Attention", subtitle : "En cas de soirée sur le campus, s'adresser au personnel Peer'Care pour la prise en charge et l'appel au numéro d'astreinte"}
+  {title : "📢 Attention", subtitle : "En cas de soirée sur le campus, s'adresser aux membres de Peer Care pour la prise en charge et l'appel au numéro d'astreinte"}
 ];
 
 const items2 = [
@@ -36,7 +36,7 @@ const items3 = [
   { title: "Informer", subtitle: "Partager des informations sur les risques liés à l'alcool et les ressources disponibles" },
   { title: "Soutenir", subtitle: "Proposer son aide pour réduire ou arrêter la consommation, sans pression" },
   { title: "Encourager", subtitle: "Valoriser les efforts et les progrès, même petits" },
-  { title: "Consulter", subtitle: "Suggérer de parler à un professionnel de santé ou à une association spécialisée si besoin" }
+  { title: "Consulter", subtitle: "Suggérer de parler à un·e professionnel·le de santé ou à une association spécialisée si besoin" }
 ];
 
 const data = [
@@ -196,7 +196,7 @@ const Alcool = () => {
       <div id="resume-conseils2">
       <p className="mise-avant"><b>Ne pas oublier de boire de l'eau et s'alimenter</b> pour atténuer les effets de l'alcool. </p>
       <p className="mise-avant">Boire beaucoup d'alcool te met en danger et favorise les <b>comportements à risque</b>. </p>
-      <p className="mise-avant">Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un <b>professionnel de santé</b>.</p>
+      <p className="mise-avant">Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un·e <b>professionnel·le de santé</b>.</p>
       </div>
 
 
@@ -205,13 +205,13 @@ const Alcool = () => {
 
       <p className="texte">Pour limiter les risques liés à la consommation d'alcool, voici <b>quelques conseils</b> à suivre :</p>
       <BulletList items={[
-    "Ne pas boire à jeun : manger avant et pendant la consommation",
-    "Boire lentement et à son rythme : alterner avec de l'eau et des boissons non alcoolisées. ",
-    "Prendre en compte le délai avant le pic d'alcoolémie (30/45 minutes après le dernier verre si à jeun, 1h/1h30 si repas)",
-    "Connaître ses limites et s'y tenir : ne pas se laisser influencer par les autres.", 
-    "Eviter les mélanges avec d'autres substances (médicaments, drogues, etc.)",
-    "Ne jamais boire en conduisant ou en pratiquant une activité nécessitant de la concentration",
-    "Prévoir un moyen de rentrer en toute sécurité (taxi, VTC, transport en commun, conducteur désigné, etc.)"
+    <><b>Ne pas boire à jeun</b> : manger avant et pendant la consommation</>,
+    <><b>Boire lentement et à son rythme</b> : alterner avec de l'eau et des boissons non alcoolisées.</>,
+    <><b>Prendre en compte le délai avant le pic d'alcoolémie</b> : 30/45 minutes après le dernier verre si à jeun, 1h/1h30 si repas</>,
+    <><b>Connaître ses limites et s'y tenir</b> : ne pas se laisser influencer par les autres.</>,
+    <><b>Eviter les mélanges avec d'autres substances</b> : médicaments, drogues, etc.</>,
+    <><b>Ne jamais boire en conduisant</b> ou en pratiquant une activité nécessitant de la concentration</>,
+    <><b>Prévoir un moyen de rentrer en toute sécurité</b> : taxi, VTC, transport en commun, conducteur désigné, etc.</>
 ]} /> 
       <ImageTextPopup
         image="./assets/cartes/roi_trefle.png"
@@ -222,7 +222,7 @@ const Alcool = () => {
         suit="trefle"
       />
 
-      <p className="texte">Pour ta sécurité et celle des autres, il est fortement recommandé de <b>ne pas consommer d'alcool du tout avant de conduire</b>. Si tu as bu, mange, bois de l'eau et repose-toi plusieurs heures avant de prendre la route ou utilise des alternatives comme les transports en commun, un taxi ou un conducteur désigné pour rentrer chez toi en toute sécurité."
+      <p className="texte">Pour ta sécurité et celle des autres, il est fortement recommandé de <b>ne pas consommer d'alcool du tout avant de conduire</b>. Si tu as bu, mange, bois de l'eau et repose-toi plusieurs heures avant de prendre la route ou utilise des alternatives comme les transports en commun, un taxi ou un conducteur désigné pour rentrer chez toi en toute sécurité.
         </p>
       <p className="texte">Enfin, si tu te rends compte que tu as trop bu, n'hésite pas à <b>demander de l'aide</b> ou à en parler <b>à quelqu'un en qui tu as confiance</b> afin qu'il/elle veille sur toi.</p>
 

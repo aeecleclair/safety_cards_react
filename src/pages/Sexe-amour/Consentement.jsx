@@ -64,6 +64,27 @@ const ressourcesConsentement = [
   }
 ];
 
+const ressourcesConsentementFlyers = [
+  {
+    link: "/docs/CONSENTIS-FLYER-BIENVEILLANCE-A5-FR.pdf",
+    label: "Bienveillance en milieu festif",
+    description: "Un flyer pour sensibiliser au consentement en milieu festif.",
+    imageSrc : "/assets/consentis.png",
+  },
+  {
+    link: "/docs/CONSENTIS-FLYER-DEPÔTPLAINTE-PORTEFEUILLE-FR.pdf",
+    label: "Dépôt de plainte",
+    description: "Un flyer pour expliquer comment déposer une plainte.",
+    imageSrc : "/assets/consentis.png",
+  },
+  {
+    link: "/docs/CONSENTIS-FLYER-JETECROIS.pdf",
+    label: "Je te crois",
+    description: "Un flyer pour retrouver les associations d'aide aux victimes.",
+    imageSrc : "/assets/consentis.png",
+  },
+];
+
 const proposition_loi = [
   {
     link: "https://www.vie-publique.fr/loi/297985-loi-consentement-definition-penale-du-viol",
@@ -123,7 +144,7 @@ const Consentement = () => {
         image="./assets/cartes/4_coeur.png"
         title="La carte 4♥"
         shortText="La notion de consentement"
-        longText=""
+        longText="Le consentement, c'est simplement un oui donné de manière claire, lucide, spécifique, révocable et enthousiaste. Sans consentement, toute activité sexuelle est une agression."
         textButton="⤢ Agrandir la carte"
         suit="coeur"
       />
@@ -235,6 +256,10 @@ const Consentement = () => {
         subtitle="Pour faire de la prévention sur le consentement"
         resources={ressourcesConsentement}
       />
+
+      <p className="texte"> Avec notamment des flyers simples et très visuels, adaptés à une diffusion en milieu festif : </p>
+
+      <ExternalLinkBlock resources={ressourcesConsentementFlyers} />
 
 
       <Separateur />
