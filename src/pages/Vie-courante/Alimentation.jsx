@@ -37,13 +37,17 @@ const resources = [
   },
 ];
 
-const resources2 = [
+const resources2bis = [
   {
     link: "https://www.mangerbouger.fr",
     imageSrc: "/assets/mangerbouger.jpg",
     label: "Manger Bouger",
     description: "Conseils officiels et idées recettes pour une alimentation équilibrée",
-  },
+  }
+];
+
+const resources2 = [
+  ,
   {
     link: "https://www.ameli.fr/assure/sante/themes/alimentation-adulte/alimentation-adulte-equilibre-repas",
     imageSrc: "/assets/ameli.png",
@@ -51,7 +55,6 @@ const resources2 = [
     description: "Bien manger pour préserver sa santé au quotidien",
   },
 ];
-
 
 const resources3 = [
   {
@@ -118,6 +121,9 @@ const Alimentation = () => {
         <p className="texte">Manger de façon déséquilibrée, c’est consommer trop d’aliments riches en sucre, en sel ou en matières grasses, et pas assez de fruits, légumes, protéines et fibres. Cela peut entraîner des <b>carences nutritionnelles</b> qui affectent ton énergie et ta concentration. Manger toujours la même chose sans aucune variété n'est pas non plus synonyme de bonne alimentation.</p>
       </div> 
 
+      <ExternalLinkBlock
+        resources={resources2}
+      />
 
         <h1 className="sous-titre-2">Grignoter</h1>
         <p className="texte">Lorsqu'on a faim, on a tendance à se précipiter sur des aliments riches en sucre ou en matières grasses pour retrouver rapidement de l'énergie. Cependant, ces aliments peuvent entraîner une <b>sensation de fatigue et de faim</b> peu de temps après qui t'invitent à grignoter à nouveau. Pour éviter ce cercle vicieux, il est important de <b>manger des repas équilibrés</b> et de <b>boire suffisamment d'eau</b> tout au long de la journée. Un <b>repas déséquilibré</b> peut te donner l'impression d'être rassasié·e mais <b>ne pas apporter les nutriments nécessaires à ton organisme</b> et te laisser sur ta faim deux heures plus tard.</p>
@@ -161,15 +167,16 @@ const Alimentation = () => {
 
         <ListeNumerotee title="Plan d’action pour mieux s’alimenter" items={items} />
 
-          <h1 className="sous-titre-2">Application utile</h1>
-          <ExternalLinkBlock resources={appli} />
-
         <TextImageRight
           imageSrc="/assets/assiette.png"
           text={
             <>Prépare à l’avance des <strong>repas simples</strong>, garde des <strong>fruits et légumes</strong> accessibles pour éviter le grignotage et privilégie la <strong>cuisine maison</strong> quand c’est possible. Pense aussi à <strong>t’accorder du temps</strong> pour manger sans distraction et lentement afin d’apprécier tes repas. Evite de manger rapidement, cela retarde la sensation de satiété et t'incite à manger plus !</>
           }
         />
+        
+      <ExternalLinkBlock
+        resources={resources2bis}
+      />
 
       <p className="texte">Si tu veux te fournir en fruits et légumes, miel, pains, fromages locaux et autres produits de saison, n'hésite pas à te rendre sur les marchés ou à privilégier les circuits courts. Tu peux par exemple <b>commander</b> des paniers de fruits et légumes <b>auprès de l'AMAP</b>, un service proposé par l'assocation Planet&Co de l'école !</p>
 
@@ -195,11 +202,8 @@ const Alimentation = () => {
       <ChiffresGroup chiffres={data} />
 
 
-      <ExternalLinkBlock
-        title={"Ressources utiles"}
-        subtitle={"Quelques sites de référence pour mieux manger"}
-        resources={resources2}
-      />
+          <h1 className="sous-titre-2">Application utile</h1>
+          <ExternalLinkBlock resources={appli} />
 
       <Separateur />
       <p className="texte"><em><b>Sources :</b></em> Manger Bouger, Ameli, Santé Publique France</p>
