@@ -240,6 +240,12 @@ const Sommeil = () => {
         <h1 className="titre">Les mauvais réflexes</h1>
       </div>
 
+      <div id="resume-details">
+        <p className="mise-avant">
+          Si <b>tu n’arrives pas à t’endormir</b>, lève-toi et <b>fais une activité calme</b> plutôt que de t’obstiner au lit, cela aide à réduire l’anxiété liée au sommeil. Évite également l’alcool, la caféine ou les siestes trop longues, et n’utilise les <b>somnifères qu’en dernier recours, sous suivi médical</b>.
+          </p>
+      </div>
+
       <h2 className="sous-titre-2">S'obstiner à s'endormir</h2>
       <p className="texte">Si tu n’arrives pas à t’endormir après 20-30 minutes, il est conseillé de <b>te lever</b> et de <b>faire une activité calme</b> dans une autre pièce (lire, écouter de la musique douce, méditer). <b>Rester au lit en se tournant et se retournant peut augmenter l’anxiété</b> liée au sommeil et rendre l’endormissement encore plus difficile. Une fois que tu te sens fatigué·e, retourne au lit.</p>
 
@@ -262,6 +268,11 @@ const Sommeil = () => {
 
       <div id="solutions">
         <h1 className="titre">Comment mieux dormir ?</h1>
+      </div>
+      <div id="resume-details">
+        <p className="mise-avant">
+          Adopte un <b>rythme de sommeil régulier</b> en dormant 7 à 9 heures par nuit et en te couchant à des heures fixes, même le week-end. Prends aussi le temps de te détendre avant de dormir grâce à des <b>techniques de relaxation</b> comme la respiration, la méditation ou l’étirement doux.
+          </p>
       </div>
 
       <h2 className="sous-titre-2">Conseils pour mieux dormir</h2>
