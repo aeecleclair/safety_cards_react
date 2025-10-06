@@ -17,14 +17,12 @@ import { ChiffresGroup } from "../../components/Chiffres";
 import ImageTextPopup from "../../components/Cartes";
 import { label } from "framer-motion/client";
 
-/** Navigation */
 const navLinks = [
   { label: "Les violences conjugales", target: "violences" },
   { label: "La sexualité dans le couple", target: "sexualite" },
   { label: "La communication dans le couple", target: "communication" },
 ];
 
-/** Ressources */
 
 const typesViolences = [
   {
@@ -35,7 +33,7 @@ const typesViolences = [
     emoji: "🫂",
   },
   {
-    link: "/cyber_harcelement",
+    link: "/cyber_harcel",
     label: "Cyberharcèlement",
     description:
       "Si tu veux développer davantage le sujet des cyberviolences",
@@ -84,13 +82,7 @@ const reglesSexualite = [
 
 
 const ressourcesSexualite = [
-  {
-    link: "https://commentonsaime.fr/rubrique/mon-couple/",
-    label: "Comment on s’aime",
-    description:
-      "Il ou elle veut toujours avoir des rapports, ses pratiques me gênent...",
-    imageSrc: "/assets/logo-cosa.svg",
-  },
+
   {
     link: "/consent",
     label: "Consentement",
@@ -104,6 +96,13 @@ const ressourcesSexualite = [
     description:
       "Pour en savoir plus sur la sexualité et la contraception",
     emoji: "😘",
+  },  
+  {
+    link: "https://commentonsaime.fr/rubrique/mon-couple/",
+    label: "Comment on s’aime",
+    description:
+      "Il ou elle veut toujours avoir des rapports, ses pratiques me gênent...",
+    imageSrc: "/assets/logo-cosa.svg",
   },
   {
     link: "https://questionsexualite.fr/",
@@ -132,7 +131,7 @@ const ressourcesCommunication = [
   },
 ];
 
-/** Page principale */
+
 const RelationsCouple = () => {
   return (
     <div className="page">
@@ -169,7 +168,7 @@ const RelationsCouple = () => {
         <h2 className="sous-titre-2">Les formes de violences</h2>
 
         <p className="texte">
-          Les violences conjugales peuvent prendre plusieurs formes, reconnues par la loi :
+          Les violences conjugales peuvent prendre <b>plusieurs formes, reconnues par la loi</b> :
         </p>
         <BulletList
           items={[
@@ -184,11 +183,11 @@ const RelationsCouple = () => {
 
         <ExternalLinkBlock resources={typesViolences} />
 
-        <Quote text="Par ses propos et comportements, votre partenaire ou ex‐partenaire veut vous contrôler et vous détruire… Ces violences créent un climat de peur et de tension permanent"/>
+        <Quote text="Par ses propos et comportements, votre partenaire ou ex‐partenaire veut vous contrôler et vous détruire… Ces violences créent un climat de peur et de tension permanent."/>
 
         <h2 className="sous-titre-2">Violence VS conflit</h2>
         <p className="texte">
-          Dans un conflit de couple normal, les deux partenaires expriment leurs opinions et cherchent un compromis dans un rapport encore égalitaire. Par contraste, la violence conjugale traduit un rapport de domination : l’auteur·e impose sa volonté par la peur et le contrôle. Cela peut être le point de départ de violences conjugales, où la victime est peu à peu enfermée dans un climat de tension et de peur. Si vous vous sentez en permanence sur la défensive, menacé·e ou soumis·e, il est possible que vous viviez de la violence conjugale plutôt qu’un simple conflit.
+          Dans un <b>conflit</b> de couple normal, les deux partenaires <b>expriment leurs opinions et cherchent un compromis</b> dans un <b>rapport encore égalitaire</b>. Par contraste, la <b>violence conjugale</b> traduit un <b>rapport de domination</b> : l’auteur·e impose sa volonté par la peur et le contrôle. Cela peut être le point de départ de violences conjugales, où la victime est peu à peu enfermée dans un climat de tension et de peur. Si vous vous sentez <b>en permanence sur la défensive, menacé·e ou soumis·e</b>, il est possible que vous viviez de la <b>violence conjugale plutôt qu’un simple conflit</b>.
         </p>
 
         <ExternalLinkBlock resources={violenceConflit} />
@@ -197,7 +196,7 @@ const RelationsCouple = () => {
 
         <ImageCenter imageSrc="/assets/cycle_violence.png" />
           <p className="texte">
-         La violence conjugale ne survient pas toujours brutalement. Elle s’installe souvent selon un cycle de la violence : une tension sourde qui monte progressivement, jusqu’à un accès d’agression (crise), suivi d’excuses ou de promesses de changement (période dite de « lune de miel »), puis retour à la tension. À chaque répétition, les épisodes de violence deviennent plus fréquents et plus graves, épuisant la victime et rendant difficile la prise de recul. Comprendre ce cycle aide à identifier la situation et à trouver un soutien adapté.
+         La violence conjugale ne survient pas toujours brutalement. Elle <b>s'installe souvent selon un cycle de la violence</b> : une <b>tension sourde</b> qui monte progressivement, jusqu’à un <b>accès d’agression</b> (crise), suivi d’<b>excuses ou de promesses de changement</b> (période dite de « lune de miel »), puis <b>retour à la tension</b>. À chaque répétition, les épisodes de violence deviennent plus fréquents et plus graves, épuisant la victime et rendant difficile la prise de recul. Comprendre ce cycle aide à identifier la situation et à trouver un soutien adapté.
         </p>
 
         <ExternalLinkBlock resources={violentometre} />
@@ -256,7 +255,7 @@ const RelationsCouple = () => {
       <div id="communication">
         <h1 className="titre">La communication dans le couple</h1>
         <p className="texte">
-          La communication est le ciment d’une relation de couple solide. Exprimer ses besoins et écouter activement son ou sa partenaire est fondamental pour éviter malentendus et ressentiments. Oser dire ce que l’on ressent (« je suis blessé·e quand… », « j’ai besoin de plus de… ») tout en restant à l’écoute de ce que l’autre exprime crée un climat de confiance mutuelle.
+          La <b>communication</b> est le ciment d’une relation de couple solide. Exprimer ses besoins et écouter activement son ou sa partenaire est fondamental pour <b>éviter malentendus et ressentiments</b>. Oser dire ce que l’on ressent (« je suis blessé·e quand… », « j’ai besoin de plus de… ») tout en restant à l’écoute de ce que l’autre exprime crée un <b>climat de confiance mutuelle</b>.
         </p>
 
         <ListeNumerotee 
