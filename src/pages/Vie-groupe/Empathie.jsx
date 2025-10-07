@@ -66,12 +66,7 @@ const Empathie = () => {
 
       </div>
       <p className="texte">
-        L’empathie désigne la capacité à percevoir le point de vue d’autrui et à
-        comprendre, voire partager ses émotions. On distingue souvent
-        l’<b>empathie cognitive</b> (comprendre les pensées) et l’<b>empathie affective</b>
-        (partager les émotions). Elle se différencie de la simple contagion
-        émotionnelle ou de la sympathie.
-      </p>
+        L’empathie désigne la capacité à percevoir le point de vue d’autrui et à comprendre, voire partager ses émotions. On distingue souvent l’<b>empathie cognitive</b> (comprendre les pensées) et l’<b>empathie affective</b> (partager les émotions). Elle se différencie de la simple contagion émotionnelle ou de la sympathie.</p>
 
 
         <h2 className="sous-titre-2">Mécanismes psychologiques et biologiques</h2>

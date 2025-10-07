@@ -61,7 +61,7 @@ const lois = [
     link: "https://www.service-public.fr/particuliers/vosdroits/F2354",
     label: "Harcèlement moral",
     description:
-      "Défintions et peines encourues",
+      "Définitions et peines encourues",
     imageSrc: "/assets/rep-logo.png",
   }
 ];
@@ -163,7 +163,7 @@ const Harcelement = () => {
       <h2 className="sous-titre-2">Les formes de harcèlement</h2>
 
 
-      <p className="texte">Le harcèlement est une violence fondée sur des rapports de domination et d’intimidation qui a pour objet ou effet une dégradation des conditions de vie de la victime et un impact sur sa santé physique ou psychique. Le harcèlement qu'il soit sexuel ou moral s'exerce dans toutes les sphères de la vie : sphère privée (dans le couple, en famille ), sphère professionnelle (qu'il y ait un lien hiérarchique ou non), sphère sociale (associatif, sportif, dans la rue, etc.).</p>
+      <p className="texte">Le harcèlement est une violence fondée sur des <b>rapports de domination et d’intimidation</b> qui a pour objet ou effet une <b>dégradation des conditions de vie de la victime</b> et un impact sur sa santé physique ou psychique. Le harcèlement qu'il soit sexuel ou moral s'exerce dans toutes les sphères de la vie : sphère privée (dans le couple, en famille ), sphère professionnelle (qu'il y ait un lien hiérarchique ou non), sphère sociale (associatif, sportif, dans la rue, etc.).</p>
       <BulletList items={[
         "Le harcèlement moral : fait d'imposer à autrui des gestes, paroles, comportements, attitudes répétés visant ou conduisant à dégrader ses conditions de vie et/ou de travail.",
         "Le harcèlement sexuel : propos ou comportements à connotation sexuelle qui portent atteinte à la dignité d’une personne (propos déplacés, gestes inappropriés, pressions, etc.). Le harcèlement sexuel constitue un délit quelque soit le lien entre l'auteur et la victime.",
@@ -245,7 +245,7 @@ const Harcelement = () => {
       </div>
 
       <p className="texte">
-        Le harcèlement de rue est une forme de violence sexiste qui se manifeste dans l’espace public. Il peut prendre différentes formes : remarques déplacées, sifflements, gestes obscènes, etc. Ce phénomène touche particulièrement les femmes et les personnes LGBTQIA+.
+        Le harcèlement de rue est une forme de <b>violence sexiste</b> qui se manifeste dans l’espace public. Il peut prendre différentes formes : <b>remarques déplacées, sifflements, gestes obscènes, etc</b>. Ce phénomène touche particulièrement les femmes et les personnes LGBTQIA+.
       </p>
 
       <h2 className="sous-titre-2">Les applications utiles</h2>
