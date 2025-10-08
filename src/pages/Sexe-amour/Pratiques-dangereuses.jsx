@@ -43,7 +43,18 @@ const ressourcesSpecifiques = [
   },
 ];
 
+
+
+
+
+
+
+/* Provisoire : page non faite */
+
+import Workinprogress from "../../components/WorkInProgress";
+
 const resources_sites = [
+
   {
     link: "https://www.etudiant.gouv.fr/fr",
     imageSrc: "/assets/etudiant_gouv.jpg",
@@ -54,30 +65,58 @@ const resources_sites = [
     link: "https://www.lyoncampus.com/",
     imageSrc: "/assets/logo_lyon_campus.png",
     label: "Lyon Campus",
-    description: "Étudier, vivre, sortir et s'impliquer comme étudiant à Lyon",
+    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
+    imageSrc: "/assets/logo_UDL.png",
+    label: "Portails Santé et Aides de l'UDL",
+    description : "Toutes les informations, dispositifs et procédures"
+
   },
   {
     link: "https://commentonsaime.fr/",
     imageSrc: "/assets/logo-cosa.svg",
     label: "Comment on s'aime ?",
-    description: "Infos et tchat sur relations, sexualité, consentement…",
+    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
+  },
+
+  {
+    link: "https://www.crous-lyon.fr ",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous de Lyon",
+    description: "Aides, accompagnement, logements, restauration, international...",
   },
   {
     link: "https://www.filsantejeunes.com/",
     imageSrc: "/assets/fsj.png",
     label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal‑être (12–25 ans)",
+    description: "Pour parler santé, sexualité, amour, mal être...",
   },
 ];
+
+
+
 
 const PratiquesSexuellesDangereuses = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Infections sexuellement transmissibles</h1>
 
+
+        <Workinprogress/>
+
+        <h1 className = "titre">Les ressources globales</h1>
+      <ExternalLinkBlock
+        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        resources={resources_sites}
+      />
+
+      {/* Provisioire : page non faite
+
+
       <Navbar links={navLinks} />
 
-      {/* -------------------------------------------------- DEFINITION ------------------------------------------------- */}
       <div id="definition">
         <h1 className="titre">Définition & contexte</h1>
         <p className="texte">
@@ -100,7 +139,6 @@ const PratiquesSexuellesDangereuses = () => {
 
       <Separateur />
 
-      {/* -------------------------------------------------- RISQUES ------------------------------------------------- */}
       <div id="risques">
         <h1 className="titre">Quels risques ?</h1>
 
@@ -124,7 +162,6 @@ const PratiquesSexuellesDangereuses = () => {
 
       <Separateur />
 
-      {/* -------------------------------------------------- PREVENTION ------------------------------------------------- */}
       <div id="prevention">
         <h1 className="titre">Se protéger & réduire les risques</h1>
         <NumberedList
@@ -148,7 +185,6 @@ const PratiquesSexuellesDangereuses = () => {
 
       <Separateur />
 
-      {/* -------------------------------------------------- RESSOURCES ------------------------------------------------- */}
       <div id="ressources">
         <ExternalLinkBlock
           title="Associations & infos spécialisées"
@@ -188,7 +224,12 @@ const PratiquesSexuellesDangereuses = () => {
       <Separateur />
 
       <p className="texte"><em><b>Sources :</b> CRAFS, Santé Publique France, MAAD‑Digital, État de l’art Centrale Lyon</em></p>
-    </div>
+    
+    
+      */}
+
+
+      </div>
   );
 };
 

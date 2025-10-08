@@ -119,13 +119,84 @@ const ressourcesUtiles = [
   },
 ];
 
+
+
+
+/* Provisoire : page non faite */
+import Workinprogress from "../../components/WorkInProgress";
+
+const resources_sites = [
+
+  {
+    link: "https://www.etudiant.gouv.fr/fr",
+    imageSrc: "/assets/etudiant_gouv.jpg",
+    label: "Etudiant.gouv.fr",
+    description: "Le site officiel du gouvernement pour les étudiants",
+  },
+  {
+    link: "https://www.lyoncampus.com/",
+    imageSrc: "/assets/logo_lyon_campus.png",
+    label: "Lyon Campus",
+    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
+    imageSrc: "/assets/logo_UDL.png",
+    label: "Portails Santé et Aides de l'UDL",
+    description : "Toutes les informations, dispositifs et procédures"
+
+  },
+  {
+    link: "https://commentonsaime.fr/",
+    imageSrc: "/assets/logo-cosa.svg",
+    label: "Comment on s'aime ?",
+    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
+  },
+
+  {
+    link: "https://www.crous-lyon.fr ",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous de Lyon",
+    description: "Aides, accompagnement, logements, restauration, international...",
+  },
+  {
+    link: "https://www.filsantejeunes.com/",
+    imageSrc: "/assets/fsj.png",
+    label: "Fil Santé Jeunes",
+    description: "Pour parler santé, sexualité, amour, mal être...",
+  },
+];
+
+
+
 const Discriminations = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Discriminations</h1>
+
+
+
+
+
+        <Workinprogress/>
+
+        <h1 className = "titre">Les ressources globales</h1>
+      <ExternalLinkBlock
+        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        resources={resources_sites}
+
+
+
+      />
+
+
+
+
+      {/* Provisoire : page non faite 
+
+
       <Navbar links={navLinks} />
 
-      {/* Partie 1 : Définitions & généralités */}
       <div id="definitions">
         <h1 className="titre">Qu’est-ce que la discrimination ?</h1>
         <ImageTextPopup
@@ -137,7 +208,6 @@ const Discriminations = () => {
           suit="coeur"
         />
 
-        {/* Définition simple */}
         <p className="texte">
           La discrimination désigne toute distinction, exclusion ou préférence fondée sur un motif interdit par la loi, qui a pour effet de porter atteinte à l’égalité de traitement. Les motifs prohibés par la loi sont les suivants :
         </p>
@@ -165,7 +235,6 @@ const Discriminations = () => {
           <li>Appartenance ou non-appartenance, vraie ou supposée, à une ethnie, Nation, prétendue race ou religion déterminée</li>
         </ul>
 
-        {/* Rappel légal des sanctions */}
         <p className="texte">
           En France, la discrimination est un délit.  
           Selon l’article 225-2 du Code pénal, elle est punie de 3 ans d’emprisonnement et de 45 000 € d’amende (portés à 5 ans et 75 000 € si la discrimination a lieu dans un établissement recevant du public ou par une personne dépositaire de l’autorité publique).  
@@ -254,7 +323,6 @@ const Discriminations = () => {
       <Separateur />
 
 
-      {/* Partie 2 : Discriminations sexistes */}
       <div id="sexistes">
         <h1 className="titre">Discriminations sexistes</h1>
         <p>
@@ -341,7 +409,6 @@ const Discriminations = () => {
 
       <Separateur />
 
-      {/* Partie 3 : Discriminations racistes */}
       <div id="racistes">
         <h1 className="titre">Discriminations racistes</h1>
         <ImageTextPopup
@@ -369,7 +436,6 @@ const Discriminations = () => {
         </p>
 
 
-        {/* Solutions externes spécifiques */}
         <ExternalLinkBlock
           title="Associations spécialisées"
           subtitle="Ressources locales et nationales pour signaler ou s'informer"
@@ -424,7 +490,6 @@ const Discriminations = () => {
 
       <Separateur />
 
-      {/* Partie 4 : Discriminations LGBT-phobes */}
       <div id="lgbtphobes">
         <h1 className="titre">Discriminations LGBT-phobes</h1>
         <ImageTextPopup
@@ -459,7 +524,6 @@ const Discriminations = () => {
           Les conséquences peuvent être graves : isolement, anxiété, dépression ou difficultés d’accès aux droits.
         </p>
 
-        {/* Solutions externes spécifiques */}
         <ExternalLinkBlock
           title="Associations spécialisées"
           subtitle="Soutien, signalement et informations"
@@ -479,7 +543,6 @@ const Discriminations = () => {
           ]}
         />
 
-        {/* Ressource locale à Lyon */}
         <ContactCard
           image="/assets/centre_lgbti_lyon.png"
           title="Centre LGBTI+ Lyon"
@@ -523,7 +586,6 @@ const Discriminations = () => {
 
       <Separateur />
 
-      {/* Appel à l’aide / réaction */}
       <div id="temoin">
         <h1 className="titre">Que faire en tant que victime/témoin de discrimination ?</h1>
         <p className="texte">
@@ -567,6 +629,12 @@ const Discriminations = () => {
           Égalité contre le racisme, 
           Centre LGBTI+ Lyon
       </p>
+
+
+
+      */}
+
+      
     </div>
   );
 };

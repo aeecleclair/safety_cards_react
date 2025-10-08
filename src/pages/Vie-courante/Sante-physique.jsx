@@ -148,14 +148,80 @@ const data = [
   { number: "16%", title: "Étudiants", description: "ne rentrent pas dans ce cadre minimum" },
 ];
 
+
+
+
+
+/* Provisoire : page non faite */
+import Workinprogress from "../../components/WorkInProgress";
+
+const resources_sites = [
+
+  {
+    link: "https://www.etudiant.gouv.fr/fr",
+    imageSrc: "/assets/etudiant_gouv.jpg",
+    label: "Etudiant.gouv.fr",
+    description: "Le site officiel du gouvernement pour les étudiants",
+  },
+  {
+    link: "https://www.lyoncampus.com/",
+    imageSrc: "/assets/logo_lyon_campus.png",
+    label: "Lyon Campus",
+    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
+    imageSrc: "/assets/logo_UDL.png",
+    label: "Portails Santé et Aides de l'UDL",
+    description : "Toutes les informations, dispositifs et procédures"
+
+  },
+  {
+    link: "https://commentonsaime.fr/",
+    imageSrc: "/assets/logo-cosa.svg",
+    label: "Comment on s'aime ?",
+    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
+  },
+
+  {
+    link: "https://www.crous-lyon.fr ",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous de Lyon",
+    description: "Aides, accompagnement, logements, restauration, international...",
+  },
+  {
+    link: "https://www.filsantejeunes.com/",
+    imageSrc: "/assets/fsj.png",
+    label: "Fil Santé Jeunes",
+    description: "Pour parler santé, sexualité, amour, mal être...",
+  },
+];
+
+
+
+
 const SportSante = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Santé physique & pratique du sport</h1>
 
+
+
+        <Workinprogress/>
+
+        <h1 className = "titre">Les ressources globales</h1>
+      <ExternalLinkBlock
+        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        resources={resources_sites}
+      />
+
+
+
+
+      {/* Provisooire : page non faite
+
       <Navbar links={navLinks} />
 
-      {/* Partie 1 : Importance */}
       <div id="importance">
         <h1 className="titre">Pourquoi et où faire du sport ?</h1>
       </div>
@@ -206,7 +272,6 @@ const SportSante = () => {
 
       <Separateur />
 
-      {/* Partie 2 : Obstacles */}
       <div id="obstacles">
         <h1 className="titre">Facteurs & obstacles</h1>
       </div>
@@ -257,7 +322,6 @@ const SportSante = () => {
 
       <Separateur />
 
-      {/* Partie 3 : Bien-être & prévention */}
       <div id="prevention">
         <h1 className="titre">Bien-être & prévention au quotidien</h1>
       </div>
@@ -317,7 +381,12 @@ const SportSante = () => {
       <Separateur />
 
       <p className="texte"><em><b>Sources :</b> OMS, PAI Centrale Lyon 2024, Université de Lyon, Ville de Lyon, ISOSTEO, Assurance Maladie</em></p>
-    </div>
+    
+
+      */}
+    
+    
+      </div>
   );
 };
 

@@ -124,10 +124,82 @@ const stagesUtiles = [
   }
 ];
 
+
+
+
+/* Provisoire : page non faite */
+
+import Workinprogress from "../../components/WorkInProgress";
+
+const resources_sites = [
+
+  {
+    link: "https://www.etudiant.gouv.fr/fr",
+    imageSrc: "/assets/etudiant_gouv.jpg",
+    label: "Etudiant.gouv.fr",
+    description: "Le site officiel du gouvernement pour les étudiants",
+  },
+  {
+    link: "https://www.lyoncampus.com/",
+    imageSrc: "/assets/logo_lyon_campus.png",
+    label: "Lyon Campus",
+    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
+    imageSrc: "/assets/logo_UDL.png",
+    label: "Portails Santé et Aides de l'UDL",
+    description : "Toutes les informations, dispositifs et procédures"
+
+  },
+  {
+    link: "https://commentonsaime.fr/",
+    imageSrc: "/assets/logo-cosa.svg",
+    label: "Comment on s'aime ?",
+    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
+  },
+
+  {
+    link: "https://www.crous-lyon.fr ",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous de Lyon",
+    description: "Aides, accompagnement, logements, restauration, international...",
+  },
+  {
+    link: "https://www.filsantejeunes.com/",
+    imageSrc: "/assets/fsj.png",
+    label: "Fil Santé Jeunes",
+    description: "Pour parler santé, sexualité, amour, mal être...",
+  },
+];
+
+
+
+
+
+
 const RisquesCirculation = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Accidents de la route</h1>
+
+
+
+
+        <Workinprogress/>
+
+        <h1 className = "titre">Les ressources globales</h1>
+      <ExternalLinkBlock
+        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        resources={resources_sites}
+      />
+
+
+
+
+      {/* Provisioire : page non faite
+
+
 
       <Navbar links={navLinks} />
 
@@ -166,16 +238,13 @@ const RisquesCirculation = () => {
           Adopter les bons réflexes peut sauver des vies. Conduire, c'est anticiper, s'adapter et renoncer au moindre doute. Être raisonnable, c’est être responsable pour soi et pour les autres.
         </p>
 
-        {/* Encadré avec uniquement les titres des conseils */}
         <ListeNumerotee
           title="Conseils de sécurité routière"
           subtitle="À appliquer à chaque trajet"
           items={conseilsPrevention.map(({ title }) => ({ title }))}
         />
 
-        {/* Développement détaillé de chaque conseil */}
         <div className="developpement-conseils">
-          {/* 1 */}
           <h3>{conseilsPrevention[0].title}</h3>
           <p>
             Conduire sous l’emprise de l’alcool ou de drogues est extrêmement dangereux : cela altère les réflexes, la perception du danger et ralentit le temps de réaction.
@@ -194,7 +263,6 @@ const RisquesCirculation = () => {
             />
           </div>
 
-          {/* 2 */}
           <h3>{conseilsPrevention[1].title}</h3>
           <p>
             La fatigue est une cause majeure d’accidents, en particulier lors des trajets de nuit ou prolongés sans pause. La vigilance diminue fortement, augmentant le risque d’endormissement au volant.
@@ -205,7 +273,6 @@ const RisquesCirculation = () => {
             Conseil pratique : faites une pause toutes les 2 heures au minimum.
           </div>
 
-          {/* 3 */}
           <h3>{conseilsPrevention[2].title}</h3>
           <p>
             Utiliser un téléphone en conduisant multiplie par 3 le risque d’accident, car cela détourne l’attention et réduit la capacité de réaction.
@@ -224,7 +291,6 @@ const RisquesCirculation = () => {
             />
           </div>
 
-          {/* 4 */}
           <h3>{conseilsPrevention[3].title}</h3>
           <p>
             Le respect des limitations de vitesse est crucial car la vitesse excessive est la première cause de mortalité routière, notamment chez les jeunes conducteurs.
@@ -243,7 +309,6 @@ const RisquesCirculation = () => {
             />
           </div>
 
-          {/* 5 */}
           <h3>{conseilsPrevention[4].title}</h3>
           <p>
             La fatigue réduit la vigilance, augmente le temps de réaction et le risque d’endormissement au volant. 29 % des jeunes conducteurs ont déjà failli s’endormir.
@@ -252,7 +317,6 @@ const RisquesCirculation = () => {
             Risques légaux : En cas d’accident grave dû à la fatigue, la responsabilité peut être engagée. Il est important d’écouter son corps et de s’arrêter au besoin.
           </div>
 
-          {/* 6 */}
           <h3>{conseilsPrevention[5].title}</h3>
           <p>
             En situation de groupe, les comportements à risque se multiplient souvent par mimétisme. Il est important de garder son jugement et savoir dire non aux excès.
@@ -261,7 +325,6 @@ const RisquesCirculation = () => {
             Risques légaux : Les infractions commises sous pression peuvent toujours entraîner des sanctions pénales et civiles.
           </div>
 
-          {/* 7 */}
           <h3>{conseilsPrevention[6].title}</h3>
           <p>
             Le port de la ceinture de sécurité réduit fortement le risque de blessures graves en cas d’accident.
@@ -319,6 +382,9 @@ const RisquesCirculation = () => {
       <p className="texte source">
         <em><b>Sources :</b> ONISR (Rapport 2024), sécurité-routière.gouv.fr, Légifrance, Matmut, Direct Assurance, TF1 Info, France Info, DSR.</em>
       </p>
+
+
+        */}
     </div>
   );
 };
