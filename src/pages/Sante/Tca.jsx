@@ -190,7 +190,7 @@ const TCA = () => {
             description: "Tu te fais du mal pour te sentir mieux ? D'autres solutions existent.",
               },
               { link: "/suicide",
-            emoji: "",
+            emoji: "🗣️",
             label: "Tentative de suicide",
             description: "Tu as des pensées suicidaires ? Tu n'es pas seul·e, voici des ressources pour en parler.",
               },

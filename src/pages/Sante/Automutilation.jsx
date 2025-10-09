@@ -40,6 +40,13 @@ const resources_infos = [
     description: "Informations à destination des automutilés ou de leurs proches",
   },
 
+  {
+    link: "https://www.pssmfrance.fr/actualites/mieux-comprendre-les-automutilations-pour-mieux-aider/",
+    imageSrc: "/assets/logo-pssm.svg",
+    label: "Automutilation",
+    description: "Mieux comprendre les automutilations pour mieux aider",
+  },
+
 ];
 
 
@@ -164,7 +171,7 @@ const Automutilation = () => {
             title="Comment on s'aime ?"
             subtitle="Écoute et réponse à tes questions par des professionnels"
             hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
-            textButton="Voir le site web"
+            textButton="Contacter"
             link="https://commentonsaime.fr/"
 
             bgColor="#f6a21e"    //informations facultatives
