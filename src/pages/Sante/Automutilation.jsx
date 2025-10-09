@@ -154,7 +154,7 @@ const Automutilation = () => {
           "Si tu en éprouves le besoin, tu peux écrire ce que tu ressens et expliquer ce qui t'arrive. Personne d'autre n'a besoin de lire ce que tu as écrit.  "
       ]} />
 
-      <p className="texte">Il existe des services en ligne. Tu peux contacter la <b>Nightline</b>, service qui te mettra en contact avec des <b>étudiants bénévoles</b> de manière gratuite et anonyme, que tu aies besoin d'aide ou simplement besoin de vider ton sac. Si tu préfères parler à des <b>professionnels</b>, toujours de manière gratuite et anonyme, alors tu peux contacter <b>Comment on s'aime ?</b>.</p>
+      <p className="texte">Il existe des services en ligne. Tu peux contacter la <b>Nightline</b>, service qui te mettra en contact avec des <b>étudiants bénévoles</b> de manière gratuite et anonyme, que tu aies besoin d'aide ou simplement besoin de vider ton sac. Si tu préfères parler à des <b>professionnels</b>, toujours de manière gratuite et anonyme, alors tu peux contacter le <b>3114</b>.</p>
       
           <ContactCard
           image="/assets/nightline_logo.png" 
@@ -166,17 +166,17 @@ const Automutilation = () => {
           textButton="Voir le site web"
           link="https://www.nightline.fr/lyon"
         />
-          <ContactCard
-            image="/assets/logo-cosa.svg" 
-            title="Comment on s'aime ?"
-            subtitle="Écoute et réponse à tes questions par des professionnels"
-            hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
-            textButton="Contacter"
-            link="https://commentonsaime.fr/"
+        <ContactCard
+        image="/assets/3114.jpg" 
+        title="3114"
+        subtitle="Ligne d'écoute pour te mettre en relation avec des psychologues formés "
+        phone="3114"
+        email=""
+        hours="24h/24 et 7j/7"
+        textButton="Voir le site web"
+        link="https://3114.fr/"
 
-            bgColor="#f6a21e"    //informations facultatives
-            textColor="#ffffff"
-          />
+      />
 
       <h2 className="sous-titre-2">Lorsque l'envie de te faire du mal est passée</h2>
 
