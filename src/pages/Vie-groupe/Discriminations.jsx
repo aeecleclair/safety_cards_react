@@ -144,6 +144,7 @@ const discrimetre = [
     link: "/assets/Discriminomètre.pdf",
     label: "Discriminomètre ",
     description: "pour avoir des exemples de situations dangereuses",
+    emoji: "📏",
   }
 ]
 
