@@ -62,10 +62,10 @@ const resources_aide = [
 ]
 
 const conseils_aider = [
-  { title: "Écoute sans juger", subtitle: "Donne-lui l’occasion de parler de ce qu’il/elle ressent. Parfois, simplement laisser la personne s’exprimer (peurs, complexes, doutes) est très aidant. Montre-lui que tu prends ses sentiments au sérieux et que tu es là pour lui/elle." },
-  { title: "Valorise ses qualités", subtitle: "Soulignez ses forces et réussites, même petites. Cela peut aider à rééquilibrer son image d’elle-même." },
-  { title: "Suggère des activités", subtitle: "Propose de faire ensemble quelque chose qui peut améliorer son moral : faire du sport, aller au cinéma, se lancer dans un nouveau projet créatif, etc. Participer à des activités de groupe encourage l’estime de soi." },
-  { title: "Encourage dans la démarche d'aide", subtitle: "Si tu vois que la personne souffre (isolement, tristesse, baisse de motivation…), encourage-la à demander de l’aide extérieure. Par exemple, l'infirmière ou un psychologue peuvent conseiller. Tu peux aussi l'orienter vers le numéro d'écoute Fil Santé Jeunes ou la Nightline." }
+  { title: "Écoute sans juger", subtitle: "Donne-lui l'occasion de parler de ce qu'il/elle ressent. Parfois, simplement laisser la personne s'exprimer (peurs, complexes, doutes) est très aidant. Montre-lui que tu prends ses sentiments au sérieux et que tu es là pour lui/elle." },
+  { title: "Valorise ses qualités", subtitle: "Soulignez ses forces et réussites, même petites. Cela peut aider à rééquilibrer son image d'elle-même." },
+  { title: "Suggère des activités", subtitle: "Propose de faire ensemble quelque chose qui peut améliorer son moral : faire du sport, aller au cinéma, se lancer dans un nouveau projet créatif, etc. Participer à des activités de groupe encourage l'estime de soi." },
+  { title: "Encourage dans la démarche d'aide", subtitle: "Si tu vois que la personne souffre (isolement, tristesse, baisse de motivation…), encourage-la à demander de l'aide extérieure. Par exemple, l'infirmière ou un psychologue peuvent conseiller. Tu peux aussi l'orienter vers le numéro d'écoute Fil Santé Jeunes ou la Nightline." }
 ];
 
 const Confiance = () => {
@@ -82,7 +82,7 @@ const Confiance = () => {
         image="./assets/cartes/as_carreau.png"
         title="La carte A♦"
         shortText="Confiance en soi : renforcer et accompagner"
-        longText="Confiance en soi : renforcer et accompagner"
+        longText="Lorsqu'on se regarde dans le miroir, on voit souvent nos défauts avant nos qualités. La confiance en soi se construit en apprenant à reconnaître et valoriser ces qualités, tout en acceptant ses limites. C'est un processus qui demande du temps et de la patience, mais qui est essentiel pour se sentir bien dans sa peau."
         textButton="⤢ Agrandir la carte"
         suit = "carreau"
       />
@@ -93,8 +93,8 @@ const Confiance = () => {
       <p className="texte">On confond souvent confiance en soi et estime de soi, mais ces notions sont différentes :</p>
       
       <BulletList items={[
-        <><b>La confiance en soi </b> est la <b>croyance en sa capacité à réussir dans une tâche spécifique</b>. La confiance en soi n’est pas innée : elle se construit avec l’expérience, l’entraînement et les réussites. Une personne peut avoir confiance dans un domaine (par exemple, dans ses talents au Coin-Coin) sans pour autant avoir une estime de soi globale élevée.</>,
-        <><b>L'estime de soi</b> est <b>l’évaluation globale et affective que l’on porte sur soi-même</b> : ce que je ressens pour moi-même. Une bonne estime de soi se manifeste généralement par un discours intérieur positif et une capacité à s’affirmer​. À l’inverse, une estime de soi faible s’accompagne souvent de pensées négatives sur soi-même, de peur du jugement des autres et d’une difficulté à s’affirmer​</>,
+        <><b>La confiance en soi </b> est la <b>croyance en sa capacité à réussir dans une tâche spécifique</b>. La confiance en soi n'est pas innée : elle se construit avec l'expérience, l'entraînement et les réussites. Une personne peut avoir confiance dans un domaine (par exemple, dans ses talents au Coin-Coin) sans pour autant avoir une estime de soi globale élevée.</>,
+        <><b>L'estime de soi</b> est <b>l'évaluation globale et affective que l'on porte sur soi-même</b> : ce que je ressens pour moi-même. Une bonne estime de soi se manifeste généralement par un discours intérieur positif et une capacité à s'affirmer​. À l'inverse, une estime de soi faible s'accompagne souvent de pensées négatives sur soi-même, de peur du jugement des autres et d'une difficulté à s'affirmer​</>,
       ]} />
 
       <TextImageRight
@@ -105,8 +105,8 @@ const Confiance = () => {
       <ChiffresGroup chiffres={chiffres_confiance} />
 
       <h2 className="sous-titre-2">Pourquoi la confiance et l'estime de soi sont importantes ?</h2>
-      <p className="texte">La confiance en soi et l’estime de soi jouent un rôle majeur dans la vie d’un étudiant. <b> Elles influencent la motivation, la participation en classe, la capacité à relever des défis et le bien-être psychologique</b>. Par exemple, un manque de confiance peut conduire à l’auto-censure : des jeunes femmes en formation avouent souvent renoncer à parler en public ou à poursuivre certains projets par manque d’assurance​.
-      <br/>Une estime de soi solide est aussi un facteur de résilience : <b>elle aide à mieux gérer le stress, les échecs passagers et les relations sociales</b>. À l’inverse, une estime de soi faible s’accompagne souvent d’anxiété et peut contribuer à un mal-être plus profond​. Concrètement, cela veut dire qu’un étudiant avec une bonne confiance en soi osera plus souvent prendre la parole en classe, demander de l’aide s’il ne comprend pas quelque chose, participer à des projets collectifs, et persévérer malgré les difficultés. Au contraire, sans confiance, on peut avoir tendance à se dire « je ne suis pas à la hauteur » et à abandonner plus vite. Travailler sa confiance et son estime de soi est donc important pour réussir ses études et pour préserver sa santé mentale.</p>
+      <p className="texte">La confiance en soi et l'estime de soi jouent un rôle majeur dans la vie d'un étudiant. <b> Elles influencent la motivation, la participation en classe, la capacité à relever des défis et le bien-être psychologique</b>. Par exemple, un manque de confiance peut conduire à l'auto-censure : des jeunes femmes en formation avouent souvent renoncer à parler en public ou à poursuivre certains projets par manque d'assurance​.
+      <br/>Une estime de soi solide est aussi un facteur de résilience : <b>elle aide à mieux gérer le stress, les échecs passagers et les relations sociales</b>. À l'inverse, une estime de soi faible s'accompagne souvent d'anxiété et peut contribuer à un mal-être plus profond​. Concrètement, cela veut dire qu'un étudiant avec une bonne confiance en soi osera plus souvent prendre la parole en classe, demander de l'aide s'il ne comprend pas quelque chose, participer à des projets collectifs, et persévérer malgré les difficultés. Au contraire, sans confiance, on peut avoir tendance à se dire « je ne suis pas à la hauteur » et à abandonner plus vite. Travailler sa confiance et son estime de soi est donc important pour réussir ses études et pour préserver sa santé mentale.</p>
 
       <ExternalLinkBlock
         resources={resources}
@@ -130,11 +130,11 @@ const Confiance = () => {
       <BulletList items={[
         <><b>Fixe-toi des objectifs réalistes et félicite-toi quand tu les atteins</b>, même s'ils sont petits.</>,
         <><b>Parle-toi comme tu parlerais à un·e ami·e</b> : avec bienveillance, encouragement et patience.</>,
-        <><b>Pratique une activité physique régulière</b>. Faire du sport ou simplement marcher stimule la production de dopamine (l’hormone du bien-être) et améliore l’image que l’on a de soi​. Par exemple, une séance de sport après les cours ou une promenade chaque jour peuvent aider à se sentir plus fort·e et plus sûr·e de soi.</>,
-        <><b>Prends soin de toi</b>. Un bon sommeil, une alimentation équilibrée et une hygiène de vie saine aident à se sentir bien dans son corps et dans sa tête​. Bien dormir et manger sainement augmente l’énergie et la clarté mentale, ce qui facilite la confiance au quotidien.</>,
-        <><b>Autorise-toi à faire des erreurs</b>. Personne n’est parfait : faire des fautes ou échouer ponctuellement ne signifie pas qu’on est « nul ». Au contraire, chaque erreur est l’occasion d’apprendre. Même si tu as une mauvaise note, rappelle-toi que tu n’es pas ta note​.</>,
-        <><b>Apprends à gérer ton stress et tes émotions</b>. Des techniques simples de respiration ou de relaxation peuvent aider à calmer l’anxiété (par exemple, inspirer lentement pendant 4 secondes, bloquer 4 secondes, expirer 4 secondes). Comprendre et nommer ses émotions (colère, tristesse, etc.) permet de les réguler.</>,
-        <><b>Sors de ta zone de confort avec des petits défis</b>. Chaque fois que tu oses faire quelque chose qui te fait peur (dire ce que tu penses, changer de look, participer à un club), tu gagnes en assurance. Par exemple, n’hésite pas à exprimer ton avis en petit comité ou à dire non quand tu n’es pas d’accord. </>,
+        <><b>Pratique une activité physique régulière</b>. Faire du sport ou simplement marcher stimule la production de dopamine (l'hormone du bien-être) et améliore l'image que l'on a de soi​. Par exemple, une séance de sport après les cours ou une promenade chaque jour peuvent aider à se sentir plus fort·e et plus sûr·e de soi.</>,
+        <><b>Prends soin de toi</b>. Un bon sommeil, une alimentation équilibrée et une hygiène de vie saine aident à se sentir bien dans son corps et dans sa tête​. Bien dormir et manger sainement augmente l'énergie et la clarté mentale, ce qui facilite la confiance au quotidien.</>,
+        <><b>Autorise-toi à faire des erreurs</b>. Personne n'est parfait : faire des fautes ou échouer ponctuellement ne signifie pas qu'on est « nul ». Au contraire, chaque erreur est l'occasion d'apprendre. Même si tu as une mauvaise note, rappelle-toi que tu n'es pas ta note​.</>,
+        <><b>Apprends à gérer ton stress et tes émotions</b>. Des techniques simples de respiration ou de relaxation peuvent aider à calmer l'anxiété (par exemple, inspirer lentement pendant 4 secondes, bloquer 4 secondes, expirer 4 secondes). Comprendre et nommer ses émotions (colère, tristesse, etc.) permet de les réguler.</>,
+        <><b>Sors de ta zone de confort avec des petits défis</b>. Chaque fois que tu oses faire quelque chose qui te fait peur (dire ce que tu penses, changer de look, participer à un club), tu gagnes en assurance. Par exemple, n'hésite pas à exprimer ton avis en petit comité ou à dire non quand tu n'es pas d'accord. </>,
       ]} />
 
       <p className="texte">Tu n'es pas obligé·e de traverser seul·e cette démarche. Des aides existent, confidentielles et gratuites :</p>
@@ -189,7 +189,7 @@ const Confiance = () => {
         link="https://www.filsantejeunes.com/"
       />
 
-      <h2 className="sous-titre-2">Ce qu’il vaut mieux éviter</h2>
+      <h2 className="sous-titre-2">Ce qu'il vaut mieux éviter</h2>
 
       <BulletList items={[
         "Ne pas minimiser ou se moquer de ses peurs ou doutes.",

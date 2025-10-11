@@ -13,7 +13,7 @@ import { image } from "framer-motion/m";
 const navLinks = [
   { label: "Comprendre", target: "definition" },
   { label: "Je suis concerné·e", target: "personne-concernee" },
-  { label: "J’accompagne ou je suis témoin", target: "accompagnant" }
+  { label: "J'accompagne ou je suis témoin", target: "accompagnant" }
 ];
 
 const ressourcesTroubles = [
@@ -115,7 +115,7 @@ const Anxiete = () => {
           Les <b>troubles anxieux</b> correspondent à une inquiétude plus importante et plus persistante, qui altère le fonctionnement quotidien (activités, travail, relations sociales, etc.). Les troubles anxieux sont les troubles de santé mentale les plus courants dans le monde.
         </p>
         <p className="texte">
-        On distingue l’anxiété de l’<b>angoisse</b> : l’anxiété est diffuse et anticipatoire, souvent liée à la peur qu’un problème survienne, tandis que l’angoisse correspond à une crise aiguë, brutale, avec des symptômes physiques intenses comme une sensation d’étouffer, des palpitations ou l’impression de perdre le contrôle.
+        On distingue l'anxiété de l'<b>angoisse</b> : l'anxiété est diffuse et anticipatoire, souvent liée à la peur qu'un problème survienne, tandis que l'angoisse correspond à une crise aiguë, brutale, avec des symptômes physiques intenses comme une sensation d'étouffer, des palpitations ou l'impression de perdre le contrôle.
         </p>
         <h2 className="sous-titre-2">Signes et symptômes fréquents</h2>
         <BulletList items={[
@@ -166,7 +166,7 @@ const Anxiete = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -191,7 +191,7 @@ const Anxiete = () => {
         <ContactCard
           image="/assets/nightline_logo.png"
           title="Nightline Lyon"
-          subtitle="Ligne d’écoute, de soutien et d’information, tenue par et pour des étudiants"
+          subtitle="Ligne d'écoute, de soutien et d'information, tenue par et pour des étudiants"
           phone="04 85 30 00 10"
           hours="Tous les jours, de 21h à 2h30 du matin"
           textButton="Voir le site web"
@@ -223,7 +223,7 @@ const Anxiete = () => {
 
 
       <div id="accompagnant">
-        <h1 className="titre">J’accompagne ou je suis témoin</h1>
+        <h1 className="titre">J'accompagne ou je suis témoin</h1>
 
 
         <ListeNumerotee
@@ -236,7 +236,7 @@ const Anxiete = () => {
           Pour se rétablir des troubles anxieux, il faut faire face aux situations sources d'anxiété, et non les éviter. 
           </p>
         <p className="mise-avant">
-          Ne minimise pas les peurs de la personne, avec des phrases comme « Ce n’est pas grave » ou « Il n’y a pas de quoi avoir peur ». Ne lui dis pas de « s'endurcir » ou de « relativiser ».
+          Ne minimise pas les peurs de la personne, avec des phrases comme « Ce n'est pas grave » ou « Il n'y a pas de quoi avoir peur ». Ne lui dis pas de « s'endurcir » ou de « relativiser ».
         </p>
 
         <ExternalLinkBlock resources={aerer} />
@@ -247,7 +247,7 @@ const Anxiete = () => {
           "Les symptômes d'une crise de panique sont similaires à ceux d'un infarctus ou d'une autre urgence médicale. Si tu n'es pas sûr·e que la personne fait une crise de panique, applique les premiers secours physiques et appelle les urgences (15 ou 112).",
           "Dans le cas d'une attaque de panique, reste calme et rassure la personne en indiquant que tu es là pour l'aider. Si elle accepte ton aide, applique les étapes suivantes.",
           "Invite-la à se diriger vers un endroit calme et fais-la s'asseoir.",
-          "Utilise des phrases courtes. Demande ce ui pourrait l'aider à se sentir mieux, ou s'il a un contact à appeler.",
+          "Utilise des phrases courtes. Demande ce qui pourrait l'aider à se sentir mieux, ou s'il a un contact à appeler.",
           "Ne minimise pas ses sensations. Explique lui que même si la crise est effrayante, elle n'est ni dangereuse, ni mortelle. "
         ]} />
 
@@ -255,7 +255,7 @@ const Anxiete = () => {
 
      <h2 className="sous-titre-2">Pour aller + loin : la formation PSSM</h2>
       
-            <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l’aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu’à ce qu’une aide professionnelle puisse être apportée ou jusqu’à ce que la crise soit résolue. Ils sont l’équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
+            <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l'aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu'à ce qu'une aide professionnelle puisse être apportée ou jusqu'à ce que la crise soit résolue. Ils sont l'équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
             Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.
             La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
             imageSrc="/assets/logo-pssm.svg" />
@@ -265,7 +265,7 @@ const Anxiete = () => {
 
 <p className="texte">
   <em>
-    <b>Sources :</b> Méta-analyses sur l’anxiété chez les étudiant·e·s, Santé Psy Étudiant, Fil Santé Jeunes, Nightline Lyon, 3114 — prévention suicide, Manuel PSSM
+    <b>Sources :</b> Méta-analyses sur l'anxiété chez les étudiant·e·s, Santé Psy Étudiant, Fil Santé Jeunes, Nightline Lyon, 3114 — prévention suicide, Manuel PSSM
   </em>
 </p>
 

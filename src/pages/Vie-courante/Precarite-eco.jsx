@@ -27,7 +27,7 @@ const navLinks = [
 
 /** Chiffres clés (constat local fourni) */
 const chiffresPrecarite = [
-  { number: "20,5%", title: "des étudiants", description: "bénéficient d’une bourse à Centrale Lyon" },
+  { number: "20,5%", title: "des étudiants", description: "bénéficient d'une bourse à Centrale Lyon" },
   { number: "9,7%", title: "des étudiants", description: "rencontrent des difficultés financières pour subvenir à leurs besoins essentiels" },
   { number: "31,0%", title: "des étudiants étrangers", description: "sont touchés par la précarité (vs 8,4% Français)" },
 ];
@@ -35,9 +35,9 @@ const chiffresPrecarite = [
 /** Étapes d'accompagnement (parcours) */
 const items_parcours = [
   {
-    title: "Rencontrer l’assistante sociale",
+    title: "Rencontrer l'assistante sociale",
     subtitle:
-      "Présente chaque lundi à l’infirmerie : écoute, évaluation, ouverture des droits et accompagnement dans les démarches (aides d’urgence, exonérations, logement, santé).",
+      "Présente chaque lundi à l'infirmerie : écoute, évaluation, ouverture des droits et accompagnement dans les démarches (aides d'urgence, exonérations, logement, santé).",
   },
   {
     title: "Activer les aides du Crous",
@@ -47,22 +47,22 @@ const items_parcours = [
   {
     title: "Logement : réduire le coût",
     subtitle:
-      "Demander l’aide au logement (APL/ALF/ALS) et utiliser la garantie Visale (caution gratuite) pour sécuriser la location.",
+      "Demander l'aide au logement (APL/ALF/ALS) et utiliser la garantie Visale (caution gratuite) pour sécuriser la location.",
   },
   {
-    title: "Accéder à l’épicerie solidaire",
+    title: "Accéder à l'épicerie solidaire",
     subtitle:
       "Depuis avril 2024, l'association Solidari'terre propose des produits à moindre coût.",
   },
   {
     title: "Prêt de matériel numérique",
     subtitle:
-      "Se renseigner sur le prêt d’ordinateurs et d’équipements via l'association Eclair. Des solutions existent en cas de panne ou d’absence d’équipement.",
+      "Se renseigner sur le prêt d'ordinateurs et d'équipements via l'association Eclair. Des solutions existent en cas de panne ou d'absence d'équipement.",
   },
   {
     title: "Emplois étudiants & aides internes",
     subtitle:
-      "Consulter l’intranet pour les jobs étudiants et les dispositifs d’exonération partielle des frais de scolarité (selon critères sociaux).",
+      "Consulter l'intranet pour les jobs étudiants et les dispositifs d'exonération partielle des frais de scolarité (selon critères sociaux).",
   },
 
 
@@ -192,7 +192,7 @@ const PrecariteEconomique = () => {
         <h1 className="titre">Je suis en difficulté</h1>
       </div>
       <p className="texte">
-            Tu n’es pas seul·e. Dès les premiers signes (retards de loyer, alimentation insuffisante, matériel défaillant, etc.), <b>parles-en rapidement</b> : le service social t’aidera à activer les bons leviers (aides centraliennes et du Crous, logement, santé, exonérations, jobs étudiants).
+            Tu n'es pas seul·e. Dès les premiers signes (retards de loyer, alimentation insuffisante, matériel défaillant, etc.), <b>parles-en rapidement</b> : le service social t'aidera à activer les bons leviers (aides centraliennes et du Crous, logement, santé, exonérations, jobs étudiants).
         </p>
       <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
@@ -206,7 +206,7 @@ const PrecariteEconomique = () => {
         textColor="#b22133" 
       />
 
-      <p className="texte">Tu peux aussi contacter le service social du CROUS de Lyon (pour des demandes autres que l’attribution des logements en résidences Crous, la gestion des dossiers de bourse et la restauration).
+      <p className="texte">Tu peux aussi contacter le service social du CROUS de Lyon (pour des demandes autres que l'attribution des logements en résidences Crous, la gestion des dossiers de bourse et la restauration).
       </p>
       <ContactCard
         image="/assets/logo_crous.png"
@@ -218,7 +218,7 @@ const PrecariteEconomique = () => {
         textColor="#e30613"
       />
 
-      <h2 className="sous-titre-2">Parcours d’aide recommandé</h2>
+      <h2 className="sous-titre-2">Parcours d'aide recommandé</h2>
       <ListeNumerotee
         title="Étapes clés"
         subtitle="Qui contacter et quoi activer en priorité"
@@ -233,11 +233,11 @@ const PrecariteEconomique = () => {
 
       <h2 className="sous-titre-2">Bourses du CROUS sur critères sociaux</h2>
 
-      <p className="texte"> Pour demander une bourse, il faut constituer un <b>Dossier Social Étudiant (DSE)</b> chaque année. Le montant de la bourse dépend de plusieurs critères (ressources familiales, distance entre le domicile familial et l’établissement, nombre de frères et sœurs à charge, etc.) et est réparti en 7 échelons. L'aide peut aller d'une <b>éxonération des frais d'inscription dans les établissements publics et du paiement de la cotisation de sécurité sociale étudiante à un plafond fixé annuellement.</b> Vous pouvez potentiellement en bénéficier que vous soyez de nationalité française, européen·ne ou autre.</p>
+      <p className="texte"> Pour demander une bourse, il faut constituer un <b>Dossier Social Étudiant (DSE)</b> chaque année. Le montant de la bourse dépend de plusieurs critères (ressources familiales, distance entre le domicile familial et l'établissement, nombre de frères et sœurs à charge, etc.) et est réparti en 7 échelons. L'aide peut aller d'une <b>éxonération des frais d'inscription dans les établissements publics et du paiement de la cotisation de sécurité sociale étudiante à un plafond fixé annuellement.</b> Vous pouvez potentiellement en bénéficier que vous soyez de nationalité française, européen·ne ou autre.</p>
       <ExternalLinkBlock resources={bourse_crous} />
 
       <h2 className="sous-titre-2">Aide d'urgence</h2>
-      <p className="texte">En cas de coup dur (perte de revenus, dépenses imprévues, etc.), tu peux solliciter une aide d’urgence auprès du service social du CROUS. Elle est accessible pour les étudiants boursiers et non boursiers, de nationalité française ou étrangère.</p>
+      <p className="texte">En cas de coup dur (perte de revenus, dépenses imprévues, etc.), tu peux solliciter une aide d'urgence auprès du service social du CROUS. Elle est accessible pour les étudiants boursiers et non boursiers, de nationalité française ou étrangère.</p>
       
       <ContactCard
         image="/assets/etudiant_gouv.jpg"
@@ -263,7 +263,7 @@ const PrecariteEconomique = () => {
 
       <BulletList
         items={[
-          "Comission d'exonération :  Elle permet d’exonérer des étudiants sur critères sociaux (hors boursiers et étudiants en double diplôme qui le sont déjà). Il faut composer un dossier et l'envoyer avant fin janvier généralement. Plus d'informations via le lien ci-desous.",
+          "Comission d'exonération :  Elle permet d'exonérer des étudiants sur critères sociaux (hors boursiers et étudiants en double diplôme qui le sont déjà). Il faut composer un dossier et l'envoyer avant fin janvier généralement. Plus d'informations via le lien ci-desous.",
           "Commission sociale : Elle a pour but d'apporter un soutien financier aux étudiants faisant face à des difficultés au quotidien (paiement du loyer, nourriture...). Il faut aussi composer un dossier et l'envoyer avant fin janvier généralement. Plus d'informations via le lien ci-desous.",
           "Fonds de dotations : il est possible d'obtenir un soutien financier. Vous pouvez contatcer le service social pour plus d'informations."
         ]}
@@ -275,30 +275,30 @@ const PrecariteEconomique = () => {
       <h2 className="sous-titre-2">Épicerie solidaire</h2>
 
       <p className="texte">Depuis avril 2024, l'association Solidari'terre propose une épicerie solidaire aux étudiants de l'Ecole Centrale de Lyon. Elle permet d'accéder à des produits alimentaires et d'hygiène à moindre coût (6 produits laximum, à 25% du prix du marché). Pour y accéder, tu dois être boursi·er·ère, avoir un repas à 1€ au CROUS ou être autorisé·e par l'assistance sociale.</p>
-      <p className="texte">L'épicerie est ouverte tous les <b>lundis de 18h30 à 20h et les mercredis de 12h25 à 13h45, en bas du bâtiment X</b>, face à Adoma.</p>
+      <p className="texte">L'épicerie est ouverte tous les <b>lundis et mercredis de 12h25 à 13h45, en bas du bâtiment X</b>, face à Adoma.</p>
 
       <ExternalLinkBlock resources={epicerie} />
 
       <h2 className="sous-titre-2">Prêt de matériel numérique</h2>
 
-      <p className="texte">Si tu n’as pas d’ordinateur ou que le tien est en panne, l’association Eclair propose un service de prêt de matériel informatique (ordinateurs portables, matériel, etc.) aux étudiant·e·s de l’Ecole Centrale de Lyon. Le prêt est gratuit et peut durer plusieurs semaines selon les besoins. Pour en bénéficier, tu peux les contacter ou passer dans les locaux associatifs le midi.</p>
+      <p className="texte">Si tu n'as pas d'ordinateur ou que le tien est en panne, l'association Eclair propose un service de prêt de matériel informatique (ordinateurs portables, matériel, etc.) aux étudiant·e·s de l'Ecole Centrale de Lyon. Le prêt est gratuit et peut durer plusieurs semaines selon les besoins. Pour en bénéficier, tu peux les contacter ou passer dans les locaux associatifs le midi.</p>
 
         <ExternalLinkBlock resources={eclair} />
 
 
       <h2 className="sous-titre-2">Emplois étudiants</h2>
 
-      <p className="texte">L’intranet de l’école recense régulièrement des offres d’emplois étudiants (jobs à temps partiel, missions ponctuelles, etc.). Tu peux aussi trouver des jobs via les services de la métropole ou de l'état.</p>
+      <p className="texte">L'intranet de l'école recense régulièrement des offres d'emplois étudiants (jobs à temps partiel, missions ponctuelles, etc.). Tu peux aussi trouver des jobs via les services de la métropole ou de l'état.</p>
 
         <ExternalLinkBlock resources={jobs} />
 
 
       <h2 className="sous-titre-2">Aides pour une mobilité internationale</h2>
 
-      <p className="texte">Si tu prévois de partir à l’étranger dans le cadre d’un échange universitaire ou d’un stage, plusieurs aides existent pour t’aider à financer ton projet.</p>
+      <p className="texte">Si tu prévois de partir à l'étranger dans le cadre d'un échange universitaire ou d'un stage, plusieurs aides existent pour t'aider à financer ton projet.</p>
       <BulletList
         items={[
-          "Bourse Erasmus+ : La participation au programme d’échange Erasmus+ permet le versement d’une aide mensuelle de participation aux frais de séjour et de voyage (montant variable selon le pays de destination).",
+          "Bourse Erasmus+ : La participation au programme d'échange Erasmus+ permet le versement d'une aide mensuelle de participation aux frais de séjour et de voyage (montant variable selon le pays de destination).",
           "Bourse Région mobilité internationale étudiants : Cette aide octroyée par la Région Auvergne-Rhône-Alpes s'élève à 95€ par semaine sur un nombre de semaines défini selon le budget accordé en début d'année. Plus d'informations sur l'intranet.",
           "Et d'autres dispositifs pour boursiers ou non, à découvrir sur l'Intranet.",
         ]}
@@ -315,9 +315,9 @@ const PrecariteEconomique = () => {
       <p className="texte">
         Tu repères un·e camarade en difficulté (absences, fatigue, repas sautés,
         problèmes de loyer, matériel cassé) ? <b>Ose ouvrir la discussion</b> sans
-        jugement et propose une orientation vers l’assistante sociale ou les
-        dispositifs d’aide. Tu peux aussi l’accompagner à un rendez-vous ou vers
-        l’épicerie solidaire.
+        jugement et propose une orientation vers l'assistante sociale ou les
+        dispositifs d'aide. Tu peux aussi l'accompagner à un rendez-vous ou vers
+        l'épicerie solidaire.
       </p>
 
       <BulletList

@@ -13,19 +13,19 @@ import ImageTextPopup from "../../components/Cartes";
 
 const navLinks = [
   { label: "Integration ou bizutage ?", target: "definition" },
-  { label: "Pourquoi c’est grave ?", target: "risques" },
+  { label: "Pourquoi c'est grave ?", target: "risques" },
   { label: "Comment réagir", target: "agir" },
   { label: "J'organise l'intégration", target: "assos" },
 ];
 
 const pratiquesBizutage = [
-  "Faire boire de l’alcool en grande quantité ou sous pression",
+  "Faire boire de l'alcool en grande quantité ou sous pression",
   "Rituels humiliants (se déshabiller, simuler des actes sexuels, etc.)",
   "Obligation de ramper, nettoyer ou porter des tenues dégradantes",
-  "Privation de sommeil pendant un week-end d’intégration",
+  "Privation de sommeil pendant un week-end d'intégration",
   "Contraintes physiques : pompes, sauts, coups légers mais répétés",
   "Rituels secrets interdits de révélation",
-  "Pressions psychologiques : menaces d’exclusion du groupe",
+  "Pressions psychologiques : menaces d'exclusion du groupe",
 ];
 
 const data = [
@@ -35,45 +35,45 @@ const data = [
 ];
 
 const consequencesBizutage = [
-  "Humiliation et perte d’estime de soi",
+  "Humiliation et perte d'estime de soi",
   "Blessures physiques accidentelles (voire hospitalisations)",
   "Stress post-traumatique ou anxiété",
-  "Abandon d’études ou isolement",
-  "Normalisation de la violence dès l’entrée dans l’enseignement supérieur",
+  "Abandon d'études ou isolement",
+  "Normalisation de la violence dès l'entrée dans l'enseignement supérieur",
   "Risque juridique lourd pour les organisateurs",
 ];
 
 const sanctionsLegales = [
   "Le bizutage est un délit (article 225-16-1 du Code pénal)",
-  "Peine pouvant aller jusqu’à 6 mois de prison et 7 500 € d’amende",
+  "Peine pouvant aller jusqu'à 6 mois de prison et 7 500 € d'amende",
   "Sanctions aggravées en cas de violence, menace, ou actes discriminants",
   "Les établissements peuvent engager des procédures disciplinaires",
-  "Aucune nécessité d’intention de nuire pour que le délit soit constitué",
+  "Aucune nécessité d'intention de nuire pour que le délit soit constitué",
 ];
 
 const temoignagesMythes = [
   {
-    title: "« C’est juste pour rire »",
-    subtitle: "Ce qui est drôle pour certains peut être humiliant pour d’autres. L’humour ne doit jamais être imposé."
+    title: "« C'est juste pour rire »",
+    subtitle: "Ce qui est drôle pour certains peut être humiliant pour d'autres. L'humour ne doit jamais être imposé."
   },
   {
-    title: "« J’ai accepté, donc ce n’est pas du bizutage »",
-    subtitle: "Le consentement sous pression n’est pas un vrai consentement. Ce n’est pas parce qu’on ne dit rien qu’on est d’accord."
+    title: "« J'ai accepté, donc ce n'est pas du bizutage »",
+    subtitle: "Le consentement sous pression n'est pas un vrai consentement. Ce n'est pas parce qu'on ne dit rien qu'on est d'accord."
   },
   {
     title: "« Tout le monde est passé par là »",
-    subtitle: "La répétition d’une pratique nocive ne la rend pas légitime. Une tradition peut être toxique, il faut alors la remettre en question"
+    subtitle: "La répétition d'une pratique nocive ne la rend pas légitime. Une tradition peut être toxique, il faut alors la remettre en question"
   },
   {
-    title: "« Ce n’est pas grave, c’est juste une blague entre potes »",
-    subtitle: "Les conséquences psychologiques peuvent être graves et durables, même si l’intention n’était pas méchante."
+    title: "« Ce n'est pas grave, c'est juste une blague entre potes »",
+    subtitle: "Les conséquences psychologiques peuvent être graves et durables, même si l'intention n'était pas méchante."
   }
 ];
 
 const conseilsAction = [
   {
-    title: "N’aie pas honte de parler",
-    subtitle: "Tu n’as rien fait de mal. Ce sont les auteurs du bizutage qui sont en tort, pas toi."
+    title: "N'aie pas honte de parler",
+    subtitle: "Tu n'as rien fait de mal. Ce sont les auteurs du bizutage qui sont en tort, pas toi."
   },
   {
     title: "Garde des preuves",
@@ -85,7 +85,7 @@ const conseilsAction = [
   },
   {
     title: "Signale les faits à ton établissement ou au rectorat",
-    subtitle: "Ils ont l’obligation de te protéger et d’agir."
+    subtitle: "Ils ont l'obligation de te protéger et d'agir."
   },
   {
     title: "Tu peux porter plainte",
@@ -127,7 +127,7 @@ const effet_groupe = [
 const Bizutage = () => {
   return (
     <div className="page">
-      <h1 className="titre-page">Pratiques d’intégration</h1>
+      <h1 className="titre-page">Pratiques d'intégration</h1>
       <Navbar links={navLinks} />
 
       <div id="definition">
@@ -143,11 +143,11 @@ const Bizutage = () => {
       />
 
         <p className="texte">
-          L’<strong>intégration</strong> désigne l’ensemble des actions organisées pour accueillir les nouveaux arrivants dans un groupe (étudiants, élèves, collègues…). Elle vise à créer du lien social, à transmettre les codes de l’établissement ou de la promo, et à favoriser une bonne ambiance. Elle peut prendre la forme de jeux, de soirées, de parrainages, de repas partagés ou d’activités collectives (exemple : la QI). <strong>L’objectif est l’inclusion, le respect et le volontariat.</strong>
+          L'<strong>intégration</strong> désigne l'ensemble des actions organisées pour accueillir les nouveaux arrivants dans un groupe (étudiants, élèves, collègues…). Elle vise à créer du lien social, à transmettre les codes de l'établissement ou de la promo, et à favoriser une bonne ambiance. Elle peut prendre la forme de jeux, de soirées, de parrainages, de repas partagés ou d'activités collectives (exemple : la QI). <strong>L'objectif est l'inclusion, le respect et le volontariat.</strong>
         </p>
 
         <p className="texte">
-          Le <strong>bizutage</strong>, lui, correspond à des <strong>pratiques imposées</strong> à une personne nouvellement arrivée dans un groupe, dans le but de « tester », « marquer » ou « soumettre » cette personne. Il peut s’agir de défis humiliants, de pressions pour boire, de mises à l’écart, de violences physiques ou psychologiques, de tenues dégradantes, etc. Même si cela est présenté comme une tradition ou un rite d’entrée, <strong>le bizutage est interdit par la loi française</strong>.
+          Le <strong>bizutage</strong>, lui, correspond à des <strong>pratiques imposées</strong> à une personne nouvellement arrivée dans un groupe, dans le but de « tester », « marquer » ou « soumettre » cette personne. Il peut s'agir de défis humiliants, de pressions pour boire, de mises à l'écart, de violences physiques ou psychologiques, de tenues dégradantes, etc. Même si cela est présenté comme une tradition ou un rite d'entrée, <strong>le bizutage est interdit par la loi française</strong>.
         </p>
 
         <h3 className="sous-titre-2">Les différences clé</h3>
@@ -174,7 +174,7 @@ const Bizutage = () => {
               </tr>
               <tr>
                 <td>Climat bienveillant et festif</td>
-                <td>Risque de violence, d’humiliation ou de mise en danger</td>
+                <td>Risque de violence, d'humiliation ou de mise en danger</td>
               </tr>
               <tr>
                 <td>Légal</td>
@@ -186,9 +186,9 @@ const Bizutage = () => {
 
         <p className="mise-avant">
           <strong>À retenir :</strong><br />
-          Ce n’est pas parce que “tout le monde l’a fait” que c’est acceptable. <br />
-          Une activité ne devient pas moins grave parce qu’on “rit après”. <br />
-          Une bonne intégration n’a jamais besoin d’humilier.
+          Ce n'est pas parce que “tout le monde l'a fait” que c'est acceptable. <br />
+          Une activité ne devient pas moins grave parce qu'on “rit après”. <br />
+          Une bonne intégration n'a jamais besoin d'humilier.
         </p>
       </div>
 
@@ -207,7 +207,7 @@ const Bizutage = () => {
         <h2 className="sous-titre-2">Sanctions légales</h2>
 
         <p className="texte">
-          Le bizutage est strictement interdit par la loi française. Peu importe que l’acte soit présenté comme « symbolique », « traditionnel » ou « sans gravité » : dès lors qu’il porte atteinte à la dignité, à l’intégrité physique ou psychologique d’une personne, il peut être sanctionné.
+          Le bizutage est strictement interdit par la loi française. Peu importe que l'acte soit présenté comme « symbolique », « traditionnel » ou « sans gravité » : dès lors qu'il porte atteinte à la dignité, à l'intégrité physique ou psychologique d'une personne, il peut être sanctionné.
         </p>
 
         <BulletList items={sanctionsLegales} />
@@ -236,16 +236,16 @@ const Bizutage = () => {
       <Separateur />
 
       <div id="risques">
-        <h2 className="titre">Pourquoi c’est grave ?</h2>
+        <h2 className="titre">Pourquoi c'est grave ?</h2>
 
         <p className="texte">
-          Le bizutage, même déguisé en « tradition » ou en « rite d’intégration », peut avoir de lourdes conséquences. 
+          Le bizutage, même déguisé en « tradition » ou en « rite d'intégration », peut avoir de lourdes conséquences. 
           Humiliation, pression psychologique, atteinte à la dignité… Ces actes laissent des marques, parfois durables.
         </p>
 
         <p className="texte">
-          Derrière l’argument du « fun » ou de « l’ambiance », on retrouve souvent des situations où des personnes sont forcées, 
-          mises mal à l’aise, ou contraintes à des comportements qu’elles n’auraient jamais acceptés autrement. 
+          Derrière l'argument du « fun » ou de « l'ambiance », on retrouve souvent des situations où des personnes sont forcées, 
+          mises mal à l'aise, ou contraintes à des comportements qu'elles n'auraient jamais acceptés autrement. 
           Ces pratiques ne sont ni anodines, ni sans impact :
         </p>
 
@@ -262,7 +262,7 @@ const Bizutage = () => {
         <h2 className="titre">Comment réagir ?</h2>
 
         <p className="texte">
-          Que tu sois témoin ou victime, il existe des moyens concrets d’agir contre le bizutage. Il ne s’agit pas de « casser l’ambiance » ou « d’exagérer », mais de refuser que des pratiques humiliantes soient banalisées. Tu n’es pas seul·e, des structures existent pour t’écouter et t’accompagner.
+          Que tu sois témoin ou victime, il existe des moyens concrets d'agir contre le bizutage. Il ne s'agit pas de « casser l'ambiance » ou « d'exagérer », mais de refuser que des pratiques humiliantes soient banalisées. Tu n'es pas seul·e, des structures existent pour t'écouter et t'accompagner.
         </p>
 
         <ListeNumerotee
@@ -275,12 +275,12 @@ const Bizutage = () => {
 
 
           <p className="texte">
-            <strong>Il n’y a aucune honte à avoir si tu en as été victime.</strong> Ce n’est pas toi le problème, 
-            c’est la pratique qui est illégale et violente. Tu as le droit de te sentir en colère, blessé·e ou trahi·e, et c'est en en parlant et en mettant des mots dessus que tu pourras parvenir à vivre avec.
+            <strong>Il n'y a aucune honte à avoir si tu en as été victime.</strong> Ce n'est pas toi le problème, 
+            c'est la pratique qui est illégale et violente. Tu as le droit de te sentir en colère, blessé·e ou trahi·e, et c'est en en parlant et en mettant des mots dessus que tu pourras parvenir à vivre avec.
           </p>
 
           <p className="texte">
-            <strong>Tu peux en parler à quelqu’un de confiance</strong> : un·e ami·e, un·e membre de ta famille, un·e enseignant·e, un·e référent·e au sein de ton établissement (CPE, infirmier·ère, assistant·e social·e, etc.). Tu peux par exemple contacter le service vie étudiante de Centrale Lyon.</p>
+            <strong>Tu peux en parler à quelqu'un de confiance</strong> : un·e ami·e, un·e membre de ta famille, un·e enseignant·e, un·e référent·e au sein de ton établissement (CPE, infirmier·ère, assistant·e social·e, etc.). Tu peux par exemple contacter le service vie étudiante de Centrale Lyon.</p>
 
         <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
@@ -298,7 +298,7 @@ const Bizutage = () => {
       
 
           <p className="texte">
-                  Si tu ne te sens pas à l’aise d’en parler autour de toi, <strong>des structures d’écoute existent</strong>, comme Comment on s'aime ? ou Nightline, qui proposent une écoute anonyme et bienveillante.
+                  Si tu ne te sens pas à l'aise d'en parler autour de toi, <strong>des structures d'écoute existent</strong>, comme Comment on s'aime ? ou Nightline, qui proposent une écoute anonyme et bienveillante.
           </p>
 
 
@@ -332,7 +332,7 @@ const Bizutage = () => {
         <h2 className="sous-titre-2">Je suis témoin de bizutage</h2>
 
         <p className="texte">
-          Si tu es témoin d’un bizutage, <strong>ne reste pas passif·ve</strong>. Ton silence peut être perçu comme une approbation tacite. Même si tu n’es pas directement concerné·e, tu peux faire une différence en agissant. Applique les conseils donnés dans l'encart précédent.
+          Si tu es témoin d'un bizutage, <strong>ne reste pas passif·ve</strong>. Ton silence peut être perçu comme une approbation tacite. Même si tu n'es pas directement concerné·e, tu peux faire une différence en agissant. Applique les conseils donnés dans l'encart précédent.
         </p>
 
         <ExternalLinkBlock
@@ -358,14 +358,14 @@ const Bizutage = () => {
       />
 
         <p className="texte">
-        Nous sommes tous vulnérables à la manipulation. Il est très facile de se faire embarquer là où l’on n’aurait pas voulu aller.
+        Nous sommes tous vulnérables à la manipulation. Il est très facile de se faire embarquer là où l'on n'aurait pas voulu aller.
         Lors de l'accueil des 0As, fais preuve d'empathie et de respect envers les nouveaux arrivants. Si tu sens que la situation dérape, n'hésite pas à le signaler au groupe : ta parole peut-être décisive.
         </p>
 
         <ExternalLinkBlock resources={effet_groupe} />
 
         <ListeNumerotee
-          title="Le bizutage reste un bizutage, même s’il est accepté"
+          title="Le bizutage reste un bizutage, même s'il est accepté"
           subtitle="Déconstruire les fausses excuses"
           items={temoignagesMythes}
         />
@@ -378,8 +378,8 @@ const Bizutage = () => {
         <TextImageRight  
                 text={
         <>
-        <b> L’effet de groupe peut amplifier la pression à consommer ou réaliser des actes dégradants</b>, même inconsciemment.
-        Pour que chacun se sente à l’aise, il est important de <b>favoriser un climat de respect et d’écoute</b>, où les choix de chacun sont acceptés sans jugement.
+        <b> L'effet de groupe peut amplifier la pression à consommer ou réaliser des actes dégradants</b>, même inconsciemment.
+        Pour que chacun se sente à l'aise, il est important de <b>favoriser un climat de respect et d'écoute</b>, où les choix de chacun sont acceptés sans jugement.
         Tu peux trouver des outils pour organiser des <b>soirées plus responsables et sécurisées</b> sur les sites suivants :
         </>
                 }
@@ -397,7 +397,7 @@ const Bizutage = () => {
       <Separateur />
 
       <p className="texte">
-        <em><b>Sources :</b> Service Public, Code pénal, Nightline, Comment on s'aime ?, Comité National Contre le Bizutage, Ministère de l’Enseignement Supérieur, PAI 22 : Qualité de vie en études à l'ECL</em>
+        <em><b>Sources :</b> Service Public, Code pénal, Nightline, Comment on s'aime ?, Comité National Contre le Bizutage, Ministère de l'Enseignement Supérieur, PAI 22 : Qualité de vie en études à l'ECL</em>
       </p>
     </div>
   );

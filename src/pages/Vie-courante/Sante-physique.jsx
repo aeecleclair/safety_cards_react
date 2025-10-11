@@ -27,11 +27,11 @@ const sport_lyon = [
 const items_calories = [
   { 
     title: "Marche", 
-    subtitle: "Parcourir 5 km en 1h ou 2h brûle environ la même quantité de calories. La marche rapide augmente l’effort : des marcheurs expérimentés ou entraînés dépensent plus d’énergie que lors d’une marche tranquille." 
+    subtitle: "Parcourir 5 km en 1h ou 2h brûle environ la même quantité de calories. La marche rapide augmente l'effort : des marcheurs expérimentés ou entraînés dépensent plus d'énergie que lors d'une marche tranquille." 
   },
   { 
     title: "Jogging et course", 
-    subtitle: "Pour un adulte, courir 10 km peut brûler environ 600 à 800 calories selon le poids, le sexe et l’intensité. Allonger la foulée permet de dépenser jusqu’à 15 % d’énergie supplémentaire." 
+    subtitle: "Pour un adulte, courir 10 km peut brûler environ 600 à 800 calories selon le poids, le sexe et l'intensité. Allonger la foulée permet de dépenser jusqu'à 15 % d'énergie supplémentaire." 
   },
   { 
     title: "Natation", 
@@ -50,7 +50,7 @@ const itemsFreins = [
   },
   {
     title: "Coût",
-    subtitle: "Les frais d’adhésion, le matériel et le transport peuvent être un frein pour certain·e·s étudiant·e·s."
+    subtitle: "Les frais d'adhésion, le matériel et le transport peuvent être un frein pour certain·e·s étudiant·e·s."
   },
   {
     title: "Manque de repères",
@@ -86,19 +86,19 @@ const itemsSolutions = [
   },
   {
     title: "Cours pour débutant·e·s",
-    subtitle: "S’orienter vers des cours en petits groupes ou sessions ‘découverte’ pour gagner en confiance."
+    subtitle: "S'orienter vers des cours en petits groupes ou sessions ‘découverte' pour gagner en confiance."
   },
   {
     title: "Reprise progressive et prévention",
-    subtitle: "Ateliers de renforcement doux, stretching, évaluation santé par l’infirmière avant reprise intense."
+    subtitle: "Ateliers de renforcement doux, stretching, évaluation santé par l'infirmière avant reprise intense."
   },
   {
     title: "Accessibilité et sport adapté",
-    subtitle: "Proposer des activités spécifiques (yoga assis, sport adapté) et contacter l’infirmerie pour un accompagnement personnalisé."
+    subtitle: "Proposer des activités spécifiques (yoga assis, sport adapté) et contacter l'infirmerie pour un accompagnement personnalisé."
   },
     {
     title: "Faire face aux violences dans le sport",
-    subtitle: "Si tu es victime ou témoin de violences (sexuelles, harcèlement, discriminations), tu peux en parler à l’infirmerie, au Bureau des Sports (BDS) ou directement via le service national de signalement « Signal-Sports » (Ministère des Sports). Des associations comme Colosse aux pieds d’argile accompagnent également les étudiant·e·s concerné·e·s."
+    subtitle: "Si tu es victime ou témoin de violences (sexuelles, harcèlement, discriminations), tu peux en parler à l'infirmerie, au Bureau des Sports (BDS) ou directement via le service national de signalement « Signal-Sports » (Ministère des Sports). Des associations comme Colosse aux pieds d'argile accompagnent également les étudiant·e·s concerné·e·s."
   }
 ];
 
@@ -144,18 +144,84 @@ const barometres = [
 
 const data = [
   { number: "79%", title: "Élèves de Centrale Lyon", description: "se disent satisfaits de la fréquence de leur pratique sportive" },
-  { number: "2h30–4h", title: "Recommandation OMS", description: "d’activité physique par semaine" },
+  { number: "2h30–4h", title: "Recommandation OMS", description: "d'activité physique par semaine" },
   { number: "16%", title: "Étudiants", description: "ne rentrent pas dans ce cadre minimum" },
 ];
+
+
+
+
+
+/* Provisoire : page non faite */
+import Workinprogress from "../../components/WorkInProgress";
+
+const resources_sites = [
+
+  {
+    link: "https://www.etudiant.gouv.fr/fr",
+    imageSrc: "/assets/etudiant_gouv.jpg",
+    label: "Etudiant.gouv.fr",
+    description: "Le site officiel du gouvernement pour les étudiants",
+  },
+  {
+    link: "https://www.lyoncampus.com/",
+    imageSrc: "/assets/logo_lyon_campus.png",
+    label: "Lyon Campus",
+    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
+    imageSrc: "/assets/logo_UDL.png",
+    label: "Portails Santé et Aides de l'UDL",
+    description : "Toutes les informations, dispositifs et procédures"
+
+  },
+  {
+    link: "https://commentonsaime.fr/",
+    imageSrc: "/assets/logo-cosa.svg",
+    label: "Comment on s'aime ?",
+    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
+  },
+
+  {
+    link: "https://www.crous-lyon.fr ",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous de Lyon",
+    description: "Aides, accompagnement, logements, restauration, international...",
+  },
+  {
+    link: "https://www.filsantejeunes.com/",
+    imageSrc: "/assets/fsj.png",
+    label: "Fil Santé Jeunes",
+    description: "Pour parler santé, sexualité, amour, mal être...",
+  },
+];
+
+
+
 
 const SportSante = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Santé physique & pratique du sport</h1>
 
+
+
+        <Workinprogress/>
+
+        <h1 className = "titre">Les ressources globales</h1>
+      <ExternalLinkBlock
+        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        resources={resources_sites}
+      />
+
+
+
+
+      {/* Provisooire : page non faite
+
       <Navbar links={navLinks} />
 
-      {/* Partie 1 : Importance */}
       <div id="importance">
         <h1 className="titre">Pourquoi et où faire du sport ?</h1>
       </div>
@@ -177,13 +243,13 @@ const SportSante = () => {
         Ses bénéfices sont multiples :
       </p>
       <BulletList items={[
-        "Physiques : amélioration cardiovasculaire, renforcement musculaire et osseux, maintien d’un poids équilibré",
-        "Mentaux : réduction du stress et de l’anxiété, meilleure concentration, qualité de sommeil améliorée",
-        "Sociaux : intégration à la vie de campus, développement de l’esprit d’équipe, moments conviviaux via les associations étudiantes"
+        "Physiques : amélioration cardiovasculaire, renforcement musculaire et osseux, maintien d'un poids équilibré",
+        "Mentaux : réduction du stress et de l'anxiété, meilleure concentration, qualité de sommeil améliorée",
+        "Sociaux : intégration à la vie de campus, développement de l'esprit d'équipe, moments conviviaux via les associations étudiantes"
       ]} />
 
       <p className="texte">
-        À Centrale Lyon, les infrastructures permettent de pratiquer facilement : gymnase, terrains extérieurs, nouveaux terrains de padel, associations étudiantes comme le <b>Bureau des Sports (BDS)</b>, mais aussi piscines, pistes d’athlétisme et salles municipales de la ville de Lyon.
+        À Centrale Lyon, les infrastructures permettent de pratiquer facilement : gymnase, terrains extérieurs, nouveaux terrains de padel, associations étudiantes comme le <b>Bureau des Sports (BDS)</b>, mais aussi piscines, pistes d'athlétisme et salles municipales de la ville de Lyon.
       </p>
 
       <ChiffresGroup chiffres={data} />
@@ -200,19 +266,18 @@ const SportSante = () => {
 
       <ListeNumerotee 
         title="Comparatif des activités physiques" 
-        subtitle="Quelques exemples concrets de dépenses énergétiques selon l’activité choisie" 
+        subtitle="Quelques exemples concrets de dépenses énergétiques selon l'activité choisie" 
         items={items_calories}
       />
 
       <Separateur />
 
-      {/* Partie 2 : Obstacles */}
       <div id="obstacles">
         <h1 className="titre">Facteurs & obstacles</h1>
       </div>
 
       <p className="texte">
-        Malgré une réelle motivation, plusieurs obstacles peuvent limiter une pratique régulière : emploi du temps, coût, manque d’information, timidité ou contraintes de santé. 
+        Malgré une réelle motivation, plusieurs obstacles peuvent limiter une pratique régulière : emploi du temps, coût, manque d'information, timidité ou contraintes de santé. 
         Voici les freins les plus fréquents rencontrés par les étudiant·es :
       </p>
 
@@ -250,14 +315,13 @@ const SportSante = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00"
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
         bgColor="#ffffff"
         textColor="#b22133"
       />
 
       <Separateur />
 
-      {/* Partie 3 : Bien-être & prévention */}
       <div id="prevention">
         <h1 className="titre">Bien-être & prévention au quotidien</h1>
       </div>
@@ -271,23 +335,23 @@ const SportSante = () => {
       </p>
 
       <p className="texte">
-        <b>Nutrition et activité physique :</b> combiner une alimentation équilibrée avec des activités comme la marche rapide, le vélo, le jogging ou la natation permet de brûler des calories et d’entretenir la forme.
+        <b>Nutrition et activité physique :</b> combiner une alimentation équilibrée avec des activités comme la marche rapide, le vélo, le jogging ou la natation permet de brûler des calories et d'entretenir la forme.
       </p>
 
       <p className="texte">
-        <b>Soins dentaires :</b> le dispositif <b>M’T Dents</b> permet aux jeunes adultes de bénéficier d’un rendez-vous bucco-dentaire gratuit à 18, 21 et 24 ans. Les notifications sont envoyées par courrier ou via le compte Ameli environ un mois avant votre anniversaire.
+        <b>Soins dentaires :</b> le dispositif <b>M'T Dents</b> permet aux jeunes adultes de bénéficier d'un rendez-vous bucco-dentaire gratuit à 18, 21 et 24 ans. Les notifications sont envoyées par courrier ou via le compte Ameli environ un mois avant votre anniversaire.
       </p>
 
       <p className="texte">
-        <b>Prévention des blessures :</b> grâce au partenariat avec la clinique <b>Isosteo</b>, les étudiant·e·s de Centrale Lyon peuvent accéder à des consultations ostéopathiques à conditions préférentielles pour prévenir ou soulager les tensions et blessures liées à l’activité physique.
+        <b>Prévention des blessures :</b> grâce au partenariat avec la clinique <b>Isosteo</b>, les étudiant·e·s de Centrale Lyon peuvent accéder à des consultations ostéopathiques à conditions préférentielles pour prévenir ou soulager les tensions et blessures liées à l'activité physique.
       </p>
 
       <p className="texte">
-        <b>Mobilité douce :</b> privilégier des modes de déplacement actifs comme la marche, le vélo ou la course permet d’allier santé, respect de l’environnement et économie de temps. Ces gestes simples, intégrés à votre routine quotidienne, ont un impact significatif sur la forme physique globale.
+        <b>Mobilité douce :</b> privilégier des modes de déplacement actifs comme la marche, le vélo ou la course permet d'allier santé, respect de l'environnement et économie de temps. Ces gestes simples, intégrés à votre routine quotidienne, ont un impact significatif sur la forme physique globale.
       </p>
 
       <p className="texte">
-        <b>Relaxation et gestion du stress :</b> les ateliers de détente proposés par l’infirmière du campus aident à gérer le stress et la fatigue, et complètent efficacement votre pratique sportive pour un équilibre mental et physique optimal.
+        <b>Relaxation et gestion du stress :</b> les ateliers de détente proposés par l'infirmière du campus aident à gérer le stress et la fatigue, et complètent efficacement votre pratique sportive pour un équilibre mental et physique optimal.
       </p>
             
       <ExternalLinkBlock
@@ -317,7 +381,12 @@ const SportSante = () => {
       <Separateur />
 
       <p className="texte"><em><b>Sources :</b> OMS, PAI Centrale Lyon 2024, Université de Lyon, Ville de Lyon, ISOSTEO, Assurance Maladie</em></p>
-    </div>
+    
+
+      */}
+    
+    
+      </div>
   );
 };
 

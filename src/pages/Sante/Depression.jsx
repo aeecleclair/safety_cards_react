@@ -117,7 +117,7 @@ const Depression = () => {
         image="./assets/cartes/4_pique.png"
         title="La carte 4♠"
         shortText="Dépression : réagir en tant que victime"
-        longText="Quand on souffre de dépression, on devient comme prisonnier de lunettes invisibles. Le monde peut continuer à être joyeux, lumineux et rempli de belles choses, mais tout semble fade, lointain, inaccessible. A travers cette image, on comprend la déconnexion douloureuse entre la réalité extérieure et l’expérience intérieure d'une personne dépressive. Même entourée d’amour, de nature ou de moments agréables, une victime peut ne ressentir qu’un vide profond, une absence d’émotion, une sensation d’isolement. La dépression n’efface pas la beauté du monde, mais elle l’empêche d’atteindre la personne. Elle modifie la perception de la personne qui en est atteinte, c’est un trouble réel. "
+        longText="Quand on souffre de dépression, on devient comme prisonnier de lunettes invisibles. Le monde peut continuer à être joyeux, lumineux et rempli de belles choses, mais tout semble fade, lointain, inaccessible. A travers cette image, on comprend la déconnexion douloureuse entre la réalité extérieure et l'expérience intérieure d'une personne dépressive. Même entourée d'amour, de nature ou de moments agréables, une victime peut ne ressentir qu'un vide profond, une absence d'émotion, une sensation d'isolement. La dépression n'efface pas la beauté du monde, mais elle l'empêche d'atteindre la personne. Elle modifie la perception de la personne qui en est atteinte, c'est un trouble réel. "
         textButton="⤢ Agrandir la carte"
         suit="pique"
       />
@@ -166,7 +166,7 @@ const Depression = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -230,9 +230,9 @@ const Depression = () => {
         <h1 className="titre">Je m'inquiète pour quelqu'un</h1>
       </div>
 
-      <p className="texte">Si vous êtes en présence d’une personne en dépression, votre <b>soutien</b> peut faire toute la différence.  
-      En tant que secouriste, <b>il est normal que certaines journées soient plus éprouvantes que d’autres. </b> 
-      Avant d’intervenir pour aider les autres, prenez donc un moment pour vous assurer que vous êtes en mesure d’écouter avec <b>bienveillance</b> et <b>sans jugement</b>.
+      <p className="texte">Si vous êtes en présence d'une personne en dépression, votre <b>soutien</b> peut faire toute la différence.  
+      En tant que secouriste, <b>il est normal que certaines journées soient plus éprouvantes que d'autres. </b> 
+      Avant d'intervenir pour aider les autres, prenez donc un moment pour vous assurer que vous êtes en mesure d'écouter avec <b>bienveillance</b> et <b>sans jugement</b>.
          
       </p>
 
@@ -253,14 +253,14 @@ const Depression = () => {
         image="./assets/cartes/6_carreau.png"
         title="La carte 6&diams;"
         shortText="Dépression : aider en tant que témoin"
-        longText="Cette image nous confronte à une vérité essentielle : la dépression ne se voit pas toujours. On peut rire, parler, jouer… tout en étant profondément mal à l’intérieur. En tant qu’aidant ou simple témoin, il est important de changer son regard. Les apparences sont trompeuses et certains sourires peuvent être des masques. Si vous êtes un parent, un ami, un collègue, un professeur, il est vital de ne pas attendre des signaux évidents pour s’inquiéter et de toujours être présent pour son entourage."
+        longText="Cette image nous confronte à une vérité essentielle : la dépression ne se voit pas toujours. On peut rire, parler, jouer… tout en étant profondément mal à l'intérieur. En tant qu'aidant ou simple témoin, il est important de changer son regard. Les apparences sont trompeuses et certains sourires peuvent être des masques. Si vous êtes un parent, un ami, un collègue, un professeur, il est vital de ne pas attendre des signaux évidents pour s'inquiéter et de toujours être présent pour son entourage."
         textButton="⤢ Agrandir la carte"
         suit="carreau"
       />
 
       <h2 className="sous-titre-2">Pour aller + loin : la formation PSSM</h2>
 
-      <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l’aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu’à ce qu’une aide professionnelle puisse être apportée ou jusqu’à ce que la crise soit résolue. Ils sont l’équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
+      <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l'aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu'à ce qu'une aide professionnelle puisse être apportée ou jusqu'à ce que la crise soit résolue. Ils sont l'équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
       Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.
       La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
       imageSrc="/assets/logo-pssm.svg" />

@@ -35,7 +35,7 @@ const causesAccidents = [
   "Refus de priorité, non-respect du Code de la route",
   "Conditions météorologiques (pluie, verglas)",
   "Mauvais état des routes secondaires",
-  "Défaut d’équipement ou absence de ceinture de sécurité",
+  "Défaut d'équipement ou absence de ceinture de sécurité",
   "Conduite de deux-roues sans protection adaptée"
 ];
 
@@ -50,7 +50,7 @@ const conseilsPrevention = [
   },
   {
     title: "Ne touchez jamais votre téléphone",
-    subtitle: "Utiliser son téléphone en conduisant multiplie par 3 le risque d’accident. SMS = risque x 23."
+    subtitle: "Utiliser son téléphone en conduisant multiplie par 3 le risque d'accident. SMS = risque x 23."
   },
   {
     title: "Respecter toutes les limitations de vitesse",
@@ -62,7 +62,7 @@ const conseilsPrevention = [
   },
   {
     title: "Éviter les effets de groupe",
-    subtitle: "Dans une voiture pleine, avec des amis, on prend plus de risques sans s’en rendre compte. Soyez celui/celle qui dit stop."
+    subtitle: "Dans une voiture pleine, avec des amis, on prend plus de risques sans s'en rendre compte. Soyez celui/celle qui dit stop."
   },
   {
     title: "Portez toujours la ceinture",
@@ -124,10 +124,82 @@ const stagesUtiles = [
   }
 ];
 
+
+
+
+/* Provisoire : page non faite */
+
+import Workinprogress from "../../components/WorkInProgress";
+
+const resources_sites = [
+
+  {
+    link: "https://www.etudiant.gouv.fr/fr",
+    imageSrc: "/assets/etudiant_gouv.jpg",
+    label: "Etudiant.gouv.fr",
+    description: "Le site officiel du gouvernement pour les étudiants",
+  },
+  {
+    link: "https://www.lyoncampus.com/",
+    imageSrc: "/assets/logo_lyon_campus.png",
+    label: "Lyon Campus",
+    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
+  },
+  {
+    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
+    imageSrc: "/assets/logo_UDL.png",
+    label: "Portails Santé et Aides de l'UDL",
+    description : "Toutes les informations, dispositifs et procédures"
+
+  },
+  {
+    link: "https://commentonsaime.fr/",
+    imageSrc: "/assets/logo-cosa.svg",
+    label: "Comment on s'aime ?",
+    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
+  },
+
+  {
+    link: "https://www.crous-lyon.fr ",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous de Lyon",
+    description: "Aides, accompagnement, logements, restauration, international...",
+  },
+  {
+    link: "https://www.filsantejeunes.com/",
+    imageSrc: "/assets/fsj.png",
+    label: "Fil Santé Jeunes",
+    description: "Pour parler santé, sexualité, amour, mal être...",
+  },
+];
+
+
+
+
+
+
 const RisquesCirculation = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Accidents de la route</h1>
+
+
+
+
+        <Workinprogress/>
+
+        <h1 className = "titre">Les ressources globales</h1>
+      <ExternalLinkBlock
+        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        resources={resources_sites}
+      />
+
+
+
+
+      {/* Provisioire : page non faite
+
+
 
       <Navbar links={navLinks} />
 
@@ -141,7 +213,7 @@ const RisquesCirculation = () => {
           textButton="⤢ Voir la carte"
         />
         <p className="texte">
-          Les jeunes de 18 à 24 ans ne représentent que 8 % de la population française, mais comptent pour 17 % des tués sur la route. Le pic d’accidents mortels intervient entre 6 et 18 mois après l’obtention du permis, avec un pic critique au 3e trimestre. La combinaison vitesse, alcool, drogue et fatigue multiplie les risques.
+          Les jeunes de 18 à 24 ans ne représentent que 8 % de la population française, mais comptent pour 17 % des tués sur la route. Le pic d'accidents mortels intervient entre 6 et 18 mois après l'obtention du permis, avec un pic critique au 3e trimestre. La combinaison vitesse, alcool, drogue et fatigue multiplie les risques.
         </p>
         <p className="texte">
           D'autres facteurs aggravants entrent en jeu : pression sociale entre amis, inexpérience, téléphone au volant ou conduite de nuit. À noter : les deux-roues représentent aussi une part importante des victimes chez les jeunes.
@@ -163,25 +235,22 @@ const RisquesCirculation = () => {
         <h2 className="titre">Prévention</h2>
 
         <p className="texte">
-          Adopter les bons réflexes peut sauver des vies. Conduire, c'est anticiper, s'adapter et renoncer au moindre doute. Être raisonnable, c’est être responsable pour soi et pour les autres.
+          Adopter les bons réflexes peut sauver des vies. Conduire, c'est anticiper, s'adapter et renoncer au moindre doute. Être raisonnable, c'est être responsable pour soi et pour les autres.
         </p>
 
-        {/* Encadré avec uniquement les titres des conseils */}
         <ListeNumerotee
           title="Conseils de sécurité routière"
           subtitle="À appliquer à chaque trajet"
           items={conseilsPrevention.map(({ title }) => ({ title }))}
         />
 
-        {/* Développement détaillé de chaque conseil */}
         <div className="developpement-conseils">
-          {/* 1 */}
           <h3>{conseilsPrevention[0].title}</h3>
           <p>
-            Conduire sous l’emprise de l’alcool ou de drogues est extrêmement dangereux : cela altère les réflexes, la perception du danger et ralentit le temps de réaction.
+            Conduire sous l'emprise de l'alcool ou de drogues est extrêmement dangereux : cela altère les réflexes, la perception du danger et ralentit le temps de réaction.
           </p>
           <div className="legal-link-box">
-            Risques légaux : Le seuil légal pour les jeunes conducteurs (permis probatoire) est de 0,2 g/L d’alcool dans le sang. En cas de dépassement, sanctions sévères : retrait de 6 points minimum, amende pouvant aller jusqu’à 4 500 €, suspension voire annulation du permis. 
+            Risques légaux : Le seuil légal pour les jeunes conducteurs (permis probatoire) est de 0,2 g/L d'alcool dans le sang. En cas de dépassement, sanctions sévères : retrait de 6 points minimum, amende pouvant aller jusqu'à 4 500 €, suspension voire annulation du permis. 
             <br />
             <ExternalLinkBlock
               resources={[
@@ -194,24 +263,22 @@ const RisquesCirculation = () => {
             />
           </div>
 
-          {/* 2 */}
           <h3>{conseilsPrevention[1].title}</h3>
           <p>
-            La fatigue est une cause majeure d’accidents, en particulier lors des trajets de nuit ou prolongés sans pause. La vigilance diminue fortement, augmentant le risque d’endormissement au volant.
+            La fatigue est une cause majeure d'accidents, en particulier lors des trajets de nuit ou prolongés sans pause. La vigilance diminue fortement, augmentant le risque d'endormissement au volant.
           </p>
           <div className="legal-link-box">
-            Risques légaux : En cas d’accident dû à une somnolence avérée, la responsabilité du conducteur peut être engagée, pouvant entraîner sanctions pénales et civile.
+            Risques légaux : En cas d'accident dû à une somnolence avérée, la responsabilité du conducteur peut être engagée, pouvant entraîner sanctions pénales et civile.
             <br />
             Conseil pratique : faites une pause toutes les 2 heures au minimum.
           </div>
 
-          {/* 3 */}
           <h3>{conseilsPrevention[2].title}</h3>
           <p>
-            Utiliser un téléphone en conduisant multiplie par 3 le risque d’accident, car cela détourne l’attention et réduit la capacité de réaction.
+            Utiliser un téléphone en conduisant multiplie par 3 le risque d'accident, car cela détourne l'attention et réduit la capacité de réaction.
           </p>
           <div className="legal-link-box">
-            Risques légaux : L’utilisation du téléphone au volant est interdite et sanctionnée par une amende de 135 € et un retrait de 3 points.
+            Risques légaux : L'utilisation du téléphone au volant est interdite et sanctionnée par une amende de 135 € et un retrait de 3 points.
             <br />
             <ExternalLinkBlock
               resources={[
@@ -224,7 +291,6 @@ const RisquesCirculation = () => {
             />
           </div>
 
-          {/* 4 */}
           <h3>{conseilsPrevention[3].title}</h3>
           <p>
             Le respect des limitations de vitesse est crucial car la vitesse excessive est la première cause de mortalité routière, notamment chez les jeunes conducteurs.
@@ -243,16 +309,14 @@ const RisquesCirculation = () => {
             />
           </div>
 
-          {/* 5 */}
           <h3>{conseilsPrevention[4].title}</h3>
           <p>
-            La fatigue réduit la vigilance, augmente le temps de réaction et le risque d’endormissement au volant. 29 % des jeunes conducteurs ont déjà failli s’endormir.
+            La fatigue réduit la vigilance, augmente le temps de réaction et le risque d'endormissement au volant. 29 % des jeunes conducteurs ont déjà failli s'endormir.
           </p>
           <div className="legal-link-box">
-            Risques légaux : En cas d’accident grave dû à la fatigue, la responsabilité peut être engagée. Il est important d’écouter son corps et de s’arrêter au besoin.
+            Risques légaux : En cas d'accident grave dû à la fatigue, la responsabilité peut être engagée. Il est important d'écouter son corps et de s'arrêter au besoin.
           </div>
 
-          {/* 6 */}
           <h3>{conseilsPrevention[5].title}</h3>
           <p>
             En situation de groupe, les comportements à risque se multiplient souvent par mimétisme. Il est important de garder son jugement et savoir dire non aux excès.
@@ -261,10 +325,9 @@ const RisquesCirculation = () => {
             Risques légaux : Les infractions commises sous pression peuvent toujours entraîner des sanctions pénales et civiles.
           </div>
 
-          {/* 7 */}
           <h3>{conseilsPrevention[6].title}</h3>
           <p>
-            Le port de la ceinture de sécurité réduit fortement le risque de blessures graves en cas d’accident.
+            Le port de la ceinture de sécurité réduit fortement le risque de blessures graves en cas d'accident.
           </p>
           <div className="legal-link-box">
             Risques légaux : Ne pas porter sa ceinture est sanctionné par une amende de 135 € et un retrait de 3 points.
@@ -288,11 +351,11 @@ const RisquesCirculation = () => {
         <h2 className="titre">Stages de sensibilisation et perfectionnement</h2>
 
         <p className="texte">
-          Participer à un stage peut sauver des points, améliorer ses réflexes et renforcer sa conscience des risques. Il existe plusieurs types de stages, adaptés à chaque besoin, qu’on soit jeune conducteur, contrevenant ou simplement soucieux de mieux maîtriser sa conduite.
+          Participer à un stage peut sauver des points, améliorer ses réflexes et renforcer sa conscience des risques. Il existe plusieurs types de stages, adaptés à chaque besoin, qu'on soit jeune conducteur, contrevenant ou simplement soucieux de mieux maîtriser sa conduite.
         </p>
 
         <p className="texte">
-          Les <b>stages de récupération de points</b> permettent de regagner jusqu’à 4 points sur le permis, en deux jours, sous certaines conditions. Ils sont accessibles une fois par an. Ces stages abordent la perception des risques, la vitesse, l’alcool, les drogues et les limites physiques du conducteur.
+          Les <b>stages de récupération de points</b> permettent de regagner jusqu'à 4 points sur le permis, en deux jours, sous certaines conditions. Ils sont accessibles une fois par an. Ces stages abordent la perception des risques, la vitesse, l'alcool, les drogues et les limites physiques du conducteur.
         </p>
 
         <p className="texte">
@@ -300,11 +363,11 @@ const RisquesCirculation = () => {
         </p>
 
         <p className="texte">
-          Il existe aussi des <b>formations spécifiques</b> pour apprendre à conduire dans des conditions extrêmes (neige, verglas) ou pour simuler les effets de l’alcool sur la perception et les réflexes. Ces ateliers sont souvent proposés par des centres de formation ou des auto-écoles spécialisées.
+          Il existe aussi des <b>formations spécifiques</b> pour apprendre à conduire dans des conditions extrêmes (neige, verglas) ou pour simuler les effets de l'alcool sur la perception et les réflexes. Ces ateliers sont souvent proposés par des centres de formation ou des auto-écoles spécialisées.
         </p>
 
         <p className="texte">
-          ➜ Pour s’inscrire, il suffit de consulter un centre agréé ou de passer par des plateformes spécialisées. Certains stages sont pris en charge partiellement par les assurances ou la justice.
+          ➜ Pour s'inscrire, il suffit de consulter un centre agréé ou de passer par des plateformes spécialisées. Certains stages sont pris en charge partiellement par les assurances ou la justice.
         </p>
 
         <ExternalLinkBlock
@@ -319,6 +382,9 @@ const RisquesCirculation = () => {
       <p className="texte source">
         <em><b>Sources :</b> ONISR (Rapport 2024), sécurité-routière.gouv.fr, Légifrance, Matmut, Direct Assurance, TF1 Info, France Info, DSR.</em>
       </p>
+
+
+        */}
     </div>
   );
 };

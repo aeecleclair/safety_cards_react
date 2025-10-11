@@ -76,10 +76,10 @@ const Suicide = () => {
         image="./assets/cartes/7_pique.png"
         title="La carte 7♠"
         shortText="Tu n'es pas seul·e. Contacte le 3114 ou un·e psy."
-        longText=""
+        longText="Le suicide est généralement planifié par la personne, elle a souvent réfléchi à son acte, à sa manière de mourir, au moment et au lieu de son passage à l'acte... C'est rarement une décision impulsive. Si tu abordes le sujet avec elle, il est probable qu'elle te parle de ses pensées. Il ne faut jamais oublier qu'il existe des étapes avant de passer à l'acte : ton entourage, l'infirmière, ou des professionnel·le·s comme ceux du 3114 sont là pour toi et peuvent t'aider."
         textButton="⤢ Agrandir la carte"
-        suit = "pique"
-        
+        suit="pique"
+
       />
         
         
@@ -94,7 +94,7 @@ const Suicide = () => {
         ]} />
 
         <p className="texte">
-          Le suicide est souvent <b>précédé d'idées suicidaires</b>. C'est le résultat d’une <b>accumulation de souffrances et de facteurs personnels</b> et environnementaux (il n’y a pas une « cause » unique). Ce n’est pas un acte impulsif sans signe avant-coureur. Il se développe souvent progressivement sous l’effet de la souffrance mentale. Reconnaître les facteurs de risque et en parler avec un professionnel peut aider à prévenir le passage à l’acte.
+          Le suicide est souvent <b>précédé d'idées suicidaires</b>. C'est le résultat d'une <b>accumulation de souffrances et de facteurs personnels</b> et environnementaux (il n'y a pas une « cause » unique). Ce n'est pas un acte impulsif sans signe avant-coureur. Il se développe souvent progressivement sous l'effet de la souffrance mentale. Reconnaître les facteurs de risque et en parler avec un professionnel peut aider à prévenir le passage à l'acte.
         </p>
 
         <ExternalLinkBlock resources={depression} />
@@ -147,7 +147,7 @@ const Suicide = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -158,7 +158,7 @@ const Suicide = () => {
 
         <h2 className="sous-titre-2">J'ai des idées suicidaires</h2>
         <p className="texte">
-          Peu importe les raisons qui t'amènent à avoir de telles idées, ta douleur est légitime. Bien des choses peuvent t'inciter à mettre fin à ta vie, par exemple : les émotions se sont accumulées avec le temps, la douleur que tu ressens devient intolérable, un déclencheur ou événement subit… Si tu as de telles pensées, il est important que tu demandes de l’aide. Tu peux :
+          Peu importe les raisons qui t'amènent à avoir de telles idées, ta douleur est légitime. Bien des choses peuvent t'inciter à mettre fin à ta vie, par exemple : les émotions se sont accumulées avec le temps, la douleur que tu ressens devient intolérable, un déclencheur ou événement subit… Si tu as de telles pensées, il est important que tu demandes de l'aide. Tu peux :
         </p>
 
         <BulletList items={[
@@ -183,7 +183,7 @@ const Suicide = () => {
           <><b>Ton entourage</b> : tes ami·e·s, ta famille, tes professeur·e·s, ton tuteur ou ta tutrice PCP, etc.</>,
           <><b>Un·e élève formé·e aux premiers secours en santé mentale</b> ou en contactant l'association <b>Peer Care</b></>,
           <><b>Un·e professionnel·le de santé</b> : infirmière, médecin généraliste, psychologue, etc.</>,
-          <><b>Un·e professionnel·le de la prévention du suicide</b> via la ligne <b>3114</b>. Cela pourra t'aider à explorer des options et à trouver l’aide disponible qui correspond le mieux à ta situation et à tes besoins. Il peut s’agir, entre autres, d’une ligne d’écoute, d’un lieu de consultation près de chez toi ou encore d’un centre d’accueil et de crise.</>,
+          <><b>Un·e professionnel·le de la prévention du suicide</b> via la ligne <b>3114</b>. Cela pourra t'aider à explorer des options et à trouver l'aide disponible qui correspond le mieux à ta situation et à tes besoins. Il peut s'agir, entre autres, d'une ligne d'écoute, d'un lieu de consultation près de chez toi ou encore d'un centre d'accueil et de crise.</>,
         ]} />
 
         <ContactCard
@@ -210,7 +210,7 @@ const Suicide = () => {
         image="./assets/cartes/4_carreau.png"
         title="La carte 4♦"
         shortText="Si tu détectes que quelqu'un va mal, en parler peut tout changer."
-        longText=""
+        longText="Il ne faut pas hésiter à parler de tes inquiétudes avec la personne concernée. Parfois, le simple fait de poser la question du suicide ou de montrer son inquiétude à l'autre peut aider. Si tu sens que la situation est urgente, n'hésite pas à contacter un professionnel ou les urgences."
         textButton="⤢ Agrandir la carte"
         suit = "carreau"
 
@@ -231,6 +231,23 @@ const Suicide = () => {
           <>L'engagement dans des <b>activités risquées</b>, imprudentes et apparemment irréfléchies</>,
           <>La recherche de <b>moyens de mettre fin à ses jours</b> (médicaments ou autres moyens)</>,
           <>Le <b>sentiment d'être piégé·e</b> ou de ne plus avoir de raisons de vivre</>,
+        ]} />
+
+        <p className="mise-avant"> <b>Attention :</b> certaines personnes plus fragiles peuvent agir de manière compulsive, sans que leur mal être soit visible.</p>
+
+        <p className="texte">La consommation d'<b>alcool</b> ou de <b>substances</b> peut aussi aggraver les comportements suicidaires.</p>
+
+        <ExternalLinkBlock resources={[
+          { link: "/alcool", 
+            label: "Alcool", 
+            description: "Comment aborder la consommation d'alcool ?", 
+            emoji: "🍺"
+          },
+          { link: "/stup",
+            label: "Stupéfiants",
+            description: "Comment aborder la consommation de stupéfiants ?",
+            emoji: "🎆"
+          }
         ]} />
 
       <ListeNumerotee 
@@ -257,26 +274,26 @@ const Suicide = () => {
       ]} />
 
         <h2 className="sous-titre-2">Entame la conversation</h2>
-        <p className="texte"><b>Interroge-toi :</b> es-tu capable de mener cette conversation, et es-tu disponible et à l’écoute ?</p>
+        <p className="texte"><b>Interroge-toi :</b> es-tu capable de mener cette conversation, et es-tu disponible et à l'écoute ?</p>
         <p className="texte"><b>Choisissez un cadre agréable qui vous convienne à tou·te·s les deux :</b> dans un endroit calme et isolé, au parc ou autour d'un café, au téléphone...</p>
 
         <p className="texte"><b>Mentionnez ce que vous avez remarqué sans juger ni culpabiliser :</b></p>
         <BulletList items={[
-          "« Je ne t’ai pas beaucoup vu ces derniers jours. Est-ce que tout va bien ? »",
-          "« J’ai l’impression que tu vas mal. Tu veux qu’on en parle ? »",
-          "« Tu n’es plus le même. Je m’inquiète. Qu’est-ce qu’il se passe ? »",
-          "Reconnaissez ses émotions : « Ça semble vraiment difficile. », « J’ai l’impression que tu es triste. »",
+          "« Je ne t'ai pas beaucoup vu ces derniers jours. Est-ce que tout va bien ? »",
+          "« J'ai l'impression que tu vas mal. Tu veux qu'on en parle ? »",
+          "« Tu n'es plus le même. Je m'inquiète. Qu'est-ce qu'il se passe ? »",
+          "Reconnaissez ses émotions : « Ça semble vraiment difficile. », « J'ai l'impression que tu es triste. »",
           "Faites-lui savoir que vous êtes là pour lui : « Merci de te confier à moi. Je suis là pour toi. »",
         ]} />
 
         <p className="mise-avant"><b>Aborder la question du suicide :</b> <br/>
           
-          - Il faut être direct pour lui donner la possibilité de parler de ses souffrances (cela montre que tu t’inquiètes pour lui ou elle) : « As-tu des idées suicidaires ? », « Envisages-tu de te donner la mort ? »  <br/>
+          - Il faut être direct pour lui donner la possibilité de parler de ses souffrances (cela montre que tu t'inquiètes pour lui ou elle) : « As-tu des idées suicidaires ? », « Envisages-tu de te donner la mort ? »  <br/>
           - Pas de jugement de valeur (ex. « quelque chose de stupide »), pas de sous-entendu <br/>
           - Reste calme et empathique
           </p>
 
-        <p className="texte">Si tu ne te sens pas capable de mener la conversation, oriente vers quelqu’un d’autre : l’infirmière, une personne formée PSSM, un·e professionnel·le de santé ou le 3114.</p>
+        <p className="texte">Si tu ne te sens pas capable de mener la conversation, oriente vers quelqu'un d'autre : l'infirmière, une personne formée PSSM, un·e professionnel·le de santé ou le 3114.</p>
 
         <h2 className="sous-titre-2">Ecoute activement</h2>
         <BulletList items={[
@@ -294,9 +311,9 @@ const Suicide = () => {
           <>Il ou elle a prévu un <b>scénario suicidaire</b> (quand, où, comment)</>,
           <>Il ou elle a des <b>moyens concrets pour passer à l'acte</b> (armes, médicaments, etc.)</>,
           <>Il ou elle fait ses <b>adieux</b></>,
-          <>Il ou elle tient des <b>propos évasifs</b> : « T’as bien mieux à faire que de t’occuper de moi », « J’ai pensé à une solution, mais je ne veux pas en parler »</>,
-          <>Il ou elle tient des <b>propos allusifs</b> : « J’en ai assez de me battre », « Bientôt, vous n’aurez plus à entendre parler de moi »</>,
-          <>Il ou elle tient des <b>propos explicites</b> : « J’en peux plus, plutôt me tuer que de vivre ça », « Pour moi, la mort est la seule option »</>
+          <>Il ou elle tient des <b>propos évasifs</b> : « T'as bien mieux à faire que de t'occuper de moi », « J'ai pensé à une solution, mais je ne veux pas en parler »</>,
+          <>Il ou elle tient des <b>propos allusifs</b> : « J'en ai assez de me battre », « Bientôt, vous n'aurez plus à entendre parler de moi »</>,
+          <>Il ou elle tient des <b>propos explicites</b> : « J'en peux plus, plutôt me tuer que de vivre ça », « Pour moi, la mort est la seule option »</>
         ]} />
 
       <div id="plan_securite">
@@ -353,7 +370,7 @@ const Suicide = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -380,21 +397,21 @@ const Suicide = () => {
       <p className="texte">Tu es un·e ami·e, pas un·e thérapeute.</p>
       <BulletList
         items={[
-          <><b>Encourage la personne à s’ouvrir à d’autres</b>. « À qui d’autre en as-tu parlé ? »</>,
+          <><b>Encourage la personne à s'ouvrir à d'autres</b>. « À qui d'autre en as-tu parlé ? »</>,
           <><b>Appelez ensemble le numéro national de prévention du suicide au 3114</b>.</>,
-          <><b>À la suite de cette conversation, et si tu t'en sens capable, maintiens un contact</b>. « Comment te sens-tu aujourd’hui ? »</>,
+          <><b>À la suite de cette conversation, et si tu t'en sens capable, maintiens un contact</b>. « Comment te sens-tu aujourd'hui ? »</>,
           <><b>Si elle ou il planifie de façon imminente de mettre fin à sa vie, appelle le 3114</b>, et efforce-toi de ne pas la ou le laisser seul·e.</>,
         ]}
       />
 
       <p className="texte">
-        Offrir du soutien à une personne qui vit des difficultés peut être très valorisant. Mais cela peut aussi avoir un impact sur toi : tu peux rapidement ressentir de la fatigue, voire de l’épuisement. Pour arriver à rester disponible pour l’autre, il est essentiel de prendre soin de soi et de respecter ses limites.
+        Offrir du soutien à une personne qui vit des difficultés peut être très valorisant. Mais cela peut aussi avoir un impact sur toi : tu peux rapidement ressentir de la fatigue, voire de l'épuisement. Pour arriver à rester disponible pour l'autre, il est essentiel de prendre soin de soi et de respecter ses limites.
       </p>
 
       <p className="texte"><b>Il est donc important que tu :</b></p>
       <BulletList
         items={[
-          <><b>Détermines jusqu’où tu peux apporter ton aide</b>.</>,
+          <><b>Détermines jusqu'où tu peux apporter ton aide</b>.</>,
           <><b>Ne fasses pas de promesse intenable</b>.</>,
           <><b>T'accordes des moments de repos où tu pourras penser à autre chose</b>.</>,
           <><b>Cherches le soutien de ton entourage</b>.</>,
@@ -413,10 +430,10 @@ const Suicide = () => {
         image="./assets/cartes/dame_pique.png"
         title="La carte D♠"
         shortText="Faire le deuil lorsqu'on est impacté·e ou témoin d'un suicide."
-        longText=""
+        longText="Lorsqu'on est confronté à un suicide, il est normal de ressentir une multitude d'émotions : tristesse, colère, culpabilité. Le processus de deuil peut être long et difficile, mais il est essentiel de prendre le temps de vivre ces émotions. Tu peux te faire aider par des pairs ou des professionnel·le·s."
         textButton="⤢ Agrandir la carte"
-        suit = "pique"
-        
+        suit="pique"
+
       />
 
 
@@ -450,13 +467,13 @@ const Suicide = () => {
       <div id="temoin">
         <h1 className="titre">J'ai été témoin d'un suicide</h1>
 
-        <p className="texte">Tu ne réaliseras peut-être pas immédiatement que le suicide a eu un impact significatif sur toi. Tu pourras penser que tu ne devrais pas être affecté·e de la même manière, que ta réaction n’est pas légitime. Cependant, face à ce traumatisme, en parler peut t'aider, que ce soit à un ami ou via une ligne d’assistance comme le 3114.</p>
+        <p className="texte">Tu ne réaliseras peut-être pas immédiatement que le suicide a eu un impact significatif sur toi. Tu pourras penser que tu ne devrais pas être affecté·e de la même manière, que ta réaction n'est pas légitime. Cependant, face à ce traumatisme, en parler peut t'aider, que ce soit à un ami ou via une ligne d'assistance comme le 3114.</p>
 
         <h2 className="sous-titre-2">Comment traverser le deuil ?</h2>
 
         <p className="texte"><b>Les premiers jours qui suivent un suicide engendrent quelque fois une perception déformée de la réalité, une sidération.</b>
-        Cette période est généralement suivie d’un chaos dans les pensées et les sentiments, engendrant par là des questions comme « Pourquoi ? », « Aurais-je pu remarquer quelque chose ? », « Qu’aurais-je pu faire ? », « Pourquoi ne m’a-t-elle/il pas parlé de sa souffrance ? ». La douleur de la perte peut s’accompagner de réflexions relatives à l’abandon, l’impuissance, le désespoir, la culpabilité, la colère…
-        <b>Les personnes endeuillées par suicide rapportent qu’à un moment, contre toute attente, elles découvrent qu’il y a de la place pour autre chose : un projet, un espoir.</b> Ce n’est pas tant que ton chagrin diminue ; c’est que tu grandis avec ton chagrin.
+        Cette période est généralement suivie d'un chaos dans les pensées et les sentiments, engendrant par là des questions comme « Pourquoi ? », « Aurais-je pu remarquer quelque chose ? », « Qu'aurais-je pu faire ? », « Pourquoi ne m'a-t-elle/il pas parlé de sa souffrance ? ». La douleur de la perte peut s'accompagner de réflexions relatives à l'abandon, l'impuissance, le désespoir, la culpabilité, la colère…
+        <b>Les personnes endeuillées par suicide rapportent qu'à un moment, contre toute attente, elles découvrent qu'il y a de la place pour autre chose : un projet, un espoir.</b> Ce n'est pas tant que ton chagrin diminue ; c'est que tu grandis avec ton chagrin.
         </p>
 
         <ExternalLinkBlock resources={temoin} />

@@ -53,7 +53,7 @@ const ressourcesUtiles = [
   {
     link: "https://www.handicap-job.com",
     label: "Handicap Job",
-    description: "Plateforme d’emploi dédiée aux personnes en situation de handicap",
+    description: "Plateforme d'emploi dédiée aux personnes en situation de handicap",
     imageSrc: "/assets/logo-handicap-job.png"
   }
 ];
@@ -100,53 +100,53 @@ const guideAccessibilite = [
 
 const droits = [
   {
-    title: "AEEH – Allocation d’éducation de l’enfant handicapé",
-    subtitle: "Aide financière mensuelle pour les parents d’enfants en situation de handicap, destinée à compenser les dépenses liées au handicap."
+    title: "AEEH – Allocation d'éducation de l'enfant handicapé",
+    subtitle: "Aide financière mensuelle pour les parents d'enfants en situation de handicap, destinée à compenser les dépenses liées au handicap."
   },
   {
     title: "AAH – Allocation aux Adultes Handicapés",
     subtitle: "Revenu minimum pour les personnes en situation de handicap ne pouvant pas ou plus travailler, sous conditions de ressources."
   },
   {
-    title: "Carte d’invalidité / priorité / stationnement",
+    title: "Carte d'invalidité / priorité / stationnement",
     subtitle: "Cartes permettant des avantages spécifiques : accès prioritaire, stationnement facilité ou reconnaissance administrative du handicap."
   },
   {
     title: "PCH – Prestation de Compensation du Handicap",
-    subtitle: "Aide personnalisée couvrant les besoins liés à une perte d’autonomie (aide humaine, aménagement du logement, matériel, etc.)."
+    subtitle: "Aide personnalisée couvrant les besoins liés à une perte d'autonomie (aide humaine, aménagement du logement, matériel, etc.)."
   },
   {
     title: "RQTH – Reconnaissance de la Qualité de Travailleur Handicapé",
-    subtitle: "Statut facilitant l'accès et le maintien dans l’emploi, permettant des aménagements spécifiques et un accompagnement personnalisé."
+    subtitle: "Statut facilitant l'accès et le maintien dans l'emploi, permettant des aménagements spécifiques et un accompagnement personnalisé."
   },
   {
     title: "Projet Personnalisé de Scolarisation",
-    subtitle: "Document mis en place par l’Éducation nationale pour organiser les aides et aménagements nécessaires à la scolarité de l’élève."
+    subtitle: "Document mis en place par l'Éducation nationale pour organiser les aides et aménagements nécessaires à la scolarité de l'élève."
   },
   {
-    title: "Aménagements d’examens – tiers temps, locaux adaptés, etc.",
-    subtitle: "Dispositifs accordés aux étudiants en situation de handicap pour garantir l’équité lors des examens ou concours."
+    title: "Aménagements d'examens – tiers temps, locaux adaptés, etc.",
+    subtitle: "Dispositifs accordés aux étudiants en situation de handicap pour garantir l'équité lors des examens ou concours."
   },
   {
     title: "Soutien des maisons départementales des personnes handicapées (MDPH)",
-    subtitle: "Guichet unique pour l’information, l’orientation et la gestion des droits liés au handicap (aides financières, orientations, etc.)."
+    subtitle: "Guichet unique pour l'information, l'orientation et la gestion des droits liés au handicap (aides financières, orientations, etc.)."
   }
 ];
 
 
 const jeunesAidants = [
   {
-    title: "Brind’Écoute",
+    title: "Brind'Écoute",
     subtitle:
-      "Service d’écoute (chat/sms/téléphone) pour jeunes aidants"
+      "Service d'écoute (chat/sms/téléphone) pour jeunes aidants"
   },
   {
-    title: "Brind’Partage",
+    title: "Brind'Partage",
     subtitle: "Rencontres mensuelles pour jeunes aidants sur Lyon"
   },
   {
     title: "Tribu Brindille",
-    subtitle: "Journée d’amusement et de répis pour les jeunes aidants"
+    subtitle: "Journée d'amusement et de répis pour les jeunes aidants"
   },
   {
     title: "Plateforme Jeunes Aidants",
@@ -171,7 +171,7 @@ const SituationHandicap = () => (
         suit="pique"
       />
       <p className="texte">
-        Le handicap recouvre une grande diversité de réalités, qu’il soit visible ou invisible. 
+        Le handicap recouvre une grande diversité de réalités, qu'il soit visible ou invisible. 
         Il peut être temporaire ou permanent, et concerner des fonctions physiques, mentales, 
         cognitives ou sensorielles. Dans le contexte universitaire, cela peut impacter la mobilité, 
         la communication, la concentration ou encore l'accès à l'information.
@@ -190,9 +190,9 @@ const SituationHandicap = () => (
     <div id="internes">
       <h2 className="titre">Les aides à Centrale</h2>
       <p className="texte">
-        L’école met en œuvre des mesures concrètes pour garantir l’égalité des chances. 
-        Des actions de sensibilisation sont régulièrement proposées à l’ensemble de la communauté étudiante 
-        et enseignante pour favoriser l’inclusion. Un accompagnement individualisé peut être mis en place 
+        L'école met en œuvre des mesures concrètes pour garantir l'égalité des chances. 
+        Des actions de sensibilisation sont régulièrement proposées à l'ensemble de la communauté étudiante 
+        et enseignante pour favoriser l'inclusion. Un accompagnement individualisé peut être mis en place 
         en fonction des besoins exprimés.
       </p>
       <BulletList
@@ -200,7 +200,7 @@ const SituationHandicap = () => (
           "Formation LSF & Label Handimanagement",
           "Actions de prévention (Day in the Dark, Journée des DYS)",
           "Budget de 6000 € pour la formation en Langue des Signes",
-          "Référent handicap dédié à l’accompagnement personnalisé",
+          "Référent handicap dédié à l'accompagnement personnalisé",
           "Accessibilité physique des locaux en amélioration continue"
         ]}
       />
@@ -241,7 +241,7 @@ const SituationHandicap = () => (
       <p className="texte">
         Il existe en France de nombreux dispositifs pour compenser les conséquences du handicap 
         et soutenir les parcours de formation. Ces droits peuvent concerner la scolarité, le financement, 
-        l’accessibilité ou encore l’accès à l’emploi. Leur mise en œuvre dépend souvent d’une reconnaissance administrative.
+        l'accessibilité ou encore l'accès à l'emploi. Leur mise en œuvre dépend souvent d'une reconnaissance administrative.
       </p>
       <ListeNumerotee
         title="Principaux dispositifs"
@@ -257,9 +257,9 @@ const SituationHandicap = () => (
       <h2 className="titre">Soutien aux jeunes aidants</h2>
       <p className="texte">
         Les jeunes aidants sont souvent invisibles. Ce sont des personnes entre 7 et 25 ans qui accompagnent au quotidien un proche en situation de 
-        handicap, de maladie, de dépendance ou d'addiction, tout en poursuivant leurs études. Ils sont plus d'un million en France. Ces situations peuvent générer de la fatigue, de l’isolement 
+        handicap, de maladie, de dépendance ou d'addiction, tout en poursuivant leurs études. Ils sont plus d'un million en France. Ces situations peuvent générer de la fatigue, de l'isolement 
         ou des difficultés scolaires. Des structures comme La pause Brindille visent à leur offrir un espace 
-        d’écoute, de partage et de répit.
+        d'écoute, de partage et de répit.
       </p>
       <ListeNumerotee
         title="La pause Brindille"
