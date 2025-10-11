@@ -70,13 +70,13 @@ const resources_contacts = [
     label: "Astreinte"
   },
   {
-    link: "/cellule-ecoute",
+    link: "https://campus.ec-lyon.fr/mission-egalite-femmes-hommes-12949.kjsp?RH=1460128042806",
     emoji: "📞",
     label: "Cellule d'écoute",
 
   },
   {
-    link: "/infirmerie",
+    link: "https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990",
     emoji: "🏥",
     label: "Infirmerie",
   },

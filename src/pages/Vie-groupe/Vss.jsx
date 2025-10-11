@@ -299,7 +299,7 @@ const Vss = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -316,7 +316,7 @@ const Vss = () => {
         subtitle="Dispositif d'écoute et d'accompagnement de Centrale Lyon"
         email="Voir les informations"
         textButton="Voir les informations"
-        link="/cellule-ecoute"
+        link="https://campus.ec-lyon.fr/mission-egalite-femmes-hommes-12949.kjsp?RH=1460128042806"
         bgColor="#ffffff"  
         textColor="#b22133"
       />

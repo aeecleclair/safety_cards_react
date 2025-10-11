@@ -262,7 +262,7 @@ const Harcelement = () => {
         subtitle="Dispositif d'écoute et d'accompagnement de Centrale Lyon"
         email="Voir les informations"
         textButton="Voir les informations"
-        link="/cellule-ecoute"
+        link="https://campus.ec-lyon.fr/mission-egalite-femmes-hommes-12949.kjsp?RH=1460128042806"
         bgColor="#ffffff"  
         textColor="#b22133"
       />

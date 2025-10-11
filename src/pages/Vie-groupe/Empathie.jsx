@@ -228,7 +228,7 @@ const Empathie = () => {
           {
             title: "Engagement collectif",
             subtitle:
-              "Bénévolat, associations, PSSM ou PeerCare : des expériences qui renforcent la solidarité et la bienveillance.",
+              "Bénévolat, associations, PSSM ou Peer Care : des expériences qui renforcent la solidarité et la bienveillance.",
           },
         ]}
       />
@@ -237,8 +237,7 @@ const Empathie = () => {
 
       <p className="texte">
         <em>
-          <b>Sources :</b> ONUDC (Nations Unies), Université Paris-Saclay,
-          Courrier Cadres, PSSM France.
+          <b>Sources :</b> ONU (Nations Unies), Université Paris-Saclay, PSSM France.
         </em>
       </p>
     </div>
