@@ -37,14 +37,11 @@ const definitions = [
 // Ressources externes utiles
 const resources_pénale1 = [
   {
-    link: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070719/LEGISCTA000006165298/#LEGISCTA000006165298",
+    link: "https://www.service-public.fr/particuliers/vosdroits/F38175",
     imageSrc: "/assets/min.png",
-    label: "Articles 225-1 à 225-4",
-    description: "définissant ce qui constitue une discrimination",
-  }
-];
-
-const resources_pénale2 = [
+    label: "Définition officielle",
+    description: "de ce qui constitue une discrimination",
+  },
   {
     link: "https://www.service-public.fr/particuliers/vosdroits/F32075",
     imageSrc: "/assets/min.png",
@@ -52,6 +49,7 @@ const resources_pénale2 = [
     description: "et les règles associées",
   }
 ];
+
 
 const autres_pages_global = [
   {
@@ -61,16 +59,16 @@ const autres_pages_global = [
     description: "Comment agir face au harcèlement ?"
   },
   {
-    link: "/isolement",
+    link: "/groupe",
     emoji : "??",
-    label: "Isolement",
-    description: "Que puis-je faire si je me sens à l'écart ?"
+    label: "Effet de groupe",
+    description: "Comment agir face à l'effet de groupe ?"
   },
   {
-    link: "/anxiete",
+    link: "/inte",
     emoji : "??",
-    label: "Anxiété",
-    description: "Que puis-je faire si je me sens anxieux ?",
+    label: "Pratiques d'intégration",
+    description: "Que faire face au bizutage ?",
   }
 ];
 
@@ -89,8 +87,66 @@ const autres_pages_lgbtphobie = [
     emoji : "??",
     label: "Cyberharcèlement",
     description: "Comment réagir face à du cyberharcèlement ?"
+  },
+  {
+    link: "/genre",
+    emoji : "??",
+    label: "Identité de genre",
+    description: "Tu te questionnes sur ton identité ?"
   }
 ];
+
+const arbre = [
+  {
+    link: "/docs/arbre-vss-centrale-lyon.pdf",
+    label: "Arbre de décision",
+    description: "Je suis victime ou témoin de VSS (étudiants et personnels de Centrale Lyon)",
+    imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
+  }
+];
+
+const barometres = [
+
+  {
+    link: "/assets/Violentomètre_relations_profs_eleves.pdf",
+    label: "Les VSS dans les relations professeurs-élèves",
+    description: "",
+    emoji: "🎓",
+  },
+  {
+    link: "/assets/Violentometre_VSS_travail.pdf",
+    label: "Les VSS dans le milieu professionnel",
+    description: "",
+    emoji: "💼",
+  },
+  {
+    link: "/assets/violentometre_depliant_monde_scientifique.pdf",
+    label: "Les VSS dans le monde scientifique",
+    description: "",
+    emoji: "🔬",
+  },
+  {
+    link: "/assets/reglo_sport_reglette.pdf",
+    label: "Les VSS dans le sport",
+    description: "",
+    emoji: "⚽",
+  },
+  {
+    link: "/assets/barometre_violences_gyneco.pdf",
+    label: "Les VSS chez le ou la gynécologue",
+    description: "",
+    emoji: "🚺",
+  },
+];
+
+const discrimetre = [
+  {
+    link: "/assets/Discriminomètre.pdf",
+    label: "Discriminomètre - ",
+    description: "pour avoir des exemples de situations dangereuses",
+    emoji: "??"
+  }
+]
 
 const ressourcesUtiles = [
   {
@@ -142,24 +198,16 @@ const Discriminations = () => {
           La discrimination désigne toute distinction, exclusion ou préférence fondée sur un motif interdit par la loi, qui a pour effet de porter atteinte à l’égalité de traitement. Les motifs prohibés par la loi sont les suivants :
         </p>
         <ul>
-          <li>Origine</li>
-          <li>Sexe</li>
-          <li>Situation de famille</li>
+          <li>Origine ; Lieu de résidence</li>
+          <li>Sexe ; Orientation sexuelle ; Identité de genre</li>
+          <li>Situation de famille ; Patronyme</li>
           <li>Grossesse</li>
-          <li>Apparence physique</li>
+          <li>Caractéristiques génétiques ; Apparence physique</li>
           <li>Particulière vulnérabilité résultant de la situation économique</li>
-          <li>Patronyme</li>
-          <li>Lieu de résidence</li>
-          <li>Etat de santé</li>
-          <li>Perte d'autonomie</li>
-          <li>Handicape</li>
-          <li>Caractéristiques génétiques</li>
+          <li>Etat de santé ; Handicap ; Perte d'autonomie</li>
           <li>Moeurs</li>
-          <li>Orientation sexuelle </li>
-          <li>Identité de genre</li>
           <li>Age</li>
-          <li>Opinions politiques</li>
-          <li>Activités syndicales</li>
+          <li>Opinions politiques ; Activités syndicales</li>
           <li>Qualité de lanceur d'alerte, de facilitateur ou de personne en lien avec un lanceur d'alerte</li>
           <li>Capacité à s'exprimer dans une langue autre que le français</li>
           <li>Appartenance ou non-appartenance, vraie ou supposée, à une ethnie, Nation, prétendue race ou religion déterminée</li>
@@ -170,6 +218,10 @@ const Discriminations = () => {
           En France, la discrimination est un délit.  
           Selon l’article 225-2 du Code pénal, elle est punie de 3 ans d’emprisonnement et de 45 000 € d’amende (portés à 5 ans et 75 000 € si la discrimination a lieu dans un établissement recevant du public ou par une personne dépositaire de l’autorité publique).  
         </p>
+
+        <ExternalLinkBlock
+          resources={discrimetre}
+        />  
 
         <p className="texte">
           En France, la loi protège de nombreux motifs discriminatoires. Tu as des droits. Ce n’est jamais ta faute si quelqu’un te discrimine.
@@ -184,11 +236,6 @@ const Discriminations = () => {
           subtitle=""
           resources={resources_pénale1}
         />
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={resources_pénale2}
-        />
 
         <h2 className="sous-titre-2">Quelques chiffres récents sur le campus</h2>
 
@@ -198,19 +245,16 @@ const Discriminations = () => {
         </p>
 
         <ContactCard
-          image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
-          title="Infirmerie"
-          subtitle="Infirmerie de Centrale Lyon : un lieu d'écoute"
-          phone="Voir les informations"
+          image="assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
+          title="Cellule d'écoute"
+          subtitle="Dispositif d'écoute et d'accompagnement de Centrale Lyon"
           email="Voir les informations"
-          hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
           textButton="Voir les informations"
-          link="/infirmerie"
-
-          bgColor="#ffffff"    //informations facultatives
-          textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-
+          link="/cellule-ecoute"
+          bgColor="#ffffff"  
+          textColor="#b22133"
         />
+
 
         <ContactCard
           image="/assets/defenseur_droits.png" 
@@ -223,27 +267,14 @@ const Discriminations = () => {
           link="https://www.antidiscriminations.fr/"
 
           bgColor="#ffffffff"    //informations facultatives
-          textColor="#7f096bff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+          textColor="#091d7fff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
 
         />
 
-        <ContactCard
-          image="/assets/universite_de_lyon_bis.jpg" 
-          title="Ma santé - Université de Lyon"
-          subtitle="Signalement : pour signaler des faits de violences, de discrimination ou de harcèlement à Centrale Lyon"
-          phone=""
-          email="harcelement@listes.ec-lyon.fr"
-          hours=""
-          textButton="Voir le site"
-          link="https://masante.universite-lyon.fr/stop-violences/comment-se-deroule-un-signalement-nbsp-/ecole-centrale-de-lyon-275717.kjsp"
 
-          bgColor="#ffffffff"    //informations facultatives
-          textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-
-        />
       </div>
       <p className="texte">
-        Tu subis du <b>harcèlement</b> ? Tu te sens <b>isolé</b> ? Tu es <b>anxieux</b> ? N'hésite pas à visiter d'autres pages pour continuer à te renseigner :
+        Tu subis du <b>harcèlement</b> ? Tu te sens <b>isolé·e</b> ? Tu es <b>anxieux·se</b> ? N'hésite pas à visiter d'autres pages pour continuer à te renseigner :
       </p>
         <ExternalLinkBlock
         title=""
@@ -258,17 +289,44 @@ const Discriminations = () => {
       <div id="sexistes">
         <h1 className="titre">Discriminations sexistes</h1>
         <p>
-          Les discriminations sexistes concernent toute inégalité ou violence basée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités dans les opportunités. Le sexisme peut comprendre la croyance qu'un sexe ou qu'un genre serait intrinsèquement supérieur à l'autre. Les femmes, les personnes non-binaires ou les personnes trans peuvent être particulièrement exposées.
+          Le sexisme désigne toute inégalité ou violence fondée sur le sexe ou le genre — harcèlement, remarques, violences sexuelles, inégalités d’accès ou de traitement. Il repose sur l’idée qu’un sexe serait supérieur à un autre, ce qui légitime depuis longtemps une hiérarchie entre hommes et femmes. Dès l’enfance, les stéréotypes genrés sont transmis dans les jouets, l’école, les médias ou le langage, influençant les comportements, les attentes et les rôles sociaux assignés à chacun·e. Ces représentations s’expriment à travers des discriminations, des micro-agressions ou des violences sexistes, et le sexisme structurel se manifeste aussi dans l’emploi, la politique, la culture ou le sport, par des inégalités de traitement, une invisibilisation des voix féminines ou des discours paternalistes « bienveillants » qui perpétuent les rapports de pouvoir.
         </p>
-        <p>
+
+        <h2 className="sous-titre-2">
           Discriminations ou conséquences des discriminations sexistes fréquentes :
-        </p>
+        </h2>
         <BulletList items={[
           "Violences verbales ou sexuelles, harcèlement de rue ou dans les études",
           "Inégalités de traitement ou d’accès selon le genre",
           "Pression sociale sur le “rôle de genre” attendu",
           "Modifications de comportement pour éviter les agressions (se taire, éviter certains lieux, etc.)"
         ]} />
+        
+        <ContactCard
+          image="/assets/3919.png"
+          title="3919"
+          subtitle="Ligne ouverte à toutes les femmes victimes de violences"
+          phone="3919"
+          email="contact@solidaritefemmes.org"
+          hours=""
+          textButton="Voir le site"
+          link="https://www.service-public.fr/particuliers/actualites/A16929"
+          
+          bgColor="#ffffffff"    //informations facultatives
+          textColor="#e90202ff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+        />
+        
+
+        <p>
+          Les discriminations sexistes peuvent être accompagnées de violences sexistes et sexuelles :
+          Qu'est-ce qu'une VSS ? Comment réagir ? Si tu te poses ces questions, n'hésite pas à t'informer juste ici : 
+        </p>
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={autres_pages_sexisme}
+        />
+
         <p className="texte">
           Selon le rapport 2024 du Haut Conseil à l’Égalité, 9 femmes sur 10 ont déjà renoncé à certaines actions ou modifié leur comportement pour éviter le sexisme.
         </p>
@@ -283,12 +341,6 @@ const Discriminations = () => {
               description: "pour plus d'informations sur le sexisme dans la société"
             },
             {
-              link: "https://www.service-public.fr/particuliers/actualites/A16929",
-              imageSrc: "/assets/3919.png",
-              label: "3919 -",
-              description: "numéro national de référence pour l'écoute et l'orientation des femmes victimes de violences"
-            },
-            {
               link: "https://www.service-public.fr/particuliers/vosdroits/F34550",
               imageSrc: "/assets/service_public.png",
               label: "Service public -",
@@ -297,19 +349,9 @@ const Discriminations = () => {
           ]}
         />
 
-        <ContactCard
-          image="/assets/filactions.png" 
-          title="Filaction"
-          subtitle="Une association luttant contre le sexisme à Lyon"
-          phone=""
-          email=""
-          hours=""
-          textButton="Voir le site"
-          link="https://www.filactions.org/association-filactions-lyon-qui-sommes-nous/"
 
-          bgColor="#ffffffff"    //informations facultatives
-          textColor="#930480ff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-        />
+
+
         <p className="texte">
           Depuis 2023, le 25 janvier marque la Journée nationale contre le sexisme. 
           Instituée par le Haut Conseil à l’Égalité, elle vise à sensibiliser aux comportements sexistes et à mobiliser la société contre toutes les formes d’inégalités. 
@@ -327,16 +369,35 @@ const Discriminations = () => {
           ]}
         />
 
-        <p>
-          Les discriminations sexistes peuvent être accompagnées de violences sexistes et sexuelles :
-          Qu'est-ce qu'une VSS ? Comment réagir ? Si tu te poses ces questions, n'hésite pas à t'informer juste ici : 
-        </p>
         <ExternalLinkBlock
           title=""
-          subtitle=""
-          resources={autres_pages_sexisme}
+          subtitle="Il existe des associations directement à Lyon si tu veux entrer en contact avec des personnes luttant contre les VSS, pour demander des conseils, partager tes expériences ou même pour t'engager !"
+          resources={[
+            {
+              link :"https://www.filactions.org/association-filactions-lyon-qui-sommes-nous/",
+              imageSrc :"/assets/filactions.png",
+              label : "Filaction",
+              description :"Une association luttant contre le sexisme à Lyon"
+            }
+          ]}
         />
 
+
+        <p>
+          Tu ne sais pas à qui en parler ? Un·e amie·e, proche, professeur·e : tu peux en parler à une personne en qui tu as confiance. Tu peux aussi aller voir un professionnel. Des ressources à Centrale Lyon ou à l'extérieur sont également disponibles.
+        </p>
+        
+        <ExternalLinkBlock
+          resources={arbre}
+        />  
+
+        <p>
+          Tu peux également évaluer ta situation avec les différents violentomètres suivants :
+        </p>
+
+        <ExternalLinkBlock
+          resources={barometres}
+        />
       </div>
 
       <Separateur />
@@ -355,9 +416,9 @@ const Discriminations = () => {
         <p className="texte">
           Les discriminations racistes sont fondées sur l’origine, la nationalité, la couleur de peau, ou des attributs culturels ou religieux. Elles se manifestent parfois par des propos, des exclusions sociales, ou des violences, ou encore des stéréotypes dans les cours, le logement ou même stages et emplois.
         </p>
-        <p className="texte">
+        <h2 className="sous-titre-2">
           Discriminations ou conséquences des discriminations racistes fréquentes :
-        </p>
+        </h2>
         <BulletList items={[
           "Refus de logement ou hébergement",
           "Propos ou stéréotypes dans les cours ou au sein du campus",
@@ -375,29 +436,29 @@ const Discriminations = () => {
           subtitle="Ressources locales et nationales pour signaler ou s'informer"
           resources={[
             {
-              link: "https://www.licra.org/signaler",
-              imageSrc: "/assets/licra.png",
-              label: "LICRA : Ligue Internationale Contre le Racisme et l'Antisémitisme -",
-              description: "Pour signaler des actes racistes"
-            },
-            {
               link: "https://egalitecontreracisme.fr/ce-que-dit-la-loi",
               imageSrc: "/assets/egalite_contre_racisme.png",
               label: "Egalité contre le racisme -",
               description: "Pour en apprendre plus sur la loi, les propos racistes et les discriminations racistes"
+            },
+            {
+              link: "https://www.licra.org/signaler",
+              imageSrc: "/assets/licra.png",
+              label: "LICRA : Ligue Internationale Contre le Racisme et l'Antisémitisme -",
+              description: "Pour signaler des actes racistes"
             }
           ]}
         />
 
         <ContactCard
           image="/assets/egalite_contre_racisme.png"
-          title="SOS Racisme Lyon"
+          title="SOS racisme - pôle juridique"
           subtitle="Contact local pour les discriminations racistes"
-          phone="04 78 95 01 38"
-          email="contact@sosracismerhone.org"
-          hours="Permanences & accueil selon disponibilité"
+          phone="01 40 35 36 55"
+          email=""
+          hours="Permanences téléphoniques du lundi au vendredi de 10h00 à 13h00 et le mercredi de 10h00 à 18h00"
           textButton="Voir le site"
-          link="https://egalitecontreracisme.fr/sos-racisme-lyon"
+          link="https://egalitecontreracisme.fr/dispositifs/numero-de-telephone-du-pole-juridique-pour-les-victimes"
           
           bgColor="#ffffffff"    //informations facultatives
           textColor="#e90202ff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -437,14 +498,14 @@ const Discriminations = () => {
         />
 
         <p className="texte">
-          Les discriminations LGBT-phobes regroupent entre autre l’homophobie, la lesbophobie, la biphobie et la transphobie. 
-          Elles sont souvent fondées sur des préjugés ou stéréotypes liés à l’orientation sexuelle ou à l’identité de genre. 
-          Ces discriminations portent atteinte aux droits fondamentaux et à la dignité des personnes concernées.
+          Les LGBTphobies regroupent plusieurs formes de rejet ou de haine envers les personnes en raison de leur orientation sexuelle ou de leur identité de genre.  
+          L’<b>homophobie</b> vise les personnes attirées par des individus du même genre ; la <b>lesbophobie</b> désigne les formes spécifiques de rejet ou de sexualisation subies par les femmes lesbiennes ; la <b>biphobie</b> renvoie aux préjugés envers les personnes bisexuelles, souvent accusées d’indécision ou d’infidélité ; la <b>transphobie</b> cible les personnes transgenres ou en questionnement sur leur identité de genre, à travers le refus du prénom d’usage, des moqueries ou des violences.  
+          Ces attitudes peuvent s’exprimer dans tous les milieux — scolaire, professionnel, familial, sportif — et avoir des conséquences graves sur la santé mentale et le sentiment de sécurité des personnes concernées.
         </p>
 
-        <p className="texte">
+        <h2 className="sous-titre-2">
           Discriminations ou conséquences des discriminations LGBT-phobes fréquentes :
-        </p>
+        </h2>
         <BulletList items={[
           "Propos ou gestes insultants, humiliants ou stéréotypés",
           "Rejet ou isolement dans les sphères personnelles, scolaires ou professionnelles",
@@ -453,6 +514,12 @@ const Discriminations = () => {
           "Cyber-harcèlement, outing forcé ou contenus haineux en ligne",
           "Invisibilisation des identités ou refus de reconnaissance (ex. prénom d’usage)"
         ]} />
+
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={autres_pages_lgbtphobie}
+        />
 
         <p className="texte">
           En France, les enquêtes récentes montrent que les personnes LGBT+ sont encore très exposées aux discriminations, en particulier les jeunes et les personnes transgenres. 
@@ -510,15 +577,19 @@ const Discriminations = () => {
             }
           ]}
         />
-
-        <p>
-          Tu subis du cyberharcèlement et tu ne sais pas comment réagir ? Tu n'es pas seul·e :
-        </p>
         <ExternalLinkBlock
-          title=""
+          title="Pour en apprendre plus"
           subtitle=""
-          resources={autres_pages_lgbtphobie}
+          resources={[
+            {
+              link: "https://www.cestcommeca.net/",
+              imageSrc: "/assets/cestcommeca.jpg",
+              label: "C'est comme ça",
+              description: "Comprendre, découvrir la culture et savoir comment faire face aux discriminations"
+            }
+          ]}
         />
+
       </div>
 
       <Separateur />
