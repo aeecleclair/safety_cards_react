@@ -10,7 +10,7 @@ import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
 
 const navLinks = [
-  { label: "Qu’est-ce que la discrimination ?", target: "definitions" },
+  { label: "Qu'est-ce que la discrimination ?", target: "definitions" },
   { label: "Discriminations sexistes", target: "sexistes" },
   { label: "Discriminations racistes", target: "racistes" },
   { label: "Discriminations LGBT-phobes", target: "lgbtphobes" },
@@ -30,7 +30,7 @@ const definitions = [
   },
   {
     title: "Délits possibles",
-    subtitle: "Harcèlement, propos, refus d’accès, violences physiques ou psychologiques sont punissables selon les lois (Code pénal, Code de l’éducation, etc.)."
+    subtitle: "Harcèlement, propos, refus d'accès, violences physiques ou psychologiques sont punissables selon les lois (Code pénal, Code de l'éducation, etc.)."
   }
 ];
 
@@ -198,7 +198,7 @@ const Discriminations = () => {
       <Navbar links={navLinks} />
 
       <div id="definitions">
-        <h1 className="titre">Qu’est-ce que la discrimination ?</h1>
+        <h1 className="titre">Qu'est-ce que la discrimination ?</h1>
         <ImageTextPopup
           image="./assets/cartes/valet_coeur.png"
           title="La carte V♥"
@@ -209,7 +209,7 @@ const Discriminations = () => {
         />
 
         <p className="texte">
-          La discrimination désigne toute distinction, exclusion ou préférence fondée sur un motif interdit par la loi, qui a pour effet de porter atteinte à l’égalité de traitement. Les motifs prohibés par la loi sont les suivants :
+          La discrimination désigne toute distinction, exclusion ou préférence fondée sur un motif interdit par la loi, qui a pour effet de porter atteinte à l'égalité de traitement. Les motifs prohibés par la loi sont les suivants :
         </p>
         <ul>
           <li>Origine</li>
@@ -237,15 +237,15 @@ const Discriminations = () => {
 
         <p className="texte">
           En France, la discrimination est un délit.  
-          Selon l’article 225-2 du Code pénal, elle est punie de 3 ans d’emprisonnement et de 45 000 € d’amende (portés à 5 ans et 75 000 € si la discrimination a lieu dans un établissement recevant du public ou par une personne dépositaire de l’autorité publique).  
+          Selon l'article 225-2 du Code pénal, elle est punie de 3 ans d'emprisonnement et de 45 000 € d'amende (portés à 5 ans et 75 000 € si la discrimination a lieu dans un établissement recevant du public ou par une personne dépositaire de l'autorité publique).  
         </p>
 
         <p className="texte">
-          En France, la loi protège de nombreux motifs discriminatoires. Tu as des droits. Ce n’est jamais ta faute si quelqu’un te discrimine.
+          En France, la loi protège de nombreux motifs discriminatoires. Tu as des droits. Ce n'est jamais ta faute si quelqu'un te discrimine.
         </p>
 
         <p className="texte">
-          La loi s’applique aussi aux réseaux sociaux : publier, commenter, repartager ou même retweeter des propos discriminatoires est passible des mêmes sanctions pénales. Être derrière un écran ne donne pas le droit d’insulter ou de propager des contenus discriminatoires.
+          La loi s'applique aussi aux réseaux sociaux : publier, commenter, repartager ou même retweeter des propos discriminatoires est passible des mêmes sanctions pénales. Être derrière un écran ne donne pas le droit d'insulter ou de propager des contenus discriminatoires.
         </p>
 
         <ExternalLinkBlock
@@ -263,7 +263,7 @@ const Discriminations = () => {
 
         <ChiffresGroup chiffres={dataGeneral} />
         <p className="texte">
-          Beaucoup de personnes discriminées n’en parlent pas ou ne savent pas vers qui se tourner : 87,7% des personnes discriminées ne demandent pas d’aide (92,3% des femmes et 87,0% des hommes). Il existe des dispositifs de signalement, des soutiens psychologiques, juridiques et associatifs, sur le campus, à Lyon ou en ligne.
+          Beaucoup de personnes discriminées n'en parlent pas ou ne savent pas vers qui se tourner : 87,7% des personnes discriminées ne demandent pas d'aide (92,3% des femmes et 87,0% des hommes). Il existe des dispositifs de signalement, des soutiens psychologiques, juridiques et associatifs, sur le campus, à Lyon ou en ligne.
         </p>
 
         <ContactCard
@@ -333,12 +333,12 @@ const Discriminations = () => {
         </p>
         <BulletList items={[
           "Violences verbales ou sexuelles, harcèlement de rue ou dans les études",
-          "Inégalités de traitement ou d’accès selon le genre",
+          "Inégalités de traitement ou d'accès selon le genre",
           "Pression sociale sur le “rôle de genre” attendu",
           "Modifications de comportement pour éviter les agressions (se taire, éviter certains lieux, etc.)"
         ]} />
         <p className="texte">
-          Selon le rapport 2024 du Haut Conseil à l’Égalité, 9 femmes sur 10 ont déjà renoncé à certaines actions ou modifié leur comportement pour éviter le sexisme.
+          Selon le rapport 2024 du Haut Conseil à l'Égalité, 9 femmes sur 10 ont déjà renoncé à certaines actions ou modifié leur comportement pour éviter le sexisme.
         </p>
         <ExternalLinkBlock
           title="Quelques ressources pour aller plus loin"
@@ -380,7 +380,7 @@ const Discriminations = () => {
         />
         <p className="texte">
           Depuis 2023, le 25 janvier marque la Journée nationale contre le sexisme. 
-          Instituée par le Haut Conseil à l’Égalité, elle vise à sensibiliser aux comportements sexistes et à mobiliser la société contre toutes les formes d’inégalités. 
+          Instituée par le Haut Conseil à l'Égalité, elle vise à sensibiliser aux comportements sexistes et à mobiliser la société contre toutes les formes d'inégalités. 
         </p>
         <ExternalLinkBlock
           title=""
@@ -420,7 +420,7 @@ const Discriminations = () => {
           suit="carreau"
         />
         <p className="texte">
-          Les discriminations racistes sont fondées sur l’origine, la nationalité, la couleur de peau, ou des attributs culturels ou religieux. Elles se manifestent parfois par des propos, des exclusions sociales, ou des violences, ou encore des stéréotypes dans les cours, le logement ou même stages et emplois.
+          Les discriminations racistes sont fondées sur l'origine, la nationalité, la couleur de peau, ou des attributs culturels ou religieux. Elles se manifestent parfois par des propos, des exclusions sociales, ou des violences, ou encore des stéréotypes dans les cours, le logement ou même stages et emplois.
         </p>
         <p className="texte">
           Discriminations ou conséquences des discriminations racistes fréquentes :
@@ -428,11 +428,11 @@ const Discriminations = () => {
         <BulletList items={[
           "Refus de logement ou hébergement",
           "Propos ou stéréotypes dans les cours ou au sein du campus",
-          "Discriminations dans l’évaluation ou accès aux stages, emplois",
+          "Discriminations dans l'évaluation ou accès aux stages, emplois",
           "Isolement ou rejet des pairs, micro-agressions quotidiennes"
         ]} />
         <p className="texte">
-          En France, environ 18 % des personnes de 18-49 ans déclarent avoir subi des traitements inégalitaires ou discriminatoires selon les dernières enquêtes. Ce taux est en hausse par rapport aux années précédentes, surtout parmi les personnes d’origine immigrée.
+          En France, environ 18 % des personnes de 18-49 ans déclarent avoir subi des traitements inégalitaires ou discriminatoires selon les dernières enquêtes. Ce taux est en hausse par rapport aux années précédentes, surtout parmi les personnes d'origine immigrée.
         </p>
 
 
@@ -472,7 +472,7 @@ const Discriminations = () => {
 
 
         <p className="texte">
-          Chaque année, courant mars, a lieu la semaine d’éducation et d’actions contre le racisme et l’antisémitisme, organisée autour du 21 mars, qui est la journée internationale de lutte contre le racisme. De nombreuses initiatives éducatives, associatives et institutionnelles sont proposées à cette occasion partout en France.
+          Chaque année, courant mars, a lieu la semaine d'éducation et d'actions contre le racisme et l'antisémitisme, organisée autour du 21 mars, qui est la journée internationale de lutte contre le racisme. De nombreuses initiatives éducatives, associatives et institutionnelles sont proposées à cette occasion partout en France.
         </p>
                 <ExternalLinkBlock
           title=""
@@ -502,8 +502,8 @@ const Discriminations = () => {
         />
 
         <p className="texte">
-          Les discriminations LGBT-phobes regroupent entre autre l’homophobie, la lesbophobie, la biphobie et la transphobie. 
-          Elles sont souvent fondées sur des préjugés ou stéréotypes liés à l’orientation sexuelle ou à l’identité de genre. 
+          Les discriminations LGBT-phobes regroupent entre autre l'homophobie, la lesbophobie, la biphobie et la transphobie. 
+          Elles sont souvent fondées sur des préjugés ou stéréotypes liés à l'orientation sexuelle ou à l'identité de genre. 
           Ces discriminations portent atteinte aux droits fondamentaux et à la dignité des personnes concernées.
         </p>
 
@@ -516,12 +516,12 @@ const Discriminations = () => {
           "Violences physiques, menaces ou harcèlement",
           "Discriminations dans l'accès au logement, aux soins, aux stages ou à l'emploi",
           "Cyber-harcèlement, outing forcé ou contenus haineux en ligne",
-          "Invisibilisation des identités ou refus de reconnaissance (ex. prénom d’usage)"
+          "Invisibilisation des identités ou refus de reconnaissance (ex. prénom d'usage)"
         ]} />
 
         <p className="texte">
           En France, les enquêtes récentes montrent que les personnes LGBT+ sont encore très exposées aux discriminations, en particulier les jeunes et les personnes transgenres. 
-          Les conséquences peuvent être graves : isolement, anxiété, dépression ou difficultés d’accès aux droits.
+          Les conséquences peuvent être graves : isolement, anxiété, dépression ou difficultés d'accès aux droits.
         </p>
 
         <ExternalLinkBlock
@@ -532,7 +532,7 @@ const Discriminations = () => {
               link: "https://www.sos-homophobie.org/",
               imageSrc: "/assets/SOS_homophobie.jpg",
               label: "SOS Homophobie -",
-              description: "Ligne d’écoute, d'aide et de signalement"
+              description: "Ligne d'écoute, d'aide et de signalement"
             },
             {
               link: "https://questionsexualite.fr/lutter-contre-les-violences-et-discriminations/la-violence-dans-la-societe/que-sont-les-lgbtphobies",
@@ -557,8 +557,8 @@ const Discriminations = () => {
         />
 
         <p className="texte">
-          Chaque année, le 17 mai est la Journée internationale de lutte contre l’homophobie, la transphobie et la biphobie. 
-          De nombreuses initiatives associatives, universitaires et institutionnelles sont organisées pour sensibiliser et promouvoir l’égalité des droits.
+          Chaque année, le 17 mai est la Journée internationale de lutte contre l'homophobie, la transphobie et la biphobie. 
+          De nombreuses initiatives associatives, universitaires et institutionnelles sont organisées pour sensibiliser et promouvoir l'égalité des droits.
         </p>
 
         <ExternalLinkBlock
@@ -569,7 +569,7 @@ const Discriminations = () => {
               link: "https://www.fondationemergence.org/nouvelles/lhistoire-du-17-mai-origines-et-evolution-de-la-journee-internationale-contre-lhomophobie-et-la-transphobie",
               imageSrc: "/assets/fondation_emergence.png",
               label: "Fondation émergence",
-              description: "Histoire et importance de la Journée internationale contre l’homophobie et la transphobie"
+              description: "Histoire et importance de la Journée internationale contre l'homophobie et la transphobie"
             }
           ]}
         />
@@ -589,10 +589,10 @@ const Discriminations = () => {
       <div id="temoin">
         <h1 className="titre">Que faire en tant que victime/témoin de discrimination ?</h1>
         <p className="texte">
-          Être confronté·e à une discrimination, que l’on en soit directement victime ou témoin, n’est jamais simple. 
-          On peut se sentir choqué·e, impuissant·e ou craindre de mal réagir. Pourtant, il existe toujours des façons d’agir ou de chercher du soutien. 
-          Même de petits gestes comptent : parler de ce qui s’est passé, tendre une oreille attentive, ou simplement ne pas laisser la situation dans le silence. 
-          L’important est de ne pas rester isolé·e : tu n’as pas à porter cela seul·e, des personnes et des dispositifs existent pour t’accompagner.
+          Être confronté·e à une discrimination, que l'on en soit directement victime ou témoin, n'est jamais simple. 
+          On peut se sentir choqué·e, impuissant·e ou craindre de mal réagir. Pourtant, il existe toujours des façons d'agir ou de chercher du soutien. 
+          Même de petits gestes comptent : parler de ce qui s'est passé, tendre une oreille attentive, ou simplement ne pas laisser la situation dans le silence. 
+          L'important est de ne pas rester isolé·e : tu n'as pas à porter cela seul·e, des personnes et des dispositifs existent pour t'accompagner.
         </p>
 
 
@@ -600,30 +600,30 @@ const Discriminations = () => {
           title="Actions possibles"
           subtitle="Quelques étapes pour réagir face à une discrimination"
           items={[
-            { title: "Parler", subtitle: "Tu n’es pas seul·e — confie ce que tu vis ou ce que tu vois à une personne de confiance (ami·e, enseignant·e, personnel de santé, association)." },
+            { title: "Parler", subtitle: "Tu n'es pas seul·e — confie ce que tu vis ou ce que tu vois à une personne de confiance (ami·e, enseignant·e, personnel de santé, association)." },
             { title: "Soutenir la personne", subtitle: "Ne laisse pas la victime isolée : même une parole bienveillante ou une écoute attentive peut briser le sentiment de solitude." },
             { title: "Collecter des preuves", subtitle: "Messages, photos, témoignages, dates et lieux : ces éléments sont utiles si la personne souhaite signaler les faits, même anonymement." },
-            { title: "Utiliser les dispositifs internes", subtitle: "Infirmier·e, référent·e égalité, cellule de signalement du CROUS ou de l’établissement : ces relais existent pour accompagner les victimes et les témoins." },
-            { title: "Se tourner vers des services externes", subtitle: "Défenseur des droits, associations spécialisées (SOS Homophobie, LICRA, etc.), lignes d’écoute : tu n’as pas à porter ça seul·e." },
-            { title: "Agir si c’est possible", subtitle: "Quand tu te sens en sécurité, tu peux intervenir directement (ex. dire que ce n’est pas acceptable, détourner l’attention). Si tu ne peux pas, ton soutien en privé est déjà précieux." }
+            { title: "Utiliser les dispositifs internes", subtitle: "Infirmier·e, référent·e égalité, cellule de signalement du CROUS ou de l'établissement : ces relais existent pour accompagner les victimes et les témoins." },
+            { title: "Se tourner vers des services externes", subtitle: "Défenseur des droits, associations spécialisées (SOS Homophobie, LICRA, etc.), lignes d'écoute : tu n'as pas à porter ça seul·e." },
+            { title: "Agir si c'est possible", subtitle: "Quand tu te sens en sécurité, tu peux intervenir directement (ex. dire que ce n'est pas acceptable, détourner l'attention). Si tu ne peux pas, ton soutien en privé est déjà précieux." }
           ]}
         />
 
         <p className="texte">
-          Rappelle-toi : tu n’es jamais obligé·e de tout faire seul·e. Le simple fait de ne pas fermer les yeux est déjà un premier pas important. Chacun·e peut agir à son échelle, et ensemble, ces petites actions construisent un environnement plus sûr et respectueux.
+          Rappelle-toi : tu n'es jamais obligé·e de tout faire seul·e. Le simple fait de ne pas fermer les yeux est déjà un premier pas important. Chacun·e peut agir à son échelle, et ensemble, ces petites actions construisent un environnement plus sûr et respectueux.
         </p>
       </div>
       <Separateur />
 
       <p className="texte">
           <b>Sources :</b> Crous, 
-          Ministère de l’Enseignement supérieur et de la Recherche, 
+          Ministère de l'Enseignement supérieur et de la Recherche, 
           SOS Homophobie, 
           Dépêche & enquêtes nationales,
-          Haut Conseil à l’Égalité (rapport 2024), 
+          Haut Conseil à l'Égalité (rapport 2024), 
           Service-public.fr, 
           Question Sexualité, 
-          Ministère de l’Éducation nationale, 
+          Ministère de l'Éducation nationale, 
           Fondation Émergence, 
           LICRA, 
           Égalité contre le racisme, 

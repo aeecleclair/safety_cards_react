@@ -93,8 +93,8 @@ const Ecrans_reseaux = () => {
       <h1 className="titre">Addiction aux écrans</h1>
     </div>
       <div id="resume-conseils">
-      <p className="mise-avant">Les écrans sont conçus pour <b>capter ton attention</b> et, à forte dose, peuvent entraîner des problèmes de <b>sommeil</b>, de <b>concentration</b>, de <b>stress</b> ou encore d’<b>isolement social</b>.</p>
-      <p className="mise-avant">Pour éviter d’en être dépendant, tu peux essayer de trouver un équilibre en <b>fixant des limites</b>, en <b>coupant les notifications</b> et en privilégiant des <b>activités sans écran</b>.</p>
+      <p className="mise-avant">Les écrans sont conçus pour <b>capter ton attention</b> et, à forte dose, peuvent entraîner des problèmes de <b>sommeil</b>, de <b>concentration</b>, de <b>stress</b> ou encore d'<b>isolement social</b>.</p>
+      <p className="mise-avant">Pour éviter d'en être dépendant, tu peux essayer de trouver un équilibre en <b>fixant des limites</b>, en <b>coupant les notifications</b> et en privilégiant des <b>activités sans écran</b>.</p>
       </div>
       <ImageTextPopup
           image="./assets/cartes/6_pique.png"
@@ -107,7 +107,7 @@ const Ecrans_reseaux = () => {
          
           
       <p className="sous-titre-2"> Les effets des écrans</p>
-      <p className="texte"> Les écrans captent ton attention, souvent sans que tu t’en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
+      <p className="texte"> Les écrans captent ton attention, souvent sans que tu t'en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
 
       
 
@@ -123,7 +123,7 @@ const Ecrans_reseaux = () => {
 
 
 <Quote 
-          text="Être toujours en ligne, c’est ne jamais être pleinement présent." 
+          text="Être toujours en ligne, c'est ne jamais être pleinement présent." 
         />
 
       <p className="texte">Si tu as <b>l'impression de</b> :</p>
@@ -193,12 +193,12 @@ const Ecrans_reseaux = () => {
 
       <div id="resume-conseils">
       <p className="mise-avant">Les réseaux sociaux créent une dépendance avec <b>likes</b>, <b>scroll infini</b> et <b>comparaisons constantes</b>.</p>
-      <p className="mise-avant">À forte dose, ils <b>nuisent à l’estime de soi et au bien-être mental</b>.</p>
+      <p className="mise-avant">À forte dose, ils <b>nuisent à l'estime de soi et au bien-être mental</b>.</p>
       </div>
 
 <p className="sous-titre-2">Les dangers des réseaux sociaux</p>
 <p className="texte">
-Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b>algorithmes sur-mesure</b> qui nous présentent toujours le contenu qu’on a envie de voir, nous poussant à revenir constamment nourrir notre <b>besoin de consommation visuelle</b>. Les notifications et les likes agissent comme des <b>récompenses instantanées</b>, créant une véritable <b>dépendance à la validation</b>. Et avec la possibilité de scroller à l'infini, il devient de plus en plus difficile de s’arrêter une fois qu’on a commencé à naviguer...
+Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b>algorithmes sur-mesure</b> qui nous présentent toujours le contenu qu'on a envie de voir, nous poussant à revenir constamment nourrir notre <b>besoin de consommation visuelle</b>. Les notifications et les likes agissent comme des <b>récompenses instantanées</b>, créant une véritable <b>dépendance à la validation</b>. Et avec la possibilité de scroller à l'infini, il devient de plus en plus difficile de s'arrêter une fois qu'on a commencé à naviguer...
 </p>
 
 
@@ -210,8 +210,8 @@ Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b
 <BulletList
   items={[
     "Perte de temps et procrastination",
-    "Comparaison permanente et baisse de l’estime de soi",
-    "Fatigue mentale due à la surcharge d’informations"
+    "Comparaison permanente et baisse de l'estime de soi",
+    "Fatigue mentale due à la surcharge d'informations"
   ]}
 />
 
@@ -223,17 +223,17 @@ Les réseaux sociaux savent parfaitement capter notre attention grâce à des <b
     "Heures perdues à scroller",
     "Mal-être sans réactions sur tes posts",
     "Comparaison constante aux autres",
-    "Sensation d’isolement sans accès aux réseaux"
+    "Sensation d'isolement sans accès aux réseaux"
   ]}
 />
 
 <p className="texte">Les réseaux sociaux ont sûrement trop de pouvoir sur toi.</p>
 
 <Quote
-  text="Ce que tu vois en ligne, c’est du montage, pas la réalité."
+  text="Ce que tu vois en ligne, c'est du montage, pas la réalité."
 />
 
-<p className="texte"><b>Comparer ton apparence</b> ou ton quotidien aux vies parfaites des autres peut vite te faire douter de toi, affecter ton moral et même amplifier des troubles comme l’<b>anxiété</b> ou les <b>troubles du comportement alimentaire</b> (TCA). Les standards irréalistes diffusés sur les réseaux déforment la <b>perception de soi</b> et créent une pression inutile. Prends du recul : ces images sont filtrées, retouchées et ne reflètent <b>pas la réalité</b>. Ce qui compte, c’est ton bien-être, pas un idéal inatteignable.</p>
+<p className="texte"><b>Comparer ton apparence</b> ou ton quotidien aux vies parfaites des autres peut vite te faire douter de toi, affecter ton moral et même amplifier des troubles comme l'<b>anxiété</b> ou les <b>troubles du comportement alimentaire</b> (TCA). Les standards irréalistes diffusés sur les réseaux déforment la <b>perception de soi</b> et créent une pression inutile. Prends du recul : ces images sont filtrées, retouchées et ne reflètent <b>pas la réalité</b>. Ce qui compte, c'est ton bien-être, pas un idéal inatteignable.</p>
 
 <ExternalLinkBlock 
   resources={resources3}

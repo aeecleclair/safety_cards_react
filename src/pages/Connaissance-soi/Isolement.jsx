@@ -23,12 +23,12 @@ import { label } from "framer-motion/client";
 // Liens d'ancrage internes pour la barre de navigation de la page
 const navLinks = [
   { label: "Comprendre la solitude", target: "comprendre" },
-  { label: "Rompre l’isolement", target: "rompre" },
-  { label: "Besoin d’aide", target: "aide" },
+  { label: "Rompre l'isolement", target: "rompre" },
+  { label: "Besoin d'aide", target: "aide" },
   { label: "Aider une personne isolée", target: "aider" },
 ];
 
-// Quelques chiffres clés issus de l’enquête IFOP & données Centrale Lyon (État de l’art)
+// Quelques chiffres clés issus de l'enquête IFOP & données Centrale Lyon (État de l'art)
 const chiffresIsolement = [
   {
     number: "28%",
@@ -43,7 +43,7 @@ const chiffresIsolement = [
   {
     number: "55,8%",
     title: "des étudiant·e·s internationaux",
-    description: "fréquentent les soirées centraliennes moins d’une fois par trimestre",
+    description: "fréquentent les soirées centraliennes moins d'une fois par trimestre",
   },
 ];
 
@@ -51,7 +51,7 @@ const depression = [
   {
     link: "/depression",
     label: "Dépression",
-    description: "Tu ressens perte d’intérêt, tristesse, fatigue, troubles du sommeil ou de l’appétit ?",
+    description: "Tu ressens perte d'intérêt, tristesse, fatigue, troubles du sommeil ou de l'appétit ?",
     emoji: "🥺",
   },
   {
@@ -71,7 +71,7 @@ const resources_conf = [
   },
 ];
 
-// Plan d’action pour se (re)connecter
+// Plan d'action pour se (re)connecter
 const actionsRompre = [
   {
     title: "Identifier",
@@ -82,12 +82,12 @@ const actionsRompre = [
     subtitle: "Par exemple : déjeuner une fois cette semaine avec un·e camarade ou participer à un événement associatif",
   },
   {
-    title: "T’exposer progressivement",
+    title: "T'exposer progressivement",
     subtitle: "Choisis des environnements bienveillants : permanences associatives, bibliothèque, Skylab, etc.",
   },
   {
     title: "Demander du renfort",
-    subtitle: "Ton parrain ou ta marraine, des ami·e·s que tu as déjà, l'infirmière ou l'assistant·e social·e peuvent t’épauler",
+    subtitle: "Ton parrain ou ta marraine, des ami·e·s que tu as déjà, l'infirmière ou l'assistant·e social·e peuvent t'épauler",
   },
   {
     title: "Entretenir le lien",
@@ -149,7 +149,7 @@ const Isolement = () => {
         />
 
         <p className="texte">
-          L’étude IFOP 2024 révèle que <b>plus d’un quart des étudiants</b> se déclarent
+          L'étude IFOP 2024 révèle que <b>plus d'un quart des étudiants</b> se déclarent
           toujours ou souvent isolés. Les données internes confirment cette tendance,
           en particulier chez les élèves internationaux et en année de césure.
         </p>
@@ -157,7 +157,7 @@ const Isolement = () => {
       </div>
 
       <h2 className="sous-titre-2">Tu te sens seul·e sans raison apparente ?</h2>
-      <p className="texte">La solitude peut être un <b>symptôme de mal-être plus profond</b> (stress, anxiété, dépression). Si tu ressens d’autres signes (tristesse, fatigue, irritabilité, troubles du sommeil ou de l’appétit…), n’hésite pas à consulter un·e professionnel·le de santé.
+      <p className="texte">La solitude peut être un <b>symptôme de mal-être plus profond</b> (stress, anxiété, dépression). Si tu ressens d'autres signes (tristesse, fatigue, irritabilité, troubles du sommeil ou de l'appétit…), n'hésite pas à consulter un·e professionnel·le de santé.
       </p>
 
       <ExternalLinkBlock resources={depression} />
@@ -166,10 +166,10 @@ const Isolement = () => {
       <Separateur />
 
       <div id="rompre">
-        <h1 className="titre">Rompre l’isolement</h1>
+        <h1 className="titre">Rompre l'isolement</h1>
 <p className="texte">
-          Se reconnecter ne signifie pas devenir extraverti·e. Il s’agit d’<b>introduire de petites interactions régulières</b> dans ton planning.
-          Voici un plan d’action progressif :
+          Se reconnecter ne signifie pas devenir extraverti·e. Il s'agit d'<b>introduire de petites interactions régulières</b> dans ton planning.
+          Voici un plan d'action progressif :
         </p>
 
         <ListeNumerotee title="5 étapes pour briser la solitude" items={actionsRompre} />
@@ -184,16 +184,16 @@ const Isolement = () => {
       <Separateur />
 
       <div id="aide">
-        <h1 className="titre">Besoin d’en parler ?</h1>
+        <h1 className="titre">Besoin d'en parler ?</h1>
         <p className="texte">
           Parler de ton ressenti est souvent le premier pas pour aller mieux. Ces
-          services sont gratuits, anonymes et à l’écoute 7j/7 :
+          services sont gratuits, anonymes et à l'écoute 7j/7 :
         </p>
 
         <ContactCard
           image="/assets/nightline_logo.png"
           title="Nightline Lyon"
-          subtitle="Service d’écoute nocturne par et pour les étudiant·e·s"
+          subtitle="Service d'écoute nocturne par et pour les étudiant·e·s"
           phone="04 85 30 00 10"
           hours="Tous les soirs de 21h à 2h30"
           textButton="Voir le site web"
@@ -216,14 +216,14 @@ const Isolement = () => {
       <h1 className="titre">Aider une personne isolée</h1>
       </div>
       <p className="texte">
-        Tu connais une personne qui semble isolée ? Voici quelques conseils pour l’aider à se (re)connecter :
+        Tu connais une personne qui semble isolée ? Voici quelques conseils pour l'aider à se (re)connecter :
       </p>
 
       <BulletList
         items={[
           "Prends des nouvelles régulièrement, même un simple message peut faire la différence.",
           "Propose des activités ensemble : une sortie, un café, ou même une visio.",
-          "Sois à l’écoute sans juger, laisse-la exprimer ses ressentis.",
+          "Sois à l'écoute sans juger, laisse-la exprimer ses ressentis.",
           "Encourage-la à participer à des événements ou à rejoindre des groupes.",
           "Sois patient·e, le processus d'intégration sociale peut prendre du temps, et chacun avance à son rythme.",
           ]}

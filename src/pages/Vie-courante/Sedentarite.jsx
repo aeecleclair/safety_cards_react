@@ -37,7 +37,7 @@ const conseilsBouger = [
   },
   { 
     title: "Fixer des objectifs progressifs", 
-    subtitle: "Commence par 10 minutes d’activité par jour et vise progressivement 150 minutes par semaine, comme recommandé par l’OMS." 
+    subtitle: "Commence par 10 minutes d'activité par jour et vise progressivement 150 minutes par semaine, comme recommandé par l'OMS." 
   },
   { 
     title: "Limiter le temps écran loisir", 
@@ -74,7 +74,7 @@ const ressourcesInfos = [
     link: "https://www.anses.fr/fr/content/inactivite-physique-et-sedentarite-chez-les-jeunes-lanses-alerte-les-pouvoirs-publics",
     imageSrc:"/assets/ANSES.png",
     label: "ANSES",
-    description: "Rapports et recommandations sur l’activité physique des jeunes"
+    description: "Rapports et recommandations sur l'activité physique des jeunes"
   },
   {
     link: "/sport",
@@ -86,7 +86,7 @@ const ressourcesInfos = [
 
 const chiffresSedentarite = [
   { number: "7h+", title: "Temps moyen assis", description: "Chez les étudiant·e·s et jeunes adultes en France, chaque jour" },
-  { number: "30%", title: "des jeunes", description: "Ne respectent pas les recommandations minimales d’activité physique" },
+  { number: "30%", title: "des jeunes", description: "Ne respectent pas les recommandations minimales d'activité physique" },
   { number: "150 min", title: "d'activité physique modérée", description: "par semaine pour rester en bonne santé (recommandation OMS)" }
 ];
 
@@ -113,8 +113,8 @@ const Sedentarite = () => {
 
       <p className="texte">
         La <b>sédentarité</b> correspond au temps passé assis ou allongé en dehors des heures de sommeil. 
-        Elle se distingue de l’<b>inactivité physique</b> : on peut pratiquer du sport et rester sédentaire 
-        si l’on passe de longues heures assis à son bureau. 
+        Elle se distingue de l'<b>inactivité physique</b> : on peut pratiquer du sport et rester sédentaire 
+        si l'on passe de longues heures assis à son bureau. 
         Elle est définie par une dépense énergétique faible (par exemple : travail assis, temps écran, transport passif).
       </p>
 
@@ -123,7 +123,7 @@ const Sedentarite = () => {
         items={[
           "Maladies cardiovasculaires (hypertension, infarctus), diabète de type 2",
           "Cancers (côlon, sein…) associés à de longues périodes assises",
-          "Surpoids et obésité, indépendamment de l’alimentation",
+          "Surpoids et obésité, indépendamment de l'alimentation",
           "Troubles musculo-squelettiques (maux de dos, douleurs articulaires)",
           "Impact sur la santé mentale : anxiété, humeur dépressive, fatigue",
           "Altérations cardiaques détectées chez les jeunes adultes très sédentaires"
@@ -154,20 +154,20 @@ const Sedentarite = () => {
 
       <ExternalLinkBlock resources={ecrans} />
 
-      <h2 className="sous-titre-2">Comment intégrer l’activité dans ton quotidien ?</h2>
+      <h2 className="sous-titre-2">Comment intégrer l'activité dans ton quotidien ?</h2>
 
       <ListeNumerotee 
         title="Astuces simples pour réduire la sédentarité" 
-        subtitle="Inspirées des recommandations de l’OMS et de l’ANSES" 
+        subtitle="Inspirées des recommandations de l'OMS et de l'ANSES" 
         items={conseilsBouger}
       />
 
       <p className="texte">  
-        L’OMS recommande 150 à 300 minutes par semaine d’activité modérée (marche rapide, vélo tranquille, danse) ou 75 à 150 minutes d’activité intense (course, sport collectif). 
-        Pour les jeunes (11-17 ans), il est recommandé au moins 60 minutes d’activité physique quotidienne, et de limiter le temps assis prolongé.
+        L'OMS recommande 150 à 300 minutes par semaine d'activité modérée (marche rapide, vélo tranquille, danse) ou 75 à 150 minutes d'activité intense (course, sport collectif). 
+        Pour les jeunes (11-17 ans), il est recommandé au moins 60 minutes d'activité physique quotidienne, et de limiter le temps assis prolongé.
       </p>
 
-      <h2 className="sous-titre-2">Quelques idées d’activités</h2>
+      <h2 className="sous-titre-2">Quelques idées d'activités</h2>
 
       Si tu es à Centrale, tu peux profiter des installations sportives du campus (terrains de tennis et padel, salle de musculation, etc.) en dehors des créneaux d'EPS obligatoires. A côté du campus, tu peux te promener dans le bois de Serre pour profiter un peu de la nature. Sur Lyon, de nombreux événements sont organisés. Tu peux en retrouver l'essentiel en accédant aux 2 premières ressources ci-dessous. Si tu es en manque d'inspiration, découvre de nombreuses idées d'activités sur le site Manger Bouger.
 

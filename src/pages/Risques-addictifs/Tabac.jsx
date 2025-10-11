@@ -19,8 +19,8 @@ const navLinks = [
 
 const conseils = [
   { subtitle: "Fixe-toi des limites et note tes consommations" },
-  { subtitle: "Évite de fumer au réveil : c’est le moment le plus addictif" },
-  { subtitle: "Hydrate-toi régulièrement et fais du sport pour réduire l’envie" },
+  { subtitle: "Évite de fumer au réveil : c'est le moment le plus addictif" },
+  { subtitle: "Hydrate-toi régulièrement et fais du sport pour réduire l'envie" },
   { subtitle: "Ne compense pas par le vapotage excessif : la nicotine reste addictive" },
 ];
 
@@ -84,7 +84,7 @@ const Tabac = () => {
       </div>
     
       <div id="resume-conseils">
-        <p className="mise-avant">La cigarette entraîne une <b>dépendance à la nicotine</b>. Si le vapotage semble moins nocif que le tabac, il n’est pas sans risque, surtout pour les cigarettes électroniques contenant de la nicotine. Le tabagisme reste la première cause de <b>maladies évitables</b> en France et impacte aussi la vie sociale, les études et l’avenir.</p>
+        <p className="mise-avant">La cigarette entraîne une <b>dépendance à la nicotine</b>. Si le vapotage semble moins nocif que le tabac, il n'est pas sans risque, surtout pour les cigarettes électroniques contenant de la nicotine. Le tabagisme reste la première cause de <b>maladies évitables</b> en France et impacte aussi la vie sociale, les études et l'avenir.</p>
       </div>
 
       <h2 className="sous-titre-2">Quels sont les effets et risques du tabac ?</h2>
@@ -93,7 +93,7 @@ const Tabac = () => {
         image="/assets/cartes/as_trefle.png"
         title="La carte A♣"
         shortText="Prévention sur la consommation de tabac"
-        longText="Une consommation régulière de tabac ou de nicotine mène très souvent à une dépendance. Elle se traduit par un besoin impérieux de fumer ou de vapoter, une difficulté à arrêter et des symptômes de manque (irritabilité, anxiété, troubles du sommeil). Plus tôt tu agis, plus il est facile de réduire ou d’arrêter."
+        longText="Une consommation régulière de tabac ou de nicotine mène très souvent à une dépendance. Elle se traduit par un besoin impérieux de fumer ou de vapoter, une difficulté à arrêter et des symptômes de manque (irritabilité, anxiété, troubles du sommeil). Plus tôt tu agis, plus il est facile de réduire ou d'arrêter."
         textButton="⤢ Agrandir la carte"
       />
 
@@ -122,7 +122,7 @@ const Tabac = () => {
       <ChiffresGroup chiffres={data2} />
 
       <h2 className="sous-titre-2">Le tabagisme passif</h2>
-      <p className="texte">Fumer ou vapoter à proximité d’autres personnes <b>les expose aux substances toxiques</b>. Le tabagisme passif est responsable de nombreux problèmes de santé, notamment chez les enfants et les personnes vulnérables :</p>
+      <p className="texte">Fumer ou vapoter à proximité d'autres personnes <b>les expose aux substances toxiques</b>. Le tabagisme passif est responsable de nombreux problèmes de santé, notamment chez les enfants et les personnes vulnérables :</p>
       <BulletList items={[
     "Irritations des yeux, du nez et de la gorge",
     "Toux, essoufflement et risque accru d'infections respiratoires",
@@ -139,7 +139,7 @@ const Tabac = () => {
       </div>
 
       <div id='resume-conseils'>
-        <p className="mise-avant">La consommation de tabac ou l’usage de la cigarette électronique peuvent être motivés par la curiosité, la gestion du stress, l’habitude sociale ou la dépendance. Mais <b>réfléchir à ses raisons</b> et <b>se fixer des objectifs</b> est essentiel pour reprendre le contrôle et protéger sa santé.</p>
+        <p className="mise-avant">La consommation de tabac ou l'usage de la cigarette électronique peuvent être motivés par la curiosité, la gestion du stress, l'habitude sociale ou la dépendance. Mais <b>réfléchir à ses raisons</b> et <b>se fixer des objectifs</b> est essentiel pour reprendre le contrôle et protéger sa santé.</p>
       </div>
 
 
@@ -147,19 +147,19 @@ const Tabac = () => {
       <h2 className="sous-titre-2">Pourquoi je fume ou je vape ?</h2>
       <BulletList items={[
     "Curiosité ou influence des pairs",
-    "Gestion du stress ou de l’anxiété",
+    "Gestion du stress ou de l'anxiété",
     "Habitude sociale (pause clope, soirées)",
     "Dépendance physique à la nicotine",
-    "Fausse impression que la vape n’est pas nocive"
+    "Fausse impression que la vape n'est pas nocive"
 ]} />
 
       <ExternalLinkBlock resources={resources5} />
 
       <Quote
-        text="« J’arrêterai quand je veux, pour l’instant ce n’est pas grave. »"
+        text="« J'arrêterai quand je veux, pour l'instant ce n'est pas grave. »"
       />
 
-      <p className="texte">Il est courant de sous-estimer la dépendance. Mais plus on commence tôt, plus il est difficile d’arrêter. La nicotine agit sur le cerveau et <b>renforce rapidement l’envie de fumer ou de vapoter</b>. Les effets négatifs se voient parfois après plusieurs années, mais la dépendance s’installe dès les premières semaines.</p>
+      <p className="texte">Il est courant de sous-estimer la dépendance. Mais plus on commence tôt, plus il est difficile d'arrêter. La nicotine agit sur le cerveau et <b>renforce rapidement l'envie de fumer ou de vapoter</b>. Les effets négatifs se voient parfois après plusieurs années, mais la dépendance s'installe dès les premières semaines.</p>
 
       <h2 className="sous-titre-2">Je fume régulièrement (tabac ou vapotage) </h2>
 
@@ -171,27 +171,27 @@ const Tabac = () => {
         textButton="⤢ Agrandir la carte"
       />
 
-      <p className="texte">Voici quelques signes d’une dépendance installée :</p>
+      <p className="texte">Voici quelques signes d'une dépendance installée :</p>
       <BulletList items={[
     "Besoin de fumer/vapoter dès le matin",
     "Difficulté à passer une journée sans nicotine",
     "Envie irrépressible en situation de stress",
     "Symptômes de manque quand tu arrêtes (irritabilité, nervosité)",
-    "Échec répété des tentatives d’arrêt"
+    "Échec répété des tentatives d'arrêt"
 ]} />
 
       
       <h2 className="sous-titre-2">Je souhaite réduire ma consommation</h2>
-      <p className="texte">Réduire sa consommation de tabac ou de vapotage est un premier pas important. Voici quelques conseils pour t’aider dans cette démarche :</p>
+      <p className="texte">Réduire sa consommation de tabac ou de vapotage est un premier pas important. Voici quelques conseils pour t'aider dans cette démarche :</p>
       <ListeNumerotee title="Réduire les risques liés au tabac et au vapotage" items={conseils} />
 
-      <p className="texte"><b>Arrêter seul·e est difficile</b>, mais des ressources existent pour accompagner ta démarche. Tu n’as pas à avoir honte d’en parler : chaque tentative compte et augmente tes chances de succès.</p>
+      <p className="texte"><b>Arrêter seul·e est difficile</b>, mais des ressources existent pour accompagner ta démarche. Tu n'as pas à avoir honte d'en parler : chaque tentative compte et augmente tes chances de succès.</p>
 
       <p className="texte">Si tu souhaites arrêter de fumer, ne pas te sentir seul·e est important. Le <b>Mois sans tabac</b> est une campagne nationale qui a lieu chaque année en novembre. Elle vise à encourager les fumeurs à arrêter de fumer en leur proposant des ressources et un accompagnement. C'est l'occasion pour rencontrer et participer à des activités de soutien avec des personnes dans la même situation. </p>
 
      <ExternalLinkBlock resources={resources2} />
 
-      <h1 className="sous-titre-2">Besoin d’en parler ?</h1>
+      <h1 className="sous-titre-2">Besoin d'en parler ?</h1>
 
       <ContactCard
         image="assets/tabacinfoservice.png"
@@ -228,14 +228,14 @@ const Tabac = () => {
       <div id='resume-conseils'>
         <p className="mise-avant">Si tu vois un·e proche fumer ou vapoter de plus en plus, parle-lui <b>avec bienveillance</b> et encourage-le/la à chercher du soutien, <b>sans jugement</b>. Ton écoute et ton aide peuvent être décisives.</p>
       </div>
-      <p className="texte">Parler de consommation de tabac ou de vape peut être délicat. L’important est de <b>montrer que tu te soucies de son bien-être</b> et de l’accompagner dans sa démarche s’il/elle souhaite réduire ou arrêter.</p>
+      <p className="texte">Parler de consommation de tabac ou de vape peut être délicat. L'important est de <b>montrer que tu te soucies de son bien-être</b> et de l'accompagner dans sa démarche s'il/elle souhaite réduire ou arrêter.</p>
 
       <p className="texte">Si un·e ami·e se confie à toi sur sa consommation et son envie d'arrêter, apporte-lui ton soutien. L'encourager, le/la féliciter et lui rappeler que chaque petit pas compte <b>est essentiel</b>. Tu peux aussi l'encourager à chercher des ressources ou à en parler à un·e professionnel·le, ou à participer à des groupes de parole ou des opérations comme le Mois sans Tabac.</p>
 
 
       <Separateur />
 
-      <p className="texte"><em><b>Sources :</b> Tabac Info Service, Addict’Aide, Santé Publique France, Cancer Environnement</em></p>
+      <p className="texte"><em><b>Sources :</b> Tabac Info Service, Addict'Aide, Santé Publique France, Cancer Environnement</em></p>
     </div>
   );
 };

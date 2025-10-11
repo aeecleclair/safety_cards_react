@@ -75,7 +75,7 @@ const resources2 = [
     link: "https://www.addictaide.fr/",
     imageSrc: "/assets/addictaide.jpg",
     label: "Addict'aide",
-    description: "Trouve des outils et des ressources pour ne plus être seul·e face à l’addiction",
+    description: "Trouve des outils et des ressources pour ne plus être seul·e face à l'addiction",
   },
   {
     link: "https://addictions-france.org/etablissements/",
@@ -135,12 +135,12 @@ const Alcool = () => {
 
         <h2 className="sous-titre-2">Quels sont les effets de l'alcool ?</h2>
 
-      <p className="texte">On considère qu’une personne est sous l’effet de l’alcool si elle ressent <b>plusieurs de ces symptômes</b>, quasi systématiquement et <b>pendant plusieurs heures après consommation</b> :</p>
+      <p className="texte">On considère qu'une personne est sous l'effet de l'alcool si elle ressent <b>plusieurs de ces symptômes</b>, quasi systématiquement et <b>pendant plusieurs heures après consommation</b> :</p>
       <BulletList items={[
     "Troubles de la coordination",
     "Altération du jugement et risques",
     "Difficultés de concentration",
-    "Modification de l’humeur (euphorie, agressivité)",
+    "Modification de l'humeur (euphorie, agressivité)",
     "Ralentissement des réflexes",
     "Fatigue, nausées et vertiges"
 ]} />
@@ -178,7 +178,7 @@ const Alcool = () => {
 <TextImageRight
   text={
     <>
-      Choisir de consommer au-delà de ses limites, ce n'est pas seulement assumer ce qu'on se fait à soi-même, c'est aussi assumer <b>sa responsabilité envers les autres</b>. L’alcool ne doit pas être une excuse et ne justifie en aucun cas des comportements inappropriés ou dangereux. <b>Aux yeux de la loi, la consommation d'alcool est un facteur aggravant</b>.
+      Choisir de consommer au-delà de ses limites, ce n'est pas seulement assumer ce qu'on se fait à soi-même, c'est aussi assumer <b>sa responsabilité envers les autres</b>. L'alcool ne doit pas être une excuse et ne justifie en aucun cas des comportements inappropriés ou dangereux. <b>Aux yeux de la loi, la consommation d'alcool est un facteur aggravant</b>.
     </>
   }
   imageSrc="/assets/justice.png"
@@ -233,9 +233,9 @@ const Alcool = () => {
         text="Les meilleures soirées sont celles dont tu te souviens." 
       />
       <p className="texte"> 
-      Boire un verre entre amis, c'est bien... Savoir s'arrêter, c'est mieux ! Le binge drinking désigne une <b>consommation excessive et rapide</b> d'alcool dans le but d’<b>atteindre l'ivresse</b> en un minimum de temps. Ce phénomène, particulièrement répandu en soirée et présent sous forme de <b>jeux et défis</b>, expose à de nombreux risques : perte de contrôle, comportements dangereux, coma éthylique, voire des conséquences graves sur la santé à long terme. En plus des dangers physiques, il peut aussi entraîner des troubles du comportement et des accidents. Même une <b>grosse cuite occasionnelle</b> peut abîmer ton coeur et provoquer un AVC.</p>
+      Boire un verre entre amis, c'est bien... Savoir s'arrêter, c'est mieux ! Le binge drinking désigne une <b>consommation excessive et rapide</b> d'alcool dans le but d'<b>atteindre l'ivresse</b> en un minimum de temps. Ce phénomène, particulièrement répandu en soirée et présent sous forme de <b>jeux et défis</b>, expose à de nombreux risques : perte de contrôle, comportements dangereux, coma éthylique, voire des conséquences graves sur la santé à long terme. En plus des dangers physiques, il peut aussi entraîner des troubles du comportement et des accidents. Même une <b>grosse cuite occasionnelle</b> peut abîmer ton coeur et provoquer un AVC.</p>
       
-      <p className="texte">La vraie bonne soirée, c’est celle dont tu te souviens et où tu restes maître de tes choix. Bois à ton rythme, écoute-toi, et pense à demain !</p>
+      <p className="texte">La vraie bonne soirée, c'est celle dont tu te souviens et où tu restes maître de tes choix. Bois à ton rythme, écoute-toi, et pense à demain !</p>
 
 
       <p>Rappelle-toi que tu ne devrais jamais te sentir <b>forcé·e à boire</b>, encore moins de manière excessive. Cela est même <b>puni par la loi</b>.</p>

@@ -12,7 +12,7 @@ import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeV
 const navLinks = [
   { label: "Comprendre", target: "definition" },
   { label: "Je suis concerné·e", target: "personne-concernee" },
-  { label: "J’accompagne", target: "accompagnant" }
+  { label: "J'accompagne", target: "accompagnant" }
 ];
 
 const chiffresSexualite = [
@@ -27,7 +27,7 @@ const contraceptionInfos = [
   "Stérilet (DIU) hormonal ou en cuivre",
   "Implant, injection contraceptive",
   "Méthodes naturelles (moins fiables)",
-  "Contraception d’urgence (pilule du lendemain)"
+  "Contraception d'urgence (pilule du lendemain)"
 ];
 
 
@@ -37,7 +37,7 @@ const resources_Autres_pages = [
     link: "/ivg",
     emoji : "??",
     label: "IVG",
-    description: "Tout savoir sur l’interruption volontaire de grossesse et les accompagnements possibles",
+    description: "Tout savoir sur l'interruption volontaire de grossesse et les accompagnements possibles",
   },
 
   {
@@ -65,7 +65,7 @@ const ressourcesGenerales = [
     link: "https://www.questionsexualite.fr/",
     imageSrc: "/assets/question_sexualite.png",
     label: "Question Sexualité",
-    description: "Réponses d’experts sur la santé sexuelle"
+    description: "Réponses d'experts sur la santé sexuelle"
   }
 ];
 
@@ -93,11 +93,11 @@ const ressourcesAide = [
 const accompagnementInfos = [
   {
     title: "Écouter sans juger",
-    subtitle: "Laisse la personne s’exprimer librement. Adopte une posture bienveillante, quel que soit le sujet (orientation, contraception, infection, IVG…)."
+    subtitle: "Laisse la personne s'exprimer librement. Adopte une posture bienveillante, quel que soit le sujet (orientation, contraception, infection, IVG…)."
   },
   {
-    title: "Respecter l’intimité",
-    subtitle: "Tout le monde n’a pas envie d’en parler. Sois attentif·ve à la limite entre aider et s’imposer."
+    title: "Respecter l'intimité",
+    subtitle: "Tout le monde n'a pas envie d'en parler. Sois attentif·ve à la limite entre aider et s'imposer."
   },
   {
     title: "Informer avec des sources fiables",
@@ -187,7 +187,7 @@ const Sexualite = () => {
           textButton="⤢ Voir la carte"
         />
         <p className="texte">
-          La sexualité est une composante naturelle et intime de notre vie. S’informer sur les différentes pratiques, les moyens de contraception et la prévention permet de vivre une sexualité libre, respectueuse et responsable.
+          La sexualité est une composante naturelle et intime de notre vie. S'informer sur les différentes pratiques, les moyens de contraception et la prévention permet de vivre une sexualité libre, respectueuse et responsable.
         </p>
         <BulletList items={contraceptionInfos} />
 
@@ -263,7 +263,7 @@ const Sexualite = () => {
       <div id="personne-concernee">
         <h1 className="titre">Je suis concerné·e</h1>
         <p className="texte">
-        Tu te poses des questions sur ta sexualité, ton orientation, tes pratiques, ou tu vis une situation particulière (grossesse, IST, IVG…) ? Tu n’es pas seul·e. Des professionnel·le·s formé·e·s sont là pour t’écouter, t’informer et t’accompagner sans jugement, à ton rythme.
+        Tu te poses des questions sur ta sexualité, ton orientation, tes pratiques, ou tu vis une situation particulière (grossesse, IST, IVG…) ? Tu n'es pas seul·e. Des professionnel·le·s formé·e·s sont là pour t'écouter, t'informer et t'accompagner sans jugement, à ton rythme.
         </p>
 
       <ContactCard
@@ -283,7 +283,7 @@ const Sexualite = () => {
             <ContactCard
               image="/assets/fsj.png"
               title="Fil Santé Jeunes"
-              subtitle="Anonyme, gratuit et à l’écoute"
+              subtitle="Anonyme, gratuit et à l'écoute"
               phone="0 800 235 236"
               hours="7j/7, 9h-23h"
               textButton="Voir le site"
@@ -304,13 +304,13 @@ const Sexualite = () => {
         <div className="texte bloc-info">
           <h3>🛡️ Accès gratuit aux préservatifs</h3>
           <p>
-            Des préservatifs sont disponibles gratuitement à l’infirmerie de Centrale Lyon : n’hésite pas à en demander, c’est confidentiel et sans jugement.
-            Si tu as moins de 26 ans, tu peux également en obtenir gratuitement en pharmacie (internes et externes), sans ordonnance, grâce au dispositif de l’Assurance Maladie.
+            Des préservatifs sont disponibles gratuitement à l'infirmerie de Centrale Lyon : n'hésite pas à en demander, c'est confidentiel et sans jugement.
+            Si tu as moins de 26 ans, tu peux également en obtenir gratuitement en pharmacie (internes et externes), sans ordonnance, grâce au dispositif de l'Assurance Maladie.
           </p>
         </div>
 
         <ExternalLinkBlock
-          title="Besoin de plus d’infos ?"
+          title="Besoin de plus d'infos ?"
           subtitle="Des professionnels répondent à toutes les questions"
           resources={ressourcesAide}
         />
@@ -327,7 +327,7 @@ const Sexualite = () => {
       <Separateur />
 
       <div id="accompagnant">
-        <h1 className="titre">J’accompagne ou je suis témoin</h1>
+        <h1 className="titre">J'accompagne ou je suis témoin</h1>
         <p className="texte">
           Tu veux soutenir un·e ami·e, un·e proche dans une situation liée à sa sexualité ? Voici quelques réflexes pour accompagner sans juger ni imposer.
         </p>

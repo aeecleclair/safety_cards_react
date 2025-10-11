@@ -223,7 +223,7 @@ const PratiquesSexuellesDangereuses = () => {
 
       <Separateur />
 
-      <p className="texte"><em><b>Sources :</b> CRAFS, Santé Publique France, MAAD‑Digital, État de l’art Centrale Lyon</em></p>
+      <p className="texte"><em><b>Sources :</b> CRAFS, Santé Publique France, MAAD‑Digital, État de l'art Centrale Lyon</em></p>
     
     
       */}

@@ -33,7 +33,7 @@ const formesFrequentes = [
   "Diffusion de captures d'écran privées",
   "Propagation de rumeurs ou fausses informations",
   "Flood sur les réseaux ou plateformes étudiantes",
-  "Commentaires malveillants sur l’apparence, l’orientation, l’origine, le handicap…",
+  "Commentaires malveillants sur l'apparence, l'orientation, l'origine, le handicap…",
   "Sondages trolls ou moqueurs",
   "Exclusion volontaire de groupes ou événements numériques"
 ];
@@ -41,17 +41,17 @@ const formesFrequentes = [
 const signesAlerte = [
   "Messages malveillants reçus régulièrement",
   "Moqueries ou insultes dans un groupe de discussion",
-  "Exclusion inexpliquée d’un groupe ou d’un événement",
+  "Exclusion inexpliquée d'un groupe ou d'un événement",
   "Découverte de contenus moqueurs à son sujet (mèmes, sondages…)",
-  "Stress ou anxiété à l’idée de consulter ses messages",
+  "Stress ou anxiété à l'idée de consulter ses messages",
   "Modification de son comportement : retrait, silence, évitement",
-  "Troubles du sommeil, de l’alimentation ou de la concentration"
+  "Troubles du sommeil, de l'alimentation ou de la concentration"
 ];
 
 const comportementsMinimises = [
-  "« C’est juste un mème, détends-toi ! »",
-  "« C’était une blague, t’as pas d’humour ? »",
-  "« C’est pas grave, tout le monde se fait tailler ici. »"
+  "« C'est juste un mème, détends-toi ! »",
+  "« C'était une blague, t'as pas d'humour ? »",
+  "« C'est pas grave, tout le monde se fait tailler ici. »"
 ];
 
 
@@ -59,7 +59,7 @@ const reconnaitrePoints = [
   "Messages insultants, moqueries, menaces répétées via réseaux sociaux ou messageries.",
   "Diffusion de photos ou vidéos humiliantes sans consentement.",
   "Création de faux profils pour nuire à quelqu'un.",
-  "Exclusion volontaire et répétée d’un groupe en ligne.",
+  "Exclusion volontaire et répétée d'un groupe en ligne.",
   "Partage de rumeurs, calomnies ou informations personnelles (doxing)."
 ];
 
@@ -77,24 +77,24 @@ const conseilsAction = [
     subtitle: "Utilisez les outils de signalement pour bloquer ou supprimer les contenus."
   },
   {
-    title: "Contactez une structure d’aide",
+    title: "Contactez une structure d'aide",
     subtitle: "Des dispositifs gratuits et anonymes existent pour vous accompagner."
   },
   {
     title: "Portez plainte si nécessaire",
-    subtitle: "Le cyberharcèlement est puni par la loi, même sans connaître l’identité du harceleur."
+    subtitle: "Le cyberharcèlement est puni par la loi, même sans connaître l'identité du harceleur."
   }
 ];
 
 const droitsVictimes = [
   "Déposer plainte, même sans connaître le harceleur.",
-  "Demander le retrait d’un contenu à une plateforme.",
-  "Contacter la CNIL en cas d’atteinte à la vie privée.",
-  "Être accompagné par un service d’aide ou un référent."
+  "Demander le retrait d'un contenu à une plateforme.",
+  "Contacter la CNIL en cas d'atteinte à la vie privée.",
+  "Être accompagné par un service d'aide ou un référent."
 ];
 
 const preuvesConserver = [
-  "Captures d’écran avec date et heure.",
+  "Captures d'écran avec date et heure.",
   "Messages, e-mails, commentaires conservés.",
   "Identifiants de comptes harceleurs (pseudo, lien, URL).",
   "Témoignages de personnes ayant assisté aux faits."
@@ -126,19 +126,19 @@ const ressourcesExterne = [
 
 const mythesCyberharcelement = [
   {
-    title: "« Ce n’est qu’une blague »",
-    subtitle: "L’humour ne doit pas blesser. Le ressenti de la victime est central."
+    title: "« Ce n'est qu'une blague »",
+    subtitle: "L'humour ne doit pas blesser. Le ressenti de la victime est central."
   },
   {
-    title: "« C’était privé »",
+    title: "« C'était privé »",
     subtitle: "Même en privé, des propos humiliants peuvent constituer un délit."
   },
   {
-    title: "« Je n’ai reçu qu’un message »",
-    subtitle: "Même un message isolé peut être puni par la loi (injure, menace, atteinte à la vie privée…), même s’il ne s’agit pas encore de cyberharcèlement."
+    title: "« Je n'ai reçu qu'un message »",
+    subtitle: "Même un message isolé peut être puni par la loi (injure, menace, atteinte à la vie privée…), même s'il ne s'agit pas encore de cyberharcèlement."
   },
   {
-    title: "« Ce n’est pas grave, ça va passer »",
+    title: "« Ce n'est pas grave, ça va passer »",
     subtitle: "Le cyberharcèlement a des conséquences graves."
   }
 ];
@@ -162,18 +162,18 @@ const Cyberharcelement = () => {
       />
 
         <p className="texte">
-          Le cyberharcèlement consiste en des agissements malveillants répétés, dans un cadre public ou restreint, qui peuvent prendre différentes formes : intimidations, insultes, menaces, rumeurs, publication de photos ou vidéos compromettantes, etc. Ils peuvent être le fait d’une seule personne ou de plusieurs individus et se dérouler sur les réseaux sociaux, messageries, forums, blogs, etc. Les conséquences du cyberharcèlement peuvent être dramatiques pour les victimes : dépression, décrochage scolaire ou professionnel, troubles psychologiques ou émotionnels, violence, suicide, etc. Le cyberharcèlement est puni par la loi qui prévoit de lourdes sanctions contre ses auteurs.
+          Le cyberharcèlement consiste en des agissements malveillants répétés, dans un cadre public ou restreint, qui peuvent prendre différentes formes : intimidations, insultes, menaces, rumeurs, publication de photos ou vidéos compromettantes, etc. Ils peuvent être le fait d'une seule personne ou de plusieurs individus et se dérouler sur les réseaux sociaux, messageries, forums, blogs, etc. Les conséquences du cyberharcèlement peuvent être dramatiques pour les victimes : dépression, décrochage scolaire ou professionnel, troubles psychologiques ou émotionnels, violence, suicide, etc. Le cyberharcèlement est puni par la loi qui prévoit de lourdes sanctions contre ses auteurs.
         </p>
       </div>
       <div id="constat">
         <h2 className="titre">Constat</h2>
         <p className="texte">
-          Le cyberharcèlement touche une partie importante de la population étudiante. Des dispositifs comme la charte « Cpas1OPTION » ou le programme PEER CARE existent. Le cyberharcèlement est une forme de harcèlement exercée via des outils numériques : réseaux sociaux, messageries, forums, e-mails, etc. Il s'agit d'attaques répétées visant à humilier, intimider, isoler ou nuire psychologiquement. Reconnu par la loi française (article 222-33-2-2 du Code pénal), il est aggravé en cas de harcèlement en groupe, sur un mineur ou une personne vulnérable, ou s’il pousse la victime à se suicider.
+          Le cyberharcèlement touche une partie importante de la population étudiante. Des dispositifs comme la charte « Cpas1OPTION » ou le programme PEER CARE existent. Le cyberharcèlement est une forme de harcèlement exercée via des outils numériques : réseaux sociaux, messageries, forums, e-mails, etc. Il s'agit d'attaques répétées visant à humilier, intimider, isoler ou nuire psychologiquement. Reconnu par la loi française (article 222-33-2-2 du Code pénal), il est aggravé en cas de harcèlement en groupe, sur un mineur ou une personne vulnérable, ou s'il pousse la victime à se suicider.
         </p>
         <ChiffresGroup chiffres={chiffresCyberharcelement} />
 
         <p className="texte">
-            Tout le monde peut être concerné par le cyberharcèlement, pas seulement les ados ou influenceurs. Étudiants, membres de BDE ou victimes silencieuses peuvent l’être. Il y a cependant des groupes plus exposés que les autres : personnes LGBTQIA+, racisées, non francophones, femmes, personnes en situation de handicap.
+            Tout le monde peut être concerné par le cyberharcèlement, pas seulement les ados ou influenceurs. Étudiants, membres de BDE ou victimes silencieuses peuvent l'être. Il y a cependant des groupes plus exposés que les autres : personnes LGBTQIA+, racisées, non francophones, femmes, personnes en situation de handicap.
         </p>
         
 
@@ -198,16 +198,16 @@ const Cyberharcelement = () => {
 
         <div id="mythes">
          <h2 className = "sous-titre-2">Idées reçues sur le cyberharcèlement</h2>
-          <ListeNumerotee title="Ce n’est pas une excuse" subtitle="Déconstruire les croyances" items={mythesCyberharcelement} />
+          <ListeNumerotee title="Ce n'est pas une excuse" subtitle="Déconstruire les croyances" items={mythesCyberharcelement} />
         </div>
       </div>
 
       <Separateur />
 
       <div id="signes">
-        <h2 className="titre">Signes d’alerte</h2>
+        <h2 className="titre">Signes d'alerte</h2>
         <p className="texte">
-          Certains comportements ou ressentis peuvent indiquer qu’on est victime de cyberharcèlement. Être attentif à ces signes permet de réagir à temps.
+          Certains comportements ou ressentis peuvent indiquer qu'on est victime de cyberharcèlement. Être attentif à ces signes permet de réagir à temps.
         </p>
         <BulletList items={signesAlerte} />
 
@@ -216,7 +216,7 @@ const Cyberharcelement = () => {
         </p>
         <BulletList items={comportementsMinimises} />
         <p className="texte">  
-          Même si l’intention semble légère, ce qui compte, c’est l’effet ressenti par la victime.
+          Même si l'intention semble légère, ce qui compte, c'est l'effet ressenti par la victime.
         </p>
 
       </div>
@@ -233,7 +233,7 @@ const Cyberharcelement = () => {
           <ContactCard
           image="/assets/3018.png" 
           title="3018"
-          subtitle="Cyberharcèlement,  harcèlement scolaire, revenge porn, chantage à la webcam, usurpation d’identité, VSS, exposition à des contenus violents. "
+          subtitle="Cyberharcèlement,  harcèlement scolaire, revenge porn, chantage à la webcam, usurpation d'identité, VSS, exposition à des contenus violents. "
           phone="3018"
           email=""
           hours="7j/7, de 9h à 23h"
@@ -308,7 +308,7 @@ const Cyberharcelement = () => {
       <Separateur />
 
       <p className="texte">
-        <em><b>Sources :</b> CNAÉ, e-Enfance, Nightline, Ministère de l’Enseignement supérieur, ONPV, Santé publique France</em>
+        <em><b>Sources :</b> CNAÉ, e-Enfance, Nightline, Ministère de l'Enseignement supérieur, ONPV, Santé publique France</em>
       </p>
     </div>
   );

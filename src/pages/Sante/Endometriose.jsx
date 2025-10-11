@@ -28,13 +28,13 @@ const ressources = [
     link: "https://www.endometriose.fr/",
     imageSrc: "/assets/endo.jpg",
     label: "EndoFrance",
-    description: "Association de soutien, d'information et de sensibilisation autour de l’endométriose",
+    description: "Association de soutien, d'information et de sensibilisation autour de l'endométriose",
   },
   {
     link: "https://sante.gouv.fr/soins-et-maladies/prises-en-charge-specialisees/endometriose/article/orientation-et-parcours-des-femmes-presentant-des-symptomes-d-endometriose",
     imageSrc: "/assets/sante-france.png",
     label: "Ministère de la Santé",
-    description: "Informations officielles sur l’endométriose, ses symptômes, les traitements et le parcours de soin",
+    description: "Informations officielles sur l'endométriose, ses symptômes, les traitements et le parcours de soin",
   },
 ];
 
@@ -60,13 +60,13 @@ const Endometriose = () => {
 
 
       <div id="resume-details">
-          <p className="mise-avant">Les douleurs menstruelles sont fréquentes et peuvent parfois être très intenses. <b>Si elles deviennent invalidantes, elles peuvent révéler un problème comme l’endométriose.</b> Il ne faut pas les minimiser et consulter un·e professionnel·le de santé.</p>
+          <p className="mise-avant">Les douleurs menstruelles sont fréquentes et peuvent parfois être très intenses. <b>Si elles deviennent invalidantes, elles peuvent révéler un problème comme l'endométriose.</b> Il ne faut pas les minimiser et consulter un·e professionnel·le de santé.</p>
       </div>
       <ImageTextPopup
         image="./assets/cartes/3_coeur.png"
         title="La carte 3♥"
         shortText="Une carte pour mieux comprendre cette maladie invisible"
-        longText="Une fois par mois, on esquisse un sourire pour garder la face devant les autres, alors qu’à l’intérieur, c’est la tempête. Tout peut sembler aller bien en apparence mais les douleurs menstruelles, souvent épuisantes voire invalidantes, ne sont jamais anodines. Ne les minimise pas : écoute ton corps, fais attention et n’hésite pas à consulter un·e professionnel·le de santé si la douleur te paraît inhabituelle."
+        longText="Une fois par mois, on esquisse un sourire pour garder la face devant les autres, alors qu'à l'intérieur, c'est la tempête. Tout peut sembler aller bien en apparence mais les douleurs menstruelles, souvent épuisantes voire invalidantes, ne sont jamais anodines. Ne les minimise pas : écoute ton corps, fais attention et n'hésite pas à consulter un·e professionnel·le de santé si la douleur te paraît inhabituelle."
         textButton="⤢ Agrandir la carte"
       />
 
@@ -91,16 +91,16 @@ const Endometriose = () => {
       <Separateur/>
 
       <div id="definition">
-        <h1 className="titre">Comprendre l’endométriose</h1>
+        <h1 className="titre">Comprendre l'endométriose</h1>
       </div>
 
         <div id="resume-conseils">
-          <p className="mise-avant">L’endométriose est une <b>maladie chronique</b> qui touche environ 1 femme sur 10 et provoque des douleurs souvent intenses et invalidantes. Les signes à surveiller : <b>règles très douloureuses</b>, <b>douleurs pendant les rapports</b>, <b>fatigue chronique</b>, <b>troubles digestifs ou urinaires</b>, etc.</p>
+          <p className="mise-avant">L'endométriose est une <b>maladie chronique</b> qui touche environ 1 femme sur 10 et provoque des douleurs souvent intenses et invalidantes. Les signes à surveiller : <b>règles très douloureuses</b>, <b>douleurs pendant les rapports</b>, <b>fatigue chronique</b>, <b>troubles digestifs ou urinaires</b>, etc.</p>
         </div>
       
 
       <p className="texte">
-      L’<b>endométriose</b> est une maladie gynécologique chronique qui reste encore mal connue. Elle se caractérise par la présence de tissu similaire à celui de l'endomètre (la muqueuse utérine) en dehors de l’utérus. Ce tissu réagit aux hormones de la même manière que l'endomètre, ce qui peut entraîner des <b>douleurs fortes</b>, particulièrement pendant les <b>règles</b>, mais aussi lors des <b>rapports sexuels</b>, en urinant, en allant à la selle, voire même en dehors des périodes de règles.
+      L'<b>endométriose</b> est une maladie gynécologique chronique qui reste encore mal connue. Elle se caractérise par la présence de tissu similaire à celui de l'endomètre (la muqueuse utérine) en dehors de l'utérus. Ce tissu réagit aux hormones de la même manière que l'endomètre, ce qui peut entraîner des <b>douleurs fortes</b>, particulièrement pendant les <b>règles</b>, mais aussi lors des <b>rapports sexuels</b>, en urinant, en allant à la selle, voire même en dehors des périodes de règles.
       </p>
 
 
@@ -128,7 +128,7 @@ const Endometriose = () => {
       </div>
 
       <p className="texte">
-        Si tu te reconnais dans les symptômes de l’endométriose, n’hésite pas à <b>en parler avec un·e professionnel·le de santé</b>. Il est important de ne pas minimiser ta douleur : tu n’es pas seule. Il existe des structures pour t’écouter, t’accompagner dans ton diagnostic ou dans ta prise en charge.
+        Si tu te reconnais dans les symptômes de l'endométriose, n'hésite pas à <b>en parler avec un·e professionnel·le de santé</b>. Il est important de ne pas minimiser ta douleur : tu n'es pas seule. Il existe des structures pour t'écouter, t'accompagner dans ton diagnostic ou dans ta prise en charge.
       </p>
 
 
@@ -147,7 +147,7 @@ const Endometriose = () => {
           />
         </div>
 
-        <p className="texte">Si tu manques de moyens pour te fournir des protections menstruelles, n’hésite pas à te rendre sur la page dédiée de ce site web, qui <b>répertorie</b> des associations ou des structures qui peuvent t’aider.</p>
+        <p className="texte">Si tu manques de moyens pour te fournir des protections menstruelles, n'hésite pas à te rendre sur la page dédiée de ce site web, qui <b>répertorie</b> des associations ou des structures qui peuvent t'aider.</p>
 
       <ExternalLinkBlock
         resources={[
@@ -174,7 +174,7 @@ const Endometriose = () => {
       </div>
 
       <p className="texte">
-        Tu connais une personne qui souffre de douleurs menstruelles intenses ou d’endométriose ? Ton soutien peut faire une vraie différence.</p>
+        Tu connais une personne qui souffre de douleurs menstruelles intenses ou d'endométriose ? Ton soutien peut faire une vraie différence.</p>
         
         <ListeNumerotee 
           title="Plan d'action pour aider une personne qui souffre de douleurs menstruelles"
@@ -186,7 +186,7 @@ const Endometriose = () => {
 
 
       <p className="texte">
-        L’endométriose, c’est aussi une maladie qui peut avoir un <b>impact fort sur la santé mentale</b>. Accompagner, c’est aussi parfois aider à trouver un·e thérapeute, ou simplement être présent·e.
+        L'endométriose, c'est aussi une maladie qui peut avoir un <b>impact fort sur la santé mentale</b>. Accompagner, c'est aussi parfois aider à trouver un·e thérapeute, ou simplement être présent·e.
       </p>
 
       <Separateur />

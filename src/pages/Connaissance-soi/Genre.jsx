@@ -249,7 +249,7 @@ const Genre = () => {
 
       <Separateur />
 
-      <Quote text="Ça ne vous dérange pas d’apprendre un surnom, alors pourquoi refuser un pronom ?" />
+      <Quote text="Ça ne vous dérange pas d'apprendre un surnom, alors pourquoi refuser un pronom ?" />
 
       <p className="texte sources">
         <em>

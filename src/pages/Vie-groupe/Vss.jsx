@@ -20,7 +20,7 @@ const navLinks = [
 
 const items_non = [
   { title: "La sidération", subtitle: "Lorsque le cerveau est soumis à une violence trop grande, on peut se sentir comme tétanisé·e, pétrifié·e. On ne peut pas crier, ni parler et dire non, ni bouger. Le cerveau se bloque et cela peut créer une amnésie traumatique. " },
-  { title: "La dissociation", subtitle: "C’est une forme de déconnexion entre l’esprit et la réalité, donnant l’impression de sortir de son propre corps. Ce mécanisme permet de réduire l’intensité des émotions sur le moment, afin de mieux faire face à une situation traumatisante. A posteriori, cela peut donner lieu à un discours sans émotion, puisque la victime voit la situation avec une distance. Pour autant, cela ne signifie pas que ce qu’elle a vécu n’est pas grave ou ne l’a pas touchée !" },
+  { title: "La dissociation", subtitle: "C'est une forme de déconnexion entre l'esprit et la réalité, donnant l'impression de sortir de son propre corps. Ce mécanisme permet de réduire l'intensité des émotions sur le moment, afin de mieux faire face à une situation traumatisante. A posteriori, cela peut donner lieu à un discours sans émotion, puisque la victime voit la situation avec une distance. Pour autant, cela ne signifie pas que ce qu'elle a vécu n'est pas grave ou ne l'a pas touchée !" },
   { title: "La banalisation des violences", subtitle: "En focntion du milieu dans lequel on a grandi et évolué, on peut percevoir certaines violences comme plus acceptables. Là encore, ce n'est pas parce que la personne exprime un détachement qu'il ne faut pas prendre sa situation au sérieux !" },
 
 ];
@@ -192,11 +192,11 @@ const Vss = () => {
          
       </p>
 
-      <BulletList items={["L’outrage sexiste (insulte ou geste sexuel offensant) est passible d’une amende (1 500 € en règle générale). ",
-"L’exhibition sexuelle (imposer un acte sexuel ou exhiber ses organes génitaux en public ou à la vue de tous) est puni d’un an d’emprisonnement et 15 000 € d’amende.",
-"Le harcèlement sexuel (commentaires sexuels répétés ou non, chantage, etc.) est réprimé par deux ans de prison et 30 000 € d’amende.",
-"L’agression sexuelle (atteinte sexuelle avec violence, contrainte, menace ou surprise) est un délit. On parle d’agression sexuelle si l’atteinte a lieu sur une partie du corps considérée comme intime et sexuelle (la bouche, la poitrine, le sexe, les fesses, les cuisses et l’intérieur des cuisses).",
-"Le viol (toute pénétration sexuelle forcée) est un crime puni jusqu’à 15 ans de réclusion criminelle (20 ans si circonstances aggravantes)."
+      <BulletList items={["L'outrage sexiste (insulte ou geste sexuel offensant) est passible d'une amende (1 500 € en règle générale). ",
+"L'exhibition sexuelle (imposer un acte sexuel ou exhiber ses organes génitaux en public ou à la vue de tous) est puni d'un an d'emprisonnement et 15 000 € d'amende.",
+"Le harcèlement sexuel (commentaires sexuels répétés ou non, chantage, etc.) est réprimé par deux ans de prison et 30 000 € d'amende.",
+"L'agression sexuelle (atteinte sexuelle avec violence, contrainte, menace ou surprise) est un délit. On parle d'agression sexuelle si l'atteinte a lieu sur une partie du corps considérée comme intime et sexuelle (la bouche, la poitrine, le sexe, les fesses, les cuisses et l'intérieur des cuisses).",
+"Le viol (toute pénétration sexuelle forcée) est un crime puni jusqu'à 15 ans de réclusion criminelle (20 ans si circonstances aggravantes)."
 ]} />
 
 
@@ -214,8 +214,8 @@ const Vss = () => {
       <TextImageRight  
         text={
         <>
-        La violence sexiste ne se limite pas aux agressions visibles et choquantes mais prend aussi de nombreuses formes, souvent banalisées, invisibles ou normalisées dans la vie quotidienne. C’est ce que met en lumière le modèle de l’iceberg de la violence sexiste.
-        Au sommet de l’iceberg, on trouve les violences qui sont reconnues par la société comme inacceptables, et clairement punies par la loi, et qui ont été évoquées en détail précédemment. Cela ne représente que la partie émergée d’un ensemble plus vaste
+        La violence sexiste ne se limite pas aux agressions visibles et choquantes mais prend aussi de nombreuses formes, souvent banalisées, invisibles ou normalisées dans la vie quotidienne. C'est ce que met en lumière le modèle de l'iceberg de la violence sexiste.
+        Au sommet de l'iceberg, on trouve les violences qui sont reconnues par la société comme inacceptables, et clairement punies par la loi, et qui ont été évoquées en détail précédemment. Cela ne représente que la partie émergée d'un ensemble plus vaste
         Sous la surface, on trouve une vaste zone de comportements qui ne sont pas toujours perçus comme de la violence, mais qui en constituent pourtant les racines. Ces actes, parfois considérés comme « anodins », alimentent un climat sexiste et facilitent les violences plus graves.
         <br/> On y trouve :
 
@@ -224,11 +224,11 @@ const Vss = () => {
         imageSrc="/assets/iceberg.jpg"
       />
 
-      <BulletList items={["Les blagues sexistes ou « graveleuses », en présence de la personne ou sur des groupes de discussion. Mais ce n’est pas « juste une blague », c’est un maillon d’une chaîne de violences.",
-        "Les remarques sur le physique et l’habillement",
+      <BulletList items={["Les blagues sexistes ou « graveleuses », en présence de la personne ou sur des groupes de discussion. Mais ce n'est pas « juste une blague », c'est un maillon d'une chaîne de violences.",
+        "Les remarques sur le physique et l'habillement",
         "Les sifflements, regards insistants, gestes intrusifs",
         "La minimisation ou le déni des violences (« Elle exagère »)",
-        "L’hypersexualisation des femmes dans les pubs, clips, jeux vidéo",
+        "L'hypersexualisation des femmes dans les pubs, clips, jeux vidéo",
         "Les injonctions de genre (« Une vraie femme doit être douce », « un homme ne pleure pas »)",
         "La culture du viol (Justification ou excuse des violences sexuelles par le comportement de la victime)"
 
@@ -273,9 +273,9 @@ const Vss = () => {
 
       <h2 className="sous-titre-2">Sur le moment, comment agir ?</h2>
       
-      <p className="texte"><b>Si tu subis une VSS, sache d’abord que ce n’est pas de ta faute.</b> Essaie de te <b>mettre en sécurité</b> (quitte les lieux, va chez un·e ami·e, appelle quelqu’un) et de rester entouré·e si possible. En soirée, différents personnes sont là pour t'aider : tu peux aller voir les rondeurs <b>Peer Care (gilets roses)</b>, <b>les rondeurs sécurité (brassards jaunes)</b> ou les vigiles. Tu peux aussi te rendre en<b> zone Chill</b>, où tu seras accueilli·e par des étudiant·e·s formé·e·s pour t'aider. 
+      <p className="texte"><b>Si tu subis une VSS, sache d'abord que ce n'est pas de ta faute.</b> Essaie de te <b>mettre en sécurité</b> (quitte les lieux, va chez un·e ami·e, appelle quelqu'un) et de rester entouré·e si possible. En soirée, différents personnes sont là pour t'aider : tu peux aller voir les rondeurs <b>Peer Care (gilets roses)</b>, <b>les rondeurs sécurité (brassards jaunes)</b> ou les vigiles. Tu peux aussi te rendre en<b> zone Chill</b>, où tu seras accueilli·e par des étudiant·e·s formé·e·s pour t'aider. 
       <br/> <b> Si tu es en danger immédiat, appelle le 17 (police) ou le 18/112/114 (pompiers).</b>
-        <br/> <br/> <b> Conserve tous les indices matériels de l’agression</b> (vêtements, photos, SMS, messages, témoignages), et <b>évite de nettoyer ou de laver quoi que ce soit</b>. Cela permettra de réaliser un examen médico-légal : le ou la médecin recherchera des traces (ADN, blessures, drogues potentiellement administrées) et pourra établir un certificat médical utile pour une plainte. Des tests de dépistage (VIH, grossesse, hépatites, etc.) seront proposés si nécessaire. 
+        <br/> <br/> <b> Conserve tous les indices matériels de l'agression</b> (vêtements, photos, SMS, messages, témoignages), et <b>évite de nettoyer ou de laver quoi que ce soit</b>. Cela permettra de réaliser un examen médico-légal : le ou la médecin recherchera des traces (ADN, blessures, drogues potentiellement administrées) et pourra établir un certificat médical utile pour une plainte. Des tests de dépistage (VIH, grossesse, hépatites, etc.) seront proposés si nécessaire. 
         <br/> Pour réaliser un examen medico-légal, tu peux te rendre chez un <b>médecin</b> ou en <b>centre hospitalier</b>. </p>
 
 
@@ -290,7 +290,7 @@ const Vss = () => {
 
       <p className="texte"><b>EN INTERNE</b></p>
 
-      <p className="texte">Tu peux contacter l'<b>infirmière de Centrale Lyon</b>, qui est formée pour t'aider et te conseiller. Elle peut aussi t'orienter vers des professionnels extérieurs si nécessaire. En tant que professionnelle de santé, elle est soumise au <b>secret médical</b>, ta confidentialité est donc garantie. Tu peux décider d’en rester là et poursuivre ton signalement plus tard si désiré. </p>
+      <p className="texte">Tu peux contacter l'<b>infirmière de Centrale Lyon</b>, qui est formée pour t'aider et te conseiller. Elle peut aussi t'orienter vers des professionnels extérieurs si nécessaire. En tant que professionnelle de santé, elle est soumise au <b>secret médical</b>, ta confidentialité est donc garantie. Tu peux décider d'en rester là et poursuivre ton signalement plus tard si désiré. </p>
       <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
         title="Infirmerie"
@@ -358,7 +358,7 @@ const Vss = () => {
 
       <h2 className="sous-titre-2">Agir comme témoin</h2>
 
-      <p className="texte"> Lorsque que tu es témoin de VSS, certains réflexes simples et actions concrètes peuvent faire la différence. Mieux vaut réagir ou alerter les autres pour rien que ne pas réagir du tout. Tu peux appliquer les conseils de la section « Je suis victime » ci-dessus, tous les organismes présentés sont aussi là pour encadrer les témoins. Quoiqu’il en soit,<b> montre à la victime que tu la crois et que tu es là pour elle, informe-la des moyens à sa disposition et respecte ses souhaits, sans prendre de décision à sa place. </b>Tu peux aussi récolter des preuves (audio, vidéo...) en vue de les transmettre à la victime et aux autorités uniquement. </p>
+      <p className="texte"> Lorsque que tu es témoin de VSS, certains réflexes simples et actions concrètes peuvent faire la différence. Mieux vaut réagir ou alerter les autres pour rien que ne pas réagir du tout. Tu peux appliquer les conseils de la section « Je suis victime » ci-dessus, tous les organismes présentés sont aussi là pour encadrer les témoins. Quoiqu'il en soit,<b> montre à la victime que tu la crois et que tu es là pour elle, informe-la des moyens à sa disposition et respecte ses souhaits, sans prendre de décision à sa place. </b>Tu peux aussi récolter des preuves (audio, vidéo...) en vue de les transmettre à la victime et aux autorités uniquement. </p>
 
       <ExternalLinkBlock
         resources={liens_ext_temoins}
@@ -383,16 +383,16 @@ const Vss = () => {
       <h2 className="sous-titre-2">Accueillir un témoignage</h2>
 
       <p className="texte">
-        Face à une personne victime de VSS, il est essentiel d’adopter une posture bienveillante, respectueuse et soutenante. Ainsi, pour contrer les stratégies de l’auteur des VSS, souvent fondées sur l’isolement, la dévalorisation ou la culpabilisation de la victime, il est crucial de renforcer la personne dans ce qu’elle vit, sans jugement ni pression.
+        Face à une personne victime de VSS, il est essentiel d'adopter une posture bienveillante, respectueuse et soutenante. Ainsi, pour contrer les stratégies de l'auteur des VSS, souvent fondées sur l'isolement, la dévalorisation ou la culpabilisation de la victime, il est crucial de renforcer la personne dans ce qu'elle vit, sans jugement ni pression.
 
       </p>
 
       <BulletList items={[
-        "Maintiens le lien avec la victime : garder un contact régulier permet de briser l’isolement souvent imposé par l’auteur des violences.",
-        "Valorise-la : lui rappeler sa valeur, ses qualités, ses forces contribue à reconstruire l’estime d’elle-même.",
-        "Déculpabilise-la : aide-la à comprendre qu’elle n’est jamais responsable des violences subies.",
-        "Rassure-la : rappelle-lui qu’elle est crue, qu’elle n’est pas seule et qu’il existe des ressources pour l’accompagner.",
-        "Sois de son côté : fais preuve de loyauté, sans condition, pour qu’elle se sente soutenue dans son parcours."
+        "Maintiens le lien avec la victime : garder un contact régulier permet de briser l'isolement souvent imposé par l'auteur des violences.",
+        "Valorise-la : lui rappeler sa valeur, ses qualités, ses forces contribue à reconstruire l'estime d'elle-même.",
+        "Déculpabilise-la : aide-la à comprendre qu'elle n'est jamais responsable des violences subies.",
+        "Rassure-la : rappelle-lui qu'elle est crue, qu'elle n'est pas seule et qu'il existe des ressources pour l'accompagner.",
+        "Sois de son côté : fais preuve de loyauté, sans condition, pour qu'elle se sente soutenue dans son parcours."
       ]} />
 
       <p className="texte">En revanche, il est important d'éviter certains comportements qui pourraient aggraver la situation de la victime ou la mettre mal à l'aise. Voici quelques exemples de ce qu'il ne faut pas faire :</p>
@@ -402,8 +402,8 @@ const Vss = () => {
         "Culpabiliser la victime : lui faire porter la responsabilité des violences subies est une double peine injuste et destructrice.",
         "Minimiser ou banaliser les violences subies : qualifier les faits de « pas si graves » ou de « malentendus » revient à invalider le vécu de la victime.",
         "Exprimer un jugement moral : porter un regard moralisateur sur la situation ou sur les comportements de la victime empêche une écoute authentique.",
-        "Ramener les propos à nous : parler de notre propre vécu détourne l’attention de la personne concernée et recentre l’échange sur nous-mêmes.",
-        "Vouloir trouver des solutions immédiatement, donner des injonctions à agir : cela peut mettre une pression supplémentaire sur la victime, qui n’est peut-être pas prête à agir.",
+        "Ramener les propos à nous : parler de notre propre vécu détourne l'attention de la personne concernée et recentre l'échange sur nous-mêmes.",
+        "Vouloir trouver des solutions immédiatement, donner des injonctions à agir : cela peut mettre une pression supplémentaire sur la victime, qui n'est peut-être pas prête à agir.",
         "Projeter ses propres angoisses et émotions : faire peser ses propres peurs ou colères sur la victime peut alourdir sa charge émotionnelle."
       ]} />
 

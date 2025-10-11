@@ -165,7 +165,7 @@ const Consentement = () => {
       <h2 className="sous-titre-2">Le consentement et la loi</h2>
       <p className="texte">
         Légalement, les actes sexuels avec un·e <b>mineur·e de moins de 15 ans</b> constituent une infraction, quel que soit le « consentement » allégué
-        (seuil porté à <b>18 ans</b> en cas d’<b>inceste</b>).
+        (seuil porté à <b>18 ans</b> en cas d'<b>inceste</b>).
       </p>
       <p className="texte"> Au moment où nous écrivons ces lignes, la loi française ne définit pas précisément le consentement au-delà de ce cadre. Une proposition de loi a été déposée le 21 janvier 2025 afin de préciser la notion de consentement et la manière de l'apprécier. Cela devrait à terme permettre de mieux protéger les victimes. <b>Le Sénat et l'Assemblée nationale devraient bientôt s'accorder sur une version finale du texte.</b></p>
       <ExternalLinkBlock resources={proposition_loi} />
@@ -178,22 +178,22 @@ const Consentement = () => {
         items={[
           "Dire oui par peur, pour éviter un conflit ou « faire plaisir ».",
           "Dire oui alors qu'on est alcoolisé·e, drogué·e, fatigué·e...",
-          "Ne pas dire non par crainte : le silence n’est PAS un consentement.",
+          "Ne pas dire non par crainte : le silence n'est PAS un consentement.",
           "Les gestes, la tenue ou le flirt ne valent JAMAIS consentement.",
         ]}
       />
 
       <Quote
-        text="Sans un OUI clair, lucide, révocable et enthousiaste, c’est NON."
+        text="Sans un OUI clair, lucide, révocable et enthousiaste, c'est NON."
       />
 
-      <p className="texte"> Même dans une <b>relation de couple</b>, le consentement est indispensable. Il n’y a pas de droit au corps de l’autre, ni de « devoir » conjugal. Si tu sens que ton consentement n’est pas respecté, il est important d’en parler.</p>
+      <p className="texte"> Même dans une <b>relation de couple</b>, le consentement est indispensable. Il n'y a pas de droit au corps de l'autre, ni de « devoir » conjugal. Si tu sens que ton consentement n'est pas respecté, il est important d'en parler.</p>
 
       <ExternalLinkBlock resources={couple} />
 
       <h2 className="sous-titre-2">Le consentomètre</h2>
       <p className="texte">
-        Le consentomètre est un outil interactif qui t’aide à évaluer si une
+        Le consentomètre est un outil interactif qui t'aide à évaluer si une
         situation est saine. Il repose sur des scénarios concrets et te montre
         comment reconnaître un vrai OUI.
       </p>
@@ -210,8 +210,8 @@ const Consentement = () => {
       </div>
 
       <p className="texte">
-        Si tu subis ou es témoin d’une situation où le consentement n’est pas
-        respecté, il est essentiel d’en parler. Tu peux te tourner vers un·e
+        Si tu subis ou es témoin d'une situation où le consentement n'est pas
+        respecté, il est essentiel d'en parler. Tu peux te tourner vers un·e
         ami·e, un·e référent·e, une association ou directement les secours (17 pour la police).
       </p>
 
@@ -267,7 +267,7 @@ const Consentement = () => {
       <p className="texte">
         <em>
           <b>Sources :</b> Portail santé UDL, Consentis, Ministère
-          de l’Enseignement Supérieur, Arrêtons les violences, Observatoire VSS,
+          de l'Enseignement Supérieur, Arrêtons les violences, Observatoire VSS,
           Les Salopettes.
         </em>
       </p>
