@@ -161,7 +161,7 @@ const Ist = () => {
       />
 
 
-      <p className="mise-avant">Le VIH (virus de l’immunodéficience humaine) est une <b>infection sexuellement transmissible</b>, mais il ne provoque pas toujours le SIDA. Le <b>VIH</b> est le virus, tandis que le <b>SIDA</b> (syndrome d’immunodéficience acquise) correspond au stade avancé de l’infection, lorsque le système immunitaire est affaibli et que des maladies opportunistes apparaissent. Grâce aux traitements actuels, une personne vivant avec le VIH peut rester en bonne santé, ne pas transmettre le virus et ne jamais développer le SIDA.</p>
+      <p className="mise-avant">Le VIH (virus de l'immunodéficience humaine) est une <b>infection sexuellement transmissible</b>, mais il ne provoque pas toujours le SIDA. Le <b>VIH</b> est le virus, tandis que le <b>SIDA</b> (syndrome d'immunodéficience acquise) correspond au stade avancé de l'infection, lorsque le système immunitaire est affaibli et que des maladies opportunistes apparaissent. Grâce aux traitements actuels, une personne vivant avec le VIH peut rester en bonne santé, ne pas transmettre le virus et ne jamais développer le SIDA.</p>
      
       <h2 className="sous-titre-2">Comment ça se transmet ?</h2>
       
