@@ -18,7 +18,6 @@ const Empathie = () => {
       <h1 className="titre-page">Empathie</h1>
       <Navbar links={navLinks} />
 
-      {/* --- DEFINITION --- */}
       <div id="definition">
         <h1 className="titre">Qu'est-ce que l'empathie ?</h1>
 
@@ -26,7 +25,7 @@ const Empathie = () => {
           image="./assets/cartes/7_carreau.png"
           title="La carte 7♦"
           shortText="L'empathie en milieu étudiant"
-          longText=""
+          longText="L'empathie est une compétence essentielle pour vivre et étudier en groupe. Elle permet de comprendre les émotions et les perspectives des autres, favorisant ainsi un environnement bienveillant et inclusif. En se mettant à la place des autres, nous pouvons mieux soutenir nos camarades, prévenir les conflits et renforcer la cohésion au sein de la communauté étudiante."
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />
