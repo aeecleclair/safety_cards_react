@@ -94,10 +94,9 @@ const Orientation = () => {
   return (
     <div className="page">
 
-      <h1 className="titre-page">Orientation sexuelle</h1>
+  <h1 className="titre-page gradient-title">Orientation sexuelle</h1>
       <Navbar links={navLinks} />
 
-      {/* Définition */}
       <div id="definitions">
         <h1 className="titre">Qu'est-ce que l'orientation sexuelle ?</h1>
         <ImageTextPopup
