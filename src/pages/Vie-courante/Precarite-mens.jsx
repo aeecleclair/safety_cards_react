@@ -106,10 +106,10 @@ const PrecariteMens = () => {
       </div>
       
       <h2 className="sous-titre-2">Changer régulièrement de protection</h2>
-      <p className="texte">Quelle que soit la protection utilisée, il est essentiel de ne pas la garder trop longtemps. Au-delà de l’inconfort et des risques de fuites, un <b>port prolongé augmente les risques d’infections</b> (mycoses, irritations, syndrome du choc toxique avec les tampons notamment). Pour des raisons économiques, certaines personnes prolongent l’usage d’une protection au-delà des recommandations, mais cela peut mettre leur santé en danger.</p>
+      <p className="texte">Quelle que soit la protection utilisée, il est essentiel de ne pas la garder trop longtemps. Au-delà de l'inconfort et des risques de fuites, un <b>port prolongé augmente les risques d'infections</b> (mycoses, irritations, syndrome du choc toxique avec les tampons notamment). Pour des raisons économiques, certaines personnes prolongent l'usage d'une protection au-delà des recommandations, mais cela peut mettre leur santé en danger.</p>
       
       <h2 className="sous-titre-2">Le syndrome du choc toxique</h2>
-      <p className="texte">Le <b>syndrome du choc toxique</b> est une infection rare mais grave, liée à la bactérie <i>staphylocoque doré</i>. Il peut survenir lorsqu’un tampon ou une coupe menstruelle est gardé trop longtemps, favorisant la prolifération bactérienne. Les symptômes peuvent inclure une forte fièvre, des vomissements, des étourdissements, une éruption cutanée et une grande fatigue. Si tu ressens ces signes pendant tes règles, retire immédiatement ta protection et consulte en urgence un médecin.</p>
+      <p className="texte">Le <b>syndrome du choc toxique</b> est une infection rare mais grave, liée à la bactérie <i>staphylocoque doré</i>. Il peut survenir lorsqu'un tampon ou une coupe menstruelle est gardé trop longtemps, favorisant la prolifération bactérienne. Les symptômes peuvent inclure une forte fièvre, des vomissements, des étourdissements, une éruption cutanée et une grande fatigue. Si tu ressens ces signes pendant tes règles, retire immédiatement ta protection et consulte en urgence un médecin.</p>
 
       <ExternalLinkBlock
         resources={resources2}
@@ -124,16 +124,16 @@ const PrecariteMens = () => {
       <BulletList items={[
   "Serviettes hygiéniques jetables : pratiques et accessibles, mais à usage unique et générant beaucoup de déchets",
   "Tampons : discrets et adaptés aux activités sportives, nécessitent un changement régulier",
-  "Protège-slips : pour flux légers ou en complément d’une autre protection",
+  "Protège-slips : pour flux légers ou en complément d'une autre protection",
   "Coupes menstruelles (cup) : réutilisables, économiques et écologiques, nécessitent un entretien régulier",
   "Serviettes lavables : réutilisables, confortables et durables, demandent du lavage après usage",
   "Culottes menstruelles : réutilisables, confortables, pratiques, nécessitent aussi un entretien et un investissement initial",
   "Éponges menstruelles : alternatives réutilisables, moins répandues, demandent un nettoyage rigoureux"
 ]} />
 
-      <p className="texte"> Les protections réutilisables (culottes, coupe) sont économiques sur le long terme et plus écologiques, même si l’investissement de départ peut être plus élevé.</p>
+      <p className="texte"> Les protections réutilisables (culottes, coupe) sont économiques sur le long terme et plus écologiques, même si l'investissement de départ peut être plus élevé.</p>
 
-      <p className="texte">Certaines mutuelles étudiantes ou complémentaires santé proposent un <b>remboursement partiel des protections hygiéniques réutilisables</b>. N’hésite pas à te renseigner auprès de ta mutuelle, et à demander conseil au service social de ton établissement.</p>
+      <p className="texte">Certaines mutuelles étudiantes ou complémentaires santé proposent un <b>remboursement partiel des protections hygiéniques réutilisables</b>. N'hésite pas à te renseigner auprès de ta mutuelle, et à demander conseil au service social de ton établissement.</p>
 
         <h2 className="sous-titre-2">Où obtenir des protections gratuites</h2>
         <p className="texte">A Centrale et dans ses alentours, il est possible de se procurer des protections menstruelles gratuites dans plusieurs lieux :</p>
@@ -152,7 +152,7 @@ const PrecariteMens = () => {
       <Separateur />
 
 
-        <h2 className="sous-titre-2">Besoin d’en parler ?</h2>
+        <h2 className="sous-titre-2">Besoin d'en parler ?</h2>
 
       <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
@@ -162,7 +162,7 @@ const PrecariteMens = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées

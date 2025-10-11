@@ -21,8 +21,8 @@ const navLinks = [
 
 const items_agressions = [
   { title: "Déposer plainte", subtitle:"Vous pouvez déposer plainte dans tout commissariat/gendarmerie (voir lien 1 ci-dessous). "},
-  { title: "Faire une consultation médicolégale", subtitle: "Le rendez-vous est donné à la suite du dépôt de plainte. Cette consultation permet d’accéder à des prises en charges médicales (traitement de prévention infectieux et contraception d’urgence) et de conduire la recherche d’éventuels éléments de preuve (constat des lésions, recherche d’ADN étranger et de spermatozoïdes, prélèvements à visée toxicologique…). Tu peux aussi te faire dépister gratuitement (VIH et IST) dans un centre CeGIDD (lien 2 ci-dessous) " },
-  { title: "Se faire accompagner par une association d'aide aux victimes", subtitle: "Les associations d’aides aux victimes vous propose un accompagnement gratuit, pluridisciplinaire (juridique, psychologique, social) et confidentiel. (Annuaire en suivant le lien 3 ci-dessous)" },
+  { title: "Faire une consultation médicolégale", subtitle: "Le rendez-vous est donné à la suite du dépôt de plainte. Cette consultation permet d'accéder à des prises en charges médicales (traitement de prévention infectieux et contraception d'urgence) et de conduire la recherche d'éventuels éléments de preuve (constat des lésions, recherche d'ADN étranger et de spermatozoïdes, prélèvements à visée toxicologique…). Tu peux aussi te faire dépister gratuitement (VIH et IST) dans un centre CeGIDD (lien 2 ci-dessous) " },
+  { title: "Se faire accompagner par une association d'aide aux victimes", subtitle: "Les associations d'aides aux victimes vous propose un accompagnement gratuit, pluridisciplinaire (juridique, psychologique, social) et confidentiel. (Annuaire en suivant le lien 3 ci-dessous)" },
 
 ];
 
@@ -166,7 +166,7 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
       <h2 className="sous-titre-2">Quels sont les symptômes ?</h2>
      
       <p>
-        Seules des analyses toxicologiques permettent de mettre en évidence l’administration d’un médicament ou d’une drogue par l’agresseur. Voici tout de même les symptômes récurrents d'une soumission chimique : 
+        Seules des analyses toxicologiques permettent de mettre en évidence l'administration d'un médicament ou d'une drogue par l'agresseur. Voici tout de même les symptômes récurrents d'une soumission chimique : 
       </p>
 
       <BulletList
@@ -175,7 +175,7 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
           "Comportement inhabituel",
           "Somnolence",
           "Vertiges",
-          "Perte de l’équilibre",
+          "Perte de l'équilibre",
           "Trouble de la vision",
           "Bouffées de chaleur",
           "Palpitations",
@@ -185,22 +185,22 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
       />
 
       <p>
-        Ces symptômes doivent alerter s’ils sont associés à des faits criminels ou délictuels possibles :
+        Ces symptômes doivent alerter s'ils sont associés à des faits criminels ou délictuels possibles :
       </p>
 
       <BulletList
         items={[
           "Traces de violences physiques, douleurs",
           "Désordre vestimentaire",
-          "Vol d’effets personnels...",
+          "Vol d'effets personnels...",
 
         ]}
       />
 
       <p className="texte">
-        Quand elle opère dans la sphère conjugale ou intrafamiliale, la soumission chimique s’inscrit souvent dans une routine insidieuse. La survenue des symptômes précités peut alors intervenir à répétition et à toute heure de la journée voire au long cours.
+        Quand elle opère dans la sphère conjugale ou intrafamiliale, la soumission chimique s'inscrit souvent dans une routine insidieuse. La survenue des symptômes précités peut alors intervenir à répétition et à toute heure de la journée voire au long cours.
         <br/>
-        <b>Quelle que soit la situation, il est nécessaire d’écouter ses doutes. N'hésitez pas à contacter les conseillers du CRAFS.</b>
+        <b>Quelle que soit la situation, il est nécessaire d'écouter ses doutes. N'hésitez pas à contacter les conseillers du CRAFS.</b>
       </p>
 
       <ContactCard
@@ -223,8 +223,8 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
         items={[
           "Dans la mesure du possible, rester en groupe, être accompagné·e par des amis qui veillent et peuvent réagir en cas de danger",
 "Avoir un membre du groupe qui ne boit pas ou ne consomme pas de substances et pourra ramener ses amis et amies",
-"Ne pas quitter son verre des yeux, ne pas accepter de verre de la part d’un inconnu ou d'une inconnue. Il est également possible d’utiliser des couvercles ou protèges verre anti-drogue, disponibles au bar ou à l'entrée des soirées à Centrale",
-"Contrôler sa consommation d'alcool (en ayant à l’esprit que l'effet des médicaments augmente lorsqu'on consomme de l'alcool) ; en cas de doute ou d’agression, il est important de parler de ce qui est arrivé, à des personnes de confiance et à des professionnels et professionnelles de santé qui pourront écouter et accompagner chaque victime de soumission chimique ou de vulnérabilité chimique."
+"Ne pas quitter son verre des yeux, ne pas accepter de verre de la part d'un inconnu ou d'une inconnue. Il est également possible d'utiliser des couvercles ou protèges verre anti-drogue, disponibles au bar ou à l'entrée des soirées à Centrale",
+"Contrôler sa consommation d'alcool (en ayant à l'esprit que l'effet des médicaments augmente lorsqu'on consomme de l'alcool) ; en cas de doute ou d'agression, il est important de parler de ce qui est arrivé, à des personnes de confiance et à des professionnels et professionnelles de santé qui pourront écouter et accompagner chaque victime de soumission chimique ou de vulnérabilité chimique."
 
         ]}
         />
@@ -239,7 +239,7 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
 
       <h2 className="sous-titre-2">Comment réagir ?</h2>
       
-      <p className="texte"> Parles-en à des personnes de confiance pour qu'elles te prennent en charge. En soirée, rapproche-toi de la <b>sécurité</b>, des <b>rondes Peer Care</b>, de la <b>Zone Chill</b> ou du <b>Bar</b>. En cas de doute ou d’agression, il est important de parler de ce qui est arrivé, à des <b>personnes de confiance</b> et à des <b>professionnels et professionnelles de santé</b> qui pourront écouter et accompagner chaque victime de soumission chimique ou de vulnérabilité chimique.</p>
+      <p className="texte"> Parles-en à des personnes de confiance pour qu'elles te prennent en charge. En soirée, rapproche-toi de la <b>sécurité</b>, des <b>rondes Peer Care</b>, de la <b>Zone Chill</b> ou du <b>Bar</b>. En cas de doute ou d'agression, il est important de parler de ce qui est arrivé, à des <b>personnes de confiance</b> et à des <b>professionnels et professionnelles de santé</b> qui pourront écouter et accompagner chaque victime de soumission chimique ou de vulnérabilité chimique.</p>
 
     
       <h2 className="sous-titre-2">Numéros à contacter en cas d'urgence</h2>
@@ -247,7 +247,7 @@ Dans le cas de la soumission chimique, <b>l'absence de souvenirs clairs de l'agr
 
       <h2 className="sous-titre-2">Tu es victime d'agressions facilitées par les substances ?</h2>
 
-      <p className="texte">La détection de ces substances dans le corps est souvent difficile, leur durée de présence est souvent courte (de quelques heures à quelques jours). C’est pourquoi le recours rapide aux services d’urgences est essentiel afin que des prélèvements soient effectués avant la disparition du produit dans l’organisme. La réaction doit aussi être rapide sur le plan sanitaire (évaluation médicale, contraception d'urgence en maximum 5 jours, suivi infectieux pour prévenir une contamination VIH/hépatite B en 48h maximum, accompganement psychologique...)</p>
+      <p className="texte">La détection de ces substances dans le corps est souvent difficile, leur durée de présence est souvent courte (de quelques heures à quelques jours). C'est pourquoi le recours rapide aux services d'urgences est essentiel afin que des prélèvements soient effectués avant la disparition du produit dans l'organisme. La réaction doit aussi être rapide sur le plan sanitaire (évaluation médicale, contraception d'urgence en maximum 5 jours, suivi infectieux pour prévenir une contamination VIH/hépatite B en 48h maximum, accompganement psychologique...)</p>
       
 
       <ListeNumerotee 

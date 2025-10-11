@@ -19,14 +19,14 @@ Récupérer le code du projet:
 - Option 1 (recommandé): Cloner le dépôt avec Git dans un dossier simple (ex: Documents)
   - Ouvrir un terminal (PowerShell sous Windows)
   - Exécuter: `git clone <URL_DU_DEPOT>` puis `cd safety_cards_react`
-- Option 2: Télécharger l’archive .zip du dépôt, l’extraire, puis ouvrir le dossier dans VS Code
+- Option 2: Télécharger l'archive .zip du dépôt, l'extraire, puis ouvrir le dossier dans VS Code
 
 Installer les dépendances:
 - Ouvrir le dossier du projet dans VS Code
 - Ouvrir le terminal intégré (Terminal > New Terminal)
 - Lancer: `npm install`
   - Cela télécharge les bibliothèques nécessaires (React, Vite, etc.)
-  - En cas d’erreur: vérifier que Node.js est bien installé (commande `node -v`) et que votre réseau ne bloque pas npm
+  - En cas d'erreur: vérifier que Node.js est bien installé (commande `node -v`) et que votre réseau ne bloque pas npm
 
 Lancer le site en mode développement:
 - Exécuter: `npm run dev`
@@ -38,14 +38,14 @@ Construire une version prête à déployer:
 - Prévisualiser: `npm run preview` (ouvre un serveur local sur le build)
 
 Option Docker (tout-en-un):
-- Assurez-vous d’avoir Docker Desktop installé et démarré
+- Assurez-vous d'avoir Docker Desktop installé et démarré
 - À la racine du projet: `docker compose up --build`
 - Ouvrir http://localhost:3000
 
 Conseils en cas de blocage:
 - Redémarrer le terminal/VS Code après installation de Node/Git
 - Si `npm install` échoue: réessayer sur un autre réseau (proxy/antivirus peuvent bloquer)
-- Vérifier l’espace disque et les droits d’écriture du dossier
+- Vérifier l'espace disque et les droits d'écriture du dossier
 
 ## 2) Structure du projet
 
@@ -75,7 +75,7 @@ Racine (extrait utile):
 - Primaire rouge (accents, bordures, hover)
   - Clair: `#b22133`
   - Sombre: `#b00000`
-  - Dégradés d’accent: `#b22133 → #ff4d5d` (clair), `#B00000 → #ea4c61` (sombre)
+  - Dégradés d'accent: `#b22133 → #ff4d5d` (clair), `#B00000 → #ea4c61` (sombre)
 - Arrière-plans
   - Blanc `#ffffff` (surfaces claires)
   - Sombre global `#212121` (body.dark-mode)
@@ -92,7 +92,7 @@ Racine (extrait utile):
 ### Icônes & visuels
 - Emojis (classe `.link-emoji` 30px)
 - Images/icônes: `.link-image` 40px, radius 8px
-- Pas de bibliothèque d’icônes imposée; privilégier SVG simple, monocolore, contrasté
+- Pas de bibliothèque d'icônes imposée; privilégier SVG simple, monocolore, contrasté
 
 ### Layout, espacements, arrondis
 - Page: largeur 60%, max 800px (90% sous 1200px)
@@ -110,12 +110,12 @@ Racine (extrait utile):
 
 ### Header (src/components/Header.jsx)
 - Rôle: barre haute du site, navigation par catégories avec sous-menus, bascule du thème, bouton « Mode soirée », bouton « Quitter le site » et accès rapide au sommaire (mobile) quand une navbar de page est présente.
-- Données du menu: constante `menuItems` (catégories et sous-entrées). Chaque entrée peut être marquée `inactive: true` pour l’afficher grisée et non cliquable.
+- Données du menu: constante `menuItems` (catégories et sous-entrées). Chaque entrée peut être marquée `inactive: true` pour l'afficher grisée et non cliquable.
 - Intégrations clés:
-  - Détection du sommaire de page via `window.__hasSommaire` (si présent, affiche l’icône ⋮ sur mobile pour ouvrir/fermer le sommaire local)
+  - Détection du sommaire de page via `window.__hasSommaire` (si présent, affiche l'icône ⋮ sur mobile pour ouvrir/fermer le sommaire local)
   - Synchronisation « Mode soirée » en fonction de la route (`/mode-soiree`, `/contacts-urgence`, `/plan-soiree`)
   - Thème clair/sombre via `ThemeProvider`
-- Points d’attention DA:
+- Points d'attention DA:
   - Menu desktop: dropdowns au survol; liens inactifs affichés avec un pictogramme 🚧
   - Menu mobile (burger): navigation hiérarchique avec retour, actions thème/quit site/mode soirée
   - Logos partenaires affichés dans le Header et Footer (voir assets/public)
@@ -126,23 +126,23 @@ Racine (extrait utile):
 - Rôle: navigation récapitulative par thématique, logos, mention alphabétique des thèmes, copyright.
 - Structure: 5 colonnes thématiques, liens internes via `react-router-dom`, bloc logos à la fin.
 - Bonnes pratiques:
-  - Garder l’ordre alphabétique des liens par catégorie
+  - Garder l'ordre alphabétique des liens par catégorie
   - Vérifier la présence des routes dans `App.jsx`
 
 ### Common (src/components/Common.jsx, common.css)
 - `BulletList({ items })`
-  - items: array d’éléments (string ou JSX). Affiche des puces, marges verticales gérées par `common.css`.
+  - items: array d'éléments (string ou JSX). Affiche des puces, marges verticales gérées par `common.css`.
 - `NumberedList({ items })`
-  - items: array d’éléments pour une liste numérotée simple.
+  - items: array d'éléments pour une liste numérotée simple.
 - `ImageCenter({ imageSrc })`
-  - imageSrc: chemin d’image (public/assets). Image centrée, radius 14px, responsive.
+  - imageSrc: chemin d'image (public/assets). Image centrée, radius 14px, responsive.
 - `TextImageRight({ text, imageSrc })`
   - text: contenu texte (string/JSX)
   - imageSrc: image à droite, responsive (stack sous 1000px)
 - `YouTubeVideo({ url })`
-  - url: lien YouTube (le composant extrait l’ID et génère un embed). Conteneur responsive.
+  - url: lien YouTube (le composant extrait l'ID et génère un embed). Conteneur responsive.
 - `Navbar({ links })`
-  - links: array d’objets `{ label, target }`.
+  - links: array d'objets `{ label, target }`.
   - Rôle: sommaire sticky avec progression de lecture (calcul mid-to-mid). Clique = scroll lissé avec offset.
 - `AnchorButton({ target, offsetDesktop=100, offsetMobile=140, className })`
   - target: id de la section DOM visée
@@ -165,14 +165,14 @@ Bon usage AnchorButton
 
 À éviter
 ```jsx
-// target qui n’existe pas
+// target qui n'existe pas
 <AnchorButton target="nope">Aller</AnchorButton>
 ```
 
 ### Liens externes (src/components/Liens-ext)
 - `ExternalLinkBlock({ title?, subtitle?, resources })`
   - title/subtitle: en-têtes optionnels du bloc
-  - resources: tableau d’objets cartes
+  - resources: tableau d'objets cartes
     - Attributs carte:
       - link: URL externe (http) ou chemin interne; ouvre dans un nouvel onglet si externe
       - label (ou title): titre affiché
@@ -197,7 +197,7 @@ Notes DA:
 
 ### Cartes de contact (ContactCard)
 - `ContactCard({ image, title, subtitle?, phone?, email?, hours?, textButton, link, bgColor?, textColor?, variant? })`
-  - image: URL/chemin d’image (logo)
+  - image: URL/chemin d'image (logo)
   - title: nom du service
   - subtitle: sous-titre (ex: rôle)
   - phone/email/hours: métadonnées affichées
@@ -208,7 +208,7 @@ Notes DA:
 
 ### Scroll to top (ScrollTop)
 - `ScrollToTopButton({ threshold=300, showProgress=true, size=56, arrowSize?, arrowStrokeWidth? })`
-  - threshold: distance de scroll avant d’afficher le bouton
+  - threshold: distance de scroll avant d'afficher le bouton
   - showProgress: afficher un anneau de progression autour
   - size: taille du bouton et du cercle
   - arrowSize: taille explicite de la flèche (auto-calculée par défaut)
@@ -219,7 +219,7 @@ Notes DA:
 - `Chiffre({ number, title, description })`
   - Affiche un chiffre clé avec titre et description dans un bloc
 - `ChiffresGroup({ chiffres })`
-  - `chiffres`: array d’objets `{ number, title, description }`
+  - `chiffres`: array d'objets `{ number, title, description }`
   - Rendu en grille flexible via `chiffres.css`
 
 ### Listes numérotées avancées (src/components/Listes.jsx)
@@ -259,14 +259,14 @@ export default function Random() {
 
       <div id="intro">
         <h2 className="titre">Introduction</h2>
-        <p className="texte">Texte d’introduction…</p>
+        <p className="texte">Texte d'introduction…</p>
       </div>
 
       <Separateur />
 
       <div id="contenu">
         <h2 className="sous-titre-2">Contenu</h2>
-        <p className="mise-avant">Encart d’information important.</p>
+        <p className="mise-avant">Encart d'information important.</p>
       </div>
     </div>
   );
@@ -297,7 +297,7 @@ Styles liens externes (src/components/liens-ext.css):
 
 ## 7) Qualité & accessibilité
 
-- Le thème s’appuie sur `body.dark-mode`
+- Le thème s'appuie sur `body.dark-mode`
 - Chaque composant critique propose des règles `body.dark-mode .classe { … }`
 - Pour un nouveau composant: prévoir la déclinaison sombre au minimum sur fond, texte et hover
 
@@ -320,13 +320,13 @@ Build image et run via compose:
 docker compose up --build
 # App servie sur http://localhost:3000
 ```
-CI/CD: publier l’image puis déployer derrière un Nginx/ingress en prod
+CI/CD: publier l'image puis déployer derrière un Nginx/ingress en prod
 
 ## 10) FAQ rapide
 
 Checklist:
 - Police Poppins, tailles cohérentes (1em texte, 1.5em sous-titre)
-- Couleurs: #b22133 / #b00000 pour l’accent; fonds #fff / #343434
+- Couleurs: #b22133 / #b00000 pour l'accent; fonds #fff / #343434
 - Radius 10–14px, ombres douces multi-couches
 - Dark mode: règles `body.dark-mode …`
 - Responsive: tester <1200px et mobile
@@ -363,7 +363,7 @@ body.dark-mode .mc-card { background: #343434; color: #fff; }
 
 ## 11) FAQ rapide
 
-- Le sommaire progresse comment ? Milieu de l’écran vers milieu des sections (mid-to-mid)
+- Le sommaire progresse comment ? Milieu de l'écran vers milieu des sections (mid-to-mid)
 - Où sont les styles dark mode ? Dans `App.css`, `common.css`, `liens-ext.css`, etc. via `body.dark-mode`
 - Où poser des assets ? `public/assets/...`
 - Comment scroll à une section ? `AnchorButton` ou logique interne de `Navbar`

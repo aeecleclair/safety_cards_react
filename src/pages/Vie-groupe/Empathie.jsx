@@ -1,49 +1,16 @@
 import React from "react";
 import "../../App.css";
 
-import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  YouTubeVideo,
-} from "../../components/Common";
-import ContactCard from "../../components/Contact";
+import { Navbar, BulletList } from "../../components/Common";
 import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
 
 const navLinks = [
   { label: "Qu'est-ce que l'empathie ?", target: "definition" },
   { label: "Développer son empathie", target: "developpement" },
 ];
-
-
-const ressources_philo = [
-  {
-    link: "https://plato.stanford.edu/entries/empathy/",
-    label: "Stanford Encyclopedia of Philosophy – Empathy",
-    description: "Article de référence philosophique sur l’empathie",
-  },
-];
-
-const ressources_neuro = [
-  {
-    link: "https://www.clevelandclinic.org/podcasts/studies-in-empathy",
-    label: "Podcast Cleveland Clinic – Neurosciences de l’empathie",
-    description: "Entretiens avec Dr Helen Riess et chercheurs en psychologie",
-  },
-];
-
-const ressources_livres = [
-  {
-    link: "https://www.actes-sud.fr/catalogue/savoir/lage-de-lempathie",
-    label: "Frans de Waal – L’âge de l’empathie",
-    description: "Ouvrage accessible sur la biologie et la société",
-  },
-];
-
 
 const Empathie = () => {
   return (
@@ -54,73 +21,215 @@ const Empathie = () => {
       <div id="definition">
         <h1 className="titre">Qu'est-ce que l'empathie ?</h1>
 
-      <ImageTextPopup
-        image="./assets/cartes/7_carreau.png"
-        title="La carte 7♦"
-        shortText="L'empathie en milieu étudiant"
-        longText=""
-        textButton="⤢ Agrandir la carte"
-        suit="carreau"
-      />
+        <ImageTextPopup
+          image="./assets/cartes/7_carreau.png"
+          title="La carte 7♦"
+          shortText="L'empathie en milieu étudiant"
+          longText="L'empathie est une compétence essentielle pour vivre et étudier en groupe. Elle permet de comprendre les émotions et les perspectives des autres, favorisant ainsi un environnement bienveillant et inclusif. En se mettant à la place des autres, nous pouvons mieux soutenir nos camarades, prévenir les conflits et renforcer la cohésion au sein de la communauté étudiante."
+          textButton="⤢ Agrandir la carte"
+          suit="carreau"
+        />
 
+        <p className="texte">
+          L'empathie, c'est la capacité à comprendre ce que l'autre vit et à
+          percevoir ses émotions, même lorsqu'elles sont différentes des nôtres.
+          Elle ne consiste pas seulement à « ressentir avec » quelqu'un, mais
+          aussi à <b>adapter notre attitude, nos mots et nos comportements</b>
+          pour tenir compte de sa sensibilité, de son contexte et de son vécu.
+        </p>
 
+        <p className="texte">
+          Être empathique, c'est donc faire attention à l'impact de ce que l'on
+          dit et fait, car chacun peut traverser une période différente :
+          fatigue, anxiété, éloignement, surcharge d'études, etc. L'empathie ne
+          demande pas de tout comprendre ni de tout résoudre : elle invite
+          surtout à <b>écouter, observer et se montrer attentif</b>.
+        </p>
       </div>
-      <p className="texte">
-        L’empathie désigne la capacité à percevoir le point de vue d’autrui et à comprendre, voire partager ses émotions. On distingue souvent l’<b>empathie cognitive</b> (comprendre les pensées) et l’<b>empathie affective</b> (partager les émotions). Elle se différencie de la simple contagion émotionnelle ou de la sympathie.</p>
 
-
-        <h2 className="sous-titre-2">Mécanismes psychologiques et biologiques</h2>
+      <h2 className="sous-titre-2">Déracinement culturel : comprendre avant de juger</h2>
       <p className="texte">
-        Les neurosciences montrent que l’observation d’un état émotionnel active
-        dans notre cerveau des zones similaires à celles de l’expérience vécue.
-        Le système des neurones miroirs, l’insula ou le cortex préfrontal
-        participent à ce processus. L’empathie combine une voie « ascendante »
-        (résonance émotionnelle) et une voie « descendante » (régulation
-        cognitive).
+        L'école accueille des étudiant·e·s internationaux venus d'horizons variés. Certains
+        découvrent un nouveau pays, un nouveau mode de vie, et peuvent se sentir
+        <b> désorienté·e·s, isolé·e·s ou incompris·e·s</b>. Une blague anodine sur les
+        coutumes, l'accent ou la nourriture peut paraître drôle à certains, mais
+        blesser profondément une personne qui cherche à s'intégrer.
       </p>
-
-      <h2 className="sous-titre-2">L'importance de l'empathie</h2>
+      <p className="texte">
+        L'empathie, ici, consiste à <b>se mettre à la place de l'autre</b> :
+        imaginer ce que cela représente d'être loin de sa famille, de devoir
+        s'adapter à de nouvelles normes sociales ou universitaires, ou
+        d'apprendre dans une langue étrangère.
+      </p>
       <BulletList
         items={[
-          "L’empathie est essentielle à un bon équilibre mental et physique. Elle inspire à prendre soin des autres et permet des relations sociales et professionnelles saines.",
-          "L’empathie apprend aux enfants à prendre des décisions responsables et à tenir compte de la famille, des amis, de leur communauté et du reste du monde. Les jeunes empathiques ont plus de conscience de soi et sont plus à l’écoute, ce qui peut les protéger contre l’abus de substances et d’autres comportements à risque.",
-          "L’empathie contribue à la conscience sociale et fait obstacle au harcèlement, aux préjugés et au racisme. Elle jette les bases d’une société juste, bienveillante et en paix.",
-          "L’empathie nous permet de capter l’état d’esprit des autres et de mieux s’entraider – y compris entre personnes de différentes communautés."
+          "Un étudiant international décline une invitation à une soirée : ce n'est pas du désintérêt, mais peut-être une question de culture ou de religion.",
+          "Une incompréhension dans un groupe de travail : la personne semble distante, alors qu'elle craint de ne pas maîtriser la langue ou les codes de communication.",
         ]}
       />
+      <p className="texte">
+        Faire preuve d'empathie, c'est accueillir cette différence avec bienveillance plutôt qu'avec jugement.
+      </p>
 
       <ExternalLinkBlock
         resources={[
           {
-            link: "https://www.unodc.org/unodc/fr/listen-first/super-skills/empathy.html",
-            label: "Nations Unies",
-            description: "Pour en apprendre davantage sur l'empathie et son importance",
-            imageSrc: "/assets/un-logo.svg"
-          }
+            link: "/deracinement",
+            label: "Déracinement culturel",
+            description:"Exemples et conseils pour comprendre les différences culturelles et éviter les quiproquos.",
+            emoji: "🗺️",
+          },
         ]}
       />
 
-
-        <h2 className="sous-titre-2">Le lien avec la santé mentale</h2>
+      <h2 className="sous-titre-2">Harcèlement : quand le manque d'empathie blesse</h2>
       <p className="texte">
-        L’empathie joue un rôle clé dans la santé mentale et les relations sociales. Comprendre et ressentir la souffrance d’autrui permet de créer un climat de soutien émotionnel et de résilience. Sur le plan personnel, développer son empathie tend à diminuer les sentiments de solitude et d’anxiété, car elle renforce les liens sociaux et l’estime de soi. Une bonne capacité empathique est un facteur de protection psychologique : elle facilite l’écoute mutuelle et la résolution pacifique des conflits, éléments clés d’un bon équilibre mental collectif.
+        Le harcèlement, qu'il soit verbal, moral, en ligne ou entre camarades,
+        commence souvent par des plaisanteries répétées ou des remarques banales
+        qui franchissent une limite émotionnelle. Une personne empathique est
+        capable de remarquer quand une « blague » met quelqu'un mal à l'aise et
+        de stopper avant que cela ne devienne blessant.
       </p>
+      <BulletList
+        items={[
+          "Se moquer d'un camarade sur un trait physique ou une habitude peut sembler anodin, mais répété, cela renforce son malaise.",
+          "Rire systématiquement des erreurs d'un étudiant plus timide peut miner sa confiance et son envie de participer.",
+        ]}
+      />
+      <p className="texte">
+        Développer son empathie permet donc de repérer la détresse de l'autre
+        avant qu'elle ne s'aggrave, de désamorcer une situation et de devenir un
+        témoin bienveillant, capable de dire « stop » ou d'offrir son soutien à
+        la victime.
+      </p>
+
+      <ExternalLinkBlock
+        resources={[
+          {
+            link: "/harcel",
+            label: "Harcèlement",
+            description:
+              "Comment l'empathie peut prévenir et désamorcer les situations de harcèlement.",
+            emoji: "😠",
+          },
+        ]}
+      />
+
+      <h2 className="sous-titre-2">Confiance en soi : l'effet miroir de l'empathie</h2>
+      <p className="texte">
+        L'empathie ne bénéficie pas qu'aux autres : elle renforce aussi la
+        <b>confiance en soi</b>. Être à l'écoute et comprendre les émotions des
+        autres développe la conscience de ses propres ressentis et de ses
+        limites. C'est un cercle vertueux : plus on comprend les autres, plus on
+        apprend à se comprendre soi-même.
+      </p>
+      <BulletList
+        items={[
+          "Lorsqu'on écoute sans juger, on apprend aussi à ne pas se juger soi-même trop sévèrement.",
+          "Quand on adopte une posture bienveillante envers autrui, on se donne la permission d'être imparfait·e.",
+          "En ressentant la reconnaissance ou la gratitude d'autrui, on renforce sa propre valeur.",
+        ]}
+      />
+      <p className="texte">
+        L'empathie devient ainsi un <b>levier d'estime personnelle</b> : en
+        prenant soin des autres, on apprend à se valoriser autrement que par la
+        performance.
+      </p>
+
+      <ExternalLinkBlock
+        resources={[
+          {
+            link: "/conf",
+            label: "Confiance en soi",
+            description:
+              "Comprendre le lien entre empathie, estime de soi et équilibre personnel.",
+            emoji: "💛",
+          },
+        ]}
+      />
+
+      <h2 className="sous-titre-2">Être à l'écoute : repérer quand quelqu'un va mal</h2>
+      <p className="texte">
+        Une personne empathique n'a pas besoin d'être psychologue pour aider :
+        il suffit souvent d'une <b>écoute attentive et sincère</b>. Un simple «
+        tu veux en parler ? » peut suffire à ouvrir un espace de confiance. Cette
+        capacité d'écoute rend l'empathie essentielle dans la prévention des
+        difficultés psychologiques : elle permet de repérer des signaux faibles (fatigue, isolement, anxiété, repli) et d'encourager l'autre à demander
+        de l'aide.
+      </p>
+      <p className="texte">
+        Des dispositifs existent pour aller plus loin dans cette posture :
+      </p>
+      <BulletList
+        items={[
+          "PSSM (Premiers Secours en Santé Mentale) : formation dispensée à Centrale Lyon pour apprendre à écouter, comprendre et orienter une personne en souffrance.",
+          "Peer Care : association étudiante d'entraide entre pairs, de prévention des risques et de lutte contre les VSS",
+        ]}
+      />
+      <p className="texte">
+        Ces initiatives montrent qu'en étant simplement attentif, on peut
+        réellement <b>faire une différence</b> dans le quotidien d'un autre.
+      </p>
+
+      <ExternalLinkBlock
+        resources={[
+          {
+            link: "https://www.pssmfrance.fr/",
+            label: "PSSM",
+            description:
+              "Formation Premiers Secours en Santé Mentale : apprendre à écouter et orienter ses pairs.",
+            imageSrc: "/assets/logo-pssm.svg",
+          },
+          {
+            link: "https://www.instagram.com/peer_care_ecl?igsh=bHh2aGpmbDVjZzk0",
+            label: "Peer Care",
+            description:
+              "Association de prévention de l'école Centrale Lyon",
+            imageSrc: "/assets/peer_care.png",
+          },
+        ]}
+      />
 
       <Separateur />
 
       <div id="developpement">
         <h1 className="titre">Développer son empathie</h1>
       </div>
+
       <ListeNumerotee
         title="Quelques idées..."
-        subtitle="... pour développer son empathie"
+        subtitle="... pour développer son empathie au quotidien"
         items={[
-          { title: "Écoute active", subtitle: "Pratique une écoute sans jugement, reformule et valide les émotions." },
-          { title: "Se mettre à la place de l’autre", subtitle: "Essaye de ressentir ce que l’autre ressent lorsqu'il ou elle te raconte quelque chose." },
-          { title: "Lecture et récits", subtitle: "Immerge-toi dans des histoires pour prendre des perspectives variées." },
-          { title: "Jeux de rôle et théâtre", subtitle: "Mets-toi dans la peau d’un autre pour développer la perspective." },
-          { title: "Méditation et pleine conscience", subtitle: "Cultive la conscience de soi et des émotions d’autrui." },
-          { title: "Engagement associatif et projets de groupe", subtitle: "Bénévolat ou projets collectifs favorisant l’entraide." },
+          {
+            title: "Écoute active",
+            subtitle:
+              "Laisse l'autre s'exprimer sans l'interrompre, reformule ce que tu as compris et montre que tu es présent.",
+          },
+          {
+            title: "Observation",
+            subtitle:
+              "Sois attentif aux signaux non verbaux : posture, ton, regard, silence…",
+          },
+          {
+            title: "Lecture et récits",
+            subtitle:
+              "Découvrir des histoires ou des cultures différentes aide à changer de perspective.",
+          },
+          {
+            title: "Jeux de rôle ou théâtre",
+            subtitle:
+              "Se mettre dans la peau d'un autre développe la compréhension émotionnelle.",
+          },
+          {
+            title: "Méditation et pleine conscience",
+            subtitle:
+              "Reconnaître ses émotions pour mieux accueillir celles des autres.",
+          },
+          {
+            title: "Engagement collectif",
+            subtitle:
+              "Bénévolat, associations, PSSM ou Peer Care : des expériences qui renforcent la solidarité et la bienveillance.",
+          },
         ]}
       />
 
@@ -128,7 +237,7 @@ const Empathie = () => {
 
       <p className="texte">
         <em>
-          <b>Sources :</b> Stanford Encyclopedia of Philosophy, Ashoka, études en neurosciences, Nations Unies.
+          <b>Sources :</b> ONU (Nations Unies), Université Paris-Saclay, PSSM France.
         </em>
       </p>
     </div>

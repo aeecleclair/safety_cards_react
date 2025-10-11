@@ -10,7 +10,7 @@ import { ChiffresGroup } from "../../components/Chiffres";
 import { img } from "framer-motion/m";
 
 const navLinks = [
-  { label: "Qu'est-ce que l’orientation sexuelle ?", target: "definitions" },
+  { label: "Qu'est-ce que l'orientation sexuelle ?", target: "definitions" },
   { label: "Parler de son orientation", target: "comingout" },
   { label: "Accompagner et soutenir", target: "soutien" },
 ];
@@ -18,7 +18,7 @@ const navLinks = [
 const data = [
   { number: "1/5", title: "Étudiant·es", description: "ne se définissent pas comme hétérosexuel·les (IFOP 2023)" },
   { number: "13,3%", title: "Des élèves", description: "ont subi des propos LGBTphobes sur leur campus" },
-  { number: "+50%", title: "Des jeunes LGBT+", description: "rapportent avoir déjà souffert d’isolement ou d’anxiété liés à leur orientation" },
+  { number: "+50%", title: "Des jeunes LGBT+", description: "rapportent avoir déjà souffert d'isolement ou d'anxiété liés à leur orientation" },
 ];
 
 const genre = [
@@ -64,7 +64,7 @@ const ressourcesGenerales = [
     link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/lgbtq-rhone-309796.kjsp",
     imageSrc: "/assets/Universite_de_lyon.png",
     label: "Santé mentale & LGBTQI+ Rhône",
-    description: "Ligne d’écoute, violence/discriminations, aide affective & sexuelle dans le Rhône"
+    description: "Ligne d'écoute, violence/discriminations, aide affective & sexuelle dans le Rhône"
   },
   {
     link: "https://le-refuge.org/la-ligne-decoute/",
@@ -99,7 +99,7 @@ const Orientation = () => {
 
       {/* Définition */}
       <div id="definitions">
-        <h1 className="titre">Qu'est-ce que l’orientation sexuelle ?</h1>
+        <h1 className="titre">Qu'est-ce que l'orientation sexuelle ?</h1>
         <ImageTextPopup
           image="./assets/cartes/as_coeur.png"
           title="La carte A♥"
@@ -109,7 +109,7 @@ const Orientation = () => {
           suit="coeur"
         />
         <p className="texte">
-          L’orientation sexuelle correspond à l’attirance affective, romantique et/ou sexuelle qu’une personne peut ressentir envers d’autres personnes. Elle n’est pas choisie, mais fait partie intégrante de l’identité d’une personne. Elle est différente de l’identité de genre, qui concerne le fait de se sentir homme, femme, les deux, aucun des deux ou autrement.
+          L'orientation sexuelle correspond à l'attirance affective, romantique et/ou sexuelle qu'une personne peut ressentir envers d'autres personnes. Elle n'est pas choisie, mais fait partie intégrante de l'identité d'une personne. Elle est différente de l'identité de genre, qui concerne le fait de se sentir homme, femme, les deux, aucun des deux ou autrement.
         </p>
 
         <h2 className="sous-titre-2">Quelques repères</h2>
@@ -117,12 +117,12 @@ const Orientation = () => {
         <p className="texte"> Il peut y avoir autant d'orientations sexuelles que de personnes. On dénombre toutefois le plus souvent les 6 suivantes :  </p>
         <BulletList
           items={[
-            <><b>Hétérosexualité :</b> attirance affective et/ou sexuelle pour les personnes d’un genre différent du sien</>,
+            <><b>Hétérosexualité :</b> attirance affective et/ou sexuelle pour les personnes d'un genre différent du sien</>,
             <><b>Homosexualité :</b> attirance affective et/ou sexuelle pour les personnes du même genre</>,
             <><b>Bisexualité :</b> attirance pour plusieurs genres</>,
             <><b>Asexualité :</b> absence ou très faible attirance sexuelle, mais possible attirance romantique</>,
             <><b>Pansexualité :</b> attirance indépendante du genre ou du sexe</>,
-            <><b>Questionnement :</b> être dans une période d’incertitude, d'exploration, sans devoir tout savoir</>
+            <><b>Questionnement :</b> être dans une période d'incertitude, d'exploration, sans devoir tout savoir</>
           ]}
 
         />
@@ -156,7 +156,7 @@ const Orientation = () => {
 
 
         <h2 className="sous-titre-2">Qu'est ce que l' «outing» ?</h2>
-        <p className="texte">L'outing est le fait de révéler l'orientation sexuelle ou l'identité de genre d'une personne sans son consentement. Cette pratique est généralement considérée comme une violation de la vie privée. L'orientation sexuelle est privée, et communiquer dessus doit être géré par l’individu lui-même. <b>Chaque personne a le droit de choisir quand et comment elle souhaite partager ces aspects de son identité.</b>
+        <p className="texte">L'outing est le fait de révéler l'orientation sexuelle ou l'identité de genre d'une personne sans son consentement. Cette pratique est généralement considérée comme une violation de la vie privée. L'orientation sexuelle est privée, et communiquer dessus doit être géré par l'individu lui-même. <b>Chaque personne a le droit de choisir quand et comment elle souhaite partager ces aspects de son identité.</b>
           </p>
 
           <p className="texte">L'outing peut avoir des conséquences graves sur la vie de la personne concernée, notamment en termes de sécurité, de santé mentale et de relations sociales.</p>
@@ -182,12 +182,12 @@ const Orientation = () => {
       <div id="comingout">
         <h1 className="titre">Parler de son orientation</h1>
           <p className="texte">
-            Parler de son orientation, parfois appelé « coming out », c’est un choix personnel, libre et souvent progressif. On le fait quand on se sent prêt·e, ou on ne le fait pas : encore une fois, c'est un choix personnel. On peut commencer par soi-même, puis auprès d’un·e ami·e, proche ou d’un·e professionnel·le. Ce moment peut être source de soulagement, mais aussi de doutes : c’est normal.
+            Parler de son orientation, parfois appelé « coming out », c'est un choix personnel, libre et souvent progressif. On le fait quand on se sent prêt·e, ou on ne le fait pas : encore une fois, c'est un choix personnel. On peut commencer par soi-même, puis auprès d'un·e ami·e, proche ou d'un·e professionnel·le. Ce moment peut être source de soulagement, mais aussi de doutes : c'est normal.
           </p>
         
-        <h2 className="sous-titre-2">Conseils pour t’aider</h2>
+        <h2 className="sous-titre-2">Conseils pour t'aider</h2>
         <BulletList items={[
-          "Donne-toi ton temps : tu n’es pas obligé·e de tout dire immédiatement",
+          "Donne-toi ton temps : tu n'es pas obligé·e de tout dire immédiatement",
           "Choisis une personne de confiance",
           "Prépare ce que tu veux dire, éventuellement avec écrit ou message",
           "Cherche des témoignages, groupes de parole pour ne pas te sentir seul·e"
@@ -228,9 +228,9 @@ const Orientation = () => {
           subtitle="À faire au quotidien"
           items={[
             { title: "Écouter sans jugement", subtitle: "Laisser la parole, ne pas minimiser, ne pas forcer" },
-            { title: "Respecter le rythme", subtitle: "Accepter qu’il y ait des moments de doutes ou de silence" },
+            { title: "Respecter le rythme", subtitle: "Accepter qu'il y ait des moments de doutes ou de silence" },
             { title: "Agir contre les discriminations", subtitle: "Ne pas tolérer les propos ou actes LGBTphobes, soutenir la personne à signaler ou à se faire aider" },
-            { title: "Orienter vers des ressources locales", subtitle: "Associations, services, ligne d’écoute à Lyon" },
+            { title: "Orienter vers des ressources locales", subtitle: "Associations, services, ligne d'écoute à Lyon" },
           ]}
         />
 
@@ -246,7 +246,7 @@ const Orientation = () => {
           email="Voir les informations"
           hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
           textButton="Voir les informations"
-          link="/infirmerie"
+          link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
           bgColor="#ffffff"
           textColor="#b22133"
         />

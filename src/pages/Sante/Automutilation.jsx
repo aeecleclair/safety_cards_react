@@ -40,6 +40,13 @@ const resources_infos = [
     description: "Informations à destination des automutilés ou de leurs proches",
   },
 
+  {
+    link: "https://www.pssmfrance.fr/actualites/mieux-comprendre-les-automutilations-pour-mieux-aider/",
+    imageSrc: "/assets/logo-pssm.svg",
+    label: "Automutilation",
+    description: "Mieux comprendre les automutilations pour mieux aider",
+  },
+
 ];
 
 
@@ -72,7 +79,7 @@ const resources_infos = [
     { title: "Au cours de la conversation", subtitle: "L'arrêt de l'automutilation ne doit pas être au centre de la conversation. Cherchez plutôt des moyens pour rendre la vie de la personne plus agréable : mettre un terme à l'automutilation est un processus long, qui ne s'accomplit pas du jour au lendemain." },
     { title: "Exprimez votre inquiétude et écoutez activement", subtitle: "Signifiez à la personne ce que vous ressentez en faisant usage du « Je » : « Je m'inquiète » et non « Tu m'inquiètes ». Montrez que vous êtes à l'écoute en reprenant ses propos. Réagissez avec calme, sans juger la personne et sans prendre ses sentiments à la légère." },
     { title: "Offrez votre soutien et votre réconfort", subtitle: "Faites preuve d'empathie, dites-lui que vous comprenez ce qu'elle ou il vit. Signifiez-lui qu'elle ou il n'est pas seul·e et que vous êtes là pour l'aider." },
-    { title: "Encouragez à aller voir des professionnels", subtitle: "Par exemple l'infirmière de Centrale, un·e médecin généraliste, un·e psychologue... Si vous devez en parler avec quelqu'un pour sa sécurité, demandez-lui son accord avant. Ne contactez les secours (15 ou 112) que si la blessure est grave. Gardez en tête que la plupart des personnes qui s’automutilent ne souhaitent pas mettre fin à leurs jours.  " },
+    { title: "Encouragez à aller voir des professionnels", subtitle: "Par exemple l'infirmière de Centrale, un·e médecin généraliste, un·e psychologue... Si vous devez en parler avec quelqu'un pour sa sécurité, demandez-lui son accord avant. Ne contactez les secours (15 ou 112) que si la blessure est grave. Gardez en tête que la plupart des personnes qui s'automutilent ne souhaitent pas mettre fin à leurs jours.  " },
   ];
   
 
@@ -112,7 +119,7 @@ const Automutilation = () => {
       
 
       
-      <TextImageRight  text="De nombreuses personnes qui s’automutilent sont en grande détresse ou dans des situations insupportables. Elles souffrent souvent de cette manière pendant un certain temps avant de s’automutiler. L'automutilation peut par exemple être utilisée pour faire retomber le stress, exprimer leur douleur ou échapper à des souvenirs traumatisants. Dans certains cas, c’est leur sentiment de culpabilité qui les pousse à s’infliger une punition. " 
+      <TextImageRight  text="De nombreuses personnes qui s'automutilent sont en grande détresse ou dans des situations insupportables. Elles souffrent souvent de cette manière pendant un certain temps avant de s'automutiler. L'automutilation peut par exemple être utilisée pour faire retomber le stress, exprimer leur douleur ou échapper à des souvenirs traumatisants. Dans certains cas, c'est leur sentiment de culpabilité qui les pousse à s'infliger une punition. " 
       imageSrc="/assets/zebre.jpg" />
 
       <p className="mise-avant"> <b>Important</b> : la plupart des personnes qui s'automutilent <b>ne cherchent pas à mettre fin à leurs jours.</b> Si le doute se pose, n'hésitez pas à <b>poser la question à la personne.</b> </p>
@@ -139,7 +146,7 @@ const Automutilation = () => {
       <p className="texte">Les <b>envies d'automutilation passent après un certain temps</b>. Si tu parviens à les surmonter pendant une certaine période, ce sera plus simple de te retenir après. Pour faire passer ces idées, tu peux : </p>
 
       <BulletList items={[
-          "Parler à quelqu’un : que ce soit à des membres de ta famille, à des amis ou en appelant une ligne d'écoute (voir contacts plus bas).",
+          "Parler à quelqu'un : que ce soit à des membres de ta famille, à des amis ou en appelant une ligne d'écoute (voir contacts plus bas).",
           "Te distraire en trouvant une activité qui te change les idées : tu peux sortir te balader, écouter de la musique, faire du sport ou n'importe quelle autre activité qui t'intéresse.",
           "Te détendre et concentrer ton esprit sur des pensées agréables et positives. Prends soin de toi et autorise-toi à faire quelque chose que tu aimes.",
           "Trouver un environnement qui te mette en confiance.",
@@ -147,7 +154,7 @@ const Automutilation = () => {
           "Si tu en éprouves le besoin, tu peux écrire ce que tu ressens et expliquer ce qui t'arrive. Personne d'autre n'a besoin de lire ce que tu as écrit.  "
       ]} />
 
-      <p className="texte">Il existe des services en ligne. Tu peux contacter la <b>Nightline</b>, service qui te mettra en contact avec des <b>étudiants bénévoles</b> de manière gratuite et anonyme, que tu aies besoin d'aide ou simplement besoin de vider ton sac. Si tu préfères parler à des <b>professionnels</b>, toujours de manière gratuite et anonyme, alors tu peux contacter <b>Comment on s'aime ?</b>.</p>
+      <p className="texte">Il existe des services en ligne. Tu peux contacter la <b>Nightline</b>, service qui te mettra en contact avec des <b>étudiants bénévoles</b> de manière gratuite et anonyme, que tu aies besoin d'aide ou simplement besoin de vider ton sac. Si tu préfères parler à des <b>professionnels</b>, toujours de manière gratuite et anonyme, alors tu peux contacter le <b>3114</b>.</p>
       
           <ContactCard
           image="/assets/nightline_logo.png" 
@@ -159,17 +166,17 @@ const Automutilation = () => {
           textButton="Voir le site web"
           link="https://www.nightline.fr/lyon"
         />
-          <ContactCard
-            image="/assets/logo-cosa.svg" 
-            title="Comment on s'aime ?"
-            subtitle="Écoute et réponse à tes questions par des professionnels"
-            hours="Lundi à jeudi : 10h à 00h, Vendredi à samedi : 10h à 21h"
-            textButton="Voir le site web"
-            link="https://commentonsaime.fr/"
+        <ContactCard
+        image="/assets/3114.jpg" 
+        title="3114"
+        subtitle="Ligne d'écoute pour te mettre en relation avec des psychologues formés "
+        phone="3114"
+        email=""
+        hours="24h/24 et 7j/7"
+        textButton="Voir le site web"
+        link="https://3114.fr/"
 
-            bgColor="#f6a21e"    //informations facultatives
-            textColor="#ffffff"
-          />
+      />
 
       <h2 className="sous-titre-2">Lorsque l'envie de te faire du mal est passée</h2>
 
@@ -207,7 +214,7 @@ const Automutilation = () => {
         email="Voir les informations"
         hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
         textButton="Voir les informations"
-        link="/infirmerie"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
 
         bgColor="#ffffff"    //informations facultatives
         textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
@@ -254,10 +261,10 @@ const Automutilation = () => {
       <h2 className="sous-titre-2"> Ce qu'il faut éviter de faire</h2>
 
       <BulletList items={[
-          "Essayer d'être sa ou son thérapeute. La meilleure façon de l’aider est d'être son ami·e, son parent ou sa/son partenaire. ",
-          "Réagir fortement, en vous montrant en colère, blessé·e ou bouleversé·e. Ceci l’amènera probablement à se sentir encore plus mal, ce qui rendra le changement plus difficile.",
+          "Essayer d'être sa ou son thérapeute. La meilleure façon de l'aider est d'être son ami·e, son parent ou sa/son partenaire. ",
+          "Réagir fortement, en vous montrant en colère, blessé·e ou bouleversé·e. Ceci l'amènera probablement à se sentir encore plus mal, ce qui rendra le changement plus difficile.",
           "Vous pouvez, honnêtement et ouvertement, parler à votre ami·e ou parent de l'effet que son automutilation a sur vous. Mais pour cela, vous devez être calme, afin de pouvoir parler d'une manière qui montre à quel point vous vous souciez d'eux.",
-          "S’attendre à ce qu'elle ou il s’arrête du jour au lendemain, cela demande généralement du temps et des efforts. ",
+          "S'attendre à ce qu'elle ou il s'arrête du jour au lendemain, cela demande généralement du temps et des efforts. ",
           "Lutter avec la personne lorsqu'elle est sur le point de s'automutiler. Il vaut mieux s'éloigner et lui suggérer de venir vous en parler plutôt que de se faire du mal. ",
           "Lui faire promettre de ne pas recommencer. ",
           "Lui dire que vous ne la ou le verrez plus à moins qu'elle ou il n'arrête de s'automutiler.  ",
@@ -267,7 +274,7 @@ const Automutilation = () => {
 
             <h2 className="sous-titre-2">Pour aller + loin : la formation PSSM</h2>
       
-            <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l’aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu’à ce qu’une aide professionnelle puisse être apportée ou jusqu’à ce que la crise soit résolue. Ils sont l’équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
+            <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l'aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu'à ce qu'une aide professionnelle puisse être apportée ou jusqu'à ce que la crise soit résolue. Ils sont l'équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
             Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.
             La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
             imageSrc="/assets/logo-pssm.svg" />

@@ -47,7 +47,7 @@ const conseilsPrevention = [
   },
   {
     title: "Ventiler régulièrement",
-    subtitle: "Une bonne aération réduit les risques d’intoxication au monoxyde de carbone, surtout avec des appareils à combustion."
+    subtitle: "Une bonne aération réduit les risques d'intoxication au monoxyde de carbone, surtout avec des appareils à combustion."
   },
   {
     title: "Éviter les surcharges de multiprises",
@@ -59,11 +59,11 @@ const conseilsPrevention = [
   },
   {
     title: "Ne jamais bloquer les sorties",
-    subtitle: "Gardez les portes d’entrée et les fenêtres dégagées. En cas d'incendie ou d'évacuation, chaque seconde compte."
+    subtitle: "Gardez les portes d'entrée et les fenêtres dégagées. En cas d'incendie ou d'évacuation, chaque seconde compte."
   },
   {
     title: "Stocker les produits ménagers séparément des aliments",
-    subtitle: "Évitez les intoxications accidentelles en ne mettant jamais de produits d’entretien près de la nourriture ou dans des contenants alimentaires."
+    subtitle: "Évitez les intoxications accidentelles en ne mettant jamais de produits d'entretien près de la nourriture ou dans des contenants alimentaires."
   },
   {
     title: "Utiliser des rallonges en bon état",

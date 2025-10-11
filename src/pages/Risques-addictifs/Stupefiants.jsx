@@ -50,7 +50,7 @@ const resources2 = [
     link: "https://www.addictaide.fr/",
     imageSrc: "/assets/addictaide.jpg",
     label: "Addict'aide",
-    description: "Trouve des outils et des ressources pour ne plus être seul·e face à l’addiction",
+    description: "Trouve des outils et des ressources pour ne plus être seul·e face à l'addiction",
   },
   {
     link: "https://addictions-france.org/etablissements/",
@@ -126,7 +126,7 @@ const Stupefiants = () => {
       </div>
     
       <div id="resume-conseils">
-        <p className="mise-avant">Les stupéfiants altèrent la perception, la mémoire et le comportement, avec des <b>risques de dépendance</b>, de troubles mentaux et de dommages physiques. Leur consommation, interdite par la loi, peut avoir de <b>graves conséquences</b> sur la santé, la vie sociale, les études et l’avenir.</p>
+        <p className="mise-avant">Les stupéfiants altèrent la perception, la mémoire et le comportement, avec des <b>risques de dépendance</b>, de troubles mentaux et de dommages physiques. Leur consommation, interdite par la loi, peut avoir de <b>graves conséquences</b> sur la santé, la vie sociale, les études et l'avenir.</p>
       </div>
 
       <h2 className="sous-titre-2">Quels sont les effets des stupéfiants ?</h2>
@@ -135,7 +135,7 @@ const Stupefiants = () => {
       <BulletList items={[
     "Perte de contrôle et confusion",
     "Hallucinations et perception altérée",
-    "Troubles de la mémoire et de l’attention",
+    "Troubles de la mémoire et de l'attention",
     "Anxiété, paranoïa ou agitation",
     "Risque de dépendance",
     "Fatigue, troubles du sommeil et malaises"
@@ -162,7 +162,7 @@ const Stupefiants = () => {
       </div>
 
       <div id='resume-conseils'>
-        <p className="mise-avant">La consommation de stupéfiants peut être motivée par la curiosité, la recherche de plaisir, le stress ou la pression sociale, mais elle comporte toujours des risques. <b>Réfléchir à ses raisons</b>, <b>réduire les dangers</b> et <b>demander de l’aide</b> en cas de dépendance sont essentiels pour protéger sa santé et son avenir.</p>
+        <p className="mise-avant">La consommation de stupéfiants peut être motivée par la curiosité, la recherche de plaisir, le stress ou la pression sociale, mais elle comporte toujours des risques. <b>Réfléchir à ses raisons</b>, <b>réduire les dangers</b> et <b>demander de l'aide</b> en cas de dépendance sont essentiels pour protéger sa santé et son avenir.</p>
       </div>
 
       <h2 className="sous-titre-2">Pourquoi je consomme ?</h2>
@@ -187,14 +187,14 @@ const Stupefiants = () => {
         image="/assets/cartes/valet_trefle.png"
         title="La carte V♣"
         shortText="Prévention sur la consommation occasionnelle"
-        longText="Consommer une substance psychoactive, ce n’est pas anodin. Elle agit sur ton cerveau, modifie tes sensations, ta perception, ton comportement. Cela peut créer une illusion de contrôle, mais chaque prise comporte des risques – immédiats ou différés, et peut aggraver des problèmes de santé déjà existants."
+        longText="Consommer une substance psychoactive, ce n'est pas anodin. Elle agit sur ton cerveau, modifie tes sensations, ta perception, ton comportement. Cela peut créer une illusion de contrôle, mais chaque prise comporte des risques – immédiats ou différés, et peut aggraver des problèmes de santé déjà existants."
         textButton="⤢ Agrandir la carte"
         suit="trefle"
       />
 
       <h2 className="sous-titre-2">Réduire les risques</h2>
 
-      <p className="texte">Si tu consommes, il est important de le faire en ayant conscience des risques, et en prenant des <b>précautions</b>. Voici quelques conseils pour réduire les risques liés à l’usage :</p>
+      <p className="texte">Si tu consommes, il est important de le faire en ayant conscience des risques, et en prenant des <b>précautions</b>. Voici quelques conseils pour réduire les risques liés à l'usage :</p>
       <ListeNumerotee title="Réduire les risques liés à la consommation de stupéfiants" items={conseils} />
 
 
@@ -229,7 +229,7 @@ const Stupefiants = () => {
         resources={resources2}></ExternalLinkBlock>
 
 
-      <h1 className="sous-titre-2">Besoin d’en parler ?</h1>
+      <h1 className="sous-titre-2">Besoin d'en parler ?</h1>
 
       <ContactCard
         image="/assets/cjc.png"
@@ -262,11 +262,11 @@ const Stupefiants = () => {
       </div>
 
       <div id='resume-conseils'>
-        <p className="mise-avant">Si tu remarques qu’une personne consomme de plus en plus, parle-lui <b>avec bienveillance</b> et encourage-la à demander de l’aide, <b>sans jugement</b>. En cas de danger immédiat, reste calme, sécurise l’environnement, surveille son état et appelle les secours si nécessaire.</p>
+        <p className="mise-avant">Si tu remarques qu'une personne consomme de plus en plus, parle-lui <b>avec bienveillance</b> et encourage-la à demander de l'aide, <b>sans jugement</b>. En cas de danger immédiat, reste calme, sécurise l'environnement, surveille son état et appelle les secours si nécessaire.</p>
       </div>
       <p className="texte">Tu remarques qu'une personne consomme de plus en plus régulièrement ?N'hésite pas à lui parler et à l'encourager à demander de l'aide. Mais surtout, <b>reste à l'écoute et sans jugement</b>. L'important est de <b>montrer que tu te soucies de son bien-être</b> et de l'accompagner dans sa démarche, s'il/elle décide d'agir pour réduire sa consommation.</p>
 
-      <p className="texte">Tu vois quelqu’un se mettre en danger sous l’effet de drogues et tu veux l'aider ? Voici quelques conseils :</p>
+      <p className="texte">Tu vois quelqu'un se mettre en danger sous l'effet de drogues et tu veux l'aider ? Voici quelques conseils :</p>
       
             <ListeNumerotee 
           
@@ -298,7 +298,7 @@ const Stupefiants = () => {
 
       <Separateur />
 
-      <p className="texte"><em><b>Sources :</b> Drogues Info Service, Addict’Aide, OFDT, Santé Publique France, Qualité de vie en étude à l'ECL</em></p>
+      <p className="texte"><em><b>Sources :</b> Drogues Info Service, Addict'Aide, OFDT, Santé Publique France, Qualité de vie en étude à l'ECL</em></p>
     </div>
   );
 };
