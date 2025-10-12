@@ -54,29 +54,29 @@ const resources_pénale1 = [
 const autres_pages_global = [
   {
     link: "/harcel",
-    emoji : "??",
+    emoji : "😠",
     label: "Harcèlement",
     description: "Comment agir face au harcèlement ?"
   },
   {
-    link: "/groupe",
+    link: "/isolement",
     emoji : "??",
-    label: "Effet de groupe",
-    description: "Comment agir face à l'effet de groupe ?"
+    label: "Isolement",
+    description: "Que puis-je faire si je me sens à l'écart ?"
   },
   {
-    link: "/inte",
+    link: "/anxiete",
     emoji : "??",
-    label: "Pratiques d'intégration",
-    description: "Que faire face au bizutage ?",
+    label: "Anxiété",
+    description: "Que puis-je faire si je me sens anxieux ?",
   }
 ];
 
 const autres_pages_sexisme = [
   {
     link: "/vss",
-    emoji : "??",
-    label: "Violences sexistes et sexeulles",
+    emoji : "🫂",
+    label: "Violences sexistes et sexuelles",
     description: "Comment réagir face à une VSS ?"
   }
 ];
@@ -84,69 +84,11 @@ const autres_pages_sexisme = [
 const autres_pages_lgbtphobie = [
   {
     link: "/cyber_harcel",
-    emoji : "??",
+    emoji : "📵",
     label: "Cyberharcèlement",
     description: "Comment réagir face à du cyberharcèlement ?"
-  },
-  {
-    link: "/genre",
-    emoji : "??",
-    label: "Identité de genre",
-    description: "Tu te questionnes sur ton identité ?"
   }
 ];
-
-const arbre = [
-  {
-    link: "/docs/arbre-vss-centrale-lyon.pdf",
-    label: "Arbre de décision",
-    description: "Je suis victime ou témoin de VSS (étudiants et personnels de Centrale Lyon)",
-    imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
-  }
-];
-
-const barometres = [
-
-  {
-    link: "/assets/Violentomètre_relations_profs_eleves.pdf",
-    label: "Les VSS dans les relations professeurs-élèves",
-    description: "",
-    emoji: "🎓",
-  },
-  {
-    link: "/assets/Violentometre_VSS_travail.pdf",
-    label: "Les VSS dans le milieu professionnel",
-    description: "",
-    emoji: "💼",
-  },
-  {
-    link: "/assets/violentometre_depliant_monde_scientifique.pdf",
-    label: "Les VSS dans le monde scientifique",
-    description: "",
-    emoji: "🔬",
-  },
-  {
-    link: "/assets/reglo_sport_reglette.pdf",
-    label: "Les VSS dans le sport",
-    description: "",
-    emoji: "⚽",
-  },
-  {
-    link: "/assets/barometre_violences_gyneco.pdf",
-    label: "Les VSS chez le ou la gynécologue",
-    description: "",
-    emoji: "🚺",
-  },
-];
-
-const discrimetre = [
-  {
-    link: "/assets/Discriminomètre.pdf",
-    label: "Discriminomètre - ",
-    description: "pour avoir des exemples de situations dangereuses",
-    emoji: "??"
-  }
-]
 
 const ressourcesUtiles = [
   {
@@ -175,82 +117,10 @@ const ressourcesUtiles = [
   },
 ];
 
-
-
-
-/* Provisoire : page non faite */
-import Workinprogress from "../../components/WorkInProgress";
-
-const resources_sites = [
-
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
-  },
-];
-
-
-
 const Discriminations = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Discriminations</h1>
-
-
-
-
-
-        <Workinprogress/>
-
-        <h1 className = "titre">Les ressources globales</h1>
-      <ExternalLinkBlock
-        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
-        resources={resources_sites}
-
-
-
-      />
-
-
-
-
-      {/* Provisoire : page non faite 
-
-
       <Navbar links={navLinks} />
 
       <div id="definitions">
@@ -264,7 +134,7 @@ const Discriminations = () => {
           suit="coeur"
         />
 
-        <p className="texte">
+       <p className="texte">
           La discrimination désigne toute distinction, exclusion ou préférence fondée sur un motif interdit par la loi, qui a pour effet de porter atteinte à l'égalité de traitement. Les motifs prohibés par la loi sont les suivants :
         </p>
         <ul>
@@ -336,7 +206,22 @@ const Discriminations = () => {
           link="https://www.antidiscriminations.fr/"
 
           bgColor="#ffffffff"    //informations facultatives
-          textColor="#091d7fff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+          textColor="#7f096bff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+        />
+
+        <ContactCard
+          image="/assets/universite_de_lyon_bis.jpg" 
+          title="Ma santé - Université de Lyon"
+          subtitle="Signalement : pour signaler des faits de violences, de discrimination ou de harcèlement à Centrale Lyon"
+          phone=""
+          email="harcelement@listes.ec-lyon.fr"
+          hours=""
+          textButton="Voir le site"
+          link="https://masante.universite-lyon.fr/stop-violences/comment-se-deroule-un-signalement-nbsp-/ecole-centrale-de-lyon-275717.kjsp"
+
+          bgColor="#ffffffff"    //informations facultatives
+          textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
 
         />
 
@@ -357,7 +242,7 @@ const Discriminations = () => {
       <div id="sexistes">
         <h1 className="titre">Discriminations sexistes</h1>
         <p>
-          Le sexisme désigne toute inégalité ou violence fondée sur le sexe ou le genre — harcèlement, remarques, violences sexuelles, inégalités d’accès ou de traitement. Il repose sur l’idée qu’un sexe serait supérieur à un autre, ce qui légitime depuis longtemps une hiérarchie entre hommes et femmes. Dès l’enfance, les stéréotypes genrés sont transmis dans les jouets, l’école, les médias ou le langage, influençant les comportements, les attentes et les rôles sociaux assignés à chacun·e. Ces représentations s’expriment à travers des discriminations, des micro-agressions ou des violences sexistes, et le sexisme structurel se manifeste aussi dans l’emploi, la politique, la culture ou le sport, par des inégalités de traitement, une invisibilisation des voix féminines ou des discours paternalistes « bienveillants » qui perpétuent les rapports de pouvoir.
+          Les discriminations sexistes concernent toute inégalité ou violence basée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités dans les opportunités. Le sexisme peut comprendre la croyance qu'un sexe ou qu'un genre serait intrinsèquement supérieur à l'autre. Les femmes, les personnes non-binaires ou les personnes trans peuvent être particulièrement exposées.
         </p>
 
         <h2 className="sous-titre-2">
@@ -369,32 +254,6 @@ const Discriminations = () => {
           "Pression sociale sur le “rôle de genre” attendu",
           "Modifications de comportement pour éviter les agressions (se taire, éviter certains lieux, etc.)"
         ]} />
-        
-        <ContactCard
-          image="/assets/3919.png"
-          title="3919"
-          subtitle="Ligne ouverte à toutes les femmes victimes de violences"
-          phone="3919"
-          email="contact@solidaritefemmes.org"
-          hours=""
-          textButton="Voir le site"
-          link="https://www.service-public.fr/particuliers/actualites/A16929"
-          
-          bgColor="#ffffffff"    //informations facultatives
-          textColor="#e90202ff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-        />
-        
-
-        <p>
-          Les discriminations sexistes peuvent être accompagnées de violences sexistes et sexuelles :
-          Qu'est-ce qu'une VSS ? Comment réagir ? Si tu te poses ces questions, n'hésite pas à t'informer juste ici : 
-        </p>
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={autres_pages_sexisme}
-        />
-
         <p className="texte">
           Selon le rapport 2024 du Haut Conseil à l'Égalité, 9 femmes sur 10 ont déjà renoncé à certaines actions ou modifié leur comportement pour éviter le sexisme.
         </p>
@@ -460,12 +319,15 @@ const Discriminations = () => {
         />  
 
         <p>
-          Tu peux également évaluer ta situation avec les différents violentomètres suivants :
+          Les discriminations sexistes peuvent être accompagnées de violences sexistes et sexuelles :
+          Qu'est-ce qu'une VSS ? Comment réagir ? Si tu te poses ces questions, n'hésite pas à t'informer juste ici : 
         </p>
-
         <ExternalLinkBlock
-          resources={barometres}
+          title=""
+          subtitle=""
+          resources={autres_pages_sexisme}
         />
+
       </div>
 
       <Separateur />
@@ -563,9 +425,9 @@ const Discriminations = () => {
         />
 
         <p className="texte">
-          Les LGBTphobies regroupent plusieurs formes de rejet ou de haine envers les personnes en raison de leur orientation sexuelle ou de leur identité de genre.  
-          L’<b>homophobie</b> vise les personnes attirées par des individus du même genre ; la <b>lesbophobie</b> désigne les formes spécifiques de rejet ou de sexualisation subies par les femmes lesbiennes ; la <b>biphobie</b> renvoie aux préjugés envers les personnes bisexuelles, souvent accusées d’indécision ou d’infidélité ; la <b>transphobie</b> cible les personnes transgenres ou en questionnement sur leur identité de genre, à travers le refus du prénom d’usage, des moqueries ou des violences.  
-          Ces attitudes peuvent s’exprimer dans tous les milieux — scolaire, professionnel, familial, sportif — et avoir des conséquences graves sur la santé mentale et le sentiment de sécurité des personnes concernées.
+          Les discriminations LGBT-phobes regroupent entre autre l'homophobie, la lesbophobie, la biphobie et la transphobie. 
+          Elles sont souvent fondées sur des préjugés ou stéréotypes liés à l'orientation sexuelle ou à l'identité de genre. 
+          Ces discriminations portent atteinte aux droits fondamentaux et à la dignité des personnes concernées.
         </p>
 
         <h2 className="sous-titre-2">
@@ -598,13 +460,13 @@ const Discriminations = () => {
             {
               link: "https://www.sos-homophobie.org/",
               imageSrc: "/assets/SOS_homophobie.jpg",
-              label: "SOS Homophobie -",
+              label: "SOS Homophobie",
               description: "Ligne d'écoute, d'aide et de signalement"
             },
             {
               link: "https://questionsexualite.fr/lutter-contre-les-violences-et-discriminations/la-violence-dans-la-societe/que-sont-les-lgbtphobies",
               imageSrc: "/assets/question_sexualite.png",
-              label: "Question sexualité -",
+              label: "Question sexualité",
               description: "pour s'informer sur les LGBTphobies"
             }
           ]}
@@ -643,14 +505,7 @@ const Discriminations = () => {
         <ExternalLinkBlock
           title="Pour en apprendre plus"
           subtitle=""
-          resources={[
-            {
-              link: "https://www.cestcommeca.net/",
-              imageSrc: "/assets/cestcommeca.jpg",
-              label: "C'est comme ça",
-              description: "Comprendre, découvrir la culture et savoir comment faire face aux discriminations"
-            }
-          ]}
+          resources={autres_pages_lgbtphobie}
         />
 
       </div>
@@ -687,7 +542,7 @@ const Discriminations = () => {
       <Separateur />
 
       <p className="texte">
-          <b>Sources :</b> Crous, 
+          <em><b>Sources :</b> Crous, 
           Ministère de l'Enseignement supérieur et de la Recherche, 
           SOS Homophobie, 
           Dépêche & enquêtes nationales,
@@ -698,14 +553,8 @@ const Discriminations = () => {
           Fondation Émergence, 
           LICRA, 
           Égalité contre le racisme, 
-          Centre LGBTI+ Lyon
+          Centre LGBTI+ Lyon </em>
       </p>
-
-
-
-      */}
-
-      
     </div>
   );
 };

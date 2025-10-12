@@ -224,3 +224,23 @@ body.dark-mode .mise-avant {
   background-color: #343434;
   color: #ffffff;
 }
+
+/* Multicolor gradient title variant */
+.titre-page.gradient-title {
+  background: linear-gradient(90deg,
+    #ff3737 0%,   /* red */
+    #ffc61a 20%,  /* yellow */
+    #3dc63d 40%,  /* green */
+    #1d9eda 50%,  /* blue */
+    #6027e6 60%,  /* indigo */
+    #ff2ac3 80%  /* pink */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* show gradient */
+}
+
+/* Keep gradient visible in dark mode as well */
+body.dark-mode .titre-page.gradient-title {
+  color: transparent;
+}
