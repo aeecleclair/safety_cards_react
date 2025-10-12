@@ -120,12 +120,12 @@ const resources8 = [
 const pages = [
     {
     link: "/discri",
-    emoji: "",
+    emoji: "🟰",
     label: "Discriminations",
     description: "S'informer sur les discriminations liées à la sexualité"},
   {
     link: "/sex_orient",
-    emoji: "🏳‍🌈",
+    emoji: "🏳️‍🌈",
     label: "Orientation sexuelle",
     description: "Plus d'informations sur l'orientation sexuelle"
   }
@@ -149,7 +149,7 @@ const pages3 = [
     label: "Consommation d'alcool",
     description: "Les effets de l'alcool sur le consentement et les comportements sexuels" },
   { link: "/vss",
-    emoji: ""
+    emoji: "🫂"
     , label: "VSS",
     description: "Reconnaître, prévenir et agir face aux violences sexuelles"}
 ];

@@ -434,7 +434,7 @@ const Genre = () => {
       <p className="texte">
         <em>
           <b>Sources :</b> brochures OUTrans (hormones, DTC), Guide Chrysalide, WikiTrans, Fransgenre, Planning
-          Familial, Centre LGBTI+ Lyon, SOS Homophobie, Santé Publique France.
+          Familial, Centre LGBTI+ Lyon, SOS Homophobie, Santé Publique France, témoignages d'étudiant·e·s, Rapport Vie étudiante à Centrale Lyon 2024
         </em>
       </p>
     </div>

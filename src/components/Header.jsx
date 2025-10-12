@@ -12,7 +12,7 @@ const menuItems = [
     title: "🙆 Connaissance de soi",
     submenu: [
       { title: "💛 Confiance & estime de soi", link: "/conf"},
-      { title: "🏳️‍⚧️ Identité de genre", link: "/genre", inactive:true},
+      { title: "🏳️‍⚧️ Identité de genre", link: "/genre"},
       { title: "🧍 Isolement", link: "/isolement"},
     ],
   },
@@ -44,12 +44,12 @@ const menuItems = [
     title: "💖 Sexualité et amour",
     submenu: [
       { title: "✅ Consentement", link: "/consent" },
-      { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
+      { title: "⚠️ IST", link: "/pratiques_sex" },
       { title: "♀️ IVG", link: "/ivg", inactive:true },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient" },
       { title: "💑 Relations de couple", link: "/couple" },
       { title: "⛔ Revenge porn", link: "/revenge" },
-      { title: "😘 Sexualité", link: "/sex", inactive:true },
+      { title: "😘 Sexualité et contraception", link: "/sex", inactive:true },
     ],
   },
   {

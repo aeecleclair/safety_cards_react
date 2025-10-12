@@ -186,18 +186,33 @@ const Vss = () => {
 
       <h2 className="sous-titre-2">Qu'est-ce qu'une VSS ?</h2>
 
-      <p className="texte">Les violences sexistes et sexuelles (VSS) regroupent les violences sexuelles (actes à connotation sexuelle commis avec violence, contrainte, menace ou surprise) et les violences sexistes (injures ou comportements humiliants basés sur le genre). 
-
-
-         
+      <p className="texte">
+        Les <b>violences sexistes et sexuelles (VSS)</b> regroupent les <b>violences sexuelles</b>
+        (actes à connotation sexuelle commis avec <b>violence</b>, <b>contrainte</b>, <b>menace</b> ou <b>surprise</b>)
+        et les <b>violences sexistes</b> (injures ou <b>comportements humiliants</b> basés sur le genre).
       </p>
 
-      <BulletList items={["L'outrage sexiste (insulte ou geste sexuel offensant) est passible d'une amende (1 500 € en règle générale). ",
-"L'exhibition sexuelle (imposer un acte sexuel ou exhiber ses organes génitaux en public ou à la vue de tous) est puni d'un an d'emprisonnement et 15 000 € d'amende.",
-"Le harcèlement sexuel (commentaires sexuels répétés ou non, chantage, etc.) est réprimé par deux ans de prison et 30 000 € d'amende.",
-"L'agression sexuelle (atteinte sexuelle avec violence, contrainte, menace ou surprise) est un délit. On parle d'agression sexuelle si l'atteinte a lieu sur une partie du corps considérée comme intime et sexuelle (la bouche, la poitrine, le sexe, les fesses, les cuisses et l'intérieur des cuisses).",
-"Le viol (toute pénétration sexuelle forcée) est un crime puni jusqu'à 15 ans de réclusion criminelle (20 ans si circonstances aggravantes)."
-]} />
+      <BulletList
+        items={[
+          <>
+            <b>L'outrage sexiste</b> (insulte ou geste sexuel offensant) est passible d'une amende (1 500 € en règle générale).
+          </>,
+          <>
+            <b>L'exhibition sexuelle</b> (imposer un acte sexuel ou exhiber ses organes génitaux en public ou à la vue de tous)
+            est puni d'<b>un an d'emprisonnement</b> et <b>15 000 €</b> d'amende.
+          </>,
+          <>
+            <b>Le harcèlement sexuel</b> (commentaires sexuels répétés ou non, chantage, etc.) est réprimé par <b>deux ans de prison</b> et <b>30 000 €</b> d'amende.
+          </>,
+          <>
+            <b>L'agression sexuelle</b> (atteinte sexuelle avec violence, contrainte, menace ou surprise) est un <b>délit</b>.
+            On parle d'agression sexuelle si l'atteinte a lieu sur une partie du corps considérée comme intime et sexuelle (la bouche, la poitrine, le sexe, les fesses, les cuisses et l'intérieur des cuisses).
+          </>,
+          <>
+            <b>Le viol</b> (toute pénétration sexuelle forcée) est un <b>crime</b> puni jusqu'à <b>15 ans</b> de réclusion criminelle (<b>20 ans</b> si circonstances aggravantes).
+          </>,
+        ]}
+      />
 
 
       <ExternalLinkBlock
@@ -224,15 +239,32 @@ const Vss = () => {
         imageSrc="/assets/iceberg.jpg"
       />
 
-      <BulletList items={["Les blagues sexistes ou « graveleuses », en présence de la personne ou sur des groupes de discussion. Mais ce n'est pas « juste une blague », c'est un maillon d'une chaîne de violences.",
-        "Les remarques sur le physique et l'habillement",
-        "Les sifflements, regards insistants, gestes intrusifs",
-        "La minimisation ou le déni des violences (« Elle exagère »)",
-        "L'hypersexualisation des femmes dans les pubs, clips, jeux vidéo",
-        "Les injonctions de genre (« Une vraie femme doit être douce », « un homme ne pleure pas »)",
-        "La culture du viol (Justification ou excuse des violences sexuelles par le comportement de la victime)"
-
-      ]} />
+      <BulletList
+        items={[
+          <>
+            <b>Les blagues sexistes</b> ou « graveleuses », en présence de la personne ou sur des groupes de discussion.
+            Ce n'est pas « juste une blague », c'est un maillon d'une chaîne de violences.
+          </>,
+          <>
+            <b>Les remarques sur le physique et l'habillement</b>
+          </>,
+          <>
+            <b>Les sifflements, regards insistants, gestes intrusifs</b>
+          </>,
+          <>
+            <b>La minimisation</b> ou le <b>déni</b> des violences (« Elle exagère »)
+          </>,
+          <>
+            <b>L'hypersexualisation</b> des femmes dans les pubs, clips, jeux vidéo
+          </>,
+          <>
+            <b>Les injonctions de genre</b> (« Une vraie femme doit être douce », « un homme ne pleure pas »)
+          </>,
+          <>
+            <b>La culture du viol</b> (justification ou excuse des violences sexuelles par le comportement de la victime)
+          </>,
+        ]}
+      />
 
       <p className="texte">Ces comportements, souvent moins visibles que ceux au sommet de l'iceberg, peuvent aussi être très présents dans une relation de couple.</p>
 
@@ -387,25 +419,53 @@ const Vss = () => {
 
       </p>
 
-      <BulletList items={[
-        "Maintiens le lien avec la victime : garder un contact régulier permet de briser l'isolement souvent imposé par l'auteur des violences.",
-        "Valorise-la : lui rappeler sa valeur, ses qualités, ses forces contribue à reconstruire l'estime d'elle-même.",
-        "Déculpabilise-la : aide-la à comprendre qu'elle n'est jamais responsable des violences subies.",
-        "Rassure-la : rappelle-lui qu'elle est crue, qu'elle n'est pas seule et qu'il existe des ressources pour l'accompagner.",
-        "Sois de son côté : fais preuve de loyauté, sans condition, pour qu'elle se sente soutenue dans son parcours."
-      ]} />
+      <BulletList
+        items={[
+          <>
+            <b>Maintiens le lien</b> avec la victime : garder un contact régulier permet de briser l'isolement souvent imposé par l'auteur des violences.
+          </>,
+          <>
+            <b>Valorise-la</b> : lui rappeler sa valeur, ses qualités, ses forces contribue à reconstruire l'estime d'elle-même.
+          </>,
+          <>
+            <b>Déculpabilise-la</b> : aide-la à comprendre qu'elle n'est jamais responsable des violences subies.
+          </>,
+          <>
+            <b>Rassure-la</b> : rappelle-lui qu'elle est crue, qu'elle n'est pas seule et qu'il existe des ressources pour l'accompagner.
+          </>,
+          <>
+            <b>Sois de son côté</b> : fais preuve de loyauté, sans condition, pour qu'elle se sente soutenue dans son parcours.
+          </>,
+        ]}
+      />
 
       <p className="texte">En revanche, il est important d'éviter certains comportements qui pourraient aggraver la situation de la victime ou la mettre mal à l'aise. Voici quelques exemples de ce qu'il ne faut pas faire :</p>
 
-      <BulletList items={[
-        "Mettre en doute la réalité des faits : remettre en question ce que la personne raconte peut renforcer sa détresse et isoler davantage la victime.",
-        "Culpabiliser la victime : lui faire porter la responsabilité des violences subies est une double peine injuste et destructrice.",
-        "Minimiser ou banaliser les violences subies : qualifier les faits de « pas si graves » ou de « malentendus » revient à invalider le vécu de la victime.",
-        "Exprimer un jugement moral : porter un regard moralisateur sur la situation ou sur les comportements de la victime empêche une écoute authentique.",
-        "Ramener les propos à nous : parler de notre propre vécu détourne l'attention de la personne concernée et recentre l'échange sur nous-mêmes.",
-        "Vouloir trouver des solutions immédiatement, donner des injonctions à agir : cela peut mettre une pression supplémentaire sur la victime, qui n'est peut-être pas prête à agir.",
-        "Projeter ses propres angoisses et émotions : faire peser ses propres peurs ou colères sur la victime peut alourdir sa charge émotionnelle."
-      ]} />
+      <BulletList
+        items={[
+          <>
+            <b>Mettre en doute la réalité des faits</b> : remettre en question ce que la personne raconte peut renforcer sa détresse et isoler davantage la victime.
+          </>,
+          <>
+            <b>Culpabiliser la victime</b> : lui faire porter la responsabilité des violences subies est une double peine injuste et destructrice.
+          </>,
+          <>
+            <b>Minimiser</b> ou <b>banaliser</b> les violences subies : qualifier les faits de « pas si graves » ou de « malentendus » revient à invalider le vécu de la victime.
+          </>,
+          <>
+            <b>Exprimer un jugement moral</b> : porter un regard moralisateur sur la situation ou sur les comportements de la victime empêche une écoute authentique.
+          </>,
+          <>
+            <b>Ramener les propos à nous</b> : parler de notre propre vécu détourne l'attention de la personne concernée et recentre l'échange sur nous-mêmes.
+          </>,
+          <>
+            <b>Vouloir trouver des solutions immédiatement</b>, donner des injonctions à agir : cela peut mettre une pression supplémentaire sur la victime, qui n'est peut-être pas prête à agir.
+          </>,
+          <>
+            <b>Projeter ses propres angoisses et émotions</b> : faire peser ses propres peurs ou colères sur la victime peut alourdir sa charge émotionnelle.
+          </>,
+        ]}
+      />
 
       <p className="texte">La réaction de certaines victimes face à une VSS peut sembler irrationnelle pour quelqu'un qui n'a pas vécu la situation. Il est important de prendre en compte les 3 points suivants :</p>
 
