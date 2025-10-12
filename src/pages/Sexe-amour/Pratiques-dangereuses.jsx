@@ -186,6 +186,7 @@ const Ist = () => {
       <div id="quoi">
         <h1 className="titre">Qu'est-ce qu'une IST ?</h1>
       </div>
+      <p className="mise-avant"><b>Une IST (infection sexuellement transmissible)</b> est une infection transmise lors de rapports sexuels, causée par des bactéries, des virus ou des parasites. Souvent silencieuses mais fréquentes, surtout chez les jeunes, elles peuvent entraîner des complications graves si elles ne sont pas dépistées et traitées à temps.</p>
       
       <ImageTextPopup
         image="./assets/cartes/7_coeur.png"
@@ -324,6 +325,7 @@ const Ist = () => {
         <h1 className="titre">Se faire dépister</h1>
       </div>
 
+      <p className="mise-avant">Il est recommandé de se faire <b>dépister régulièrement</b>, notamment après un rapport non protégé, avant d’arrêter le préservatif avec un nouveau partenaire ou en cas de doute. Le dépistage est <b>simple, gratuit et confidentiel</b> dans les CeGIDD ou via le dispositif « Mon Test IST », qui permet aux 18-25 ans de faire un test sans ordonnance, en laboratoire ou chez soi.</p>
       <h2 className="sous-titre-2">Quand se faire dépister ?</h2>
 
       <p className="texte">Il est recommandé de se faire dépister :</p>
@@ -380,6 +382,7 @@ const Ist = () => {
       <div id="traitements">
         <h1 className="titre">Se faire traiter</h1>
       </div>
+      <p className="mise-avant">Les IST <b>se soignent selon leur origine</b> : les infections bactériennes (comme la chlamydia ou la syphilis) sont traitées par antibiotiques, tandis que les infections virales (comme le VIH ou l’herpès) se contrôlent grâce à des antiviraux. Il est essentiel de <b>suivre le traitement prescrit jusqu’au bout</b>, d’<b>éviter les rapports non protégés pendant cette période</b> et de <b>prévenir ses partenaires pour limiter la transmission.</b></p>
       <h2 className="sous-titre-2">Traitement des IST</h2>
       <p className="texte">Le traitement des IST dépend de l'agent infectieux en cause. Les IST bactériennes (ex. chlamydia, gonorrhée, syphilis) sont en général <b>soignées par des antibiotiques</b>. Les IST virales (ex. herpès, VIH) se <b>contrôlent</b> par des antiviraux — pour le VIH, un traitement antirétroviral permet d'atteindre une charge virale indétectable et d'empêcher la transmission.</p>
       <ExternalLinkBlock resources={resources7} />
@@ -407,6 +410,7 @@ const Ist = () => {
       <div id="pratiques">
       <h1 className="titre">Pratiques à risques</h1>
       </div>
+      <p className="mise-avant">Les pratiques sexuelles à risque sont celles qui favorisent la transmission des IST. <b>L'alcool et les drogues peuvent altérer le jugement</b>, augmenter les comportements à risque et <b>annuler la validité du consentement</b>, ce qui peut avoir des <b>conséquences pénales graves.</b></p>
       <p className="texte">Les pratiques sexuelles à risques sont celles qui <b>augmentent le risque de transmission des IST</b>. Cela inclut :</p>
       <BulletList items={[
         "Rapports sexuels sans préservatif (vaginaux, anaux, oraux)",
