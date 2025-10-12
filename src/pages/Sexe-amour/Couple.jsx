@@ -46,7 +46,13 @@ const typesViolences = [
     description:
       "Pour connaitre les conséquences du harcèlement dans le couple",
     emoji: "😠",
-  }
+  },
+  {
+    link: "/revenge",
+    label: "Revenge porn",
+    description: "Si jamais des images intimes de toi sont diffusées, ou qu'on te menace",
+    emoji: "⛔",
+  },
 ];
 
 const violenceConflit = [
@@ -203,7 +209,7 @@ const RelationsCouple = () => {
 
         <h2 className="sous-titre-2">Aide et numéros d'urgence</h2>
         <p className="texte">
-          Si tu es victime ou témoin de violences conjugales, il est essentiel d'en parler. Tu peux te tourner vers un·e ami·e, un·e personnel·le, etc. ou directement les secours en cas d'urgence (17 pour la police, 112 urgence européenne).
+          Si tu es victime ou témoin de violences conjugales, il est essentiel d'en parler. Tu peux te tourner vers un·e ami·e, un·e personnel·le ou un·e professeur·e en qui tu as confiance, etc. ou directement les secours en cas d'urgence (17 pour la police, 112 urgence européenne).
         </p>
 
         <p className="texte">
