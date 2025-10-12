@@ -48,12 +48,12 @@ const Footer = () => {
           <p className='titre-categorie'>Sexualité et amour</p>
           <div>
             <Link to="/consent">Consentement</Link><br />
+            <Link to="/pratiques_sex">IST</Link><br />
             <Link to="/ivg">IVG</Link><br />
             <Link to="/sex_orient">Orientation sexuelle</Link><br />
-            <Link to="/pratiques_sex">IST</Link><br />
             <Link to="/couple">Relations de couple</Link><br />
             <Link to="/revenge">Revenge porn</Link><br />
-            <Link to="/sex">Sexualité</Link>
+            <Link to="/sex">Sexualité et contraception</Link>
           </div>
         </div>
 
