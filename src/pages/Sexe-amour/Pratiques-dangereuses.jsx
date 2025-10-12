@@ -14,8 +14,9 @@ import { ExternalLink } from "lucide-react";
 const navLinks = [
   { label: "Qu'est-ce qu'une IST ?", target: "quoi" },
   { label: "Se protéger", target: "se-proteger" },
-  { label: "Dépistage", target: "depistage" },
-  { label: "Traitements", target: "traitements" }
+  { label: "Se faire dépister", target: "depistage" },
+  { label: "Se faire traiter", target: "traitements" },
+  { label: "Pratiques à risques", target: "pratiques" },
 ];
 
 const symptomes = [
@@ -29,8 +30,7 @@ const symptomes = [
 
 
 const planAide = [
-  { title: "Faire le point", subtitle: "Après un rapport à risque : évaluer le risque et envisager un dépistage" },
-  { title: "Se faire dépister", subtitle: "Aller en laboratoire, CeGIDD ou centre de santé sexuelle — plusieurs tests existent (sang, urine, prélèvements locaux)" },
+  { title: "Ne pas paniquer", subtitle: "La plupart des IST sont guérissables avec un traitement adapté"},
   { title: "Traiter et prévenir la transmission", subtitle: "Si diagnostic positif : traitement adapté et information des partenaires" },
   { title: "Suivi médical", subtitle: "Suivre les prescriptions et refaire un contrôle si demandé par le professionnel" },
   { title: "Parler", subtitle: "Informer ses partenaires récents de façon factuelle et non-accusatoire" }
@@ -71,28 +71,88 @@ const resources2 = [
     label: "Question Sexualité",
     description: "Informations claires et accessibles sur les IST"
   },    
-  { link: "https://www.ameli.fr/assure/sante/themes/infections-sexuellement-transmissibles-ist",
-    imageSrc: "/assets/ameli.png",
-    label: "Ameli",
-    description: "Informations officielles sur les IST, prévention et dépistage"
+    { link: "https://www.sante.fr/comment-reconnaitre-une-ist",
+    imageSrc: "/assets/sante_fr.png",
+    label: "Sante.fr",
+    description: "Fiches pratiques : comment reconnaître une IST ?"
   }
 ];
 
 const resources = [
+  { 
+    link: "https://www.ameli.fr/assure/sante/themes/mst-ist/depistage",
+    imageSrc: "/assets/ameli.png",
+    label: "Ameli",
+    description: "Informations officielles sur le dépistage des IST"
+  },
   {
     link: "https://mon-test-ist.ameli.fr/",
     imageSrc: "/assets/mon_test_ist.jpg",
-    label: "Mon Test IST (Ameli)",
+    label: "Mon Test IST",
     description: "Dépistage en labo ou chez soi sans ordonnance"
-  },
-  {
-    link: "https://www.sante.fr/comment-reconnaitre-une-ist",
-    imageSrc: "/assets/sante_fr.png",
-    label: "Sante.fr",
-    description: "Fiches pratiques : symptômes, dépistage et conduite à tenir"
   },
 ];
 
+const resources6 = [
+  { link: "https://www.sante.fr/fellation-cunnilingus-anulingus-peut-attraper-des-ist-par-la-bouche",
+    imageSrc: "/assets/sante_fr.png",
+    label: "Sante.fr",
+    description: "Informations et conseils pour se protéger lors de rapports oraux"
+  }
+];
+
+const resources7 = [
+  {link: "https://www.ameli.fr/assure/sante/themes/mst-ist/traitement",
+    imageSrc: "/assets/ameli.png",
+    label: "Ameli",
+    description: "Informations officielles sur le traitement des différentes IST"
+  }
+];
+
+const resources8 = [
+  { link: "https://questionsexualite.fr/s-informer-sur-les-infections-et-les-maladies/avoir-une-ist/pourquoi-et-comment-informer-votre-ou-vos-partenaires-de-votre-ist",
+    imageSrc: "/assets/question_sexualite.png",
+    label: "Question Sexualité",
+    description: "Comment informer votre ou vos partenaires de votre IST ?"
+  }
+];
+
+const pages = [
+    {
+    link: "/discri",
+    emoji: "",
+    label: "Discriminations",
+    description: "S'informer sur les discriminations liées à la sexualité"},
+  {
+    link: "/sex_orient",
+    emoji: "🏳‍🌈",
+    label: "Orientation sexuelle",
+    description: "Plus d'informations sur l'orientation sexuelle"
+  }
+];
+
+const pages2 = [
+    {
+    link: "/sex",
+    emoji: "😘",
+    label: "Sexualité & Contraception",
+    description: "Comment être plus épanoui et responsable dans sa sexualité ?"},
+    ];
+  
+const pages3 = [
+  { link: "/consentement",
+    emoji: "✅",
+    label: "Consentement",
+    description: "Comprendre et respecter le consentement dans les relations sexuelles"},
+  { link: "/alcool",
+    emoji: "🍻", 
+    label: "Consommation d'alcool",
+    description: "Les effets de l'alcool sur le consentement et les comportements sexuels" },
+  { link: "/vss",
+    emoji: ""
+    , label: "VSS",
+    description: "Reconnaître, prévenir et agir face aux violences sexuelles"}
+];
 
 const contacts = [
   {
@@ -159,7 +219,7 @@ const Ist = () => {
       ]} /> </>
           }
       />
-
+      <p className="texte"><em>Source de l'illustration : depistage.be.</em></p>
 
       <p className="mise-avant">Le VIH (virus de l’immunodéficience humaine) est une <b>infection sexuellement transmissible</b>, mais il ne provoque pas toujours le SIDA. Le <b>VIH</b> est le virus, tandis que le <b>SIDA</b> (syndrome d’immunodéficience acquise) correspond au stade avancé de l’infection, lorsque le système immunitaire est affaibli et que des maladies opportunistes apparaissent. Grâce aux traitements actuels, une personne vivant avec le VIH peut rester en bonne santé, ne pas transmettre le virus et ne jamais développer le SIDA.</p>
      
@@ -172,17 +232,15 @@ const Ist = () => {
         "Par contact cutané ou muqueux avec des lésions infectées (ex. herpès, syphilis)"
       ]} />
 
-      <p className="texte">Oui, les IST peuvent se transmettre par le sexe oral (cunnilingus, fellation, anulingus). Le risque est généralement plus faible que pour les rapports vaginaux ou anaux, mais il n'est pas nul.</p>
-      <p className="texte">Pour les <b>rapports entre femmes</b>, l'utilisation de barrières comme les digues dentaires, les préservatifs internes ou les gants en latex peut également réduire le risque de transmission selon les pratiques.</p>
+      <p className="texte">Oui, <b>les IST peuvent se transmettre par le sexe oral</b> (cunnilingus, fellation, anulingus). Le risque est généralement plus faible que pour les rapports vaginaux ou anaux, mais il n'est pas nul.</p>
 
-      <ExternalLinkBlock resources={resources3} />
       
       <h2 className="sous-titre-2">Quels sont les symptômes ?</h2>
       <p className="texte">Beaucoup d'IST peuvent être <b>asymptomatiques</b> (silencieuses). Quand il y a des signes, il peut s'agir de :</p>
 
       <BulletList items={symptomes} />
 
-      <p className="texte">Même sans symptôme, une IST peut se transmettre et provoquer des complications si elle n'est pas traitée : infertilité, douleurs chroniques, complications pendant la grossesse, risques accrus d'acquisition du VIH, etc.</p>
+      <p className="texte"><b>Même sans symptômes, une IST peut se transmettre</b> et provoquer des complications si elle n'est pas traitée : infertilité, douleurs chroniques, complications pendant la grossesse, risques accrus d'acquisition du VIH, etc.</p>
       <p className="texte">D'autres maladies peuvent provoquer ce type de symptômes, comme par exemple les mycoses vaginales ou les infections urinaires. Pour ces raisons, il est important de consulter un professionnel de santé en cas de doute, ou d'<b>effectuer un dépistage</b>.</p>
 
 
@@ -205,13 +263,48 @@ const Ist = () => {
         "En cas d'exposition récente (agression, rapport non protégé) : demander une prophylaxie post‑exposition (TPE/PPE) dans les 48–72h"
       ]} />
       
+      <h2 className="sous-titre-2">Le préservatif</h2>
+      <p className="texte">Le <b>préservatif</b> (masculin ou féminin) est le moyen le plus efficace pour se protéger contre la plupart des IST lors de rapports sexuels. Il doit être <b>utilisé de manière correcte et systématique, du début à la fin du rapport</b>. Il est important de <b>vérifier la date de péremption et l'intégrité de l'emballage</b> avant utilisation.</p>
+      <p className="texte">L'achat de préservatifs est <b>anonyme et gratuit</b> dans les centres de santé sexuelle, les CeGIDD, les centres de planning familial, et <b>à l'infirmerie de l'école</b>. Ils sont aussi disponibles en pharmacie, supermarchés, distributeurs automatiques et en ligne.</p>
+
+
+      <ContactCard
+        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
+        title="Infirmerie"
+        subtitle="Infirmerie de Centrale Lyon"
+        phone="Voir les informations"
+        email="Voir les informations"
+        hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 "
+        textButton="Voir les informations"
+        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
+
+        bgColor="#ffffff"    //informations facultatives
+        textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+
+      />
+      
+      <p className="texte">Utiliser la bonne protection lors de rapports oraux permet aussi de réduire le risque de transmission d'une IST. Utiliser un <b>préservatif masculin</b> en cas de fellation et une <b>digue dentaire</b> (carré de latex) ou un préservatif coupé pour un cunilingus/anulingus.</p>
+
+      <ExternalLinkBlock resources={resources6} />
+      
+      <p className="texte">Le préservatif n'offre pas une protection totale contre les IST qui se transmettent par contact cutané (ex. herpès, syphilis), mais il réduit significativement le risque.</p>
+      <p className="texte">Pour les <b>rapports entre femmes</b>, l'utilisation de barrières comme les digues dentaires, les préservatifs internes ou les gants en latex peut également réduire le risque de transmission selon les pratiques.</p>
+
+      <ExternalLinkBlock resources={resources3} />
+
+      <h2 className="sous-titre-2">La vaccination</h2>
+      <p className="texte">Des <b>vaccins efficaces</b> existent pour prévenir certaines IST :</p>
+      <BulletList items={[
+        "Contre le papillomavirus humain (HPV) : protège contre les types de HPV responsables de la majorité des cancers du col de l'utérus et des verrues génitales. Il est recommandé pour les filles et les garçons dès 11-14 ans, avec un rattrapage possible jusqu'à 19 ans.",
+        "Contre l'hépatite B : protège contre une infection virale qui peut entraîner des maladies du foie. Il est recommandé pour tous les nourrissons et pour les personnes à risque (ex. partenaires multiples, usage de drogues injectables)."
+      ]} />
+      <p className="texte">Il n'existe pas de vaccin contre le VIH, la chlamydia, la gonorrhée ou la syphilis, mais la recherche est en cours.</p>
+
+
       <h2 className="sous-titre-2">La PrEP pour le VIH</h2>
       <p className="texte">La <b>PrEP (prophylaxie pré-exposition)</b> est un traitement préventif qui réduit fortement le risque d'infection par le VIH chez les personnes à risque élevé. Il s'agit de prendre un médicament antirétroviral avant et après une exposition potentielle au virus (par exemple, lors de rapports sexuels non protégés avec un partenaire séropositif).</p>
       <ExternalLinkBlock resources={resources4} />
 
-      <h2 className="sous-titre-2">La PEP après une exposition au VIH</h2>
-      <p className="texte">La <b>PEP (prophylaxie post-exposition)</b> est un traitement d'urgence qui peut prévenir l'infection par le VIH après une exposition récente (moins de 48-72 heures). Elle consiste en une prise quotidienne d'antirétroviraux pendant 28 jours et doit être commencée le plus rapidement possible après l'exposition.</p>
-      <ExternalLinkBlock resources={resources5} />
 
       <h2 className="sous-titre-2">Préjugés sur les IST</h2>
       <p className="texte">Les IST sont souvent entourées de <b>préjugés et de stigmatisation</b>, ce qui peut empêcher les personnes concernées de se faire dépister ou traiter. Il est important de rappeler que :</p>
@@ -219,10 +312,11 @@ const Ist = () => {
         "Les IST sont très courantes et peuvent toucher tout le monde",
         "Les IST n'ont rien à voir avec l'hygiène ou la moralité",
         "Se faire dépister et traiter est un acte responsable et courageux",
-        "Informer ses partenaires permet de protéger leur santé et la vôtre"
+        "Informer ses partenaires permet de protéger leur santé et la vôtre",
+        "Les personnes hommosexuelles ne sont pas plus à risque que les personnes hétérosexuelles si elles adoptent des comportements à risque similaires"
       ]} />
 
-      <Quote text="Parler ouvertement des IST contribue à réduire la stigmatisation et à promouvoir une sexualité saine et responsable." />
+      <ExternalLinkBlock resources={pages} />
 
       <Separateur />
 
@@ -230,49 +324,54 @@ const Ist = () => {
         <h1 className="titre">Se faire dépister</h1>
       </div>
 
+      <h2 className="sous-titre-2">Quand se faire dépister ?</h2>
 
-      <h2 className="sous-titre-2">Le dépistage régulier</h2>
-      <p className="texte">Le dépistage régulier des IST est essentiel, même en l'absence de symptômes, surtout si vous avez des partenaires multiples ou des pratiques à risque. Un dépistage précoce permet un traitement rapide et réduit le risque de complications et de transmission.</p>
-
-      <Quote text="Se dépister, ce n'est pas se culpabiliser — c'est prendre soin de soi et des autres." />
-
-      <h2 className="sous-titre-2">Comment se faire dépister ?</h2>
-
-      <p className="texte">Le dépistage peut se faire par prise de sang, test urinaire ou prélèvement local (urètre, col, gorge, rectum) selon l'IST recherchée. Il est recommandé :</p>
+      <p className="texte">Il est recommandé de se faire dépister :</p>
 
       <BulletList items={[
         "Après un rapport non protégé ou un doute",
         "Avant d'arrêter le préservatif avec un(e) nouveau(elle) partenaire",
         "Régulièrement si vous avez des partenaires multiples ou des pratiques à risque",
-        "En préparation d'une grossesse"
+        "En préparation d'une grossesse afin de protéger la santé de la mère et de l'enfant",
       ]} />
 
-      <p className="texte">Le dépistage peut se faire gratuitement et de manière anonyme dans les CeGIDD (Centres gratuits d'information, de dépistage et de diagnostic), les centres de santé sexuelle, ou chez un professionnel de santé (médecin, gynécologue, infirmier·e). Certains tests rapides sont aussi disponibles en pharmacie ou en ligne.</p>
+      <h2 className="sous-titre-2">Comment se faire dépister ?</h2>
+      <p className="texte">Le dépistage peut se faire par <b>prise de sang, test urinaire ou prélèvement local</b> (urètre, col, gorge, rectum) selon l'IST recherchée. Le dépistage peut se faire <b>gratuitement et de manière anonyme dans les CeGIDD</b> (Centres gratuits d'information, de dépistage et de diagnostic), les centres de santé sexuelle, ou chez un professionnel de santé (médecin, gynécologue, infirmier·e). Certains tests rapides sont aussi disponibles en pharmacie ou en ligne.</p>
 
-      <p className="texte">Depuis 2024, le dispositif « Mon Test IST » permet de se présenter directement en laboratoire pour un bilan IST sans ordonnance et gratuit pour les 18-25 ans. Il est même possible de commander un kit de dépistage par auto-prélèvement pour les infections à Chlamydia et à gonocoque.</p>
+        <ContactCard
+          image="/assets/hcl.png"
+          title="CeGIDD autour de Lyon"
+          subtitle="Centres gratuits d'information, de dépistage et de diagnostic"
+          phone=""
+          email=""
+          hours=""
+          textButton="Voir la liste des CeGIDD"
+          link="https://www.chu-lyon.fr/depistage-sida-et-ist"
+        />
+
+      <p className="texte">Depuis 2024, le <b>dispositif « Mon Test IST »</b> permet de se présenter directement en laboratoire pour un <b>bilan IST sans ordonnance et gratuit pour les 18-25 ans</b>. Il est même possible de <b>commander un kit de dépistage par auto-prélèvement</b> pour les infections à Chlamydia et à gonocoque.</p>
 
       <ExternalLinkBlock resources={resources} />
+
+      <h2 className="sous-titre-2">Après un dépistage</h2>
+      <p className="texte">Les résultats des tests peuvent prendre de <b>quelques jours à une semaine</b> selon le type de test et le lieu de dépistage. Ils sont <b>confidentiels</b> et, dans les CeGIDD, le dépistage peut être anonyme. Pendant ce laps de temps, il est recommandé de <b>ne pas avoir de rapports sexuels non protégés</b> et de <b>prévenir ses partenaires sexuels</b> pour qu'ils puissent également se faire dépister.</p>
+
+      <ExternalLinkBlock resources={pages2} />
+
+      <p className="texte">Si le dépistage est <b>négatif</b>, il est important de continuer à se protéger et de refaire un dépistage régulièrement si vous avez des pratiques à risque.</p>
+      <p className="texte">Si le dépistage est <b>positif</b>, un <b>traitement adapté</b> sera prescrit selon l'IST diagnostiquée. Il est essentiel de suivre les recommandations du professionnel de santé et d'<b>informer vos partenaires récents</b> pour qu'ils puissent également se faire dépister et traiter si nécessaire.</p>
 
       <ListeNumerotee
         title="Que faire si le test est positif ?"
         items={planAide}
       />
 
-      <p className="texte">Pour t'aider concrètement, voici des contacts utiles :</p>
+      <ExternalLinkBlock resources={resources8} />
 
-      {contacts.map((c, i) => (
-        <ContactCard
-          key={i}
-          image={c.image}
-          title={c.title}
-          subtitle={c.subtitle}
-          phone={c.phone}
-          email={c.email}
-          hours={c.hours}
-          textButton={c.textButton}
-          link={c.link}
-        />
-      ))}
+      <p className="texte">N'oubliez pas que de <b>nombreuses IST sont guérissables</b> avec un traitement approprié, et que le <b>dépistage</b> est un <b>acte responsable</b> pour votre santé et celle de vos partenaires.</p>
+
+      <h2 className="sous-titre-2">Le dépistage régulier</h2>
+      <p className="texte">Le <b>dépistage régulier</b> des IST est essentiel, même en l'absence de symptômes, surtout si vous avez des <b>partenaires multiples ou des pratiques à risque</b>. Un dépistage précoce permet un traitement rapide et réduit le risque de complications et de transmission.</p>
 
 
       <Separateur />
@@ -282,25 +381,47 @@ const Ist = () => {
         <h1 className="titre">Se faire traiter</h1>
       </div>
       <h2 className="sous-titre-2">Traitement des IST</h2>
+      <p className="texte">Le traitement des IST dépend de l'agent infectieux en cause. Les IST bactériennes (ex. chlamydia, gonorrhée, syphilis) sont en général <b>soignées par des antibiotiques</b>. Les IST virales (ex. herpès, VIH) se <b>contrôlent</b> par des antiviraux — pour le VIH, un traitement antirétroviral permet d'atteindre une charge virale indétectable et d'empêcher la transmission.</p>
+      <ExternalLinkBlock resources={resources7} />
 
-      <p className="texte">Les IST bactériennes (ex. chlamydia, gonorrhée, syphilis) sont en général <b>soignées par des antibiotiques</b>. Les IST virales (ex. herpès, VIH) se <b>contrôlent</b> par des antiviraux — pour le VIH, un traitement antirétroviral permet d'atteindre une charge virale indétectable et d'empêcher la transmission.</p>
+      <p className="texte">Il est crucial de <b>suivre le traitement prescrit jusqu'au bout</b>, même si les symptômes disparaissent rapidement. Ne pas interrompre le traitement peut entraîner une résistance aux médicaments et des complications.</p>
+      <p className="texte">Pendant le traitement, il est recommandé d'<b>éviter les rapports sexuels</b> ou d'<b>utiliser systématiquement un préservatif</b> pour prévenir la transmission aux partenaires. Informer ses partenaires récents permet également de limiter la propagation des IST.</p>
+      <p className="texte">Après le traitement, un <b>contrôle de dépistage</b> peut être nécessaire pour s'assurer de la guérison, surtout pour certaines IST comme la syphilis ou le VIH.</p>
 
+          <ContactCard
+          image="/assets/sida.jpg" 
+          title="Sida Info Service"
+          subtitle="Écoute, informations et orientation sur le VIH/Sida et les IST"
+          phone="0 800 840 800"
+          email=""
+          hours="7j/7, de 8h à 23h"
+          textButton="Voir le site web"
+          link="https://www.sida-info-service.org/"
+        />
 
-
-
-      <p className="texte">Tu n'as pas d'idées ? Voici des rubriques utiles à ajouter sur la page — je les ai développées pour toi :</p>
-
-      <NumberedList items={[
-        "Droits & confidentialité : anonymat des CeGIDD, confidentialité des résultats, obligations (ex. partenaires à prévenir)",
-        "Que dire à son/sa partenaire : modèle de message neutre et exemple de conversation",
-        "Urgences : quoi faire en cas d'agression sexuelle (prise en charge médico‑légale, TPE)",
-        "Mythes & idées reçues : démystifier les idées fausses (ex. \"on le verrait forcément\")",
-        "Conséquences à long terme : fertilité, grossesse, risques de complications",
-        "Offres locales : CeGIDD, centres de planning familial, nocturnes et lignes d'écoute"
-      ]} />
+      <h2 className="sous-titre-2">La PEP après une exposition au VIH</h2>
+      <p className="texte">La <b>PEP (prophylaxie post-exposition)</b> ou TPE (traitement post-exposition) est un traitement d'urgence qui peut prévenir l'infection par le VIH après une exposition récente (moins de 48-72 heures). Elle consiste en une prise quotidienne d'antirétroviraux pendant 28 jours et doit être commencée le plus rapidement possible après l'exposition.</p>
+      <ExternalLinkBlock resources={resources5} />
 
       <Separateur />
-      <p className="texte"><em><b>Sources :</b> Santé Publique France, Sante.fr, Ameli (Mon Test IST), WHO — pour des informations détaillées et à jour, consulter les liens ci‑dessous.</em></p>
+      <div id="pratiques">
+      <h1 className="titre">Pratiques à risques</h1>
+      </div>
+      <p className="texte">Les pratiques sexuelles à risques sont celles qui <b>augmentent le risque de transmission des IST</b>. Cela inclut :</p>
+      <BulletList items={[
+        "Rapports sexuels sans préservatif (vaginaux, anaux, oraux)",
+        "Partage de jouets sexuels sans protection",
+        "Multiples partenaires sexuels sans dépistage régulier",
+        "Usage de drogues ou d'alcool qui altèrent le jugement et les comportements à risque"
+      ]} />
+
+      <h2 className="sous-titre-2">Relations sexuelles sous l'emprise de substances</h2>
+      <p className="texte">L'usage de drogues ou d'alcool peut <b>altérer le jugement et augmenter les comportements à risque</b>, comme l'abandon du préservatif. Il est important de rester conscient·e de ses limites et de planifier des stratégies pour se protéger, même sous l'influence de substances.</p>
+      <p className="texte">Rappelons que le <b>consentement</b> doit toujours être <b>volontaire, clair, lucide, spécifique et révocable</b>. Par définition, une personne sous l'emprise de substances ne peut pas donner un consentement valide. <b>Pénalement, cela peut se traduire par des poursuites pour agression sexuelle.</b></p>
+      <ExternalLinkBlock resources={pages3} />
+
+      <Separateur />
+      <p className="texte"><em><b>Sources :</b> Santé Publique France, Sante.fr, Ameli (Mon Test IST), OMS, Sida Info Service</em></p>
 
     </div>
   );
