@@ -59,16 +59,16 @@ const autres_pages_global = [
     description: "Comment agir face au harcèlement ?"
   },
   {
-    link: "/groupe",
-    emoji : "🙅",
-    label: "Effet de groupe",
-    description: "Comment agir face à l'effet de groupe ?"
+    link: "/isolement",
+    emoji : "??",
+    label: "Isolement",
+    description: "Que puis-je faire si je me sens à l'écart ?"
   },
   {
-    link: "/inte",
-    emoji : "🍾",
-    label: "Pratiques d'intégration",
-    description: "Que faire face au bizutage ?",
+    link: "/anxiete",
+    emoji : "??",
+    label: "Anxiété",
+    description: "Que puis-je faire si je me sens anxieux ?",
   }
 ];
 
@@ -87,66 +87,8 @@ const autres_pages_lgbtphobie = [
     emoji : "📵",
     label: "Cyberharcèlement",
     description: "Comment réagir face à du cyberharcèlement ?"
-  },
-  {
-    link: "/genre",
-    emoji : "🏳️‍⚧️",
-    label: "Identité de genre",
-    description: "Tu te questionnes sur ton identité ?"
   }
 ];
-
-const arbre = [
-  {
-    link: "/docs/arbre-vss-centrale-lyon.pdf",
-    label: "Arbre de décision",
-    description: "Je suis victime ou témoin de VSS (étudiants et personnels de Centrale Lyon)",
-    imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
-  }
-];
-
-const barometres = [
-
-  {
-    link: "/assets/Violentomètre_relations_profs_eleves.pdf",
-    label: "Les VSS dans les relations professeurs-élèves",
-    description: "",
-    emoji: "🎓",
-  },
-  {
-    link: "/assets/Violentometre_VSS_travail.pdf",
-    label: "Les VSS dans le milieu professionnel",
-    description: "",
-    emoji: "💼",
-  },
-  {
-    link: "/assets/violentometre_depliant_monde_scientifique.pdf",
-    label: "Les VSS dans le monde scientifique",
-    description: "",
-    emoji: "🔬",
-  },
-  {
-    link: "/assets/reglo_sport_reglette.pdf",
-    label: "Les VSS dans le sport",
-    description: "",
-    emoji: "⚽",
-  },
-  {
-    link: "/assets/barometre_violences_gyneco.pdf",
-    label: "Les VSS chez le ou la gynécologue",
-    description: "",
-    emoji: "🚺",
-  },
-];
-
-const discrimetre = [
-  {
-    link: "/assets/Discriminomètre.pdf",
-    label: "Discriminomètre ",
-    description: "pour avoir des exemples de situations dangereuses",
-    emoji: "📏",
-  }
-]
 
 const ressourcesUtiles = [
   {
@@ -263,8 +205,23 @@ const Discriminations = () => {
           textButton="Voir le site"
           link="https://www.antidiscriminations.fr/"
 
-          textColor="#091d7fff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+          bgColor="#ffffffff"    //informations facultatives
+          textColor="#7f096bff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
 
+        />
+
+        <ContactCard
+          image="/assets/universite_de_lyon_bis.jpg" 
+          title="Ma santé - Université de Lyon"
+          subtitle="Signalement : pour signaler des faits de violences, de discrimination ou de harcèlement à Centrale Lyon"
+          phone=""
+          email="harcelement@listes.ec-lyon.fr"
+          hours=""
+          textButton="Voir le site"
+          link="https://masante.universite-lyon.fr/stop-violences/comment-se-deroule-un-signalement-nbsp-/ecole-centrale-de-lyon-275717.kjsp"
+
+          bgColor="#ffffffff"    //informations facultatives
+          textColor="#b22133"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
 
         />
 
@@ -284,8 +241,8 @@ const Discriminations = () => {
 
       <div id="sexistes">
         <h1 className="titre">Discriminations sexistes</h1>
-        <p className="texte">
-          Le sexisme désigne toute inégalité ou violence fondée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités d'accès ou de traitement. Il repose sur l'idée qu'un sexe serait supérieur à un autre, ce qui légitime depuis longtemps une hiérarchie entre hommes et femmes. Dès l'enfance, les stéréotypes genrés sont transmis dans les jouets, l'école, les médias ou le langage, influençant les comportements, les attentes et les rôles sociaux assignés à chacun·e. Ces représentations s'expriment à travers des discriminations, des micro-agressions ou des violences sexistes, et le sexisme structurel se manifeste aussi dans l'emploi, la politique, la culture ou le sport, par des inégalités de traitement, une invisibilisation des voix féminines ou des discours paternalistes « bienveillants » qui perpétuent les rapports de pouvoir.
+        <p>
+          Les discriminations sexistes concernent toute inégalité ou violence basée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités dans les opportunités. Le sexisme peut comprendre la croyance qu'un sexe ou qu'un genre serait intrinsèquement supérieur à l'autre. Les femmes, les personnes non-binaires ou les personnes trans peuvent être particulièrement exposées.
         </p>
 
         <h2 className="sous-titre-2">
@@ -297,32 +254,6 @@ const Discriminations = () => {
           "Pression sociale sur le “rôle de genre” attendu",
           "Modifications de comportement pour éviter les agressions (se taire, éviter certains lieux, etc.)"
         ]} />
-        
-        <ContactCard
-          image="/assets/3919.png"
-          title="3919"
-          subtitle="Ligne ouverte à toutes les femmes victimes de violences"
-          phone="3919"
-          email="contact@solidaritefemmes.org"
-          hours=""
-          textButton="Voir le site"
-          link="https://www.service-public.fr/particuliers/actualites/A16929"
-          
-          bgColor="#ffffffff"    //informations facultatives
-          textColor="#e90202ff"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-        />
-        
-
-        <p className="texte">
-          Les discriminations sexistes peuvent être accompagnées de violences sexistes et sexuelles :
-          Qu'est-ce qu'une VSS ? Comment réagir ? Si tu te poses ces questions, n'hésite pas à t'informer juste ici : 
-        </p>
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={autres_pages_sexisme}
-        />
-
         <p className="texte">
           Selon le rapport 2024 du Haut Conseil à l'Égalité, 9 femmes sur 10 ont déjà renoncé à certaines actions ou modifié leur comportement pour éviter le sexisme.
         </p>
@@ -379,7 +310,7 @@ const Discriminations = () => {
         />
 
 
-        <p className="texte">
+        <p>
           Tu ne sais pas à qui en parler ? Un·e amie·e, proche, professeur·e : tu peux en parler à une personne en qui tu as confiance. Tu peux aussi aller voir un professionnel. Des ressources à Centrale Lyon ou à l'extérieur sont également disponibles.
         </p>
         
@@ -387,13 +318,16 @@ const Discriminations = () => {
           resources={arbre}
         />  
 
-        <p className="texte">
-          Tu peux également évaluer ta situation avec les différents violentomètres suivants :
+        <p>
+          Les discriminations sexistes peuvent être accompagnées de violences sexistes et sexuelles :
+          Qu'est-ce qu'une VSS ? Comment réagir ? Si tu te poses ces questions, n'hésite pas à t'informer juste ici : 
         </p>
-
         <ExternalLinkBlock
-          resources={barometres}
+          title=""
+          subtitle=""
+          resources={autres_pages_sexisme}
         />
+
       </div>
 
       <Separateur />
@@ -491,9 +425,9 @@ const Discriminations = () => {
         />
 
         <p className="texte">
-          Les LGBTphobies regroupent plusieurs formes de rejet ou de haine envers les personnes en raison de leur orientation sexuelle ou de leur identité de genre.  
-          L'<b>homophobie</b> vise les personnes attirées par des individus du même genre ; la <b>lesbophobie</b> désigne les formes spécifiques de rejet ou de sexualisation subies par les femmes lesbiennes ; la <b>biphobie</b> renvoie aux préjugés envers les personnes bisexuelles, souvent accusées d'indécision ou d'infidélité ; la <b>transphobie</b> cible les personnes transgenres ou en questionnement sur leur identité de genre, à travers le refus du prénom d'usage, des moqueries ou des violences.  
-          Ces attitudes peuvent s'exprimer dans tous les milieux — scolaire, professionnel, familial, sportif — et avoir des conséquences graves sur la santé mentale et le sentiment de sécurité des personnes concernées.
+          Les discriminations LGBT-phobes regroupent entre autre l'homophobie, la lesbophobie, la biphobie et la transphobie. 
+          Elles sont souvent fondées sur des préjugés ou stéréotypes liés à l'orientation sexuelle ou à l'identité de genre. 
+          Ces discriminations portent atteinte aux droits fondamentaux et à la dignité des personnes concernées.
         </p>
 
         <h2 className="sous-titre-2">
@@ -571,14 +505,7 @@ const Discriminations = () => {
         <ExternalLinkBlock
           title="Pour en apprendre plus"
           subtitle=""
-          resources={[
-            {
-              link: "https://www.cestcommeca.net/",
-              imageSrc: "/assets/cestcommeca.png",
-              label: "C'est comme ça",
-              description: "Comprendre, découvrir la culture et savoir comment faire face aux discriminations"
-            }
-          ]}
+          resources={autres_pages_lgbtphobie}
         />
 
       </div>
