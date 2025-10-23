@@ -7,7 +7,8 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
-import { Navbar, BulletList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import { image } from "framer-motion/m";
 
 const navLinks = [
@@ -95,7 +96,7 @@ const Anxiete = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Anxiété et troubles anxieux</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition">
         <h1 className="titre">Comprendre l'anxiété et les troubles anxieux</h1>

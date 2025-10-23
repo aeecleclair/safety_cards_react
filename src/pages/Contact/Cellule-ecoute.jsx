@@ -2,7 +2,7 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes"; 
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import ContactCard from "../../components/Contact";
 import React from "react";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";

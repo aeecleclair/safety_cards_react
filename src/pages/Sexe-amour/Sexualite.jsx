@@ -7,7 +7,8 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 
 const navLinks = [
   { label: "Comprendre", target: "definition" },
@@ -192,7 +193,7 @@ const Sexualite = () => {
 
 
 
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition">
         <h1 className="titre">Comprendre la sexualité et la contraception</h1>

@@ -5,12 +5,8 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  TextImageRight,
-  YouTubeVideo,
-} from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
@@ -166,7 +162,7 @@ const PrecariteEconomique = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Précarité économique</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       {/* 1. Comprendre la précarité */}
       <div id="constat">

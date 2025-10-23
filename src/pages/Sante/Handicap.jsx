@@ -7,7 +7,8 @@ import React from "react";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Separateur from "../../components/Separateur";
 import "../../App.css";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import { image, img } from "framer-motion/client";
 
 
@@ -157,7 +158,7 @@ const jeunesAidants = [
 const SituationHandicap = () => (
   <div className="page">
     <h1 className="titre-page">Situation de Handicap</h1>
-    <Navbar links={navLinks} />
+    <Sommaire links={navLinks} />
 
     <div id="constat">
       <h2 className="titre">Le constat</h2>
