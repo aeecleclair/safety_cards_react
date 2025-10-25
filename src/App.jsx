@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import { ThemeProvider, useTheme } from "./ThemeProvider";
 import ScrollToTopButton from "./components/ScrollTop";
 import ScrollToTop from './components/ScrollTopImmediate';
+import { ActionsRapidesOnly } from './components/Sommaire';
 
 
 import Exemple from "./pages/Documentation/Exemple";
@@ -90,6 +91,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Header />
+      <ActionsRapidesOnly />
       <Routes>
         <Route path="/" element={<Home />} />
   <Route path="/documentation/exemple" element={<Exemple />} />

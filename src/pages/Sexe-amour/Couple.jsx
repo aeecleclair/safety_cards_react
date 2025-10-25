@@ -2,13 +2,8 @@ import React from "react";
 import "../../App.css";
 
 import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  TextImageRight,
-  YouTubeVideo,
-  ImageCenter,
-} from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import Quote from "../../components/Citation";
@@ -142,7 +137,7 @@ const RelationsCouple = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Relations de couple</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="violences">
         <h1 className="titre">Les violences conjugales</h1>

@@ -7,7 +7,8 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 
 
 
@@ -201,7 +202,7 @@ const RisquesCirculation = () => {
 
 
 
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="probleme">
         <h2 className="titre">Le problème</h2>

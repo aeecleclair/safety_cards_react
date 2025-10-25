@@ -6,13 +6,8 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  NumberedList,
-  TextImageRight,
-  ImageCenter,
-} from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
@@ -117,7 +112,7 @@ const Isolement = () => {
     <div className="page">
       {/* En-tête */}
       <h1 className="titre-page">Isolement</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       {/* SECTION : Comprendre */}
       <div id="comprendre">

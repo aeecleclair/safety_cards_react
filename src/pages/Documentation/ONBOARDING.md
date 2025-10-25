@@ -255,7 +255,7 @@ export default function Random() {
   return (
     <div className="page">
       <h1 className="titre-page">Ma page aléatoire</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="intro">
         <h2 className="titre">Introduction</h2>

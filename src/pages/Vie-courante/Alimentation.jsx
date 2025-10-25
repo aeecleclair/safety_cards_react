@@ -2,7 +2,8 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { Navbar, BulletList, TextImageRight, ImageCenter } from "../../components/Common";
+import { BulletList, TextImageRight, ImageCenter } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import React from "react";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
@@ -96,7 +97,7 @@ const Alimentation = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Alimentation</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="habitudes">
         <h1 className="titre">Mauvaises habitudes alimentaires</h1>

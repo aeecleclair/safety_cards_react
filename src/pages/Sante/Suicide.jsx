@@ -2,11 +2,8 @@ import React from "react";
 import "../../App.css";
 
 import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  AnchorButton,
-} from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo, AnchorButton } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import Quote from "../../components/Citation";
@@ -67,7 +64,7 @@ const Suicide = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Tentative et comportement suicidaires</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="comprendre">
         <h1 className="titre">Comprendre un comportement suicidaire ou une tentative de suicide</h1>

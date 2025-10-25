@@ -1,29 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './scrolltop.css';
 
-/*
-  ScrollToTopButton amélioré
-  - Icône SVG (meilleure cohérence cross-platform qu'un caractère unicode)
-  - Option cercle de progression autour de la flèche
-  - Accessibilité: aria-label, role, focus ring
-  - Respect du prefers-reduced-motion
-  - Seuil d'apparition configurable via prop threshold
-*/
 
-/**
- * ScrollToTopButton
- * Props:
- *  - threshold (number): distance en px avant apparition
- *  - showProgress (bool): afficher l'anneau de progression
- *  - size (number): taille du bouton (et du cercle) en px
- *  - arrowSize (number): taille explicite de la flèche (sinon calculée)
- *  - arrowStrokeWidth (number): épaisseur explicite du trait (sinon calcul dynamique 3..6)
- *
- * Exemples:
- *  <ScrollToTopButton />
- *  <ScrollToTopButton size={64} arrowSize={36} />
- *  <ScrollToTopButton arrowStrokeWidth={5} />
- */
 const ScrollToTopButton = ({
   threshold = 300,
   showProgress = true,

@@ -7,7 +7,8 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ListeNumerotee from "../../components/Listes";
 import { ExternalLink } from "lucide-react";
 
@@ -76,7 +77,7 @@ const Sommeil = () => {
     <div className="page">
       <h1 className="titre-page">Sommeil</h1>
 
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition">
         <h1 className="titre">Comprendre le sommeil</h1>

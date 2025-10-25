@@ -4,24 +4,16 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  NumberedList,
-  TextImageRight,
-  ImageCenter,
-  YouTubeVideo,
-} from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import { image } from "framer-motion/m";
 
 const navLinks = [
   { label: "Qu'est-ce que l'identité de genre ?", target: "definition" },
   { label: "Pour les personnes concernées", target: "concernes" },
   { label: "Comment accompagner un·e proche ?", target: "accompagner" },
-  { label: "Démarches & ressources", target: "demarches" },
 ];
 
 const chiffresIdentite = [
@@ -37,111 +29,51 @@ const chiffresIdentite = [
   },
 ];
 
-const ressourcesNationales = [
-  {
-    link: "https://wikitrans.co/",
-    imageSrc: "/assets/wiki_trans.png",
-    label: "WikiTrans",
-    description: "Base pratique : hormones, coming-out, démarches",
-  },
-  {
-    link: "https://outrans.org",
-    imageSrc: "/assets/outrans.png",
-    label: "OUTrans",
-    description: "Autosupport trans & formations inclusives",
-  },
-  {
-    link: "https://www.le-refuge.org/",
-    imageSrc: "/assets/refuge_logo.png",
-    label: "Le Refuge",
-    description: "Hébergement d'urgence pour jeunes LGBT+",
-  },
-  {
-    link: "https://www.fransgenre.org/",
-    imageSrc: "/assets/fransgenre.png",
-    label: "Fransgenre",
-    description: "Répertoire de professionnel·les sensibilisé·es et guides pratiques",
-  },
-  {
-    link: "https://www.planning-familial.org/",
-    imageSrc: "/assets/planning.png",
-    label: "Planning Familial",
-    description: "Informations et accompagnement santé/sexualité",
-  },
-];
 
-const ressourcesLocales = [
-  {
-    link: "https://www.centrelgbtilyon.org/",
-    imageSrc: "/assets/centre_lgbti_lyon.png",
-    label: "Centre LGBTI+ Lyon",
-    description: "Groupes de parole, permanences juridiques & santé",
-  },
-  {
-    link: "https://chrysalide-asso.fr/",
-    imageSrc: "/assets/chrysalide.png",
-    label: "Chrysalide",
-    description: "Groupes de discussion entre personnes trans à Lyon",
-  },
-  {
-    link: "https://www.instagram.com/ost_lyon/",
-    imageSrc: "/assets/ost.png",
-    label: "OST Lyon",
-    description: "Organisation de Solidarité Trans (autosupport)",
-  },
-];
 
 const étapesAccompagnement = [
   {
-    title: "Écouter et croire",
-    subtitle: "Prendre au sérieux son ressenti sans interpréter ni minimiser.",
+    title: "Utilisez les bons pronoms et prénoms",
+    subtitle:
+      "Employer le nouveau prénom et les pronoms choisis est un vrai soutien ; si vous vous trompez, excusez‑vous et corrigez‑vous.",
   },
   {
-    title: "Utiliser le bon prénom & pronom",
-    subtitle: "S'excuser puis corriger en cas d'erreur (éviter le misgendering).",
+    title: "La transition est rétro‑active",
+    subtitle:
+      "Parlez du passé avec les bons pronoms ; privilégiez des tournures neutres si besoin.",
   },
   {
-    title: "Respecter le rythme",
-    subtitle: "Éviter les questions intrusives ; la personne choisit son tempo.",
+    title: "Manifestez votre soutien activement",
+    subtitle:
+      "Exprimez clairement votre appui et, si vous êtes cis, utilisez votre position pour relayer sa voix face aux hostilités.",
   },
   {
-    title: "Éduquer son entourage",
-    subtitle: "Partager des ressources pour éviter de faire porter toute l'explication à la personne concernée.",
+    title: "Connaissez vos limites",
+    subtitle:
+      "Mieux vaut admettre un manque d’information que dire des inexactitudes qui blessent ou induisent en erreur.",
   },
   {
-    title: "Être un·e allié·e visible",
-    subtitle: "Intervenir face aux propos transphobes et proposer un soutien concret.",
+    title: "Votre proche n’est pas QUE trans",
+    subtitle:
+      "Il/elle reste la même personne, avec ses centres d’intérêt, ses projets et ses qualités.",
+  },
+  {
+    title: "Soyez digne de confiance",
+    subtitle:
+      "Ne révélez jamais la transidentité sans consentement ; gardez l’info pour vous si vous n’êtes pas sûr·e.",
+  },
+  {
+    title: "Trouvez une manière de relâcher la pression",
+    subtitle:
+      "Parlez de vos émotions avec un·e pro ou un·e ami·e de confiance plutôt que de les faire peser sur votre proche en transition.",
+  },
+  {
+    title: "Évitez les sujets sensibles",
+    subtitle:
+      "Les questions intimes (ex. opérations) ne vous regardent pas ; si vous savez quelque chose, gardez‑le pour vous.",
   },
 ];
 
-const étapesDemarches = [
-  "Prendre RDV avec un·e médecin / endocrinologue sensibilisé·e (cf. annuaires Fransgenre / WikiTrans).",
-  "Rassembler des informations : parcours social, administratif et médical possibles — il n'existe pas de parcours unique.",
-  "Changer le prénom d'usage dans l'université (souvent via un simple mail à la scolarité).",
-  "Pour changement officiel (état civil) : suivre la procédure judiciaire/mairie (se renseigner sur la marche à suivre locale).",
-  "Si souhaité : démarches pour l'accès aux soins (hormonothérapie, chirurgies) avec équipes et structures spécialisées.",
-];
-
-const complementaires = [
-  {
-    link: "https://www.santepubliquefrance.fr/",
-    imageSrc: "/assets/sante_publique.png",
-    label: "Santé Publique France",
-    description: "Informations de santé publique, prévention et études",
-  },
-  {
-    link: "https://www.sos-homophobie.org/",
-    imageSrc: "/assets/sos_homophobie.png",
-    label: "SOS Homophobie",
-    description: "Ligne d'écoute, signalement et ressources anti-discrimination",
-  },
-  {
-    link: "https://www.cidj.fr/",
-    imageSrc: "/assets/cidj.png",
-    label: "CIDJ",
-    description: "Conseils pratiques pour les jeunes (droit, santé, études)",
-  },
-];
 
 const resources_Autres_pages = [
   {
@@ -149,7 +81,13 @@ const resources_Autres_pages = [
     emoji : "🟰",
     label: "Discriminations",
     description: "Comment réagir et soutenir face aux discriminations ?",
-  }
+  },
+  {
+    link: "https://chrysalide-asso.fr/nos-documents/reagir-face-a-la-transphobie/",
+    label: "Brochure",
+    description: "Réagir face à la transphobie : conseils à l'usage des personnes trans",
+    imageSrc: "/assets/chrysalide.png"
+  },
 ];
 
 
@@ -158,10 +96,18 @@ const Genre = () => {
     <div className="page">
   <h1 className="titre-page gradient-title">Identité de genre</h1>
 
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition" className="section">
         <h2 className="titre">Qu'est-ce que l'identité de genre ?</h2>
+
+      <ImageTextPopup
+        image="./assets/cartes/8_coeur.png"
+        title="La carte 8♠"
+        shortText="Sensibilisation au mégenrage"
+        longText="A Centrale, le surnom est le moyen le plus courant de s'adresser à quelqu'un·e. Chacun fait donc généralement l'effort de retenir le prénom et le surnom de chacun, et d'utiliser l'un ou l'autre en fonction du contexte. Cette carte vise à poser la question suivante : si l'effort est fait pour retenir le prénom/surnom, pourquoi ne pas faire l'effort de retenir les pronoms et le prénom choisis par une personne trans ou non-binaire ? Le mégenrage désigne le fait de s'adresser à une personne avec des pronoms ou un prénom qui ne correspondent pas à son identité de genre. Cela peut être involontaire (oubli, erreur) ou intentionnel (manque de respect, discrimination). Le mégenrage peut causer un profond malaise et renforcer le sentiment d'isolement. En faisant l'effort de respecter les pronoms et le prénom choisis, on contribue à créer un environnement inclusif et bienveillant pour tou·tes."
+        textButton="⤢ Agrandir la carte"
+      />
 
         <TextImageRight
           imageSrc="/assets/personne-gingenre.jpg"
@@ -265,6 +211,7 @@ const Genre = () => {
         <ExternalLinkBlock resources={
           [
             { link: "https://wikitrans.co/2019/01/01/comment-savoir-si-je-suis-trans/", label: "Comment savoir si je suis trans ?", description: "Pour t'aider à réfléchir sur ton genre", imageSrc: "/assets/wikitrans.svg"},
+            { link: "https://www.la-clinique-e-sante.com/blog/sexualite/identite-genre-questions", label: "Identité de genre", description: "10 questions pour t'aider à avancer"},
           ]
         } />
 
@@ -414,6 +361,29 @@ const Genre = () => {
           resources={resources_Autres_pages}
         />
 
+        <Quote text="Ça ne vous dérange pas d'apprendre un surnom, alors pourquoi pas un pronom ?" />
+
+          <h2 className="sous-titre-2">Tu es en détresse ?</h2>
+
+          <p className="texte">Reconnue d'Utilité Publique, la Fondation Le Refuge héberge et accompagne les jeunes LGBT+ victimes de violences intrafamiliales, rejetés par leurs parents, chassés du domicile en raison de leur orientation sexuelle ou de leur identité de genre. Tu peux contacter leur ligne d'écoute afin d'obtenir une solution d'urgence.</p>
+
+
+          <ContactCard
+          image="/assets/le_refuge.png"
+          title="Le Refuge"
+          subtitle="Association d'aide aux jeunes LGBTQ+"
+          phone="06 31 59 69 50 - Appel ou SMS"
+          hours="Tous les jours, de 8h à minuit"
+          textButton="Voir le site"
+          link="https://le-refuge.org/"
+
+          bgColor="#ffffff"
+          textColor="#4834F6"
+        />
+
+
+
+
       <Separateur />
 
       <div id="accompagner" className="section">
@@ -424,119 +394,41 @@ const Genre = () => {
           conseils concrets, faciles à mettre en œuvre.
         </p>
 
-        <ListeNumerotee title="5 réflexes de base" items={étapesAccompagnement} />
+        <ListeNumerotee title="Conseils pour être un meilleur soutien" items={étapesAccompagnement} />
 
-        <h3 className="sous-titre">Langage & comportement</h3>
-        <BulletList
-          items={[
-            "Utilisez le prénom et les pronoms choisis — si vous vous trompez, corrigez-vous naturellement et passez à autre chose.",
-            "Ne posez pas de questions invasives (opérations, sexualité) sauf si la personne en parle d'elle-même.",
-            "Ne dites pas que « c'est une phase » ou que la personne est influencée : ces propos minimisent l'expérience vécue.",
-          ]}
-        />
 
-        <h3 className="sous-titre">Se former pour mieux aider</h3>
-        <p className="texte">
-          Lire des guides simples (ex. « Identité de genre : 10 questions pour vous aider à avancer ») ou participer à des groupes
-          pour proches (certaines associations en proposent) aide à sortir des préjugés et à proposer un accompagnement durable.
-        </p>
 
-      <Quote text="Ça ne vous dérange pas d'apprendre un surnom, alors pourquoi pas un pronom ?" />
 
 
         <ExternalLinkBlock
-          title="Ressources pour proches"
+          title="Ressources pour les proches"
           subtitle="Guides, FAQ et points d'appui"
           resources={[
             {
-              link: "https://chrysalide-asso.fr/",
+              link: "https://chrysalide-asso.fr/nos-documents/etre-un-e-proche-de-personne-trans/",
               imageSrc: "/assets/chrysalide.png",
-              label: "Chrysalide – pour proches",
-              description: "Groupes de parole et guide pour le personnel/les proches.",
+              label: "Chrysalide",
+              description: "Brochure à destination des proches",
             },
             {
-              link: "https://www.planning-familial.org/",
-              imageSrc: "/assets/planning.png",
-              label: "Planning Familial",
-              description: "Informations santé et accompagnement familial.",
-            },
-            {
-              link: "https://www.sos-homophobie.org/",
-              imageSrc: "/assets/sos_homophobie.png",
-              label: "SOS Homophobie",
-              description: "Ligne d'écoute et conseils pratiques pour agir face aux discriminations.",
+              link: "https://wikitrans.co/2018/02/10/mon-proche-est-trans-comment-laider-au-mieux/",
+              imageSrc: "/assets/wikitrans.svg",
+              label: "Brochure",
+              description: "Un·e de mes proches est trans, comment l'aider au mieux ?",
             },
           ]}
         />
 
-        <YouTubeVideo url="https://www.youtube.com/watch?v=ma7B0tZ3q4I" />
       </div>
+    
+
 
       <Separateur />
 
-      {/* DEMARCHES & RESSOURCES */}
-      <div id="demarches" className="section">
-        <h2 className="titre">Démarches administratives & médicales</h2>
-
-        <p className="texte">
-          Il n'y a pas de parcours obligatoire : chaque personne choisit ce qui lui convient (social, administratif, médical).
-          Voici des étapes fréquentes et des informations utiles.
-        </p>
-
-        <NumberedList items={étapesDemarches} />
-
-        <TextImageRight
-          imageSrc="/assets/planning_demarche.png"
-          text={
-            <>
-              <p className="texte">
-                Conseil pratique : conserve des copies de tous les échanges administratifs et demande confirmation écrite
-                lors du changement de prénom d'usage dans les services de ton établissement. Pour des démarches juridiques
-                (état civil), renseigne-toi auprès d'un·e avocat·e ou d'associations qui accompagnent ces procédures.
-              </p>
-            </>
-          }
-        />
-
-        <ExternalLinkBlock
-          title="Annuaire & aides pratiques"
-          subtitle="Adresses pour trouver un·e professionnel·le, ligne d'écoute et aide juridique"
-          resources={[
-            ...ressourcesNationales,
-            ...complementaires,
-          ]}
-        />
-
-        <div className="contacts-grid">
-          <ContactCard
-            image="/assets/nightline_logo.png"
-            title="Nightline Lyon"
-            subtitle="Écoute nocturne anonyme pour les étudiant·es"
-            phone="04 85 30 00 10"
-            hours="Tous les soirs 21h-2h30"
-            textButton="Voir le site web"
-            link="https://www.nightline.fr/lyon"
-          />
-
-          <ContactCard
-            image="/assets/refuge_logo.png"
-            title="Le Refuge – Ligne d'écoute"
-            subtitle="Soutien & hébergement d'urgence pour jeunes LGBT+"
-            phone="06 31 59 69 50"
-            hours="24h/24 – 7j/7"
-            textButton="Contacter"
-            link="https://www.le-refuge.org/"
-          />
-        </div>
-      </div>
-
-      <Separateur />
-
-      <p className="texte sources small">
+      <p className="texte">
         <em>
-          Ressources et inspiration : brochures OUTrans (hormones, DTC), Guide Chrysalide, WikiTrans, Fransgenre, Planning
-          Familial, Centre LGBTI+ Lyon, SOS Homophobie, Santé Publique France. Si tu veux des copies des guides cités, contacte
-          le service vie étudiante ou les associations listées ci-dessous.
+          <b>Sources :</b> brochures OUTrans (hormones, DTC), Guide Chrysalide, WikiTrans, Fransgenre, Planning
+          Familial, Centre LGBTI+ Lyon, SOS Homophobie, Santé Publique France, témoignages d'étudiant·e·s, Rapport Vie étudiante à Centrale Lyon 2024
         </em>
       </p>
     </div>

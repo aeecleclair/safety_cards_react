@@ -5,7 +5,7 @@ import Quote from "../components/Citation";
 import ImageTextPopup from "../components/Cartes"; 
 import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../components/Common";
 import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
 import RandomPageSelector from "../components/Randompage";
@@ -155,7 +155,7 @@ const Exemple = () => {
 
       <h1 className="titre-page">Bienvenue sur Safety Cards</h1>
 
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
       
       <h1 className = "titre">Découvre une thématique aléatoire</h1>
       <RandomPageSelector />
