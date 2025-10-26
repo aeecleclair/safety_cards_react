@@ -1,0 +1,97 @@
+/* Raccourcis - always-on right sidebar */
+.raccourcis-nav {
+  position: fixed;
+  top: 110px; /* updated dynamically via inline style */
+  --gap: 50px;
+  --right-offset: 25px; /* fixed distance from right edge */
+  --page-right: calc(100vw - max(20vw, calc(50vw + 400px))); /* symmetric to sommaire */
+  --available: calc(var(--page-right) - var(--gap) - var(--right-offset));
+  --min: 200px;
+  --max: 360px;
+  --menu-width: clamp(var(--min), var(--available), var(--max));
+  right: var(--right-offset);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: var(--menu-width);
+  padding: 0;
+  gap: 14px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+  z-index: 1000; /* above left sommaire */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .2s ease-out, transform .2s ease-out;
+}
+/* Fade out when near footer */
+.raccourcis-nav.fade-out { opacity: 0; transform: translateY(6px); pointer-events: none; }
+
+/* Card */
+.raccourcis-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 14px;
+  background-color: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px -2px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.08);
+}
+body.dark-mode .raccourcis-card {
+  background-color: rgba(19,19,19,0.9);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 8px 24px -10px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.28);
+}
+
+.raccourcis-title {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: left;
+  margin: 0;
+}
+
+/* Buttons */
+.raccourcis-nav .fab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  color: #111;
+  cursor: pointer;
+  padding: 6px 10px;
+  width: 100%;
+  text-align: left;
+  transition: opacity .35s ease, background .3s, color .3s, box-shadow .3s;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+.raccourcis-nav .fab-btn:active {
+  transform: none;
+}
+.raccourcis-nav .fab-icon { font-size: 18px; line-height: 1; display: block; width: 1.5em; text-align: center; }
+.raccourcis-nav .fab-label { font-size: 0.9rem; font-weight: 600; line-height: 1; font-family: "Poppins", sans-serif; }
+
+.raccourcis-nav .fab-btn:hover { 
+  background-color: #111;
+  color: #fff;
+}
+
+body.dark-mode .raccourcis-nav .fab-btn { color: #f5f5f5; background: none; }
+body.dark-mode .raccourcis-nav .fab-btn:hover { background-color: #ffffff; color: #111; }
+
+/* Mobile: invisible */
+@media (max-width: 1200px) {
+  .raccourcis-nav {
+    display: none;
+  }
+}

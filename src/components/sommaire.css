@@ -29,7 +29,11 @@
     overflow: visible;
     z-index: 900; /* stay under header if overlapping */
     margin: 0;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .2s ease-out, transform .2s ease-out;
   }
+  .sommaire-nav.fade-out { opacity: 0; transform: translateY(6px); pointer-events: none; }
 /* no special styles for dark-mode on the container; handled by inner blocks */
 
 

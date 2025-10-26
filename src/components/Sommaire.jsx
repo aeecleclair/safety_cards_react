@@ -8,16 +8,9 @@ export default function Sommaire({ links }) {
   const [open, setOpen] = useState(false);
   const [sectionsProgress, setSectionsProgress] = useState({}); // {target: 0..1}
   const [headerOffset, setHeaderOffset] = useState(110); // px from top
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { darkMode, setDarkMode } = useTheme();
+  const [computedTop, setComputedTop] = useState(110);
+  const [hideNearFooter, setHideNearFooter] = useState(false);
   const hasLinks = Array.isArray(links) && links.length > 0;
-  const modeSoireeRoutes = new Set([
-    '/mode-soiree',
-    '/contacts-urgence',
-    '/plan-soiree',
-  ]);
-  const inModeSoiree = modeSoireeRoutes.has(location.pathname);
 
   useEffect(() => {
     window.__hasSommaire = true;
@@ -69,6 +62,37 @@ export default function Sommaire({ links }) {
       window.removeEventListener('scroll', onScroll);
     };
   }, []);
+
+  // Keep nav above footer: adjust top or hide when overlapping
+  useEffect(() => {
+    const updateTopForFooter = () => {
+      const nav = navRef.current;
+      if (!nav || window.innerWidth <= 1200) return; // mobile overlay not constrained
+      const footer = document.querySelector('footer');
+      const baseTop = headerOffset;
+      if (!footer) {
+        setComputedTop(baseTop);
+        setHideNearFooter(false);
+        return;
+      }
+      const footerTopPage = footer.getBoundingClientRect().top + window.scrollY;
+      const navHeight = nav.offsetHeight || 0;
+      const margin = 12; // spacing above footer
+      const maxTopViewport = (footerTopPage - navHeight - margin) - window.scrollY;
+      const safeTop = Math.min(baseTop, Math.max(10, Math.floor(maxTopViewport)));
+      setComputedTop(safeTop);
+      // hide if there is no room above footer
+      setHideNearFooter(maxTopViewport < 10);
+    };
+
+    updateTopForFooter();
+    window.addEventListener('scroll', updateTopForFooter, { passive: true });
+    window.addEventListener('resize', updateTopForFooter);
+    return () => {
+      window.removeEventListener('scroll', updateTopForFooter);
+      window.removeEventListener('resize', updateTopForFooter);
+    };
+  }, [headerOffset, open]);
 
   // Progression mid-to-mid (desktop + mobile)
   useEffect(() => {
@@ -170,9 +194,10 @@ export default function Sommaire({ links }) {
 
   return (
     <nav
-      className={`navbar sommaire-nav${open ? " open" : ""}`}
+      className={`navbar sommaire-nav${open ? " open" : ""} ${hideNearFooter ? 'fade-out' : ''}`}
       ref={navRef}
-      style={window.innerWidth > 1200 ? { top: headerOffset } : undefined}
+      style={window.innerWidth > 1200 ? { top: computedTop } : undefined}
+      aria-hidden={hideNearFooter ? 'true' : undefined}
     >
       {open && (
         <button
@@ -207,40 +232,10 @@ export default function Sommaire({ links }) {
           })}
         </div>
       )}
-
-      {/* Raccourcis intégrés dans le même bloc */}
-      <div className="sommaire-actions">
-        <p className="sommaire">Raccourcis</p>
-        <div className="fab-item">
-          <button type="button" className="fab-btn fab-exit" onClick={() => { try { window.location.replace('https://www.google.com/'); } catch { window.location.href = 'https://www.google.com/'; } }} aria-label="Quitter le site">
-            <span className="fab-icon" aria-hidden>❌</span>
-            <span className="fab-label">Quitter le site</span>
-          </button>
-        </div>
-        <div className="fab-item">
-          <button type="button" className="fab-btn fab-theme" onClick={() => setDarkMode(!darkMode)} aria-label={darkMode ? 'Passer en thème clair' : 'Passer en thème sombre'}>
-            <span className="fab-icon" aria-hidden>{darkMode ? '☀️' : '🌙'}</span>
-            <span className="fab-label">{darkMode ? 'Thème clair' : 'Thème sombre'}</span>
-          </button>
-        </div>
-        <div className="fab-item fab-theme">
-          <button type="button" className="fab-btn" onClick={() => {}} aria-label="English version">
-            <span className="fab-icon" aria-hidden>🇬🇧</span>
-            <span className="fab-label">English version</span>
-          </button>
-        </div>
-        <div className="fab-item">
-          <button type="button" className="fab-btn fab-soiree" onClick={() => { if (inModeSoiree) navigate('/'); else navigate('/mode-soiree'); }} aria-label={inModeSoiree ? 'Quitter le mode soirée' : 'Activer le mode soirée'}>
-            <span className="fab-icon" aria-hidden>{inModeSoiree ? '↩️' : '🎉'}</span>
-            <span className="fab-label">{inModeSoiree ? 'Quitter le mode soirée' : 'Mode soirée'}</span>
-          </button>
-        </div>
-      </div>
     </nav>
   );
 }
 
-// Actions rapides: barre flottante alignée sous le sommaire s'il est présent, sinon sous le header
 export function ActionsRapidesOnly() {
   const navigate = useNavigate();
   const location = useLocation();
