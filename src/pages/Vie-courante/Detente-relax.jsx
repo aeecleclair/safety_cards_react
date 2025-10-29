@@ -25,14 +25,6 @@ const chiffres = [
 ];
 
 
-
-const planAide = [
-  { title: "Reconnaître", subtitle: "Identifier les signes (physiques, émotionnels, comportementaux)" },
-  { title: "Parler", subtitle: "En parler à un proche, un professionnel ou une ligne d'écoute" },
-  { title: "Agir sur le quotidien", subtitle: "Hygiène de vie, sommeil, organisation et limites" },
-  { title: "Chercher de l'aide professionnelle", subtitle: "Thérapie, consultations médicales si nécessaire" }
-];
-
 const resources = [
   { link: "https://www.who.int/fr/news-room/questions-and-answers/item/stress", 
     imageSrc: "/assets/OMS.png", 
@@ -71,12 +63,52 @@ const ressources1 = [
   }
 ];
 
+const nike = [
+  {
+    link: "https://www.nike.com/fr/a/postures-de-yoga-pour-le-stress",
+    imageSrc: "/assets/nike.png",
+    label: "Yoga pour le stress",
+    description: "Découvrez des postures de yoga pour apaiser le stress"
+  }
+];
+
 const anxiete = [
   {
     link: "\anxiete",
     emoji: "😟",
     label: "Anxiété",
     description: "Comment faire face à son anxiété ?",
+  }
+];
+
+const long_terme = [
+    {
+    link: "\sport",
+    emoji: "🏃‍♂️",
+    label: "Santé physique et sport",
+    description: "L'activité physique pour réduire le stress"
+  },
+  {
+    link: "\aliment",
+    emoji: "🥬",
+    label: "Alimentation",
+    description: "Adopter une alimentation équilibrée pour mieux gérer le stress"
+  },
+
+  {
+    link: "\sommeil",
+    emoji: "😴",
+    label: "Sommeil",
+    description: "Conseils et techniques pour mieux dormir"
+  }
+];
+
+const ecrans = [
+  {
+    link: "\add_reseaux",
+    emoji: "📱",
+    label: "Écrans & Réseaux sociaux",
+    description: "S'affranchir de la dépendance aux écrans et réseaux sociaux"
   }
 ];
 
@@ -265,49 +297,56 @@ const Detente_relax = () => {
       <h2 className="sous-titre-2">Identifier les sources de stress</h2>
       <p className="texte">Après une crise de stress, il est utile de <b>réfléchir aux déclencheurs</b>. Identifier les situations, pensées ou comportements qui génèrent du stress te permettra de mieux les gérer à l'avenir.</p>
 
-      <p className="texte">Tiens un journal de bord pendant quelques jours pour noter les moments où tu te sens stressé·e : contexte, pensées associées, réactions physiques et émotionnelles. Cela t'aidera à repérer des schémas récurrents.
+      <p className="texte">Tu peux aussi tenir un <b>journal de bord</b> pendant quelques jours pour noter les moments où tu te sens stressé·e : contexte, pensées associées, réactions physiques et émotionnelles. Cela t'aidera à <b>repérer des schémas récurrents</b>.
       </p>
 
-
-
-
-
-      <h2 className="sous-titre-2">Stratégies globales</h2>
+      <h2 className="sous-titre-2">Améliorer son mode de vie</h2>
+      <p className="texte">Adopter un <b>mode de vie sain</b> peut contribuer à réduire le stress. Voici quelques pistes à explorer :</p>
       <BulletList items={[
-        "Hygiène de vie : activité physique régulière, alimentation équilibrée, limiter alcool et stimulants",
-        "Sommeil : routines régulières, environnement propice (obscurité, calme)",
-        "Organisation : prioriser, décomposer les tâches, poser des limites",
-        "Support social : parler à des proches, demander de l'aide",
-        "Techniques cognitives : recadrage des pensées, limiter les ruminations",
-        "Aide professionnelle : psychothérapie (TCC, thérapies basées sur la pleine conscience), médecins si nécessaire"
-      ]} />
+        "Activité physique régulière : privilégie les activités que tu aimes. Faire du sport libère des endorphines, hormones du bien-être",
+        "Alimentation équilibrée : privilégie les fruits, légumes, protéines et céréales complètes. Manger plus sainement aide à stabiliser l'humeur.",
+        "Sommeil : veille à avoir des horaires réguliers et un environnement propice au sommeil. Améliorer son sommeil réduit la sensibilité au stress.", 
+        ]} />
 
-      <h2 className="sous-titre-2">Pratique du sport/Faire régulièrement de l'exercice</h2>
-      <h2 className="sous-titre-2">Alimentation saine</h2>
-      <h2 className="sous-titre-2">Techniques de relaxation</h2>
+      <p className="texte">Pour en savoir plus sur ces sujets, consulte les pages dédiées : </p>
+      <ExternalLinkBlock resources={long_terme} />
 
-      <p className="texte"><b>Méditation de pleine conscience</b></p>
-      <BulletList items={[
-      "Focalise sur la respiration ou un point d'appui",
-      "Accueillir les pensées sans les juger",
-      "Commencer 5–10 minutes par jour"
-    ]} />
 
-      <p className="texte"><b>Yoga doux ou étirements</b></p>
-      <BulletList items={[
-      "Postures simples pour relâcher les tensions",
-      "Respiration synchronisée avec les mouvements",
-      "Durée : 10–30 minutes"
-    ]} />
+      <h2 className="sous-titre-2">Techniques de relaxation quotidiennes</h2>
+
+      <p className="texte">Pour te détendre, te recentrer plus facilement et rester dans un <b>état d'esprit positif</b>, essaie de prendre des pauses régulières pour pratiquer différentes techniques de relaxation et méditation. En <b>habituant ton corps à ces techniques</b>, tu pourras <b>mieux gérer le stress au quotidien</b>. Voici quelques techniques à essayer :</p>
+
+      <p className="texte"><b>Pour favoriser le calme intérieur :</b></p>
+            <ListeNumerotee
+        title="Méditation de pleine conscience"
+        items={[
+          { subtitle: "Focalise-toi sur ta respiration" },
+          { subtitle: "Laisse tes pensées arriver sans les juger" },
+          { subtitle: "Durée : 5–10 minutes par jour" }
+        ]}
+      />
+      <p className="texte">La méditation de pleine conscience aide à développer une attitude d'<b>acceptation</b> et de <b>non-jugement envers les pensées stressantes</b>, favorisant ainsi un état de calme intérieur.</p>
+      <p className="texte">Cette pratique te permet de plus de déconnecter des écrans et de t'habituer à passer du temps loin de la stimulation constante des notifications. De fait, tu deviens plus conscient·e de tes pensées et de tes émotions.</p>
+      
+      <ExternalLinkBlock resources={ecrans} />
+
+      <p className="texte"><b>Pour relâcher les tensions physiques :</b></p>
+                  <ListeNumerotee
+        title="Yoga doux ou étirements"
+        items={[
+          { subtitle: "Postures simples pour relâcher les tensions" },
+          { subtitle: "Respiration synchronisée avec les mouvements" },
+          { subtitle: "Durée : 10–30 minutes par jour" }
+        ]}
+      />
+
+      <p className="texte">Le yoga doux et les étirements favorisent la <b>relaxation musculaire et la conscience corporelle</b>, aidant à réduire les tensions physiques liées au stress.</p>
+      <ExternalLinkBlock resources={nike} />
 
       <p className="texte"><b>Sophrologie</b></p>
-      <BulletList items={[
-      "Techniques de relaxation dynamique combinant respiration, visualisation et mouvements doux",
-      "Aide à mieux gérer le stress et les émotions",
-      "Possible dans certaines infirmeries ou centres de santé étudiants"
-    ]} />
+      <p className="texte">Enfin, la sophrologie est une méthode de relaxation qui t'apprend à <b>écouter ton corps et à te recentrer sur l'instant présent</b> en reprenant conscience de ta respiration et de tes sensations corporelles. Elle mêle des techniques de relaxation dynamique combinant respiration, visualisation et mouvements doux et aide à mieux gérer le stress et les émotions.</p>
     
-    <p className="texte">L'infirmière propose des séances de sophrologie sur les pauses méridiennes. Pour en savoir plus, n'hésite pas à la contacter.</p>
+    <p className="texte">L'infirmière propose des <b>séances de sophrologie sur les pauses méridiennes</b>. Pour en savoir plus, n'hésite pas à la contacter.</p>
     
       <ContactCard
         image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png" 
@@ -324,52 +363,79 @@ const Detente_relax = () => {
 
       />
 
-      <h2 className="sous-titre-2">Être organisé/e ou Maintenir une routine quotidienne</h2>
-      <h2 className="sous-titre-2">Eviter les facteurs de stress (ex : actualités)</h2>
-      <h2 className="sous-titre-2">S'entourer</h2>
-      <h2 className="sous-titre-2">Dormir suffisamment</h2>
-      <h2 className="sous-titre-2">Prendre des pauses pour méditer/se détendre</h2>
 
 
       <h2 className="sous-titre-2">Autres approches utiles</h2>
       <BulletList items={[
-        "Activité physique régulière (marche, natation, vélo) — 30 min plusieurs fois / semaine",
-        "Exposition à la nature (balade, jardinage)",
-        "Loisirs créatifs et activités plaisantes (musique, dessin)",
-        "Limiter la consommation d'informations anxiogènes (réseaux, actu)"
+        "S'organiser : établir des routines, planifier les tâches. Cela aide à réduire le sentiment de surcharge.",
+        "Exposition à la nature (balade, jardinage). La nature a un effet apaisant prouvé.",
+        "Loisirs créatifs et activités plaisantes (musique, dessin). Ces activités favorisent la détente et le bien-être.",
+        "Limiter la consommation d'informations anxiogènes (réseaux, actu). Cela aide à réduire le stress lié à l'actualité.",
+        "Soutien social : parler avec des ami·e·s ou proches. Le partage aide à relativiser et à se sentir moins seul·e."
       ]} />
 
+      <h2 className="sous-titre-2">Quand consulter ?</h2>
+      <p className="texte">Si le stress <b>impacte durablement la vie quotidienne, le sommeil, le travail ou les relations</b>, il est important de consulter : médecin généraliste, psychiatre ou psychologue. Des traitements (thérapies, parfois médicaments) peuvent aider.</p>
 
+        <ContactCard
+          image="/assets/fsj.png"
+          title="Fil Santé Jeunes"
+          subtitle="Écoute et infos pour 12–25 ans"
+          phone="0800 235 236"
+          hours="Tous les jours, 9h–23h"
+          textButton="Voir le site"
+          link="https://www.filsantejeunes.com/"
+        />
 
-      <p className="texte">Si le stress impacte durablement la vie quotidienne, le sommeil, le travail ou les relations, il est important de consulter : médecin généraliste, psychiatre ou psychologue. Des traitements (thérapies, parfois médicaments) peuvent aider. En cas de pensées de mort ou de détresse intense, contacte les services d'urgence immédiatement.</p>
+        <ContactCard
+          image="/assets/nightline_logo.png"
+          title="Nightline Lyon"
+          subtitle="Ligne d'écoute, de soutien et d'information, tenue par et pour des étudiants"
+          phone="04 85 30 00 10"
+          hours="Tous les jours, de 21h à 2h30 du matin"
+          textButton="Voir le site web"
+          link="https://www.nightline.fr/lyon"
+        />
 
-
-      <ExternalLinkBlock resources={contacts} />
-
-      <ContactCard
-        image="/assets/infirmerie.png"
-        title="Infirmerie"
-        subtitle="Conseils santé, orientation et sophrologie possible" 
-        phone="Voir les informations"
-        email=""
-        hours="Selon l'établissement"
-        textButton="Voir les informations"
-        link="https://www.sante.fr/"
-      />
-
+      
+      
       <Separateur />
       
       <div id="aide">
-      <h2 className="sous-titre-2">Comment aider quelqu'un en cas de stress important ?</h2>
+      <h1 className="titre">Comment aider quelqu'un ?</h1>
       </div>
-      <p className="texte">Si tu remarques qu'un·e ami·e ou un·e proche est souvent stressé·e, propose-lui d'en parler. Écoute sans juger, encourage-le·la à utiliser des techniques de relaxation et à adopter une hygiène de vie saine. Si le stress persiste, suggère-lui de consulter un professionnel de santé.</p>
-      
+
+      <h2 className="sous-titre-2">Durant une crise de stress</h2>
+      <p className="texte">Si tu vois un·e ami·e ou un·e proche en pleine crise de stress, voici quelques conseils pour l'aider :</p>
+
       <ListeNumerotee
-        title="Plan d'aide"
-        items={planAide}
+        title="Pendant la crise"
+        items={[
+          { title: "Reste calme et rassurant·e", subtitle: "Ta présence apaisante peut aider à réduire l'intensité de la crise." },
+          { title: "Encourage la respiration profonde", subtitle: "Guide-le·la à respirer lentement et profondément pour calmer son système nerveux." },
+          { title: "Utilise l'ancrage", subtitle: "Aide-le·la à se reconnecter au présent en utilisant les 5 sens (voir, toucher, entendre, sentir, goûter)." },
+          { title: "Propose un endroit calme", subtitle: "Si possible, emmène-le·la dans un lieu tranquille pour se détendre, marcher..." }
+        ]}
       />
 
-      <p className="texte"><em><b>Sources :</b> Sante.fr, Ameli, OMS.</em></p>
+      <p className="texte">L'important est de <b>rester à l'écoute</b> et de <b>ne pas minimiser ses ressentis</b>. Chaque personne réagit différemment au stress, donc adapte ton aide en fonction de ses besoins.</p>
+
+      <h2 className="sous-titre-2">Sur le long terme</h2>
+      <p className="texte">Si tu remarques qu'un·e ami·e ou un·e proche est <b>souvent stressé·e</b>, propose-lui d'en parler et applique ces conseils :</p>
+      
+      <ListeNumerotee
+        title="Encourager à chercher de l'aide"
+        items={[
+          { title: "Écoute active", subtitle: "Sois présent·e et attentif·ve à ce qu'il·elle ressent sans juger." },
+          { title: "Suggère des techniques de gestion du stress", subtitle: "Partage des méthodes de relaxation ou d'organisation qui ont fonctionné pour toi." },
+          { title: "Propose un accompagnement", subtitle: "Offre-lui de l'accompagner chez un professionnel de santé si besoin." },
+          { title: "Sois patient·e", subtitle: "Le changement prend du temps, encourage-le·la sans pression." }
+        ]}
+      />
+
+
+      <Separateur />
+      <p className="texte"><em><b>Sources :</b> Sante.fr, Ameli, OMS, la Clinique e-santé.</em></p>
 
     </div>
   );
