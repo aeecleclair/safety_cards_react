@@ -219,7 +219,6 @@ const SportSante = () => {
 
 
 
-      {/* Provisooire : page non faite
 
       <Sommaire links={navLinks} />
 
@@ -252,6 +251,24 @@ const SportSante = () => {
       <p className="texte">
         À Centrale Lyon, les infrastructures permettent de pratiquer facilement : gymnase, terrains extérieurs, nouveaux terrains de padel, associations étudiantes comme le <b>Bureau des Sports (BDS)</b>, mais aussi piscines, pistes d'athlétisme et salles municipales de la ville de Lyon.
       </p>
+
+      <p className="sous-titre-2">Le sport : une question d'équilibre et d'écoute de soi</p>
+      <p className="texte">
+        Attention cependant : <b>trop de sport</b> n’est pas forcément bénéfique. Comme pour tout, l’équilibre est essentiel. 
+        Une pratique excessive ou mal adaptée peut entraîner des blessures, une fatigue chronique, ou une baisse des performances scolaires et mentales. 
+      </p>
+
+      <p className="texte">
+        Le sport est censé être un <b>plaisir</b> et un <b>moment de détente</b> : il aide à réduire le stress, à vider l’esprit et à retrouver de l’énergie, 
+        mais il ne doit pas devenir une source supplémentaire de pression. Si tu ressens une grande fatigue, des douleurs persistantes ou une perte de motivation, 
+        il est recommandé de diminuer l’intensité, de varier les activités ou de demander conseil à un professionnel de santé.
+      </p>
+
+      <p className="texte">
+        Le plus important dans la pratique d'une activité physique reste la <b>régularité</b> et l’<b>écoute de soi</b> : quelques séances modérées chaque semaine suffisent pour ressentir les bénéfices 
+        physiques et psychologiques, sans épuisement.
+      </p>
+
 
       <ChiffresGroup chiffres={data} />
 
@@ -384,7 +401,6 @@ const SportSante = () => {
       <p className="texte"><em><b>Sources :</b> OMS, PAI Centrale Lyon 2024, Université de Lyon, Ville de Lyon, ISOSTEO, Assurance Maladie</em></p>
     
 
-      */}
     
     
       </div>
