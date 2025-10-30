@@ -12,7 +12,7 @@ const menuItems = [
     title: "🙆 Connaissance de soi",
     submenu: [
       { title: "💛 Confiance & estime de soi", link: "/conf"},
-      { title: "🏳️‍⚧️ Identité de genre", link: "/genre", inactive:true},
+      { title: "🏳️‍⚧️ Identité de genre", link: "/genre"},
       { title: "🧍 Isolement", link: "/isolement"},
     ],
   },
@@ -44,12 +44,12 @@ const menuItems = [
     title: "💖 Sexualité et amour",
     submenu: [
       { title: "✅ Consentement", link: "/consent" },
-      { title: "⚠️ IST", link: "/pratiques_sex", inactive:true },
+      { title: "⚠️ IST", link: "/pratiques_sex" },
       { title: "♀️ IVG", link: "/ivg", inactive:true },
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient" },
       { title: "💑 Relations de couple", link: "/couple" },
       { title: "⛔ Revenge porn", link: "/revenge" },
-      { title: "😘 Sexualité", link: "/sex", inactive:true },
+      { title: "😘 Sexualité et contraception", link: "/sex", inactive:true },
     ],
   },
   {
@@ -202,36 +202,7 @@ const Header = ({}) => {
         </ul>
       </nav>
 
-      <div className= "boutons_haut" >
-          {inModeSoiree ? (
-            <button
-              className="mode-soiree quit-mode-soiree"
-              onClick={() => {
-                // On navigue, l'effet ci-dessous appellera exitModeSoiree()
-                navigate("/");
-              }}
-            >
-              <span className="close-website-icon">↩️</span> Quitter le mode soirée
-            </button>
-          ) : (
-            <button
-              className="mode-soiree"
-              onClick={() => {
-                // On navigue, l'effet ci-dessous appellera enterModeSoiree()
-                navigate("/mode-soiree");
-              }}
-            >
-              <span className="close-website-icon">🎉</span> Mode soirée
-            </button>
-          )}
-
-          <ThemeToggle/>
-          <button className="quit-site" onClick={() => window.location.href = "https://www.google.com/"}>
-            <span className="close-website-icon">&times;</span> Quitter le site
-          </button>
-            
-        </div>
-
+  
 
 
 

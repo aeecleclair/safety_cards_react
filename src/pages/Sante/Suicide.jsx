@@ -2,11 +2,8 @@ import React from "react";
 import "../../App.css";
 
 import ExternalLinkBlock from "../../components/Liens-ext";
-import {
-  Navbar,
-  BulletList,
-  AnchorButton,
-} from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo, AnchorButton } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import Quote from "../../components/Citation";
@@ -67,7 +64,7 @@ const Suicide = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Tentative et comportement suicidaires</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="comprendre">
         <h1 className="titre">Comprendre un comportement suicidaire ou une tentative de suicide</h1>
@@ -481,6 +478,15 @@ const Suicide = () => {
 
         <Separateur />
   
+              <h2 className="sous-titre-2">Pour aller + loin : la formation PSSM</h2>
+        
+              <TextImageRight  text="Les PSSM (Premiers Secours en Santé Mentale) constituent l'aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu'à ce qu'une aide professionnelle puisse être apportée ou jusqu'à ce que la crise soit résolue. Ils sont l'équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.
+              Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.
+              La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care." 
+              imageSrc="/assets/logo-pssm.svg" />
+        
+              <Separateur />
+        
         <p className="texte"><em><b>Sources :</b> Etat de l'Enseignement supérieur, de la Recherche et de l'Innovation en France n°13, 3114, PSSM France</em></p>
   
 

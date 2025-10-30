@@ -8,7 +8,8 @@ import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
 import ImageTextPopup from "../../components/Cartes";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import { image } from "framer-motion/client";
 
 
@@ -147,7 +148,7 @@ const Cyberharcelement = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Cyberharcèlement</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition">
         <h2 className="titre">Définition</h2>

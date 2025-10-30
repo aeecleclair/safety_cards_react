@@ -66,7 +66,7 @@ body.dark-mode .scroll-to-top:hover {
 .scroll-arrow { pointer-events: none; position: relative; z-index: 2; }
 
 /* Progress ring (optional) */
-.scroll-to-top.with-progress { --ring-color: #b22133; --ring-bg: rgba(0,0,0,0.15); }
+.scroll-to-top.with-progress { --ring-color: #b22133; --ring-bg: rgba(178,33,51,0.15) }
 body.dark-mode .scroll-to-top.with-progress { --ring-color: #B00000; --ring-bg: rgba(255,255,255,0.25); }
 
 .scroll-progress { position: absolute; inset: 0; z-index: 1; pointer-events:none; }

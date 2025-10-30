@@ -4,7 +4,8 @@ import "../../App.css";
 import ListeNumerotee from "../../components/Listes";
 import ImageTextPopup from "../../components/Cartes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { Navbar, BulletList } from "../../components/Common";
+import { BulletList } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
@@ -220,7 +221,7 @@ const SportSante = () => {
 
       {/* Provisooire : page non faite
 
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="importance">
         <h1 className="titre">Pourquoi et où faire du sport ?</h1>

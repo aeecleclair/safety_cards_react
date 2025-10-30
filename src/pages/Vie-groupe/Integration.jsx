@@ -7,7 +7,8 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import { em, i, image, link } from "framer-motion/client";
 import ImageTextPopup from "../../components/Cartes";
 
@@ -128,7 +129,7 @@ const Bizutage = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Pratiques d'intégration</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition">
         <h2 className="titre">Intégration ou Bizutage ?</h2>

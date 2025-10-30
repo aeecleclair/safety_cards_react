@@ -4,7 +4,8 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import ListeNumerotee from "../../components/Listes";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ImageTextPopup from "../../components/Cartes";
 
 
@@ -90,7 +91,7 @@ const Effet_groupe = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Effet de groupe</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="comprendre">
         <h1 className="titre">Comprendre l'effet de groupe</h1>

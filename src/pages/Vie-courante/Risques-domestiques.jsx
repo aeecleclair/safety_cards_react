@@ -8,7 +8,8 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import { image, title } from "framer-motion/client";
 
 
@@ -104,7 +105,7 @@ const RisquesDomestiques = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Risques Domestiques</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="resume-conseils">
         <h2 className="titre">Conseils clés</h2>

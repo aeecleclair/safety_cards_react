@@ -2,7 +2,8 @@ import Quote from "../../components/Citation";
 import ImageTextPopup from "../../components/Cartes"; 
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { Navbar, BulletList, TextImageRight, ImageCenter, YouTubeVideo, NumberedList } from "../../components/Common";
+import { BulletList, TextImageRight, ImageCenter, YouTubeVideo, NumberedList } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import React from "react";
 import { ChiffresGroup } from "../../components/Chiffres";
@@ -56,7 +57,7 @@ const TCA = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Troubles des conduites alimentaires</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition">
         <h1 className="titre">Comprendre les TCA</h1>

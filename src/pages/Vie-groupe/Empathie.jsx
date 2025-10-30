@@ -4,7 +4,8 @@ import "../../App.css";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { Navbar, BulletList } from "../../components/Common";
+import { BulletList } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import Separateur from "../../components/Separateur";
 
 const navLinks = [
@@ -16,7 +17,7 @@ const Empathie = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Empathie</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       <div id="definition">
         <h1 className="titre">Qu'est-ce que l'empathie ?</h1>

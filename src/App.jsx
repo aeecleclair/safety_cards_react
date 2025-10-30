@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { ThemeProvider, useTheme } from "./ThemeProvider";
+import { ThemeProvider } from "./ThemeProvider";
 import ScrollToTopButton from "./components/ScrollTop";
 import ScrollToTop from './components/ScrollTopImmediate';
+import Raccourcis from './components/Raccourcis';
 
 
 import Exemple from "./pages/Documentation/Exemple";
@@ -90,6 +91,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Header />
+  <Raccourcis />
       <Routes>
         <Route path="/" element={<Home />} />
   <Route path="/documentation/exemple" element={<Exemple />} />

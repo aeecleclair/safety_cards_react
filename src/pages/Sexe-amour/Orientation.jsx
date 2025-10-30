@@ -3,7 +3,8 @@ import "../../App.css";
 import ExternalLinkBlock from "../../components/Liens-ext";
 import ImageTextPopup from "../../components/Cartes";
 import ListeNumerotee from "../../components/Listes";
-import { Navbar, BulletList, TextImageRight } from "../../components/Common";
+import { BulletList, TextImageRight } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
@@ -95,7 +96,7 @@ const Orientation = () => {
     <div className="page">
 
   <h1 className="titre-page gradient-title">Orientation sexuelle</h1>
-      <Navbar links={navLinks} />
+  <Sommaire links={navLinks} />
 
       <div id="definitions">
         <h1 className="titre">Qu'est-ce que l'orientation sexuelle ?</h1>

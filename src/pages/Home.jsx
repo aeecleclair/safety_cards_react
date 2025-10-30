@@ -5,14 +5,12 @@ import Quote from "../components/Citation";
 import ImageTextPopup from "../components/Cartes"; 
 import ListeNumerotee from "../components/Listes";
 import ExternalLinkBlock from "../components/Liens-ext";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../components/Common";
 import ContactCard from "../components/Contact";
 import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
 import RandomPageSelector from "../components/Randompage";
 import PreviewBanner from "../components/PreviewBanner";
-
-import AnnonceJeuCartes from "../components/AnnonceJeuCartes";
 
 
 
@@ -102,11 +100,8 @@ const Home = () => {
 
       <h1 className="titre-page">Bienvenue sur <span style={{ color: "#b22133" }}>safety cards</span></h1>
 
-      <AnnonceJeuCartes />
-
       <p className="texte">Tu trouveras sur ce site des informations et ressources concernant une liste non exhaustive de thématiques relatives aux risques de la vie étudiante. <br/> Si tu es à la recherche d'une information précise, accèdes-y en naviguant via le menu. Si tu as ton jeu Safety Cards en main, tu peux commencer à le parcourir et flasher le code QR présent en haut à droite de la carte lorsque la thématique t'intéresse. Si tu ne sais pas ce que tu cherches, tu peux lancer une recherche aléatoire ci-dessous !
       <br/> <em>Seulement l'essentiel des informations est donné pour chaque thématique. N'hésite pas à accéder aux sites spécialisés via les liens présents sur chaque page !  </em></p>
-      <PreviewBanner />
 
       
       <h1 className = "titre">Découvre une thématique aléatoire</h1>
