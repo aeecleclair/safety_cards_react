@@ -3,11 +3,13 @@ import "../../App.css";
 
 import Quote from "../../components/Citation"; 
 import ImageTextPopup from "../../components/Cartes"; 
+import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { Navbar, BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
+import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 
 const navLinks = [
   { label: "Comprendre", target: "comprendre" },
@@ -38,10 +40,10 @@ const ressourcesExternes = [
     description: "Service d’écoute nocturne gratuit et anonyme, en plusieurs langues, pour les étudiant·e·s lyonnais·e·s"
   },
   {
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSd6jel4AEzH7YV4GtxotSbAaE-FUM9bE2CVWxkBw3ssHqQ_F2g/viewform",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSd6jel4AEzH7YV4GtxotSbAaEFUM9bE2CVWxkBw3ssHqQ_F2g/viewform",
     imageSrc: "/assets/min.png",
     label: "Fondation ARHM – Écoute étudiants internationaux Lyon",
-    description: "Soutien psychologique bilingue et gratuit pour étudiant·e·s internationaux·ales à Lyon"
+    description: "Soutien psychologique confidentiel et gratuit pour les étudiant·e·s internationaux·ales à Lyon"
   },
 ];
 
@@ -54,11 +56,29 @@ const resources_equipe_inter = [
   }
 ];
 
+const resource_isolement = [
+  {
+    link: "/isolement",
+    emoji : "??",
+    label: "Isolement",
+    description: "Que faire face  l'isolement ?",
+  }
+];
+
+
+const items_soutient = [
+  { title: "Prends le temps d’échanger, de demander comment il·elle vit son arrivée."},
+  { title: "Propose de découvrir le campus, Lyon, les activités étudiantes."},
+  { title: "Explique les petits codes du quotidien (repas, horaires, politesse…)."},
+  { title: "Inclue-le/la dans les projets ou les sorties, même s’il·elle parle peu français."},
+  { title: "Sois bienveillant·e face aux différences culturelles."}
+];
+
 const Deracinement = () => {
   return (
     <div className="page">
       <h1 className="titre-page">Déracinement culturel</h1>
-      <Navbar links={navLinks} />
+      <Sommaire links={navLinks} />
 
       {/* PARTIE 1 - COMPRENDRE */}
       <div id="comprendre">
@@ -133,7 +153,14 @@ const Deracinement = () => {
         />
 
 
-
+        <p>
+          Si tu te sens isolé·e, tu peux aussi te renseigner ici :
+        </p>
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={resource_isolement}
+        />
 
         <p className="texte">
           En tant qu’étudiant·e international·e, vous bénéficiez également de droits spécifiques et d’un cadre d’accueil :
@@ -163,14 +190,13 @@ const Deracinement = () => {
           Le déracinement est moins lourd quand on se sent reconnu·e, écouté·e et inclus·e.
         </p>
 
-        <BulletList
-          items={[
-            "Prends le temps d’échanger, de demander comment il·elle vit son arrivée.",
-            "Propose de découvrir le campus, Lyon, les activités étudiantes.",
-            "Explique les petits codes du quotidien (repas, horaires, politesse…).",
-            "Inclue-le/la dans les projets ou les sorties, même s’il·elle parle peu français.",
-            "Sois bienveillant·e face aux différences culturelles.",
-          ]}
+
+        <ListeNumerotee 
+            
+            title="" 
+            subtitle="" 
+            items={items_soutient} 
+            
         />
         <p>
           Le déracinement devient une richesse quand il s’accompagne de solidarité. Chaque geste d’accueil compte : un café partagé, une explication, une invitation. C’est ainsi que l’international devient une vraie communauté.
