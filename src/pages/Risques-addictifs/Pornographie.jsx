@@ -13,7 +13,7 @@ import { ExternalLink } from "lucide-react";
 
 const navLinks = [
   { label: "Qu'est-ce que c'est ?", target: "quoi" },
-  { label: "Solutions & stratégies", target: "solutions" },
+  { label: "Quelles solutions ?", target: "solutions" },
 ];
 
 const chiffres = [
@@ -21,17 +21,6 @@ const chiffres = [
   { number: "15-20%", title: "des utilisateurs réguliers", description: "peuvent développer un usage problématique ou addictif" },
   { number: "90%", title: "des contenus pornographiques", description: "contiennent de la violence physique et verbale, souvent envers les femmes" }];
 
-const resources = [
-  { link: "https://www.filsantejeunes.com/addiction-au-porno-20922", 
-    imageSrc: "/assets/fsj.png", 
-    label: "Fil Santé Jeunes", 
-    description: "Écoute et informations pour 12–25 ans" },
-  { link: "https://www.sante.fr/", 
-    imageSrc: "/assets/sante_fr.png", 
-    label: "Sante.fr", 
-    description: "Infos santé et orientations" },
-  { link: "https://www.psychologies.com/", imageSrc: "/assets/psychologies.png", label: "Psychologies", description: "Articles pratiques et ressources sur addiction, sexualité et relations" }
-];
 
 const isolement = [
   { link: "/isolement",
@@ -54,6 +43,45 @@ const couple = [
     description: "Améliorer la communication et l'intimité" }
 ];
 
+const detente = [
+  { link: "/detente",
+    emoji: "🧘‍♀️",
+    label: "Détente & relaxation",
+    description: "Techniques de relaxation et de gestion du stress" }
+];
+
+const ecrans = [
+  { link: "/ecrans",
+    emoji: "📵",
+    label: "Addiction aux écrans & réseaux sociaux",
+    description: "Gérer son temps d'écran et ses habitudes numériques" }
+];
+
+const test_addiction = [
+  {
+    link: "/assets/depistage_add_sexuelle.pdf",
+    label: "Test de dépistage d'addiction sexuelle de Carnes", 
+    description: "Auto-diagnostic pour évaluer votre relation à la pornographie",
+  }
+];
+
+const aide = [
+  { link: "https://dasafrance.fr/reunions-liens/reunions-en-province/",
+    imageSrc: "/assets/DASA.JPG",
+    label: "DASA France",
+    description: "Association de groupes d'entraide pour les addictions sexuelles" },
+  { link: "https://stopporn.fr/en-parler/#professionnels",
+    imageSrc: "/assets/stopporn.JPG",
+    label: "StopPorn.fr",
+    description: "Ressources et soutien pour les addictions sexuelles" }
+];
+
+const centres_aide = [
+  { link: "https://ifac-addictions.chu-nantes.fr/annuaire-des-centres-de-soins/region-sud-est",
+    imageSrc: "/assets/ifac.jpg",
+    label: "IFAC - Centres de soins",
+    description: "Trouver un centre de soins en addictologie comportementale près de chez vous" }
+];
 
 const cliches = [
   { link: "/consentement",
@@ -78,45 +106,6 @@ const resources1 = [
 ];
 
 
-const strategies = [
-  {
-    title: "Auto-observation",
-    items: [
-      "Tenir un journal de consommation : quand, pourquoi, durée, émotions associées",
-      "Repérer les déclencheurs (solitude, ennui, stress)"
-    ]
-  },
-  {
-    title: "Limiter l'accès",
-    items: [
-      "Installer des bloqueurs / filtres sur les appareils",
-      "Supprimer / rendre l'accès moins immédiat (déconnexion, suppression d'applications)"
-    ]
-  },
-  {
-    title: "Remplacer par des activités",
-    items: [
-      "Planifier des activités alternatives agréables (sport, sortie, loisir créatif)",
-      "Créer une routine de soirées favorisant le sommeil plutôt que l'écran"
-    ]
-  },
-  {
-    title: "Stratégies cognitives",
-    items: [
-      "Identifier et recadrer les pensées automatiques (ex. « j’ai besoin de ça pour me sentir mieux »)",
-      "Différer l’acte (attendre 10 min) et observer si l'envie s'estompe"
-    ]
-  },
-  {
-    title: "Aide professionnelle",
-    items: [
-      "Thérapie individuelle (TCC, thérapies centrées sur les compulsions)",
-      "Thérapie de couple si la relation est affectée",
-      "Groupes de parole ou d'entraide"
-    ]
-  }
-];
-
 const Pornographie = () => {
   return (
     <div className="page">
@@ -130,7 +119,7 @@ const Pornographie = () => {
         image="./assets/cartes/6_coeur.png"
         title="La carte 6♥"
         shortText="Comprendre l'usage problématique"
-        longText="Un usage fréquent ou régulier de la pornographie n'est pas obligatoirement pathologique. On parle d'usage problématique ou addictif quand il y a perte de contrôle, impacts sur le quotidien ou poursuite malgré les conséquences négatives. L'évaluation par un professionnel aide à déterminer la nature du problème et les aides possibles."
+        longText="Un usage fréquent ou régulier de la pornographie n'est pas obligatoirement pathologique. On parle d'usage problématique ou addictif quand il y a perte de contrôle, impacts sur le quotidien ou poursuite malgré les conséquences négatives."
         textButton="⤢ Agrandir la carte"
         suit="coeur"
       />
@@ -174,6 +163,9 @@ const Pornographie = () => {
         "Régulation émotionnelle : usage pour gérer ennui, anxiété ou tristesse",
         ]} />
 
+        <p className="text">Voici un <b>auto-diagnostic</b> (test de dépistage d'addiction sexuelle de Carnes) pour évaluer votre relation à la pornographie :</p>
+        <ExternalLinkBlock resources={test_addiction} />
+
         <h2 className="sous-titre-2">Conséquences possibles</h2>
         <p className="texte">Les conséquences d'un usage problématique de la pornographie peuvent être variées et affecter plusieurs aspects de la vie.</p>
         <p className="texte"><b>Impact sur la sexualité réelle :</b></p>
@@ -194,7 +186,7 @@ const Pornographie = () => {
         <p className="texte"><b>Risque d’escalade :</b></p>
         <p className="texte">Besoin croissant de consommer des contenus plus extrêmes ou déviants pour atteindre le même niveau de stimulation, ce qui peut mener à des comportements illégaux ou dangereux.</p>
       
-      <p className="mise-avant">Ces effets ne sont pas systématiques : beaucoup de personnes consomment de la pornographie sans développer d'usage problématique. L'important est le degré d'impact sur la vie.</p>
+      <p className="mise-avant">Ces effets ne sont <b>pas systématiques</b> : beaucoup de personnes consomment de la pornographie sans développer d'usage problématique. L'important est le degré d'impact sur la vie.</p>
       
 
       <Separateur />
@@ -204,52 +196,49 @@ const Pornographie = () => {
       </div>
 
       <h2 className="sous-titre-2">Une addiction encore taboue</h2>
-      <p className="texte">L'addiction à la pornographie reste un sujet tabou, souvent entouré de honte et de culpabilité. Pourtant, il est important de reconnaître que c'est un problème réel qui peut affecter la santé mentale et les relations. Parler ouvertement avec des professionnels ou des groupes de soutien peut aider à briser ce tabou et à trouver des solutions adaptées.</p>
+      <p className="texte">L'addiction à la pornographie reste un <b>sujet tabou</b>, souvent entouré de honte et de culpabilité. En France, elle n'est même <b>pas encore reconnue</b> comme telle et la recherche sur le sujet reste encore limitée. Pourtant, il est important de reconnaître que c'est un problème réel qui peut affecter la santé mentale et les relations. Des témoignages existent déjà et permettent de visibiliser cette addiction et de parler ouvertement lors de groupe de soutien.</p>
 
 
-      <ExternalLinkBlock resources={resources} />
 
-      <h2 className="sous-titre-2">Solutions & stratégies (court et long terme)</h2>
 
-      <p className="texte">Des stratégies progressives peuvent aider à retrouver un usage contrôlé ou à arrêter si tu le souhaites. Voici des actions concrètes, classées du plus simple au plus impliquant :</p>
 
-      {strategies.map((s, idx) => (
-        <div key={idx} className="carte-technique">
-          <h3 className="sous-titre-3">{s.title}</h3>
-          <BulletList items={s.items} />
-        </div>
-      ))}
+      <h2 className="sous-titre-2">Quelques pistes</h2>
 
-      <h3 className="sous-titre-3">Plan pratique en 7 jours</h3>
-      <ListeNumerotee
-        title="Exemple de mini-plan (7 jours)"
-        items={[
-          { title: "Jour 1 — Observateur", subtitle: "Note quand et pourquoi tu visionnes (journal simple)" },
-          { title: "Jour 2 — Réduction d'accès", subtitle: "Installe un filtre / active le mode 'screen time' le soir" },
-          { title: "Jour 3 — Remplacement", subtitle: "Planifie 30 minutes d'activité alternative à la place" },
-          { title: "Jour 4 — Délai", subtitle: "Si l'envie revient, attends 10 minutes et évalue" },
-          { title: "Jour 5 — Partage", subtitle: "Parle à une personne de confiance ou un professionnel (anonymement si besoin)" },
-          { title: "Jour 6 — Habitudes de soirée", subtitle: "Routines sans écran avant le coucher" },
-          { title: "Jour 7 — Bilan", subtitle: "Regarde les progrès et ajuste le plan" },
-        ]}
-      />
-
-      <Separateur />
-
-      <div id="aide">
-        <h1 className="titre">Aide et ressources</h1>
-      </div>
-
-      <p className="texte">Si l'usage a un impact important sur ta vie, n'hésite pas à demander de l'aide. Voici des options possibles :</p>
-
+      <p className="texte">Des <b>stratégies progressives</b> peuvent aider à retrouver un usage contrôlé ou à arrêter si tu le souhaites. Voici des actions concrètes :</p>
+      <p className="texte"><b>Auto-observation :</b></p>
       <BulletList items={[
-        "Contacte un professionnel de santé (médecin traitant, infirmier·e) pour une orientation",
-        "Consulte un psychologue spécialisé dans les comportements répétitifs ou les addictions",
-        "Pour les questions liées à la sexualité, un·e sexologue peut aider à restaurer le désir et la confiance",
-        "Groupes d'entraide et consultations en addictologie si besoin"
+        "Tiens un journal de consommation : quand, pourquoi, durée, émotions associées. Cela t'aidera à mieux comprendre tes habitudes et à identifier les moments à risque.",
+        "Repère les déclencheurs (solitude, ennui, stress) afin de les anticiper et de mettre en place des stratégies pour y faire face."
       ]} />
 
+      <p className="texte"><b>Limiter l'accès :</b></p>
+      <BulletList items={[
+        "Installe des bloqueurs ou filtres sur les appareils pour restreindre l'accès à certains contenus.",
+        "Supprime ou rends l'accès moins immédiat (déconnexion, suppression d'applications) car cela peut aider à réduire les tentations."
+      ]} />
+      <ExternalLinkBlock resources={ecrans} />
 
+      <p className="texte"><b>Remplacer par des activités :</b></p>
+      <BulletList items={[
+        "Planifie des activités alternatives agréables (sport, sortie, loisir créatif) pour te distraire et occuper ton esprit.",
+        "Crée une routine de soirées favorisant le sommeil plutôt que l'écran (ex. lecture, méditation)."
+      ]} />
+      <ExternalLinkBlock resources={detente} />
+
+      <p className="texte"><b>Stratégies cognitives :</b></p>
+      <BulletList items={[
+        "Identifie et recadre les pensées automatiques (ex. « j’ai besoin de ça pour me sentir mieux ») pour les remplacer par des pensées plus saines (ex. « je peux trouver d'autres moyens de me sentir mieux »).",
+        "Cela t'aidera à mieux gérer tes envies et à les comprendre. En effet, prendre du recul et analyser la situation peut permettre de désamorcer l'envie. Par exemple, différer l’acte (attendre 10 min) et observer si l'envie s'estompe peut être une stratégie efficace."
+      ]} />
+
+      <h2 className="sous-titre-2">En parler</h2>
+      <p className="texte">Le meilleur pas vers la gestion de l'addiction est souvent d'<b>en parler</b>. Que ce soit avec un ami de confiance, un membre de la famille ou un professionnel de santé, partager son expérience peut aider à réduire la honte et à trouver du soutien.</p>
+      <p className="texte">Des <b>professionnels spécialisés</b> en santé mentale, en sexologie ou en addictologie peuvent offrir un accompagnement adapté. Ils peuvent aider à comprendre les mécanismes de l'addiction, à développer des stratégies de gestion et à travailler sur les causes sous-jacentes.</p>
+      <ExternalLinkBlock resources={centres_aide} />
+
+      <p className="texte">Il existe également des <b>groupes de parole</b> et des lignes d'écoute qui peuvent offrir un espace sûr pour discuter de ces problèmes :</p>
+      <ExternalLinkBlock resources={aide} />
+      
 <ContactCard
         image="/assets/fsj.png" 
         title="Fil santé jeunes"
@@ -260,32 +249,10 @@ const Pornographie = () => {
         textButton="Voir le site web"
         link="https://www.filsantejeunes.com/"
       />
-      <h2 className="sous-titre-2">Accompagner un proche</h2>
-      <p className="texte">Si tu veux aider quelqu'un qui a un usage problématique :</p>
-
-      <ListeNumerotee
-        title="Conseils pour aider"
-        items={[
-          { title: "Écoute sans jugement", subtitle: "La personne a souvent honte, privilégie une attitude compréhensive" },
-          { title: "Propose un accompagnement concret", subtitle: "Aide à trouver un professionnel, accompagne aux rendez-vous si souhaité" },
-          { title: "Évite les reproches", subtitle: "Ils provoquent fermeture et secret ; privilégie la coopération" },
-          { title: "Fixe des limites", subtitle: "Si l'usage affecte directement ta vie (couple, travail), fixe des règles claires et protège-toi" }
-        ]}
-      />
-
+      
       <Separateur />
 
-      <h2 className="sous-titre-2">Quand consulter en urgence ?</h2>
-      <p className="texte">Consulte rapidement si :</p>
-      <BulletList items={[
-        "Tu as des pensées de mort ou des idées suicidaires",
-        "L'usage est lié à des situations à risque (ex. comportement illégal, partage non consenti d'images)",
-        "Il y a une détérioration marquée de la santé mentale ou physique"
-      ]} />
-
-      <Separateur />
-
-      <p className="texte"><em><b>Sources & repères :</b> recommandations générales en santé mentale et sexologie. Cette page vise l'information et l'orientation — elle ne remplace pas une évaluation professionnelle.</em></p>
+      <p className="texte"><em><b>Sources :</b> DASA France, Addict'Aide, Fédération Addiction, Stopporn.fr, IFAC.</em></p>
     </div>
   );
 };
