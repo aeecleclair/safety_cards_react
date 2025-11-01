@@ -84,7 +84,7 @@ const ressourcesConsentementFlyers = [
 const proposition_loi = [
   {
     link: "https://www.vie-publique.fr/loi/297985-loi-consentement-definition-penale-du-viol",
-    label: "La proposition de loi",
+    label: "La proposition de loi adoptée",
     description: "visant à modifier la définition pénale du viol et des agressions sexuelles ",
     imageSrc : "/assets/rep-logo.png",
   }
@@ -163,7 +163,7 @@ const Consentement = () => {
         Légalement, les actes sexuels avec un·e <b>mineur·e de moins de 15 ans</b> constituent une infraction, quel que soit le « consentement » allégué
         (seuil porté à <b>18 ans</b> en cas d'<b>inceste</b>).
       </p>
-      <p className="texte"> Au moment où nous écrivons ces lignes, la loi française ne définit pas précisément le consentement au-delà de ce cadre. Une proposition de loi a été déposée le 21 janvier 2025 afin de préciser la notion de consentement et la manière de l'apprécier. Cela devrait à terme permettre de mieux protéger les victimes. <b>Le Sénat et l'Assemblée nationale devraient bientôt s'accorder sur une version finale du texte.</b></p>
+      <p className="texte"> Le consentment est inscrit dans la loi depuis novembre 2025. Il est clairement défini par le code pénal comme étant « libre et éclairé, spécifique, préalable et révocable ». On peut aussi lire qu'« Il est apprécié au regard des circonstances. Il ne peut être déduit du seul silence ou de la seule absence de réaction de la victime ».</p>
       <ExternalLinkBlock resources={proposition_loi} />
 
 
