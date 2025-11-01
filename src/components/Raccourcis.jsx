@@ -110,7 +110,7 @@ export default function Raccourcis() {
                 </g>
               </svg>
             </span>
-            <span className="fab-label">English version</span>
+            <span className="fab-label">English version (coming soon)</span>
           </button>
         </div>
         <div className="fab-item">
