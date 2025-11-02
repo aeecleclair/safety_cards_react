@@ -73,7 +73,6 @@ export default function Raccourcis() {
       aria-hidden={hideNearFooter ? 'true' : undefined}
     >
       <div className="raccourcis-card">
-        <p className="raccourcis-title">Raccourcis</p>
         <div className="fab-item">
           <button type="button" className="fab-btn fab-exit" onClick={handleQuit} aria-label="Quitter le site">
             <span className="fab-icon" aria-hidden>❌</span>
@@ -88,8 +87,30 @@ export default function Raccourcis() {
         </div>
         <div className="fab-item">
           <button type="button" className="fab-btn" onClick={() => {}} aria-label="English version">
-            <span className="fab-icon" aria-hidden>🇬🇧</span>
-            <span className="fab-label">English version</span>
+            <span className="fab-icon" aria-hidden>
+              {/* UK flag SVG to avoid emoji fallback like 'GP' on Windows */}
+              <svg width="20" height="20" viewBox="0 0 60 36" role="img" aria-hidden="true">
+                <defs>
+                  <clipPath id="uk-clip"><rect width="60" height="36" rx="3" ry="3"/></clipPath>
+                </defs>
+                <g clipPath="url(#uk-clip)">
+                  <rect width="60" height="36" fill="#012169"/>
+                  {/* white diagonals */}
+                  <path d="M0,0 L8,0 L60,28 L60,36 L52,36 L0,8 Z" fill="#fff"/>
+                  <path d="M60,0 L52,0 L0,28 L0,36 L8,36 L60,8 Z" fill="#fff"/>
+                  {/* red diagonals */}
+                  <path d="M0,0 L4.5,0 L60,27 L60,36 L55.5,36 L0,9 Z" fill="#C8102E"/>
+                  <path d="M60,0 L55.5,0 L0,27 L0,36 L4.5,36 L60,9 Z" fill="#C8102E"/>
+                  {/* white cross */}
+                  <rect x="25" width="10" height="36" fill="#fff"/>
+                  <rect y="13" width="60" height="10" fill="#fff"/>
+                  {/* red cross */}
+                  <rect x="27.5" width="5" height="36" fill="#C8102E"/>
+                  <rect y="15.5" width="60" height="5" fill="#C8102E"/>
+                </g>
+              </svg>
+            </span>
+            <span className="fab-label">English version (coming soon)</span>
           </button>
         </div>
         <div className="fab-item">
