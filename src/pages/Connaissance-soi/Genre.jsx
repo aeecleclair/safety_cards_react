@@ -234,11 +234,11 @@ const Genre = () => {
           <BulletList
             items={[
               <>La manière de réaliser ton <b>coming out</b></>,
-              <><b>les moyens d'exprimer ton genre :</b> il existe de nombreux moyens médicaux ou non pour changer ou dissimuler certains attributs physiques </>,
-              <><b>les Traitements Hormonaux de Substitution (THS) : </b>les différents types de traitements, les médecins et moyens de se faire accompagner</>,
-              <><b>les différentes opérations masculinisantes ou féminisantes</b></>,
-              <><b>l'Affectation de Longue Durée (ALD)</b> qui permet une meilleure prise en charge de la transition par la sécurité sociale</>,
-              <><b>les différentes démarches administratives</b> (changement de prénom, de mention de genre...)</>,
+              <><b>Les moyens d'exprimer ton genre :</b> il existe de nombreux moyens médicaux ou non pour changer ou dissimuler certains attributs physiques </>,
+              <><b>Les Traitements Hormonaux de Substitution (THS) : </b>les différents types de traitements, les médecins et moyens de se faire accompagner</>,
+              <><b>Les différentes opérations masculinisantes ou féminisantes</b></>,
+              <><b>L'Affectation de Longue Durée (ALD)</b> qui permet une meilleure prise en charge de la transition par la sécurité sociale</>,
+              <><b>Les différentes démarches administratives</b> (changement de prénom, de mention de genre...)</>,
             ]}
           />
 
@@ -274,7 +274,7 @@ const Genre = () => {
 
         <h3 className="sous-titre-2">Associations de soutien</h3>
         <p className="texte">
-          Les groupes d'autosupport sont précieux : rencontrer d'autres personnes trans/non-binaires permet d'échanger sur le
+          Les <b>groupes d'autosupport</b> sont précieux : rencontrer d'autres personnes trans/non-binaires permet d'échanger sur le
           quotidien, les médecins, et les démarches administratives. Tu trouveras des groupes en ligne et locaux. Sur le campus de Centrale Lyon, n'hésite pas à contacter Rainbow.
         </p>
 
@@ -330,8 +330,8 @@ const Genre = () => {
         <h3 className="sous-titre-2">Les démarches administratives à Centrale Lyon</h3>
 
         <p className="texte">
-          Pour changer ton prénom d'usage ou ton titre de civilité (Monsieur/Madame) dans les services de l'école (Moodle, listes d'appel, carte étudiante), il te suffit
-          généralement d'envoyer un mail à la scolarité. Le changement de prénom sur le diplôme nécessaite par contre une démarche auprès de l'état civil. 
+          Pour <b>changer ton prénom d'usage ou ton titre de civilité (Monsieur/Madame)</b> dans les services de l'école (Moodle, listes d'appel, carte étudiante), il te suffit
+          généralement d'envoyer un mail à la scolarité. Le changement de prénom sur le diplôme nécessite par contre une démarche auprès de l'état civil. 
           
         </p>
 
@@ -356,7 +356,7 @@ const Genre = () => {
       
 
       <h2 className="sous-titre-2">Tu subis des discriminations ?</h2>
-        <p className="texte">Si tu es victime de discriminations en raison de ton identité de genre, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
+        <p className="texte">Si tu es <b>victime de discriminations</b> en raison de ton identité de genre, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
         <ExternalLinkBlock
           resources={resources_Autres_pages}
         />
@@ -365,7 +365,7 @@ const Genre = () => {
 
           <h2 className="sous-titre-2">Tu es en détresse ?</h2>
 
-          <p className="texte">Reconnue d'Utilité Publique, la Fondation Le Refuge héberge et accompagne les jeunes LGBT+ victimes de violences intrafamiliales, rejetés par leurs parents, chassés du domicile en raison de leur orientation sexuelle ou de leur identité de genre. Tu peux contacter leur ligne d'écoute afin d'obtenir une solution d'urgence.</p>
+          <p className="texte">Reconnue d'Utilité Publique, la Fondation Le Refuge <b>héberge et accompagne les jeunes LGBT+ victimes de violences intrafamiliales</b>, rejetés par leurs parents, chassés du domicile en raison de leur orientation sexuelle ou de leur identité de genre. Tu peux contacter leur ligne d'écoute afin d'obtenir une solution d'urgence.</p>
 
 
           <ContactCard
@@ -390,7 +390,7 @@ const Genre = () => {
         <h2 className="titre">Comment accompagner un·e proche ?</h2>
 
         <p className="texte">
-          Accompagner une personne trans ou non-binaire repose sur l'écoute, le respect et la volonté d'apprendre. Voici des
+          Accompagner une personne trans ou non-binaire repose sur <b>l'écoute, le respect et la volonté d'apprendre</b>. Voici des
           conseils concrets, faciles à mettre en œuvre.
         </p>
 

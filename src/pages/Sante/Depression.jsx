@@ -94,9 +94,9 @@ const resources_aide = [
 ];
 
 const data = [
-  { number: "1/5", title: "Nombre de français", description: "Qui ont vécu ou vivront une dépression au cours de leur vie" },
-  { number: "200", title: "Élèves de Centrale Lyon", description: "Consultent l'infirmière à propos de leur santé mentale chaque année" },
-  { number: "20%", title: "Des élèves de Centrale Lyon", description: "Évaluent leur santé mentale comme mauvaise" },
+  { number: "1/5", title: "Nombre de français", description: "qui ont vécu ou vivront une dépression au cours de leur vie" },
+  { number: "200", title: "élèves de Centrale Lyon", description: "consultent l'infirmière à propos de leur santé mentale chaque année" },
+  { number: "20%", title: "des élèves de Centrale Lyon", description: "évaluent leur santé mentale comme mauvaise" },
 ];
 
 
