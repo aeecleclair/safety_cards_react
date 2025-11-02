@@ -75,7 +75,7 @@ const nike = [
 const anxiete = [
   {
     link: "\anxiete",
-    emoji: "😟",
+    emoji: "😶‍🌫️",
     label: "Anxiété",
     description: "Comment faire face à son anxiété ?",
   }
@@ -189,7 +189,7 @@ const Detente_relax = () => {
         "Ruminations : repasser en boucle des événements passés",
         "Anticipations catastrophiques : imaginer le pire sans preuve",
         "Pensées dichotomiques : tout ou rien",
-        "Jugements excessifs sur soi (je ne suis pas à la hauteur)"
+        "Jugements excessifs sur soi (« je ne suis pas à la hauteur »)"
       ]} />
 
 
@@ -303,9 +303,9 @@ const Detente_relax = () => {
       <h2 className="sous-titre-2">Améliorer son mode de vie</h2>
       <p className="texte">Adopter un <b>mode de vie sain</b> peut contribuer à réduire le stress. Voici quelques pistes à explorer :</p>
       <BulletList items={[
-        "Activité physique régulière : privilégie les activités que tu aimes. Faire du sport libère des endorphines, hormones du bien-être",
-        "Alimentation équilibrée : privilégie les fruits, légumes, protéines et céréales complètes. Manger plus sainement aide à stabiliser l'humeur.",
-        "Sommeil : veille à avoir des horaires réguliers et un environnement propice au sommeil. Améliorer son sommeil réduit la sensibilité au stress.", 
+        <><b>Activité physique régulière</b> : privilégie les activités que tu aimes. Faire du sport libère des endorphines, hormones du bien-être</>,
+        <><b>Alimentation équilibrée</b> : privilégie les fruits, légumes, protéines et céréales complètes. Manger plus sainement aide à stabiliser l'humeur.</>,
+        <><b>Sommeil</b> : veille à avoir des horaires réguliers et un environnement propice au sommeil. Améliorer son sommeil réduit la sensibilité au stress.</>,
         ]} />
 
       <p className="texte">Pour en savoir plus sur ces sujets, consulte les pages dédiées : </p>
@@ -367,11 +367,11 @@ const Detente_relax = () => {
 
       <h2 className="sous-titre-2">Autres approches utiles</h2>
       <BulletList items={[
-        "S'organiser : établir des routines, planifier les tâches. Cela aide à réduire le sentiment de surcharge.",
-        "Exposition à la nature (balade, jardinage). La nature a un effet apaisant prouvé.",
-        "Loisirs créatifs et activités plaisantes (musique, dessin). Ces activités favorisent la détente et le bien-être.",
-        "Limiter la consommation d'informations anxiogènes (réseaux, actu). Cela aide à réduire le stress lié à l'actualité.",
-        "Soutien social : parler avec des ami·e·s ou proches. Le partage aide à relativiser et à se sentir moins seul·e."
+        <><b>S'organiser</b> : établir des routines, planifier les tâches. Cela aide à réduire le sentiment de surcharge.</>,
+        <><b>Exposition à la nature</b> : (balade, jardinage). La nature a un effet apaisant prouvé.</>,
+        <><b>Loisirs créatifs et activités plaisantes</b> : (musique, dessin). Ces activités favorisent la détente et le bien-être.</>,
+        <><b>Limiter la consommation d'informations anxiogènes</b> : (réseaux, actu). Cela aide à réduire le stress lié à l'actualité.</>,
+        <><b>Soutien social</b> : parler avec des ami·e·s ou proches. Le partage aide à relativiser et à se sentir moins seul·e.</>
       ]} />
 
       <h2 className="sous-titre-2">Quand consulter ?</h2>
