@@ -253,6 +253,7 @@ const Alcool = () => {
 
       <ImageCenter
         imageSrc="/assets/doses-alcool.png"
+        enlargeOnClick
       />
 
 

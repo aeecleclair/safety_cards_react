@@ -195,7 +195,9 @@ const RelationsCouple = () => {
 
         <h2 className="sous-titre-2">Le cycle de la violence</h2>
 
-        <ImageCenter imageSrc="/assets/cycle_violence.png" />
+        <ImageCenter imageSrc="/assets/cycle_violence.png" 
+        enlargeOnClick
+        />
           <p className="texte">
          La violence conjugale ne survient pas toujours brutalement. Elle <b>s'installe souvent selon un cycle de la violence</b> : une <b>tension sourde</b> qui monte progressivement, jusqu'à un <b>accès d'agression</b> (crise), suivi d'<b>excuses ou de promesses de changement</b> (période dite de « lune de miel »), puis <b>retour à la tension</b>. À chaque répétition, les épisodes de violence deviennent plus fréquents et plus graves, épuisant la victime et rendant difficile la prise de recul. Comprendre ce cycle aide à identifier la situation et à trouver un soutien adapté.
         </p>

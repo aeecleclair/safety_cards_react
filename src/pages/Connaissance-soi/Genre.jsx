@@ -111,6 +111,7 @@ const Genre = () => {
 
         <TextImageRight
           imageSrc="/assets/personne-gingenre.jpg"
+          enlargeOnClick
           text={
             <>
               <p className="texte">

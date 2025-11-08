@@ -3,9 +3,11 @@ import "../../App.css";
 
 import ListeNumerotee from "../../components/Listes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList } from "../../components/Common";
+import { BulletList, ImageCenter } from "../../components/Common";
 import Sommaire from "../../components/Sommaire";
 import Separateur from "../../components/Separateur";
+import { image } from "framer-motion/client";
+import ImageTextPopup from "../../components/Cartes";
 
 const navLinks = [
   { label: "Tri et compost", target: "tri" },
@@ -23,25 +25,43 @@ const DemarchesEcologiques = () => {
 
       <div id="tri">
         <h1 className="titre">Tri des déchets et compostage</h1>
-        <p className="texte">
-          Depuis 2024, le tri à la source des biodéchets est obligatoire. Cela concerne les déchets alimentaires et végétaux. Ils doivent être séparés pour être compostés ou méthanisés. En résidence universitaire, renseignez-vous sur les composteurs collectifs disponibles.
-        </p>
-        <BulletList
-          items={[
-            "Oui au compost : épluchures, marc de café, coquilles d'œuf, pain, fleurs fanées.",
-            "Non au compost : plastique, métal, viande, poissons, carton coloré, huiles."
-          ]}
+
+        <ImageTextPopup
+          image="/assets/cartes/3_carreau.png"
+          title="La carte 3♦"
+          shortText="Découvre toutes les manières de réduire ton impact sur l'environnement."
+          longText="Même à l'échelle individuelle, il existe de nombreuses manières concrètes de réduire son impact. Tu peux jouer sur ton alimentation, la gestion de tes déchets ou sur ton usage d'internet. Ces petits gestes comptent, même s'ils doivent aussi s'accompagner d'actions collectives et politiques pour être vraiment efficaces."
+          textButton="⤢ Agrandir la carte"
+          suit="carreau"
         />
+
         <p className="texte">
-          Certains campus comme Grenoble ont installé des composteurs collectifs, encadrés par des étudiants. Ils permettent de réduire les déchets tout en produisant un terreau naturel utile.
+          Depuis 2024, le tri à la source des déchets verts et alimentaires est obligatoire. Ils doivent être séparés pour être compostés ou méthanisés. En résidence universitaire, renseignez-vous sur les composteurs collectifs disponibles.
         </p>
+        <p className="texte">
+          Au sein du campus de Centrale Lyon, tu disposes de nombreux points de tri délectif. Des poubelles bleues dont aussi à dispoition dans les salles de classe afin de trier le papier.        
+          </p>
+
+        <p className="texte"> Le tri des déchets est aussi réalisé en résidences (Comparat et Adoma). Des bacs à compost sont aussi mis à disposition des habitant·es, au bas des résidences de Comparat.</p>
         <ExternalLinkBlock
           resources={[
             {
-              link: "https://www.ademe.fr/particuliers-eco-citoyens/dechets/compostage",
-              label: "ADEME - Compostage",
-              description: "Conseils pour bien trier et composter chez soi ou collectivement.",
-              emoji: "♻️",
+              link: "https://campus.ec-lyon.fr/tri-et-recyclage-5673.kjsp?RH=ACCUEIL",
+              label: "Tri et recyclage - Campus ECL",
+              description: "Consignes de tri selon les déchets, plan général des points de tri",
+              imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
+            },
+            {
+              link: "/docs/lyon_guide_tri.pdf",
+              label: "Guide de tri - Métropole Grand Lyon",
+              description: "Conseils de tri et de réduction des déchets",
+              imageSrc: "/assets/logo-metropole-lyon.svg",
+            },
+            {
+              link: "https://agirpourlatransition.ademe.fr/particuliers/reduire-dechets/bien-jeter",
+              label: "ADEME",
+              description: "Bien jeter les déchets pour mieux les valoriser",
+              imageSrc: "/assets/logo-ademe.svg",
             },
           ]}
         />
@@ -50,25 +70,19 @@ const DemarchesEcologiques = () => {
       <div id="jardin">
         <h1 className="titre">Jardins partagés et serres</h1>
         <p className="texte">
-          Les jardins partagés sont des potagers gérés collectivement par les étudiants. Ils permettent de cultiver légumes et herbes sans pesticides, de renforcer le lien social et de favoriser la biodiversité. 
+          À Centrale Lyon, les jardins partagés sont situés au bas des bâtiments T et X. En y participant, tu peux découvrir le jardinage ou transmettre tes connaissances, le tout dans la bonne humeur ! C'est aussi l'occasion d'accéder à des formations mensuelles pour apprendre et partager de bons moments.
         </p>
         <p className="texte">
-          Sur certains campus, ces jardins sont accessibles via les associations étudiantes ou les services de développement durable. Chacun peut y participer, même sans expérience.
+          Les jardins partagés sont gérés par l'association <b>Planet&Co</b>.
         </p>
-        <BulletList
-          items={[
-            "Production locale sans emballages.",
-            "Apprentissage du jardinage bio.",
-            "Création de compost sur place."
-          ]}
-        />
+
         <ExternalLinkBlock
           resources={[
             {
-              link: "https://www.campusverts.fr/",
-              label: "Campus Verts",
-              description: "Réseau de jardins étudiants écologiques en France.",
-              emoji: "🌱",
+              link: "https://www.instagram.com/planetandcoecl/",
+              label: "Planet&Co - Instagram",
+              description: "Association écologique de Centrale Lyon.",
+              imageSrc: "/assets/planet-co.jpg",
             },
           ]}
         />
@@ -79,23 +93,34 @@ const DemarchesEcologiques = () => {
         <p className="texte">
           L’élevage est responsable d’environ 14 % des émissions mondiales de gaz à effet de serre. Réduire sa consommation de viande, surtout rouge, est un levier écologique puissant. 
         </p>
-        <BulletList
-          items={[
-            "Limiter la viande rouge à 500 g/semaine.",
-            "Remplacer par œufs, légumineuses, tofu.",
-            "Consommer local et de saison."
-          ]}
+
+        <ImageCenter
+          imageSrc="/assets/emissions_ges_nourriture.png"
+          enlargeOnClick 
         />
+
         <p className="texte">
-          Même un ou deux repas végétariens par semaine ont un impact. Pensez aussi aux AMAP et paniers de producteurs pour des alternatives locales.
+          Même un ou deux repas végétariens par semaine ont donc un impact. Pense aussi à l'AMAP, gérée par <b>Planet&Co</b>, qui te permet d'avoir des fruits et légumes locaux et de saison, du miel, du fromage et du pain chaque semaine. Tu peux réserver depuis l'application <b>MyECL</b>.
         </p>
         <ExternalLinkBlock
           resources={[
             {
-              link: "https://www.reseau-amap.org/",
-              label: "Réseau des AMAP",
-              description: "Trouver une AMAP proche de votre campus.",
-              emoji: "🥕",
+              link: "https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-impact-alimentation/mesurez-empreinte-carbone-assiette",
+              label: "ADEME",
+              description: "Calcule l'empreinte carbone de ton assiette et découvre des conseils pour la réduire",
+              imageSrc: "/assets/logo-ademe.svg",
+            },
+            {
+              link: "https://www.instagram.com/planetandcoecl/",
+              label: "Planet&Co - Instagram",
+              description: "Association écologique de Centrale Lyon.",
+              imageSrc: "/assets/planet-co.jpg",
+            },
+            {
+              link: "https://agirpourlatransition.ademe.fr/particuliers/mieux-consommer/alimentation",
+              label: "ADEME",
+              description: "Avoir une alimentation saine et durable",
+              imageSrc: "/assets/logo-ademe.svg",
             },
           ]}
         />
@@ -104,22 +129,30 @@ const DemarchesEcologiques = () => {
       <div id="transport">
         <h1 className="titre">Transport</h1>
         <p className="texte">
-          Les transports représentent 30 % des émissions françaises. Les trajets en train, bus ou covoiturage sont à privilégier par rapport à la voiture individuelle ou l’avion.
+          Les transports représentent plus de 30 % des émissions françaises. Les trajets en train, bus ou covoiturage sont à privilégier par rapport à la voiture individuelle ou l’avion.
         </p>
+
+        <ImageCenter
+          imageSrc="/assets/emissions_ges_secteurs.png"
+          enlargeOnClick
+        />
+
+        <p className="texte">Dans ton quotidien, tu peux :</p>
+
         <BulletList
           items={[
-            "Utiliser vélo et marche pour les trajets courts.",
-            "Favoriser train, tram, bus et covoiturage.",
-            "Limiter les vols internes et préférer la visioconférence."
+            "Utiliser vélo et marche pour les trajets courts. Planet&Co loue des vélos dans ce but.",
+            "Favoriser train, tram, bus (C6, 55 et 3 au départ de Centrale Lyon) et covoiturage.",
+            "Préférer le train et la visioconférence pour les réunions professionnelles.",
           ]}
         />
         <ExternalLinkBlock
           resources={[
             {
-              link: "https://agirpourlatransition.ademe.fr/particuliers/deplacements",
-              label: "ADEME - Déplacements",
-              description: "Choisir des mobilités plus sobres en carbone.",
-              emoji: "🚲",
+              link: "https://impactco2.fr/outils/transport",
+              label: "ADEME ",
+              description: "Calcule l'empreinte carbone de tes déplacements et trouve des solutions pour la réduire !",
+              imageSrc: "/assets/logo-ademe.svg",
             },
           ]}
         />
@@ -128,23 +161,31 @@ const DemarchesEcologiques = () => {
       <div id="numerique">
         <h1 className="titre">Numérique : streaming, Wi-Fi et IA</h1>
         <p className="texte">
-          Le numérique n’est pas neutre : un smartphone émet ~85 kg CO₂ à la fabrication, et la vidéo représente 80 % du trafic Internet. L’IA et les requêtes lourdes ont aussi un coût énergétique important.
+          Le numérique n’est pas neutre : un smartphone émet ~85 kg CO₂ à la fabrication, et le streaming représente 80 % du trafic Internet. L’IA et les requêtes lourdes ont aussi un coût énergétique important. Pour réduire ton impact numérique, tu peux :
         </p>
         <BulletList
           items={[
             "Limiter la qualité du streaming (HD ou SD suffisent).",
-            "Privilégier le Wi-Fi au réseau mobile.",
+            "Privilégier le Wi-Fi au réseau mobile (la 4G consomme 23 fois plus d'énergie que le Wi-Fi).",
             "Éteindre sa box la nuit, supprimer fichiers inutiles.",
-            "Prolonger la durée de vie de ses appareils."
+            "Limiter les requêtes IA (une requête textuelle consomme 6x plus qu'une recherche internet classique), surtout les requêtes lourdes (génération d'images et de vidéos).",
+            "Prolonger la durée de vie de ses appareils : bien les entretenir, réparer plutôt que remplacer, acheter d'occasion ou reconditionné.",
           ]}
         />
         <ExternalLinkBlock
           resources={[
             {
-              link: "https://www.greenit.fr/",
-              label: "Green IT",
-              description: "Mesurer et réduire l'empreinte environnementale du numérique.",
-              emoji: "💻",
+              link: "https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculez-empreinte-carbone-usages-numeriques",
+              label: "ADEME",
+              description: "Calcule l'empreinte carbone de tes usages numériques et découvre des conseils pour la réduire",
+              imageSrc: "/assets/logo-ademe.svg",
+            },
+
+            {
+              link: "https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculez-empreinte-carbone-usages-numeriques",
+              label: "Bien choisir ses appareils numériques",
+              description: "pour réduire leur impact",
+              imageSrc: "/assets/logo-ademe.svg",
             },
           ]}
         />
@@ -152,22 +193,10 @@ const DemarchesEcologiques = () => {
 
       <Separateur />
 
-      <ExternalLinkBlock
-        resources={[
-          {
-            link: "https://librairie.ademe.fr/",
-            label: "Librairie ADEME",
-            description: "Toutes les publications de l’ADEME sur la transition écologique.",
-            emoji: "📚",
-          },
-          {
-            link: "https://www.ecologie.gouv.fr/",
-            label: "Ministère de la Transition écologique",
-            description: "Politiques publiques et informations officielles.",
-            emoji: "🏛️",
-          },
-        ]}
-      />
+      <p className="texte"><em><b>Sources :</b> ADEME, Ministère de la Transition écologique, Planet&Co, Matropole Grand Lyon</em></p>
+
+
+
     </div>
   );
 };
