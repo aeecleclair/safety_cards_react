@@ -353,6 +353,12 @@ const Discriminations = () => {
               imageSrc :"/assets/filactions.png",
               label : "Filaction",
               description :"Une association luttant contre le sexisme à Lyon"
+            },
+            {
+              link :"https://www.instagram.com/le_mouv_ecl?igsh=bzV0YWF2ZXNxczRh",
+              imageSrc :"/assets/le_mouv.jpg",
+              label : "Le Mouv'",
+              description :"Association féministe de Centrale Lyon"
             }
           ]}
         />
@@ -614,6 +620,12 @@ const Discriminations = () => {
               imageSrc: "/assets/question_sexualite.png",
               label: "Question sexualité -",
               description: "pour s'informer sur les LGBTphobies"
+            },
+            {
+              link: "https://www.instagram.com/rainbow.ecl?igsh=MWwzd2N5bXk3NGxscQ==",
+              imageSrc: "/assets/rainbow.jpg",
+              label: "Centrale Rainbow",
+              description: "Club LGBTQIA+ de Centrale Lyon"
             }
           ]}
         />
