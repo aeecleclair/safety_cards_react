@@ -50,6 +50,15 @@ const resources_infos = [
   }
 ];
 
+const contraception = [
+  {
+    link: "/contraception",
+    label: "Sexualité et contraception",
+    description: "Quels sont les différents moyens contraceptifs ?",
+    emoji : "🏳️??",
+  }
+];
+
 const IVG = () => {
   return (
     <div className="page">
@@ -80,6 +89,12 @@ const IVG = () => {
         />
 
         <ChiffresGroup chiffres={chiffres} />
+        <p className="texte">
+          Il existe aujourd’hui de nombreuses méthodes de <b>contraception</b> : pilule, préservatif, implant, DIU (stérilet), patch, et bien d’autres. 
+          Chacune a ses avantages et ses spécificités, et le choix dépend de ton mode de vie, de ta santé et de tes préférences. 
+          Si tu souhaites en savoir plus sur la contraception ou la sexualité, tu peux consulter notre page dédiée :
+        </p>
+        <ExternalLinkBlock resources={contraception} />
       </div>
 
       <Separateur />
@@ -118,6 +133,7 @@ const IVG = () => {
           Dans certains centres (notamment les CPEF et les centres IVG hospitaliers), <b>des entretiens de couple ou de soutien psychologique</b> peuvent être proposés, 
           afin d’aider à traverser cette période ensemble, sereinement et sans culpabilité.
         </p>
+        
 
       </div>
 

@@ -185,7 +185,7 @@ const RisquesCirculation = () => {
       <h1 className="titre-page">Accidents de la route</h1>
 
 
-
+      {/*
 
         <Workinprogress/>
 
@@ -194,14 +194,9 @@ const RisquesCirculation = () => {
         subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
         resources={resources_sites}
       />
+      
 
-
-
-
-      {/* Provisioire : page non faite
-
-
-
+        */}
       <Sommaire links={navLinks} />
 
       <div id="probleme">
@@ -209,9 +204,10 @@ const RisquesCirculation = () => {
           <ImageTextPopup
           image="/assets/cartes/roi_trefle.png"
           title="La carte R♣"
-          shortText="TEXTE A FAIRE"
-          longText="TEXTE A FAIRE"
+          shortText="Accidents de la route : les jeunes en première ligne"
+          longText="Sur la route, tout peut basculer en une seconde. L’accident n’est pas seulement une question de vitesse ou d’inattention : c’est souvent une succession de petits relâchements, de décisions banales qui deviennent tragiques. Cette carte illustre ce moment fragile où la vie tient à un fil — un message lu, un regard détourné, un verre de trop. Elle rappelle que conduire, c’est porter sa vie et celle des autres entre ses mains. Derrière chaque statistique, il y a une histoire, un visage, une famille."
           textButton="⤢ Voir la carte"
+          suit="trefle"
         />
         <p className="texte">
           Les jeunes de 18 à 24 ans ne représentent que 8 % de la population française, mais comptent pour 17 % des tués sur la route. Le pic d'accidents mortels intervient entre 6 et 18 mois après l'obtention du permis, avec un pic critique au 3e trimestre. La combinaison vitesse, alcool, drogue et fatigue multiplie les risques.
@@ -384,8 +380,6 @@ const RisquesCirculation = () => {
         <em><b>Sources :</b> ONISR (Rapport 2024), sécurité-routière.gouv.fr, Légifrance, Matmut, Direct Assurance, TF1 Info, France Info, DSR.</em>
       </p>
 
-
-        */}
     </div>
   );
 };
