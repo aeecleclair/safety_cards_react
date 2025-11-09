@@ -36,6 +36,7 @@ const outing = [
     link: "https://www.lgbt-colors.com/outing-definition/",
     label: "Outing : définition et impact social",
     description: "Concept et historique, débats éthiques, sensibilisation",
+    imageSrc: "/assets/lgbt-colors.jpg"
   }
 ];
 
@@ -103,8 +104,8 @@ const Orientation = () => {
         <ImageTextPopup
           image="./assets/cartes/as_coeur.png"
           title="La carte A♥"
-          shortText="TEXTE A FAIRE"
-          longText="TEXTE A FAIRE"
+          shortText="Orientation sexuelle : comprendre et respecter la diversité"
+          longText="L’orientation sexuelle fait partie de l’identité de chacun·e. Elle exprime vers qui l’on ressent de l’attirance, qu’elle soit romantique, affective ou sexuelle. Toutes les orientations sont légitimes et méritent respect et confidentialité."
           textButton="⤢ Agrandir la carte"
           suit="coeur"
         />

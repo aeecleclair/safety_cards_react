@@ -87,7 +87,7 @@ const Deracinement = () => {
         <ImageTextPopup
           image="./assets/cartes/10_carreau.png"
           title="La carte 10♦"
-          shortText="Éloignement, adaptation, reconstruction"
+          shortText="Le déracinement culture : éloignement, adaptation, reconstruction"
           longText="Le déracinement culturel, c’est cette impression d’avoir laissé une partie de soi en changeant de pays. Les repères linguistiques, sociaux, familiaux et académiques se déplacent. Ce n’est pas qu’un choc culturel : c’est aussi une redéfinition de son équilibre et de son identité."
           textButton="⤢ Agrandir la carte"
           suit="carreau"

@@ -40,6 +40,16 @@ const localResources = [
   }
 ];
 
+const resources_infos = [
+
+  {
+    link: "https://ivg.gouv.fr/",
+    imageSrc: "/assets/gouv.png",
+    label: "Site officiel du gouvernement",
+    description: "pour répondre aux questions en lien avec l'IVG."
+  }
+];
+
 const IVG = () => {
   return (
     <div className="page">
@@ -53,9 +63,9 @@ const IVG = () => {
 
         <ImageTextPopup
           image="./assets/cartes/5_coeur.png"
-          title="IVG"
-          shortText=""
-          longText=""
+          title="La carte 5♥"
+          shortText="IVG : comprendre, choisir et se faire accompagner"
+          longText="L’IVG est un acte médical légal, confidentiel, et accessible à toute personne enceinte. Ce choix est personnel, protégé par la loi, et s’accompagne d’un suivi bienveillant et d’une totale discrétion médicale."
           textButton="⤢ Agrandir la carte"
           suit="coeur"
         />
@@ -65,8 +75,8 @@ const IVG = () => {
         </p>
 
         <Quote
-          text="Il est important de savoir que l'IVG est un droit : des structures et des professionnels sont là pour vous informer, vous accompagner et pratiquer l'acte en toute sécurité."
-          author="Source : Ministère de la Santé"
+          text="Le droit à avorter, et à pratiquer l'avortement, est garanti par la loi et permet aux femmes qui souhaitent interrompre leur grossesse de le faire sans risque d'être sanctionnées."
+          author="Source : Site officiel du gouvernement"
         />
 
         <ChiffresGroup chiffres={chiffres} />
@@ -181,11 +191,22 @@ const IVG = () => {
         <BulletList
           items={[
             "Numéro vert national — 0 800 08 11 11 : information anonyme et gratuite (sexualités, contraception, IVG), du lundi au samedi de 9h à 20h.",
-            "Site officiel d'aide et d'information : ivg.gouv.fr (chat et numéros utiles).",
+            "Site officiel d'aide et d'information (chat, numéros et informations utiles) :"
+          ]}
+        />
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={resources_infos}
+        />
+        <BulletList
+          items={[
             "Les consultations sont prises en charge à 100 % par l'Assurance maladie dans le cadre d'une IVG (se renseigner avec la structure)." ,
             "En cas d'urgence (complication, saignement important, douleur intolérable), rends-toi au service des urgences ou appelle le 15.",
           ]}
         />
+
+
 
         <h3 className="soustitre">Aide psychologique et suivi</h3>
         <p className="texte">
