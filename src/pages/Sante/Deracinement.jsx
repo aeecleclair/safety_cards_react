@@ -20,21 +20,14 @@ const navLinks = [
 const chiffresDeracinement = [
   { number: "25%", title: "d'étudiant·e·s internationaux·ales", description: "à Centrale Lyon" },
   { number: "79%", title: "des étudiant·e·s internationaux·ales", description: "souffrent d’isolement selon le collectif POF (Paris-Ouest-France)" },
-  { number: "55,8 %", title: "des étudiant·e·s internationaux·ales", description: "fréquentent les soirées du campus moins d'une fois par trimestre" },
+  { number: "55,8 %", title: "des étudiant·e·s internationaux·ales", description: "fréquentent les soirées centraliennes moins d'une fois par trimestre" },
 ];
 
-const ressourcesInternes = [
-  {
-    link: "https://campus.ec-lyon.fr/l-equipe-des-relations-internationales-3819.kjsp?RH=1460360548247",
-    imageSrc: "/assets/min.png",
-    label: "Équipe Relations internationales – Centrale Lyon",
-    description: "Accompagnement spécifique pour les étudiant·e·s internationaux·ales : logement, démarches, intégration"
-  },
-];
+
 
 const ressourcesExternes = [
   {
-    link: "https://www.nightline.fr/lyon",
+    link: "https://www.nightline.fr/en/lyon",
     imageSrc: "/assets/nightline_logo.png",
     label: "Nightline Lyon",
     description: "Service d’écoute nocturne gratuit et anonyme, en plusieurs langues, pour les étudiant·e·s lyonnais·e·s"
@@ -100,10 +93,10 @@ const Deracinement = () => {
 
         <BulletList
           items={[
-            "Barrière de la langue : peur de ne pas tout comprendre ou d’être mal compris.",
-            "Méthodes d’enseignement différentes : plus d’autonomie, moins de guidage.",
-            "Décalage social et culturel : humour, interactions, rythme de vie.",
-            "Isolement : difficultés à créer du lien ou à trouver sa place dans un nouveau groupe.",
+            <><b>Barrière de la langue :</b> peur de ne pas tout comprendre ou d’être mal compris.</>,
+            <><b>Méthodes d’enseignement différentes :</b> plus d’autonomie, moins de guidage.</>,
+            <><b>Décalage social et culturel :</b> humour, interactions, rythme de vie.</>,
+            <><b>Isolement :</b> difficultés à créer du lien ou à trouver sa place dans un nouveau groupe.</>,
           ]}
         />
 
