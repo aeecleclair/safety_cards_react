@@ -238,6 +238,7 @@ const Vss = () => {
         </>
         }
         imageSrc="/assets/iceberg.jpg"
+        enlargeOnClick
       />
 
       <BulletList

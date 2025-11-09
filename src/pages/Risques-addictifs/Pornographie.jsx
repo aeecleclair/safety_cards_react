@@ -24,14 +24,14 @@ const chiffres = [
 
 const isolement = [
   { link: "/isolement",
-    emoji: "🧍‍♂️",
+    emoji: "🧍",
     label: "Isolement",
     description: "Comprendre et combattre l'isolement social" }
 ];
 
 const depression = [
   { link: "/depression",
-    emoji: "😞",
+    emoji: "🥺",
     label: "Dépression",
     description: "Reconnaître et gérer la dépression" }
 ];

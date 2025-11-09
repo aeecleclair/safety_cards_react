@@ -40,7 +40,7 @@ const étapesAccompagnement = [
   {
     title: "La transition est rétro‑active",
     subtitle:
-      "Parlez du passé avec les bons pronoms ; privilégiez des tournures neutres si besoin.",
+      "Parlez du passé avec les pronoms actuels ; privilégiez des tournures neutres si besoin.",
   },
   {
     title: "Manifestez votre soutien activement",
@@ -111,6 +111,7 @@ const Genre = () => {
 
         <TextImageRight
           imageSrc="/assets/personne-gingenre.jpg"
+          enlargeOnClick
           text={
             <>
               <p className="texte">
@@ -123,6 +124,8 @@ const Genre = () => {
             </>
           }
         />
+
+        <h3 className="sous-titre-2">Des exemples d'identité de genre</h3>
 
               <BulletList
                 items={[
@@ -144,6 +147,11 @@ const Genre = () => {
                   },
                 ]}
               />
+
+              <ChiffresGroup chiffres={chiffresIdentite} />
+
+
+              <h3 className="sous-titre-2">La disphorie de genre</h3>
 
               <p className="texte">
                 La <strong>dysphorie de genre</strong> désigne le malaise ou la souffrance qu'une personne peut ressentir quand
@@ -170,7 +178,6 @@ const Genre = () => {
               <Quote text="Le genre n'est pas ce qu'on voit, mais ce qu'on ressent." />
 
 
-        <ChiffresGroup chiffres={chiffresIdentite} />
 
         <ExternalLinkBlock
           title="Pour en savoir plus"
@@ -313,7 +320,7 @@ const Genre = () => {
               description: "Pour trouver un groupe près de chez toi",
             },
             {
-              link: "https://www.fransgenre.fr/associations",
+              link: "https://www.instagram.com/ost_lyon/",
               imageSrc: "/assets/ost_lyon.jpg",
               label: "OST Lyon",
               description: "Organisation de Solidarité Trans, d'autosupport et de lutte",
@@ -360,6 +367,8 @@ const Genre = () => {
         <ExternalLinkBlock
           resources={resources_Autres_pages}
         />
+
+        <p className="texte">Les formes de discriminations sont multiples. Elles peuvent se matérialiser par une <b>injure homophobe ou transphobe</b>, orale ou écrite, qui est punie d'un <b>an d'emprisonnement et de 45 000 € d'amende</b>. Le <b>mégenrage</b> (le fait de s'adresser à une personne avec des pronoms ou un prénom qui ne correspondent pas à son identité de genre) intentionnel est aussi une forme de discrimination.</p>
 
         <Quote text="Ça ne vous dérange pas d'apprendre un surnom, alors pourquoi pas un pronom ?" />
 

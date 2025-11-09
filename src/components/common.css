@@ -131,6 +131,126 @@
     height: 100%;
 }
 
+/* Zoom d'image */
+.zoomable-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+
+.image-zoom-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.5);
+}
+body.dark-mode .image-zoom-overlay {
+    background: rgba(0,0,0,0.55); 
+}
+
+.image-zoom-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 2px 6px rgba(0,0,0,0.25);
+    cursor: zoom-out;
+    background: #ffffff; 
+}
+
+.image-zoom-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: #ffffff;
+    color: #b22133;
+    font-weight: 600;
+    border: none;
+    padding: 0px 15px;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    z-index: 101;
+}
+body.dark-mode .image-zoom-close {
+    background-color: #2c2c2c;
+    color: #b00000;
+}
+
+.image-zoom-close:hover {
+    background-color: #b22133;
+    color: white;
+}
+body.dark-mode .image-zoom-close:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Hover overlay before opening */
+.zoomable-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; 
+    cursor: pointer;
+}
+.zoomable-wrapper:focus-visible {
+    outline: 3px solid #b22133;
+    border-radius: 14px;
+}
+.zoomable-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: opacity .2s ease;
+    border-radius: inherit;
+.zoomable-overlay { pointer-events: none; }
+}
+.zoomable-wrapper:hover .zoomable-overlay,
+.zoomable-wrapper:focus-visible .zoomable-overlay {
+    opacity: 1;
+}
+.zoomable-button {
+    pointer-events: auto;
+    background: #ffffff;
+    color: #b22133;
+    border: 2px solid #b22133;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.zoomable-button:hover {
+    background: #b22133;
+    color: #ffffff;
+}
+body.dark-mode .zoomable-button {
+    background: #343434;
+    color: #ffffff;
+    border-color: #b00000;
+}
+body.dark-mode .zoomable-button:hover {
+    background: #b00000;
+}
+
 /* Anchor buttons */
 /* Anchor buttons align style with .lien-navbar (submenu look) */
 .anchor-button {

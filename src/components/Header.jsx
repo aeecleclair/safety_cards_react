@@ -19,7 +19,7 @@ const menuItems = [
   {
     title: "💉 Risques addictifs",
     submenu: [
-      { title: "🔞 Addiction à la pornographie", link: "/add_porno", inactive:true},
+      { title: "🔞 Addiction à la pornographie", link: "/add_porno"},
       { title: "📱 Addictions aux écrans & réseaux sociaux", link: "/add_reseaux" },
       { title: "🍺 Consommation d'alcool", link: "/alcool" },
       { title: "🎆 Consommation de stupéfiants", link: "/stup" },
@@ -57,8 +57,8 @@ const menuItems = [
     submenu: [
       { title: "🚗 Accidents de la circulation", link: "/accident", inactive:true },
       { title: "🥬 Alimentation", link: "/aliment"  },
-      { title: "🌿 Démarches écologiques", link: "/ecolo", inactive:true  },
-      { title: "🧘 Détente & relaxation", link: "/detente", inactive:true  },
+      { title: "🌿 Démarches écologiques", link: "/ecolo"  },
+      { title: "🧘 Détente & relaxation", link: "/detente" },
       { title: "💰 Précarité économique", link: "/prec_eco"  },
       { title: "💸 Précarité menstruelle", link: "/prec_mens"  },
       { title: "⛹️ Santé physique & sport", link: "/sport", inactive:true  },
@@ -70,7 +70,7 @@ const menuItems = [
     title: "🧑‍🤝‍🧑 Vie de groupe",
     submenu: [
       { title: "📵 Cyberharcèlement", link: "/cyber_harcel" },
-      { title: "🟰 Discriminations", link: "/discri", inactive:true  },
+      { title: "🟰 Discriminations", link: "/discri" },
       { title: "🙅 Effet de groupe", link: "/groupe" },
       { title: "🩵 Empathie", link: "/empathie" },
       { title: "😠 Harcèlement", link: "/harcel" },

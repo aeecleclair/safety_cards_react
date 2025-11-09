@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./common.css";
 
 export const BulletList = ({ items }) => (
@@ -17,16 +17,109 @@ export const NumberedList = ({ items }) => (
   </ol>
 );
 
-export const TextImageRight = ({ text, imageSrc }) => (
+// Image zoomable en plein écran (overlay) réutilisable
+export const ZoomableImage = ({
+  src,
+  alt = "Illustration",
+  className = "",
+  // Fond par défaut inspiré de la modal des cartes (semi-transparent sombre)
+  overlayBg = "rgba(0,0,0,0.5)",
+}) => {
+  const [open, setOpen] = useState(false);
+
+  // Ferme sur Echap et verrouille le scroll lorsqu'ouvert
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open]);
+
+  const openZoom = () => setOpen(true);
+  const closeZoom = () => setOpen(false);
+  const onKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openZoom();
+    }
+  };
+
+  return (
+    <>
+      <div
+        className={`zoomable-wrapper ${className}`.trim()}
+        onClick={openZoom}
+        tabIndex={0}
+        role="button"
+        aria-label={`Agrandir l'image: ${alt}`}
+        onKeyDown={onKeyDown}
+      >
+        <img src={src} alt={alt} className="zoomable-image" />
+        <div className="zoomable-overlay" aria-hidden="true">
+          <button
+            type="button"
+            className="zoomable-button"
+            onClick={openZoom}
+            tabIndex={-1}
+          >
+            ⤢ Agrandir
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <div
+          className="image-zoom-overlay"
+          style={{ background: overlayBg }}
+          onClick={closeZoom}
+          aria-modal="true"
+          role="dialog"
+        >
+          <button
+            type="button"
+            className="image-zoom-close"
+            aria-label="Fermer l'image agrandie"
+            onClick={closeZoom}
+          >
+            ×
+          </button>
+          <img
+            src={src}
+            alt={alt}
+            className="image-zoom-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </>
+  );
+};
+
+export const TextImageRight = ({ text, imageSrc, alt = "Illustration", enlargeOnClick = false }) => (
   <div className="text-image-container">
     <p className="text-content">{text}</p>
-    <img className="image-content" src={imageSrc} alt="Illustration" />
+    {enlargeOnClick ? (
+      <ZoomableImage src={imageSrc} alt={alt} className="image-content" />
+    ) : (
+      <img className="image-content" src={imageSrc} alt={alt} />
+    )}
   </div>
 );
 
-export const ImageCenter = ({ imageSrc }) => (
+export const ImageCenter = ({ imageSrc, alt = "Illustration", enlargeOnClick = false }) => (
   <div className="image-container-center">
-    <img className="image-content-center" src={imageSrc} alt="Illustration" />
+    {enlargeOnClick ? (
+      <ZoomableImage src={imageSrc} alt={alt} className="image-content-center" />
+    ) : (
+      <img className="image-content-center" src={imageSrc} alt={alt} />
+    )}
   </div>
 );
 
