@@ -142,7 +142,7 @@ const RisquesDomestiques = () => {
         image="./assets/cartes/4_trefle.png"
         title="La carte 4♣"
         shortText="Risques d'incendie et accidents domestiques"
-        longText="Risques d'incendie et accidents domestiques"
+        longText="Chaque geste peut comporter un risque : chuter dans les escaliers, se brûler avec un liquide chaud, s'intoxiquer avec un produit ménager, ou être victime d'une électrocution. L'image illustre en particulier le danger des incendies domestiques. Prévenir, sécuriser et réagir rapidement peut faire toute la différence en cas d'incident domestique."
         textButton="⤢ Agrandir la carte"
         suit="trefle"
       />

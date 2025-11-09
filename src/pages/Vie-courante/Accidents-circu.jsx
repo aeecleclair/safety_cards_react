@@ -142,8 +142,8 @@ const RisquesCirculation = () => {
           <ImageTextPopup
           image="/assets/cartes/roi_trefle.png"
           title="La carte R♣"
-          shortText="TEXTE A FAIRE"
-          longText="TEXTE A FAIRE"
+          shortText="Accidents de la route : les jeunes en première ligne"
+          longText="Sur la route, tout peut basculer en une seconde. L’accident n’est pas seulement une question de vitesse ou d’inattention : c’est souvent une succession de petits relâchements, de décisions banales qui deviennent tragiques. Cette carte illustre ce moment fragile où la vie tient à un fil — un message lu, un regard détourné, un verre de trop. Elle rappelle que conduire, c’est porter sa vie et celle des autres entre ses mains. Derrière chaque statistique, il y a une histoire, un visage, une famille."
           textButton="⤢ Voir la carte"
 
           suit="trefle"

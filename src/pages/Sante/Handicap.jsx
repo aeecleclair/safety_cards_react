@@ -167,7 +167,7 @@ const SituationHandicap = () => (
         image="./assets/cartes/valet_pique.png"
         title="La carte V♠"
         shortText="Situation de handicap : comprendre et aider"
-        longText="Situation de handicap : comprendre et aider"
+        longText="Le handicap peut prendre de nombreuses formes, visibles ou invisibles. Certains handicaps affectent la mobilité, la vue ou l’audition, d’autres concernent la concentration, la mémoire, la santé mentale ou des douleurs chroniques. Ces situations ne se perçoivent pas toujours à l’œil nu, mais elles ont un impact réel sur la vie quotidienne et les études"
         textButton="⤢ Agrandir la carte"
         suit="pique"
       />

@@ -111,7 +111,8 @@ const ressourceDiagnostic = [
   {
     link: "https://www.cybermalveillance.gouv.fr/diagnostic",
     label: "Diagnostiquer une situation",
-    description: "Un outil en ligne pour savoir si ce que tu vis relève de cybermalveillance."
+    description: "Un outil en ligne pour savoir si ce que tu vis relève de cybermalveillance.",
+    imageSrc:"/assets/rep-logo.png"
   }
 ];
 
@@ -157,7 +158,7 @@ const Cyberharcelement = () => {
         image="./assets/cartes/5_carreau.png"
         title="La carte 5&diams;"
         shortText="Cyberharcèlement : Comprendre et agir"
-        longText="Cyberharcèlement : Comprendre et agir"
+        longText="Le cyberharcèlement transforme l’espace numérique en terrain d’attaque. Les messages, moqueries ou rumeurs circulent sans répit, parfois jour et nuit. L’écran, censé relier, devient une barrière de peur et de honte, et un outil d'isolement. Mais derrière chaque message, il y a des moyens d’agir, de signaler, de se faire aider. Le virtuel ne doit jamais effacer le respect."
         textButton="⤢ Agrandir la carte"
         suit="carreau"
       />

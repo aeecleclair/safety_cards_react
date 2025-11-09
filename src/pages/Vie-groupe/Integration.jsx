@@ -137,8 +137,8 @@ const Bizutage = () => {
         <ImageTextPopup
         image="./assets/cartes/dame_trefle.png"
         title="La carte D♣"
-        shortText="Intégration et bizutage : les différencier"
-        longText="Intégration et bizutage : les différencier"
+        shortText="Intégration et bizutage : ce n’est pas parce qu’on rit ensemble que tout est bienveillant"
+        longText="L’intégration, c’est accueillir; le bizutage, c’est soumettre, en faisant le plus souvent semblant d'accueillir. L’un crée du lien, l’autre impose une hiérarchie. Sous couvert d’humour ou de tradition, l’humiliation s’installe parfois sans qu’on ose la nommer. Une vraie intégration ne demande jamais de se taire, d’avoir honte ou de dépasser ses limites : l’amusement ne doit jamais se faire au détriment de la dignité."
         textButton="⤢ Agrandir la carte"
         suit="trefle"
       />

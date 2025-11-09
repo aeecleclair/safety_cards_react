@@ -171,8 +171,8 @@ const Discriminations = () => {
         <ImageTextPopup
           image="./assets/cartes/valet_coeur.png"
           title="La carte V♥"
-          shortText="TEXTE A FAIRE"
-          longText="TEXTE A FAIRE"
+          shortText="Discrimination : briser l’injustice ordinaire"
+          longText="Être victime de discrimination, c’est sentir qu’on ne regarde plus la personne, mais ce qu’elle représente. L'image porte sur le genre, mais l'origine ou encore l'apparence suffisent à changer un regard, à fermer une porte, à effacer une voix. C’est une violence subtile, souvent silencieuse, mais qui use à force de se répéter. Reconnaître la discrimination, c’est déjà commencer à la faire reculer."
           textButton="⤢ Agrandir la carte"
           suit="coeur"
         />
@@ -425,8 +425,8 @@ const Discriminations = () => {
         <ImageTextPopup
           image="./assets/cartes/8_carreau.png"
           title="La carte 8♦"
-          shortText="TEXTE A FAIRE"
-          longText="TEXTE A FAIRE"
+          shortText="Racisme : la couleur n’est pas une frontière"
+          longText="Le racisme installe une distance là où il devrait y avoir rencontre. Par des mots qui se font passer pour de l'humour, par des gestes ou des exclusions, il réduit la richesse d’une identité à un préjugé. Pour la victime, chaque remarque rappelle que sa différence est perçue comme un défaut. Pourtant, aucune couleur, aucune origine n’enlève la valeur d’une personne."
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />
@@ -519,8 +519,8 @@ const Discriminations = () => {
         <ImageTextPopup
           image="./assets/cartes/9_carreau.png"
           title="La carte 9♦"
-          shortText="TEXTE A FAIRE"
-          longText="TEXTE A FAIRE"
+          shortText="LGBTphobies : aimer ou être soi ne devrait jamais blesser"
+          longText="Les discriminations LGBT-phobes enferment celles et ceux qui veulent simplement être eux-mêmes. Des mots banalisés qui sont enfait des insultes, des regards et des jugements peuvent suffire à faire douter de sa place dans le monde. Pourtant, chaque identité, chaque amour mérite d’exister sans peur ni honte. Respecter les différences, c’est reconnaître la liberté d’exister pleinement."
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />

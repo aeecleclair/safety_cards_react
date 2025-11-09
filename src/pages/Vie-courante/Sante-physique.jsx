@@ -207,7 +207,7 @@ const SportSante = () => {
       <h1 className="titre-page">Santé physique & pratique du sport</h1>
 
 
-
+      {/*
         <Workinprogress/>
 
         <h1 className = "titre">Les ressources globales</h1>
@@ -215,7 +215,7 @@ const SportSante = () => {
         subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
         resources={resources_sites}
       />
-
+      */}
 
 
 
@@ -228,9 +228,9 @@ const SportSante = () => {
 
       <ImageTextPopup
         image="./assets/cartes/5_pique.png"
-        title="Activité physique"
-        shortText="TEXTE A FAIRE"
-        longText="TEXTE A FAIRE"
+        title="La carte 5♠"
+        shortText="Le sport et ses bienfaits sur le corps et l'esprit"
+        longText="Pratiquer une activité physique régulière ne se résume pas à brûler des calories ou à améliorer ses performances : c'est aussi nourrir son esprit, renforcer ses liens sociaux et mieux écouter son corps. Chaque pas, chaque mouvement, chaque effort modéré contribue à la santé globale et au plaisir de bouger. Tous les gestes du quotidien, même simples — marcher, monter les escaliers, pédaler — participent à ce chemin vers l'équilibre et le bien-être."
         textButton="⤢ Agrandir la carte"
         suit="pique"
       />
