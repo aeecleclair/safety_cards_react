@@ -1,4 +1,5 @@
-const pagesData = [
+// Français
+const pagesDataFr = [
   {
     category: "🕰️ Vie courante",
     items: [
@@ -72,5 +73,82 @@ const pagesData = [
     ],
   },
 ];
+// Anglais
+const pagesDataEn = [
+  {
+    category: "🕰️ Everyday life",
+    items: [
+      { name: "🥬 Nutrition", path: "/aliment" },
+      { name: "🧘 Relaxation", path: "/detente" },
+      { name: "🛋️ Sedentary lifestyle", path: "/sedentarite" },
+      { name: "⛹️ Physical health & sport", path: "/sport" },
+      { name: "💰 Financial insecurity", path: "/prec_eco" },
+      { name: "💸 Period poverty", path: "/prec_mens" },
+      { name: "🌿 Eco-friendly actions", path: "/ecolo" },
+      { name: "🚗 Road accidents", path: "/accident" },
+      { name: "🏠 Home hazards", path: "/domestique" },
+    ],
+  },
+  {
+    category: "⚕️ Health",
+    items: [
+      { name: "🍽️ Eating disorders", path: "/tca" },
+      { name: "🧑‍🦯 Disability", path: "/handicap" },
+      { name: "💤 Sleep", path: "/sommeil" },
+      { name: "🩸 Endometriosis & menstrual pain", path: "/endom" },
+      { name: "🗣️ Suicide attempt", path: "/suicide" },
+      { name: "🥹 Depression", path: "/depression" },
+      { name: "🦓 Self-harm", path: "/automutil" },
+      { name: "🗺️ Cultural uprooting & international student life", path: "/deracinement" },
+      { name: "😶‍🌫️ Anxiety", path: "/anxiete" },
+    ],
+  },
+  {
+    category: "💉 Addictions",
+    items: [
+      { name: "📱 Screen & social media addiction", path: "/add_reseaux" },
+      { name: "🚬 Tobacco & vaping", path: "/tabac" },
+      { name: "🎆 Drug use", path: "/stup" },
+      { name: "🍺 Alcohol consumption", path: "/alcool" },
+      { name: "🔞 Pornography addiction", path: "/add_porno" },
+    ],
+  },
+  {
+    category: "🧑‍🤝‍🧑 Group life",
+    items: [
+      { name: "😠 Harassment", path: "/harcel" },
+      { name: "🙅 Peer pressure", path: "/groupe" },
+      { name: "🟰 Discrimination", path: "/discri" },
+      { name: "🩵 Empathy", path: "/empathie" },
+      { name: "📵 Cyberbullying", path: "/cyber_harcel" },
+      { name: "🍾 Hazing practices", path: "/inte" },
+      { name: "🫂 VSS", path: "/vss" },
+      { name: "💊 Drug-facilitated assault", path: "/soumission" },
+    ],
+  },
+  {
+    category: "💖 Sexuality & love",
+    items: [
+      { name: "🏳️‍🌈 Sexual orientation", path: "/sex_orient" },
+      { name: "⛔ Revenge porn", path: "/revenge" },
+      { name: "💑 Relationships", path: "/couple" },
+      { name: "😘 Sexuality", path: "/sex" },
+      { name: "⚠️ STIs", path: "/pratiques_sex" },
+      { name: "♀️ Abortion", path: "/ivg" },
+      { name: "✅ Consent", path: "/consent" },
+    ],
+  },
+  {
+    category: "🙆 Self-awareness",
+    items: [
+      { name: "💛 Self-confidence & self-esteem", path: "/conf" },
+      { name: "🧍 Isolation", path: "/isolement" },
+      { name: "🏳️‍⚧️ Gender identity", path: "/genre" },
+    ],
+  },
+];
 
-export default pagesData;
+// Export combiné pour compatibilité existante (FR par défaut)
+export const pagesData = pagesDataFr;
+export const pagesDataByLang = { fr: pagesDataFr, en: pagesDataEn };
+export default pagesDataFr;

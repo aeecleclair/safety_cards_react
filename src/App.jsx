@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./ThemeProvider";
+import { LanguageProvider } from "./LanguageProvider";
 import ScrollToTopButton from "./components/ScrollTop";
 import ScrollToTop from './components/ScrollTopImmediate';
 import Raccourcis from './components/Raccourcis';
@@ -87,6 +88,7 @@ import PlanSoiree from "./pages/mode-soiree/PlanSoiree";
 
 function App() {
   return (
+    <LanguageProvider>
     <ThemeProvider>
     <Router>
       <ScrollToTop />
@@ -182,6 +184,7 @@ function App() {
       <Footer />
     </Router>
     </ThemeProvider>
+    </LanguageProvider>
   );
 }
 
