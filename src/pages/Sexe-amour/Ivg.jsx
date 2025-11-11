@@ -50,12 +50,32 @@ const resources_infos = [
   }
 ];
 
+const resources_questionsex = [
+
+  {
+    link: "https://questionsexualite.fr/choisir-sa-contraception/l-interruption-volontaire-de-grossesse",
+    imageSrc: "/assets/question_sexualite.png",
+    label: "Question Sexualité -",
+    description: "IVG médicamenteuse, IVG instrumentale, effets indésirables, suivi ..."
+  }
+];
+
+const resources_etapes = [
+
+  {
+    link: "https://ivg.gouv.fr/ivg-etape-par-etape",
+    imageSrc: "/assets/gouv.png",
+    label: "Site officiel sur l'IVG -",
+    description: "l'IVG, étape par étape"
+  }
+];
+
 const contraception = [
   {
     link: "/contraception",
     label: "Sexualité et contraception",
     description: "Quels sont les différents moyens contraceptifs ?",
-    emoji : "🏳️??",
+    emoji : "😘",
   }
 ];
 
@@ -95,7 +115,16 @@ const IVG = () => {
           Si tu souhaites en savoir plus sur la contraception ou la sexualité, tu peux consulter notre page dédiée :
         </p>
         <ExternalLinkBlock resources={contraception} />
+        <p className="texte">
+          Tu peux aussi consulter le site de Question Sexualité qui regroupe un grand nombre d'informations en tout genre sur l'IVG, mais sur lequel il y a également des contacts :
+        </p>
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={resources_questionsex}
+        />
       </div>
+
 
       <Separateur />
 
@@ -133,68 +162,50 @@ const IVG = () => {
           Dans certains centres (notamment les CPEF et les centres IVG hospitaliers), <b>des entretiens de couple ou de soutien psychologique</b> peuvent être proposés, 
           afin d’aider à traverser cette période ensemble, sereinement et sans culpabilité.
         </p>
+        <h3 className="sous-titre-2">Le parcours concret d’une IVG</h3>
+        <p className="texte">
+          Le parcours d’une IVG se déroule en plusieurs étapes encadrées par la loi, afin d’assurer un accompagnement médical, psychologique et administratif adapté à chaque personne.
+        </p>
+
+        <ListeNumerotee
+          title=""
+          subtitle="Voici les principales étapes :"
+          items={[
+            {
+              title: "1. Prendre rendez-vous",
+              subtitle: "Avec un médecin, une sage-femme, un centre IVG ou un centre de planification (CPEF). Le rendez-vous permet de confirmer la grossesse, d’évaluer le terme et de présenter les différentes méthodes possibles."
+            },
+            {
+              title: "2. Première consultation médicale",
+              subtitle: "Le ou la professionnelle de santé informe sur les deux méthodes (médicamenteuse ou instrumentale), leurs effets, leurs contraintes et répond à toutes les questions. Un entretien psychosocial est proposé, obligatoire pour les mineur·e·s."
+            },
+            {
+              title: "3. Délai de réflexion (facultatif)",
+              subtitle: "Aucune obligation d’attente n’est imposée, mais la personne peut demander un temps de réflexion avant de confirmer sa décision."
+            },
+            {
+              title: "4. Réalisation de l’IVG",
+              subtitle: "L’IVG se pratique selon la méthode choisie, en ville (médecin, sage-femme) ou à l’hôpital. Elle est encadrée médicalement et peut être accompagnée d’un suivi psychologique si souhaité."
+            },
+            {
+              title: "5. Consultation de suivi",
+              subtitle: "Un rendez-vous de contrôle est proposé après l’intervention pour s’assurer que tout va bien, échanger sur la contraception et le bien-être physique et émotionnel."
+            }
+          ]}
+        />
+
+        <p className="texte">
+          Tu peux aussi retrouver ces étapes avec plus de détails sur le site officiel du gouvernement dédié à ce sujet :
+        </p>
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={resources_etapes}
+        />
         
 
       </div>
 
-      <Separateur />
-
-      {/* CONTACTS LOCAUX */}
-      <div id="contacts">
-        <h2 className="titre">Où se faire accompagner & qui contacter ?</h2>
-
-        <p className="texte">
-          Si tu es à Écully ou à Lyon, il y a des lieux et des contacts locaux qui pratiquent ou orientent vers l'IVG. En cas d'urgence, contacte le numéro national ou rends-toi au service des urgences le plus proche.
-        </p>
-
-        <h3 className="sous-titre-2">Centres hospitaliers et planning familial</h3>
-
-        <ContactCard
-          image="/assets/EdouardHerriot.jpg"
-          title="Hôpital Édouard Herriot (Centre d’orthogénie / IVG)"
-          subtitle="5 place d’Arsonval - 69003 Lyon"
-          phone="04 72 11 03 96"
-          textButton="Prendre RDV / Infos"
-          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=21520"
-
-          bgColor="#ffffff"    //informations facultatives
-          textColor="#0da8e8"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-        />
-
-        <ContactCard
-          image="/assets/CroixRousse.jpg"
-          title="Hôpital de la Croix-Rousse (Centre d’orthogénie / IVG)"
-          subtitle="103 grande rue de la Croix-Rousse - 69004 Lyon"
-          phone="04 72 07 16 63"
-          textButton="Prendre RDV / Infos"
-          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=21520"
-          bgColor="#ffffff"    //informations facultatives
-          textColor="#0da8e8"
-        />
-
-        <ContactCard
-          image="/assets/LyonSud.png"
-          title="Hôpital Lyon Sud (Centre IVG)"
-          subtitle="165 chemin du Grand Revoyet - 69310 Pierre-Bénite"
-          phone="04 78 86 65 70"
-          textButton="Prendre RDV / Infos"
-          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=21520"
-
-          bgColor="#ffffff"    //informations facultatives
-          textColor="#0da8e8"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
-        />
-
-        {/* Clinique / Ecully */}
-        <p className="texte">
-          À Écully plusieurs sages-femmes et cliniques proposent des consultations d'information et des IVG médicamenteuses selon les cas (prendre RDV et vérifier la disponibilité). Des praticiens locaux apparaissent sur Doctolib (ex. sages-femmes proposant IVG médicamenteuse à Écully). En cas de doute, appelle le numéro vert national pour être orienté·e.
-        </p>
-
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={localResources}
-        />
-      </div>
 
       <Separateur />
 
@@ -235,6 +246,64 @@ const IVG = () => {
         <p className="texte">
           L'IVG est prise en charge par l'Assurance maladie (avec le cas échéant le dispositif d'autorisation pour mineures souhaitant garder le secret). Les centres hospitaliers et CPEF (Centres de planification et d'éducation familiale) peuvent informer et orienter gratuitement.
         </p>
+      </div>
+      <Separateur />
+
+      {/* CONTACTS LOCAUX */}
+      <div id="contacts">
+        <h2 className="titre">Où se faire accompagner & qui contacter ?</h2>
+
+        <p className="texte">
+          Si tu es à Écully ou à Lyon, il y a des lieux et des contacts locaux qui pratiquent ou orientent vers l'IVG. En cas d'urgence, contacte le numéro national ou rends-toi au service des urgences le plus proche.
+        </p>
+
+        <h3 className="sous-titre-2">Centres hospitaliers et planning familial</h3>
+
+        <ContactCard
+          image="/assets/EdouardHerriot.jpg"
+          title="Hôpital Édouard Herriot (Centre d’orthogénie / IVG)"
+          subtitle="5 place d’Arsonval - 69003 Lyon"
+          phone="04 72 11 03 96"
+          textButton="Prendre RDV / Infos"
+          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=21520"
+
+          bgColor="#ffffff"    //informations facultatives
+          textColor="#0da8e8"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+        />
+
+        <ContactCard
+          image="/assets/CroixRousse.jpg"
+          title="Hôpital de la Croix-Rousse (Centre d’orthogénie / IVG)"
+          subtitle="103 grande rue de la Croix-Rousse - 69004 Lyon"
+          phone="04 72 07 16 63"
+          textButton="Prendre RDV / Infos"
+          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=24026"
+          bgColor="#ffffff"    //informations facultatives
+          textColor="#0da8e8"
+        />
+
+        <ContactCard
+          image="/assets/LyonSud.png"
+          title="Hôpital Lyon Sud (Centre IVG)"
+          subtitle="165 chemin du Grand Revoyet - 69310 Pierre-Bénite"
+          phone="04 78 86 65 70"
+          textButton="Prendre RDV / Infos"
+          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=36118"
+
+          bgColor="#ffffff"    //informations facultatives
+          textColor="#0da8e8"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+        />
+
+        {/* Clinique / Ecully */}
+        <p className="texte">
+          À Écully plusieurs sages-femmes et cliniques proposent des consultations d'information et des IVG médicamenteuses selon les cas (prendre RDV et vérifier la disponibilité). Des praticiens locaux apparaissent sur Doctolib (ex. sages-femmes proposant IVG médicamenteuse à Écully). En cas de doute, appelle le numéro vert national pour être orienté·e.
+        </p>
+
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={localResources}
+        />
       </div>
 
       <Separateur />

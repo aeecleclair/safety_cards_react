@@ -106,23 +106,23 @@ const itemsSolutions = [
 
 const resources_prevention = [
   {
-    link: "/sommeil",
-    emoji : "??",
-    label: "Sommeil",
-    description: "Interrogations sur le sommeil ? Difficultés pour l'endormissement ?",
-  },
-  {
     link: "/anxiete",
-    emoji : "??",
+    emoji : "😶‍🌫️",
     label: "Anxiété",
-    description: "",
+    description: "Tu te sens anxieux même en pratiquant une activité physique ?",
   },
   {
     link: "/sédentarité",
-    emoji : "??",
+    emoji : "🛋️",
     label: "Sédentarité",
-    description: "",
-  }
+    description: "Qu'est-il possible de faire face à la sédentarité ?"
+  },
+  {
+    link: "/sommeil",
+    emoji : "💤",
+    label: "Sommeil",
+    description: "Interrogations sur le sommeil ? Difficultés pour l'endormissement ?",
+  },
 ]
 
 const sport_VSS = [
