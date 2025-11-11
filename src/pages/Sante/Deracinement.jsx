@@ -32,20 +32,6 @@ const ressourcesInternes = [
   },
 ];
 
-const ressourcesExternes = [
-  {
-    link: "https://www.nightline.fr/lyon",
-    imageSrc: "/assets/nightline_logo.png",
-    label: "Nightline Lyon",
-    description: "Service d’écoute nocturne gratuit et anonyme, en plusieurs langues, pour les étudiant·e·s lyonnais·e·s"
-  },
-  {
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSd6jel4AEzH7YV4GtxotSbAaEFUM9bE2CVWxkBw3ssHqQ_F2g/viewform",
-    imageSrc: "/assets/min.png",
-    label: "Fondation ARHM – Écoute étudiants internationaux Lyon",
-    description: "Soutien psychologique confidentiel et gratuit pour les étudiant·e·s internationaux·ales à Lyon"
-  },
-];
 
 const resources_equipe_inter = [
   {
@@ -53,18 +39,33 @@ const resources_equipe_inter = [
     imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
     label: "Contact équipe des relations internationales",
     description: "Mails, téléphones et endroits où retrouver les membres de l'équipe des relations internationales"
+  },
+  {
+    link: "https://www.instagram.com/bi_centralelyon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    imageSrc: "/assets/insta.jpg",
+    label: "Compte instagram du BI",
+    description: "Pour être au courant des activités qu'ils proposent ou encore prendre contact avec eux !"
   }
+
 ];
 
 const resource_isolement = [
   {
     link: "/isolement",
-    emoji : "??",
+    emoji : "🧍",
     label: "Isolement",
     description: "Que faire face  l'isolement ?",
   }
 ];
 
+const resource_crous = [
+  {
+    link: "https://www.crous-lyon.fr/etudes-internationales/",
+    imageSrc: "/assets/logo_crous.png",
+    label: "Crous Lyon - Etudes internationales",
+    description: "Quelques réponses pour guider dans les premières démarches à effectuer"
+  }
+];
 
 const items_soutient = [
   { title: "Prends le temps d’échanger, de demander comment il·elle vit son arrivée."},
@@ -113,10 +114,28 @@ const Deracinement = () => {
 
         <ChiffresGroup chiffres={chiffresDeracinement} />
 
-        <ExternalLinkBlock
-          title="Besoin d’aide ou d’écoute ?"
-          subtitle="Des dispositifs sont disponibles à Lyon pour accompagner les étudiant·e·s internationaux·ales"
-          resources={ressourcesExternes}
+        <ContactCard
+          image="/assets/nightline_logo.png" 
+          title="Nightline Lyon"
+          subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
+          phone="04 85 30 00 10"
+          email=""
+          hours="Tous les soirs, de 21h à 2h30"
+          textButton="Voir le site web"
+          link="https://www.nightline.fr/lyon"
+        />
+        <ContactCard
+          image="/assets/arhm.jpg"
+          title="Fondation ARHM – Écoute étudiants internationaux Lyon"
+          subtitle="Inscription à un soutien psychologique confidentiel et gratuit pour les étudiant·e·s internationaux·ales à Lyon"
+          phone="07 64 42 92 59"
+          email=""
+          hours=""
+          textButton="Voir le google form pour l'inscription"
+          link="https://docs.google.com/forms/d/e/1FAIpQLSd6jel4AEzH7YV4GtxotSbAaEFUM9bE2CVWxkBw3ssHqQ_F2g/viewform"
+
+          bgColor="#ffffff"    //informations facultatives
+          textColor="#fa9020"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
         />
       </div>
 
@@ -148,7 +167,7 @@ const Deracinement = () => {
 
         <ExternalLinkBlock
           title=""
-          subtitle="Si tu as des questions, tu peux également contacter l'équipe des relations internationales :"
+          subtitle="Si tu as des questions, tu peux également contacter l'équipe des relations internationales ou encore des élèves membres du BI (Bureau International) :"
           resources={resources_equipe_inter}
         />
 
@@ -163,16 +182,13 @@ const Deracinement = () => {
         />
 
         <p className="texte">
-          En tant qu’étudiant·e international·e, vous bénéficiez également de droits spécifiques et d’un cadre d’accueil :
+          En tant qu’étudiant·e international·e, vous bénéficiez également de droits spécifiques et d’un cadre d’accueil : vous pouvez accéder aux aides sociales du CROUS, aux bourses (ex. bourses du gouvernement français via Campus France) ; des dispositifs d’accueil sont en place pour faciliter votre installation en France.
         </p>
-        <BulletList
-          items={[
-            "Vous devez disposer d’un visa étudiant ou d’un titre de séjour adapté pour étudier en France.",
-            "Selon votre nationalité et votre formation, des frais d’inscription majorés (« droits différenciés ») peuvent s’appliquer ; veillez à vous renseigner dès votre admission.",
-            "Vous pouvez accéder aux aides sociales du CROUS, aux bourses (ex. bourses du gouvernement français via Campus France) ; des dispositifs d’accueil sont en place pour faciliter votre installation en France."
-          ]}
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={resource_crous}
         />
-
         <p className="texte">
           N’hésitez pas à prendre contact rapidement avec l’infirmerie ou l’équipe relations internationales : mieux vaut intervenir tôt. Même des difficultés « légères » (logement, langue, réseau social) peuvent se transformer en sentiment fort de déracinement si elles ne sont pas accompagnées.
         </p>
