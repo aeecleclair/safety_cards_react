@@ -1,40 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import pagesData from "./pagesData";
+import { pagesDataByLang } from "./pagesData";
+import { useLanguage } from "../LanguageProvider";
 import "./randompage.css";
 
 const RandomPageSelector = () => {
   const [randomPage, setRandomPage] = useState(null);
   const navigate = useNavigate();
+  const { lang } = useLanguage();
+  const data = pagesDataByLang[lang] || pagesDataByLang.fr;
 
-  // Fonction pour choisir une page aléatoire
+  // Reset la page sélectionnée si on change de langue pour éviter mismatch
+  useEffect(() => { setRandomPage(null); }, [lang]);
+
   const selectRandomPage = () => {
-    const randomCategoryIndex = Math.floor(Math.random() * pagesData.length);
-    const randomCategory = pagesData[randomCategoryIndex];
-
+    const randomCategoryIndex = Math.floor(Math.random() * data.length);
+    const randomCategory = data[randomCategoryIndex];
     const randomItemIndex = Math.floor(Math.random() * randomCategory.items.length);
     const randomItem = randomCategory.items[randomItemIndex];
-
     setRandomPage({ ...randomItem, category: randomCategory.category });
   };
 
   return (
     <div className="random-container">
       {!randomPage ? (
-        // Affichage initial avec le bouton centré
         <button onClick={selectRandomPage} className="random-button">
-          🎲 Découvre une thématique
+          {lang === 'en' ? '🎲 Discover a topic' : '🎲 Découvre une thématique'}
         </button>
       ) : (
-        // Affichage après sélection
         <div className="random-card">
-          <button onClick={selectRandomPage} className="refresh-button">
-          ⟳
+          <button onClick={selectRandomPage} className="refresh-button" aria-label={lang === 'en' ? 'Pick another random topic' : 'Choisir une autre thématique aléatoire'}>
+            ⟳
           </button>
           <h1 className="random-card-titre">{randomPage.name}</h1>
-          <p className="category-text">Catégorie : {randomPage.category}</p>
+          <p className="category-text">{lang === 'en' ? 'Category:' : 'Catégorie :'} {randomPage.category}</p>
           <button onClick={() => navigate(randomPage.path)} className="random-button">
-            Découvrir la page
+            {lang === 'en' ? 'Open page' : 'Découvrir la page'}
           </button>
         </div>
       )}

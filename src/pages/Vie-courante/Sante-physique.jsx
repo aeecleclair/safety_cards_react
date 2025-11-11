@@ -153,69 +153,11 @@ const data = [
 
 
 
-/* Provisoire : page non faite */
-import Workinprogress from "../../components/WorkInProgress";
-
-const resources_sites = [
-
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
-  },
-];
-
-
-
 
 const SportSante = () => {
   return (
     <div className="page">
-      <h1 className="titre-page">Santé physique & pratique du sport</h1>
 
-
-      {/*
-        <Workinprogress/>
-
-        <h1 className = "titre">Les ressources globales</h1>
-      <ExternalLinkBlock
-        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
-        resources={resources_sites}
-      />
-      */}
 
 
 
@@ -243,9 +185,9 @@ const SportSante = () => {
         Ses bénéfices sont multiples :
       </p>
       <BulletList items={[
-        "Physiques : amélioration cardiovasculaire, renforcement musculaire et osseux, maintien d'un poids équilibré",
-        "Mentaux : réduction du stress et de l'anxiété, meilleure concentration, qualité de sommeil améliorée",
-        "Sociaux : intégration à la vie de campus, développement de l'esprit d'équipe, moments conviviaux via les associations étudiantes"
+        <><b>Physiques</b> : amélioration cardiovasculaire, renforcement musculaire et osseux, maintien d'un poids équilibré</>,
+        <><b>Mentaux</b> : réduction du stress et de l'anxiété, meilleure concentration, qualité de sommeil améliorée</>,
+        <><b>Sociaux</b> : intégration à la vie de campus, développement de l'esprit d'équipe, moments conviviaux via les associations étudiantes</>
       ]} />
 
       <p className="texte">

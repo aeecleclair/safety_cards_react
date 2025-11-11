@@ -62,7 +62,7 @@ const contraception = [
 const IVG = () => {
   return (
     <div className="page">
-      <h1 className="titre-page">IVG : Interruption Volontaire de Grossesse</h1>
+      <h1 className="titre-page">Interruption Volontaire de Grossesse</h1>
 
       <Sommaire links={navLinks} />
 
@@ -103,23 +103,23 @@ const IVG = () => {
       <div id="deroulement">
         <h2 className="titre">Comment se déroule une IVG ?</h2>
 
-        <h3 className="soustitre">Les deux grandes méthodes</h3>
+        <h3 className="sous-titre-2">Les deux grandes méthodes</h3>
         <BulletList
           items={[
-            "IVG médicamenteuse : prise de médicaments sous contrôle médical. Possible en ville (médecin, sage-femme) ou à l'hôpital selon le cas, et jusqu'à la fin de la 7ᵉ semaine de grossesse.",
-            "IVG instrumentale (ou chirurgicale) : intervention réalisée en milieu hospitalier ou clinique, utilisée après la 7ᵉ semaine et jusqu'au délai légal.",
+            <><b>IVG médicamenteuse :</b> prise de médicaments sous contrôle médical. Possible en ville (médecin, sage-femme) ou à l'hôpital selon le cas, et jusqu'à la fin de la 7ᵉ semaine de grossesse.</>,
+            <><b>IVG instrumentale (ou chirurgicale) :</b> intervention réalisée en milieu hospitalier ou clinique, utilisée après la 7ᵉ semaine et jusqu'au délai légal.</>,
           ]}
         />
 
-        <h3 className="soustitre">Qu'en est-il des mineur·e·s ?</h3>
+        <h3 className="sous-titre-2">Qu'en est-il des mineur·e·s ?</h3>
         <p className="texte">
           Les mineur·e·s peuvent demander une IVG sans avoir besoin d'une autorisation parentale : dans ce cas, il faut cependant être accompagnées d'une personne majeure de leur choix (accompagnement obligatoire), et la confidentialité est protégée par la loi. Les professionnels doivent proposer une information adaptée et l'accès aux soins se fait gratuitement via l'Assurance maladie. 
         </p>
 
-        <h3 className="soustitre">Une décision qui ne concerne pas toujours une seule personne</h3>
+        <h3 className="sous-titre-2">Accompagner l’IVG : la place du partenaire</h3>
 
         <p className="texte">
-          Une grossesse ne concerne pas uniquement la personne enceinte. Dans de nombreuses situations, <b>la décision d'interrompre ou de poursuivre une grossesse se vit à deux</b>. 
+          Une grossesse ne concerne pas uniquement la personne enceinte.
           L'IVG reste bien sûr un <b>droit individuel</b> et la personne enceinte est <b>la seule</b> à pouvoir en décider, mais il est essentiel de rappeler que le <b>soutien du ou de la partenaire</b> peut être précieux.
         </p>
 
@@ -147,7 +147,7 @@ const IVG = () => {
           Si tu es à Écully ou à Lyon, il y a des lieux et des contacts locaux qui pratiquent ou orientent vers l'IVG. En cas d'urgence, contacte le numéro national ou rends-toi au service des urgences le plus proche.
         </p>
 
-        <h3 className="soustitre">Centres hospitaliers et planning familial</h3>
+        <h3 className="sous-titre-2">Centres hospitaliers et planning familial</h3>
 
         <ContactCard
           image="/assets/EdouardHerriot.jpg"
@@ -168,6 +168,8 @@ const IVG = () => {
           phone="04 72 07 16 63"
           textButton="Prendre RDV / Infos"
           link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=21520"
+          bgColor="#ffffff"    //informations facultatives
+          textColor="#0da8e8"
         />
 
         <ContactCard
@@ -224,12 +226,12 @@ const IVG = () => {
 
 
 
-        <h3 className="soustitre">Aide psychologique et suivi</h3>
+        <h3 className="sous-titre-2">Aide psychologique et suivi</h3>
         <p className="texte">
           Les équipes qui réalisent des IVG proposent aussi un accompagnement médical et psychosocial. Si tu ressens le besoin de parler avant ou après l'IVG, demande un rendez-vous de suivi (infirmière, sage-femme, psychologue, assistante sociale).
         </p>
 
-        <h3 className="soustitre">Déroulement administratif et gratuité</h3>
+        <h3 className="sous-titre-2">Déroulement administratif et gratuité</h3>
         <p className="texte">
           L'IVG est prise en charge par l'Assurance maladie (avec le cas échéant le dispositif d'autorisation pour mineures souhaitant garder le secret). Les centres hospitaliers et CPEF (Centres de planification et d'éducation familiale) peuvent informer et orienter gratuitement.
         </p>

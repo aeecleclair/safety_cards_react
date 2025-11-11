@@ -11,111 +11,39 @@ import Separateur from "../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../components/Chiffres";
 import RandomPageSelector from "../components/Randompage";
 import PreviewBanner from "../components/PreviewBanner";
-
-
-
-const resources_contacts = [
-  {
-    link: "/astreinte",
-    emoji: "🌙",
-    label: "Astreinte"
-  },
-  {
-    link: "https://campus.ec-lyon.fr/mission-egalite-femmes-hommes-12949.kjsp?RH=1460128042806",
-    emoji: "📞",
-    label: "Cellule d'écoute",
-
-  },
-  {
-    link: "https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990",
-    emoji: "🏥",
-    label: "Infirmerie",
-  },
-  {
-    link: "/pole-handicap",
-    emoji: "♿",
-    label: "Pôle handicap",
-  },
-  {
-    link: "/service-social",
-    emoji: "🤝",
-    label: "Service social",
-  },
-  {
-    link: "/vie-etudiante",
-    emoji: "🎓",
-    label: "Vie étudiante",
-  },
-];
-
-
-const resources_sites = [
-
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
-  },
-];
-
+import { useLanguage } from "../LanguageProvider";
+import fr from "./Home/fr";
+import en from "./Home/en";
 
 const Home = () => {
+  const { lang } = useLanguage();
+  const dict = { fr, en };
+  const t = dict[lang] || fr;
+
+  const resources_contacts = t.contacts;
+  const resources_sites = t.sites;
   return (
     <div className = "page">
 
 
+  <h1 className="titre-page">{t.titleWelcomePrefix} <span style={{ color: "#b22133" }}>{t.titleBrand}</span></h1>
 
-      <h1 className="titre-page">Bienvenue sur <span style={{ color: "#b22133" }}>safety cards</span></h1>
-
-      <p className="texte">Tu trouveras sur ce site des informations et ressources concernant une liste non exhaustive de thématiques relatives aux risques de la vie étudiante. <br/> Si tu es à la recherche d'une information précise, accèdes-y en naviguant via le menu. Si tu as ton jeu Safety Cards en main, tu peux commencer à le parcourir et flasher le code QR présent en haut à droite de la carte lorsque la thématique t'intéresse. Si tu ne sais pas ce que tu cherches, tu peux lancer une recherche aléatoire ci-dessous !
-      <br/> <em>Seulement l'essentiel des informations est donné pour chaque thématique. N'hésite pas à accéder aux sites spécialisés via les liens présents sur chaque page !  </em></p>
+  <p className="texte">{t.introLine1} <br/> {t.introLine2}
+  <br/> <em>{t.introEmphasis}</em></p>
 
       
-      <h1 className = "titre">Découvre une thématique aléatoire</h1>
+      <h1 className = "titre">{t.randomTitle}</h1>
       <RandomPageSelector />
 
-      <h1 className = "titre">Contacts de Centrale Lyon</h1>
+      <h1 className = "titre">{t.contactsTitle}</h1>
       <ExternalLinkBlock
-        subtitle="Voici tous les contacts utiles pour les étudiants"
+        subtitle={t.contactsSubtitle}
         resources={resources_contacts}
       />
 
-      <h1 className = "titre">Les ressources globales</h1>
+      <h1 className = "titre">{t.resourcesTitle}</h1>
       <ExternalLinkBlock
-        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
+        subtitle={t.resourcesSubtitle}
         resources={resources_sites}
       />
     

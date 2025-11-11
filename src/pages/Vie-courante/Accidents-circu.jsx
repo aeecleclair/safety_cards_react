@@ -16,7 +16,6 @@ const navLinks = [
   { label: "Le problème", target: "probleme" },
   { label: "Prévention", target: "prevention" },
   { label: "Stages", target: "stages" },
-  { label: "Ressources", target: "ressources" }
 ];
 
 const chiffresCirculation = [
@@ -28,16 +27,16 @@ const chiffresCirculation = [
 ];
 
 const causesAccidents = [
-  "Vitesse excessive (1ère cause d'accident chez les jeunes)",
-  "Conduite sous alcool ou stupéfiants",
-  "Fatigue et somnolence (surtout la nuit et sur autoroute)",
-  "Utilisation du téléphone au volant",
-  "Manque d'expérience ou surestimation de ses capacités",
-  "Refus de priorité, non-respect du Code de la route",
-  "Conditions météorologiques (pluie, verglas)",
-  "Mauvais état des routes secondaires",
-  "Défaut d'équipement ou absence de ceinture de sécurité",
-  "Conduite de deux-roues sans protection adaptée"
+  <><b>Vitesse excessive</b> (1ère cause d'accident chez les jeunes)</>,
+  <><b>Conduite sous alcool ou stupéfiants</b></>,
+  <><b>Fatigue et somnolence</b> (surtout la nuit et sur autoroute)</>,
+  <><b>Utilisation du téléphone au volant</b></>,
+  <><b>Manque d'expérience ou surestimation de ses capacités</b></>,
+  <><b>Refus de priorité, non-respect du Code de la route</b></>,
+  <><b>Conditions météorologiques</b> (pluie, verglas)</>,
+  <><b>Mauvais état des routes secondaires</b></>,
+  <><b>Défaut d'équipement ou absence de ceinture de sécurité</b></>,
+  <><b>Conduite de deux-roues sans protection adaptée</b></>
 ];
 
 const conseilsPrevention = [
@@ -78,12 +77,7 @@ const ressourcesUtiles = [
     imageSrc: "/assets/min.png",
     description: "Les vidéos et affiches officielles de la sécurité routière"
   },
-  {
-    link: "https://www.youtube.com/watch?v=cIybaOWeJlU",
-    label: "Vidéo - Au revoir Maman",
-    imageSrc: "/assets/Youtube.jpg",
-    description: "Une campagne choc sur les conséquences de l'alcool au volant"
-  },
+
   {
     link: "https://www.facebook.com/SamLeConducteurEngage",
     label: "Sam, le conducteur désigné",
@@ -95,7 +89,14 @@ const ressourcesUtiles = [
     label: "Chiffres 2024 – Sécurité routière",
     imageSrc: "/assets/observatoire_secu_routiere.png",
     description: "Bilan complet des accidents en France"
-  }
+  },
+
+    {
+    link: "https://www.youtube.com/watch?v=cIybaOWeJlU",
+    label: "Vidéo - Au revoir Maman",
+    imageSrc: "/assets/Youtube.jpg",
+    description: "Une campagne choc sur les conséquences de l'alcool au volant"
+  },
 ];
 
 const stagesUtiles = [
@@ -128,56 +129,6 @@ const stagesUtiles = [
 
 
 
-/* Provisoire : page non faite */
-
-import Workinprogress from "../../components/WorkInProgress";
-
-const resources_sites = [
-
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
-  },
-];
-
-
-
-
-
 
 const RisquesCirculation = () => {
   return (
@@ -185,18 +136,7 @@ const RisquesCirculation = () => {
       <h1 className="titre-page">Accidents de la route</h1>
 
 
-      {/*
 
-        <Workinprogress/>
-
-        <h1 className = "titre">Les ressources globales</h1>
-      <ExternalLinkBlock
-        subtitle="Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques"
-        resources={resources_sites}
-      />
-      
-
-        */}
       <Sommaire links={navLinks} />
 
       <div id="probleme">
@@ -207,6 +147,7 @@ const RisquesCirculation = () => {
           shortText="Accidents de la route : les jeunes en première ligne"
           longText="Sur la route, tout peut basculer en une seconde. L’accident n’est pas seulement une question de vitesse ou d’inattention : c’est souvent une succession de petits relâchements, de décisions banales qui deviennent tragiques. Cette carte illustre ce moment fragile où la vie tient à un fil — un message lu, un regard détourné, un verre de trop. Elle rappelle que conduire, c’est porter sa vie et celle des autres entre ses mains. Derrière chaque statistique, il y a une histoire, un visage, une famille."
           textButton="⤢ Voir la carte"
+
           suit="trefle"
         />
         <p className="texte">
@@ -241,14 +182,15 @@ const RisquesCirculation = () => {
           items={conseilsPrevention.map(({ title }) => ({ title }))}
         />
 
-        <div className="developpement-conseils">
-          <h3>{conseilsPrevention[0].title}</h3>
-          <p>
+          <h2 className="sous-titre-2">{conseilsPrevention[0].title}</h2>
+          <p className="texte">
             Conduire sous l'emprise de l'alcool ou de drogues est extrêmement dangereux : cela altère les réflexes, la perception du danger et ralentit le temps de réaction.
           </p>
-          <div className="legal-link-box">
+      <p className="texte">
             Risques légaux : Le seuil légal pour les jeunes conducteurs (permis probatoire) est de 0,2 g/L d'alcool dans le sang. En cas de dépassement, sanctions sévères : retrait de 6 points minimum, amende pouvant aller jusqu'à 4 500 €, suspension voire annulation du permis. 
-            <br />
+          </p>
+
+
             <ExternalLinkBlock
               resources={[
                 {
@@ -258,25 +200,24 @@ const RisquesCirculation = () => {
                 }
               ]}
             />
-          </div>
 
-          <h3>{conseilsPrevention[1].title}</h3>
-          <p>
+          <h2 className="sous-titre-2">{conseilsPrevention[1].title}</h2>
+          <p className="texte">
             La fatigue est une cause majeure d'accidents, en particulier lors des trajets de nuit ou prolongés sans pause. La vigilance diminue fortement, augmentant le risque d'endormissement au volant.
           </p>
-          <div className="legal-link-box">
+          <p className="texte">
             Risques légaux : En cas d'accident dû à une somnolence avérée, la responsabilité du conducteur peut être engagée, pouvant entraîner sanctions pénales et civile.
             <br />
             Conseil pratique : faites une pause toutes les 2 heures au minimum.
-          </div>
-
-          <h3>{conseilsPrevention[2].title}</h3>
-          <p>
+          </p>
+          <h2 className="sous-titre-2">{conseilsPrevention[2].title}</h2>
+          <p className="texte">
             Utiliser un téléphone en conduisant multiplie par 3 le risque d'accident, car cela détourne l'attention et réduit la capacité de réaction.
           </p>
-          <div className="legal-link-box">
+          <p className="texte">
             Risques légaux : L'utilisation du téléphone au volant est interdite et sanctionnée par une amende de 135 € et un retrait de 3 points.
-            <br />
+            </p>
+            
             <ExternalLinkBlock
               resources={[
                 {
@@ -286,49 +227,51 @@ const RisquesCirculation = () => {
                 }
               ]}
             />
-          </div>
 
-          <h3>{conseilsPrevention[3].title}</h3>
-          <p>
+          <h2 className="sous-titre-2">{conseilsPrevention[3].title}</h2>
+          <p className="texte">
             Le respect des limitations de vitesse est crucial car la vitesse excessive est la première cause de mortalité routière, notamment chez les jeunes conducteurs.
           </p>
-          <div className="legal-link-box">
+
+          <p className="texte">
             Risques légaux : Dépasser la vitesse autorisée expose à des amendes, retraits de points, voire suspension du permis en cas de dépassement important.
-            <br />
-            <ExternalLinkBlock
-              resources={[
-                {
+          </p>
+          <ExternalLinkBlock
+            resources={[
+              {
                   link: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048533039",
                   imageSrc: "/assets/min.png",
                   label: "Article R413-14 du Code de la route"
                 }
               ]}
             />
-          </div>
 
-          <h3>{conseilsPrevention[4].title}</h3>
-          <p>
+          <h2 className="sous-titre-2">{conseilsPrevention[4].title}</h2>
+          <p className="texte">
             La fatigue réduit la vigilance, augmente le temps de réaction et le risque d'endormissement au volant. 29 % des jeunes conducteurs ont déjà failli s'endormir.
           </p>
-          <div className="legal-link-box">
-            Risques légaux : En cas d'accident grave dû à la fatigue, la responsabilité peut être engagée. Il est important d'écouter son corps et de s'arrêter au besoin.
-          </div>
 
-          <h3>{conseilsPrevention[5].title}</h3>
-          <p>
+          <p className="texte">
+            Risques légaux : En cas d'accident grave dû à la fatigue, la responsabilité peut être engagée. Il est important d'écouter son corps et de s'arrêter au besoin.
+          </p>
+
+
+          <h2 className="sous-titre-2">{conseilsPrevention[5].title}</h2>
+          <p className="texte">
             En situation de groupe, les comportements à risque se multiplient souvent par mimétisme. Il est important de garder son jugement et savoir dire non aux excès.
           </p>
-          <div className="legal-link-box">
-            Risques légaux : Les infractions commises sous pression peuvent toujours entraîner des sanctions pénales et civiles.
-          </div>
 
-          <h3>{conseilsPrevention[6].title}</h3>
-          <p>
+          <p className="texte">
+            Risques légaux : Les infractions commises sous pression peuvent toujours entraîner des sanctions pénales et civiles.
+          </p>
+
+          <h2 className="sous-titre-2">{conseilsPrevention[6].title}</h2>
+          <p className="texte">
             Le port de la ceinture de sécurité réduit fortement le risque de blessures graves en cas d'accident.
           </p>
-          <div className="legal-link-box">
+          <p className="texte">
             Risques légaux : Ne pas porter sa ceinture est sanctionné par une amende de 135 € et un retrait de 3 points.
-            <br />
+          </p>
             <ExternalLinkBlock
               resources={[
                 {
@@ -338,8 +281,7 @@ const RisquesCirculation = () => {
                 }
               ]}
             />
-          </div>
-        </div>
+
       </div>
 
       <Separateur />
@@ -374,9 +316,9 @@ const RisquesCirculation = () => {
         />
       </div>
 
+      <Separateur />
 
-
-      <p className="texte source">
+      <p className="texte">
         <em><b>Sources :</b> ONISR (Rapport 2024), sécurité-routière.gouv.fr, Légifrance, Matmut, Direct Assurance, TF1 Info, France Info, DSR.</em>
       </p>
 
