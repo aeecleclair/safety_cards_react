@@ -105,7 +105,7 @@ const accompagnementInfos = [
 const autre_page = [
   {
     link: "/consent",
-    emoji : "??",
+    emoji : "✅",
     label: "Consentement",
     description: "Qu'est-ce que le consentement ?"
   }
@@ -114,7 +114,7 @@ const autre_page = [
 const page_ivg = [
   {
     link : "/ivg",
-    emoji : "??",
+    emoji : "♀️",
     label : "IVG",
     description : "Tout savoir sur l'interruption volontaire de grossesse : démarches, accompagnement, droits."
   }
@@ -123,7 +123,7 @@ const page_ivg = [
 const page_ist = [
   {
     link : "/pratiques_sex",
-    emoji : "??",
+    emoji : "⚠️",
     label : "IST",
     description : "Qu'est-ce qu'une IST ? Comment se faire dépister ?"
   }
@@ -132,9 +132,15 @@ const page_ist = [
 const page_porno = [
   {
     link : "/add_porno",
-    emoji : "??",
+    emoji : "🔞",
     label : "Addiction à la pornographie",
     description : "Quels sont les risques de la pornographie ?"
+  },
+  {
+    link : "/sex_orient",
+    emoji : "🏳️‍🌈",
+    label : "Orientation sexuelle",
+    description : "Quels sont les différentes orientations sexuelles ?"
   }
 ];
 

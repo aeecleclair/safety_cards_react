@@ -43,8 +43,8 @@ const outing = [
 const ressources_sex = [
   {
     link: "https://www.questionsexualite.fr/",
-    label: "QuestionSexualite.fr",
-    description: "Site d'information sur la sexualité et l'orientation sexuelle",
+    label: "QuestionSexualite -",
+    description: "site d'information sur la sexualité et l'orientation sexuelle",
     imageSrc: "/assets/question_sexualite.png",
   },
   {
@@ -52,6 +52,12 @@ const ressources_sex = [
     label: "Sexualité",
     description: "La page pour en apprendre davantage sur la contraception et le sexualité",
     emoji:"😘"
+  },
+  {
+    link: "https://www.cestcommeca.net/",
+    label: "C'est comme ça -",
+    description: "pour des informations sur l'orientation amoureuse, sexuelle et d'identité de genre",
+    imageSrc: "/assets/cestcommeca.png"
   }
 ];
 

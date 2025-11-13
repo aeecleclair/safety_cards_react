@@ -72,6 +72,12 @@ const conseilsPrevention = [
 
 const ressourcesUtiles = [
   {
+    link: "https://www.securite-routiere.gouv.fr/",
+    label: "Sécurité routière",
+    imageSrc: "/assets/gouv.png",
+    description: "Informations officielles sur le code de la route, le permis et la sécurité routière"
+  },
+  {
     link: "https://www.securite-routiere.gouv.fr/les-medias/nos-campagnes-de-communication",
     label: "Campagnes de prévention",
     imageSrc: "/assets/min.png",
@@ -90,13 +96,6 @@ const ressourcesUtiles = [
     imageSrc: "/assets/observatoire_secu_routiere.png",
     description: "Bilan complet des accidents en France"
   },
-
-    {
-    link: "https://www.youtube.com/watch?v=cIybaOWeJlU",
-    label: "Vidéo - Au revoir Maman",
-    imageSrc: "/assets/Youtube.jpg",
-    description: "Une campagne choc sur les conséquences de l'alcool au volant"
-  },
 ];
 
 const stagesUtiles = [
@@ -113,12 +112,6 @@ const stagesUtiles = [
     description: "Obligatoire dans certains cas (décision judiciaire, composition pénale). Ne permet pas de récupérer des points."
   },
   {
-    link: "https://www.actua-formation.fr/solutions/formation/conduite-hivernale/?gad_source=1&gad_campaignid=22226608776&gclid=Cj0KCQjw9O_BBhCUARIsAHQMjS59Nn2Eq0SOANFzjgxiyiWKGFDUfv36vGYJ58ZGwrGX7zcLIvoDfJcaAlkJEALw_wcB",
-    label: "Stage de conduite sur neige et glace",
-    imageSrc: "/assets/Actua_formation.jpg",
-    description: "Formation pratique pour apprendre à maîtriser son véhicule en conditions hivernales."
-  },
-  {
     link: "https://gsformation.fr/parcours-alcool-au-volant-avec-karting/#",
     label: "Atelier de sensibilisation à l'alcool au volant",
     imageSrc: "/assets/Gs_formation.png",
@@ -126,9 +119,41 @@ const stagesUtiles = [
   }
 ];
 
+const ressources_alcool = [
+  {
+    link: "/alcool",
+    emoji : "🍺",
+    label: "Consommation d'alcool",
+    description: "Tu te questionnes quant à ta consommation d'alcool ?",
+  },
+];
 
+const resources_drogue = [
+  {
+    link: "/stup",
+    emoji : "🎆",
+    label: "Consommation de stupéfiants",
+    description: "Pour connaître les conséquences de la prise de stupéfiants.",
+  },
+]
 
+const resources_sommeil = [
+  {
+    link: "/sommeil",
+    emoji : "💤",
+    label: "Sommeil",
+    description: "Pour mieux comprendre les enjeux derrière un bon sommeil.",
+  },
+]
 
+const resources_groupe = [
+  {
+    link: "/groupe",
+    emoji : "🙅",
+    label: "Effet de groupe",
+    description: "Qu'est-ce que l'effet de groupe ?",
+  },
+]
 
 const RisquesCirculation = () => {
   return (
@@ -160,11 +185,20 @@ const RisquesCirculation = () => {
         <ChiffresGroup chiffres={chiffresCirculation} />
       </div>
 
-        <div id="ressources">
+      <div id="ressources">
         <ExternalLinkBlock
           title="Pour aller plus loin"
           subtitle="Des contenus pour mieux comprendre et sensibiliser"
           resources={ressourcesUtiles}
+        />
+        <p className="texte">
+          Pour voir les conséquences de la consommation d'alcool au volant, tu peux regarder cette vidéo, une campagne choc faite par la sécurité routière :
+        </p>
+        <YouTubeVideo url="https://www.youtube.com/watch?v=cIybaOWeJlU" />
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={ressources_alcool}
         />
       </div>
       <Separateur />
@@ -186,12 +220,21 @@ const RisquesCirculation = () => {
           <p className="texte">
             Conduire sous l'emprise de l'alcool ou de drogues est extrêmement dangereux : cela altère les réflexes, la perception du danger et ralentit le temps de réaction.
           </p>
-      <p className="texte">
-            Risques légaux : Le seuil légal pour les jeunes conducteurs (permis probatoire) est de 0,2 g/L d'alcool dans le sang. En cas de dépassement, sanctions sévères : retrait de 6 points minimum, amende pouvant aller jusqu'à 4 500 €, suspension voire annulation du permis. 
+          <p className="texte">
+            En France, la limite légale d’alcool dans le sang dépend de l’expérience du conducteur. 
+            Pour les <b>jeunes conducteurs en permis probatoire</b> (moins de 3 ans de permis, ou 2 ans en cas de conduite accompagnée), 
+            le seuil est fixé à <b>0,2 g/L</b> — soit l’équivalent d’un seul verre. 
+            Pour les <b>conducteurs expérimentés</b>, la limite est de <b>0,5 g/L</b>, soit environ deux verres standards. 
+            Au-delà de ces seuils, les réflexes diminuent, la vision se trouble et le risque d’accident est multiplié par 8. 
+            Les sanctions sont sévères : <b>retrait de 6 points</b>, <b>amende pouvant atteindre 4 500 €</b>, <b>suspension ou annulation du permis</b>, 
+            et dans les cas les plus graves, <b>peine de prison</b> en cas d’accident corporel. 
+            L’alcool reste l’un des premiers facteurs d’accidents mortels, particulièrement chez les jeunes.
           </p>
 
 
-            <ExternalLinkBlock
+
+
+          <ExternalLinkBlock
               resources={[
                 {
                   link: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038954545/2023-05-01",
@@ -199,17 +242,27 @@ const RisquesCirculation = () => {
                   label: "Article R234-1 du Code de la route"
                 }
               ]}
-            />
+          />
+          <ExternalLinkBlock
+            title=""
+            subtitle=""
+            resources={resources_drogue}
+          />
 
           <h2 className="sous-titre-2">{conseilsPrevention[1].title}</h2>
           <p className="texte">
-            La fatigue est une cause majeure d'accidents, en particulier lors des trajets de nuit ou prolongés sans pause. La vigilance diminue fortement, augmentant le risque d'endormissement au volant.
+            La fatigue est une cause majeure d'accidents, en particulier lors des trajets de nuit ou prolongés sans pause. La vigilance diminue fortement, augmentant le risque d'endormissement au volant. Elle augmente ainsi le temps de réaction. 29 % des jeunes conducteurs ont déjà failli s'endormir.
           </p>
           <p className="texte">
             Risques légaux : En cas d'accident dû à une somnolence avérée, la responsabilité du conducteur peut être engagée, pouvant entraîner sanctions pénales et civile.
             <br />
             Conseil pratique : faites une pause toutes les 2 heures au minimum.
           </p>
+          <ExternalLinkBlock
+            title=""
+            subtitle=""
+            resources={resources_sommeil}
+          />
           <h2 className="sous-titre-2">{conseilsPrevention[2].title}</h2>
           <p className="texte">
             Utiliser un téléphone en conduisant multiplie par 3 le risque d'accident, car cela détourne l'attention et réduit la capacité de réaction.
@@ -246,16 +299,6 @@ const RisquesCirculation = () => {
               ]}
             />
 
-          <h2 className="sous-titre-2">{conseilsPrevention[4].title}</h2>
-          <p className="texte">
-            La fatigue réduit la vigilance, augmente le temps de réaction et le risque d'endormissement au volant. 29 % des jeunes conducteurs ont déjà failli s'endormir.
-          </p>
-
-          <p className="texte">
-            Risques légaux : En cas d'accident grave dû à la fatigue, la responsabilité peut être engagée. Il est important d'écouter son corps et de s'arrêter au besoin.
-          </p>
-
-
           <h2 className="sous-titre-2">{conseilsPrevention[5].title}</h2>
           <p className="texte">
             En situation de groupe, les comportements à risque se multiplient souvent par mimétisme. Il est important de garder son jugement et savoir dire non aux excès.
@@ -264,6 +307,12 @@ const RisquesCirculation = () => {
           <p className="texte">
             Risques légaux : Les infractions commises sous pression peuvent toujours entraîner des sanctions pénales et civiles.
           </p>
+
+          <ExternalLinkBlock
+            title=""
+            subtitle=""
+            resources={resources_groupe}
+          />
 
           <h2 className="sous-titre-2">{conseilsPrevention[6].title}</h2>
           <p className="texte">
