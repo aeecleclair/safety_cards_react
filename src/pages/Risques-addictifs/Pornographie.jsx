@@ -115,6 +115,7 @@ const Pornographie = () => {
       <div id="quoi">
         <h1 className="titre">Qu'est-ce que c'est ?</h1>
       </div>
+      <p className="mise-avant">L’addiction à la pornographie correspond à un <b>usage compulsif et difficile à contrôler</b> des contenus sexuels explicites qui finit par avoir des conséquences négatives sur le quotidien. Elle peut entraîner des attentes irréalistes, une altération des relations et une <b>perte de bien-être émotionnel</b>.</p>
       <ImageTextPopup
         image="./assets/cartes/6_coeur.png"
         title="La carte 6♥"
@@ -194,7 +195,8 @@ const Pornographie = () => {
       <div id="solutions">
         <h1 className="titre">Quelles solutions ?</h1>
       </div>
-
+      
+      <p className="mise-avant">L’addiction à la pornographie reste un sujet tabou, souvent <b>associé à la honte</b>, ce qui freine la reconnaissance et l’accès à l’aide. Pourtant, des <b>stratégies simples</b> — comme observer ses habitudes, limiter l’accès, remplacer par d’autres activités ou en parler à un professionnel — peuvent réellement <b>aider à reprendre le contrôle</b>.</p>
       <h2 className="sous-titre-2">Une addiction encore taboue</h2>
       <p className="texte">L'addiction à la pornographie reste un <b>sujet tabou</b>, souvent entouré de honte et de culpabilité. En France, elle n'est même <b>pas encore reconnue</b> comme telle et la recherche sur le sujet reste encore limitée. Pourtant, il est important de reconnaître que c'est un problème réel qui peut affecter la santé mentale et les relations. Des témoignages existent déjà et permettent de visibiliser cette addiction et de parler ouvertement lors de groupe de soutien.</p>
 

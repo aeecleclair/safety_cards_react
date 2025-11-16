@@ -30,16 +30,16 @@ const DemarchesEcologiques = () => {
           image="/assets/cartes/3_carreau.png"
           title="La carte 3♦"
           shortText="Découvre toutes les manières de réduire ton impact sur l'environnement."
-          longText="Même à l'échelle individuelle, il existe de nombreuses manières concrètes de réduire son impact. Tu peux jouer sur ton alimentation, la gestion de tes déchets ou sur ton usage d'internet. Ces petits gestes comptent, même s'ils doivent aussi s'accompagner d'actions collectives et politiques pour être vraiment efficaces."
+          longText="Même à l'échelle individuelle, il existe de nombreuses manières concrètes de réduire son impact environnemental. Tu peux jouer sur ton alimentation, la gestion de tes déchets ou sur ton usage d'internet. Ces petits gestes comptent, même s'ils doivent aussi s'accompagner d'actions collectives et politiques pour être vraiment efficaces."
           textButton="⤢ Agrandir la carte"
           suit="carreau"
         />
 
         <p className="texte">
-          Depuis 2024, le tri à la source des déchets verts et alimentaires est obligatoire. Ils doivent être séparés pour être compostés ou méthanisés. En résidence universitaire, renseignez-vous sur les composteurs collectifs disponibles.
+          Depuis 2024, le <b>tri à la source des déchets verts et alimentaires</b> est obligatoire. Ils doivent être séparés pour être compostés ou méthanisés. En résidence universitaire, renseignez-vous sur les composteurs collectifs disponibles.
         </p>
         <p className="texte">
-          Au sein du campus de Centrale Lyon, tu disposes de nombreux points de tri délectif. Des poubelles bleues dont aussi à dispoition dans les salles de classe afin de trier le papier.        
+          Au sein du campus de Centrale Lyon, tu disposes de nombreux points de tri sélectif. Des poubelles bleues sont aussi à disposition dans les salles de classe afin de trier le papier.        
           </p>
 
         <p className="texte"> Le tri des déchets est aussi réalisé en résidences (Comparat et Adoma). Des bacs à compost sont aussi mis à disposition des habitant·es, au bas des résidences de Comparat.</p>
@@ -70,7 +70,7 @@ const DemarchesEcologiques = () => {
       <div id="jardin">
         <h1 className="titre">Jardins partagés et serres</h1>
         <p className="texte">
-          À Centrale Lyon, les jardins partagés sont situés au bas des bâtiments T et X. En y participant, tu peux découvrir le jardinage ou transmettre tes connaissances, le tout dans la bonne humeur ! C'est aussi l'occasion d'accéder à des formations mensuelles pour apprendre et partager de bons moments.
+          À Centrale Lyon, les jardins partagés sont situés au bas des bâtiments T et X. En y participant, tu peux <b>découvrir le jardinage ou transmettre tes connaissances</b>, le tout dans la bonne humeur ! C'est aussi l'occasion d'accéder à des formations mensuelles pour apprendre et partager de bons moments.
         </p>
         <p className="texte">
           Les jardins partagés sont gérés par l'association <b>Planet&Co</b>.

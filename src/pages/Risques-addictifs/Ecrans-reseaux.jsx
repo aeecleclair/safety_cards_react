@@ -94,8 +94,7 @@ const Ecrans_reseaux = () => {
       <h1 className="titre">Addiction aux écrans</h1>
     </div>
       <div id="resume-conseils">
-      <p className="mise-avant">Les écrans sont conçus pour <b>capter ton attention</b> et, à forte dose, peuvent entraîner des problèmes de <b>sommeil</b>, de <b>concentration</b>, de <b>stress</b> ou encore d'<b>isolement social</b>.</p>
-      <p className="mise-avant">Pour éviter d'en être dépendant, tu peux essayer de trouver un équilibre en <b>fixant des limites</b>, en <b>coupant les notifications</b> et en privilégiant des <b>activités sans écran</b>.</p>
+      <p className="mise-avant">Les écrans sont conçus pour <b>capter ton attention</b> et, à forte dose, peuvent entraîner des problèmes de <b>sommeil</b>, de <b>concentration</b>, de <b>stress</b> ou encore d'<b>isolement social</b>. Pour éviter d'en être dépendant, tu peux essayer de trouver un équilibre en <b>fixant des limites</b>, en <b>coupant les notifications</b> et en privilégiant des <b>activités sans écran</b>.</p>
       </div>
       <ImageTextPopup
           image="./assets/cartes/6_pique.png"
@@ -107,8 +106,8 @@ const Ecrans_reseaux = () => {
         />
          
           
-      <p className="sous-titre-2"> Les effets des écrans</p>
-      <p className="texte"> Les écrans captent ton attention, souvent sans que tu t'en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
+      <p className="sous-titre-2">Les effets des écrans</p>
+      <p className="texte">Les écrans captent ton attention, souvent sans que tu t'en rendes compte. Scroll infini, notifications constantes, vidéos en boucle… Tout est fait pour te <b>garder connecté</b> le plus longtemps possible. Le problème des écrans, c'est qu'ils peuvent facilement t'aspirer loin de la vraie vie et te <b>déconnecter du réel</b>. Les meilleurs moments ne se vivent pas à travers un écran !</p>
 
       
 
@@ -193,8 +192,7 @@ const Ecrans_reseaux = () => {
       <h1 className="titre">Addiction aux réseaux sociaux</h1>
 
       <div id="resume-conseils">
-      <p className="mise-avant">Les réseaux sociaux créent une dépendance avec <b>likes</b>, <b>scroll infini</b> et <b>comparaisons constantes</b>.</p>
-      <p className="mise-avant">À forte dose, ils <b>nuisent à l'estime de soi et au bien-être mental</b>.</p>
+      <p className="mise-avant">Les réseaux sociaux créent une dépendance avec <b>likes</b>, <b>scroll infini</b> et <b>comparaisons constantes</b>. À forte dose, ils <b>nuisent à l'estime de soi et au bien-être mental</b>.</p>
       </div>
 
 <p className="sous-titre-2">Les dangers des réseaux sociaux</p>

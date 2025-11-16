@@ -75,7 +75,7 @@ const PrecariteMens = () => {
 
       <div id="comprendre">
         <h1 className="titre">Qu'est-ce que la précarité menstruelle ?</h1>
-        
+        <p className="mise-avant">La précarité menstruelle concerne de nombreuses personnes qui ont des <b>difficultés à accéder à des protections hygiéniques adaptées à leurs règles</b>.</p>
               <ImageTextPopup
                 image="./assets/cartes/2_coeur.png"
                 title="La carte 2❤"
@@ -85,7 +85,7 @@ const PrecariteMens = () => {
                 suit="coeur"
               />
         
-        <p className="texte">La précarité menstruelle désigne la difficulté ou l'impossibilité d'accéder à des protections hygiéniques de première nécessité (serviettes, tampons, culottes de règles, coupe) et aux informations et lieux adaptés pour vivre ses règles dans la dignité.</p>
+        <p className="texte">La précarité menstruelle désigne la <b>difficulté ou l'impossibilité</b> d'accéder à des protections hygiéniques de première nécessité (serviettes, tampons, culottes de règles, coupe) et aux informations et lieux adaptés pour vivre ses règles dans la dignité.</p>
       </div>
 
       <ChiffresGroup
@@ -105,6 +105,7 @@ const PrecariteMens = () => {
       <h1 className="titre">Risques pour la santé</h1>
       </div>
       
+      <p className="mise-avant">Changer trop rarement de protection menstruelle augmente le <b>risque d’infections</b>, <b>d’irritations</b> et, dans certains cas, de <b>syndrome du choc toxique</b>. Ce dernier est une infection rare mais grave favorisée par un port prolongé de tampons ou de coupes, et nécessite une consultation médicale urgente en cas de symptômes.</p>
       <h2 className="sous-titre-2">Changer régulièrement de protection</h2>
       <p className="texte">Quelle que soit la protection utilisée, il est essentiel de ne pas la garder trop longtemps. Au-delà de l'inconfort et des risques de fuites, un <b>port prolongé augmente les risques d'infections</b> (mycoses, irritations, syndrome du choc toxique avec les tampons notamment). Pour des raisons économiques, certaines personnes prolongent l'usage d'une protection au-delà des recommandations, mais cela peut mettre leur santé en danger.</p>
       
@@ -120,6 +121,7 @@ const PrecariteMens = () => {
       <div id="agir">
         <h1 className="titre">Les dispositifs d'aide</h1>
         
+        <p className="mise-avant">Plusieurs dispositifs existent pour <b>faciliter l'accès aux protections menstruelles</b> et <b>sensibiliser</b> sur la précarité menstruelle.</p>
       <h2 className="sous-titre-2">Les protections existantes</h2>
       <BulletList items={[
   "Serviettes hygiéniques jetables : pratiques et accessibles, mais à usage unique et générant beaucoup de déchets",

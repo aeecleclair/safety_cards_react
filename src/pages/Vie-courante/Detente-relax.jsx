@@ -142,11 +142,13 @@ const Detente_relax = () => {
     <div className="page">
       <h1 className="titre-page">Détente & relaxation</h1>
       <Sommaire links={navLinks} />
-
+  
 
       <div id="pourquoi">
         <h1 className="titre">Pourquoi vouloir se détendre ?</h1>
       </div>
+
+      <p className="mise-avant">Se détendre permet de relâcher les tensions du quotidien et de <b>préserver son équilibre physique, mental et émotionnel</b>.</p>
             <ImageTextPopup
         image="./assets/cartes/10_pique.png"
         title="La carte 10♠"

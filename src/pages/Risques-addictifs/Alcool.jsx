@@ -119,8 +119,7 @@ const Alcool = () => {
         </div>
 
       <div id="resume-conseils">
-      <p className="mise-avant"><b>Boire comporte des risques</b>, pour ta santé et celle des autres. </p>
-      <p className="mise-avant">Légalement, tu restes <b>responsable</b> de tes actes, même sous l'influence de l'alcool.</p>
+      <p className="mise-avant"><b>Boire comporte des risques</b>, pour ta santé et celle des autres. Légalement, tu restes <b>responsable</b> de tes actes, même sous l'influence de l'alcool.</p>
       </div>
         
       <ImageTextPopup
@@ -195,9 +194,7 @@ const Alcool = () => {
 
     
       <div id="resume-conseils2">
-      <p className="mise-avant"><b>Ne pas oublier de boire de l'eau et s'alimenter</b> pour atténuer les effets de l'alcool. </p>
-      <p className="mise-avant">Boire beaucoup d'alcool te met en danger et favorise les <b>comportements à risque</b>. </p>
-      <p className="mise-avant">Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un·e <b>professionnel·le de santé</b>.</p>
+      <p className="mise-avant"><b>N'oublie pas de boire de l'eau et de t'alimenter</b> pour atténuer les effets de l'alcool. Boire beaucoup d'alcool te met en danger et favorise les <b>comportements à risque</b>. Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un·e <b>professionnel·le de santé</b>.</p>
       </div>
 
 
@@ -312,8 +309,7 @@ const Alcool = () => {
       </div>
 
       <div id="resume-conseils3">
-      <p className="mise-avant">Tu remarques que quelqu'un a du mal à se tenir debout, à parler clairement ou se met en danger ? <b>Reste avec lui/elle et appelle à l'aide si nécessaire.</b></p>
-      <p className="mise-avant">Si tu as le moindre soupçon sur la consommation d'alcool d'un proche, ne lui tourne pas le dos et <b>propose-lui ton aide de manière bienveillante.</b></p>
+      <p className="mise-avant">Tu remarques que quelqu'un a du mal à se tenir debout, à parler clairement ou se met en danger ? <b>Reste avec lui/elle et appelle à l'aide si nécessaire.</b> Si tu as le moindre soupçon sur la consommation d'alcool d'un proche, ne lui tourne pas le dos et <b>propose-lui ton aide de manière bienveillante.</b></p>
       </div>
 
       <h1 className="sous-titre-2">Comment agir face à une personne très alcoolisée ?</h1>

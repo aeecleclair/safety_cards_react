@@ -79,8 +79,6 @@ const resources4 = [
   ];
 
 
-
-
 const resources_NCII = [
   {
     imageSrc: "/assets/Stop-NCII.png",
@@ -119,8 +117,7 @@ const Revenge_porn = () => {
       </div>
 
       <div id="resume-conseils">
-      <p className="mise-avant">Le revenge porn désigne la <b>diffusion d'images intimes sans consentement</b>, souvent après une rupture ou pour faire du chantage, et constitue un <b>délit puni de 2 ans de prison et 60 000 € d'amende</b>.</p>
-      <p className="mise-avant">Cela touche particulièrement les jeunes, avec des risques de diffusion massive en ligne, d'humiliation et de chantage, d'où l'importance de <b>réagir vite</b>, <b>se protéger</b> et <b>demander de l'aide</b>.  </p>
+      <p className="mise-avant">Le revenge porn désigne la <b>diffusion d'images intimes sans consentement</b>, souvent après une rupture ou pour faire du chantage, et constitue un <b>délit puni de 2 ans de prison et 60 000 € d'amende</b>. Cela touche particulièrement les jeunes, avec des risques de diffusion massive en ligne, d'humiliation et de chantage, d'où l'importance de <b>réagir vite</b>, <b>se protéger</b> et <b>demander de l'aide</b>.  </p>
       </div>
 
       <ImageTextPopup
@@ -196,8 +193,7 @@ Le revenge porn peut aussi servir de <b>moyen de chantage</b> (<i>sextorsion</i>
       </div>
 
         <div id="resume-conseils">
-          <p className="mise-avant">En cas de revenge porn : <b>parle à des proches ou à des pros</b>, <b>garde les preuves</b>, <b>signale et demande le retrait des contenus</b>, et n'oublie pas que tu peux <b>porte plainte</b> pour atteinte à la vie privée.</p>
-          <p className="mise-avant">Il existe des <b>plateformes et des associations</b> pouvant t'aider à <b>faire supprimer des réseaux sociaux les contenus</b> qui ont été diffusés à ton insu.</p>
+          <p className="mise-avant">En cas de revenge porn : <b>parle à des proches ou à des pros</b>, <b>garde les preuves</b>, <b>signale et demande le retrait des contenus</b>, et n'oublie pas que tu peux <b>porte plainte</b> pour atteinte à la vie privée. Il existe des <b>plateformes et des associations</b> pouvant t'aider à <b>faire supprimer des réseaux sociaux les contenus</b> qui ont été diffusés à ton insu.</p>
            </div>
 
       <h2 className="sous-titre-2">Comment réagir ?</h2>
