@@ -121,6 +121,22 @@ const sommeil = [
   }
 ];
 
+const psy = [
+  {
+    link: "https://monsoutienpsy.ameli.fr/recherche-psychologue",
+    
+    label: "Mon soutien psy ",
+    description: "12 séances gratuites avec un psychologue",
+  },
+  {
+    link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/",
+    imageSrc:"/assets/logo_UDL.png",
+    label: "Annuaire",
+    description: "de l'Université de Lyon : accompagnement, suivi, urgences...",
+  },
+];
+
+
 const Detente_relax = () => {
   return (
     <div className="page">
@@ -374,9 +390,8 @@ const Detente_relax = () => {
         <><b>Soutien social</b> : parler avec des ami·e·s ou proches. Le partage aide à relativiser et à se sentir moins seul·e.</>
       ]} />
 
-      <h2 className="sous-titre-2">Quand consulter ?</h2>
-      <p className="texte">Si le stress <b>impacte durablement la vie quotidienne, le sommeil, le travail ou les relations</b>, il est important de consulter : médecin généraliste, psychiatre ou psychologue. Des traitements (thérapies, parfois médicaments) peuvent aider.</p>
-
+      <h2 className="sous-titre-2">J'ai besoin d'en parler</h2>
+      <p className="texte">Parfois, il est utile de <b>parler à quelqu'un</b> de ce que l'on ressent. Voici quelques ressources d'écoute et de soutien :</p>
         <ContactCard
           image="/assets/fsj.png"
           title="Fil Santé Jeunes"
@@ -397,7 +412,9 @@ const Detente_relax = () => {
           link="https://www.nightline.fr/lyon"
         />
 
-      
+      <h2 className="sous-titre-2">Quand consulter un professionnel ?</h2>
+      <p className="texte">Si le stress <b>impacte durablement la vie quotidienne, le sommeil, le travail ou les relations</b>, il est important de consulter : médecin généraliste, psychiatre ou psychologue. Des traitements (thérapies, parfois médicaments) peuvent aider.</p>
+      <ExternalLinkBlock resources={psy} />
       
       <Separateur />
       

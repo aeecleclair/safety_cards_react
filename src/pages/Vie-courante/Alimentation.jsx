@@ -81,6 +81,15 @@ const resources4 = [
   }
 ];
 
+const stress = [
+  {
+    link: "/detente",
+    emoji: "🧘",
+    label: "Détente & relaxation",
+    description: "Ton alimentation peut jouer un rôle important dans la gestion du stress",
+  }
+];
+
 const data = [
   { number: "30%", title: "des étudiant·e·s", description: "avouent sauter au moins un repas par jour" },
   { number: "50%", title: "des jeunes", description: "consomment trop de produits sucrés chaque semaine" },
@@ -104,8 +113,7 @@ const Alimentation = () => {
       </div>
 
       <div id="resume-conseils">
-        <p className="mise-avant">Sauter des repas, manger de manière déséquilibrée ou grignoter régulièrement peut <b>nuire à ton énergie</b> et ton <b>bien-être</b>.</p>
-        <p className="mise-avant">Une alimentation <b>régulière et variée</b> est essentielle pour rester en forme et prévenir la fatigue.</p>
+        <p className="mise-avant">Sauter des repas, manger de manière déséquilibrée ou grignoter régulièrement peut <b>nuire à ton énergie</b> et ton <b>bien-être</b>. Une alimentation <b>régulière et variée</b> est essentielle pour rester en forme et prévenir la fatigue.</p>
       </div>
 
       <ImageTextPopup
@@ -160,9 +168,22 @@ const Alimentation = () => {
         <p className="mise-avant"><b>Manger équilibré ne signifie pas manger parfaitement</b>. Il est important de se faire plaisir de temps en temps et de ne pas culpabiliser si tu manges un aliment moins sain. Ton équilibre alimentaire se construit sur le long terme et avec des habitudes durables.</p>
         </div>
         
+        <h1 className="sous-titre-2">Pourquoi manger plus sain ?</h1>
+        <p className="texte">Adopter une alimentation équilibrée, c'est avant tout <b>prendre soin de son corps et de son esprit</b>. Une bonne alimentation t'aide à :</p>
+        <BulletList
+          items={[
+            "Maintenir un niveau d'énergie stable tout au long de la journée",
+            "Améliorer ta concentration et ta mémoire",
+            "Renforcer ton système immunitaire",
+            "Gérer ton stress et ton humeur",
+          ]}
+        />
+
+        <p className="texte">Une mauvaise alimentation peut par exemple contribuer à la fatigue, au stress ou à des troubles de l'humeur.</p>
+        <ExternalLinkBlock resources={stress} />
+
 
         <h1 className="sous-titre-2">Comment manger équilibré ?</h1>
-
 
         <p className="texte">Adopter une alimentation équilibrée ne veut pas dire se priver, mais apprendre à <b>mieux organiser ses repas</b> et <b>écouter son corps</b>. Voici quelques pistes :</p>
 

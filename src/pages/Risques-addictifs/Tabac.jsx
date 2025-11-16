@@ -24,6 +24,21 @@ const conseils = [
   { subtitle: "Ne compense pas par le vapotage excessif : la nicotine reste addictive" },
 ];
 
+const conseilsChicha = [
+  { subtitle: "Limite la fréquence d’utilisation" },
+  { subtitle: "Évite les sessions prolongées" },
+  { subtitle: "Ne partage pas l’embout pour prévenir la transmission d’infections" },
+  { subtitle: "Informe-toi sur les dangers réels liés à l’inhalation de fumée, même si elle passe par de l’eau" },
+];
+
+const resourcesChicha = [
+  {
+    link: "https://sante-pratique-paris.fr/prevention-a-savoir/fumer-chicha-dangereux-cigarette-sante/",
+    imageSrc: "/assets/ameli.png",
+    label: "Santé Pratique Paris",
+    description: "Comparaison des risques entre chicha et cigarette",
+  },
+];
 
 const data2 = [
   { number: "32%", title: "des lycéens", description: "ont déjà fumé une cigarette" },
@@ -110,7 +125,9 @@ const Tabac = () => {
       <h2 className="sous-titre-2">Quels sont les effets de la cigarette électronique ?</h2>
       <p className="texte">La <b>cigarette électronique (ou vapoteuse)</b> chauffe un liquide mélangé à des arômes et du propylène glycol pour produire une vapeur inhalée imitant la fumée d'une cigarette. Les <b>SEDEN</b> (système de délivrance de la nicotine) sont des vapoteuses contenant un peu de <b>nicotine</b> tandis que les <b>SEDESN</b> (systèmes de délivrance sans nicotine) <b>n'en contiennent pas.</b></p>
 
-      <p className="texte">Les SEDEN contiennent moins de nicotine que dans la cigarette classique : elles servent souvent de <b>transition aux fumeurs</b> pour réduire leur consommation de tabac. Ces deux formes de cigarettes électroniques sont composées de substances chimiques dont les effets à long terme sont encore mal connus. Les risques suivants sont néanmoins à prendre en compte :</p>
+      <p className="texte">Les SEDEN contiennent moins de nicotine que dans la cigarette classique : elles servent souvent de <b>transition aux fumeurs</b> pour réduire leur consommation de tabac. Ces deux formes de cigarettes électroniques sont composées de substances chimiques dont les effets à long terme sont encore mal connus.</p>
+      
+      <p className="texte"> Les <b>risques</b> suivants sont néanmoins à prendre en compte :</p>
       <BulletList items={[
     "Dépendance à la nicotine (sauf e-liquide sans nicotine)",
     "Irritations de la gorge et de la bouche",
@@ -120,6 +137,17 @@ const Tabac = () => {
 
 
       <ChiffresGroup chiffres={data2} />
+
+
+      <h2 className="sous-titre-2">La chicha</h2>
+      <p className="texte">L’utilisation de la chicha est souvent perçue comme moins dangereuse que la cigarette, notamment en raison du goût sucré du tabac aromatisé et du caractère convivial des sessions. Pourtant, cette perception est trompeuse. Il est important de rappeler que la fumée de chicha contient des substances toxiques similaires, voire parfois en plus grande quantité, que celles de la cigarette.</p>
+      <p className="texte">La chicha est une autre forme de consommation de tabac, souvent perçue comme moins nocive. Cependant, fumer la chicha expose à des risques similaires, voire plus élevés, que la cigarette classique :</p>
+      <BulletList items={[
+    "Inhalation de substances toxiques et cancérigènes",
+    "Risque de maladies respiratoires et cardiovasculaires",
+    "Dépendance à la nicotine",
+    "Partage du tuyau pouvant transmettre des infections"
+]} />
 
       <h2 className="sous-titre-2">Le tabagisme passif</h2>
       <p className="texte">Fumer ou vapoter à proximité d'autres personnes <b>les expose aux substances toxiques</b>. Le tabagisme passif est responsable de nombreux problèmes de santé, notamment chez les enfants et les personnes vulnérables :</p>
@@ -181,10 +209,15 @@ const Tabac = () => {
 ]} />
 
       
-      <h2 className="sous-titre-2">Je souhaite réduire ma consommation</h2>
-      <p className="texte">Réduire sa consommation de tabac ou de vapotage est un premier pas important. Voici quelques conseils pour t'aider dans cette démarche :</p>
-      <ListeNumerotee title="Réduire les risques liés au tabac et au vapotage" items={conseils} />
+      <h2 className="sous-titre-2">Je souhaite réduire les risques liés à ma consommation</h2>
+      <p className="texte">Réduire sa <b>consommation de tabac ou de vapotage</b> est un premier pas important vers une meilleure santé. Voici quelques conseils pour t'aider dans cette démarche :</p>
+      <ListeNumerotee title="Conseils pour consommer moins" items={conseils} />
 
+      <p className="texte">Pour réduire les <b>risques liés à la chicha</b>, tu peux suivre les conseils suivants :</p>
+      <ListeNumerotee title='Conseils pour réduire les risques liés à la chicha' items={conseilsChicha} />
+      <ExternalLinkBlock resources={resourcesChicha} />
+
+      <h2 className="sous-titre-2">Je souhaite arrêter de fumer ou de vapoter</h2>
       <p className="texte"><b>Arrêter seul·e est difficile</b>, mais des ressources existent pour accompagner ta démarche. Tu n'as pas à avoir honte d'en parler : chaque tentative compte et augmente tes chances de succès.</p>
 
       <p className="texte">Si tu souhaites arrêter de fumer, ne pas te sentir seul·e est important. Le <b>Mois sans tabac</b> est une campagne nationale qui a lieu chaque année en novembre. Elle vise à encourager les fumeurs à arrêter de fumer en leur proposant des ressources et un accompagnement. C'est l'occasion pour rencontrer et participer à des activités de soutien avec des personnes dans la même situation. </p>
@@ -217,7 +250,6 @@ const Tabac = () => {
       <h2 className="sous-titre-2">Je ne souhaite pas arrêter de fumer</h2>
       <p className="texte">Si tu n'envisages pas d'arrêter de fumer pour le moment, essaye tout de même de <b>respecter ces principes</b> :</p>
       <BulletList items={principes} />
-
 
       <Separateur />
 
