@@ -8,309 +8,118 @@ import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
 import ImageTextPopup from "../../components/Cartes";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
+import { BulletList } from "../../components/Common";
 import Sommaire from "../../components/Sommaire";
-import { image } from "framer-motion/client";
+import { useLanguage } from "../../LanguageProvider";
+import fr from "./Cyberharcelement/fr.js";
+import en from "./Cyberharcelement/en.js";
 
 
-const navLinks = [
-  { label: "Définition et constat", target: "definition" },
-  { label: "Formes fréquentes et signes d'alerte", target: "formes" },
-  { label: "Que faire ?", target: "agir" },
-  { label: "Aides et ressources", target: "aide" },
-];
-
-const chiffresCyberharcelement = [
-  { number: "3,7%", title: "des étudiants", description: "ont déclaré avoir été victimes de harcèlement (échantillon de 378 étudiants)" },
-  { number: "3018", title: "Numéro d'aide", description: "pour les victimes de cyberharcèlement (anonyme et gratuit)" },
-  { number: "24h/24", title: "Réseaux sociaux", description: "Les attaques peuvent arriver à tout moment, y compris la nuit" }
-];
-
-
-const formesFrequentes = [
-  "Messages insultants ou humiliants à répétition",
-  "Montages ou mèmes moqueurs partagés sans consentement",
-  "Création de faux comptes nuisibles ou usurpation d'identité",
-  "Diffusion de captures d'écran privées",
-  "Propagation de rumeurs ou fausses informations",
-  "Flood sur les réseaux ou plateformes étudiantes",
-  "Commentaires malveillants sur l'apparence, l'orientation, l'origine, le handicap…",
-  "Sondages trolls ou moqueurs",
-  "Exclusion volontaire de groupes ou événements numériques"
-];
-
-const signesAlerte = [
-  "Messages malveillants reçus régulièrement",
-  "Moqueries ou insultes dans un groupe de discussion",
-  "Exclusion inexpliquée d'un groupe ou d'un événement",
-  "Découverte de contenus moqueurs à son sujet (mèmes, sondages…)",
-  "Stress ou anxiété à l'idée de consulter ses messages",
-  "Modification de son comportement : retrait, silence, évitement",
-  "Troubles du sommeil, de l'alimentation ou de la concentration"
-];
-
-const comportementsMinimises = [
-  "« C'est juste un mème, détends-toi ! »",
-  "« C'était une blague, t'as pas d'humour ? »",
-  "« C'est pas grave, tout le monde se fait tailler ici. »"
-];
-
-
-const reconnaitrePoints = [
-  "Messages insultants, moqueries, menaces répétées via réseaux sociaux ou messageries.",
-  "Diffusion de photos ou vidéos humiliantes sans consentement.",
-  "Création de faux profils pour nuire à quelqu'un.",
-  "Exclusion volontaire et répétée d'un groupe en ligne.",
-  "Partage de rumeurs, calomnies ou informations personnelles (doxing)."
-];
-
-const conseilsAction = [
-  {
-    title: "Ne restez pas isolé.e",
-    subtitle: "Parlez à une personne de confiance. Le silence entretient le harcèlement."
-  },
-  {
-    title: "Collectez les preuves",
-    subtitle: "Captures d'écran, messages, identifiants... nécessaires pour agir."
-  },
-  {
-    title: "Signalez les contenus",
-    subtitle: "Utilisez les outils de signalement pour bloquer ou supprimer les contenus."
-  },
-  {
-    title: "Contactez une structure d'aide",
-    subtitle: "Des dispositifs gratuits et anonymes existent pour vous accompagner."
-  },
-  {
-    title: "Portez plainte si nécessaire",
-    subtitle: "Le cyberharcèlement est puni par la loi, même sans connaître l'identité du harceleur."
-  }
-];
-
-const droitsVictimes = [
-  "Déposer plainte, même sans connaître le harceleur.",
-  "Demander le retrait d'un contenu à une plateforme.",
-  "Contacter la CNIL en cas d'atteinte à la vie privée.",
-  "Être accompagné par un service d'aide ou un référent."
-];
-
-const preuvesConserver = [
-  "Captures d'écran avec date et heure.",
-  "Messages, e-mails, commentaires conservés.",
-  "Identifiants de comptes harceleurs (pseudo, lien, URL).",
-  "Témoignages de personnes ayant assisté aux faits."
-];
-
-const responsabilites = [
-  "Les plateformes doivent proposer un moyen simple de signalement et modérer les contenus.",
-  "Les établissements ont une obligation de prévention et de réaction (charte, référents, procédures internes).",
-  "Le non-respect de ces obligations peut être sanctionné."
-];
-
-const ressourceDiagnostic = [
-  {
-    link: "https://www.cybermalveillance.gouv.fr/diagnostic",
-    label: "Diagnostiquer une situation",
-    description: "Un outil en ligne pour savoir si ce que tu vis relève de cybermalveillance.",
-    imageSrc:"/assets/rep-logo.png"
-  }
-];
-
-const ressourcesExterne = [
-
-  {
-    link: "https://www.service-public.fr/particuliers/vosdroits/F32239",
-    label: "Service public",
-    description: "Étapes de la démarche à suivre.",
-    imageSrc: "/assets/rep-logo.png"
-  }
-];
-
-const mythesCyberharcelement = [
-  {
-    title: "« Ce n'est qu'une blague »",
-    subtitle: "L'humour ne doit pas blesser. Le ressenti de la victime est central."
-  },
-  {
-    title: "« C'était privé »",
-    subtitle: "Même en privé, des propos humiliants peuvent constituer un délit."
-  },
-  {
-    title: "« Je n'ai reçu qu'un message »",
-    subtitle: "Même un message isolé peut être puni par la loi (injure, menace, atteinte à la vie privée…), même s'il ne s'agit pas encore de cyberharcèlement."
-  },
-  {
-    title: "« Ce n'est pas grave, ça va passer »",
-    subtitle: "Le cyberharcèlement a des conséquences graves."
-  }
-];
+const dict = { fr, en };
 
 const Cyberharcelement = () => {
+  const { lang } = useLanguage();
+  const t = dict[lang] || fr;
+
   return (
     <div className="page">
-      <h1 className="titre-page">Cyberharcèlement</h1>
-      <Sommaire links={navLinks} />
+      <h1 className="titre-page">{t.title}</h1>
+      <Sommaire links={t.navLinks} />
 
       <div id="definition">
-        <h2 className="titre">Définition</h2>
+        <h2 className="titre">{t.definitionTitle}</h2>
 
-      <ImageTextPopup
-        image="./assets/cartes/5_carreau.png"
-        title="La carte 5&diams;"
-        shortText="Cyberharcèlement : Comprendre et agir"
-        longText="Le cyberharcèlement transforme l’espace numérique en terrain d’attaque. Les messages, moqueries ou rumeurs circulent sans répit, parfois jour et nuit. L’écran, censé relier, devient une barrière de peur et de honte, et un outil d'isolement. Mais derrière chaque message, il y a des moyens d’agir, de signaler, de se faire aider. Le virtuel ne doit jamais effacer le respect."
-        textButton="⤢ Agrandir la carte"
-        suit="carreau"
-      />
+        <ImageTextPopup
+          image="./assets/cartes/5_carreau.png"
+          title={t.popup.title}
+          shortText={t.popup.shortText}
+          longText={t.popup.longText}
+          textButton={t.popup.button}
+          suit="carreau"
+        />
 
-        <p className="texte">
-          Le cyberharcèlement consiste en des agissements malveillants répétés, dans un cadre public ou restreint, qui peuvent prendre différentes formes : intimidations, insultes, menaces, rumeurs, publication de photos ou vidéos compromettantes, etc. Ils peuvent être le fait d'une seule personne ou de plusieurs individus et se dérouler sur les réseaux sociaux, messageries, forums, blogs, etc. Les conséquences du cyberharcèlement peuvent être dramatiques pour les victimes : dépression, décrochage scolaire ou professionnel, troubles psychologiques ou émotionnels, violence, suicide, etc. Le cyberharcèlement est puni par la loi qui prévoit de lourdes sanctions contre ses auteurs.
-        </p>
+        <p className="texte">{t.definitionText}</p>
       </div>
+
       <div id="constat">
-        <h2 className="titre">Constat</h2>
-        <p className="texte">
-          Le cyberharcèlement touche une partie importante de la population étudiante. Des dispositifs comme la charte « Cpas1OPTION » ou le programme PEER CARE existent. Le cyberharcèlement est une forme de harcèlement exercée via des outils numériques : réseaux sociaux, messageries, forums, e-mails, etc. Il s'agit d'attaques répétées visant à humilier, intimider, isoler ou nuire psychologiquement. Reconnu par la loi française (article 222-33-2-2 du Code pénal), il est aggravé en cas de harcèlement en groupe, sur un mineur ou une personne vulnérable, ou s'il pousse la victime à se suicider.
-        </p>
-        <ChiffresGroup chiffres={chiffresCyberharcelement} />
+        <h2 className="titre">{t.constatTitle}</h2>
+        <p className="texte">{t.constatText1}</p>
 
-        <p className="texte">
-            Tout le monde peut être concerné par le cyberharcèlement, pas seulement les ados ou influenceurs. Étudiants, membres de BDE ou victimes silencieuses peuvent l'être. Il y a cependant des groupes plus exposés que les autres : personnes LGBTQIA+, racisées, non francophones, femmes, personnes en situation de handicap.
-        </p>
-        
+        <ChiffresGroup chiffres={t.chiffresCyber} />
 
+        <p className="texte">{t.constatText2}</p>
       </div>
-
-
 
       <Separateur />
 
       <div id="formes">
-        <h2 className="titre">Formes fréquentes</h2>
-        <p className="texte">
-          Le cyberharcèlement peut prendre différentes formes, parfois discrètes, mais toujours nuisibles. Voici les situations les plus souvent rencontrées en milieu étudiant.
-        </p>
-        <BulletList items={formesFrequentes}/>
+        <h2 className="titre">{t.formesTitle}</h2>
+        <p className="texte">{t.formesIntro}</p>
+        <BulletList items={t.formesFrequentes} />
 
-        <h2 className = "sous-titre-2">Tu penses être victime de cyberharcèlement ?</h2>
-        <p className="texte">Tu peux vérifier si ce que tu vis correspond à de la cybermalveillance grâce à cet outil du gouvernement.</p>
-        <ExternalLinkBlock
-          resources={ressourceDiagnostic}
-        />
+        <h2 className="sous-titre-2">{t.victimeQuestion}</h2>
+        <p className="texte">{t.victimeText}</p>
+        <ExternalLinkBlock resources={t.ressourceDiagnostic} />
 
         <div id="mythes">
-         <h2 className = "sous-titre-2">Idées reçues sur le cyberharcèlement</h2>
-          <ListeNumerotee title="Ce n'est pas une excuse" subtitle="Déconstruire les croyances" items={mythesCyberharcelement} />
+          <h2 className="sous-titre-2">{t.mythesTitle}</h2>
+          <ListeNumerotee title={t.mythesListTitle} subtitle={t.mythesListSubtitle} items={t.mythes} />
         </div>
       </div>
 
       <Separateur />
 
       <div id="signes">
-        <h2 className="titre">Signes d'alerte</h2>
-        <p className="texte">
-          Certains comportements ou ressentis peuvent indiquer qu'on est victime de cyberharcèlement. Être attentif à ces signes permet de réagir à temps.
-        </p>
-        <BulletList items={signesAlerte} />
+        <h2 className="titre">{t.signesTitle}</h2>
+        <p className="texte">{t.signesIntro}</p>
+        <BulletList items={t.signesAlerte} />
 
-        <p className="texte">
-          De plus, certaines paroles ou actions sont parfois perçues comme « normales » ou banales, mais peuvent pourtant relever du harcèlement. Il est essentiel de ne pas sous-estimer leur impact.
-        </p>
-        <BulletList items={comportementsMinimises} />
-        <p className="texte">  
-          Même si l'intention semble légère, ce qui compte, c'est l'effet ressenti par la victime.
-        </p>
-
+        <p className="texte">{t.comportementsIntro}</p>
+        <BulletList items={t.comportementsMinimises} />
+        <p className="texte">{t.comportementsConclusion}</p>
       </div>
-
 
       <Separateur />
 
       <div id="agir">
-        <h2 className="titre">Que faire ?</h2>
-        <ListeNumerotee title="Réagir face au cyberharcèlement" subtitle="Étapes essentielles pour se protéger" items={conseilsAction} />
+        <h2 className="titre">{t.agirTitle}</h2>
+        <ListeNumerotee title={t.agirListTitle} subtitle={t.agirListSubtitle} items={t.conseilsAction} />
 
-        <ExternalLinkBlock resources={ressourcesExterne} />
+        <ExternalLinkBlock resources={t.ressourcesExterne} />
 
-          <ContactCard
-          image="/assets/3018.png" 
-          title="3018"
-          subtitle="Cyberharcèlement,  harcèlement scolaire, revenge porn, chantage à la webcam, usurpation d'identité, VSS, exposition à des contenus violents. "
-          phone="3018"
-          email=""
-          hours="7j/7, de 9h à 23h"
-          textButton="Voir le site web"
-          link="https://e-enfance.org/besoin-daide/"
-          bgColor="#2736f0"
-          textColor="#ffffff"
-        />
+        <ContactCard {...t.card3018} />
 
+        <h2 className="sous-titre-2">{t.signalTitle}</h2>
+        <ul className="bullet-points">
+          {t.signalList.map((item, i) => (
+            <li key={i}><b>{item.platform} :</b> {item.text}</li>
+          ))}
+        </ul>
+        <p className="texte">{t.signalConclusion}</p>
 
-
-      
-
-          <h2 className = "sous-titre-2">Comment signaler sur les réseaux sociaux ?</h2>
-          <ul className="bullet-points">
-            <li><b>Instagram :</b> options → signaler.</li>
-            <li><b>Snapchat :</b> appui long → signaler.</li>
-            <li><b>Facebook :</b> options → signaler.</li>
-            <li><b>Twitter/X :</b> icône … → signaler.</li>
-            <li><b>Discord :</b> clic droit + mode développeur → signaler.</li>
-          </ul>
-          <p className="texte">Les plateformes peuvent suspendre ou bannir les comptes nuisibles.</p>
-
-          <h2 className = "sous-titre-2">Les preuves à conserver</h2>
-          <BulletList items={preuvesConserver} />
-
+        <h2 className="sous-titre-2">{t.preuvesTitle}</h2>
+        <BulletList items={t.preuvesConserver} />
       </div>
 
-      <h2 className = "sous-titre-2">Tes droits en tant que victime</h2>
+      <h2 className="sous-titre-2">{t.droitsTitle}</h2>
+      <BulletList items={t.droitsVictimes} />
 
-        <BulletList items={droitsVictimes} />
-
-        <h2 className = "sous-titre-2">Les responsabilités des plateformes </h2>
-        <BulletList items={responsabilites} />
-
+      <h2 className="sous-titre-2">{t.respTitle}</h2>
+      <BulletList items={t.responsabilites} />
 
       <Separateur />
 
-    
-
       <div id="aide">
-        <h2 className="titre">Autres aides et ressources</h2>
-        
+        <h2 className="titre">{t.aideTitle}</h2>
       </div>
 
-      <ContactCard
-          image="/assets/etudiant_gouv.jpg"
-          title="CNAÉ"
-          subtitle="Ecoute, accompagnement et signalement pour les étudiants"
-          hours="Lundi à vendredi : 10h à 21h, Samedi : 10h à 14h"
-          email="cnae@enseignementsup.gouv.fr"
-          phone="0800 737 800"
-          textButton="Voir le site"
-          link="https://www.etudiant.gouv.fr/fr/cnae"
-          bgColor="#ffffff"
-          textColor="#000000"
-        />
-
-                  <ContactCard
-          image="/assets/nightline_logo.png" 
-          title="Nightline Lyon"
-          subtitle="Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s"
-          phone="04 85 30 00 10"
-          email=""
-          hours="Tous les soirs, de 21h à 2h30"
-          textButton="Voir le site web"
-          link="https://www.nightline.fr/lyon"
-        />
-
-
+      <ContactCard {...t.cardCNAE} />
+      <ContactCard {...t.cardNightline} />
 
       <Separateur />
 
       <p className="texte">
-        <em><b>Sources :</b> CNAÉ, e-Enfance, Nightline, Ministère de l'Enseignement supérieur, ONPV, Santé publique France</em>
+        <em><b>{t.sourcesPrefix}</b> {t.sources}</em>
       </p>
     </div>
   );
