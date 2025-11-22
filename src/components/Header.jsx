@@ -6,7 +6,7 @@ import { useTheme } from "../ThemeProvider";
 import { useLanguage } from "../LanguageProvider";
 import "./header.css";
 
-// Pour désactiver une page : attribut inactive:true
+// Pour désactiver une page : attribut inactive:true. Désactiver dans les constantes en français et en agnlais !
 const menuItemsFr = [
   {
     title: "🙆 Connaissance de soi",
@@ -32,7 +32,7 @@ const menuItemsFr = [
       { title: "😶‍🌫️ Anxiété", link: "/anxiete" },
       { title: "🦓 Automutilation", link: "/automutil" },
       { title: "🥹 Dépression", link: "/depression" },
-      { title: "🗺️ Déracinement culturel", link: "/deracinement", inactive: true },
+      { title: "🗺️ Déracinement culturel", link: "/deracinement" },
       { title: "🩸 Endométriose & douleurs menstruelles", link: "/endom" },
       { title: "🧑‍🦯 Situation de handicap", link: "/handicap" },
       { title: "💤 Sommeil", link: "/sommeil" },
@@ -45,23 +45,23 @@ const menuItemsFr = [
     submenu: [
       { title: "✅ Consentement", link: "/consent" },
       { title: "⚠️ IST", link: "/pratiques_sex" },
-      { title: "♀️ IVG", link: "/ivg", inactive: true },
+      { title: "♀️ IVG", link: "/ivg"},
       { title: "🏳️‍🌈 Orientation sexuelle", link: "/sex_orient" },
       { title: "💑 Relations de couple", link: "/couple" },
       { title: "⛔ Revenge porn", link: "/revenge" },
-      { title: "😘 Sexualité et contraception", link: "/sex", inactive: true },
+      { title: "😘 Sexualité et contraception", link: "/sex"},
     ],
   },
   {
     title: "🕰️ Vie courante",
     submenu: [
-      { title: "🚗 Accidents de la circulation", link: "/accident", inactive: true },
+      { title: "🚗 Accidents de la circulation", link: "/accident"},
       { title: "🥬 Alimentation", link: "/aliment" },
       { title: "🌿 Démarches écologiques", link: "/ecolo" },
       { title: "🧘 Détente & relaxation", link: "/detente" },
       { title: "💰 Précarité économique", link: "/prec_eco" },
       { title: "💸 Précarité menstruelle", link: "/prec_mens" },
-      { title: "⛹️ Santé physique & sport", link: "/sport", inactive: true },
+      { title: "⛹️ Santé physique & sport", link: "/sport"},
       { title: "🛋️ Sédentarité", link: "/sedentarite" },
       { title: "🏠 Risques domestiques", link: "/domestique" },
     ],
@@ -106,7 +106,7 @@ const menuItemsEn = [
       { title: "😶‍🌫️ Anxiety", link: "/anxiete" },
       { title: "🦓 Self-harm", link: "/automutil" },
       { title: "🥹 Depression", link: "/depression" },
-      { title: "🗺️ Cultural uprooting", link: "/deracinement", inactive: true },
+      { title: "🗺️ Cultural uprooting", link: "/deracinement" },
       { title: "🩸 Endometriosis & menstrual pain", link: "/endom" },
       { title: "🧑‍🦯 Disability", link: "/handicap" },
       { title: "💤 Sleep", link: "/sommeil" },
@@ -119,23 +119,23 @@ const menuItemsEn = [
     submenu: [
       { title: "✅ Consent", link: "/consent" },
       { title: "⚠️ STIs", link: "/pratiques_sex" },
-      { title: "♀️ Abortion", link: "/ivg", inactive: true },
+      { title: "♀️ Abortion", link: "/ivg"},
       { title: "🏳️‍🌈 Sexual orientation", link: "/sex_orient" },
       { title: "💑 Relationships", link: "/couple" },
       { title: "⛔ Revenge porn", link: "/revenge" },
-      { title: "😘 Sexuality & contraception", link: "/sex", inactive: true },
+      { title: "😘 Sexuality & contraception", link: "/sex"},
     ],
   },
   {
     title: "🕰️ Everyday life",
     submenu: [
-      { title: "🚗 Road accidents", link: "/accident", inactive: true },
+      { title: "🚗 Road accidents", link: "/accident"},
       { title: "🥬 Nutrition", link: "/aliment" },
       { title: "🌿 Eco-friendly actions", link: "/ecolo" },
       { title: "🧘 Relaxation", link: "/detente" },
       { title: "💰 Financial insecurity", link: "/prec_eco" },
       { title: "💸 Period poverty", link: "/prec_mens" },
-      { title: "⛹️ Physical health & sport", link: "/sport", inactive: true },
+      { title: "⛹️ Physical health & sport", link: "/sport"},
       { title: "🛋️ Sedentary lifestyle", link: "/sedentarite" },
       { title: "🏠 Home hazards", link: "/domestique" },
     ],

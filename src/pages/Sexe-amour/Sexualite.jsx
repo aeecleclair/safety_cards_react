@@ -11,7 +11,8 @@ import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } f
 import Sommaire from "../../components/Sommaire";
 
 const navLinks = [
-  { label: "Comprendre", target: "definition" },
+  { label: "Comprendre la contraception", target: "definition" },
+  { label: "Vivre sa sexualité", target: "sexualite" },
   { label: "Je suis concerné·e", target: "personne-concernee" },
   { label: "J'accompagne", target: "accompagnant" }
 ];
@@ -202,7 +203,7 @@ const Sexualite = () => {
       <Sommaire links={navLinks} />
 
       <div id="definition">
-        <h1 className="titre">Comprendre la sexualité et la contraception</h1>
+        <h1 className="titre">Comprendre la contraception</h1>
           <ImageTextPopup
           image="/assets/cartes/10_coeur.png"
           title="La carte 10♥"
@@ -236,16 +237,16 @@ const Sexualite = () => {
           <h2 className="soustitre">Les principales méthodes contraceptives</h2>
 
           <BulletList items={[
-            "🧷 Préservatifs (masculin et féminin) : barrières mécaniques à usage unique, ils empêchent le passage des spermatozoïdes et protègent des IST. Ils sont en vente libre et disponibles gratuitement pour les moins de 26 ans.",
-            "💊 Pilule contraceptive : comprimé hormonal à prendre chaque jour, elle bloque l’ovulation et rend la muqueuse utérine moins réceptive. Son efficacité dépend de la régularité de la prise.",
-            "📍 Implant contraceptif : petit bâtonnet placé sous la peau du bras, il diffuse une hormone en continu pendant 3 ans. Invisible et très efficace, il nécessite une pose et un retrait médical.",
-            "🌀 Anneau vaginal : petit dispositif souple à insérer dans le vagin, libérant des hormones pendant 3 semaines avant une semaine d’arrêt. Il se change chaque mois.",
-            "🩹 Patch contraceptif : timbre adhésif posé sur la peau, diffusant des hormones pendant 7 jours. Il se remplace chaque semaine pendant 3 semaines, avec une pause la 4ᵉ.",
-            "⚙️ Stérilet (DIU) : petit dispositif placé dans l’utérus par un·e professionnel·le de santé. Le DIU hormonal agit localement sur la muqueuse utérine, tandis que le DIU au cuivre empêche les spermatozoïdes de féconder l’ovule. Leur durée varie de 3 à 10 ans.",
-            "💉 Injection contraceptive : réalisée tous les 3 mois par un·e professionnel·le, elle bloque l’ovulation par un apport hormonal continu.",
-            "🌿 Méthodes naturelles : observation du cycle, retrait, calendrier… Ces méthodes nécessitent une grande rigueur et sont grandement moins fiables que les autres. Elles ne protègent pas des IST.",
-            "⏳ Contraception d’urgence : en cas de rapport à risque ou d’oubli, la pilule du lendemain peut être prise jusqu’à 3 à 5 jours après, de préférence le plus tôt possible. Elle ne remplace pas une méthode régulière.",
-            "⚖️ Vasectomie et ligature des trompes : interventions définitives (ou très difficilement réversibles) visant à empêcher la fécondation. Elles concernent les personnes sûres de leur choix de ne plus avoir d’enfant."
+            <><b>Préservatifs (masculin et féminin) :</b> barrières mécaniques à usage unique, ils empêchent le passage des spermatozoïdes et protègent des IST. Ils sont en vente libre et disponibles gratuitement pour les moins de 26 ans.</>,
+            <><b>Pilule contraceptive :</b> comprimé hormonal à prendre chaque jour, elle bloque l’ovulation et rend la muqueuse utérine moins réceptive. Son efficacité dépend de la régularité de la prise.</>,
+            <><b>Implant contraceptif :</b> petit bâtonnet placé sous la peau du bras, il diffuse une hormone en continu pendant 3 ans. Invisible et très efficace, il nécessite une pose et un retrait médical.</>,
+            <><b>Anneau vaginal :</b> petit dispositif souple à insérer dans le vagin, libérant des hormones pendant 3 semaines avant une semaine d’arrêt. Il se change chaque mois.</>,
+            <><b>Patch contraceptif :</b> timbre adhésif posé sur la peau, diffusant des hormones pendant 7 jours. Il se remplace chaque semaine pendant 3 semaines, avec une pause la 4ᵉ.</>,
+            <><b>Stérilet (DIU) :</b> petit dispositif placé dans l’utérus par un·e professionnel·le de santé. Le DIU hormonal agit localement sur la muqueuse utérine, tandis que le DIU au cuivre empêche les spermatozoïdes de féconder l’ovule. Leur durée varie de 3 à 10 ans.</>,
+            <><b>Injection contraceptive :</b> réalisée tous les 3 mois par un·e professionnel·le, elle bloque l’ovulation par un apport hormonal continu.</>,
+            <><b>Méthodes naturelles :</b> observation du cycle, retrait, calendrier… Ces méthodes nécessitent une grande rigueur et sont grandement moins fiables que les autres. Elles ne protègent pas des IST.</>,
+            <><b>Contraception d’urgence :</b> en cas de rapport à risque ou d’oubli, la pilule du lendemain peut être prise jusqu’à 3 à 5 jours après, de préférence le plus tôt possible. Elle ne remplace pas une méthode régulière.</>,
+            <><b>Vasectomie et ligature des trompes :</b> interventions définitives (ou très difficilement réversibles) visant à empêcher la fécondation. Elles concernent les personnes sûres de leur choix de ne plus avoir d’enfant.</>
           ]} />
 
           <p className="texte">
@@ -261,41 +262,7 @@ const Sexualite = () => {
           />
 
 
-          <h2 className="soustitre">Vivre sa sexualité : diversité, plaisir et respect</h2>
-
-          <p className="texte">
-            La sexualité ne se limite pas à la pénétration. Elle englobe un ensemble de pratiques, de désirs et d’expressions du plaisir, seul·e ou à plusieurs. 
-            Chacun·e peut explorer sa sexualité à son rythme, selon ses envies et ses limites, dans le respect du consentement mutuel.
-          </p>
-
-          <p className="texte">
-            Le <b>plaisir solo</b> (masturbation) est une pratique courante et saine : elle permet de mieux connaître son corps, de découvrir ce qui fait du bien, 
-            et d’aborder plus sereinement la sexualité à deux. Il n’y a pas de “bonne” ou de “mauvaise” manière de se découvrir.
-          </p>
-
-          <p className="texte">
-            Les <b>rapports sans pénétration</b> (caresses, baisers, frottements, échanges oraux, etc.) peuvent être tout aussi intimes et satisfaisants. 
-            Ce sont des manières d’exprimer le désir sans forcément prendre de risques liés à une grossesse ou aux IST — 
-            même si certaines pratiques nécessitent toujours une protection (préservatif ou digue dentaire pour le sexe oral par exemple).
-          </p>
-
-          <p className="texte">
-            Le <b>porno</b> n’est pas un mode d’emploi : il montre des scénarios souvent irréalistes, centrés sur la performance plutôt que sur le plaisir partagé. 
-            En vrai, la sexualité repose sur la communication, l’écoute, le respect et le consentement. 
-            Personne ne doit se sentir obligé·e de faire ce qu’il ou elle ne souhaite pas.
-          </p>
-
-          <p className="texte">
-            L’important, c’est d’apprendre à se connaître, à se respecter, et à s’assurer que chaque expérience se déroule dans le <b>consentement mutuel</b> et la <b>bienveillance</b>. 
-            Chacun·e a le droit de dire non, de changer d’avis, ou de poser ses limites à tout moment.
-          </p>
-
-          <ExternalLinkBlock
-            title=""
-            subtitle=""
-            resources={page_porno}
-          />
-
+          
           <h2 className="soustitre">Comparatif des méthodes contraceptives</h2>
           <div className="table-container">
             <table className="tableau">
@@ -303,8 +270,8 @@ const Sexualite = () => {
                 <tr>
                   <th>Méthode</th>
                   <th>Efficacité (usage typique)</th>
-                  <th>Avantages</th>
-                  <th>Limites</th>
+                  <th>Les +</th>
+                  <th>Les -</th>
                 </tr>
               </thead>
               <tbody>
@@ -380,6 +347,47 @@ const Sexualite = () => {
               resources={ressourcesGenerales}
             />
           </div>
+
+          <Separateur />
+      <div id="sexualite">
+
+          <h1 className="titre">Vivre sa sexualité</h1>
+
+          <p className="texte">
+            La sexualité ne se limite pas à la pénétration. Elle englobe un ensemble de pratiques, de désirs et d’expressions du plaisir, seul·e ou à plusieurs. 
+            Chacun·e peut explorer sa sexualité à son rythme, selon ses envies et ses limites, dans le respect du consentement mutuel.
+          </p>
+
+          <p className="texte">
+            Le <b>plaisir solo</b> (masturbation) est une pratique courante et saine : elle permet de mieux connaître son corps, de découvrir ce qui fait du bien, 
+            et d’aborder plus sereinement la sexualité à deux. Il n’y a pas de “bonne” ou de “mauvaise” manière de se découvrir.
+          </p>
+
+          <p className="texte">
+            Les <b>rapports sans pénétration</b> (caresses, baisers, frottements, échanges oraux, etc.) peuvent être tout aussi intimes et satisfaisants. 
+            Ce sont des manières d’exprimer le désir sans forcément prendre de risques liés à une grossesse ou aux IST — 
+            même si certaines pratiques nécessitent toujours une protection (préservatif ou digue dentaire pour le sexe oral par exemple).
+          </p>
+
+          <p className="texte">
+            Le <b>porno</b> n’est pas un mode d’emploi : il montre des scénarios souvent irréalistes, centrés sur la performance plutôt que sur le plaisir partagé. 
+            En vrai, la sexualité repose sur la communication, l’écoute, le respect et le consentement. 
+            Personne ne doit se sentir obligé·e de faire ce qu’il ou elle ne souhaite pas.
+          </p>
+
+          <p className="texte">
+            L’important, c’est d’apprendre à se connaître, à se respecter, et à s’assurer que chaque expérience se déroule dans le <b>consentement mutuel</b> et la <b>bienveillance</b>. 
+            Chacun·e a le droit de dire non, de changer d’avis, ou de poser ses limites à tout moment.
+          </p>
+
+          <ExternalLinkBlock
+            title=""
+            subtitle=""
+            resources={page_porno}
+          />
+
+      </div>
+
 
           <Separateur />
 
@@ -463,3 +471,6 @@ const Sexualite = () => {
 };
 
 export default Sexualite;
+
+
+
