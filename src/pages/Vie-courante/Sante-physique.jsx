@@ -1,351 +1,160 @@
+// SportSante.jsx     UTILE : dangerouslySetInnerHTML={{ __html: t. }}
 import React from "react";
 import "../../App.css";
 
+import Quote from "../../components/Citation";
 import ListeNumerotee from "../../components/Listes";
-import ImageTextPopup from "../../components/Cartes";
 import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
+import { BulletList, TextImageRight } from "../../components/Common";
+import Sommaire from "../../components/Sommaire";
+import ImageTextPopup from "../../components/Cartes";
 
-const navLinks = [
-  { label: "Pourquoi et où faire du sport ?", target: "importance" },
-  { label: "Facteurs & obstacles", target: "obstacles" },
-  { label: "Bien-être & prévention", target: "prevention" }
-];
+import { useLanguage } from "../../LanguageProvider";
+import fr from "./Sante-Physique/fr.js";
+import en from "./Sante-Physique/en.js"; // laissé vide/à remplir si nécessaire
 
-const sport_lyon = [
-  {
-    link: "https://www.oslyon.com/pratique-libre/",
-    imageSrc: "/assets/min.png",
-    label: "Lyon",
-    description: "Sites de running, balades à vélo, fitness en extérieur, skate-parks extérieurs",
-  }
-];
-
-const items_calories = [
-  { 
-    title: "Marche", 
-    subtitle: "Parcourir 5 km en 1h ou 2h brûle environ la même quantité de calories. La marche rapide augmente l'effort : des marcheurs expérimentés ou entraînés dépensent plus d'énergie que lors d'une marche tranquille." 
-  },
-  { 
-    title: "Jogging et course", 
-    subtitle: "Pour un adulte, courir 10 km peut brûler environ 600 à 800 calories selon le poids, le sexe et l'intensité. Allonger la foulée permet de dépenser jusqu'à 15 % d'énergie supplémentaire." 
-  },
-  { 
-    title: "Natation", 
-    subtitle: "Pour la même distance, la natation brûle environ 4 fois plus de calories que la course. La brasse est plus énergivore que le crawl. Comme le muscle est plus dense que la graisse, la perte de poids peut ne pas apparaître immédiatement sur la balance." 
-  },
-  { 
-    title: "Vélo", 
-    subtitle: "Rouler à intensité modérée (ex. 20 km/h) permet de brûler environ 400–600 calories par heure pour un adulte. En montée ou à haute intensité, cette dépense peut dépasser 800 calories. Le vélo sollicite surtout les jambes tout en ménageant les articulations." 
-  }
-];
-
-const itemsFreins = [
-  {
-    title: "Emplois du temps chargés",
-    subtitle: "Cours, projets, stages et examens réduisent fortement les créneaux disponibles pour une activité régulière."
-  },
-  {
-    title: "Coût",
-    subtitle: "Les frais d'adhésion, le matériel et le transport peuvent être un frein pour certain·e·s étudiant·e·s."
-  },
-  {
-    title: "Manque de repères",
-    subtitle: "Difficulté à choisir une activité adaptée, peur de se blesser ou de mal faire."
-  },
-  {
-    title: "Timidité / peur du regard",
-    subtitle: "Hésitation à rejoindre des groupes ou cours collectifs par crainte du jugement."
-  },
-  {
-    title: "Contraintes de santé",
-    subtitle: "Blessures, douleurs chroniques ou conditions médicales qui limitent la pratique sans adaptation."
-  },
-  {
-    title: "Violences et discriminations dans le sport",
-    subtitle: "Certain·e·s étudiant·e·s peuvent subir ou craindre des violences sexuelles, psychologiques, du harcèlement ou des discriminations dans le cadre de la pratique sportive."
-  }
-];
-
-
-const itemsSolutions = [
-  {
-    title: "Organisation (micro-séances)",
-    subtitle: "Intégrer des séances courtes (10–20 min) : marche active, escaliers, renforcement rapide entre deux cours, le midi, le soir ou le week-end."
-  },
-  {
-    title: "Aides financières & subventions",
-    subtitle: "Les étudiant·e·s boursier·e·s peuvent demander prise en charge partielle (BDS / scolarité) ; rechercher tarifs réduits municipaux."
-  },
-  {
-    title: "Accompagnement & information",
-    subtitle: "Le service sport et le Bureau des Sports (BDS) peuvent aider à trouver une activité, des créneaux et des parrainages pour débuter."
-  },
-  {
-    title: "Cours pour débutant·e·s",
-    subtitle: "S'orienter vers des cours en petits groupes ou sessions ‘découverte' pour gagner en confiance."
-  },
-  {
-    title: "Reprise progressive et prévention",
-    subtitle: "Ateliers de renforcement doux, stretching, évaluation santé par l'infirmière avant reprise intense."
-  },
-  {
-    title: "Accessibilité et sport adapté",
-    subtitle: "Proposer des activités spécifiques (yoga assis, sport adapté) et contacter l'infirmerie pour un accompagnement personnalisé."
-  },
-    {
-    title: "Faire face aux violences dans le sport",
-    subtitle: "Si tu es victime ou témoin de violences (sexuelles, harcèlement, discriminations), tu peux en parler à l'infirmerie, au Bureau des Sports (BDS) ou directement via le service national de signalement « Signal-Sports » (Ministère des Sports). Des associations comme Colosse aux pieds d'argile accompagnent également les étudiant·e·s concerné·e·s."
-  }
-];
-
-
-const resources_prevention = [
-  {
-    link: "/anxiete",
-    emoji : "😶‍🌫️",
-    label: "Anxiété",
-    description: "Tu te sens anxieux même en pratiquant une activité physique ?",
-  },
-  {
-    link: "/sédentarité",
-    emoji : "🛋️",
-    label: "Sédentarité",
-    description: "Qu'est-il possible de faire face à la sédentarité ?"
-  },
-  {
-    link: "/sommeil",
-    emoji : "💤",
-    label: "Sommeil",
-    description: "Interrogations sur le sommeil ? Difficultés pour l'endormissement ?",
-  },
-]
-
-const sport_VSS = [
-    {
-    link: "https://colosse.fr/",
-    imageSrc: "/assets/colosse.png",
-    label: "Colosse aux pieds d'argile",
-    description: "Association qui lutte contre les violences sexuelles, le harcèlement et le bizutage dans le sport",
-  }
-]
-
-const barometres = [
-  {
-    link: "/assets/reglo_sport_reglette.pdf",
-    label: "Les VSS dans le sport",
-    description: "",
-    emoji: "⚽",
-  }
-];
-
-const data = [
-  { number: "79%", title: "Élèves de Centrale Lyon", description: "se disent satisfaits de la fréquence de leur pratique sportive" },
-  { number: "2h30–4h", title: "Recommandation OMS", description: "d'activité physique par semaine" },
-  { number: "16%", title: "Étudiants", description: "ne rentrent pas dans ce cadre minimum" },
-];
-
-
-
-
-
+const dict = { fr, en };
 
 const SportSante = () => {
+  const { lang } = useLanguage();
+  const t = dict[lang] || fr;
+
   return (
     <div className="page">
+      {/* --- TITRE + NAVIGATION --- */}
+      <h1 className="titre-page">{t.importanceTitle}</h1>
+      <Sommaire links={t.navLinks} />
 
-
-
-
-
-      <Sommaire links={navLinks} />
-
+      {/* --- SECTION IMPORTANCE --- */}
       <div id="importance">
-        <h1 className="titre">Pourquoi et où faire du sport ?</h1>
+        <h2 className="titre">{t.importanceTitle}</h2>
+
+        <ImageTextPopup
+          image={t.carte5_pique.image}
+          title={t.carte5_pique.title}
+          shortText={t.carte5_pique.shortText}
+          longText={t.carte5_pique.longText}
+          textButton={t.carte5_pique.buttonText}
+          suit={t.carte5_pique.suit}
+        />
+
+        <p className="texte">{t.importanceIntro}</p>
+
+        <p className="texte">{t.importanceBeneficesIntro}</p>
+
+        <BulletList items={t.importanceBeneficesList.map((s) => <span dangerouslySetInnerHTML={{ __html: s }} />)} />
+
+        <p 
+          className="texte" 
+          dangerouslySetInnerHTML={{ __html: t.importanceInfra }}
+        />
+
+        <h3 className="sous-titre-2">{t.importanceEquilibreTitle}</h3>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.importanceEquilibre1 }}/>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.importanceEquilibre2 }}/>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.importanceEquilibre3 }}/>
+
+        <ChiffresGroup chiffres={t.chiffres} />
+
+        <ExternalLinkBlock
+          title={t.infrastructuresTitle}
+          subtitle={t.infrastructuresSubtitle}
+          resources={t.infrastructuresLyon}
+        />
+
+        <p className="texte">{t.gestesQuotidiens}</p>
+
+        <ListeNumerotee
+          title={t.comparatifTitle}
+          subtitle={t.comparatifSubtitle}
+          items={t.comparatifItems}
+        />
       </div>
-
-      <ImageTextPopup
-        image="./assets/cartes/5_pique.png"
-        title="La carte 5♠"
-        shortText="Le sport et ses bienfaits sur le corps et l'esprit"
-        longText="Pratiquer une activité physique régulière ne se résume pas à brûler des calories ou à améliorer ses performances : c'est aussi nourrir son esprit, renforcer ses liens sociaux et mieux écouter son corps. Chaque pas, chaque mouvement, chaque effort modéré contribue à la santé globale et au plaisir de bouger. Tous les gestes du quotidien, même simples — marcher, monter les escaliers, pédaler — participent à ce chemin vers l'équilibre et le bien-être."
-        textButton="⤢ Agrandir la carte"
-        suit="pique"
-      />
-
-      <p className="texte">
-        L'activité physique inclut tout mouvement du corps produit par les muscles, allant de la marche quotidienne aux sports collectifs, natation, danse, yoga ou fitness.
-      </p>
-
-      <p className="texte">
-        Ses bénéfices sont multiples :
-      </p>
-      <BulletList items={[
-        <><b>Physiques</b> : amélioration cardiovasculaire, renforcement musculaire et osseux, maintien d'un poids équilibré</>,
-        <><b>Mentaux</b> : réduction du stress et de l'anxiété, meilleure concentration, qualité de sommeil améliorée</>,
-        <><b>Sociaux</b> : intégration à la vie de campus, développement de l'esprit d'équipe, moments conviviaux via les associations étudiantes</>
-      ]} />
-
-      <p className="texte">
-        À Centrale Lyon, les infrastructures permettent de pratiquer facilement : gymnase, terrains extérieurs, nouveaux terrains de padel, associations étudiantes comme le <b>Bureau des Sports (BDS)</b>, mais aussi piscines, pistes d'athlétisme et salles municipales de la ville de Lyon.
-      </p>
-
-      <p className="sous-titre-2">Le sport : une question d'équilibre et d'écoute de soi</p>
-      <p className="texte">
-        Attention cependant : <b>trop de sport</b> n’est pas forcément bénéfique. Comme pour tout, l’équilibre est essentiel. 
-        Une pratique excessive ou mal adaptée peut entraîner des blessures, une fatigue chronique, ou une baisse des performances scolaires et mentales. 
-      </p>
-
-      <p className="texte">
-        Le sport est censé être un <b>plaisir</b> et un <b>moment de détente</b> : il aide à réduire le stress, à vider l’esprit et à retrouver de l’énergie, 
-        mais il ne doit pas devenir une source supplémentaire de pression. Si tu ressens une grande fatigue, des douleurs persistantes ou une perte de motivation, 
-        il est recommandé de diminuer l’intensité, de varier les activités ou de demander conseil à un professionnel de santé.
-      </p>
-
-      <p className="texte">
-        Le plus important dans la pratique d'une activité physique reste la <b>régularité</b> et l’<b>écoute de soi</b> : quelques séances modérées chaque semaine suffisent pour ressentir les bénéfices 
-        physiques et psychologiques, sans épuisement.
-      </p>
-
-
-      <ChiffresGroup chiffres={data} />
-
-      <ExternalLinkBlock
-        title="Infrastructures sportives centraliennes et lyonnaises"
-        subtitle="Retrouvez les lieux pour pratiquer selon vos envies."
-        resources={sport_lyon}
-      />
-
-      <p className="texte">
-        Même au quotidien, des gestes simples comptent : marcher 5 km, privilégier le vélo, courir ou nager régulièrement.
-      </p>
-
-      <ListeNumerotee 
-        title="Comparatif des activités physiques" 
-        subtitle="Quelques exemples concrets de dépenses énergétiques selon l'activité choisie" 
-        items={items_calories}
-      />
 
       <Separateur />
 
+      {/* --- OBSTACLES --- */}
       <div id="obstacles">
-        <h1 className="titre">Facteurs & obstacles</h1>
+        <h2 className="titre">{t.obstaclesTitle}</h2>
+
+        <p className="texte">{t.obstaclesIntro}</p>
+
+        <ListeNumerotee
+          title="Les freins principaux"
+          subtitle="Obstacles rencontrés par les étudiant·e·s"
+          items={t.obstaclesList}
+        />
+
+        <ExternalLinkBlock resources={t.barometres} />
+
+        <p className="texte">{t.solutionsIntro}</p>
+
+        <ListeNumerotee
+          title="Des solutions adaptées"
+          subtitle="Ce qui peut aider à reprendre ou maintenir une pratique"
+          items={t.solutionsList}
+        />
+
+        <ExternalLinkBlock resources={t.vssResources} />
+
+        <ContactCard
+          image={t.cardInfirmerie.image}
+          title={t.cardInfirmerie.title}
+          subtitle={t.cardInfirmerie.subtitle}
+          phone={t.cardInfirmerie.phone}
+          email={t.cardInfirmerie.email}
+          hours={t.cardInfirmerie.hours}
+          textButton={t.cardInfirmerie.textButton}
+          link={t.cardInfirmerie.link}
+          bgColor={t.cardInfirmerie.bgColor}
+          textColor={t.cardInfirmerie.textColor}
+        />
       </div>
-
-      <p className="texte">
-        Malgré une réelle motivation, plusieurs obstacles peuvent limiter une pratique régulière : emploi du temps, coût, manque d'information, timidité ou contraintes de santé. 
-        Voici les freins les plus fréquents rencontrés par les étudiant·es :
-      </p>
-
-      <ListeNumerotee
-        title="Les freins principaux"
-        subtitle="Obstacles rencontrés par les étudiant·e·s"
-        items={itemsFreins}
-      />
-  
-      <ExternalLinkBlock
-        resources={barometres}
-      />
-
-      <p className="texte">
-        Heureusement, des solutions existent pour aider à surmonter ces obstacles :
-      </p>
-
-      <ListeNumerotee
-        title="Des solutions adaptées"
-        subtitle="Ce qui peut aider à reprendre ou maintenir une pratique"
-        items={itemsSolutions}
-      />
-
-      <ExternalLinkBlock
-        title=""
-        subtitle=""
-        resources={sport_VSS}
-      />
-
-      <ContactCard
-        image="/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png"
-        title="Infirmerie"
-        subtitle="Infirmerie de Centrale Lyon : un lieu de conseil"
-        phone="Voir les informations"
-        email="Voir les informations"
-        hours="Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00"
-        textButton="Voir les informations"
-        link="https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990"
-        bgColor="#ffffff"
-        textColor="#b22133"
-      />
 
       <Separateur />
 
+      {/* --- PREVENTION / BIEN-ETRE --- */}
       <div id="prevention">
-        <h1 className="titre">Bien-être & prévention au quotidien</h1>
+        <h2 className="titre">{t.preventionTitle}</h2>
+
+        <p className="texte">{t.preventionIntro}</p>
+
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.preventionSommeil }}/>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.preventionNutrition }}/>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.preventionDentaire }}/>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.preventionIsosteo }}/>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.preventionMobilite }}/>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.preventionRelaxation }}/>
+
+        <ExternalLinkBlock
+          title=""
+          subtitle=""
+          resources={t.preventionResources}
+        />
+
+        <ContactCard
+          image={t.cardIsosteo.image}
+          title={t.cardIsosteo.title}
+          subtitle={t.cardIsosteo.subtitle}
+          phone={t.cardIsosteo.phone}
+          email={t.cardIsosteo.email}
+          hours={t.cardIsosteo.hours}
+          textButton={t.cardIsosteo.textButton}
+          link={t.cardIsosteo.link}
+          bgColor={t.cardIsosteo.bgColor}
+          textColor={t.cardIsosteo.textColor}
+        />
+
+        <p className="texte">{t.preventionConclusion}</p>
       </div>
-
-      <p className="texte">
-        Pour être en bonne santé, le sport ne suffit pas à lui seul : une hygiène de vie adaptée renforce ses effets et aide à prévenir les blessures. Voici quelques pratiques clés à intégrer dans votre quotidien :
-      </p>
-
-      <p className="texte">
-        <b>Sommeil et récupération :</b> un repos suffisant est essentiel pour favoriser la performance physique et mentale, et limiter les risques de blessures.
-      </p>
-
-      <p className="texte">
-        <b>Nutrition et activité physique :</b> combiner une alimentation équilibrée avec des activités comme la marche rapide, le vélo, le jogging ou la natation permet de brûler des calories et d'entretenir la forme.
-      </p>
-
-      <p className="texte">
-        <b>Soins dentaires :</b> le dispositif <b>M'T Dents</b> permet aux jeunes adultes de bénéficier d'un rendez-vous bucco-dentaire gratuit à 18, 21 et 24 ans. Les notifications sont envoyées par courrier ou via le compte Ameli environ un mois avant votre anniversaire.
-      </p>
-
-      <p className="texte">
-        <b>Prévention des blessures :</b> grâce au partenariat avec la clinique <b>Isosteo</b>, les étudiant·e·s de Centrale Lyon peuvent accéder à des consultations ostéopathiques à conditions préférentielles pour prévenir ou soulager les tensions et blessures liées à l'activité physique.
-      </p>
-
-      <p className="texte">
-        <b>Mobilité douce :</b> privilégier des modes de déplacement actifs comme la marche, le vélo ou la course permet d'allier santé, respect de l'environnement et économie de temps. Ces gestes simples, intégrés à votre routine quotidienne, ont un impact significatif sur la forme physique globale.
-      </p>
-
-      <p className="texte">
-        <b>Relaxation et gestion du stress :</b> les ateliers de détente proposés par l'infirmière du campus aident à gérer le stress et la fatigue, et complètent efficacement votre pratique sportive pour un équilibre mental et physique optimal.
-      </p>
-            
-      <ExternalLinkBlock
-        title=""
-        subtitle=""
-        resources={resources_prevention}
-      />
-
-      <ContactCard
-        image="/assets/isosteo.png"
-        title="Clinique ostéopathique ISOsteo"
-        subtitle="Consultations préférentielles pour les étudiant·e·s de Centrale Lyon"
-        phone="04 72 89 06 07"
-        email="contact@isosteo.fr"
-        hours="Sur rendez-vous, à Écully"
-        textButton="Voir le site"
-        link="https://www.isosteo.fr/rdv-ecully"
-
-        bgColor="#ffffff"
-        textColor="#2f805fff"
-      />
-
-      <p className="texte">
-        En combinant ces bonnes pratiques à une activité physique régulière, vous favorisez un meilleur équilibre physique, mental et social, tout en améliorant votre qualité de vie sur le campus.
-      </p>
 
       <Separateur />
 
-      <p className="texte"><em><b>Sources :</b> OMS, PAI Centrale Lyon 2024, Université de Lyon, Ville de Lyon, ISOSTEO, Assurance Maladie</em></p>
-    
-
-    
-    
-      </div>
+      <p className="texte"><em><b>{t.sourcesPrefix}</b> {t.sources}</em></p>
+    </div>
   );
 };
 

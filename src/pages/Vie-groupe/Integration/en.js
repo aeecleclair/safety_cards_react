@@ -5,7 +5,7 @@ const fr = {
 
   navLinks: [
     { label: "Integration or Hazing?", target: "definition" },
-    { label: "Why is it serious?", target: "risks" },
+    { label: "Why is it serious?", target: "risques" },
     { label: "How to react", target: "agir" },
     { label: "Organizing integration", target: "assos" }
   ],
