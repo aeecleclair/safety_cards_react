@@ -9,11 +9,12 @@ import Separateur from "../../components/Separateur";
 import { ChiffresGroup } from "../../components/Chiffres";
 import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import Sommaire from "../../components/Sommaire";
+import { image } from "framer-motion/client";
 
 const navLinks = [
   { label: "Comprendre la contraception", target: "definition" },
   { label: "Vivre sa sexualité", target: "sexualite" },
-  { label: "Je suis concerné·e", target: "personne-concernee" },
+  { label: "Parler contraception et sexualité", target: "personne-concernee" },
   { label: "J'accompagne", target: "accompagnant" }
 ];
 
@@ -48,38 +49,21 @@ const ressourcesGenerales = [
     label: "Choisir sa contraception",
     description: "Informations détaillées sur toutes les méthodes contraceptives"
   },
-  {
-    link: "https://www.questionsexualite.fr/",
-    imageSrc: "/assets/question_sexualite.png",
-    label: "Question Sexualité",
-    description: "Réponses d'experts sur la santé sexuelle"
-  },
-  {
-    link: "https://commentonsaime.fr/rubrique/ma-sexualite/sexualite-chill/",
-    imageSrc: "/assets/commentonsaime.png",
-    label: "Comment on s'aime",
-    description: "Articles sur la sexualité avec un handicap, après une excision ou encore sur le porno."
-  }
+
 ];
 
 const ressourcesAide = [
   {
     link: "https://www.planning-familial.org/fr",
     imageSrc: "/assets/planning-familial.jpg",
-    label: "Planning Familial",
+    label: "Planning Familial national",
     description: "Écoute, accompagnement, accès à la contraception et à l'IVG"
   },
   {
-    link: "https://ivg.gouv.fr/",
-    imageSrc: "/assets/min.png",
-    label: "IVG.Gouv.fr",
-    description: "Informations officielles sur l'interruption volontaire de grossesse"
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Discuter anonymement avec des professionnel·le·s"
+    link: "https://questionsexualite.fr/trouver-un-professionnel",
+    imageSrc: "/assets/question_sexualite.png",
+    label: "Trouver un professionnel",
+    description: "Centre de dépistage et espaces de vie affective et sexuelle"
   }
 ];
 
@@ -108,7 +92,7 @@ const autre_page = [
     link: "/consent",
     emoji : "✅",
     label: "Consentement",
-    description: "Qu'est-ce que le consentement ?"
+    description: "On fait le point ?"
   }
 ];
 
@@ -142,54 +126,16 @@ const page_porno = [
     emoji : "🏳️‍🌈",
     label : "Orientation sexuelle",
     description : "Quels sont les différentes orientations sexuelles ?"
+  },
+    {
+    link: "https://commentonsaime.fr/rubrique/ma-sexualite/sexualite-chill/",
+    imageSrc: "/assets/commentonsaime.png",
+    label: "Comment on s'aime",
+    description: "Articles sur la sexualité avec un handicap, après une excision ou encore sur le porno."
   }
 ];
 
-/*Provisoire : page non faite */
 
-import Workinprogress from "../../components/WorkInProgress";
-
-const resources_sites = [
-
-  {
-    link: "https://www.etudiant.gouv.fr/fr",
-    imageSrc: "/assets/etudiant_gouv.jpg",
-    label: "Etudiant.gouv.fr",
-    description: "Le site officiel du gouvernement pour les étudiants",
-  },
-  {
-    link: "https://www.lyoncampus.com/",
-    imageSrc: "/assets/logo_lyon_campus.png",
-    label: "Lyon Campus",
-    description: "Etudier, vivre, sortir et s'impliquer comme étudiant à Lyon"
-  },
-  {
-    link: "https://www.universite-lyon.fr/vie-des-campus/vie-etudiante/nos-portails-sante-et-aides-etudiantes/",
-    imageSrc: "/assets/logo_UDL.png",
-    label: "Portails Santé et Aides de l'UDL",
-    description : "Toutes les informations, dispositifs et procédures"
-
-  },
-  {
-    link: "https://commentonsaime.fr/",
-    imageSrc: "/assets/logo-cosa.svg",
-    label: "Comment on s'aime ?",
-    description: "Pour se renseigner sur les relations amoureuses, amicales, familliales...",
-  },
-
-  {
-    link: "https://www.crous-lyon.fr ",
-    imageSrc: "/assets/logo_crous.png",
-    label: "Crous de Lyon",
-    description: "Aides, accompagnement, logements, restauration, international...",
-  },
-  {
-    link: "https://www.filsantejeunes.com/",
-    imageSrc: "/assets/fsj.png",
-    label: "Fil Santé Jeunes",
-    description: "Pour parler santé, sexualité, amour, mal être...",
-  },
-];
 
 const Sexualite = () => {
   return (
@@ -207,26 +153,22 @@ const Sexualite = () => {
           <ImageTextPopup
           image="/assets/cartes/10_coeur.png"
           title="La carte 10♥"
-          shortText="Un guide rapide pour explorer les options"
-          longText="Besoin d'un point sur les méthodes de contraception existantes, leur efficacité, leurs avantages et leurs limites ? Tu te poses des questions sur ta sexualité ? Cette page et cette carte sont idéal pour démarrer un échange sans jugement et sans tabou !"
+          shortText="Découvrir toutes les méthodes contraceptives"
+          longText="La contraception regroupe l'ensemble des méthodes permettant de prévenir une grossesse non désirée lors d'un rapport sexuel. Il est essentiel de choisir une méthode qui convient le mieux à sa situation personnelle, en tenant compte de facteurs tels que l'efficacité, les effets secondaires, la facilité d'utilisation et la protection contre les infections sexuellement transmissibles (IST)."
           textButton="⤢ Voir la carte"
         />
 
         <p className="texte">
-            La sexualité fait partie intégrante de la santé et du bien-être. Elle concerne le plaisir, le respect, les émotions, l’intimité et la responsabilité.  
             La <b>contraception</b> a pour but d’éviter une grossesse non désirée, de permettre à chacun·e de choisir <b>quand et si</b> il ou elle souhaite avoir un enfant.  
-            Il n’existe pas de “meilleure” méthode universelle : chaque moyen a ses avantages, ses contraintes et son efficacité, qui dépendent du mode de vie, de la santé et des préférences personnelles.
+            Chaque moyen a ses avantages, ses contraintes et son efficacité, qui dépendent du mode de vie, de la santé et des préférences personnelles.
           </p>
 
           <p className="texte">
             La contraception peut être <b>féminine</b>, <b>masculine</b>, <b>hormonale</b> ou <b>non hormonale</b>.  
             Certaines se prennent chaque jour, d’autres se posent pour plusieurs années.  
-            Certaines protègent aussi des <b>infections sexuellement transmissibles (IST)</b> — notamment les préservatifs, qui restent indispensables pour les rapports sexuels avec de nouveaux partenaires. 
           </p>
 
-          <p>
-            Pour approfondir sur les IST :
-          </p>
+          <p className="mise-avant">Seuls les préservatifs (masculins ou féminins) permettent de se protéger contre les <b>infections sexuellement transmissibles (IST)</b>. Ils restent donc indispensables pour les rapports sexuels avec de nouveaux partenaires.  </p>
           
           <ExternalLinkBlock
             title=""
@@ -249,17 +191,26 @@ const Sexualite = () => {
             <><b>Vasectomie et ligature des trompes :</b> interventions définitives (ou très difficilement réversibles) visant à empêcher la fécondation. Elles concernent les personnes sûres de leur choix de ne plus avoir d’enfant.</>
           ]} />
 
-          <p className="texte">
-            Parler contraception, c’est aussi parler de <b>liberté de choix</b> et de <b>partage des responsabilités</b>.  
-            La contraception n’est pas qu’une affaire de femmes : elle concerne les couples et repose sur la confiance, la communication et le consentement.  
-            Les professionnel·le·s de santé (médecin, gynécologue, sage-femme, infirmier·ère, pharmacien·ne) peuvent aider à trouver la méthode la plus adaptée à chaque situation.
-          </p>
+          <ExternalLinkBlock resources={
+            [
+              {
+                link: "https://questionsexualite.fr/choisir-sa-contraception",
+                imageSrc: "/assets/question_sexualite.png",
+                label: "Tous les modes de contraception",
+                description: "Découvrir en détail chaque méthode"
 
-          <ExternalLinkBlock
-            title=""
-            subtitle=""
-            resources={autre_page}
-          />
+              }
+            ]
+          }/>
+
+
+          <div className="texte bloc-info">
+            <h3>🛡️ Accès gratuit aux préservatifs</h3>
+            <p>
+              Des préservatifs sont disponibles gratuitement à l'infirmerie de Centrale Lyon : n'hésite pas à en demander, c'est confidentiel et sans jugement.
+              Si tu as moins de 26 ans, tu peux également en obtenir gratuitement en pharmacie (internes et externes), sans ordonnance, grâce au dispositif de l'Assurance Maladie.
+            </p>
+          </div>
 
 
           
@@ -326,9 +277,37 @@ const Sexualite = () => {
               </tbody>
             </table>
           </div>
-            <ChiffresGroup chiffres={chiffresSexualite} />
 
-            <p>
+          <ExternalLinkBlock
+            resources={
+              [
+                { link: "https://questionsexualite.fr/choisir-sa-contraception/ma-contraception-et-moi/tableau-comparatif-pour-vous-guider-dans-votre-choix-de-contraception",
+                  label: "Tableau comparatif des méthodes contraceptives",
+                  description: "Détails sur l'efficacité pratique et théorique, l'utilisation, la présence d'hormones...",
+                  imageSrc: "/assets/question_sexualite.png"
+                }
+              ]
+            }
+          />
+           {/* <ChiffresGroup chiffres={chiffresSexualite} /> */}
+
+          <h2 className="soustitre">La responsabilité partagée de la contraception</h2>
+
+          <p className="texte">
+            Parler contraception, c’est aussi parler de <b>liberté de choix</b> et de <b>partage des responsabilités</b>.  
+            La contraception n’est pas qu’une affaire de femmes : elle concerne les couples et repose sur la confiance, la communication et le consentement.  
+            Les professionnel·le·s de santé (médecin, gynécologue, sage-femme, infirmier·ère, pharmacien·ne) peuvent aider à trouver la méthode la plus adaptée à chaque situation.
+          </p>
+
+          <ExternalLinkBlock
+            title=""
+            subtitle=""
+            resources={autre_page}
+          />
+
+          <h2 className="soustitre">Et en cas de grossesse non prévue ?</h2>
+
+            <p className="texte">
               Parfois, malgré une contraception ou suite à un oubli, une grossesse non prévue peut survenir.
               Dans ce cas, il est essentiel de savoir que des solutions existent, dont l’interruption volontaire de grossesse (IVG).
               L’IVG est un droit garanti par la loi, accessible gratuitement et dans la confidentialité, accompagné par des professionnel·le·s de santé et des structures d’écoute comme le Planning Familial.
@@ -342,8 +321,8 @@ const Sexualite = () => {
             />
 
             <ExternalLinkBlock
-              title="Ressources pour aller plus loin"
-              subtitle="Des sites fiables, pensés pour les jeunes"
+              title="Pour aller plus loin"
+              subtitle="Des sites fiables pour développer toutes les thématiques autour de la contraception"
               resources={ressourcesGenerales}
             />
           </div>
@@ -353,38 +332,130 @@ const Sexualite = () => {
 
           <h1 className="titre">Vivre sa sexualité</h1>
 
-          <p className="texte">
-            La sexualité ne se limite pas à la pénétration. Elle englobe un ensemble de pratiques, de désirs et d’expressions du plaisir, seul·e ou à plusieurs. 
-            Chacun·e peut explorer sa sexualité à son rythme, selon ses envies et ses limites, dans le respect du consentement mutuel.
-          </p>
 
           <p className="texte">
-            Le <b>plaisir solo</b> (masturbation) est une pratique courante et saine : elle permet de mieux connaître son corps, de découvrir ce qui fait du bien, 
+            La sexualité fait partie intégrante de la santé et du bien-être. Elle concerne le plaisir, le respect, les émotions, l’intimité et la responsabilité.
+             La sexualité ne se limite pas à la pénétration. Elle englobe un ensemble de pratiques, de désirs et d’expressions du plaisir, seul·e ou à plusieurs. 
+             Chacun·e peut explorer sa sexualité à son rythme, selon ses envies et ses limites, dans le respect du consentement mutuel.
+           </p>
+
+           <ExternalLinkBlock resources={
+              [
+                    {
+                      link: "/consent",
+                      emoji : "✅",
+                      label: "Consentement",
+                      description: "On fait le point ?"
+                    },
+                    {
+                      link : "/sex_orient",
+                      emoji : "🏳️‍🌈",
+                      label : "Orientation sexuelle",
+                      description : "Quels sont les différentes orientations sexuelles ?"
+                    },
+                  ]
+                }
+           />
+
+
+          <h2 className="sous-titre-2">La sexualité solo</h2>
+
+          <p className="texte">
+            Le <b>plaisir solo</b> (qui peut regrouper masturbation, caresses, massages, etc.) est une pratique courante et saine : elle permet de mieux connaître son corps, de découvrir ce qui fait du bien, 
             et d’aborder plus sereinement la sexualité à deux. Il n’y a pas de “bonne” ou de “mauvaise” manière de se découvrir.
+         </p>
+          <p className="texte"> Cela peut t'aider à te découvrir et à mieux t'accepter, ou juste à te détendre ! Tu peux aussi explorer tes <b>zones érogènes</b> (c'est-à-dire les zones sensibles dont la stimulation peut intensifier ton plaisir sexuel) ce qui te permettra d'avoir un érotisme plus épanoui, seul·e ou non. 
           </p>
-
           <p className="texte">
-            Les <b>rapports sans pénétration</b> (caresses, baisers, frottements, échanges oraux, etc.) peuvent être tout aussi intimes et satisfaisants. 
-            Ce sont des manières d’exprimer le désir sans forcément prendre de risques liés à une grossesse ou aux IST — 
-            même si certaines pratiques nécessitent toujours une protection (préservatif ou digue dentaire pour le sexe oral par exemple).
-          </p>
-
-          <p className="texte">
-            Le <b>porno</b> n’est pas un mode d’emploi : il montre des scénarios souvent irréalistes, centrés sur la performance plutôt que sur le plaisir partagé. 
-            En vrai, la sexualité repose sur la communication, l’écoute, le respect et le consentement. 
-            Personne ne doit se sentir obligé·e de faire ce qu’il ou elle ne souhaite pas.
-          </p>
-
-          <p className="texte">
-            L’important, c’est d’apprendre à se connaître, à se respecter, et à s’assurer que chaque expérience se déroule dans le <b>consentement mutuel</b> et la <b>bienveillance</b>. 
-            Chacun·e a le droit de dire non, de changer d’avis, ou de poser ses limites à tout moment.
-          </p>
+          Et si le plaisir solo ne t'intéresse pas, c'est aussi parfaitement normal.</p>
 
           <ExternalLinkBlock
+            resources={[
+              {
+                link: "https://commentonsaime.fr/ma-sexualite/sexualite-solo/",
+                imageSrc: "/assets/logo-cosa.svg",
+                label: "Sexualité solo",
+                description: "Tout ce qu'il faut savoir sur le plaisir solo"
+              },
+            ]}
+          />
+
+
+          <h2 className="sous-titre-2">Les rapports sans pénétration</h2>
+
+         <p className="texte">
+            Les <b>rapports sans pénétration</b> (caresses, baisers, frottements, échanges oraux, etc.) peuvent être tout aussi intimes et satisfaisants. Ce sont des manières d’exprimer le désir sans forcément prendre de risques liés à une grossesse ou aux IST. Se concentrer sur ces pratiques permet une meilleure communication et enrichit la vie intime.
+          </p>
+            
+            <p className="texte">
+                La sexualité non pénétrative inclut l'excitation des parties génitales sans insertion dans le vagin ou l’anus. Les principales pratiques comprennent :
+            </p>
+
+            <BulletList items={[  
+                <><b>L'Anulingus :</b> Le fait d'embrasser ou de lécher l'anus du ou de la partenaire, l'anus étant une zone érogène très sensible.</>,
+                <><b>Le Cunnilingus :</b> Le fait d'utiliser la langue et les lèvres pour lécher ou embrasser la vulve et/ou le clitoris. Le clitoris, étant une zone très sensible, peut être stimulé de manière douce ou rapide, selon les préférences.</>,
+                <><b>La fellation :</b> Le fait d'embrasser ou de lécher le pénis et les testicules, le gland étant particulièrement sensible.</>,
+            ]} />
+
+            <p className="mise-avant">
+                Pour le sexe oral sur la vulve (Cunnilingus) ou l’anus (Anulingus), la <b>digue dentaire</b> (ou carré de latex) est l'outil le plus adapté pour se protéger des IST. Elle est fine et préserve les sensations. Lors d'une fellation, il est aussi important de se protéger avec un préservatif.
+            </p>
+
+           <ExternalLinkBlock
             title=""
             subtitle=""
-            resources={page_porno}
+            resources={page_ist}
           />
+
+
+            <h2 className="soustitre">Et le porno ?</h2>
+
+            <p className="texte">
+              Le <b>porno</b> n’est pas un mode d’emploi : il montre des scénarios souvent irréalistes, centrés sur la performance plutôt que sur le plaisir partagé.
+              Ils peuvent véhiculer des stéréotypes sexistes qui amenènent à considérer la femme comme un « objet sexuel ». 
+              L'usage du porno comme source unique d'information peut engendrer un rapport anxiogène au corps et des attentes irréalistes.
+              En vrai, la sexualité repose sur la communication, l’écoute, le respect et le consentement. 
+              Personne ne doit se sentir obligé·e de faire ce qu’il ou elle ne souhaite pas.
+           </p>
+
+           <p className="texte">
+             L’important, c’est d’apprendre à se connaître, à se respecter, et à s’assurer que chaque expérience se déroule dans le <b>consentement mutuel</b> et la <b>bienveillance</b>. 
+             Chacun·e a le droit de dire non, de changer d’avis, ou de poser ses limites à tout moment.
+           </p>
+
+           <ExternalLinkBlock resources = {
+            [
+              {
+                link : "/add_porno",
+                emoji : "🔞",
+                label : "Pornographie",
+                description : "Quels sont les risques ?"
+              },
+            ]
+           } />
+
+           <ExternalLinkBlock
+                title="Pour découvrir toutes les formes de sexualité"
+                subtitle="Découvrir d'autres formes de sexualité, se faire accompagner sur le porno ou les pratiques"
+                resources={[
+                  {
+                  link: "https://www.commentonsaime.fr/",
+                  imageSrc: "/assets/commentonsaime.png",
+                  label: "Comment on s'aime",
+                  description: "Articles sur la sexualité avec un handicap, après une excision ou encore sur le porno."
+                },
+                {
+                  link: "https://www.onsexprime.fr/",
+                  imageSrc: "/assets/onsexprimepng-png.png",
+                  label: "On s'exprime",
+                  description: "Site de référence sur la sexualité des jeunes, par Santé publique France"
+                },
+              ]
+            }
+          />
+
+
+
 
       </div>
 
@@ -392,7 +463,7 @@ const Sexualite = () => {
           <Separateur />
 
           <div id="personne-concernee">
-            <h1 className="titre">Je suis concerné·e</h1>
+            <h1 className="titre">Parler contraception et sexualité</h1>
             <p className="texte">
             Tu te poses des questions sur ta sexualité, ton orientation, tes pratiques, ou tu vis une situation particulière (grossesse, IST, IVG…) ? Tu n'es pas seul·e. Des professionnel·le·s formé·e·s sont là pour t'écouter, t'informer et t'accompagner sans jugement, à ton rythme.
             </p>
@@ -425,20 +496,14 @@ const Sexualite = () => {
             image="/assets/planning-familial.jpg"
             title="Planning Familial"
             subtitle="Orientation, IVG, contraception"
-            hours="Selon les centres"
+            hours="Voir le site"
+            email ="contact@planningfamilial69.fr"
+            phone="04 78 89 50 61"
             textButton="Trouver un centre"
-            link="https://www.planning-familial.org/"
+            link="https://www.planning-familial.org/fr/le-planning-familial-du-rhone-69"
             bgColor="#ff5f63"
             textColor="#ffffff"
           />
-
-          <div className="texte bloc-info">
-            <h3>🛡️ Accès gratuit aux préservatifs</h3>
-            <p>
-              Des préservatifs sont disponibles gratuitement à l'infirmerie de Centrale Lyon : n'hésite pas à en demander, c'est confidentiel et sans jugement.
-              Si tu as moins de 26 ans, tu peux également en obtenir gratuitement en pharmacie (internes et externes), sans ordonnance, grâce au dispositif de l'Assurance Maladie.
-            </p>
-          </div>
 
           <ExternalLinkBlock
             title="Besoin de plus d'infos ?"
@@ -463,7 +528,7 @@ const Sexualite = () => {
         />
       </div>
 
-      <p className="texte"><em><b>Sources :</b> Onsexprime.fr, Santé publique France, Planning Familial, QuestionSexualite.fr, ivg.gouv.fr</em></p>
+      <p className="texte"><em><b>Sources :</b> Onsexprime.fr, Santé publique France, Planning Familial, QuestionSexualite.fr, ivg.gouv.fr, Comment on s'aime</em></p>
     
     
       </div>
