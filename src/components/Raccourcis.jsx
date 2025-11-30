@@ -4,6 +4,7 @@ import { useTheme } from '../ThemeProvider';
 import { useLanguage } from '../LanguageProvider';
 import "./raccourcis.css";
 
+
 export default function Raccourcis() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -11,6 +12,7 @@ export default function Raccourcis() {
   const navRef = useRef();
   const [top, setTop] = useState(110);
   const [hideNearFooter, setHideNearFooter] = useState(false);
+
 
   useEffect(() => {
     const computeBaseTop = () => {
@@ -78,13 +80,13 @@ export default function Raccourcis() {
         <div className="fab-item">
           <button type="button" className="fab-btn fab-exit" onClick={handleQuit} aria-label="Quitter le site">
             <span className="fab-icon" aria-hidden>❌</span>
-            <span className="fab-label">Quitter le site</span>
+            <span className="fab-label">{lang === 'en' ? 'Exit website' : 'Quitter le site'}</span>
           </button>
         </div>
         <div className="fab-item">
           <button type="button" className="fab-btn fab-theme" onClick={() => setDarkMode(!darkMode)} aria-label={darkMode ? 'Passer en thème clair' : 'Passer en thème sombre'}>
             <span className="fab-icon" aria-hidden>{darkMode ? '☀️' : '🌙'}</span>
-            <span className="fab-label">{darkMode ? 'Thème clair' : 'Thème sombre'}</span>
+            <span className="fab-label">{darkMode ? (lang === 'en' ? 'Light theme' : 'Thème clair') : (lang === 'en' ? 'Dark theme' : 'Thème sombre')}</span>
           </button>
         </div>
         <div className="fab-item">
@@ -133,7 +135,7 @@ export default function Raccourcis() {
             aria-label={inModeSoiree ? 'Quitter le mode soirée' : 'Activer le mode soirée'}
           >
             <span className="fab-icon" aria-hidden>{inModeSoiree ? '↩️' : '🎉'}</span>
-            <span className="fab-label">{inModeSoiree ? 'Quitter le mode soirée' : 'Mode soirée'}</span>
+            <span className="fab-label">{inModeSoiree ? (lang === 'en' ? 'Exit party mode' : 'Quitter le mode soirée') : (lang === 'en' ? 'Party mode' : 'Mode soirée')}</span>
           </button>
         </div>
       </div>
