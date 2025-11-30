@@ -181,12 +181,12 @@ const Sexualite = () => {
           <BulletList items={[
             <><b>Préservatifs (masculin et féminin) :</b> barrières mécaniques à usage unique, ils empêchent le passage des spermatozoïdes et protègent des IST. Ils sont en vente libre et disponibles gratuitement pour les moins de 26 ans.</>,
             <><b>Pilule contraceptive :</b> comprimé hormonal à prendre chaque jour, elle bloque l’ovulation et rend la muqueuse utérine moins réceptive. Son efficacité dépend de la régularité de la prise.</>,
-            <><b>Implant contraceptif :</b> petit bâtonnet placé sous la peau du bras, il diffuse une hormone en continu pendant 3 ans. Invisible et très efficace, il nécessite une pose et un retrait médical.</>,
-            <><b>Anneau vaginal :</b> petit dispositif souple à insérer dans le vagin, libérant des hormones pendant 3 semaines avant une semaine d’arrêt. Il se change chaque mois.</>,
-            <><b>Patch contraceptif :</b> timbre adhésif posé sur la peau, diffusant des hormones pendant 7 jours. Il se remplace chaque semaine pendant 3 semaines, avec une pause la 4ᵉ.</>,
-            <><b>Stérilet (DIU) :</b> petit dispositif placé dans l’utérus par un·e professionnel·le de santé. Le DIU hormonal agit localement sur la muqueuse utérine, tandis que le DIU au cuivre empêche les spermatozoïdes de féconder l’ovule. Leur durée varie de 3 à 10 ans.</>,
+            <><b>Implant contraceptif :</b> petit bâtonnet placé sous la peau du bras, il diffuse une hormone (un progestatif permettant de supprimer l'ovulation) en continu pendant 3 ans. Invisible et très efficace, il nécessite une pose et un retrait médical.</>,
+            <><b>Anneau vaginal :</b> petit dispositif souple à insérer dans le vagin, libérant des hormones (progestatif et œstrogène) pendant 3 semaines avant une semaine d’arrêt. Il se change chaque mois.</>,
+            <><b>Patch contraceptif :</b> timbre adhésif posé sur la peau, diffusant des hormones (progestatif et œstrogène) pendant 7 jours. Il se remplace chaque semaine pendant 3 semaines, avec une pause la 4ᵉ.</>,
+            <><b>Stérilet (DIU) :</b> petit dispositif placé dans l’utérus par un·e professionnel·le de santé. Le <b>DIU au cuivre</b> empêche une grossesse de s'installer et le cuivre rend les spermatozoïdes inactifs. Le <b>DIU hormonal</b> contient en plus une hormone progestative qui entraîne l'épaississement des sécrétions du col de l'utérus et bloque ainsi le passage des spermatozoïdes. L'efficacité n'est pas réellement différente, le DIU hormonal peut surtout diminuer le volume et la durée des règles ainsi que les contractions douloureuses. Leur durée d'efficacité est de 4 à 10 ans (cuivre), ou de 5 ans (hormonal). </>,
             <><b>Injection contraceptive :</b> réalisée tous les 3 mois par un·e professionnel·le, elle bloque l’ovulation par un apport hormonal continu.</>,
-            <><b>Méthodes naturelles :</b> observation du cycle, retrait, calendrier… Ces méthodes nécessitent une grande rigueur et sont grandement moins fiables que les autres. Elles ne protègent pas des IST.</>,
+            <><b>Méthodes naturelles :</b> observation du cycle, retrait, calendrier… Ces méthodes nécessitent une grande rigueur et sont beaucoup moins fiables que les autres. Elles peuvent être utilisées par des personnes pour qui la survenue d'une grossesse serait acceptable. Elles ne protègent pas des IST.</>,
             <><b>Contraception d’urgence :</b> en cas de rapport à risque ou d’oubli, la pilule du lendemain peut être prise jusqu’à 3 à 5 jours après, de préférence le plus tôt possible. Elle ne remplace pas une méthode régulière.</>,
             <><b>Vasectomie et ligature des trompes :</b> interventions définitives (ou très difficilement réversibles) visant à empêcher la fécondation. Elles concernent les personnes sûres de leur choix de ne plus avoir d’enfant.</>
           ]} />
@@ -310,7 +310,7 @@ const Sexualite = () => {
             <p className="texte">
               Parfois, malgré une contraception ou suite à un oubli, une grossesse non prévue peut survenir.
               Dans ce cas, il est essentiel de savoir que des solutions existent, dont l’interruption volontaire de grossesse (IVG).
-              L’IVG est un droit garanti par la loi, accessible gratuitement et dans la confidentialité, accompagné par des professionnel·le·s de santé et des structures d’écoute comme le Planning Familial.
+              L’IVG est un droit garanti par la loi, accessible gratuitement et dans la confidentialité. L'accompagnement est réalisé par des professionnel·le·s de santé et des structures d’écoute comme le Planning Familial.
               Pour mieux comprendre les démarches, les délais et les différents types d’IVG, consulte notre page dédiée :
             </p>
 
