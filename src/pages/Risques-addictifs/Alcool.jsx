@@ -5,8 +5,6 @@ import ExternalLinkBlock from "../../components/Liens-ext";
 import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
 import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
-import React from "react";
-import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
 import Separateur from "../../components/Separateur";
 import "../../App.css";
 
