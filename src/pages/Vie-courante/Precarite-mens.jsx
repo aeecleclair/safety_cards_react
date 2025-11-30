@@ -141,7 +141,7 @@ const PrecariteMens = () => {
         <p className="texte">A Centrale et dans ses alentours, il est possible de se procurer des protections menstruelles gratuites dans plusieurs lieux :</p>
         <BulletList items={["Infirmerie de l'école",
           "Associations locales et collectes (Règles Élémentaires, banques alimentaires partenaires)",
-          "Distributeurs gratuits au W1 et au W1bis à partir de la rentrée",
+          "Distributeurs gratuits de serviettes hygiéniques et tampons aux toilettes des W1 (rez-de-chaussée), W1bis (rez-de-chaussée) et M16 (sous-sol)",
         ]} />
 
       </div>

@@ -12,7 +12,7 @@ const ListeNumerotee = ({ title, subtitle, items }) => {
             <span className="liste-number">{index + 1}</span>
             <div className="liste-content">
               <h3 className="item-title">{item.title}</h3>
-              <p className="item-subtitle">{item.subtitle}</p>
+              <p className="item-subtitle" dangerouslySetInnerHTML={{ __html: item.subtitle }}></p>
               {item.subitems && (
                 <ol className="sub-liste-items" type="a">
                   {item.subitems.map((subitem, subindex) => (
