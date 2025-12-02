@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import "./contact.css";
+import { useLanguage } from "../LanguageProvider";
+
 
 const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, link, bgColor: propBgColor, textColor: propTextColor, variant }) => {
   const [bgColor, setBgColor] = useState(propBgColor || "#ffffff");
   const [textColor, setTextColor] = useState(propTextColor || "#000000");
   const [isDarkMode, setIsDarkMode] = useState(document.body.classList.contains("dark-mode"));
+  const { lang } = useLanguage();
 
   useEffect(() => {
     if (!propBgColor || !propTextColor) {
@@ -88,9 +91,9 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
       <div className="contact-info">
         <h2 style={{ color: baseColors.text }}>{title}</h2>
         {subtitle && <h3 style={{ color: baseColors.text }}>{subtitle}</h3>}
-        {phone && <p style={{ color: baseColors.text }}><strong>Téléphone :</strong> {phone}</p>}
-        {email && <p style={{ color: baseColors.text }}><strong>Email :</strong> {email}</p>}
-        {hours && <p style={{ color: baseColors.text }}><strong>Horaires :</strong> {hours}</p>}
+        {phone && <p style={{ color: baseColors.text }}><strong>{lang === 'en' ? 'Phone' : 'Téléphone'} :</strong> {phone}</p>}
+        {email && <p style={{ color: baseColors.text }}><strong>{lang === 'en' ? 'Email' : 'Email'} :</strong> {email}</p>}
+        {hours && <p style={{ color: baseColors.text }}><strong>{lang === 'en' ? 'Hours' : 'Horaires'} :</strong> {hours}</p>}
         {link && (
           <a
             className="link-button"

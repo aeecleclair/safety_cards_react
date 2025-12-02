@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./cartes.css";
+import { useLanguage } from "../LanguageProvider";
+
 
 const ImageTextPopup = ({ image, title, shortText, longText, textButton, suit }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { lang } = useLanguage();
 
   // Couleur en fonction de l'attribut (coeur / carreau / trefle / pique)
   const rawSuit = (suit || '').toString().trim();
@@ -47,7 +50,7 @@ const ImageTextPopup = ({ image, title, shortText, longText, textButton, suit })
             <div className="modal-text-image">
               <div className="modal-image-container">
                 <img src={image} alt={title} />                
-                <p className="image-caption notice-caption">ⓘ  Image générée par IA à partir de nos idées, puis retouchée par nos soins :)</p>
+                <p className="image-caption notice-caption">{lang === 'en' ? 'ⓘ AI-generated image based on our ideas, then retouched by us :)' : 'ⓘ  Image générée par IA à partir de nos idées, puis retouchée par nos soins :)'}</p>
 
               </div>
               <div className="modal-text">

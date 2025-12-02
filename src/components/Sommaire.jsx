@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from '../ThemeProvider';
+import { useLanguage } from "../LanguageProvider";
+
 import "./sommaire.css";
 
 export default function Sommaire({ links }) {
@@ -11,6 +13,8 @@ export default function Sommaire({ links }) {
   const [computedTop, setComputedTop] = useState(110);
   const [hideNearFooter, setHideNearFooter] = useState(false);
   const hasLinks = Array.isArray(links) && links.length > 0;
+  const { lang } = useLanguage();
+
 
   useEffect(() => {
     window.__hasSommaire = true;
@@ -210,7 +214,7 @@ export default function Sommaire({ links }) {
 
       {hasLinks && (
         <div className="navbar-links" id="navbar-links">
-          <p className="sommaire">Sommaire</p>
+          <p className="sommaire">{lang === 'en' ? 'Summary' : 'Sommaire'}</p>
           {links.map((link, index) => {
             const p = sectionsProgress[link.target] || 0;
             return (
