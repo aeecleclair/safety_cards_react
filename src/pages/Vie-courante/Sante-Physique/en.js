@@ -17,6 +17,7 @@ const en = {
     suit: "pique"
   },
 
+  Titlepage: "Physical health & sport",
   importanceTitle: "Why and where to practice sports?",
   importanceIntro:
     "Physical activity includes any movement of the body produced by the muscles, ranging from daily walking to team sports, swimming, dancing, yoga or fitness.",

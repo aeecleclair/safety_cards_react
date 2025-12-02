@@ -25,7 +25,7 @@ const SportSante = () => {
   return (
     <div className="page">
       {/* --- TITRE + NAVIGATION --- */}
-      <h1 className="titre-page">{t.importanceTitle}</h1>
+      <h1 className="titre-page">{t.Titlepage}</h1>
       <Sommaire links={t.navLinks} />
 
       {/* --- SECTION IMPORTANCE --- */}

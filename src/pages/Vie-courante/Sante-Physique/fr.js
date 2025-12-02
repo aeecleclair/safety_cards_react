@@ -17,6 +17,7 @@ const fr = {
     suit: "pique"
   },
 
+  Titlepage: "Santé physique & sport",
   importanceTitle: "Pourquoi et où faire du sport ?",
   importanceIntro:
     "L'activité physique inclut tout mouvement du corps produit par les muscles, allant de la marche quotidienne aux sports collectifs, natation, danse, yoga ou fitness.",
