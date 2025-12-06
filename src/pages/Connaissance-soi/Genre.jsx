@@ -9,25 +9,13 @@ import Sommaire from "../../components/Sommaire";
 import ContactCard from "../../components/Contact";
 import Separateur from "../../components/Separateur";
 import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
+import { useLanguage } from "../../LanguageProvider";
+import fr from "./Genre/fr.jsx";
+import en from "./Genre/en.jsx";
 
-const navLinks = [
-  { label: "Qu'est-ce que l'identité de genre ?", target: "definition" },
-  { label: "Pour les personnes concernées", target: "concernes" },
-  { label: "Comment accompagner un·e proche ?", target: "accompagner" },
-];
+const dict = { fr, en };
 
-const chiffresIdentite = [
-  {
-    number: "1–2",
-    title: "étudiant·es par promo",
-    description: "commencent une transition à Centrale Lyon (estimation locale)",
-  },
-  {
-    number: "8,8%",
-    title: "ont subi des discriminations",
-    description: "liées au genre ou à l'orientation sexuelle sur le campus",
-  },
-];
+// chiffres now provided by localization files
 
 
 
@@ -92,302 +80,156 @@ const resources_Autres_pages = [
 
 
 const Genre = () => {
+  const { lang } = useLanguage();
+  const t = dict[lang] || fr;
   return (
     <div className="page">
-  <h1 className="titre-page gradient-title">Identité de genre</h1>
+  <h1 className="titre-page gradient-title">{t.pageTitle}</h1>
 
-      <Sommaire links={navLinks} />
+      <Sommaire links={t.navLinks} />
 
       <div id="definition" className="section">
-        <h2 className="titre">Qu'est-ce que l'identité de genre ?</h2>
+        <h2 className="titre">{t.navLinks[0]?.label}</h2>
 
       <ImageTextPopup
-        image="./assets/cartes/8_coeur.png"
-        title="La carte 8♠"
-        shortText="Sensibilisation au mégenrage"
-        longText="A Centrale, le surnom est le moyen le plus courant de s'adresser à quelqu'un·e. Chacun fait donc généralement l'effort de retenir le prénom et le surnom de chacun, et d'utiliser l'un ou l'autre en fonction du contexte. Cette carte vise à poser la question suivante : si l'effort est fait pour retenir le prénom/surnom, pourquoi ne pas faire l'effort de retenir les pronoms et le prénom choisis par une personne trans ou non-binaire ? Le mégenrage désigne le fait de s'adresser à une personne avec des pronoms ou un prénom qui ne correspondent pas à son identité de genre. Cela peut être involontaire (oubli, erreur) ou intentionnel (manque de respect, discrimination). Le mégenrage peut causer un profond malaise et renforcer le sentiment d'isolement. En faisant l'effort de respecter les pronoms et le prénom choisis, on contribue à créer un environnement inclusif et bienveillant pour tou·tes."
-        textButton="⤢ Agrandir la carte"
+        image={t.card.image}
+        title={t.card.title}
+        shortText={t.card.shortText}
+        longText={t.card.longText}
+        textButton={t.card.textButton}
       />
 
         <TextImageRight
           imageSrc="/assets/personne-gingenre.jpg"
           enlargeOnClick
-          text={
-            <>
-              <p className="texte">
-                L'<strong>identité de genre</strong> est la conviction intime, profonde et durable d'être un homme, une femme,
-                les deux, ni l'un ni l'autre, ou de changer au fil du temps. Elle est distincte du <strong>sexe assigné à la naissance</strong> (basé sur les caractéristiques anatomiques), de
-                l'<strong>expression de genre</strong> (comment une personne se présente : vêtements, voix, comportement)
-                et de l'<strong>orientation sexuelle</strong> (vers qui on se sent attiré·e). Afin de mieux comprendre la distinction, tu peux te ramener au schéma de la personne gingenre.
-              </p>
-
-            </>
-          }
+          text={<p className="texte">{t.definitionText}</p>}
         />
 
-        <h3 className="sous-titre-2">Des exemples d'identité de genre</h3>
+        <h3 className="sous-titre-2">{t.examplesTitle}</h3>
 
-              <BulletList
-                items={[
-                  <><b>Cisgenre :</b> identité en accord avec le sexe assigné à la naissance.</>,
-                  <><b>Transgenre (ou trans) :</b> identité différente du sexe assigné à la naissance.</>,
-                  <><b>Non-binaire :</b> ne se reconnaît pas uniquement dans les catégories « homme » ou « femme ». Elles peuvent fluctuer entre genres (genderfluid) ou ressentir une identité « au-delà » du masculin/féminin.</>,
-                  <><b>Agenre :</b> ne ressent aucune affiliation à un genre.</>,
-                  <>D'autres termes existent (androgyne, queer, etc.) pour décrire des expériences de genre variées. Toutes ces identités ont toujours existé et reflètent la pluralité des vécus humains.</>,
-                ]}
-              />
+              <BulletList items={t.examplesBullets} />
 
-              <ExternalLinkBlock
-                resources={[
-                  {
-                    link: "/sex_orient",
-                    label: "Orientation sexuelle",
-                    description: "Pour comprendre davantage l'orientation sexuelle et ses nuances.",
-                    emoji: "🏳️‍🌈 ",
-                  },
-                ]}
-              />
+              <ExternalLinkBlock resources={t.resourcesOrientation} />
 
-              <ChiffresGroup chiffres={chiffresIdentite} />
+              <ChiffresGroup chiffres={t.chiffresIdentite} />
 
 
-              <h3 className="sous-titre-2">La disphorie de genre</h3>
+              <h3 className="sous-titre-2">{t.dysphoriaTitle}</h3>
 
-              <p className="texte">
-                La <strong>dysphorie de genre</strong> désigne le malaise ou la souffrance qu'une personne peut ressentir quand
-                son identité n'est pas reconnue ou quand son corps ne correspond pas à ce qu'elle ressent. Ce terme est généralement utilisé dans le milieu médical pour désigner le tourment psychologique que l'on peut ressentir, avec des symptômes proches de l'anxiété ou de la dépression. Toutes les personnes trans ou non-binaires ne vivent pas de dysphorie de genre.
-              </p>
+              <p className="texte">{t.dysphoriaText}</p>
 
               <ExternalLinkBlock
-                resources={[
-                  {
-                    link: "/depression",
-                    label: "Dépression",
-                    description: "Pour comprendre davantage la dépression et ses symptômes.",
-                    emoji: "🥺",
-                  },
-                  {
-                    link: "/anxiete",
-                    label: "Anxiété",
-                    description: "Pour comprendre davantage l'anxiété et ses symptômes.",
-                    emoji: "😶‍🌫️",
-                  },
-                ]}
+                resources={t.dysphoriaResources}
               />
 
-              <Quote text="Le genre n'est pas ce qu'on voit, mais ce qu'on ressent." />
+              <Quote text={t.quote1} />
 
 
 
         <ExternalLinkBlock
-          title="Pour en savoir plus"
-          subtitle="Quelques ressources pour approfondir"
-          resources={[
-            {
-              link: "https://wikitrans.co/",
-              imageSrc: "/assets/wikitrans.svg",
-              label: "WikiTrans",
-              description: "Nombreux articles et témoignages pour en apprendre davantage",
-            },
-            {
-              link: "https://www.outrans.org/ressources/brochures-doutrans/",
-              imageSrc: "/assets/outrans.png",
-              label: "OUTrans",
-              description: "Brochures et guides d'autosupport (hormones, parcours, opérations...)",
-            },
-            {
-              link: "https://questionsexualite.fr/connaitre-son-corps-et-sa-sexualite/la-diversite-de-genre/qu-est-ce-que-l-identite-de-genre",
-              imageSrc: "/assets/question_sexualite.png",
-              label: "Question Sexualite",
-              description: "Pour en apprendre davantage sur l'identité de genre",
-            }
-          ]}
+          title={t.learnMoreTitle}
+          subtitle={t.learnMoreSubtitle}
+          resources={t.learnMoreResources}
         />
       </div>
 
       <Separateur />
 
       <div id="concernes" className="section">
-        <h2 className="titre">Pour les personnes concernées</h2>
+        <h2 className="titre">{t.navLinks[1]?.label}</h2>
 
-        <p className="texte">
-          Si tu te questionnes sur ton genre : d'abord, prends le temps. Il n'existe pas de test unique et ton ressenti est la
-          meilleure boussole.
-        </p>
+        <p className="texte">{t.concernsIntro}</p>
 
-        <ExternalLinkBlock resources={
-          [
-            { link: "https://wikitrans.co/2019/01/01/comment-savoir-si-je-suis-trans/", label: "Comment savoir si je suis trans ?", description: "Pour t'aider à réfléchir sur ton genre", imageSrc: "/assets/wikitrans.svg"},
-            { link: "https://www.la-clinique-e-sante.com/blog/sexualite/identite-genre-questions", label: "Identité de genre", description: "10 questions pour t'aider à avancer"},
-          ]
-        } />
+        <ExternalLinkBlock resources={t.concernsLinks} />
 
 
 
-        <h3 className="sous-titre-2">Se connaître et expérimenter</h3>
+        <h3 className="sous-titre-2">{t.knowExperimentTitle}</h3>
         <BulletList
-          items={[
-            <><b>Apprendre à se connaitre :</b> lis des témoignages, guides pratiques et FAQ. </>,
-            <><b>Essayer :</b> des changements progressifs (prénom d'usage auprès d'amis, modifications vestimentaires, pronoms). </>,
-            <><b>S'écouter :</b> note ce qui te procure du bien-être (euphorie de genre : sentiment de bien-être quand tu es perçu·e comme tu te sens) et ce qui te met mal à l'aise.</>,
-          ]}
+          items={t.knowExperimentBullets}
         />
 
 
-        <h3 className="sous-titre-2">S'informer</h3>
+        <h3 className="sous-titre-2">{t.informTitle}</h3>
 
-        <p className="texte">Pour alimenter ta réflexion et peut-être découvrir de nouvelles pistes, tu peux te renseigner sur :  </p>
+        <p className="texte">{t.informIntro}</p>
 
-          <BulletList
-            items={[
-              <>La manière de réaliser ton <b>coming out</b></>,
-              <><b>Les moyens d'exprimer ton genre :</b> il existe de nombreux moyens médicaux ou non pour changer ou dissimuler certains attributs physiques </>,
-              <><b>Les Traitements Hormonaux de Substitution (THS) : </b>les différents types de traitements, les médecins et moyens de se faire accompagner</>,
-              <><b>Les différentes opérations masculinisantes ou féminisantes</b></>,
-              <><b>L'Affectation de Longue Durée (ALD)</b> qui permet une meilleure prise en charge de la transition par la sécurité sociale</>,
-              <><b>Les différentes démarches administratives</b> (changement de prénom, de mention de genre...)</>,
-            ]}
-          />
+          <BulletList items={t.informBullets} />
 
-          <p className="texte">Il existe de nombreuses brochures et FAQ en ligne (WikiTrans, Fransgenre, OUTrans, Chrysalide) qui répondent aux questions les plus fréquentes.</p>
+          <p className="texte">{t.informBrochuresNote}</p>
 
-          <ExternalLinkBlock
-            resources = {[
-              {
-                link: "https://wikitrans.co/2019/01/19/quest-ce-quune-transition/",
-                imageSrc: "/assets/wikitrans.svg",
-                label: "Wikitrans",
-                description: "Réponses aux questions fréquentes sur la transition",
-              },
-              {
-                link: "https://www.fransgenre.fr/brochures",
-                imageSrc: "/assets/fransgenre.webp",
-                label: "Fransgenre",
-                description: "Brochures sur les hormones, opérations, démarches, carte des médecins...",
-              },
-              {
-                link: "https://outrans.org",
-                imageSrc: "/assets/outrans.png",
-                label: "OUTrans",
-                description: "Brochures et guides d'autosupport (hormones, parcours, opérations...)",
-              },
-
-            ]
-            }
-          />
+          <ExternalLinkBlock resources={t.infoResources} />
 
        
 
 
-        <h3 className="sous-titre-2">Associations de soutien</h3>
-        <p className="texte">
-          Les <b>groupes d'autosupport</b> sont précieux : rencontrer d'autres personnes trans/non-binaires permet d'échanger sur le
-          quotidien, les médecins, et les démarches administratives. Tu trouveras des groupes en ligne et locaux. Sur le campus de Centrale Lyon, n'hésite pas à contacter Rainbow.
-        </p>
+        <h3 className="sous-titre-2">{t.associationsTitle}</h3>
+        <p className="texte">{t.associationsText}</p>
 
-        <ContactCard
-          title="Chrysalide"
-          subtitle="Groupe d'échange à Lyon pour les personnes trans et leur entourage"
-          image="/assets/chrysalide.png"
-          hours="Le 3ème samedi de chaque mois (hors juillet/août) de 15h à 18h"
-          textButton="En savoir plus"
-          link="https://chrysalide-asso.fr/contact/"
+        {t.associationsContacts && t.associationsContacts[0] && (
+          <ContactCard
+            image={t.associationsContacts[0].image}
+            title={t.associationsContacts[0].title}
+            subtitle={t.associationsContacts[0].subtitle}
+            phone={t.associationsContacts[0].phone}
+            email={t.associationsContacts[0].email}
+            hours={t.associationsContacts[0].hours}
+            textButton={t.associationsContacts[0].textButton}
+            link={t.associationsContacts[0].link}
+            bgColor={t.associationsContacts[0].bgColor}
+            textColor={t.associationsContacts[0].textColor}
+          />
+        )}
+        {t.associationsContacts && t.associationsContacts[1] && (
+          <ContactCard
+            image={t.associationsContacts[1].image}
+            title={t.associationsContacts[1].title}
+            subtitle={t.associationsContacts[1].subtitle}
+            phone={t.associationsContacts[1].phone}
+            email={t.associationsContacts[1].email}
+            hours={t.associationsContacts[1].hours}
+            textButton={t.associationsContacts[1].textButton}
+            link={t.associationsContacts[1].link}
+            bgColor={t.associationsContacts[1].bgColor}
+            textColor={t.associationsContacts[1].textColor}
+          />
+        )}
 
-          bgColor="#7A1DA9"
-          textColor="#ffffff"
-        />
 
-        <ContactCard
-          image="/assets/centre_lgbti_lyon.png"
-          title="Centre LGBTI+ Lyon"
-          subtitle="Espace associatif et ressource locale"
-          phone=""
-          email="contact@centrelgbtilyon.org"
-          hours="Accueil & permanences : mardi et mercredi de 17h30 à 19h30, vendredi de 14h à 19h"
-          textButton="Voir le site"
-          link="https://www.centrelgbtilyon.org/"
-          bgColor="#ffffff"
-          textColor="#ec62f1ff"
-        />
+        <ExternalLinkBlock resources={t.associationsLinks} />
 
+        <h3 className="sous-titre-2">{t.adminTitle}</h3>
 
-        <ExternalLinkBlock
-          resources={[
-            {
-              link: "https://wikitrans.co/carte/",
-              imageSrc: "/assets/wikitrans.svg",
-              label: "Carte des associations françaises",
-              description: "Pour trouver un groupe près de chez toi",
-            },
-            {
-              link: "https://www.instagram.com/ost_lyon/",
-              imageSrc: "/assets/ost_lyon.jpg",
-              label: "OST Lyon",
-              description: "Organisation de Solidarité Trans, d'autosupport et de lutte",
-            },
-            {
-              link: "https://www.instagram.com/rainbow.ecl/?hl=fr",
-              imageSrc: "/assets/rainbow.jpg",
-              label: "Rainbow - Compte Instagram",
-              description: "Club LGBTQIA+ de l'école Centrale de Lyon"
-            }
-          ]}
-        />
+        <p className="texte">{t.adminText}</p>
 
-        <h3 className="sous-titre-2">Les démarches administratives à Centrale Lyon</h3>
-
-        <p className="texte">
-          Pour <b>changer ton prénom d'usage ou ton titre de civilité (Monsieur/Madame)</b> dans les services de l'école (Moodle, listes d'appel, carte étudiante), il te suffit
-          généralement d'envoyer un mail à la scolarité. Le changement de prénom sur le diplôme nécessite par contre une démarche auprès de l'état civil. 
-          
-        </p>
-
-        <ExternalLinkBlock 
-          resources = {[
-            {
-              link: "https://wikitrans.co/2019/11/26/changement-de-prenoms-en-mairie/",
-              imageSrc: "/assets/wikitrans.svg",
-              label: "Changement de prénom",
-              description: "en mairie ou au tribunal judiciaire",
-            },
-            {
-              link: "https://wikitrans.co/2019/11/26/changement-de-sexe-a-letat-civil-tgi/",
-              imageSrc: "/assets/wikitrans.svg",
-              label: "Changement de sexe",
-              description: "au tribunal judiciaire",
-            },
-          ]}
-        />
+        <ExternalLinkBlock resources={t.adminLinks} />
 
       </div>
       
 
-      <h2 className="sous-titre-2">Tu subis des discriminations ?</h2>
-        <p className="texte">Si tu es <b>victime de discriminations</b> en raison de ton identité de genre, sache qu'il existe des ressources et des personnes prêtes à t'aider.</p>
-        <ExternalLinkBlock
-          resources={resources_Autres_pages}
-        />
+      <h2 className="sous-titre-2">{t.discriTitle}</h2>
+        <p className="texte">{t.discriIntro}</p>
+        <ExternalLinkBlock resources={t.discriResources} />
 
-        <p className="texte">Les formes de discriminations sont multiples. Elles peuvent se matérialiser par une <b>injure homophobe ou transphobe</b>, orale ou écrite, qui est punie d'un <b>an d'emprisonnement et de 45 000 € d'amende</b>. Le <b>mégenrage</b> (le fait de s'adresser à une personne avec des pronoms ou un prénom qui ne correspondent pas à son identité de genre) intentionnel est aussi une forme de discrimination.</p>
+        <p className="texte">{t.discriLegalNote}</p>
 
-        <Quote text="Ça ne vous dérange pas d'apprendre un surnom, alors pourquoi pas un pronom ?" />
+        <Quote text={t.quote2} />
 
-          <h2 className="sous-titre-2">Tu es en détresse ?</h2>
+          <h2 className="sous-titre-2">{t.distressTitle}</h2>
 
-          <p className="texte">Reconnue d'Utilité Publique, la Fondation Le Refuge <b>héberge et accompagne les jeunes LGBT+ victimes de violences intrafamiliales</b>, rejetés par leurs parents, chassés du domicile en raison de leur orientation sexuelle ou de leur identité de genre. Tu peux contacter leur ligne d'écoute afin d'obtenir une solution d'urgence.</p>
+          <p className="texte">{t.distressIntro}</p>
 
 
           <ContactCard
-          image="/assets/le_refuge.png"
-          title="Le Refuge"
-          subtitle="Association d'aide aux jeunes LGBTQ+"
-          phone="06 31 59 69 50 - Appel ou SMS"
-          hours="Tous les jours, de 8h à minuit"
-          textButton="Voir le site"
-          link="https://le-refuge.org/"
-
-          bgColor="#ffffff"
-          textColor="#4834F6"
+          image={t.distressContact.image}
+          title={t.distressContact.title}
+          subtitle={t.distressContact.subtitle}
+          phone={t.distressContact.phone}
+          hours={t.distressContact.hours}
+          textButton={t.distressContact.textButton}
+          link={t.distressContact.link}
+          bgColor={t.distressContact.bgColor}
+          textColor={t.distressContact.textColor}
         />
 
 
@@ -396,36 +238,20 @@ const Genre = () => {
       <Separateur />
 
       <div id="accompagner" className="section">
-        <h2 className="titre">Comment accompagner un·e proche ?</h2>
+        <h2 className="titre">{t.supportTitle}</h2>
 
-        <p className="texte">
-          Accompagner une personne trans ou non-binaire repose sur <b>l'écoute, le respect et la volonté d'apprendre</b>. Voici des
-          conseils concrets, faciles à mettre en œuvre.
-        </p>
+        <p className="texte">{t.supportIntro}</p>
 
-        <ListeNumerotee title="Conseils pour être un meilleur soutien" items={étapesAccompagnement} />
+        <ListeNumerotee title="Conseils pour être un meilleur soutien" items={t.supportSteps} />
 
 
 
 
 
         <ExternalLinkBlock
-          title="Ressources pour les proches"
-          subtitle="Guides, FAQ et points d'appui"
-          resources={[
-            {
-              link: "https://chrysalide-asso.fr/nos-documents/etre-un-e-proche-de-personne-trans/",
-              imageSrc: "/assets/chrysalide.png",
-              label: "Chrysalide",
-              description: "Brochure à destination des proches",
-            },
-            {
-              link: "https://wikitrans.co/2018/02/10/mon-proche-est-trans-comment-laider-au-mieux/",
-              imageSrc: "/assets/wikitrans.svg",
-              label: "Brochure",
-              description: "Un·e de mes proches est trans, comment l'aider au mieux ?",
-            },
-          ]}
+          title={t.supportResourcesTitle}
+          subtitle={t.supportResourcesSubtitle}
+          resources={t.supportResources}
         />
 
       </div>
@@ -435,10 +261,7 @@ const Genre = () => {
       <Separateur />
 
       <p className="texte">
-        <em>
-          <b>Sources :</b> brochures OUTrans (hormones, DTC), Guide Chrysalide, WikiTrans, Fransgenre, Planning
-          Familial, Centre LGBTI+ Lyon, SOS Homophobie, Santé Publique France, témoignages d'étudiant·e·s, Rapport Vie étudiante à Centrale Lyon 2024
-        </em>
+        <em>{t.sourcesText}</em>
       </p>
     </div>
   );
