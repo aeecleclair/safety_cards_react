@@ -12,8 +12,18 @@ export default function Sommaire({ links }) {
   const [headerOffset, setHeaderOffset] = useState(110); // px from top
   const [computedTop, setComputedTop] = useState(110);
   const [hideNearFooter, setHideNearFooter] = useState(false);
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 1200 : false);
   const hasLinks = Array.isArray(links) && links.length > 0;
-  const { lang } = useLanguage();
+  const { lang, toggleLanguage } = useLanguage();
+  const { darkMode, setDarkMode } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const modeSoireeRoutes = new Set([
+    '/mode-soiree',
+    '/contacts-urgence',
+    '/plan-soiree',
+  ]);
+  const inModeSoiree = modeSoireeRoutes.has(location.pathname);
 
 
   useEffect(() => {
@@ -21,10 +31,16 @@ export default function Sommaire({ links }) {
 
     window.__sommaireLinksPresent = !!hasLinks;
     window.dispatchEvent(new CustomEvent('sommaire:links-change', { detail: { present: !!hasLinks } }));
+    if (typeof document !== 'undefined') {
+      document.body.classList.toggle('has-sommaire', !!hasLinks);
+    }
 
     return () => {
       window.__sommaireLinksPresent = false;
       window.dispatchEvent(new CustomEvent('sommaire:links-change', { detail: { present: false } }));
+      if (typeof document !== 'undefined') {
+        document.body.classList.remove('has-sommaire');
+      }
 
     };
   }, [hasLinks]);
@@ -65,6 +81,14 @@ export default function Sommaire({ links }) {
       window.removeEventListener('resize', onResize);
       window.removeEventListener('scroll', onScroll);
     };
+  }, []);
+
+  // Track mobile viewport
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 1200);
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
   // Keep nav above footer: adjust top or hide when overlapping
@@ -234,6 +258,57 @@ export default function Sommaire({ links }) {
               </button>
             );
           })}
+        </div>
+      )}
+
+      {hasLinks && open && isMobile && (
+        <div className="sommaire-actions">
+          <p className="sommaire">{lang === 'en' ? 'Shortcuts' : 'Raccourcis'}</p>
+          <button
+            type="button"
+            className="menu-button-style"
+            onClick={() => { toggleLanguage(); setOpen(false); }}
+            aria-label={lang === 'fr' ? 'Switch to English' : 'Switch to French'}
+          >
+            <span style={{ width: '1.5em', display: 'inline-block', textAlign: 'center' }} aria-hidden>
+              {lang === 'fr' ? '🇬🇧' : '🇫🇷'}
+            </span>
+            <span>{lang === 'fr' ? 'English version' : 'Version française'}</span>
+          </button>
+
+          <button
+            type="button"
+            className="menu-button-style"
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label={darkMode ? (lang === 'en' ? 'Switch to light theme' : 'Passer en thème clair') : (lang === 'en' ? 'Switch to dark theme' : 'Passer en thème sombre')}
+          >
+            <span style={{ width: '1.5em', display: 'inline-block', textAlign: 'center' }} aria-hidden>
+              {darkMode ? '☀️' : '🌙'}
+            </span>
+            <span>{darkMode ? (lang === 'en' ? 'Light theme' : 'Thème clair') : (lang === 'en' ? 'Dark theme' : 'Thème sombre')}</span>
+          </button>
+
+          <button
+            type="button"
+            className="menu-button-style"
+            onClick={() => { try { window.location.replace('https://www.google.com/'); } catch { window.location.href = 'https://www.google.com/'; } }}
+            aria-label={lang === 'en' ? 'Exit website' : 'Quitter le site'}
+          >
+            <span style={{ width: '1.5em', display: 'inline-block', textAlign: 'center' }} aria-hidden>❌</span>
+            <span>{lang === 'en' ? 'Exit website' : 'Quitter le site'}</span>
+          </button>
+
+          <button
+            type="button"
+            className="menu-button-style"
+            onClick={() => { if (inModeSoiree) navigate('/'); else navigate('/mode-soiree'); }}
+            aria-label={inModeSoiree ? (lang === 'en' ? 'Exit party mode' : 'Quitter le mode soirée') : (lang === 'en' ? 'Activate party mode' : 'Activer le mode soirée')}
+          >
+            <span style={{ width: '1.5em', display: 'inline-block', textAlign: 'center' }} aria-hidden>
+              {inModeSoiree ? '↩️' : '🎉'}
+            </span>
+            <span>{inModeSoiree ? (lang === 'en' ? 'Exit party mode' : 'Quitter le mode soirée') : (lang === 'en' ? 'Party mode' : 'Mode soirée')}</span>
+          </button>
         </div>
       )}
     </nav>

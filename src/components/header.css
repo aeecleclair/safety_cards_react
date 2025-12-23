@@ -281,6 +281,8 @@ body.dark-mode .quit-site, body.dark-mode .mode-soiree {
         border-radius: 10px;
         transition: background-color 0.2s ease;
     }
+    /* Masquer le burger mobile si le sommaire n'existe pas */
+    body:not(.has-sommaire) .navbar-burger { display: none; }
 
     .navbar-burger:hover {
         background-color: rgba(203, 203, 203, 0.7);
@@ -497,7 +499,7 @@ body.dark-mode .quit-site, body.dark-mode .mode-soiree {
     /* Style uniforme pour tous les boutons du menu */
     .menu-button-style {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: left;
         gap : 8px;
         background-color: #0000001a;
