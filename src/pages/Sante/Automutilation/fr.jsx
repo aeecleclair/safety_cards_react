@@ -1,0 +1,248 @@
+export default {
+  titlePage: "Automutilation",
+  navLinks: [
+    { label: "Qu'est-ce que l'automutilation ?", target: "automutilation" },
+    { label: "Je m'automutile, comment agir ?", target: "victime" },
+    { label: "Je suis témoin, comment réagir ?", target: "aidant" },
+  ],
+
+  carte3_pique: {
+    image: "./assets/cartes/3_pique.png",
+    title: "La carte 3♠",
+    shortText: "Automutilation : agir en tant que victime et témoin",
+    longText: "L'automutilation désigne le fait de se faire volontairement du mal, sans intention suicidaire. Elle peut prendre différentes formes : coupures, brûlures, griffures, etc. Souvent utilisée comme un mécanisme pour gérer des émotions intenses ou un stress psychologique, l'automutilation n'est pas un appel à l'aide, mais plutôt une manière de faire face à la douleur émotionnelle. Certains signes peuvent traduire de l'automutilation : griffures sur les poignets ou les avants-bras, port d'une veste en plein été... Si vous êtes témoin d'une personne qui s'automutile, il est crucial d'aborder le sujet avec empathie et sans jugement. Encouragez-la à chercher de l'aide professionnelle et offrez-lui votre soutien. Si vous vous automutilez, sachez qu'il existe des ressources et des professionnels prêts à vous aider à traverser cette période difficile.",
+    buttonText: "⤢ Agrandir la carte",
+    suit: "pique",
+  },
+
+  sectionDefinitionTitle: "Qu'est ce que l'automutilation ?",
+
+  nssiTitle: "L'automutilation non suicidaire",
+  nssiIntro: "L'automutilation non suicidaire se manifeste souvent de la manière suivante :",
+  nssiExamples: [
+    "Scarifications, coupures et brûlures",
+    "Coups volontaires contre une surface dure",
+    "Coups de poing ou claques auto-infligées",
+    "Recherche de situations risquées : participation volontaire à des bagarres, recherche d'overdoses, sous ou suralimentation, vomissements volontaires, excès d'activité sportive.",
+  ],
+
+  driversTitle: "Qu'est-ce qui pousse quelqu'un à s'automutiler ?",
+  driversText:
+    "De nombreuses personnes qui s'automutilent sont en grande détresse ou dans des situations insupportables. Elles souffrent souvent de cette manière pendant un certain temps avant de s'automutiler. L'automutilation peut par exemple être utilisée pour faire retomber le stress, exprimer leur douleur ou échapper à des souvenirs traumatisants. Dans certains cas, c'est leur sentiment de culpabilité qui les pousse à s'infliger une punition.",
+  driversImage: "/assets/zebre.jpg",
+
+  importantHtml:
+    "<b>Important</b> : la plupart des personnes qui s'automutilent <b>ne cherchent pas à mettre fin à leurs jours.</b> Si le doute se pose, n'hésitez pas à <b>poser la question à la personne.</b>",
+
+  suicidePromptText:
+    "Tu as des idées suicidaires ? Quelqu'un t'a fait part de ses idées suicidaires ?",
+  suicideResources: [
+    {
+      link: "/suicide",
+      emoji: "🗣️",
+      label: "Suicide",
+      description:
+        "Comment réagir si j'ai ou si quelqu'un de mon entourage a ces idées ?",
+    },
+  ],
+
+  statsTitle: "L'automutilation est un problème étendu",
+  statsData: [
+    { number: "1/10", title: "jeune", description: "pratiquera l'automutilation à un moment donné" },
+    { number: "7%", title: "des étudiants", description: "se blessent intentionnellement au moins 5 fois par an" },
+    { number: "2x", title: "plus souvent", description: "Les filles sont davantage touchées par l'automutilation" },
+  ],
+
+  resourcesInfosTitle: "Ressources utiles",
+  resourcesInfosSubtitle:
+    "Quelques sites à visiter pour continuer à se renseigner sur l'automutilation",
+  resourcesInfos: [
+    {
+      link: "https://www.rcpsych.ac.uk/mental-health/translations/french/lautomutilation",
+      imageSrc: "/assets/rc_psych.jpg",
+      label: "Automutilation",
+      description: "Informations à destination des automutilés ou de leurs proches",
+    },
+    {
+      link: "https://www.pssmfrance.fr/actualites/mieux-comprendre-les-automutilations-pour-mieux-aider/",
+      imageSrc: "/assets/logo-pssm.svg",
+      label: "Automutilation",
+      description: "Mieux comprendre les automutilations pour mieux aider",
+    },
+  ],
+
+  victimSectionTitle: "Je m'automutile, comment agir ?",
+
+  cravingTitle: "Quand tu as envie de te faire mal",
+  cravingIntro:
+    "Les <b>envies d'automutilation passent après un certain temps</b>. Si tu parviens à les surmonter pendant une certaine période, ce sera plus simple de te retenir après. Pour faire passer ces idées, tu peux :",
+  cravingActions: [
+    "Parler à quelqu'un : que ce soit à des membres de ta famille, à des amis ou en appelant une ligne d'écoute (voir contacts plus bas).",
+    "Te distraire en trouvant une activité qui te change les idées : tu peux sortir te balader, écouter de la musique, faire du sport ou n'importe quelle autre activité qui t'intéresse.",
+    "Te détendre et concentrer ton esprit sur des pensées agréables et positives. Prends soin de toi et autorise-toi à faire quelque chose que tu aimes.",
+    "Trouver un environnement qui te mette en confiance.",
+    "Trouver une autre façon d'exprimer tes sentiments : tu peux dessiner des lignes rouges sur ta peau, presser des glaçons, ou t'infliger une douleur anodine comme manger un piment ou prendre une douche froide.",
+    "Si tu en éprouves le besoin, tu peux écrire ce que tu ressens et expliquer ce qui t'arrive. Personne d'autre n'a besoin de lire ce que tu as écrit.",
+  ],
+
+  servicesIntro:
+    "Il existe des services en ligne. Tu peux contacter la <b>Nightline</b>, service qui te mettra en contact avec des <b>étudiants bénévoles</b> de manière gratuite et anonyme, que tu aies besoin d'aide ou simplement besoin de vider ton sac. Si tu préfères parler à des <b>professionnels</b>, toujours de manière gratuite et anonyme, alors tu peux contacter le <b>3114</b>.",
+
+  nightlineCard: {
+    image: "/assets/nightline_logo.png",
+    title: "Nightline Lyon",
+    subtitle: "Service d'écoute nocturne gratuit pour les étudiant·e·s lyonnais·e·s",
+    phone: "04 85 30 00 10",
+    email: "",
+    hours: "Tous les soirs, de 21h à 2h30",
+    textButton: "Voir le site web",
+    link: "https://www.nightline.fr/lyon",
+  },
+
+  line3114Card: {
+    image: "/assets/3114.jpg",
+    title: "3114",
+    subtitle:
+      "Ligne d'écoute pour te mettre en relation avec des psychologues formés ",
+    phone: "3114",
+    email: "",
+    hours: "24h/24 et 7j/7",
+    textButton: "Voir le site web",
+    link: "https://3114.fr/",
+  },
+
+  afterCravingTitle: "Lorsque l'envie de te faire du mal est passée",
+  afterCravingIntro:
+    "Lorsque <b>l'envie est passée</b> et que tu te sens en sécurité, tu peux <b>réfléchir aux points suivants</b> :",
+  afterCravingPoints: [
+    "Rappelle-toi de la dernière fois où tu n'avais pas envie de t'automutiler : quelles étaient tes pensées, que ressentais-tu, où et avec qui étais-tu ?",
+    "Essaie de comprendre pourquoi tu as commencé à t'automutiler.",
+    "Réfléchis à l'impact qu'a l'automutilation sur toi : te donne-t-elle un sentiment de liberté, de soulagement, de contrôle ? Quelle activité pourrait te donner ces mêmes sentiments sans te nuire ?",
+    "Fais un enregistrement audio ou demande à une personne de confiance de la faire : parle de tes points forts, explique pourquoi tu veux arrêter de t'automutiler. Tu réécouteras cet enregistrement quand tu te sentiras mal.",
+    "Construis un plan de crise avec quelqu'un : si tu as envie de t'automutiler, qui dois-tu contacter ? Comment te détourner de ces idées ? Quelles activités pour te distraire ? ...",
+  ],
+
+  harmReductionTitle: "Tu ne veux pas arrêter de t'automutiler ?",
+  harmReductionIntro: "Tu peux quand même :",
+  harmReductionList: [
+    "Réduire les dommages causés à ton corps en utilisant une méthode moins nocive.",
+    "Continuer à réfléchir à la manière de résoudre les problèmes qui te poussent à t'automutiler, que ce soit seul·e ou en en parlant avec des personnes de ton entourage.",
+    "De temps en temps, revois ta décision de ne pas arrêter.",
+  ],
+
+  needTalkTitle: "Besoin d'en parler ?",
+  needTalkIntro:
+    "<b>Tu n'es pas seul·e</b> et de nombreuses initiatives sont mises en place pour t'écouter et t'aider. Si tu le souhaites, tu peux en parler à des membres de ta famille ou à des amis. Tu peux aussi prendre rendez-vous avec <b>l'infirmière de l'Ecole</b>, et ce même si tu as juste besoin de parler.",
+
+  infirmaryCard: {
+    image: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
+    title: "Infirmerie",
+    subtitle: "Infirmerie de Centrale Lyon",
+    phone: "Voir les informations",
+    email: "Voir les informations",
+    hours: "Lundi à jeudi : 7h30 - 15h30, Vendredi : 7h30 - 15h00 ",
+    textButton: "Voir les informations",
+    link:
+      "https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990",
+    bgColor: "#ffffff",
+    textColor: "#b22133",
+  },
+
+  longTermSupportIntro:
+    "Si tu veux trouver un soutien psychologique sur le long terme, tu peux utiliser les ressources suivantes :",
+  longTermSupportResources: [
+    {
+      link: "https://monsoutienpsy.ameli.fr/recherche-psychologue",
+      label: "Mon soutien psy ",
+      description: "12 séances gratuites avec un psychologue",
+    },
+    {
+      link: "https://masante.universite-lyon.fr/sante-mentale/annuaire-sante-mentale/",
+      imageSrc: "/assets/logo_UDL.png",
+      label: "Annuaire",
+      description:
+        "de l'Université de Lyon : accompagnement, suivi, urgences...",
+    },
+    {
+      link: "https://www.nightline.fr/soutien-etudiant",
+      imageSrc: "/assets/nightline_logo.png",
+      label: "Annuaire",
+      description: "de la Nigtline : les aides gratuites autour de toi",
+    },
+  ],
+
+  helperSectionTitle: "Je suis témoin, comment réagir ?",
+
+  signsTitle: "Les signes à repérer",
+  signsIntro: "Si une personne s'automutile, <b>elle peut :</b>",
+  signsList: [
+    "Présenter des coupures, des brûlures, des hématomes ou des cicatrices, notamment au niveau des bras, du ventre ou des cuisses.",
+    "Porter des vêtements qui masquent ces signes physiques, comme des hauts à manches longues.",
+    "Inventer des excuses pour expliquer ces blessures.",
+    "Transporter des objets coupants (couteaux, ciseaux, lames de rasoir...)",
+    "Evoquer des sensations de douleur, de faiblesse ou d'étourdissements.",
+    "Ressentir de la confusion, du dégoût, de la peur, ou montrer des signes d'une mauvaise estime personnelle.",
+    "Avoir la sensation de ne rien maitriser, d'être isolé·e ou seul·e.",
+  ],
+
+  reactTitle: "Comment réagir ?",
+  reactIntro:
+    "Si vous pensez qu'une personne s'automutile, <b>vous devez en parler avec elle</b>. Faites tout d'abord un point avec vos émotions. <b>Si vous ne vous sentez pas capable d'aborder le sujet</b>, essayez de trouver quelqu'un qui pourra le faire. Cela peut être un·e ami·e ou l'infirmière de Centrale. <br/> <b>Si vous vous sentez à même d'avoir cette conversation,</b> voici quelques étapes à suivre :",
+
+  actionPlanTitle:
+    "Plan d'action pour les Premiers Secours en cas d'automutilation",
+  actionPlanSubtitle:
+    "Comment aider une personne qui a recours à l'automutilation ?",
+  helperPlanItems: [
+    {
+      title: "Approchez la personne",
+      subtitle:
+        "Trouvez un lieu calme qui vous met à l'aise. Trouvez le bon moment, où vous et la victime êtes disposés à parler.",
+    },
+    {
+      title: "Débutez la conversation",
+      subtitle:
+        "Expliquez directement à la personne que vous craignez qu'elle s'automutile. Montrez que vous êtes prêt·e à l'écouter. Toutefois, gardez en tête que l'automutilation est un sujet très personnel qui peut être difficile à aborder. La personne peut avoir besoin de temps pour le faire. N'exigez pas de parler de sujets que la personne n'est pas prête à aborder.",
+    },
+    {
+      title: "Au cours de la conversation",
+      subtitle:
+        "L'arrêt de l'automutilation ne doit pas être au centre de la conversation. Cherchez plutôt des moyens pour rendre la vie de la personne plus agréable : mettre un terme à l'automutilation est un processus long, qui ne s'accomplit pas du jour au lendemain.",
+    },
+    {
+      title: "Exprimez votre inquiétude et écoutez activement",
+      subtitle:
+        "Signifiez à la personne ce que vous ressentez en faisant usage du « Je » : « Je m'inquiète » et non « Tu m'inquiètes ». Montrez que vous êtes à l'écoute en reprenant ses propos. Réagissez avec calme, sans juger la personne et sans prendre ses sentiments à la légère.",
+    },
+    {
+      title: "Offrez votre soutien et votre réconfort",
+      subtitle:
+        "Faites preuve d'empathie, dites-lui que vous comprenez ce qu'elle ou il vit. Signifiez-lui qu'elle ou il n'est pas seul·e et que vous êtes là pour l'aider.",
+    },
+    {
+      title: "Encouragez à aller voir des professionnels",
+      subtitle:
+        "Par exemple l'infirmière de Centrale, un·e médecin généraliste, un·e psychologue... Si vous devez en parler avec quelqu'un pour sa sécurité, demandez-lui son accord avant. Ne contactez les secours (15 ou 112) que si la blessure est grave. Gardez en tête que la plupart des personnes qui s'automutilent ne souhaitent pas mettre fin à leurs jours.",
+    },
+  ],
+
+  avoidTitle: "Ce qu'il faut éviter de faire",
+  avoidList: [
+    "Essayer d'être sa ou son thérapeute. La meilleure façon de l'aider est d'être son ami·e, son parent ou sa/son partenaire.",
+    "Réagir fortement, en vous montrant en colère, blessé·e ou bouleversé·e. Ceci l'amènera probablement à se sentir encore plus mal, ce qui rendra le changement plus difficile.",
+    "Vous pouvez, honnêtement et ouvertement, parler à votre ami·e ou parent de l'effet que son automutilation a sur vous. Mais pour cela, vous devez être calme, afin de pouvoir parler d'une manière qui montre à quel point vous vous souciez d'eux.",
+    "S'attendre à ce qu'elle ou il s'arrête du jour au lendemain, cela demande généralement du temps et des efforts.",
+    "Lutter avec la personne lorsqu'elle est sur le point de s'automutiler. Il vaut mieux s'éloigner et lui suggérer de venir vous en parler plutôt que de se faire du mal.",
+    "Lui faire promettre de ne pas recommencer.",
+    "Lui dire que vous ne la ou le verrez plus à moins qu'elle ou il n'arrête de s'automutiler.",
+    "Se sentir responsable de leur automutilation ou devenir la personne qui est censée les arrêter. Assurez-vous aussi d'avoir quelqu'un à qui parler afin d'obtenir le soutien dont vous avez aussi besoin.",
+  ],
+
+  pssmTitle: "Pour aller + loin : la formation PSSM",
+  pssmText:
+    "Les PSSM (Premiers Secours en Santé Mentale) constituent l'aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu'à ce qu'une aide professionnelle puisse être apportée ou jusqu'à ce que la crise soit résolue. Ils sont l'équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.\n            Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.\n            La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care.",
+  pssmImage: "/assets/logo-pssm.svg",
+
+  sourcesHtml:
+    "<em><b>Sources :</b> Manuel des Premiers Secours en Santé Mentale pour les jeunes , Portail Santé de l'Université de Lyon, Royal College of Psychiatrists, Unicef</em>",
+};
