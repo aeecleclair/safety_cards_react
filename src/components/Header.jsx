@@ -121,7 +121,7 @@ const menuItemsEn = [
       { title: "⚠️ STIs", link: "/pratiques_sex" },
       { title: "♀️ Abortion", link: "/ivg"},
       { title: "🏳️‍🌈 Sexual orientation", link: "/sex_orient" },
-      { title: "💑 Relationships", link: "/couple" },
+      { title: "💑 Couple relationships", link: "/couple" },
       { title: "⛔ Revenge porn", link: "/revenge" },
       { title: "😘 Sexuality & contraception", link: "/sex"},
     ],
