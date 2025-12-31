@@ -214,8 +214,13 @@ body.dark-mode .close-button:hover {
 /* ➡️ Version responsive */
 @media (max-width: 1000px) {
 
+    .image-text-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
     .image-container{
-        display:none !important;
+        display:block;
     }
 
     .expand-button{
