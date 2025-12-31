@@ -1,14 +1,16 @@
-import Quote from "../../components/Citation"; 
-import ImageTextPopup from "../../components/Cartes"; 
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList, TextImageRight, ImageCenter, YouTubeVideo, NumberedList } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ContactCard from "../../components/Contact";
+"use client";
+
+import Quote from "@/components/Citation"; 
+import ImageTextPopup from "@/components/Cartes"; 
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, TextImageRight, ImageCenter, YouTubeVideo, NumberedList } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ContactCard from "@/components/Contact";
 import React from "react";
-import { ChiffresGroup } from "../../components/Chiffres";
-import Separateur from "../../components/Separateur";
-import "../../App.css";
+import { ChiffresGroup } from "@/components/Chiffres";
+import Separateur from "@/components/Separateur";
+import "@/src/App.css";
 
 const navLinks = [
   { label: "Comprendre les TCA", target: "definition" },

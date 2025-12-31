@@ -1,15 +1,17 @@
-import React from "react";
-import "../../App.css";
+"use client";
 
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo, AnchorButton } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import Quote from "../../components/Citation";
-import { ChiffresGroup } from "../../components/Chiffres";
-import ListeNumerotee from "../../components/Listes";
-import ImageTextPopup from "../../components/Cartes"; 
+import React from "react";
+import "@/src/App.css";
+
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo, AnchorButton } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import Quote from "@/components/Citation";
+import { ChiffresGroup } from "@/components/Chiffres";
+import ListeNumerotee from "@/components/Listes";
+import ImageTextPopup from "@/components/Cartes"; 
 import { label } from "framer-motion/m";
 
 /** Navigation */

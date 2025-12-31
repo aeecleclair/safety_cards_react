@@ -1,0 +1,181 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/pages/mode-soiree/mode-soiree.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.mode-soiree-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 40px 0 20px;
+}
+
+@media (min-width: 640px) {
+  .mode-soiree-buttons { flex-direction: row; }
+}
+
+.ms-btn {
+  flex: 1 1;
+  padding: 28px 32px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg,#1f1f1f,#3a3a3a);
+  background-size:200% 200%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, background-position .6s ease, background .6s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ms-btn:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), transparent 70%);
+  transition: opacity .3s ease;
+}
+
+.ms-btn:hover {
+  box-shadow: 0 10px 25px -8px rgba(0,0,0,0.4);
+  background-position:100% 0;
+}
+
+.ms-btn:hover:before { opacity: 1; }
+
+.ms-btn.urgent {
+  background: linear-gradient(135deg,#ff4b4b 0%,#b000b5 55%,#5e00ff 100%);
+  background-size:220% 220%;
+}
+.ms-btn.urgent:hover {
+  background: linear-gradient(135deg,#5e00ff 0%,#b000b5 45%,#ff4b4b 100%);
+  background-size:220% 220%;
+  background-position:100% 0;
+}
+
+/* Plan: gradient shift plus chaud au hover */
+.ms-btn.plan {
+  background: linear-gradient(135deg,#ff8a00 0%,#ff4bd8 55%,#7a3dff 100%);
+  background-size:220% 220%;
+}
+.ms-btn.plan:hover {
+  background: linear-gradient(135deg,#7a3dff 0%,#ff4bd8 45%,#ff8a00 100%);
+  background-size:220% 220%;
+  background-position:100% 0;
+}
+
+/* Fallback animation for reduced motion: just color swap */
+@media (prefers-reduced-motion: reduce) {
+  .ms-btn,
+  .ms-btn.urgent,
+  .ms-btn.plan { background-size:100% 100%; }
+  .ms-btn:hover { background-position:0 0; }
+}
+
+body.dark-mode .ms-btn { color:#fff; }
+
+.mode-soiree-note {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Attribution Peer Care */
+.initiative-peer-care {
+  margin-top: 50px;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  gap:8px;
+}
+.peer-care-logo {
+  max-width:180px;
+  width:40%;
+  height:auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+body.dark-mode .peer-care-logo { filter: drop-shadow(0 4px 10px rgba(255,255,255,0.15)); }
+
+/* Grille contacts urgence */
+.urgence-grid {
+  display:grid;
+  grid-gap:32px;
+  gap:32px;
+  margin-top:40px;
+  grid-template-columns: 1fr;
+}
+@media (min-width:760px){
+  .urgence-grid { grid-template-columns: 1fr 1fr; }
+}
+
+
+
+
+/* Page plan de la soirée */
+.plan-tabs {
+  display:flex;
+  gap:16px;
+  margin:32px 0 28px;
+  flex-wrap:wrap;
+}
+.plan-tab-btn {
+
+
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+.plan-tab-btn.active {
+  background:linear-gradient(120deg,#ff4b4b,#b000b5 55%,#5e00ff);
+  color:#fff;
+  border-color:#b000b5;
+  box-shadow:0 8px 22px -8px rgba(0,0,0,.45);
+  transition: all .3s ease;
+}
+
+.plan-image-wrapper {
+  position:relative;
+  border:2px solid #222;
+  border-radius:10px;
+  overflow:hidden;
+  background:#111;
+  max-width:1000px;
+}
+.plan-image-wrapper img { width:100%; display:block; height:auto; }
+.plan-legend { font-size:.8rem; opacity:.7; margin-top:12px; }
+
+@media (max-width:640px){
+  .plan-tab-btn { flex-grow: 1; flex-shrink: 1; flex-basis: calc(50% - 8px); text-align:center; }
+}
+
+/* Bouton retour inline */
+.back-inline-btn {
+  margin-top:6px;
+  background:transparent;
+  border:none;
+  color:#555;
+  font-weight:600;
+  font-family:'Poppins',sans-serif;
+  cursor:pointer;
+  padding:4px 2px 8px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  font-size:.95rem;
+  transition:color .2s ease;
+}
+body.dark-mode .back-inline-btn { color:#ccc; }
+.back-inline-btn:hover { color:#000; }
+body.dark-mode .back-inline-btn:hover { color:#fff; }
+
+

@@ -1,13 +1,15 @@
+"use client";
+
 import React from "react";
-import "../../App.css";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ImageTextPopup from "../../components/Cartes";
-import ListeNumerotee from "../../components/Listes";
-import { BulletList, TextImageRight } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
+import "@/src/App.css";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import ImageTextPopup from "@/components/Cartes";
+import ListeNumerotee from "@/components/Listes";
+import { BulletList, TextImageRight } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import { ChiffresGroup } from "@/components/Chiffres";
 import { img } from "framer-motion/m";
 
 const navLinks = [

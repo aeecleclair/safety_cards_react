@@ -1,0 +1,66 @@
+.chiffres-group {
+    display: flex;
+    gap: 5%;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top:20px;
+    
+  }
+  
+  .chiffre-container {
+    background-color: #ebebeb;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    margin-bottom:20px;
+  }
+  body.dark-mode .chiffre-container {
+    background-color: #343434;
+  }
+  
+  .chiffre-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #b22133;
+    margin-bottom: 0;
+    margin-top:0;
+  }
+  body.dark-mode .chiffre-number{
+    color: #b00000;
+}
+  
+  .chiffre-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top:0;
+  }
+  body.dark-mode .chiffre-title{
+    color: #ffffff;
+}
+  
+  .chiffre-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0;
+    margin-top:0;
+  }
+  body.dark-mode .chiffre-description{
+    color: #ffffff;
+}
+
+  @media (max-width: 700px) {
+    .chiffres-group {
+        flex-direction: column; 
+        gap: 20px; 
+      }
+    
+      .chiffre-container {
+        width: 100%; 
+        margin-bottom:0;
+      }
+  }
+  

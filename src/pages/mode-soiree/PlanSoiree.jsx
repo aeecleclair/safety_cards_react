@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import './mode-soiree.css';
 
 // Placeholders temporaires (remplacer plus tard par les vrais plans)
@@ -10,14 +12,14 @@ const PLAN_IMAGES = {
 
 const PlanSoiree = () => {
   const [niveau, setNiveau] = useState('rdc');
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const currentSrc = PLAN_IMAGES[niveau];
 
   return (
     <div className="page">
   <h1 className="titre-page">Plan de la soirée</h1>
-  <button className="back-inline-btn" onClick={() => navigate(-1)}>⟵ Retour</button>
+  <button className="back-inline-btn" onClick={() => router.back()}>⟵ Retour</button>
       <p className="texte">
         Sélectionne un niveau pour afficher le plan correspondant.
       </p>
@@ -55,3 +57,6 @@ const PlanSoiree = () => {
 };
 
 export default PlanSoiree;
+
+
+

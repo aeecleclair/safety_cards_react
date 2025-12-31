@@ -1,14 +1,16 @@
-import Quote from "../../components/Citation";
-import ImageTextPopup from "../../components/Cartes";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList, TextImageRight, ImageCenter } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ContactCard from "../../components/Contact";
+"use client";
+
+import Quote from "@/components/Citation";
+import ImageTextPopup from "@/components/Cartes";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, TextImageRight, ImageCenter } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ContactCard from "@/components/Contact";
 import React from "react";
-import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import "../../App.css";
-import Separateur from "../../components/Separateur";
+import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+import "@/src/App.css";
+import Separateur from "@/components/Separateur";
 
 const navLinks = [
   { label: "Mauvaises habitudes alimentaires", target: "habitudes" },

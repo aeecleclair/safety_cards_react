@@ -1,0 +1,9 @@
+{
+  "/aliment/page": "app/aliment/page.js",
+  "/page": "app/page.js",
+  "/consent/page": "app/consent/page.js",
+  "/sex_orient/page": "app/sex_orient/page.js",
+  "/suicide/page": "app/suicide/page.js",
+  "/mode-soiree/page": "app/mode-soiree/page.js",
+  "/plan-soiree/page": "app/plan-soiree/page.js"
+}

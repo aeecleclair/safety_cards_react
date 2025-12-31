@@ -1,12 +1,14 @@
-import React from "react";
-import "../../App.css";
+"use client";
 
-import ImageTextPopup from "../../components/Cartes";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import Separateur from "../../components/Separateur";
+import React from "react";
+import "@/src/App.css";
+
+import ImageTextPopup from "@/components/Cartes";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import Separateur from "@/components/Separateur";
 
 const navLinks = [
   { label: "Qu'est-ce que l'empathie ?", target: "definition" },

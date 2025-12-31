@@ -1,18 +1,20 @@
+"use client";
+
 // SportSante.jsx     UTILE : dangerouslySetInnerHTML={{ __html: t. }}
 import React from "react";
-import "../../App.css";
+import "@/src/App.css";
 
-import Quote from "../../components/Citation";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
-import { BulletList, TextImageRight } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ImageTextPopup from "../../components/Cartes";
+import Quote from "@/components/Citation";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import { ChiffresGroup } from "@/components/Chiffres";
+import { BulletList, TextImageRight } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ImageTextPopup from "@/components/Cartes";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Sante-Physique/fr.js";
 import en from "./Sante-Physique/en.js"; // laissé vide/à remplir si nécessaire
 

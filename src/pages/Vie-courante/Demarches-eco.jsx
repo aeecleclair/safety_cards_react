@@ -1,13 +1,15 @@
-import React from "react";
-import "../../App.css";
+"use client";
 
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList, ImageCenter } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import Separateur from "../../components/Separateur";
+import React from "react";
+import "@/src/App.css";
+
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, ImageCenter } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import Separateur from "@/components/Separateur";
 import { image } from "framer-motion/client";
-import ImageTextPopup from "../../components/Cartes";
+import ImageTextPopup from "@/components/Cartes";
 
 const navLinks = [
   { label: "Tri et compost", target: "tri" },

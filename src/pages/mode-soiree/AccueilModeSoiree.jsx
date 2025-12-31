@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useTheme } from "../../ThemeProvider";
+import { useRouter } from "next/navigation";
+import { useTheme } from "@/app/providers/ThemeProvider";
 import "./mode-soiree.css";
 
 const AccueilModeSoiree = () => {
-  const navigate = useNavigate();
-  const { darkMode, enterModeSoiree, modeSoireeActive } = useTheme();
+  const router = useRouter();
+  const { darkMode, enterModeSoiree, modeSoireeActive } = useTheme() || {};
 
   useEffect(() => {
     // Active mode soirée via l'API centralisée
@@ -21,10 +23,10 @@ const AccueilModeSoiree = () => {
         Tu es en soirée. Cette interface te donne un accès rapide aux ressources essentielles.
       </p>
       <div className="mode-soiree-buttons">
-  <button className="ms-btn urgent" onClick={() => navigate("/contacts-urgence") }>
+  <button className="ms-btn urgent" onClick={() => router.push("/contacts-urgence") }>
           🚨 Contacts d'urgence
         </button>
-  <button className="ms-btn plan" onClick={() => navigate("/plan-soiree") }>
+  <button className="ms-btn plan" onClick={() => router.push("/plan-soiree") }>
           🗺️ Plan de la soirée
         </button>
       </div>
@@ -45,3 +47,6 @@ const AccueilModeSoiree = () => {
 };
 
 export default AccueilModeSoiree;
+
+
+
