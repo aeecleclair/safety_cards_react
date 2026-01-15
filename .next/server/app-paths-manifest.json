@@ -1,0 +1,8 @@
+{
+  "/depression/page": "app/depression/page.js",
+  "/cyber_harcel/page": "app/cyber_harcel/page.js",
+  "/discri/page": "app/discri/page.js",
+  "/anxiete/page": "app/anxiete/page.js",
+  "/genre/page": "app/genre/page.js",
+  "/inte/page": "app/inte/page.js"
+}

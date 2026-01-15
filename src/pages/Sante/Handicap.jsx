@@ -1,15 +1,17 @@
-import React from "react";
-import "../../App.css";
+"use client";
 
-import Quote from "../../components/Citation";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
-import { BulletList } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ImageTextPopup from "../../components/Cartes";
+import Quote from "@/components/Citation";
+import ImageTextPopup from "@/components/Cartes";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import ContactCard from "@/components/Contact";
+import React from "react";
+import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+import Separateur from "@/components/Separateur";
+import "@/src/App.css";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import { image, img } from "framer-motion/client";
 
 import { useLanguage } from "../../LanguageProvider";
 import fr from "./Handicap/fr.js";

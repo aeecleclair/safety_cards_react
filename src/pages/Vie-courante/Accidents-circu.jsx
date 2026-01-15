@@ -1,17 +1,19 @@
+"use client";
+
 import React from "react";
-import "../../App.css";
+import "@/src/App.css";
 
-import ImageTextPopup from "../../components/Cartes";
-import Quote from "../../components/Citation";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
+import ImageTextPopup from "@/components/Cartes";
+import Quote from "@/components/Citation";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import { ChiffresGroup } from "@/components/Chiffres";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Accidents-circu/fr.js";
 import en from "./Accidents-circu/en.js";
 

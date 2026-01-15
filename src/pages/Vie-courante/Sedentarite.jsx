@@ -1,16 +1,18 @@
-import React from "react";
-import "../../App.css";
+"use client";
 
-import Quote from "../../components/Citation";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
-import ImageTextPopup from "../../components/Cartes";
-import { BulletList } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import { useLanguage } from "../../LanguageProvider";
+import React from "react";
+import "@/src/App.css";
+
+import Quote from "@/components/Citation";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import { ChiffresGroup } from "@/components/Chiffres";
+import ImageTextPopup from "@/components/Cartes";
+import { BulletList } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Sedentarite/fr.js";
 import en from "./Sedentarite/en.js";
 

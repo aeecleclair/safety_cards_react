@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import ContactCard from "../../components/Contact";
+import { useRouter } from "next/navigation";
+import ContactCard from "@/app/components/Contact";
 import "./mode-soiree.css";
 
 // Page des contacts d'urgence
@@ -28,11 +30,11 @@ const ContactsUrgence = () => {
     }
   ];
 
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <div className="page urgence-page">
       <h1 className="titre-page">Contacts d'urgence</h1>
-      <button className="back-inline-btn" onClick={() => navigate(-1)}>⟵ Retour</button>
+      <button className="back-inline-btn" onClick={() => router.back()}>⟵ Retour</button>
 
   <div className="urgence-grid" style={{marginTop:'24px'}}>
         {contacts.map((c, i) => (
@@ -60,3 +62,6 @@ const ContactsUrgence = () => {
 };
 
 export default ContactsUrgence;
+
+
+

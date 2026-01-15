@@ -1,15 +1,17 @@
-import React from "react";
-import "../../App.css";
+"use client";
 
-import Quote from "../../components/Citation"; 
-import ImageTextPopup from "../../components/Cartes"; 
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ListeNumerotee from "../../components/Listes";
+import React from "react";
+import "@/src/App.css";
+
+import Quote from "@/components/Citation"; 
+import ImageTextPopup from "@/components/Cartes"; 
+import ExternalLinkBlock from "@/components/Liens-ext";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ListeNumerotee from "@/components/Listes";
 import { ExternalLink } from "lucide-react";
 
 const navLinks = [

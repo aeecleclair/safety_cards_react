@@ -1,14 +1,16 @@
+"use client";
+
 // Page Precarité menstruelle
-import Quote from "../../components/Citation";
-import ImageTextPopup from "../../components/Cartes";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";import ContactCard from "../../components/Contact";
+import Quote from "@/components/Citation";
+import ImageTextPopup from "@/components/Cartes";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";import ContactCard from "@/components/Contact";
 import React from "react";
-import Separateur from "../../components/Separateur";
-import "../../App.css";
-import { ChiffresGroup } from "../../components/Chiffres";
+import Separateur from "@/components/Separateur";
+import "@/src/App.css";
+import { ChiffresGroup } from "@/components/Chiffres";
 
 const navLinks = [
   { label: "Comprendre la situation", target: "comprendre" },

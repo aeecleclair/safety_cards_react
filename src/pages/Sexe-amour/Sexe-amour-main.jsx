@@ -1,3 +1,5 @@
+"use client";
+
 const Sexe_amour = () => {
     return (
       <div>

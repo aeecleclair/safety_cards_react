@@ -1,3 +1,5 @@
+"use client";
+
 const Vie_courante = () => {
     return (
       <div>

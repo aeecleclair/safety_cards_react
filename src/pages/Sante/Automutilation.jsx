@@ -1,13 +1,14 @@
-import Quote from "../../components/Citation"; 
-import ImageTextPopup from "../../components/Cartes"; 
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import Separateur from "../../components/Separateur";
-import ContactCard from "../../components/Contact";
-import "../../App.css";
+import Quote from "@/components/Citation"; 
+import ImageTextPopup from "@/components/Cartes"; 
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+import Separateur from "@/components/Separateur";
+import ContactCard from "@/components/Contact";
+import "@/src/App.css";
+
 import { useLanguage } from "../../LanguageProvider";
 import fr from "./Automutilation/fr.jsx";
 import en from "./Automutilation/en.jsx";

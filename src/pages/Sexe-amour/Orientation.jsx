@@ -1,15 +1,16 @@
-import React from "react";
-import "../../App.css";
+"use client";
 
-import Quote from "../../components/Citation";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
-import { BulletList, TextImageRight } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ImageTextPopup from "../../components/Cartes";
+import React from "react";
+import "@/src/App.css";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import ImageTextPopup from "@/components/Cartes";
+import ListeNumerotee from "@/components/Listes";
+import { BulletList, TextImageRight } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import { ChiffresGroup } from "@/components/Chiffres";
+import { img } from "framer-motion/m";
 
 import { useLanguage } from "../../LanguageProvider";
 import fr from "./Orientation/fr.js";

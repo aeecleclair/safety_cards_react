@@ -1,3 +1,5 @@
+"use client";
+
 const Connaissance_soi = () => {
     return (
       <div>

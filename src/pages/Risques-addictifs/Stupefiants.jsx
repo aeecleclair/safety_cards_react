@@ -1,15 +1,15 @@
+// Structure similaire à la page alcool, adaptée aux drogues
+import Quote from "@/components/Citation"; 
+import ImageTextPopup from "@/components/Cartes"; 
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ContactCard from "@/components/Contact";
 import React from "react";
-import "../../App.css";
-
-import Quote from "../../components/Citation";
-import ImageTextPopup from "../../components/Cartes";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { ChiffresGroup } from "../../components/Chiffres";
-import { BulletList, TextImageRight } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
+import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+import Separateur from "@/components/Separateur";
+import "@/src/App.css";
 
 import { useLanguage } from "../../LanguageProvider";
 import fr from "./Stupefiants/fr";

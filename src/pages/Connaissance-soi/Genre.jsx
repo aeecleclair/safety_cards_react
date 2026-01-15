@@ -1,82 +1,23 @@
+"use client";
+
 import React from "react";
-import "../../App.css";
-import Quote from "../../components/Citation";
-import ImageTextPopup from "../../components/Cartes";
-import ListeNumerotee from "../../components/Listes";
-import ExternalLinkBlock from "../../components/Liens-ext";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "../../components/Common";
-import Sommaire from "../../components/Sommaire";
-import ContactCard from "../../components/Contact";
-import Separateur from "../../components/Separateur";
-import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/src/LanguageProvider";
 import fr from "./Genre/fr.jsx";
 import en from "./Genre/en.jsx";
+import "@/src/App.css";
+import Quote from "@/components/Citation";
+import ImageTextPopup from "@/components/Cartes";
+import ListeNumerotee from "@/components/Listes";
+import ExternalLinkBlock from "@/components/Liens-ext";
+import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import Sommaire from "@/components/Sommaire";
+import ContactCard from "@/components/Contact";
+import Separateur from "@/components/Separateur";
+import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
 
 const dict = { fr, en };
 
-// chiffres now provided by localization files
 
-
-
-const étapesAccompagnement = [
-  {
-    title: "Utilisez les bons pronoms et prénoms",
-    subtitle:
-      "Employer le nouveau prénom et les pronoms choisis est un vrai soutien ; si vous vous trompez, excusez‑vous et corrigez‑vous.",
-  },
-  {
-    title: "La transition est rétro‑active",
-    subtitle:
-      "Parlez du passé avec les pronoms actuels ; privilégiez des tournures neutres si besoin.",
-  },
-  {
-    title: "Manifestez votre soutien activement",
-    subtitle:
-      "Exprimez clairement votre appui et, si vous êtes cis, utilisez votre position pour relayer sa voix face aux hostilités.",
-  },
-  {
-    title: "Connaissez vos limites",
-    subtitle:
-      "Mieux vaut admettre un manque d’information que dire des inexactitudes qui blessent ou induisent en erreur.",
-  },
-  {
-    title: "Votre proche n’est pas QUE trans",
-    subtitle:
-      "Il/elle reste la même personne, avec ses centres d’intérêt, ses projets et ses qualités.",
-  },
-  {
-    title: "Soyez digne de confiance",
-    subtitle:
-      "Ne révélez jamais la transidentité sans consentement ; gardez l’info pour vous si vous n’êtes pas sûr·e.",
-  },
-  {
-    title: "Trouvez une manière de relâcher la pression",
-    subtitle:
-      "Parlez de vos émotions avec un·e pro ou un·e ami·e de confiance plutôt que de les faire peser sur votre proche en transition.",
-  },
-  {
-    title: "Évitez les sujets sensibles",
-    subtitle:
-      "Les questions intimes (ex. opérations) ne vous regardent pas ; si vous savez quelque chose, gardez‑le pour vous.",
-  },
-];
-
-
-const resources_Autres_pages = [
-  {
-    link: "/discri",
-    emoji : "🟰",
-    label: "Discriminations",
-    description: "Comment réagir et soutenir face aux discriminations ?",
-  },
-  {
-    link: "https://chrysalide-asso.fr/nos-documents/reagir-face-a-la-transphobie/",
-    label: "Brochure",
-    description: "Réagir face à la transphobie : conseils à l'usage des personnes trans",
-    imageSrc: "/assets/chrysalide.png"
-  },
-];
 
 
 const Genre = () => {

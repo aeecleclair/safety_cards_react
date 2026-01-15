@@ -12,8 +12,9 @@ dist
 dist-ssr
 *.local
 
-.next
-.out
+# Next.js build output
+.next/
+out/
 
 # Editor directories and files
 .vscode/*

@@ -1,4 +1,6 @@
-import "../../App.css";
+"use client";
+
+import "@/src/App.css";
 const Sante = () => {
     return (
       <div>
