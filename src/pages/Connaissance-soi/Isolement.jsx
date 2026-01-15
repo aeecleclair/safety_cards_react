@@ -4,7 +4,6 @@ import React from "react";
 import "@/src/App.css";
 
 // --- Composants maison ---
-import Quote from "@/components/Citation";
 import ImageTextPopup from "@/components/Cartes";
 import ListeNumerotee from "@/components/Listes";
 import ExternalLinkBlock from "@/components/Liens-ext";
@@ -13,29 +12,18 @@ import Sommaire from "@/components/Sommaire";
 import ContactCard from "@/components/Contact";
 import Separateur from "@/components/Separateur";
 import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
-import Workinprogress from "@/components/WorkInProgress";
-import { label } from "framer-motion/client";
-import { useLanguage } from "../../LanguageProvider";
+
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Isolement/fr.jsx";
 import en from "./Isolement/en.jsx";
 
 
 const dict = { fr, en };
 
-// chiffres now provided by locale files
-
-// depression resources now from locale
-
-// confidence resources now from locale
-
-// Plan d'action pour se (re)connecter
-// steps now from locale
-
-
-// social resources now from locale
 
 
 const Isolement = () => {
+  
   const { lang } = useLanguage();
   const t = dict[lang] || fr;
   return (

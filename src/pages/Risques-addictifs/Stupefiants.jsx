@@ -11,7 +11,7 @@ import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
 import Separateur from "@/components/Separateur";
 import "@/src/App.css";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Stupefiants/fr";
 import en from "./Stupefiants/en";
 

@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { useLanguage } from "@/src/LanguageProvider";
-import fr from "./Genre/fr.jsx";
-import en from "./Genre/en.jsx";
 import "@/src/App.css";
+
+
 import Quote from "@/components/Citation";
 import ImageTextPopup from "@/components/Cartes";
 import ListeNumerotee from "@/components/Listes";
@@ -14,6 +13,10 @@ import Sommaire from "@/components/Sommaire";
 import ContactCard from "@/components/Contact";
 import Separateur from "@/components/Separateur";
 import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+
+import { useLanguage } from "@/app/providers/LanguageProvider";
+import fr from "./Genre/fr.jsx";
+import en from "./Genre/en.jsx";
 
 const dict = { fr, en };
 

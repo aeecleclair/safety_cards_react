@@ -9,7 +9,7 @@ import Separateur from "@/components/Separateur";
 import ContactCard from "@/components/Contact";
 import "@/src/App.css";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Automutilation/fr.jsx";
 import en from "./Automutilation/en.jsx";
 

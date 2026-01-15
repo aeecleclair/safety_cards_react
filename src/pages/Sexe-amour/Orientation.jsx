@@ -10,9 +10,8 @@ import Sommaire from "@/components/Sommaire";
 import ContactCard from "@/components/Contact";
 import Separateur from "@/components/Separateur";
 import { ChiffresGroup } from "@/components/Chiffres";
-import { img } from "framer-motion/m";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Orientation/fr.js";
 import en from "./Orientation/en.js";
 

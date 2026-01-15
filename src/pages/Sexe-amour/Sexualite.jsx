@@ -8,14 +8,12 @@ import ListeNumerotee from "@/components/Listes";
 import ExternalLinkBlock from "@/components/Liens-ext";
 import ContactCard from "@/components/Contact";
 import Separateur from "@/components/Separateur";
-import { ChiffresGroup } from "@/components/Chiffres";
 import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
 import Sommaire from "@/components/Sommaire";
-import { image } from "framer-motion/client";
 
 
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Sexualite/fr.js";
 import en from "./Sexualite/en.js";
 

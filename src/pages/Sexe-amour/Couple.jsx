@@ -14,7 +14,7 @@ import { ChiffresGroup } from "@/components/Chiffres";
 import ImageTextPopup from "@/components/Cartes";
 import { label } from "framer-motion/client";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Couple/fr.jsx";
 import en from "./Couple/en.jsx";
 

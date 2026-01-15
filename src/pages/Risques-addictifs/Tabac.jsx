@@ -11,7 +11,7 @@ import Separateur from "@/components/Separateur";
 import "@/src/App.css";
 
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Tabac/fr";
 import en from "./Tabac/en";
 

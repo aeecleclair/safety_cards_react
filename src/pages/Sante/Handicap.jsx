@@ -13,7 +13,7 @@ import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } f
 import Sommaire from "@/components/Sommaire";
 import { image, img } from "framer-motion/client";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Handicap/fr.js";
 import en from "./Handicap/en.js";
 

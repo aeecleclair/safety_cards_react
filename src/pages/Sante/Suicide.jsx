@@ -12,9 +12,8 @@ import Quote from "@/components/Citation";
 import { ChiffresGroup } from "@/components/Chiffres";
 import ListeNumerotee from "@/components/Listes";
 import ImageTextPopup from "@/components/Cartes"; 
-import { label } from "framer-motion/m";
 
-import { useLanguage } from "../../LanguageProvider";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Suicide/fr.jsx";
 import en from "./Suicide/en.jsx";
 

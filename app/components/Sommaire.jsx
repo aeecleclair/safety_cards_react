@@ -17,16 +17,16 @@ export default function Sommaire({ links }) {
   const hasLinks = Array.isArray(links) && links.length > 0;
 
 
-  const { lang } = useLanguage() || { lang: 'fr' };
-  const { darkMode, setDarkMode } = useTheme();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const { lang, toggleLanguage } = useLanguage() || { lang: 'fr', toggleLanguage: () => {} };
+  const { darkMode, setDarkMode } = useTheme() || {};
+  const router = useRouter();
+  const pathname = usePathname();
   const modeSoireeRoutes = new Set([
     '/mode-soiree',
     '/contacts-urgence',
     '/plan-soiree',
   ]);
-  const inModeSoiree = modeSoireeRoutes.has(location.pathname);
+  const inModeSoiree = modeSoireeRoutes.has(pathname);
 
 
 
@@ -295,7 +295,7 @@ export default function Sommaire({ links }) {
           <button
             type="button"
             className="menu-button-style"
-            onClick={() => { if (inModeSoiree) navigate('/'); else navigate('/mode-soiree'); }}
+            onClick={() => { if (inModeSoiree) router.push('/'); else router.push('/mode-soiree'); }}
             aria-label={inModeSoiree ? (lang === 'en' ? 'Exit party mode' : 'Quitter le mode soirée') : (lang === 'en' ? 'Activate party mode' : 'Activer le mode soirée')}
           >
             <span style={{ width: '1.5em', display: 'inline-block', textAlign: 'center' }} aria-hidden>

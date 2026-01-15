@@ -1,5 +1,8 @@
 "use client";
 
+import React from "react";
+import "@/src/App.css";
+
 import Quote from "@/components/Citation"; 
 import ImageTextPopup from "@/components/Cartes"; 
 import ListeNumerotee from "@/components/Listes";
@@ -7,11 +10,11 @@ import ExternalLinkBlock from "@/components/Liens-ext";
 import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
 import Sommaire from "@/components/Sommaire";
 import ContactCard from "@/components/Contact";
-import React from "react";
-import { Chiffre, ChiffresGroup } from "../../components/Chiffres";
-import Separateur from "../../components/Separateur";
-import "../../App.css";
-import { useLanguage } from "../../LanguageProvider";
+import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+import Separateur from "@/components/Separateur";
+
+
+import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "./Confiance/fr.jsx";
 import en from "./Confiance/en.jsx";
 
