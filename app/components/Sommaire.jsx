@@ -34,12 +34,15 @@ export default function Sommaire({ links }) {
     if (typeof window !== 'undefined') {
       window.__hasSommaire = true;
       window.__sommaireLinksPresent = !!hasLinks;
+      document.body.classList.add('has-sommaire');
       window.dispatchEvent(new CustomEvent('sommaire:links-change', { detail: { present: !!hasLinks } }));
     }
 
     return () => {
       if (typeof window !== 'undefined') {
+        window.__hasSommaire = false;
         window.__sommaireLinksPresent = false;
+        document.body.classList.remove('has-sommaire');
         window.dispatchEvent(new CustomEvent('sommaire:links-change', { detail: { present: false } }));
       }
     };
