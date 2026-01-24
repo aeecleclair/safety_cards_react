@@ -3,10 +3,14 @@
 import React, { useState } from "react";
 import "./cartes.css";
 import { useLanguage } from "../providers/LanguageProvider";
+import { assetPath } from "../utils/assetPath";
 
 const ImageTextPopup = ({ image, title, shortText, longText, textButton, suit }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { lang } = useLanguage() || { lang: 'fr' };
+  
+  // Préfixer le chemin de l'image si nécessaire
+  const imageSrc = image?.startsWith('/') ? assetPath(image) : image;
 
   const rawSuit = (suit || '').toString().trim();
   const normalized = rawSuit
@@ -33,7 +37,7 @@ const ImageTextPopup = ({ image, title, shortText, longText, textButton, suit })
           </button>
         </div>
         <div className="image-container">
-          <img src={image} alt={title} />
+          <img src={imageSrc} alt={title} />
         </div>
       </div>
 
@@ -45,7 +49,7 @@ const ImageTextPopup = ({ image, title, shortText, longText, textButton, suit })
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-text-image">
               <div className="modal-image-container">
-                <img src={image} alt={title} />
+                <img src={imageSrc} alt={title} />
                 <p className="image-caption notice-caption">
                   {lang === 'en' 
                     ? 'ⓘ AI-generated image based on our ideas, then retouched by us :)' 

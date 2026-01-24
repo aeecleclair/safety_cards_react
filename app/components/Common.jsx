@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { assetPath } from "../utils/assetPath";
 import "./common.css";
 
 export const BulletList = ({ items }) => (
@@ -26,6 +27,7 @@ export const ZoomableImage = ({
   overlayBg = "rgba(0,0,0,0.5)",
 }) => {
   const [open, setOpen] = useState(false);
+  const imgSrc = src?.startsWith('/') ? assetPath(src) : src;
 
   useEffect(() => {
     if (!open) return;
@@ -60,7 +62,7 @@ export const ZoomableImage = ({
         aria-label={`Agrandir l'image: ${alt}`}
         onKeyDown={onKeyDown}
       >
-        <img src={src} alt={alt} className="zoomable-image" />
+        <img src={imgSrc} alt={alt} className="zoomable-image" />
         <div className="zoomable-overlay" aria-hidden="true">
           <button
             type="button"
@@ -90,7 +92,7 @@ export const ZoomableImage = ({
             ×
           </button>
           <img
-            src={src}
+            src={imgSrc}
             alt={alt}
             className="image-zoom-img"
             onClick={(e) => e.stopPropagation()}
@@ -101,26 +103,32 @@ export const ZoomableImage = ({
   );
 };
 
-export const TextImageRight = ({ text, imageSrc, alt = "Illustration", enlargeOnClick = false }) => (
-  <div className="text-image-container">
-    <p className="text-content">{text}</p>
-    {enlargeOnClick ? (
-      <ZoomableImage src={imageSrc} alt={alt} className="image-content" />
-    ) : (
-      <img className="image-content" src={imageSrc} alt={alt} />
-    )}
-  </div>
-);
+export const TextImageRight = ({ text, imageSrc, alt = "Illustration", enlargeOnClick = false }) => {
+  const imgSrc = imageSrc?.startsWith('/') ? assetPath(imageSrc) : imageSrc;
+  return (
+    <div className="text-image-container">
+      <p className="text-content">{text}</p>
+      {enlargeOnClick ? (
+        <ZoomableImage src={imgSrc} alt={alt} className="image-content" />
+      ) : (
+        <img className="image-content" src={imgSrc} alt={alt} />
+      )}
+    </div>
+  );
+};
 
-export const ImageCenter = ({ imageSrc, alt = "Illustration", enlargeOnClick = false }) => (
-  <div className="image-container-center">
-    {enlargeOnClick ? (
-      <ZoomableImage src={imageSrc} alt={alt} className="image-content-center" />
-    ) : (
-      <img className="image-content-center" src={imageSrc} alt={alt} />
-    )}
-  </div>
-);
+export const ImageCenter = ({ imageSrc, alt = "Illustration", enlargeOnClick = false }) => {
+  const imgSrc = imageSrc?.startsWith('/') ? assetPath(imageSrc) : imageSrc;
+  return (
+    <div className="image-container-center">
+      {enlargeOnClick ? (
+        <ZoomableImage src={imgSrc} alt={alt} className="image-content-center" />
+      ) : (
+        <img className="image-content-center" src={imgSrc} alt={alt} />
+      )}
+    </div>
+  );
+};
 
 export const AnchorButton = ({
   target,

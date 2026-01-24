@@ -3,13 +3,14 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import ContactCard from "@/components/Contact";
+import { assetPath } from "@/app/utils/assetPath";
 import "./mode-soiree.css";
 
 // Page des contacts d'urgence
 const ContactsUrgence = () => {
   const contacts = [
     {
-      image: "/assets/bde.png",
+      image: assetPath("/assets/bde.png"),
       title: "Tsuki",
       subtitle: "Prez' BDE",
       phone: "📱 06 47 74 78 88",
@@ -19,7 +20,7 @@ const ContactsUrgence = () => {
       textColor: "#245377",
     },
     {
-      image: "/assets/bde.png",
+      image: assetPath("/assets/bde.png"),
       title: "Mawi",
       subtitle: "Vice Prez' BDE",
       phone: "📱 07 72 31 40 97",
@@ -50,7 +51,7 @@ const ContactsUrgence = () => {
       <div className="initiative-peer-care">
         <p className="texte" style={{marginBottom:'12px'}}>Une initiative de l'association <strong>Peer Care</strong></p>
         <img
-          src="/assets/peer_care.png"
+          src={assetPath("/assets/peer_care.png")}
           alt="Logo Peer Care"
           className="peer-care-logo"
         />

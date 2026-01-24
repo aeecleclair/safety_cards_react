@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from "next/link";
 import { useLanguage } from "../providers/LanguageProvider";
+import { assetPath } from "../utils/assetPath";
 import "./footer.css";
 
 const footerData = {
@@ -187,8 +188,8 @@ const Footer = () => {
         ))}
       </div>
       <div className="logos">
-        <img src="/assets/logo_nb_bis.png" alt={t.logoSafetyAlt} className="logo-safety" />
-        <img src="/assets/2024_LOGO-CENTRALE-H_BLANC.png" alt={t.logoCentraleAlt} className="logo-centrale" />
+        <img src={assetPath("/assets/logo_nb_bis.png")} alt={t.logoSafetyAlt} className="logo-safety" />
+        <img src={assetPath("/assets/2024_LOGO-CENTRALE-H_BLANC.png")} alt={t.logoCentraleAlt} className="logo-centrale" />
       </div>
       <p>{t.copyright}</p>
     </footer>

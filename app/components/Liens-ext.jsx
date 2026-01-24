@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { assetPath } from "../utils/assetPath";
 import "./liens-ext.css";
 
 const ExternalLinkBlock = ({ title, subtitle, resources }) => {
@@ -12,6 +13,7 @@ const ExternalLinkBlock = ({ title, subtitle, resources }) => {
       <div className="links-container">
         {resources.map((resource, index) => {
           const isExternal = resource.link.startsWith("http") || resource.link.includes("/docs");
+          const imgSrc = resource.imageSrc?.startsWith('/') ? assetPath(resource.imageSrc) : resource.imageSrc;
           
           if (isExternal) {
             return (
@@ -25,7 +27,7 @@ const ExternalLinkBlock = ({ title, subtitle, resources }) => {
                 {resource.emoji ? (
                   <span className="link-emoji">{resource.emoji}</span>
                 ) : resource.imageSrc ? (
-                  <img src={resource.imageSrc} alt={resource.label} className="link-image" />
+                  <img src={imgSrc} alt={resource.label} className="link-image" />
                 ) : (
                   <span className="link-icon">🔗</span>
                 )}
@@ -46,7 +48,7 @@ const ExternalLinkBlock = ({ title, subtitle, resources }) => {
               {resource.emoji ? (
                 <span className="link-emoji">{resource.emoji}</span>
               ) : resource.imageSrc ? (
-                <img src={resource.imageSrc} alt={resource.label} className="link-image" />
+                <img src={imgSrc} alt={resource.label} className="link-image" />
               ) : (
                 <span className="link-icon">🔗</span>
               )}

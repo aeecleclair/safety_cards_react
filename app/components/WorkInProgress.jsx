@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { assetPath } from "../utils/assetPath";
 import "./workinprogress.css";
 
 const Workinprogress = () => {
@@ -12,7 +13,7 @@ const Workinprogress = () => {
           <p>En attendant, vous pouvez accéder aux ressources externes pour vous informer.</p>
         </div>
         <div className="image-conteneur">
-          <img src="/assets/work_in_progress.jpg" alt="Travail en cours"/>
+          <img src={assetPath("/assets/work_in_progress.jpg")} alt="Travail en cours"/>
         </div>
       </div>
     </div>

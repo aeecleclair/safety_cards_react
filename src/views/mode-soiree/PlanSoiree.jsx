@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { assetPath } from '@/app/utils/assetPath';
 import './mode-soiree.css';
 
 // Placeholders temporaires (remplacer plus tard par les vrais plans)
@@ -14,7 +15,7 @@ const PlanSoiree = () => {
   const [niveau, setNiveau] = useState('rdc');
   const router = useRouter();
 
-  const currentSrc = PLAN_IMAGES[niveau];
+  const currentSrc = assetPath(PLAN_IMAGES[niveau]);
 
   return (
     <div className="page">
@@ -46,7 +47,7 @@ const PlanSoiree = () => {
       <div className="initiative-peer-care">
         <p className="texte" style={{marginBottom:'12px'}}>Une initiative de l'association <strong>Peer Care</strong></p>
         <img
-          src="/assets/peer_care.png"
+          src={assetPath("/assets/peer_care.png")}
           alt="Logo Peer Care"
           className="peer-care-logo"
         />

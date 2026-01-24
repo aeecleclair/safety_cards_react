@@ -3,12 +3,16 @@
 import { useEffect, useState } from "react";
 import "./contact.css";
 import { useLanguage } from "../providers/LanguageProvider";
+import { assetPath } from "../utils/assetPath";
 
 const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, link, bgColor: propBgColor, textColor: propTextColor, variant }) => {
   const [bgColor, setBgColor] = useState(propBgColor || "#ffffff");
   const [textColor, setTextColor] = useState(propTextColor || "#000000");
   const [isDarkMode, setIsDarkMode] = useState(false);
   const { lang } = useLanguage() || { lang: 'fr' };
+  
+  // Préfixer le chemin de l'image si nécessaire
+  const imageSrc = image?.startsWith('/') ? assetPath(image) : image;
 
   useEffect(() => {
     setIsDarkMode(document.body.classList.contains("dark-mode"));
@@ -18,7 +22,7 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
     if (!propBgColor || !propTextColor) {
       const img = new Image(); 
       img.crossOrigin = "Anonymous";
-      img.src = image;
+      img.src = imageSrc;
       img.onload = () => {
         const canvas = document.createElement("canvas");
         const ctx = canvas.getContext("2d");
@@ -36,7 +40,7 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
         }
       };
     }
-  }, [image, propBgColor, propTextColor]);
+  }, [imageSrc, propBgColor, propTextColor]);
 
   useEffect(() => {
     const handleModeChange = () => {
@@ -61,7 +65,7 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
   if (variant === 'horizontal') {
     return (
       <div className="contact-card contact-card-horizontal" style={{ backgroundColor: baseColors.cardBg, borderColor: baseColors.border }}>
-        <img src={image} alt={title} className="contact-image" />
+        <img src={imageSrc} alt={title} className="contact-image" />
         <div className="contact-info">
           <h2 style={{ color: baseColors.text }}>{title}</h2>
           {subtitle && <h3 style={{ color: baseColors.text }}>{subtitle}</h3>}
@@ -90,7 +94,7 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
 
   return (
     <div className="contact-card" style={{ backgroundColor: baseColors.cardBg, borderColor: baseColors.border }}>
-      <img src={image} alt={title} className="contact-image" />
+      <img src={imageSrc} alt={title} className="contact-image" />
       <div className="contact-info">
         <h2 style={{ color: baseColors.text }}>{title}</h2>
         {subtitle && <h3 style={{ color: baseColors.text }}>{subtitle}</h3>}

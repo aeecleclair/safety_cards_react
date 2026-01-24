@@ -6,6 +6,7 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "../providers/ThemeProvider";
 import { useLanguage } from "../providers/LanguageProvider";
+import { assetPath } from "../utils/assetPath";
 import "./header.css";
 
 // Pour désactiver une page : attribut inactive:true
@@ -250,7 +251,7 @@ const Header = () => {
       <nav className="desktop-menu">
         <div className="logo">
           <Link href="/">
-            <img src="/logo.png" alt={texts[lang]?.logoAlt || texts.fr.logoAlt} />
+            <img src={assetPath("/logo.png")} alt={texts[lang]?.logoAlt || texts.fr.logoAlt} />
           </Link>
           <h1>safety cards</h1>
         </div>
@@ -290,7 +291,7 @@ const Header = () => {
 
         <div className="logo">
           <Link href="/">
-            <img src="/logo.png" alt={texts[lang]?.logoAlt || texts.fr.logoAlt} />
+            <img src={assetPath("/logo.png")} alt={texts[lang]?.logoAlt || texts.fr.logoAlt} />
           </Link>
           <h1>safety cards</h1>
         </div>
@@ -307,7 +308,7 @@ const Header = () => {
         
         <div className="logo-burger">
           <Link href="/" onClick={() => setMenuOpen(false)}>
-            <img src="/logo.png" alt="Logo Safety Cards" />
+            <img src={assetPath("/logo.png")} alt="Logo Safety Cards" />
           </Link>
         </div>
 
