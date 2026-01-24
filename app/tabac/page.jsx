@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Risques-addictifs/Tabac";
+export { default } from "@/views/Risques-addictifs/Tabac";

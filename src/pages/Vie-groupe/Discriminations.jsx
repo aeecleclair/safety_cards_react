@@ -13,8 +13,8 @@ import ImageTextPopup from "@/components/Cartes";
 import { BulletList } from "@/components/Common";
 import Sommaire from "@/components/Sommaire";
 import { useLanguage } from "@/app/providers/LanguageProvider";
-import fr from "./Discriminations/fr.js";
-import en from "./Discriminations/en.js";
+import fr from "@/locales/Vie-groupe/Discriminations/_fr.js";
+import en from "@/locales/Vie-groupe/Discriminations/_en.js";
 
 
 const dict = { fr, en };

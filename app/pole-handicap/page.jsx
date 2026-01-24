@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Contact/Pole-handicap";
+export { default } from "@/views/Contact/Pole-handicap";

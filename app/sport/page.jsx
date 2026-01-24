@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-courante/Sante-physique";
+export { default } from "@/views/Vie-courante/Sante-physique";

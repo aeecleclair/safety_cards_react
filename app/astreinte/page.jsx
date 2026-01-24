@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Contact/Astreinte";
+export { default } from "@/views/Contact/Astreinte";

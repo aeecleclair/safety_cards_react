@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Connaissance-soi/Connaissance-de-soi-main";
+export { default } from "@/views/Connaissance-soi/Connaissance-de-soi-main";

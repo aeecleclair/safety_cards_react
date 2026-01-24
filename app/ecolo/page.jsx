@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-courante/Demarches-eco";
+export { default } from "@/views/Vie-courante/Demarches-eco";

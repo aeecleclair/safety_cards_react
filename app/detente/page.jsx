@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-courante/Detente-relax";
+export { default } from "@/views/Vie-courante/Detente-relax";

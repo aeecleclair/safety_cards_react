@@ -5,8 +5,9 @@
       "@/*": ["./*"],
       "@/components/*": ["./app/components/*"],
       "@/providers/*": ["./app/providers/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/src/*": ["./src/*"]
+      "@/views/*": ["./src/views/*"],
+      "@/src/*": ["./src/*"],
+      "@/locales/*": ["./src/locales/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],

@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-courante/Risques-domestiques";
+export { default } from "@/views/Vie-courante/Risques-domestiques";

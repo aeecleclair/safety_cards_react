@@ -13,6 +13,7 @@ import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
 import RandomPageSelector from "@/components/Randompage";
 import Workinprogress from "@/components/WorkInProgress";
 import ContactCard from "@/components/Contact";
+import Sommaire from "@/components/Sommaire";
 
 
 

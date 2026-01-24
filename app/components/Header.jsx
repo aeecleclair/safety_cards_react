@@ -230,7 +230,7 @@ const Header = () => {
     } else if (!onModeRoute && modeSoireeActive) {
       exitModeSoiree();
     }
-  }, [pathname, modeSoireeActive]);
+  }, [pathname, modeSoireeActive, enterModeSoiree, exitModeSoiree]);
 
   useEffect(() => {
     const handleResize = () => {

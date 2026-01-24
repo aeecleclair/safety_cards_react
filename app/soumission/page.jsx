@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-groupe/Soumission-chimique";
+export { default } from "@/views/Vie-groupe/Soumission-chimique";

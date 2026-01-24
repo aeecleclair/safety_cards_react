@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-groupe/Cyberharcelement";
+export { default } from "@/views/Vie-groupe/Cyberharcelement";

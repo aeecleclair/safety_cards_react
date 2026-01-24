@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Sante/Sommeil";
+export { default } from "@/views/Sante/Sommeil";

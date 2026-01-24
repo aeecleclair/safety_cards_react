@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Connaissance-soi/Genre";
+export { default } from "@/views/Connaissance-soi/Genre";

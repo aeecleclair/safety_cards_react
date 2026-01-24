@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-courante/Precarite-eco";
+export { default } from "@/views/Vie-courante/Precarite-eco";

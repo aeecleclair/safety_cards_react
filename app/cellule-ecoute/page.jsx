@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Contact/Cellule-ecoute";
+export { default } from "@/views/Contact/Cellule-ecoute";

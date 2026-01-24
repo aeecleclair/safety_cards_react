@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Risques-addictifs/Pornographie";
+export { default } from "@/views/Risques-addictifs/Pornographie";

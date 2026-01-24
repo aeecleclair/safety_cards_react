@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-groupe/Harcelement";
+export { default } from "@/views/Vie-groupe/Harcelement";

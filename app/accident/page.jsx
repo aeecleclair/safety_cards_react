@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-courante/Accidents-circu";
+export { default } from "@/views/Vie-courante/Accidents-circu";

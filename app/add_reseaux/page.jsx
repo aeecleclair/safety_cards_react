@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Risques-addictifs/Ecrans-reseaux";
+export { default } from "@/views/Risques-addictifs/Ecrans-reseaux";

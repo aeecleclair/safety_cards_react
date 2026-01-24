@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/mode-soiree/AccueilModeSoiree";
+export { default } from "@/views/mode-soiree/AccueilModeSoiree";

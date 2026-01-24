@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Vie-courante/Anxiete";
+export { default } from "@/views/Vie-courante/Anxiete";

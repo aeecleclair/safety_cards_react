@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Sante/Deracinement";
+export { default } from "@/views/Sante/Deracinement";

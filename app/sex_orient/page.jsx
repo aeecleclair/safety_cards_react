@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Sexe-amour/Orientation";
+export { default } from "@/views/Sexe-amour/Orientation";

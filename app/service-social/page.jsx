@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Contact/Service-social";
+export { default } from "@/views/Contact/Service-social";

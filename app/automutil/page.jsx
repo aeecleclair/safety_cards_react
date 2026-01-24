@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Sante/Automutilation";
+export { default } from "@/views/Sante/Automutilation";

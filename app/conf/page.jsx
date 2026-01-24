@@ -1,2 +1,2 @@
 "use client";
-export { default } from "@/pages/Connaissance-soi/Confiance";
+export { default } from "@/views/Connaissance-soi/Confiance";
