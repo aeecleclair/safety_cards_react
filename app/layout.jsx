@@ -7,11 +7,13 @@ import ScrollToTop from './components/ScrollTopImmediate';
 import ScrollToTopButton from './components/ScrollTop';
 import Raccourcis from './components/Raccourcis';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata = {
   title: 'Safety Cards',
   description: 'Safety Cards - Ressources de prévention et bien-être étudiant',
   icons: {
-    icon: '/favicon-32x32.png',
+    icon: `${basePath}/favicon-32x32.png`,
   },
 };
 

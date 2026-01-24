@@ -17,7 +17,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('/logo.png');
+    background-image: var(--bg-image);
     background-size: 30%;
     background-position: center;
     background-repeat: repeat;

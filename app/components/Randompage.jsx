@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { pagesDataByLang } from "./pagesData";
 import { useLanguage } from "../providers/LanguageProvider";
+import { assetPath } from "../utils/assetPath";
 import "./randompage.css";
 
 const RandomPageSelector = () => {
@@ -11,6 +12,8 @@ const RandomPageSelector = () => {
   const router = useRouter();
   const { lang } = useLanguage() || { lang: 'fr' };
   const data = pagesDataByLang[lang] || pagesDataByLang.fr;
+  
+  const bgImageUrl = assetPath('/logo.png');
 
   useEffect(() => { setRandomPage(null); }, [lang]);
 
@@ -23,7 +26,7 @@ const RandomPageSelector = () => {
   };
 
   return (
-    <div className="random-container">
+    <div className="random-container" style={{ '--bg-image': `url(${bgImageUrl})` }}>
       {!randomPage ? (
         <button onClick={selectRandomPage} className="random-button">
           {lang === 'en' ? '🎲 Discover a topic' : '🎲 Découvre une thématique'}
