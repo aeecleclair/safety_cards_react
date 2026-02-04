@@ -15,7 +15,7 @@ const en = {
     shortText: "Prevention on excessive screen use",
     longText: `Do you reach for your phone at every break? Do you endlessly scroll through stories and videos without noticing? Are you increasingly tired and stressed from being glued to screens? You may be developing a screen addiction.`,
     buttonText: "⤢ Expand Card",
-    suit: "spade"
+    suit: "pique"
   },
 
   effectsTitle: "Effects of Screens",
