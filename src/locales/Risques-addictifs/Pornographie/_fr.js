@@ -40,7 +40,7 @@ const fr = {
 
   cliches: [
     { link: "/consentement", emoji: "✅", label: "Consentement", description: "Apprendre à respecter le consentement" },
-    { link: "/sexualite", emoji: "😘", label: "Sexualité & contraception", description: "Construire une sexualité saine et satisfaisante" }
+    { link: "/sex", emoji: "😘", label: "Sexualité & contraception", description: "Construire une sexualité saine et satisfaisante" }
   ],
 
   mecanismesIntro: "L'addiction à la pornographie partage des <b>mécanismes communs</b> avec d'autres addictions comportementales :",
@@ -57,7 +57,7 @@ const fr = {
     { link: "https://www.addictaide.fr/pornographie-comprendre-et-soigner-cette-addiction/", imageSrc: "/assets/addictaide.jpg", label: "Addict'Aide", description: "Comprendre et soigner cette addiction" }
   ],
 
-  signesIntro: "Signes d'un usage problématique :",
+  signesIntro: "<b>Signes d'un usage problématique :</b>",
   signesList: [
     "Perte de contrôle : impossibilité de réduire ou d’arrêter malgré l’envie",
     "Tolérance : besoin de plus de contenus ou de temps pour la même stimulation",
@@ -69,10 +69,13 @@ const fr = {
     { link: "/assets/depistage_add_sexuelle.pdf", label: "Test de dépistage d'addiction sexuelle de Carnes", description: "Auto-diagnostic pour évaluer votre relation à la pornographie" }
   ],
 
-  consequencesIntro: "Conséquences possibles :",
+  consequencesIntro: "<b>Conséquences possibles :</b>",
+  consequencesCouple: "Dans le couple, l'addiction à la pornographie peut entraîner des <b>difficultés de communication, une insatisfaction sexuelle, une perte d'intimité et de confiance</b>, voire des <b>conflits ou des ruptures</b>.",
   couple: [{ link: "/couple", emoji: "💑", label: "Couple & sexualité", description: "Améliorer la communication et l'intimité" }],
-  depression: [{ link: "/depression", emoji: "🥺", label: "Dépression", description: "Reconnaître et gérer la dépression" }],
-  isolement: [{ link: "/isolement", emoji: "🧍", label: "Isolement", description: "Comprendre et combattre l'isolement social" }],
+  consequencesPerso: "Sur le plan personnel, elle peut provoquer une <b>perte de plaisir dans les relations sexuelles réelles, une baisse de l'estime de soi, une augmentation de l'anxiété ou de la dépression</b>, et un <b>isolement social</b>.",
+  perso: [{ link: "/depression", emoji: "🥺", label: "Dépression", description: "Reconnaître et gérer la dépression" },
+    { link: "/isolement", emoji: "🧍", label: "Isolement", description: "Comprendre et combattre l'isolement social" }
+  ],
 
   sectionSolutionsTitle: "Quelles solutions ?",
   resumeSolutionsIntro: "L’addiction à la pornographie reste un sujet tabou, souvent <b>associé à la honte</b>, ce qui freine la reconnaissance et l’accès à l’aide. Pourtant, des <b>stratégies simples</b> — comme observer ses habitudes, limiter l’accès, remplacer par d’autres activités ou en parler à un professionnel — peuvent réellement <b>aider à reprendre le contrôle</b>.",
@@ -97,7 +100,7 @@ const fr = {
         "Installe des bloqueurs ou filtres sur les appareils pour restreindre l'accès à certains contenus.",
         "Supprime ou rends l'accès moins immédiat (déconnexion, suppression d'applications) car cela peut aider à réduire les tentations."
       ],
-      resources: [{ link: "/ecrans", emoji: "📵", label: "Addiction aux écrans & réseaux sociaux", description: "Gérer son temps d'écran et ses habitudes numériques" }]
+      resources: [{ link: "/add_reseaux", emoji: "📵", label: "Addiction aux écrans & réseaux sociaux", description: "Gérer son temps d'écran et ses habitudes numériques" }]
     },
     {
       title: "<b>Remplacer par des activités :</b>",

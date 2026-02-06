@@ -20,7 +20,11 @@ const en = {
   phasesList: [
     "Light sleep: transition between wakefulness and sleep, easy to interrupt",
     "Deep sleep: phase of physical recovery, difficult to wake from",
-    "REM sleep: dreaming phase, important for memory and emotional regulation",
+    "Rapid Eye Movement (REM) sleep: dreaming phase, important for memory and emotional regulation",
+  ],
+
+  phasesText: [
+    "Respecting these cycles allows the brain to <b>flush out toxins and consolidate memory</b>, ensuring optimal mental clarity and focus upon waking."
   ],
 
   chiffres: [
@@ -104,7 +108,7 @@ const en = {
       description: "I am too anxious to fall asleep. What can I do?",
     },
     {
-      link: "/ecrans",
+      link: "/add_reseaux",
       emoji: "📱",
       label: "Screens",
       description: "I spend too much time on screens and it affects my sleep.",
@@ -261,7 +265,7 @@ const en = {
     {
       title: "Guided meditation",
       subtitle:
-        "Use apps or online videos to guide you through a relaxing meditation before bedtime.",
+        "Use apps or online videos to guide you through a relaxing meditation to practice before going to sleep.",
     },
     {
       title: "Progressive muscle relaxation",

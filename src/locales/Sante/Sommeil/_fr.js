@@ -23,6 +23,10 @@ const fr = {
     "Sommeil paradoxal : phase de rêves, importante pour la mémoire et la régulation émotionnelle",
   ],
 
+  phasesText: [
+    "Respecter ces cycles permet au cerveau de <b>nettoyer les toxines et consolider la mémoire</b>, garantissant ainsi une clarté mentale et une concentration optimales au réveil."
+  ],
+
   chiffres: [
     {
       number: "1/3",
@@ -104,7 +108,7 @@ const fr = {
       description: "Je suis trop anxieux·se pour trouver le sommeil. Que faire ?",
     },
     {
-      link: "/ecrans",
+      link: "/add_reseaux",
       emoji: "📱",
       label: "Écrans",
       description: "Je passe trop de temps devant les écrans et cela affecte mon sommeil.",
@@ -261,7 +265,7 @@ const fr = {
     {
       title: "Méditation guidée",
       subtitle:
-        "Utilise des applications ou des vidéos en ligne pour te guider dans une méditation relaxante avant de dormir.",
+        "Utilise des applications ou des vidéos en ligne pour te guider dans une méditation relaxante à appliquer avant de dormir.",
     },
     {
       title: "Relaxation musculaire progressive",

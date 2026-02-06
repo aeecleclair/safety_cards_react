@@ -7,7 +7,7 @@ const en = {
   ],
 
   sectionEcransTitle: "Screen Addiction",
-  resumeIntro: `Screens are designed to <b>capture your attention</b> and, in excess, can cause <b>sleep</b>, <b>concentration</b>, <b>stress</b> problems or <b>social isolation</b>. To avoid dependency, try to find balance by <b>setting limits</b>, <b>turning off notifications</b> and favoring <b>screen-free activities</b>.`,
+  resumeIntro: `Screens are designed to <b>capture your attention</b> and, in excess, can cause <b>sleep</b>, <b>concentration</b> and <b>stress problems</b> or <b>social isolation</b>. To avoid dependency, try to find balance by <b>setting limits</b>, <b>turning off notifications</b> and favoring <b>screen-free activities</b>.`,
 
   carte6_pique: {
     image: "/assets/cartes/6_pique.png",
@@ -31,7 +31,7 @@ const en = {
 
   quote1: "Being always online is never being fully present.",
 
-  ifYouFeelIntro: "If you feel that:",
+  ifYouFeelIntro: "If you <b>feel that</b> you are:",
   ifYouFeelList: [
     "Checking notifications constantly",
     "Spending your time on computer, tablet, or phone",
@@ -43,13 +43,13 @@ const en = {
 
   resources: [
     {
-      link: "/sleep",
+      link: "/sommeil",
       emoji: "💤",
       label: "Trouble sleeping?",
       description: "How to fight insomnia and sleep better"
     },
     {
-      link: "/relax",
+      link: "/detente",
       emoji: "🧘",
       label: "Screens help you relax?",
       description: "Other ways to unwind without screens"
@@ -68,7 +68,7 @@ const en = {
     { title: "Create screen-free zones", subtitle: "Reserve some spaces for screen-free time" }
   ],
 
-  textImageRight: `You can also install <strong>screen time control</strong> apps ("Screen Time" on iPhone, "Digital Wellbeing" on Android), use <strong>focus modes</strong> on your phone, or apps that <strong>block distractions</strong> according to time and usage. You can also switch your <b>screen to black and white</b> to reduce its appeal. Finally, protect your eyes by <strong>lowering screen brightness</strong> in the dark and activating the <strong>blue light filter</strong>.`,
+  textImageRight: `You can also install <strong>screen time control</strong> apps ("Screen Time" on iPhone, "Digital Wellbeing" on Android), use <strong>focus modes</strong> on your phone, or apps that <strong>block distractions</strong> (notifications, apps) based on the time of day and duration of use. You can also switch your <b>screen to black and white</b> to reduce its appeal. Finally, protect your eyes by <strong>lowering screen brightness</strong> in the dark and activating the <strong>blue light filter</strong>.`,
   imageEcrans: "/assets/phone-night.jpg",
 
   chiffresTitle: "Key Figures",

@@ -42,9 +42,21 @@ const Sommeil = () => {
         />
       </div>
 
+      
+      <ImageTextPopup
+        image={t.carteSommeil.image}
+        title={t.carteSommeil.title}
+        shortText={t.carteSommeil.shortText}
+        longText={t.carteSommeil.longText}
+        textButton={t.carteSommeil.textButton}
+        suit={t.carteSommeil.suit}
+      />
+
       <p className="texte">{t.phasesIntro}</p>
 
       <BulletList items={t.phasesList} />
+
+      <p className="texte" dangerouslySetInnerHTML={{ __html: t.phasesText }} />
 
       <ChiffresGroup chiffres={t.chiffres} />
 
@@ -86,14 +98,6 @@ const Sommeil = () => {
         />
       </div>
 
-      <ImageTextPopup
-        image={t.carteSommeil.image}
-        title={t.carteSommeil.title}
-        shortText={t.carteSommeil.shortText}
-        longText={t.carteSommeil.longText}
-        textButton={t.carteSommeil.textButton}
-        suit={t.carteSommeil.suit}
-      />
 
       <h2 className="sous-titre-2">{t.fallAsleepTitle}</h2>
 

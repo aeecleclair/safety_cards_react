@@ -66,9 +66,10 @@ const Pornographie = () => {
       <ExternalLinkBlock resources={t.test_addiction} />
 
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.consequencesIntro }} />
+      <p className="texte" dangerouslySetInnerHTML={{ __html: t.consequencesCouple }} />
       <ExternalLinkBlock resources={t.couple} />
-      <ExternalLinkBlock resources={t.depression} />
-      <ExternalLinkBlock resources={t.isolement} />
+      <p className="texte" dangerouslySetInnerHTML={{ __html: t.consequencesPerso }} />
+      <ExternalLinkBlock resources={t.perso} />
 
       <Separateur />
 

@@ -40,7 +40,7 @@ const en = {
 
   cliches: [
     { link: "/consentement", emoji: "✅", label: "Consent", description: "Learn to respect consent" },
-    { link: "/sexualite", emoji: "😘", label: "Sexuality & contraception", description: "Build a healthy and satisfying sexuality" }
+    { link: "/sex", emoji: "😘", label: "Sexuality & contraception", description: "Build a healthy and satisfying sexuality" }
   ],
 
   mecanismesIntro: "Pornography addiction shares <b>common mechanisms</b> with other behavioral addictions:",
@@ -57,7 +57,7 @@ const en = {
     { link: "https://www.addictaide.fr/pornographie-comprendre-et-soigner-cette-addiction/", imageSrc: "/assets/addictaide.jpg", label: "Addict'Aide", description: "Understanding and treating this addiction" }
   ],
 
-  signesIntro: "Signs of problematic use:",
+  signesIntro: "<b>Signs of problematic use:</b>",
   signesList: [
     "Loss of control: inability to reduce or stop despite the desire",
     "Tolerance: needing more content or time for the same stimulation",
@@ -69,16 +69,18 @@ const en = {
     { link: "/assets/depistage_add_sexuelle.pdf", label: "Carnes Sexual Addiction Screening Test", description: "Self-assessment to evaluate your relationship with pornography" }
   ],
 
-  consequencesIntro: "Possible consequences:",
+  consequencesIntro: "<b>Possible consequences:</b>",
+  consequencesCouple: "Within a relationship, pornography addiction can lead to <b>communication difficulties, sexual dissatisfaction, a loss of intimacy and trust</b>, and even <b>conflict or separation</b>.",
   couple: [{ link: "/couple", emoji: "💑", label: "Couples & sexuality", description: "Improve communication and intimacy" }],
-  depression: [{ link: "/depression", emoji: "🥺", label: "Depression", description: "Recognize and manage depression" }],
-  isolement: [{ link: "/isolement", emoji: "🧍", label: "Isolation", description: "Understand and combat social isolation" }],
+  consequencesPerso: "On a personal level, it can cause a <b>loss of pleasure in real-life sexual encounters, lower self-esteem, increased anxiety or depression</b>, and <b>social isolation</b>.",
+  perso: [{ link: "/depression", emoji: "🥺", label: "Depression", description: "Recognize and manage depression" },
+    { link: "/isolement", emoji: "🧍", label: "Isolation", description: "Understand and combat social isolation" }],
 
   sectionSolutionsTitle: "Solutions?",
   resumeSolutionsIntro: "Pornography addiction remains a taboo topic, often <b>associated with shame</b>, which hinders recognition and access to help. However, <b>simple strategies</b>—like observing habits, limiting access, replacing with other activities, or talking to a professional—can genuinely <b>help regain control</b>.",
 
   solutionsTabouTitle: "Still a taboo addiction",
-  solutionsTabouText: "Pornography addiction remains a <b>taboo topic</b>, often accompanied by shame and guilt. In France, it is not even <b>officially recognized</b> as such and research on the topic is still limited. Yet, it is important to acknowledge that it is a real problem that can affect mental health and relationships. Testimonials already exist, allowing this addiction to be made visible and discussed openly in support groups.",
+  solutionsTabouText: "Pornography addiction remains a <b>taboo topic</b>, often accompanied by shame and guilt. In France, it is <b>not</b> even <b>officially recognized</b> as such and research on the topic is still limited. Yet, it is important to acknowledge that it is a real problem that can affect mental health and relationships. Testimonials already exist, allowing this addiction to be made visible and discussed openly in support groups.",
 
   solutionsPistesTitle: "Some strategies",
   solutionsPistesIntro: "Gradual <b>strategies</b> can help regain controlled use or stop if desired. Here are concrete actions:",
@@ -97,7 +99,7 @@ const en = {
         "Install blockers or filters on devices to restrict access to certain content.",
         "Remove or make access less immediate (log out, uninstall apps) to reduce temptation."
       ],
-      resources: [{ link: "/ecrans", emoji: "📵", label: "Screen & social media addiction", description: "Manage screen time and digital habits" }]
+      resources: [{ link: "/add_reseaux", emoji: "📵", label: "Screen & social media addiction", description: "Manage screen time and digital habits" }]
     },
     {
       title: "<b>Replace with activities:</b>",
