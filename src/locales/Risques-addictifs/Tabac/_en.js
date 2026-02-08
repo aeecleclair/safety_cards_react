@@ -38,7 +38,7 @@ const en = {
   effetsVapeIntro1:
     "The <b>electronic cigarette (or vape)</b> heats a liquid mixed with flavors and propylene glycol to produce an inhaled vapor that mimics cigarette smoke. <b>ENDS</b> (electronic nicotine delivery systems) contain some <b>nicotine</b>, while <b>ENNDS</b> (electronic non-nicotine delivery systems) <b>do not contain any</b>.",
   effetsVapeIntro2:
-    "ENDS generally contain less nicotine than traditional cigarettes and are often used as a <b>transition for smokers</b> to reduce tobacco consumption. Both forms of electronic cigarettes are made up of chemical substances whose long-term effects are still poorly known.",
+    "ENDS generally contain less nicotine than traditional cigarettes and are often used as a <b>transition for smokers</b> to reduce tobacco consumption. Both forms of electronic cigarettes are made up of <b>chemical substances whose long-term effects are still poorly known</b>.",
   effetsVapeIntro3:
     "The following <b>risks</b> should nevertheless be considered:",
   effetsVapeList: [
@@ -55,7 +55,7 @@ const en = {
 
   chichaTitle: "Hookah",
   chichaIntro1:
-    "Hookah use is often perceived as less dangerous than cigarettes, especially because of the sweet taste of flavored tobacco and the social aspect of sessions. However, this perception is misleading. It is important to remember that hookah smoke contains toxic substances similar to, or sometimes in greater quantities than, those found in cigarette smoke.",
+    "<b>Hookah</b> use is often <b>perceived as less dangerous than cigarettes</b>, especially because of the sweet taste of flavored tobacco and the social aspect of sessions. However, this <b>perception</b> is <b>misleading</b>. It is important to remember that hookah smoke contains <b>toxic substances similar to, or sometimes in greater quantities</b> than, those found in cigarette smoke.",
   chichaIntro2:
     "Hookah is another form of tobacco consumption, often perceived as less harmful. However, smoking hookah exposes users to risks similar to, or even greater than, those of traditional cigarettes:",
   chichaList: [
@@ -97,6 +97,12 @@ const en = {
       label: "Relaxation & stress relief",
       description: "Alternatives to manage stress without tobacco or vaping",
     },
+    { 
+      link: "/groupe",
+      emoji: "🙅‍♀️",
+      label: "Peer pressure",
+      description: "How to resist peer pressure and make your own choices"
+    },
   ],
 
   quote1: "“I’ll quit whenever I want, for now it’s not a big deal.”",
@@ -130,24 +136,20 @@ const en = {
 
   conseilsListTitle: "Tips to consume less",
   conseils: [
-    { title: "Set limits and track your consumption", subtitle: "" },
-    { title: "Avoid smoking right after waking up: it’s the most addictive moment", subtitle: "" },
-    { title: "Stay hydrated and exercise to reduce cravings", subtitle: "" },
-    { title: "Do not compensate with excessive vaping: nicotine remains addictive", subtitle: "" },
+    { subtitle: "Set limits and track your consumption" },
+    { subtitle: "Avoid smoking right after waking up: it’s the most addictive moment" },
+    { subtitle: "Stay hydrated and exercise to reduce cravings" },
+    { subtitle: "Do not compensate with excessive vaping: nicotine remains addictive" },
   ],
 
   chichaConseilsIntro:
     "To reduce <b>risks linked to hookah</b>, you can follow these tips:",
   conseilsChichaTitle: "Tips to reduce hookah-related risks",
   conseilsChicha: [
-    { title: "Limit frequency of use", subtitle: "" },
-    { title: "Avoid long sessions", subtitle: "" },
-    { title: "Do not share the mouthpiece to prevent infections", subtitle: "" },
-    {
-      title:
-        "Learn about the real dangers of smoke inhalation, even when it passes through water",
-      subtitle: "",
-    },
+    { subtitle: "Limit frequency of use"},
+    { subtitle: "Avoid long sessions"},
+    { subtitle: "Do not share the mouthpiece to prevent infections" },
+    {subtitle: "Learn about the real dangers of smoke inhalation, even when it passes through water"},
   ],
 
   resourcesChicha: [

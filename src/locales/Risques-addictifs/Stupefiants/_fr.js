@@ -96,6 +96,12 @@ const fr = {
       emoji: "🧘‍♀️",
       label: "Détente & relaxation",
       description: "Des alternatives à la drogue pour se détendre et gérer le stress"
+    },
+    { 
+      link: "/groupe",
+      emoji: "🙅‍♀️",
+      label: "Effet de groupe",
+      description: "Comment résister à la pression du groupe et faire ses propres choix"
     }
   ],
 

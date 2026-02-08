@@ -16,6 +16,7 @@ import Separateur from "@/components/Separateur";
 import { useLanguage } from "@/app/providers/LanguageProvider";
 import fr from "@/locales/Sexe-amour/Pratiques-dangereuses/_fr";
 import en from "@/locales/Sexe-amour/Pratiques-dangereuses/_en";
+import { ExternalLink } from "lucide-react";
 
 const dict = { fr, en };
 
@@ -61,7 +62,7 @@ const Ist = () => {
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.transmissionIntro }} />
       <BulletList items={t.transmissionList} />
 
-      <p className="texte" dangerouslySetInnerHTML={{ __html: t.oralSexRisk }} />
+      <p className="mise-avant" dangerouslySetInnerHTML={{ __html: t.oralSexRisk }} />
 
       <h2 className="sous-titre-2">{t.symptomesTitle}</h2>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.symptomesIntro }} />
@@ -80,6 +81,8 @@ const Ist = () => {
 
       <p className="mise-avant" dangerouslySetInnerHTML={{ __html: t.protectionIntro }} />
       <BulletList items={t.protectionList} />
+
+      <ExternalLinkBlock resources={t.resourcesProtection} />
       
       <h2 className="sous-titre-2">{t.condomTitle}</h2>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.condomText1 }} />
@@ -172,7 +175,7 @@ const Ist = () => {
         <h1 className="titre">{t.pratiquesTitle}</h1>
       </div>
       <p className="mise-avant" dangerouslySetInnerHTML={{ __html: t.pratiquesIntro }} />
-      <p className="texte">{t.pratiquesListIntro}</p>
+      <p className="texte" dangerouslySetInnerHTML={{ __html: t.pratiquesListIntro }} />
       <BulletList items={t.pratiquesList} />
 
       <h2 className="sous-titre-2">{t.substancesTitle}</h2>

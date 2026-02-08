@@ -8,8 +8,7 @@ const en = {
   ],
 
   section1Title: "Alcohol, me and others",
-  risque1: "<b>Drinking carries risks</b> for your health and for others.",
-  risque2: "Legally, you remain <b>responsible</b> for your actions, even under the influence of alcohol.",
+  risque1: "<b>Drinking carries risks</b> for your health and for others. Legally, you remain <b>responsible</b> for your actions, even under the influence of alcohol.",
 
   carte6_trefle: {
     image: "/assets/cartes/6_trefle.jpg",
@@ -64,9 +63,7 @@ const en = {
 
   section2Title: "I drink",
   consoIntro: [
-    "<b>Don't forget to drink water and eat</b> to reduce alcohol effects.",
-    "Drinking a lot of alcohol puts you in danger and encourages <b>risky behaviors</b>.",
-    "If you have any doubts about your consumption, don't hesitate to talk to a <b>health professional</b>."
+    "<b>Don't forget to drink water and eat</b> to reduce alcohol effects. Drinking a lot of alcohol puts you in danger and encourages <b>risky behaviors</b>. If you have any doubts about your consumption, don't hesitate to talk to a <b>health professional</b>."
   ],
 
   consoTitle: "How to drink responsibly?",
@@ -77,7 +74,7 @@ const en = {
     "<b>Consider the time before blood alcohol peaks</b>: 30-45 min after last drink if on an empty stomach, 1-1.5h if with food",
     "<b>Know your limits and stick to them</b>: don't let others influence you",
     "<b>Avoid mixing with other substances</b>: medication, drugs, etc.",
-    "<b>Never drink while driving</b> or doing activities that require focus",
+    "<b>Never drink if you're driving</b> or doing activities that require focus",
     "<b>Plan a safe way home</b>: taxi, rideshare, public transport, designated driver, etc."
   ],
 
@@ -91,10 +88,13 @@ const en = {
   },
 
   conduiteText: "For your safety and others, it's strongly recommended <b>not to consume alcohol at all before driving</b>. If you drank, eat, drink water, and rest several hours before driving or use alternatives like public transport, taxi, or a designated driver. If you realize you drank too much, don't hesitate to <b>ask for help</b> or talk to <b>someone you trust</b> so they can watch over you.",
+  resourcesAccident: [
+    { link: "/accident", emoji: "🚗", label: "Road accident", description: "Awareness and prevention of drink-driving accidents"  }
+  ],
 
   bingeTitle: "Binge drinking",
   bingeQuote: "The best parties are the ones you remember.",
-  bingeText: "Drinking a glass with friends is fine... knowing when to stop is better! Binge drinking is <b>excessive and rapid consumption</b> of alcohol to <b>get drunk</b> in minimal time. Common at parties and in games/challenges, it exposes to many risks: loss of control, dangerous behaviors, alcohol poisoning, and long-term health consequences. Even <b>occasional heavy drinking</b> can harm your heart and cause stroke.",
+  bingeText: "Drinking a glass with friends is fine... knowing when to stop is better! Binge drinking is <b>excessive and rapid consumption</b> of alcohol to <b>get drunk</b> in minimal time. Common at parties and in games/challenges, it exposes to many risks: loss of control, dangerous behaviors, alcohol poisoning, and long-term health consequences. In addition to physical dangers, it can also lead to behavioral disorders and accidents. Even <b>occasional heavy drinking</b> can harm your heart and cause stroke.",
   data2: [
     { number: "6", title: "months of prison", description: "for anyone pushing others to excessive alcohol consumption" },
     { number: "7500€", title: "fine", description: "for anyone pushing others to excessive alcohol consumption" }
@@ -106,7 +106,7 @@ const en = {
   warningGlass: "Also remember that not all drinks contain the same amount of alcohol. <b>Warning</b>, at home or friends’ houses, bigger glasses are often used!",
 
   tooMuchTitle: "How to know if I drink too often?",
-  tooMuchText: "Starting school, we often find ourselves in a new social environment where alcohol and parties are everywhere. It's easy to fall into habits that can become problematic. Regular consumption can lead to physical and psychological dependence, making stopping or reducing drinking difficult. Stay aware of your habits and don't hesitate to ask for help if you feel losing control.",
+  tooMuchText: "Upon arriving at school, you often find yourself in a new social environment where alcohol and parties are everywhere. It’s easy <b>to get swept up in drinking habits that can become problematic</b>. However, regular consumption can lead to <b>physical and psychological dependence</b>, making it difficult to stop or cut back. It is vital to stay vigilant about your drinking habits and not hesitate to <b>ask for help</b> if you feel you are losing control.",
 
   carte3_trefle: {
     image: "/assets/cartes/3_trefle.png",
@@ -156,8 +156,7 @@ const en = {
 
   section3Title: "I witness",
   temoinIntro: [
-    "You notice someone struggling to stand, speak clearly, or putting themselves in danger? <b>Stay with them and call for help if necessary.</b>",
-    "If you suspect a close one is consuming alcohol, don't turn your back and <b>offer your help kindly.</b>"
+    "You notice someone struggling to stand, speak clearly, or putting themselves in danger? <b>Stay with them and call for help if necessary.</b> If you suspect a close one is consuming alcohol, don't turn your back and <b>offer your help kindly.</b>"
   ],
 
   helpTitle: "How to act with a heavily intoxicated person?",

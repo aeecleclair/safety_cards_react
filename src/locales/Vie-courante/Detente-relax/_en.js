@@ -55,7 +55,7 @@ const en = {
     "Excessive self-judgment (\"I'm not good enough\")"
   ],
   resourcesOMS: [
-    { link: "https://www.who.int/fr/news-room/questions-and-answers/item/stress", imageSrc: "/assets/OMS.png", label: "WHO", description: "FAQ on stress" }
+    { link: "https://www.who.int/en/news-room/questions-and-answers/item/stress", imageSrc: "/assets/OMS.png", label: "WHO", description: "FAQ on stress" }
   ],
   sommeilTitle: "Sleep disorders",
   sommeilText1: "Stress and intrusive thoughts are <b>common causes of insomnia</b>. Lack of sleep, in turn, increases sensitivity to stress: it's a <b>vicious circle</b>.",
@@ -68,7 +68,6 @@ const en = {
   aiguVsChroniqueText1: "It is important to distinguish between two types of stress:",
   aiguVsChroniqueText2: "<b>Acute stress</b> refers to an <b>immediate reaction</b> to a specific situation (exam, interview). It disappears once the situation has passed.",
   aiguVsChroniqueText3: "<b>Chronic stress</b> corresponds to prolonged exposure to stress factors (work, studies, personal life). It can lead to long-term health problems because it affects the body continuously.",
-  attentionStress: "Warning: <b>not all stress is bad</b>: it's a natural body reaction that can also be a driver of performance and motivation. However, <b>mismanaged stress can have harmful consequences</b>.",
   distinctionAnxieteTitle: "Distinction from anxiety",
   distinctionAnxieteText: "<b>Stress and anxiety are not synonymous.</b> \"I am stressed\" does not mean the same thing as \"I am anxious.\"",
   resourceClinique: [
@@ -140,7 +139,7 @@ const en = {
   enSavoirPlusPages: "To learn more about these topics, consult the dedicated pages:",
   resourceLongTerme: [
     { link: "/sport", emoji: "🏃‍♂️", label: "Physical Health & Sport", description: "Physical activity to reduce stress" },
-    { link: "/alimentation", emoji: "🥬", label: "Nutrition", description: "Adopt a balanced diet to better manage stress" },
+    { link: "/aliment", emoji: "🥬", label: "Nutrition", description: "Adopt a balanced diet to better manage stress" },
     { link: "/sommeil", emoji: "😴", label: "Sleep", description: "Tips and techniques for better sleep" }
   ],
   relaxationQuotidienneTitle: "Daily relaxation techniques",

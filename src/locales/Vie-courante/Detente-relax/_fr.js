@@ -68,7 +68,6 @@ const fr = {
   aiguVsChroniqueText1: "Il est important de distinguer deux types de stress :",
   aiguVsChroniqueText2: "Le <b>stress aigu</b> désigne une <b>réaction immédiate</b> à une situation ponctuelle (examen, entretien). Il disparaît une fois la situation passée.",
   aiguVsChroniqueText3: "Le <b>stress chronique</b> correspond à une exposition prolongée à des facteurs de stress (travail, études, vie personnelle). Il peut entraîner des problèmes de santé à long terme car il affecte le corps de manière continue.",
-  attentionStress: "Attention, <b>tout stress n'est pas mauvais</b> : c'est une réaction naturelle du corps qui peut aussi être un moteur de performance et de motivation. En revanche, un <b>stress mal géré peut avoir des conséquences néfastes</b>.",
   distinctionAnxieteTitle: "La distinction avec l'anxiété",
   distinctionAnxieteText: "<b>Stress et anxiété ne sont pas synonymes.</b> « Je suis stressé·e » ne veut pas dire la même chose que « Je suis anxieux·se ».",
   resourceClinique: [
@@ -140,7 +139,7 @@ const fr = {
   enSavoirPlusPages: "Pour en savoir plus sur ces sujets, consulte les pages dédiées :",
   resourceLongTerme: [
     { link: "/sport", emoji: "🏃‍♂️", label: "Santé physique et sport", description: "L'activité physique pour réduire le stress" },
-    { link: "/alimentation", emoji: "🥬", label: "Alimentation", description: "Adopter une alimentation équilibrée pour mieux gérer le stress" },
+    { link: "/aliment", emoji: "🥬", label: "Alimentation", description: "Adopter une alimentation équilibrée pour mieux gérer le stress" },
     { link: "/sommeil", emoji: "😴", label: "Sommeil", description: "Conseils et techniques pour mieux dormir" }
   ],
   relaxationQuotidienneTitle: "Techniques de relaxation quotidiennes",

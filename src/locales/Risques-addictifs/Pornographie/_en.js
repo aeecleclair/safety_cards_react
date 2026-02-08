@@ -128,7 +128,8 @@ const en = {
     link: "https://www.filsantejeunes.com/"
   },
 
-  sources: "<em><b>Sources :</b></em> DASA France, Addict'Aide, Fédération Addiction, Stopporn.fr, IFAC."
+    sourcesLabel: "Sources:",
+  sourcesList: "DASA France, Addict'Aide, Fédération Addiction, Stopporn.fr, IFAC.",
 };
 
 export default en;

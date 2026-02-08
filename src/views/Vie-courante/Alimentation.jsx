@@ -55,7 +55,9 @@ const Alimentation = () => {
       <h2 className="sous-titre-2">{t.sauterRepasTitle}</h2>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.sauterRepasText }} />
 
-      <Quote text={t.quoteText} />
+      <Quote text={t.quoteText} />      
+      <h2 className="sous-titre-2">{t.chiffresTitle}</h2>
+      <ChiffresGroup chiffres={t.chiffresData} />
 
       <h2 className="sous-titre-2">{t.risquesTitle}</h2>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.risquesIntro }} />
@@ -98,15 +100,12 @@ const Alimentation = () => {
 
       <h2 className="sous-titre-2">{t.pasDeTempsTitle}</h2>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.pasDeTempsText1 }} />
-      <p className="texte" dangerouslySetInnerHTML={{ __html: t.pasDeTempsText2 }} />
+      <p className="mise-avant" dangerouslySetInnerHTML={{ __html: t.pasDeTempsText2 }} />
 
       <h2 className="sous-titre-2">{t.pasDeMoyensTitle}</h2>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.pasDeMoyensText }} />
 
       <ExternalLinkBlock resources={t.resourcesPrecarite} />
-
-      <h2 className="sous-titre-2">{t.chiffresTitle}</h2>
-      <ChiffresGroup chiffres={t.chiffresData} />
 
       <h2 className="sous-titre-2">{t.appTitle}</h2>
       <ExternalLinkBlock resources={t.appResources} />

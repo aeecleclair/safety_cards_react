@@ -28,6 +28,11 @@ const fr = {
   sauterRepasTitle: "Sauter des repas",
   sauterRepasText: "Sauter des repas peut sembler une solution rapide pour perdre du poids, grapiller quelques minutes de sommeil sur le petit-déjeuner ou ne pas avoir à faire la cuisine, mais cela fatigue ton corps, qui a besoin <b>de nutriments</b>, notamment au réveil. Sauter un repas peut entraîner une <b>fatigue accrue</b>, des <i><b>cravings</b></i> <i>(fringales)</i> pour des aliments sucrés et une <b>baisse de concentration</b>. Manger de façon régulière et équilibrée t'apporte de l'énergie et aide à ton bien-être.",
   quoteText: "Bien manger, c'est aussi prendre soin de sa santé mentale.",
+  chiffresTitle: "Chiffres clés",
+  chiffresData: [
+    { number: "30%", title: "des étudiant·e·s", description: "avouent sauter au moins un repas par jour" },
+    { number: "50%", title: "des jeunes", description: "consomment trop de produits sucrés chaque semaine" },
+  ],
   risquesTitle: "Les risques",
   risquesIntro: "Adopter de mauvaises habitudes alimentaires, manger trop ou pas assez peut avoir des conséquences sur ta <b>santé physique et mentale</b>. Voici quelques signes qui peuvent t'alerter :",
   risquesList: [
@@ -117,11 +122,7 @@ const fr = {
       description: "Les solutions à ta disposition",
     }
   ],
-  chiffresTitle: "Chiffres clés",
-  chiffresData: [
-    { number: "30%", title: "des étudiant·e·s", description: "avouent sauter au moins un repas par jour" },
-    { number: "50%", title: "des jeunes", description: "consomment trop de produits sucrés chaque semaine" },
-  ],
+
   appTitle: "Application utile",
   appResources: [
     { label: "OpenFoodFacts", 

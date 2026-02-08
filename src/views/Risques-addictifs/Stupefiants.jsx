@@ -37,6 +37,15 @@ const Stupefiants = () => {
           dangerouslySetInnerHTML={{ __html: t.resumeIntro }}
         />
       </div>
+      
+      <ImageTextPopup
+        image={t.carteValetTrefle.image}
+        title={t.carteValetTrefle.title}
+        shortText={t.carteValetTrefle.shortText}
+        longText={t.carteValetTrefle.longText}
+        textButton={t.carteValetTrefle.buttonText}
+        suit={t.carteValetTrefle.suit}
+      />
 
       <p className="sous-titre-2">{t.effectsTitle}</p>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.effectsIntro }} />
@@ -64,6 +73,8 @@ const Stupefiants = () => {
 
       <ExternalLinkBlock resources={t.resources6} />
 
+        <Separateur/>
+
       <div id="conso">
         <h1 className="titre">{t.sectionConsoTitle}</h1>
       </div>
@@ -90,14 +101,6 @@ const Stupefiants = () => {
 
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.consoLongText }} />
 
-      <ImageTextPopup
-        image={t.carteValetTrefle.image}
-        title={t.carteValetTrefle.title}
-        shortText={t.carteValetTrefle.shortText}
-        longText={t.carteValetTrefle.longText}
-        textButton={t.carteValetTrefle.buttonText}
-        suit={t.carteValetTrefle.suit}
-      />
 
       <h1 className="sous-titre-2">{t.reduceRisksTitle}</h1>
       <p

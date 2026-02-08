@@ -95,8 +95,14 @@ const en = {
     {
       link: "/detente",
       emoji: "🧘‍♀️",
-      label: "Relaxation & stress relief",
+      label: "Relaxation",
       description: "Alternatives to drugs to relax and manage stress"
+    },
+    { 
+      link: "/groupe",
+      emoji: "🙅‍♀️",
+      label: "Peer pressure",
+      description: "How to resist group pressure and make your own choices"
     }
   ],
 

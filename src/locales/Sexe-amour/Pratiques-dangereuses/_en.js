@@ -62,6 +62,7 @@ const en = {
     "Consider PrEP if you are regularly exposed to HIV (talk to a healthcare professional)",
     "In case of recent exposure (assault, unprotected sex): request Post-Exposure Prophylaxis (PEP) within 48–72h"
   ],
+  resourcesProtection: [{link: "/sex", emoji: "😘", label: "Sexuality & contraception", description: "Learn more about sexual health and contraception"}],
   condomTitle: "The Condom",
   condomText1: "The <b>condom</b> (male or female) is the most effective way to protect against most STIs during sex. It must be <b>used correctly and systematically, from start to finish</b>. It is important to <b>check the expiration date and packaging integrity</b> before use.",
   condomText2: "Buying condoms is <b>anonymous and free</b> in sexual health centers, CeGIDDs, family planning centers, and <b>at the school infirmary</b>. They are also available in pharmacies, supermarkets, and vending machines.",
@@ -91,7 +92,7 @@ const en = {
   noVaccineNote: "There is no vaccine for HIV, chlamydia, gonorrhea, or syphilis, but research is ongoing.",
   prepTitle: "PrEP for HIV",
   prepText: "<b>PrEP (Pre-Exposure Prophylaxis)</b> is a preventive treatment that strongly reduces HIV infection risk in high-risk individuals. It involves taking antiretroviral medication before and after potential exposure.",
-  resourcesPrep: [{ link: "https://www.sida-info-service.org/dossier-la-prep/", imageSrc: "/assets/sida.jpg", label: "PrEP Info", description: "If you have sex with HIV-positive partners" }],
+  resourcesPrep: [{ link: "https://www.sida-info-service.org/dossier-la-prep/#:~:text=La%20PrEP%2C%20(Prophylaxie%20Pr%C3%A9%2D,%C3%AAtre%20contamin%C3%A9%20par%20le%20VIH.", imageSrc: "/assets/sida.jpg", label: "PrEP Info", description: "If you have sex with HIV-positive partners" }],
   prejugesTitle: "STI Prejudices",
   prejugesIntro: "STIs are often surrounded by <b>prejudice and stigma</b>, which can prevent people from getting tested. It's important to remember that:",
   prejugesList: [
@@ -116,7 +117,7 @@ const en = {
     "In preparation for pregnancy to protect mother and child",
   ],
   howTitle: "How to get tested?",
-  howText: "Testing can be done via <b>blood test, urine test, or local swab</b> depending on the STI. Testing is <b>free and anonymous at CeGIDDs</b>, sexual health centers, or with a healthcare professional.",
+  howText: "Testing can be done via <b>blood test, urine test, or local sampling</b> (urethra, cervix, throat, rectum) depending on the STI being tested. Testing can be done <b>free of charge and anonymously at CeGIDD centers</b> (= Free information, screening, and diagnostic centers), sexual health centers, or with a healthcare professional (doctor, gynecologist, nurse). Some rapid tests are also available in pharmacies or online.",
   contactCegidd: {
     image: "/assets/hcl.png",
     title: "CeGIDD around Lyon",
@@ -149,12 +150,12 @@ const en = {
   traitementsIntro: "STIs <b>are treated based on their origin</b>: bacterial infections (chlamydia, syphilis) with antibiotics, and viral infections (HIV, herpes) with antivirals. It is essential to <b>complete the full treatment</b>.",
   traitementsDetailsTitle: "STI Treatment",
   traitementsDetailsText: "Treatment depends on the infectious agent. Bacterial STIs are generally <b>cured with antibiotics</b>. Viral STIs are <b>controlled</b> with antivirals.",
-  resourcesTreatments: [{link: "https://www.ameli.fr/", imageSrc: "/assets/ameli.png", label: "Ameli", description: "Official info on treatments" }],
+  resourcesTreatments: [{link: "https://www.ameli.fr/assure/sante/themes/mst-ist/traitement", imageSrc: "/assets/ameli.png", label: "Ameli", description: "Official info on treatments" }],
   treatmentCompliance: "It is crucial to <b>finish the prescribed treatment</b>, even if symptoms vanish. Stopping early can lead to drug resistance.",
-  treatmentPrecaution: "During treatment, <b>avoid sex</b> or <b>use a condom systematically</b> to prevent transmission to partners.",
-  treatmentFollowup: "After treatment, a <b>follow-up test</b> may be necessary to ensure recovery.",
+  treatmentPrecaution: "During treatment, <b>avoid sex</b> or <b>use a condom systematically</b> to prevent transmission to partners. Informing recent partners also helps limit the spread of STIs",
+  treatmentFollowup: "After treatment, a <b>follow-up screening</b> may be necessary to ensure recovery, especially for certain STIs such as syphilis or HIV.",
   contactSidaInfo: {
-    image: "/assets/sida-info-service.png",
+    image: "/assets/sida.jpg",
     title: "Sida Info Service",
     subtitle: "Listening, info, and orientation on HIV/STIs",
     phone: "0800 840 800",
@@ -163,8 +164,8 @@ const en = {
     link: "https://www.sida-info-service.org/"
   },
   pepTitle: "PEP after HIV Exposure",
-  pepText: "<b>PEP (Post-Exposure Prophylaxis)</b> is an emergency treatment that can prevent HIV infection after recent exposure (less than 48-72 hours).",
-  resourcesPep: [{ link: "https://www.sida-info-service.org/", imageSrc: "/assets/sida.jpg", label: "PEP Info", description: "If exposed to HIV less than 48h ago" }],
+  pepText: "<b>PEP (Post-Exposure Prophylaxis)</b> is an emergency treatment that can prevent HIV infection after a recent exposure (within 48-72 hours). It consists of daily antiretroviral medication for 28 days and must be started as soon as possible after exposure.",
+  resourcesPep: [{ link: "https://www.sida-info-service.org/risque-moins-de-48-heures/", imageSrc: "/assets/sida.jpg", label: "PEP Info", description: "If exposed to HIV less than 48h ago" }],
   pratiquesTitle: "High-Risk Practices",
   pratiquesIntro: "High-risk practices promote STI transmission. <b>Alcohol and drugs can impair judgment</b> and <b>void consent validity</b>.",
   pratiquesListIntro: "Practices that <b>increase STI transmission risk</b> include:",
@@ -175,10 +176,10 @@ const en = {
     "Drug or alcohol use that impairs judgment"
   ],
   substancesTitle: "Sex Under the Influence",
-  substancesText1: "Substance use can <b>impair judgment and increase risky behavior</b>. It's important to stay aware of your limits.",
-  substancesText2: "<b>Consent</b> must always be <b>voluntary, clear, lucid, specific, and revocable</b>. Legally, someone under the influence cannot give valid consent.",
+  substancesText1: "The use of <b>drugs or alcohol</b> can <b>impair judgment</b> and increase risky behaviors, such as not using a condom. It is important to stay aware of your limits and plan strategies to protect yourself, even under the influence of substances.",
+  substancesText2: "As a reminder, <b>consent</b> must always be <b>voluntary, clear, conscious, specific, and revocable</b>. By definition, a person under the influence of substances cannot give valid consent. <b>Legally, this can result in prosecution for sexual assault</b>.",
   pagesConsentement: [
-    { link: "/consentement", emoji: "✅", label: "Consent", description: "Understanding and respecting consent"},
+    { link: "/consent", emoji: "✅", label: "Consent", description: "Understanding and respecting consent"},
     { link: "/alcool", emoji: "🍻", label: "Alcohol Consumption", description: "Effects on consent and behavior" },
     { link: "/vss", emoji: "🫂", label: "VSS", description: "Recognizing and acting against sexual violence"}
   ],

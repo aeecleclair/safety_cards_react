@@ -88,8 +88,6 @@ const Detente_relax = () => {
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.aiguVsChroniqueText2 }} />
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.aiguVsChroniqueText3 }} />
 
-      <p className="mise-avant" dangerouslySetInnerHTML={{ __html: t.attentionStress }} />
-
       <h2 className="sous-titre-2">{t.distinctionAnxieteTitle}</h2>
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.distinctionAnxieteText }} />
       <ExternalLinkBlock resources={t.resourceClinique} />
@@ -234,7 +232,7 @@ const Detente_relax = () => {
 
       <Separateur />
       <p className="texte">
-        <em><b dangerouslySetInnerHTML={{ __html: t.sourcesLabel }} /></em> {t.sourcesList}
+        <em><b dangerouslySetInnerHTML={{ __html: t.sourcesLabel }} /> {t.sourcesList}</em>
       </p>
     </div>
   );

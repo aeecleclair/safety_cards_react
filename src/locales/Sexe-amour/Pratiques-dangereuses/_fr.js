@@ -59,9 +59,10 @@ const fr = {
     "Se faire vacciner contre le HPV et l'hépatite B si recommandé (vaccins très efficaces)",
     "Limiter le nombre de partenaires et connaître le statut de ses partenaires",
     "Ne pas partager d'aiguilles ou d'objets contaminés",
-    "Penser à la PrEP si vous êtes exposé·e au VIH de façon régulière (parlez-en à un professionnel de santé)",
+    "Penser à la PrEP si tu es exposé·e au VIH de façon régulière (parles-en à un professionnel de santé)",
     "En cas d'exposition récente (agression, rapport non protégé) : demander une prophylaxie post‑exposition (TPE/PPE) dans les 48–72h"
   ],
+  resourcesProtection: [{link: "/sex", emoji: "😘", label: "Sexualité & contraception", description: "Pour en apprendre plus sur la santé sexuelle et la contraception"}],
   condomTitle: "Le préservatif",
   condomText1: "Le <b>préservatif</b> (masculin ou féminin) est le moyen le plus efficace pour se protéger contre la plupart des IST lors de rapports sexuels. Il doit être <b>utilisé de manière correcte et systématique, du début à la fin du rapport</b>. Il est important de <b>vérifier la date de péremption et l'intégrité de l'emballage</b> avant utilisation.",
   condomText2: "L'achat de préservatifs est <b>anonyme et gratuit</b> dans les centres de santé sexuelle, les CeGIDD, les centres de planning familial, et <b>à l'infirmerie de l'école</b>. Ils sont aussi disponibles en pharmacie, supermarchés, distributeurs automatiques et en ligne.",
@@ -112,7 +113,7 @@ const fr = {
   whenList: [
     "Après un rapport non protégé ou un doute",
     "Avant d'arrêter le préservatif avec un(e) nouveau(elle) partenaire",
-    "Régulièrement si vous avez des partenaires multiples ou des pratiques à risque",
+    "Régulièrement si tu as des partenaires multiples ou des pratiques à risque",
     "En préparation d'une grossesse afin de protéger la santé de la mère et de l'enfant",
   ],
   howTitle: "Comment se faire dépister ?",
@@ -132,8 +133,8 @@ const fr = {
   afterTitle: "Après un dépistage",
   afterText1: "Les résultats des tests peuvent prendre de <b>quelques jours à une semaine</b> selon le type de test et le lieu de dépistage. Ils sont <b>confidentiels</b> et, dans les CeGIDD, le dépistage peut être anonyme. Pendant ce laps de temps, il est recommandé de <b>ne pas avoir de rapports sexuels non protégés</b> et de <b>prévenir ses partenaires sexuels</b> pour qu'ils puissent également se faire dépister.",
   pagesSexualite: [{ link: "/sex", emoji: "😘", label: "Sexualité & Contraception", description: "Comment être plus épanoui et responsable dans sa sexualité ?"}],
-  afterNegative: "Si le dépistage est <b>négatif</b>, il est important de continuer à se protéger et de refaire un dépistage régulièrement si vous avez des pratiques à risque.",
-  afterPositive: "Si le dépistage est <b>positif</b>, un <b>traitement adapté</b> sera prescrit selon l'IST diagnostiquée. Il est essentiel de suivre les recommandations du professionnel de santé et d'<b>informer vos partenaires récents</b> pour qu'ils puissent également se faire dépister et traiter si nécessaire.",
+  afterNegative: "Si le dépistage est <b>négatif</b>, il est important de continuer à se protéger et de refaire un dépistage régulièrement si tu as des pratiques à risque.",
+  afterPositive: "Si le dépistage est <b>positif</b>, un <b>traitement adapté</b> sera prescrit selon l'IST diagnostiquée. Il est essentiel de suivre les recommandations du professionnel de santé et d'<b>informer tes partenaires récents</b> pour qu'ils puissent également se faire dépister et traiter si nécessaire.",
   planAideTitle: "Que faire si le test est positif ?",
   planAideItems: [
     { title: "Ne pas paniquer", subtitle: "La plupart des IST sont guérissables avec un traitement adapté"},
@@ -141,10 +142,10 @@ const fr = {
     { title: "Suivi médical", subtitle: "Suivre les prescriptions et refaire un contrôle si demandé par le professionnel" },
     { title: "Parler", subtitle: "Informer ses partenaires récents de façon factuelle et non-accusatoire" }
   ],
-  resourcesPartner: [{ link: "https://questionsexualite.fr/s-informer-sur-les-infections-et-les-maladies/avoir-une-ist/pourquoi-et-comment-informer-votre-ou-vos-partenaires-de-votre-ist", imageSrc: "/assets/question_sexualite.png", label: "Question Sexualité", description: "Comment informer votre ou vos partenaires de votre IST ?" }],
-  finalNote: "N'oubliez pas que de <b>nombreuses IST sont guérissables</b> avec un traitement approprié, et que le <b>dépistage</b> est un <b>acte responsable</b> pour votre santé et celle de vos partenaires.",
+  resourcesPartner: [{ link: "https://questionsexualite.fr/s-informer-sur-les-infections-et-les-maladies/avoir-une-ist/pourquoi-et-comment-informer-votre-ou-vos-partenaires-de-votre-ist", imageSrc: "/assets/question_sexualite.png", label: "Question Sexualité", description: "Comment informer ta/ton ou tes partenaires de ton IST ?" }],
+  finalNote: "N'oublies pas que de <b>nombreuses IST sont guérissables</b> avec un traitement approprié, et que le <b>dépistage</b> est un <b>acte responsable</b> pour ta santé et celle de tes partenaires.",
   regularTitle: "Le dépistage régulier",
-  regularText: "Le <b>dépistage régulier</b> des IST est essentiel, même en l'absence de symptômes, surtout si vous avez des <b>partenaires multiples ou des pratiques à risque</b>. Un dépistage précoce permet un traitement rapide et réduit le risque de complications et de transmission.",
+  regularText: "Le <b>dépistage régulier</b> des IST est essentiel, même en l'absence de symptômes, surtout si tu as des <b>partenaires multiples ou des pratiques à risque</b>. Un dépistage précoce permet un traitement rapide et réduit le risque de complications et de transmission.",
   traitementsTitle: "Se faire traiter",
   traitementsIntro: "Les IST <b>se soignent selon leur origine</b> : les infections bactériennes (comme la chlamydia ou la syphilis) sont traitées par antibiotiques, tandis que les infections virales (comme le VIH ou l’herpès) se contrôlent grâce à des antiviraux. Il est essentiel de <b>suivre le traitement prescrit jusqu’au bout</b>, d’<b>éviter les rapports non protégés pendant cette période</b> et de <b>prévenir ses partenaires pour limiter la transmission.</b>",
   traitementsDetailsTitle: "Traitement des IST",
@@ -178,7 +179,7 @@ const fr = {
   substancesText1: "L'usage de drogues ou d'alcool peut <b>altérer le jugement et augmenter les comportements à risque</b>, comme l'abandon du préservatif. Il est important de rester conscient·e de ses limites et de planifier des stratégies pour se protéger, même sous l'influence de substances.",
   substancesText2: "Rappelons que le <b>consentement</b> doit toujours être <b>volontaire, clair, lucide, spécifique et révocable</b>. Par définition, une personne sous l'emprise de substances ne peut pas donner un consentement valide. <b>Pénalement, cela peut se traduire par des poursuites pour agression sexuelle.</b>",
   pagesConsentement: [
-    { link: "/consentement", emoji: "✅", label: "Consentement", description: "Comprendre et respecter le consentement dans les relations sexuelles"},
+    { link: "/consent", emoji: "✅", label: "Consentement", description: "Comprendre et respecter le consentement dans les relations sexuelles"},
     { link: "/alcool", emoji: "🍻", label: "Consommation d'alcool", description: "Les effets de l'alcool sur le consentement et les comportements sexuels" },
     { link: "/vss", emoji: "🫂", label: "VSS", description: "Reconnaître, prévenir et agir face aux violences sexuelles"}
   ],

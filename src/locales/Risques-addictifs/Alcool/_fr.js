@@ -8,8 +8,7 @@ const fr = {
   ],
 
   section1Title: "L'alcool, moi et les autres",
-  risque1: "<b>Boire comporte des risques</b>, pour ta santé et celle des autres.",
-  risque2: "Légalement, tu restes <b>responsable</b> de tes actes, même sous l'influence de l'alcool.",
+  risque1: "<b>Boire comporte des risques</b>, pour ta santé et celle des autres. Légalement, tu restes <b>responsable</b> de tes actes, même sous l'influence de l'alcool.",
 
   carte6_trefle: {
     image: "/assets/cartes/6_trefle.jpg",
@@ -64,9 +63,7 @@ const fr = {
 
   section2Title: "Je consomme",
   consoIntro: [
-    "<b>Ne pas oublier de boire de l'eau et s'alimenter</b> pour atténuer les effets de l'alcool.",
-    "Boire beaucoup d'alcool te met en danger et favorise les <b>comportements à risque</b>.",
-    "Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un·e <b>professionnel·le de santé</b>."
+    "<b>Ne pas oublier de boire de l'eau et s'alimenter</b> pour atténuer les effets de l'alcool. Boire beaucoup d'alcool te met en danger et favorise les <b>comportements à risque</b>. Si tu as le moindre doute sur ta consommation, n'hésite pas à en parler à un·e <b>professionnel·le de santé</b>."
   ],
 
   consoTitle: "Comment consommer de façon responsable ?",
@@ -77,7 +74,7 @@ const fr = {
     "<b>Prendre en compte le délai avant le pic d'alcoolémie</b> : 30/45 minutes après le dernier verre si à jeun, 1h/1h30 si repas",
     "<b>Connaître ses limites et s'y tenir</b> : ne pas se laisser influencer par les autres",
     "<b>Eviter les mélanges avec d'autres substances</b> : médicaments, drogues, etc.",
-    "<b>Ne jamais boire en conduisant</b> ou en pratiquant une activité nécessitant de la concentration",
+    "<b>Ne jamais boire si tu conduis</b> ou si tu pratiques une activité nécessitant de la concentration",
     "<b>Prévoir un moyen de rentrer en toute sécurité</b> : taxi, VTC, transport en commun, conducteur désigné, etc."
   ],
 
@@ -91,6 +88,9 @@ const fr = {
   },
 
   conduiteText: "Pour ta sécurité et celle des autres, il est fortement recommandé de <b>ne pas consommer d'alcool du tout avant de conduire</b>. Si tu as bu, mange, bois de l'eau et repose-toi plusieurs heures avant de prendre la route ou utilise des alternatives comme les transports en commun, un taxi ou un conducteur désigné pour rentrer chez toi en toute sécurité. Enfin, si tu te rends compte que tu as trop bu, n'hésite pas à <b>demander de l'aide</b> ou à en parler <b>à quelqu'un en qui tu as confiance</b> afin qu'il/elle veille sur toi.",
+  resourcesAccident: [
+    { link: "/accident", emoji: "🚗", label: "Accidents de la circulation", description: "Sensibilisation et prévention des accidents liés à l'alcool au volant" }
+  ],
 
   bingeTitle: "Le binge drinking",
   bingeQuote: "Les meilleures soirées sont celles dont tu te souviens.",
@@ -106,7 +106,7 @@ const fr = {
   warningGlass: "N'oublie pas non plus que toutes les boissons ne contiennent pas la même quantité d'alcool. <b>Attention</b>, à la maison ou chez des amis, on a tendance à se servir de plus grands verres !",
 
   tooMuchTitle: "Comment savoir si je bois trop souvent ?",
-  tooMuchText: "En arrivant à l'école, on se retrouve souvent dans un nouvel environnement social où l'alcool et les fêtes sont omniprésents. Il est facile de se laisser entraîner dans des habitudes de consommation qui peuvent devenir problématiques. Or, une consommation régulière peut entraîner une dépendance physique et psychologique, rendant difficile l'arrêt ou la réduction de la consommation. Il est important de rester vigilant·e quant à tes habitudes de consommation et de ne pas hésiter à demander de l'aide si tu sens que tu perds le contrôle.",
+  tooMuchText: "En arrivant à l'école, on se retrouve souvent dans un nouvel environnement social où l'alcool et les fêtes sont omniprésents. Il est facile de <b>se laisser entraîner dans des habitudes de consommation qui peuvent devenir problématiques</b>. Or, une consommation régulière peut entraîner une <b>dépendance physique et psychologique</b>, rendant difficile l'arrêt ou la réduction de la consommation. Il est important de rester vigilant·e quant à tes habitudes de consommation et de ne pas hésiter à <b>demander de l'aide</b> si tu sens que tu perds le contrôle.",
 
   carte3_trefle: {
     image: "/assets/cartes/3_trefle.png",
@@ -157,8 +157,7 @@ const fr = {
 
   section3Title: "Je suis témoin",
   temoinIntro: [
-    "Tu remarques que quelqu'un a du mal à se tenir debout, à parler clairement ou se met en danger ? <b>Reste avec lui/elle et appelle à l'aide si nécessaire.</b>",
-    "Si tu as le moindre soupçon sur la consommation d'alcool d'un proche, ne lui tourne pas le dos et <b>propose-lui ton aide de manière bienveillante.</b>"
+    "Tu remarques que quelqu'un a du mal à se tenir debout, à parler clairement ou se met en danger ? <b>Reste avec lui/elle et appelle à l'aide si nécessaire.</b> Si tu as le moindre soupçon sur la consommation d'alcool d'un proche, ne lui tourne pas le dos et <b>propose-lui ton aide de manière bienveillante.</b>"
   ],
 
   helpTitle: "Comment agir face à une personne très alcoolisée ?",

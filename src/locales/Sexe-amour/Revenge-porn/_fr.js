@@ -119,7 +119,7 @@ const fr = {
   assocTitle: "Sujets associés",
   resourcesAssoc: [
     { link: "/couple", emoji: "💑", label: "Relations de couple", description: "Mon/ma partenaire insiste pour que je lui envoie des nudes, que faire ?" },
-    { link: "cyberharcelement", emoji: "📵", label: "Cyberharcèlement", description: "Je suis victime d'une campagne de cyberharcèlement, que faire ?" }
+    { link: "/cyber_harcel", emoji: "📵", label: "Cyberharcèlement", description: "Je suis victime d'une campagne de cyberharcèlement, que faire ?" }
   ],
   sourcesLabel: "Sources :",
   sourcesList: "e-enfance, Association CVM, violences-sexuelles.info, Stop Fisha"

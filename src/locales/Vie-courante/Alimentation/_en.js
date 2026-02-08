@@ -28,6 +28,11 @@ const en = {
   sauterRepasTitle: "Skipping meals",
   sauterRepasText: "Skipping meals may seem like a quick fix to lose weight, grab a few extra minutes of sleep instead of breakfast, or avoid cooking, but it tires your body, which needs <b>nutrients</b>, especially upon waking. Skipping a meal can lead to <b>increased fatigue</b>, <i><b>cravings</b></i> for sugary foods, and a <b>decrease in concentration</b>. Eating regularly and balanced brings you energy and helps your well-being.",
   quoteText: "Eating well is also about taking care of your mental health.",
+  chiffresTitle: "Key figures",
+  chiffresData: [
+    { number: "30%", title: "of students", description: "admit to skipping at least one meal a day" },
+    { number: "50%", title: "of young people", description: "consume too many sugary products each week" },
+  ],
   risquesTitle: "The risks",
   risquesIntro: "Adopting poor eating habits, eating too much or not enough can have consequences on your <b>physical and mental health</b>. Here are some signs that can alert you:",
   risquesList: [
@@ -117,11 +122,7 @@ const en = {
       description: "The solutions available to you",
     }
   ],
-  chiffresTitle: "Key figures",
-  chiffresData: [
-    { number: "30%", title: "of students", description: "admit to skipping at least one meal a day" },
-    { number: "50%", title: "of young people", description: "consume too many sugary products each week" },
-  ],
+  
   appTitle: "Useful application",
   appResources: [
     { label: "OpenFoodFacts", 

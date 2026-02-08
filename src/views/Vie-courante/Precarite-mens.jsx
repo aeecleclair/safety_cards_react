@@ -121,7 +121,7 @@ const PrecariteMens = () => {
       <Separateur />
 
       <p className="texte">
-        <em><b dangerouslySetInnerHTML={{ __html: t.sourcesLabel }} /></em> {t.sourcesList}
+        <em><b dangerouslySetInnerHTML={{ __html: t.sourcesLabel }} /> {t.sourcesList}</em>
       </p>
     </div>
   );

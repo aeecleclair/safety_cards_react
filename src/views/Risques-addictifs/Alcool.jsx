@@ -34,7 +34,6 @@ const Alcool = () => {
 
       <div id="resume-conseils">
         <p className="mise-avant" dangerouslySetInnerHTML={{ __html: t.risque1 }} />
-        <p className="mise-avant" dangerouslySetInnerHTML={{ __html: t.risque2 }} />
       </div>
 
       <ImageTextPopup
@@ -91,6 +90,8 @@ const Alcool = () => {
       />
 
       <p className="texte" dangerouslySetInnerHTML={{ __html: t.conduiteText }} />
+
+      <ExternalLinkBlock resources={t.resourcesAccident}></ExternalLinkBlock>
 
       <h1 className="sous-titre-2">{t.bingeTitle}</h1>
       <Quote text={t.bingeQuote} />
