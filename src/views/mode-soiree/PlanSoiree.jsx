@@ -8,7 +8,8 @@ import './mode-soiree.css';
 // Placeholders temporaires (remplacer plus tard par les vrais plans)
 const PLAN_IMAGES = {
   rdc: '/assets/m16_rdc.png',
-  soussol: '/assets/m16_ss.png'
+  soussol: '/assets/m16_ss.png',
+  campus : '/assets/campus_plan.png'
 };
 
 const PlanSoiree = () => {
@@ -26,6 +27,23 @@ const PlanSoiree = () => {
       </p>
 
       <div className="plan-tabs">
+        {/* Mode Challenge
+        <button
+          className={"plan-tab-btn" + (niveau==='campus' ? ' active' : '')}
+          onClick={() => setNiveau('campus')}
+        >Plan du campus</button>
+
+        <button
+          className={"plan-tab-btn" + (niveau==='soiree1' ? ' active' : '')}
+          onClick={() => setNiveau('soiree1')}
+        >Zone de soirée</button>
+
+        <button
+          className={"plan-tab-btn" + (niveau==='soiree0' ? ' active' : '')}
+          onClick={() => setNiveau('soiree0')}
+        >Sous-sol </button>
+
+        */}
         <button
           className={"plan-tab-btn" + (niveau==='rdc' ? ' active' : '')}
           onClick={() => setNiveau('rdc')}

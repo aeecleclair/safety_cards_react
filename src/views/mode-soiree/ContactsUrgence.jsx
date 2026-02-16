@@ -11,21 +11,21 @@ const ContactsUrgence = () => {
   const contacts = [
     {
       image: assetPath("/assets/bde.png"),
-      title: "Tsuki",
+      title: "Léo (Sid)",
       subtitle: "Prez' BDE",
-      phone: "📱 06 47 74 78 88",
+      phone: "📱 06 38 37 50 08",
       textButton: "📞 Appeler",
-      link: "tel:0647747888",
+      link: "tel:0638375008",
       bgColor: "white",
       textColor: "#245377",
     },
     {
       image: assetPath("/assets/bde.png"),
-      title: "Mawi",
+      title: "Dune (Pi'ky)",
       subtitle: "Vice Prez' BDE",
-      phone: "📱 07 72 31 40 97",
+      phone: "📱 06 31 77 26 32",
       textButton: "📞 Appeler",
-      link: "tel:0772314097",
+      link: "tel:0631772632",
       bgColor: "white",
       textColor: "#245377",
     }
