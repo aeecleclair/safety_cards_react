@@ -308,8 +308,9 @@ const en = {
     },
   ],
 
-  sourcesText:
-    "Sources: OUTrans brochures (hormones, DTC), Chrysalide Guide, WikiTrans, Fransgenre, Family Planning, Centre LGBTI+ Lyon, SOS Homophobie, Santé Publique France, student testimonies, 2024 Student Life Report at Centrale Lyon",
+  sourcesLabel: "Sources:",
+  sourcesList:
+    "OUTrans brochures(hormones, DTC), Chrysalide Guide, WikiTrans, Fransgenre, Family Planning, Centre LGBTI+ Lyon, SOS Homophobie, Santé Publique France, student testimonies, 2024 Student Life Report at Centrale Lyon",
 };
 
 export default en;

@@ -129,8 +129,9 @@ const fr = {
     <><b>Sois patient·e</b>, le processus d'intégration sociale peut prendre du temps, et chacun avance à son rythme.</>,
   ],
 
-  sourcesText:
-    "Sources : IFOP 2024, Qualité de Vie en étude à l'ECL, Portail Santé UDL, AFEV, Nightline Lyon, Fil Santé Jeunes.",
+  sourcesLabel: "Sources :",
+  sourcesList:
+    "IFOP 2024, Qualité de Vie en étude à l'ECL, Portail Santé UDL, AFEV, Nightline Lyon, Fil Santé Jeunes.",
 };
 
 export default fr;

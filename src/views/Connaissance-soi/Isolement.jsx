@@ -119,7 +119,7 @@ const Isolement = () => {
       <Separateur />
 
       <p className="texte">
-        <em>{t.sourcesText}</em>
+        <em><b dangerouslySetInnerHTML={{ __html: t.sourcesLabel }} /> {t.sourcesList}</em>
       </p>
     </div>
   );

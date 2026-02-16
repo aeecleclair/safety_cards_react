@@ -155,8 +155,10 @@ const Confiance = () => {
 
       <Separateur />
 
-      <p className="texte"><em>{t.sourcesText}</em></p>
-
+      <p className="texte">
+        <em><b dangerouslySetInnerHTML={{ __html: t.sourcesLabel }} /> {t.sourcesList}</em>
+      </p>
+      
     </div>
   );
 };

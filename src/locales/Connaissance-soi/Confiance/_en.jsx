@@ -163,8 +163,8 @@ const en = {
     "Do not give unsolicited advice: listening is often more valuable than advising.",
   ],
 
-  sourcesText:
-    "Sources: UNICEF, Psychologies Magazine, Université de Lyon Health Portal, American Psychological Association.",
+  sourcesLabel: "Sources:",
+  sourcesList: "UNICEF, Psychologies Magazine, University of Lyon Health Portal, American Psychological Association.",
 };
 
 export default en;

@@ -241,6 +241,7 @@ export default {
     "Mental Health First Aid (PSSM) is the help given to someone experiencing a mental health problem or crisis until professional help is available or the crisis resolves. It's the mental health equivalent of physical first aid.\n            Open to everyone, with no prerequisites, PSSM teaches how to respond to psychological distress: connect, support, and guide.\n            At Centrale, the training is provided by the infirmary; if you're interested, contact them or the Peer Care association.",
   pssmImage: "/assets/logo-pssm.svg",
 
-  sourcesHtml:
-    "<em><b>Sources:</b> Youth Mental Health First Aid Manual, Université de Lyon health portal, Royal College of Psychiatrists, UNICEF</em>",
-};
+  sourcesLabel: "Sources:",
+  sourcesList:
+    "Youth Mental Health First Aid Manual, Université de Lyon health portal, Royal College of Psychiatrists, UNICEF.",
+  };

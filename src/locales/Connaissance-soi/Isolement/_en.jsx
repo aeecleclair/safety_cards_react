@@ -129,8 +129,9 @@ const en = {
     <><b>Be patient</b> : social integration can take time, and everyone moves at their own pace.</>,
   ],
 
-  sourcesText:
-    "Sources: IFOP 2024, Student Life Quality at ECL, UDL Health Portal, AFEV, Nightline Lyon, Fil Santé Jeunes.",
-};
+  sourcesLabel: "Sources:",
+  sourcesList:
+    "IFOP 2024, Student Life Quality at ECL, UDL Health Portal, AFEV, Nightline Lyon, Fil Santé Jeunes.",
+  };
 
 export default en;

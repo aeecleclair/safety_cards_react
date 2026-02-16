@@ -243,6 +243,7 @@ export default {
     "Les PSSM (Premiers Secours en Santé Mentale) constituent l'aide qui est apportée à une personne touchée par un trouble ou une crise de santé mentale. Les premiers secours sont donnés jusqu'à ce qu'une aide professionnelle puisse être apportée ou jusqu'à ce que la crise soit résolue. Ils sont l'équivalent en santé mentale des gestes de premiers secours qui, eux, apportent une aide physique à la personne en difficulté.\n            Ouverte à toutes et tous, et sans pré-requis, la formation PSSM vise à apprendre à savoir réagir face à une détresse psychique : entrer en contact, soutenir et orienter.\n            La formation est dispensée à Centrale par l'infirmière : si tu es intéressé·e, tu peux la contacter ou voir avec l'association Peer Care.",
   pssmImage: "/assets/logo-pssm.svg",
 
-  sourcesHtml:
-    "<em><b>Sources :</b> Manuel des Premiers Secours en Santé Mentale pour les jeunes , Portail Santé de l'Université de Lyon, Royal College of Psychiatrists, Unicef</em>",
-};
+  sourcesLabel: "Sources :",
+  sourcesList:
+    "Manuel des Premiers Secours en Santé Mentale pour les jeunes, Portail Santé de l'Université de Lyon, Royal College of Psychiatrists, Unicef.",
+    };

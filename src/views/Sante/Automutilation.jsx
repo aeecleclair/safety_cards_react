@@ -145,7 +145,9 @@ const Automutilation = () => {
 
       <Separateur />
 
-      <p className="texte" dangerouslySetInnerHTML={{ __html: t.sourcesHtml }} />
+     <p className="texte">
+        <em><b dangerouslySetInnerHTML={{ __html: t.sourcesLabel }} /> {t.sourcesList}</em>
+      </p>
     </div>
   );
 };

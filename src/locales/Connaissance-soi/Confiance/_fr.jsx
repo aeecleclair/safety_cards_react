@@ -163,8 +163,9 @@ const fr = {
     "Ne pas donner de conseils non sollicités : écouter est souvent plus précieux que conseiller.",
   ],
 
-  sourcesText:
-    "Sources : UNICEF, Psychologies Magazine, Portail Santé Université de Lyon, American Psychological Association.",
+  sourcesLabel:
+    "Sources :",
+  sourcesList: "UNICEF, Psychologies Magazine, Portail Santé Université de Lyon, American Psychological Association.",
 };
 
 export default fr;
