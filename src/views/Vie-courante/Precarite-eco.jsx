@@ -26,7 +26,7 @@ const navLinks = [
 /** Chiffres clés (constat local fourni) */
 const chiffresPrecarite = [
   { number: "20,5%", title: "des étudiants", description: "bénéficient d'une bourse à Centrale Lyon" },
-  { number: "9,7%", title: "des étudiants", description: "rencontrent des difficultés financières pour subvenir à leurs besoins essentiels" },
+  { number: "9,7%", title: "des centralien•ne•s", description: "rencontrent des difficultés financières pour subvenir à leurs besoins essentiels" },
   { number: "31,0%", title: "des étudiants étrangers", description: "sont touchés par la précarité (vs 8,4% Français)" },
 ];
 
@@ -124,7 +124,7 @@ const aides_centrale=[
 
   const eclair = [
   {
-    link: "https://www.instagram.com/solidariterreecl/",
+    link: "https://www.instagram.com/eclair_eclyon/",
     label: "Eclair",
     description:
       "Compte instagram pour suivre les informations et les contacter.",
@@ -135,7 +135,7 @@ const aides_centrale=[
 
   const jobs = [
   {
-    link: "https://www.instagram.com/solidariterreecl/",
+    link: "https://campus.ec-lyon.fr/offres-d-emplois-etudiants-4300.kjsp?RH=ACCUEIL",
     label: "Intranet Centrale Lyon",
     description:
       "Offres d'emplois pour les étudiants de l'école",
@@ -179,6 +179,8 @@ const PrecariteEconomique = () => {
         textButton="⤢ Agrandir la carte"
         suit="carreau"
       />
+
+      <p className="texte">La <b>précarité économique</b> désigne la situation d'instabilité financière persistante qui touche de nombreux étudiants, y compris à l'Ecole Centrale de Lyon. Elle se manifeste par des <b>difficultés à couvrir les besoins essentiels</b> (logement, alimentation, matériel, santé) et peut avoir un impact significatif sur le bien-être et la réussite scolaire. Plusieurs facteurs peuvent contribuer à cette précarité : ressources familiales limitées, coûts élevés de la vie étudiante, perte de revenus (job étudiant, bourse), dépenses imprévues, etc. Tu retrouveras sur cette page différents dispositifs d'aide internes et externes pour t'accompagner.</p>
 
       <h2 className="sous-titre-2">Chiffres clés </h2>
       <ChiffresGroup chiffres={chiffresPrecarite} />
@@ -261,9 +263,9 @@ const PrecariteEconomique = () => {
 
       <BulletList
         items={[
-          "Comission d'exonération :  Elle permet d'exonérer des étudiants sur critères sociaux (hors boursiers et étudiants en double diplôme qui le sont déjà). Il faut composer un dossier et l'envoyer avant fin janvier généralement. Plus d'informations via le lien ci-desous.",
-          "Commission sociale : Elle a pour but d'apporter un soutien financier aux étudiants faisant face à des difficultés au quotidien (paiement du loyer, nourriture...). Il faut aussi composer un dossier et l'envoyer avant fin janvier généralement. Plus d'informations via le lien ci-desous.",
-          "Fonds de dotations : il est possible d'obtenir un soutien financier. Vous pouvez contatcer le service social pour plus d'informations."
+          "Comission d'exonération :  Elle permet d'exonérer des étudiants sur critères sociaux (hors boursiers et étudiants en double diplôme qui le sont déjà). Il faut composer un dossier et l'envoyer avant fin janvier généralement. Plus d'informations via le lien ci-dessous.",
+          "Commission sociale : Elle a pour but d'apporter un soutien financier aux étudiants faisant face à des difficultés au quotidien (paiement du loyer, nourriture...). Il faut aussi composer un dossier et l'envoyer avant fin janvier généralement. Plus d'informations via le lien ci-dessous.",
+          "Fonds de dotations : il est possible d'obtenir un soutien financier. Vous pouvez contacter le service social pour plus d'informations."
         ]}
       />
 
@@ -272,7 +274,7 @@ const PrecariteEconomique = () => {
 
       <h2 className="sous-titre-2">Épicerie solidaire</h2>
 
-      <p className="texte">Depuis avril 2024, l'association Solidari'terre propose une épicerie solidaire aux étudiants de l'Ecole Centrale de Lyon. Elle permet d'accéder à des produits alimentaires et d'hygiène à moindre coût (6 produits laximum, à 25% du prix du marché). Pour y accéder, tu dois être boursi·er·ère, avoir un repas à 1€ au CROUS ou être autorisé·e par l'assistance sociale.</p>
+      <p className="texte">Depuis avril 2024, l'association Solidari'terre propose une épicerie solidaire aux étudiants de l'Ecole Centrale de Lyon. Elle permet d'accéder à des produits alimentaires et d'hygiène à moindre coût (6 produits maximum, à 25% du prix du marché). Pour y accéder, tu dois être boursi·er·ère, avoir un repas à 1€ au CROUS ou être autorisé·e par l'assistance sociale.</p>
       <p className="texte">L'épicerie est ouverte tous les <b>lundis et mercredis de 12h25 à 13h45, en bas du bâtiment X</b>, face à Adoma.</p>
 
       <ExternalLinkBlock resources={epicerie} />
