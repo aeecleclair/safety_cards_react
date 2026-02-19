@@ -28,7 +28,7 @@ const en = {
   ressourcesUtiles: [
     {
       link: "https://monparcourshandicap.gouv.fr",
-      label: "Mon parcours handicap",
+      label: "My Disability Portal",
       description: "Personalized online support",
       imageSrc: "/assets/rep-logo.png"
     },
@@ -58,7 +58,7 @@ const en = {
     },
     {
       link: "https://monparcourshandicap.gouv.fr/",
-      label: "Mon Parcours Handicap",
+      label: "My Disability Portal",
       imageSrc: "/assets/rep-logo.png"
     }
   ],
@@ -83,11 +83,11 @@ const en = {
 
   droits: [
     {
-      title: "AEEH – Allowance for Education of Disabled Child",
+      title: "Allowance for Education of Disabled Child (AEEH)",
       subtitle: "Monthly financial support for parents of children with disabilities to offset related expenses."
     },
     {
-      title: "AAH – Adult Disability Allowance",
+      title: "Adult Disability Allowance (AAH)",
       subtitle: "Minimum income for people with disabilities unable to work or no longer working, subject to income conditions."
     },
     {
@@ -95,11 +95,11 @@ const en = {
       subtitle: "Cards providing specific advantages: priority access, easier parking, or administrative recognition of disability."
     },
     {
-      title: "PCH – Disability Compensation Benefit",
+      title: " Disability Compensation Benefit (PCH)",
       subtitle: "Personalized support covering needs related to loss of autonomy (human assistance, home adaptation, equipment, etc.)."
     },
     {
-      title: "RQTH – Recognition of Disabled Worker Status",
+      title: "Recognition of Disabled Worker Status (RQTH)",
       subtitle: "Status facilitating access to and retention in employment, allowing specific accommodations and personalized support."
     },
     {
