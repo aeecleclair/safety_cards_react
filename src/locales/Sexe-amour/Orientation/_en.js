@@ -16,7 +16,7 @@ const fr = {
     title: "The A♥ card",
     shortText: "Sexual orientation: understanding and respecting diversity",
     longText:
-      "Sexual orientation is part of each person’s identity. It expresses who we feel attraction toward — romantic, emotional, or sexual. All orientations are legitimate and deserve respect and confidentiality.",
+      "Sexual orientation is part of each person’s identity. It expresses who we feel attraction toward (whether it is romantic, emotional, or sexual). All orientations are legitimate and deserve respect and confidentiality.",
     buttonText: "⤢ Enlarge the card",
     suit: "coeur"
   },
@@ -47,7 +47,7 @@ const fr = {
   connaitreOriText1:
     "It is normal to question your sexual orientation throughout life and experiences. It is completely normal to have doubts or questions.",
   connaitreOriText2:
-    "Putting words on what we feel can take time, and you may not fit neatly into a specific orientation. You have the right not to know. A boy being attracted to another boy does not automatically mean he is gay or bisexual. You have the right to explore — it can help you understand yourself and maybe discover new pleasures!",
+    "Putting words on what we feel can take time, and you may not fit neatly into a specific orientation. You have the right not to know. A boy being attracted to another boy does not automatically mean he is gay or bisexual. You have the right to explore, it can help you understand yourself and maybe discover new pleasures!",
   connaitreOriText3:
     "If you feel the need, you can talk to trusted people or professionals, for example via the ‘Comment on s’aime ?’ chat.",
 
@@ -66,7 +66,7 @@ const fr = {
   orientationCommentText1:
     "It is normal to ask yourself questions about your sexual orientation as life and experiences evolve. Doubts and questioning are completely normal.",
   orientationCommentText2:
-    "Finding the right words for what you feel can take time, and you may not identify with a precise label. You have the right not to know. A boy attracted to another boy is not necessarily gay or bisexual. You are allowed to explore — it helps you discover yourself and possibly new pleasures!",
+    "Finding the right words for what you feel can take time, and you may not identify with a precise label. You have the right not to know. A boy attracted to another boy is not necessarily gay or bisexual. You are allowed to explore, it helps you discover yourself and possibly new pleasures!",
   orientationCommentText3:
     "If you need support, you can talk to trusted people or professionals, for example through the ‘Comment on s’aime ?’ chat.",
 
@@ -155,13 +155,13 @@ const fr = {
 
   comingOutTitle: "Talking about your orientation",
   comingOutIntro:
-    "Talking about your orientation, sometimes called “coming out”, is a personal choice, free and often gradual. You do it when you feel ready — or not at all. You can start with yourself, then with a friend, someone close to you, or a professional. It can be a moment of relief, but also doubt — and that’s normal.",
+    "Talking about your orientation, sometimes called “coming out”, is a personal choice, free and often gradual. You do it when you feel ready, or not at all. You can start with yourself, then with a friend, someone close to you, or a professional. It can be a moment of relief, but also doubt, and that’s normal.",
 
   comingOutConseilsTitle: "Tips to help you",
   comingOutConseilsList: [
     "Give yourself time: you don’t have to share everything immediately",
     "Choose someone you trust",
-    "Prepare what you want to say — writing it down or sending a message can help",
+    "Prepare what you want to say. Writing it down or sending a message can help",
     "Look for testimonies or support groups so you don’t feel alone"
   ],
 
@@ -196,12 +196,12 @@ const fr = {
       link: "https://le-refuge.org/la-ligne-decoute/",
       imageSrc: "/assets/le_refuge.png",
       label: "Le Refuge – Helpline",
-      description: "Support for LGBT+ youth in distress — call or SMS"
+      description: "Support for LGBT+ youth in distress, call or text"
     },
     {
       link: "https://www.instagram.com/rainbow.ecl/?hl=fr",
       imageSrc: "/assets/rainbow.jpg",
-      label: "Rainbow — Instagram",
+      label: "Rainbow, on Instagram",
       description: "LGBTQIA+ student club at École Centrale de Lyon"
     }
   ],

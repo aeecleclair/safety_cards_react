@@ -11,7 +11,7 @@ const fr = {
     image: "/assets/cartes/roi_trefle.png",
     title: "La carte R♣",
     shortText: "Accidents de la route : les jeunes en première ligne",
-    longText: "Sur la route, tout peut basculer en une seconde. L’accident n’est pas seulement une question de vitesse ou d’inattention : c’est souvent une succession de petits relâchements, de décisions banales qui deviennent tragiques. Cette carte illustre ce moment fragile où la vie tient à un fil — un message lu, un regard détourné, un verre de trop. Elle rappelle que conduire, c’est porter sa vie et celle des autres entre ses mains. Derrière chaque statistique, il y a une histoire, un visage, une famille.",
+    longText: "Sur la route, tout peut basculer en une seconde. L’accident n’est pas seulement une question de vitesse ou d’inattention : c’est souvent une succession de petits relâchements, de décisions banales qui deviennent tragiques. Cette carte illustre ce moment fragile où la vie tient à un fil : un message lu, un regard détourné, un verre de trop. Elle rappelle que conduire, c’est porter sa vie et celle des autres entre ses mains. Derrière chaque statistique, il y a une histoire, un visage, une famille.",
     textButton: "⤢ Voir la carte",
     suit: "trefle"
   },
@@ -118,7 +118,7 @@ const fr = {
         title: "Ne jamais conduire sous l'emprise d'alcool ou de drogues",
         subtitle: "Conduire sous l'emprise de l'alcool ou de drogues est extrêmement dangereux : cela altère les réflexes, la perception du danger et ralentit le temps de réaction.",
         details: [
-        "En France, la limite légale d’alcool dans le sang dépend de l’expérience du conducteur. Pour les jeunes conducteurs en permis probatoire (moins de 3 ans de permis, ou 2 ans en cas de conduite accompagnée), le seuil est fixé à 0,2 g/L — soit l’équivalent d’un seul verre. Pour les conducteurs expérimentés, la limite est de 0,5 g/L, soit environ deux verres standards. Au-delà de ces seuils, les réflexes diminuent, la vision se trouble et le risque d’accident est multiplié par 8. Les sanctions sont sévères : retrait de 6 points, amende pouvant atteindre 4 500 €, suspension ou annulation du permis, et dans les cas les plus graves, peine de prison en cas d’accident corporel. L’alcool reste l’un des premiers facteurs d’accidents mortels, particulièrement chez les jeunes."
+        "En France, la limite légale d’alcool dans le sang dépend de l’expérience du conducteur. Pour les jeunes conducteurs en permis probatoire (moins de 3 ans de permis, ou 2 ans en cas de conduite accompagnée), le seuil est fixé à 0,2 g/L, soit l’équivalent d’un seul verre. Pour les conducteurs expérimentés, la limite est de 0,5 g/L, soit environ deux verres standards. Au-delà de ces seuils, les réflexes diminuent, la vision se trouble et le risque d’accident est multiplié par 8. Les sanctions sont sévères : retrait de 6 points, amende pouvant atteindre 4 500 €, suspension ou annulation du permis, et dans les cas les plus graves, peine de prison en cas d’accident corporel. L’alcool reste l’un des premiers facteurs d’accidents mortels, particulièrement chez les jeunes."
         ],
         externalLinks: [
         {

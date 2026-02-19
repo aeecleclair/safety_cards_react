@@ -25,7 +25,7 @@ const fr = {
 
   signesSymptomesTitle: "Signes et symptômes fréquents",
   signesSymptomesList: [
-    "Pensées perssistantes et agitées, confusion, baisse de la concentration...",
+    "Pensées persistantes et agitées, confusion, baisse de la concentration...",
     "Peur et inquiétude excessives, nervosité et impatience...",
     "Evitement de la situation crainte, compulsivité, troubles du sommeil, hausse de la consommation d'alcool...",
     "Fatigue physique importante, accélération du rythme cardiaque, respiration rapide, vertiges, transpiration, douleurs d'estomac ou musculaire..."

@@ -12,7 +12,7 @@ const en = {
     title: "The 5♠ card",
     shortText: "Sports and their benefits for body and mind",
     longText:
-      "Practicing regular physical activity is not just about burning calories or improving performance: it also means nurturing your mind, strengthening social connections, and learning to listen to your body. Every step, every movement, every moderate effort contributes to overall health and the pleasure of being active. Everyday actions — walking, taking the stairs, cycling — all play a role in this path toward balance and well-being.",
+      "Practicing regular physical activity is not just about burning calories or improving performance: it also means nurturing your mind, strengthening social connections, and learning to listen to your body. Every step, every movement, every moderate effort contributes to overall health and the pleasure of being active. Everyday actions (walking, taking the stairs, cycling) all play a role in this path toward balance and well-being.",
     buttonText: "⤢ Enlarge the card",
     suit: "pique"
   },
@@ -31,7 +31,7 @@ const en = {
   ],
 
   importanceInfra:
-    "At Centrale Lyon, infrastructures make it easy to practice sports: gymnasium, outdoor fields, new padel courts, student associations such as the <strong>Sports Office (BDS)</strong>, as well as swimming pools, running tracks and municipal facilities of the city of Lyon.",
+    "At Centrale Lyon, infrastructures make it easy to practice sports: gymnasium, outdoor fields, new padel courts, student associations such as the <strong>Sports Office</strong>, as well as swimming pools, running tracks and municipal facilities of the city of Lyon.",
 
   importanceEquilibreTitle: "Sport: a matter of balance and self-awareness",
   importanceEquilibre1:
@@ -167,12 +167,12 @@ const en = {
     {
       title: "Accessibility and adapted sports",
       subtitle:
-        "Propose specific activities (seated yoga, adapted sport) and contact the infirmary for personalized support."
+        "Propose specific activities (seated yoga, adapted sport) and contact the nurse for personalized support."
     },
     {
       title: "Dealing with violence in sports",
       subtitle:
-        "If you are a victim or witness of violence (sexual, harassment, discrimination), you can talk to the infirmary, the Sports Office (BDS) or report via the national ‘Signal-Sports’ system (Ministry of Sports). Associations such as Colosse aux pieds d’argile also support concerned students."
+        "If you are a victim or witness of violence (sexual, harassment, discrimination), you can talk to the nurse, the Sports Office (BDS) or report via the national ‘Signal-Sports’ system (Ministry of Sports). Associations such as Colosse aux pieds d’argile also support concerned students."
     }
   ],
 
@@ -188,8 +188,8 @@ const en = {
 
   cardInfirmerie: {
     image: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
-    title: "Infirmary",
-    subtitle: "Centrale Lyon infirmary: a place for advice",
+    title: "Nurse's office",
+    subtitle: "Centrale Lyon nurse's office",
     phone: "See information",
     email: "See information",
     hours: "Monday to Thursday: 7:30 AM – 3:30 PM, Friday: 7:30 AM – 3:00 PM",
