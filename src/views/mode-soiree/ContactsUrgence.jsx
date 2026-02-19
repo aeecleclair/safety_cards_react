@@ -28,6 +28,16 @@ const ContactsUrgence = () => {
       link: "tel:0631772632",
       bgColor: "white",
       textColor: "#245377",
+    },
+    {
+      image: assetPath("/assets/logo_challenge.png"),
+      title: "Zoé (Billy)",
+      subtitle: "Prez' Challenge",
+      phone: "📱 ",
+      textButton: "📞 Appeler",
+      link: "tel:",
+      bgColor: "white",
+      textColor: "#ff8c00",
     }
   ];
 
@@ -45,7 +55,7 @@ const ContactsUrgence = () => {
 
 
     <div className="mode-soiree-note">
-        (Ces ressources sont propres aux élèves de Centrale Lyon)
+        {/*(Ces ressources sont propres aux élèves de Centrale Lyon)*/}
       </div>
 
       <div className="initiative-peer-care">

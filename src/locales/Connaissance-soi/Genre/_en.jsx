@@ -22,8 +22,8 @@ const en = {
   ],
 
   card: {
-    image: "/assets/cartes/8_coeur.png",
-    title: "Card 8♠",
+    image: "/assets/cartes/anglais/8_coeur.png",
+    title: "Card 8♥",
     shortText: "Raising awareness about misgendering",
     longText:
       "At Centrale, nicknames are commonly used to address people. Everyone makes the effort to remember first names and nicknames, and uses one or the other depending on context. This card asks: if we make the effort to remember names, why not also the chosen pronouns and names of trans or non-binary people? Misgendering means addressing someone with pronouns or a name that do not match their gender identity. It can be unintentional (forgetfulness, mistake) or intentional (disrespect, discrimination). Misgendering can cause deep discomfort and reinforce feelings of isolation. By respecting chosen pronouns and names, we help create an inclusive, caring environment for all.",

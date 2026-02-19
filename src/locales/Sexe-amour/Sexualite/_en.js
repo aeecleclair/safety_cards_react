@@ -19,7 +19,7 @@ const en = {
   ],
 
   carte10_coeur: {
-    image: "/assets/cartes/10_coeur.png",
+    image: "/assets/cartes/anglais/10_coeur.png",
     title: "Card 10♥",
     shortText: "Discover all contraceptive methods",
     longText: "Contraception includes all methods used to prevent an unwanted pregnancy during sexual intercourse. It is essential to choose a method that best fits your personal situation, considering factors such as effectiveness, side effects, ease of use, and protection against sexually transmitted infections (STIs).",

@@ -23,7 +23,7 @@ const fr = {
 
   card: {
     image: "/assets/cartes/8_coeur.png",
-    title: "La carte 8♠",
+    title: "La carte 8♥",
     shortText: "Sensibilisation au mégenrage",
     longText:
       "A Centrale, le surnom est le moyen le plus courant de s'adresser à quelqu'un·e. Chacun fait donc généralement l'effort de retenir le prénom et le surnom de chacun, et d'utiliser l'un ou l'autre en fonction du contexte. Cette carte vise à poser la question suivante : si l'effort est fait pour retenir le prénom/surnom, pourquoi ne pas faire l'effort de retenir les pronoms et le prénom choisis par une personne trans ou non-binaire ? Le mégenrage désigne le fait de s'adresser à une personne avec des pronoms ou un prénom qui ne correspondent pas à son identité de genre. Cela peut être involontaire (oubli, erreur) ou intentionnel (manque de respect, discrimination). Le mégenrage peut causer un profond malaise et renforcer le sentiment d'isolement. En faisant l'effort de respecter les pronoms et le prénom choisis, on contribue à créer un environnement inclusif et bienveillant pour tou·tes.",

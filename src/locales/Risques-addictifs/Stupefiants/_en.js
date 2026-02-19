@@ -139,7 +139,7 @@ const en = {
   regularUseTitle: "I use regularly",
 
   carte10Trefle: {
-    image: "/assets/cartes/10_trefle.png",
+    image: "/assets/cartes/anglais/10_trefle.png",
     title: "Card 10♣",
     shortText: "Prevention about addiction to narcotics",
     longText:
