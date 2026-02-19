@@ -9,25 +9,27 @@ import './mode-soiree.css';
 const PLAN_IMAGES = {
   rdc: '/assets/m16_rdc.png',
   soussol: '/assets/m16_ss.png',
-  campus : '/assets/campus_plan.png'
+  campus : '/assets/campus_plan.png',
+  soiree1 : '/assets/soiree_zone.png',
+  soiree0 : '/assets/m16_ss.png',
 };
 
 const PlanSoiree = () => {
-  const [niveau, setNiveau] = useState('rdc');
+  const [niveau, setNiveau] = useState('campus');
   const router = useRouter();
 
   const currentSrc = assetPath(PLAN_IMAGES[niveau]);
 
   return (
     <div className="page">
-  <h1 className="titre-page">Plan de la soirée</h1>
+  <h1 className="titre-page">Plan du campus</h1>
   <button className="back-inline-btn" onClick={() => router.back()}>⟵ Retour</button>
       <p className="texte">
         Sélectionne un niveau pour afficher le plan correspondant.
       </p>
 
       <div className="plan-tabs">
-        {/* Mode Challenge
+ 
         <button
           className={"plan-tab-btn" + (niveau==='campus' ? ' active' : '')}
           onClick={() => setNiveau('campus')}
@@ -43,7 +45,8 @@ const PlanSoiree = () => {
           onClick={() => setNiveau('soiree0')}
         >Sous-sol </button>
 
-        */}
+
+        {/* Mode soirées
         <button
           className={"plan-tab-btn" + (niveau==='rdc' ? ' active' : '')}
           onClick={() => setNiveau('rdc')}
@@ -52,14 +55,16 @@ const PlanSoiree = () => {
           className={"plan-tab-btn" + (niveau==='soussol' ? ' active' : '')}
           onClick={() => setNiveau('soussol')}
         >Sous-sol</button>
+
+                */}
       </div>
 
       <div className="plan-image-wrapper">
-        <img src={currentSrc} alt={`Plan ${niveau === 'rdc' ? 'rez-de-chaussée' : 'sous-sol'}`} />
+        <img src={currentSrc} alt={`Plan ${niveau === 'campus' ? 'du campus' : niveau === 'soiree1' ? 'de la zone de soirée' : 'du sous-sol'}`} />
       </div>
 
             <div className="mode-soiree-note">
-        (Ces ressources sont propres aux élèves de Centrale Lyon)
+        {/*(Ces ressources sont propres aux élèves de Centrale Lyon)*/}
       </div>
 
       <div className="initiative-peer-care">
