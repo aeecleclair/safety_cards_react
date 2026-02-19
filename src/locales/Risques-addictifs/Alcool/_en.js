@@ -11,7 +11,7 @@ const en = {
   risque1: "<b>Drinking carries risks</b> for your health and for others. Legally, you remain <b>responsible</b> for your actions, even under the influence of alcohol.",
 
   carte6_trefle: {
-    image: "/assets/cartes/6_trefle.jpg",
+    image: "/assets/cartes/anglais/6_trefle.png",
     title: "Card 6♣",
     shortText: "Prevention on alcohol normalization at parties",
     longText: "It's hard to say no when facing peer pressure, especially in situations as normalized as parties where alcohol is omnipresent. People may feel pressured to drink to fit in or because others think it's cool, as illustrated by this card. Yet, many would prefer not to drink, or not get drunk, but don't dare to say it. So if you enjoy drinking at parties, don't force others to do the same and respect their choices. And if you don't drink, don't hesitate to say it clearly and suggest other activities. A real evening with friends is not just about alcohol consumption.",

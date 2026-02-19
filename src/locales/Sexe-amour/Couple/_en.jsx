@@ -8,7 +8,7 @@ const en = {
     { label: "Communication in a relationship", target: "communication" },
   ],
   card: {
-    image: "/assets/cartes/dame_coeur.png",
+    image: "/assets/cartes/anglais/dame_coeur.png",
     title: "Card D♥",
     shortText: "Intimate partner violence",
     longText: "Intimate partner violence can be physical, psychological, sexual, economic, or administrative. It often follows a cycle of violence that makes it hard for the victim to gain perspective. It's important to recognize the signs and seek help if you’re a victim or a witness.",

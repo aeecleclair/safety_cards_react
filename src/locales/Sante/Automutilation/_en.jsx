@@ -7,7 +7,7 @@ export default {
   ],
 
   carte3_pique: {
-    image: "/assets/cartes/3_pique.png",
+    image: "/assets/cartes/anglais/3_pique.png",
     title: "The 3♠ card",
     shortText: "Self-harm: act as victim and witness",
     longText: "Self-harm refers to intentionally hurting yourself without suicidal intent. It can take different forms: cutting, burning, scratching, etc. Often used as a coping mechanism to manage intense emotions or psychological stress, self-harm is not a cry for help, but rather a way of dealing with emotional pain. Certain signs may indicate self-harm: scratches on the wrists or forearms, wearing a jacket in the middle of summer... If you witness someone who self-harms, it is crucial to approach the subject with empathy and without judgment. Encourage them to seek professional help and offer your support. If you self-harm, know that there are resources and professionals ready to help you through this difficult time.",

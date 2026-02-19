@@ -272,7 +272,7 @@ export default {
 
   impactTitle: "I'm impacted by a suicide",
   cardD_pique: {
-    image: "/assets/cartes/dame_pique.png",
+    image: "/assets/cartes/anglais/dame_pique.png",
     title: "The D♠ card",
     shortText:
       "Grieving when impacted by or witnessing a suicide.",
