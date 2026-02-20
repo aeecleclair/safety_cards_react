@@ -121,7 +121,7 @@ const en = {
     {
       title: "Approach the person, assess and assist",
       subitems: [
-        { title: "Approach the person", subtitle: "Find a time and place where you both feel comfortable talking. If the person is not willing to talk, don't force it—they may need time to confide: just let them know you are available." },
+        { title: "Approach the person", subtitle: "Find a time and place where you both feel comfortable talking. If the person is not willing to talk, don't force it, they may need time to confide: just let them know you are available." },
         { title: "If you notice crisis signs", subtitle: "If you fear the person is having a panic attack, you can apply the plan below. If suicidal or non-suicidal self-harm thoughts are mentioned during the conversation, the person may be in crisis and needs support. Refer to the Suicide and Self-harm pages." }
       ]
     },
@@ -157,7 +157,7 @@ const en = {
   formationPSSMImage: "/assets/logo-pssm.svg",
 
   sourcesPrefix: "Sources:",
-  sources: "Meta-analyses on student anxiety, Santé Psy Étudiant, Fil Santé Jeunes, Nightline Lyon, 3114 — suicide prevention, PSSM Manual"
+  sources: "Meta-analyses on student anxiety, Santé Psy Étudiant, Fil Santé Jeunes, Nightline Lyon, 3114 - suicide prevention, PSSM Manual"
 };
 
 export default en;

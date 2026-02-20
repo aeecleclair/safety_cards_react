@@ -9,9 +9,9 @@ const fr = {
 
   carte_ri_trefle: {
     image: "/assets/cartes/roi_trefle.png",
-    title: "The Club Card (R♣)",
+    title: "Card R♣",
     shortText: "Road accidents: young people on the front line",
-    longText: "On the road, everything can change in a second. Accidents aren’t just about speed or inattention: they often result from a series of small lapses, ordinary decisions that turn tragic. This card represents that fragile moment when life hangs by a thread — a message read, a glance away, one drink too many. It’s a reminder that driving means putting your life and others' lives in your hands. Behind every statistic is a story, a face, a family.",
+    longText: "On the road, everything can change in a second. Accidents aren’t just about speed or inattention: they often result from a series of small lapses, ordinary decisions that turn tragic. This card represents that fragile moment when life hangs by a thread : a message read, a glance away, one drink too many. It’s a reminder that driving means putting your life and others' lives in your hands. Behind every statistic is a story, a face, a family.",
     textButton: "⤢ View the card",
     suit: "trefle"
   },
@@ -118,7 +118,7 @@ const fr = {
         title: "Never drive under the influence of alcohol or drugs",
         subtitle: "Driving under the influence is extremely dangerous: it impairs reflexes, perception of danger, and reaction time.",
         details: [
-        "In France, the legal blood alcohol limit depends on driving experience. For new drivers (less than 3 years of license, or 2 years in accompanied driving), the limit is 0.2 g/L — roughly one drink. For experienced drivers, the limit is 0.5 g/L — about two standard drinks. Beyond these limits, reflexes slow, vision blurs, and accident risk multiplies by 8. Penalties are severe: 6 points lost, fines up to €4,500, license suspension or revocation, and in serious cases, imprisonment for accidents causing injury. Alcohol remains one of the main factors in fatal accidents, especially among young drivers."
+        "In France, the legal blood alcohol limit depends on driving experience. For new drivers (less than 3 years of license, or 2 years in accompanied driving), the limit is 0.2 g/L (roughly one drink). For experienced drivers, the limit is 0.5 g/L (about two standard drinks). Beyond these limits, reflexes slow, vision blurs, and accident risk multiplies by 8. Penalties are severe: 6 points lost, fines up to €4,500, license suspension or revocation, and in serious cases, imprisonment for accidents causing injury. Alcohol remains one of the main factors in fatal accidents, especially among young drivers."
         ],
         externalLinks: [
         {
@@ -232,11 +232,11 @@ const fr = {
 
   stagesIntro1: "Participating in a course can save points, improve reflexes, and increase risk awareness. There are different types of courses tailored to your needs, whether you are a young driver, offender, or simply want to improve your driving skills.",
 
-  stagesIntro2: "Points recovery courses allow you to regain up to 4 points on your license over two days under certain conditions. They are available once a year. These courses cover risk perception, speed, alcohol, drugs, and the physical limits of drivers.",
+  stagesIntro2: "<b>Points recovery courses</b> allow you to regain up to 4 points on your license over two days under certain conditions. They are available once a year. These courses cover risk perception, speed, alcohol, drugs, and the physical limits of drivers.",
 
-  stagesIntro3: "Road safety awareness courses are sometimes mandatory (by court or prefecture) after serious infractions. They do not recover points but aim to prevent recidivism.",
+  stagesIntro3: "<b>Road safety awareness courses</b> are sometimes <b>mandatory</b> (by court or prefecture) after serious infractions. They do not recover points but aim to prevent recidivism.",
 
-  stagesIntro4: "There are also specific training sessions to learn how to drive in extreme conditions (snow, ice) or simulate the effects of alcohol on perception and reflexes. These workshops are usually offered by training centers or specialized driving schools.",
+  stagesIntro4: "There are also <b>specific training sessions</b> to learn how to drive in extreme conditions (snow, ice) or simulate the effects of alcohol on perception and reflexes. These workshops are usually offered by training centers or specialized driving schools.",
 
   stagesIntro5: "➜ To register, simply consult an accredited center or use specialized platforms. Some courses are partially covered by insurance or the courts.",
 

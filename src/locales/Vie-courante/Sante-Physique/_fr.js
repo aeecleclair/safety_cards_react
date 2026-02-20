@@ -12,7 +12,7 @@ const fr = {
     title: "La carte 5♠",
     shortText: "Le sport et ses bienfaits sur le corps et l'esprit",
     longText:
-      "Pratiquer une activité physique régulière ne se résume pas à brûler des calories ou à améliorer ses performances : c'est aussi nourrir son esprit, renforcer ses liens sociaux et mieux écouter son corps. Chaque pas, chaque mouvement, chaque effort modéré contribue à la santé globale et au plaisir de bouger. Tous les gestes du quotidien, même simples — marcher, monter les escaliers, pédaler — participent à ce chemin vers l'équilibre et le bien-être.",
+      "Pratiquer une activité physique régulière ne se résume pas à brûler des calories ou à améliorer ses performances : c'est aussi nourrir son esprit, renforcer ses liens sociaux et mieux écouter son corps. Chaque pas, chaque mouvement, chaque effort modéré contribue à la santé globale et au plaisir de bouger. Tous les gestes du quotidien, même simples - marcher, monter les escaliers, pédaler - participent à ce chemin vers l'équilibre et le bien-être.",
     buttonText: "⤢ Agrandir la carte",
     suit: "pique"
   },

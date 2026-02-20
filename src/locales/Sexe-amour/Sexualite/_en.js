@@ -116,7 +116,7 @@ const en = {
       link: "/ivg",
       emoji: "♀️",
       label: "Abortion",
-      description: "Everything you need to know about voluntary termination of pregnancy: procedures, support, rights."
+      description: "Everything you need to know about abortion: procedures, support, rights."
     }
   ],
 
@@ -224,8 +224,8 @@ const en = {
 
   cardInfirmerie: {
     image: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
-    title: "Infirmary",
-    subtitle: "Centrale Lyon infirmary",
+    title: "Nurse's office",
+    subtitle: "Centrale Lyon nurse's office",
     phone: "See information",
     email: "See information",
     hours: "Monday to Thursday: 7:30 AM - 3:30 PM, Friday: 7:30 AM - 3:00 PM",
@@ -269,7 +269,7 @@ const en = {
     responsibilityTitre: "Shared responsibility in contraception",
     responsibility: "Talking about contraception also means talking about <b>freedom of choice</b> and <b>shared responsibility</b>. Contraception is not just a women's issue: it concerns couples and is based on trust, communication, and consent. Health professionals (doctors, gynecologists, midwives, nurses, pharmacists) can help find the best method for each situation.",
     unintendedPregnancyTitre: "What if an unintended pregnancy occurs?",
-    unintendedPregnancy: "Sometimes, despite contraception or after a missed dose, an unintended pregnancy can happen. In that case, it is important to know that options exist, including voluntary termination of pregnancy (abortion). Abortion is legally guaranteed, free, and confidential. Support is provided by healthcare professionals and listening centers like Family Planning. To understand procedures, timelines, and abortion types, visit our dedicated page:",
+    unintendedPregnancy: "Sometimes, despite contraception or after a missed dose, an unintended pregnancy can happen. In that case, it is important to know that options exist, including abortion. Abortion is legally guaranteed, free, and confidential. Support is provided by healthcare professionals and listening centers like Family Planning. To understand procedures, timelines, and abortion types, visit our dedicated page:",
     contraAutresSitesTitre: "Learn more",
     contraAutresSites: "Reliable sites to explore all topics around contraception",
     sexualiteIntroTitre: "Exploring sexuality",
