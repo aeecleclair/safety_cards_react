@@ -15,7 +15,7 @@ const en = {
   definitionTitle: "What is discrimination?",
   carteVcoeur: {
     image: "/assets/cartes/valet_coeur.png",
-    title: "The V♥ card",
+    title: "V♥ card",
     shortText: "Discrimination: breaking everyday injustice",
     longText:
       "Being discriminated against often means feeling that people no longer see you as a person, but as what you supposedly represent. This card touches on gender, but origin or appearance can be enough to change how someone looks at you, to shut a door, to silence your voice. It is a subtle, often quiet form of violence that wears people down through repetition. Recognising discrimination is already a step towards pushing it back.",
@@ -31,7 +31,7 @@ const en = {
     "Sex, sexual orientation, gender identity",
     "Family situation or surname",
     "Pregnancy",
-    "Genetic characteristics or physical appearance, belonging or not belonging — real or presumed — to a given ethnic group, nation, race or religion",
+    "Genetic characteristics or physical appearance, belonging or not belonging, real or presumed, to a given ethnic group, nation, race or religion",
     "Specific vulnerability linked to economic situation",
     "Health status, disability or loss of autonomy",
     "Morals or lifestyle",
@@ -294,7 +294,7 @@ const en = {
   racistesTitle: "Racist discrimination",
   carte8carreau: {
     image: "/assets/cartes/8_carreau.png",
-    title: "The 8♦ card",
+    title: "8♦ card",
     shortText: "Racism: colour is not a boundary",
     longText:
       "Racism creates distance where there should be connection. Whether disguised as a joke or expressed through exclusion, it reduces the richness of someone’s identity to a stereotype. For the victim, each remark reinforces the idea that their difference is seen as a flaw. Yet no colour, no origin diminishes the worth of a person.",
@@ -370,7 +370,7 @@ const en = {
   lgbtTitle: "LGBT-phobic discrimination",
   carte9carreau: {
     image: "/assets/cartes/9_carreau.png",
-    title: "The 9♦ card",
+    title: "9♦ card",
     shortText: "LGBT-phobias: being yourself should never be dangerous",
     longText:
       "LGBT-phobic discrimination confines people who simply want to be themselves. Words disguised as jokes, looks or judgments can be enough to make someone doubt their place in the world. Yet every identity and every form of love deserves to exist without fear or shame. Respecting differences means recognising each person’s freedom to exist fully.",
@@ -501,7 +501,7 @@ const en = {
   /** Witness / victim */
   temoinTitle: "What to do as a victim or witness of discrimination?",
   temoinIntro:
-    "Being confronted with discrimination — whether as a victim or witness — is never easy. You may feel shocked, powerless or afraid of reacting incorrectly. But <b>there are always ways to act or seek support.</b> Even small gestures matter: <b>talking about what happened, listening, or simply refusing to remain silent.</b>",
+    "Being confronted with discrimination, whether as a victim or witness,is never easy. You may feel shocked, powerless or afraid of reacting incorrectly. But <b>there are always ways to act or seek support.</b> Even small gestures matter: <b>talking about what happened, listening, or simply refusing to remain silent.</b>",
 
   actionsPossibleTitle: "Possible actions",
   actionsPossibleSubtitle: "Some steps to respond to discrimination",
@@ -537,8 +537,8 @@ const en = {
     "Remember: <b>you are never required to handle everything alone.</b> Simply refusing to look away is already an important first step. Everyone can act at their own level — together, these small actions help build a safer and more respectful environment.",
 
   /** Sources */
-  sources:
-    "CROUS, Ministry of Higher Education and Research, SOS Homophobie, national surveys, High Council for Equality (2024 report), Service-public.fr, Question Sexualité, Ministry of Education, Fondation Émergence, LICRA, Égalité contre le Racisme, LGBTI+ Centre Lyon"
+  sourcesPrefix: "Sources:",
+  sources: "CROUS, Ministry of Higher Education and Research, SOS Homophobie, national surveys, High Council for Equality (2024 report), Service-public.fr, Question Sexualité, Ministry of Education, Fondation Émergence, LICRA, Égalité contre le Racisme, LGBTI+ Centre Lyon"
 };
 
 export default en;

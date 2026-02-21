@@ -14,7 +14,7 @@ const en = {
   sommaireSedentarite2: "I want to be more active",
 
   // Popup card
-  carte8piqueTitle: "The 8♠ card",
+  carte8piqueTitle: "8♠ card",
   carte8piqueShort: "Fighting sedentary habits",
   carte8piqueLong:
     "Screens are the main cause of sedentary behavior among young people. Try not to stay passive scrolling through Instagram or TikTok. Go outside for some fresh air, take a walk alone or with friends, or practice a regular physical activity.",

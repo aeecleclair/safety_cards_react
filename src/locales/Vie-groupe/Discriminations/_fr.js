@@ -24,7 +24,7 @@ const fr = {
   },
 
   definitionParagraph:
-    "La discrimination désigne toute distinction, exclusion ou préférence fondée sur un motif interdit par la loi, qui a pour effet de porter atteinte à l’égalité de traitement. Les motifs prohibés par la loi sont les suivants :",
+    "La <b>discrimination</b> désigne toute distinction, exclusion ou préférence fondée sur un motif <b>interdit par la loi</b>, qui a pour effet de porter atteinte à <b>l’égalité de traitement</b>. Les <b>motifs prohibés par la loi</b> sont les suivants :",
 
   motifsList: [
     "Origine et lieu de résidence",
@@ -42,7 +42,7 @@ const fr = {
   ],
 
   legalStatusParagraph:
-    "En France, la discrimination est un délit. Selon l’article 225-2 du Code pénal, elle est punie de 3 ans d’emprisonnement et de 45 000 € d’amende (portés à 5 ans et 75 000 € si la discrimination a lieu dans un établissement recevant du public ou par une personne dépositaire de l’autorité publique).",
+    "En France, la discrimination est <b>un délit</b>. Selon <b>l’article 225-2 du Code pénal</b>, elle est punie de <b>3 ans d’emprisonnement</b> et de <b>45 000 € d’amende</b> (portés à 5 ans et 75 000 € si la discrimination a lieu dans un établissement recevant du public ou par une personne dépositaire de l’autorité publique).",
 
   discrimetreResources: [
     {
@@ -54,10 +54,10 @@ const fr = {
   ],
 
   rightsParagraph1:
-    "En France, la loi protège de nombreux motifs discriminatoires. Tu as des droits. Ce n’est jamais ta faute si quelqu’un te discrimine.",
+    "En France, la loi protège de nombreux motifs discriminatoires. <b>Tu as des droits</b>. Ce n’est <b>jamais ta faute</b> si quelqu’un te discrimine.",
 
   socialNetworksParagraph:
-    "La loi s’applique aussi aux réseaux sociaux : publier, commenter, repartager ou même retweeter des propos discriminatoires est passible des mêmes sanctions pénales. Être derrière un écran ne donne pas le droit d’insulter ou de propager des contenus discriminatoires.",
+    "La loi s’applique aussi <b>aux réseaux sociaux</b> : publier, commenter, repartager ou même retweeter des propos discriminatoires est passible <b>des mêmes sanctions pénales</b>. Être derrière un écran ne donne pas le droit d’insulter ou de propager des contenus discriminatoires.",
 
   resourcesPenale1: [
     {
@@ -133,7 +133,7 @@ const fr = {
   },
 
   autresPagesIntro:
-    "Tu subis du harcèlement ? Tu es victime d'effet de groupe ou tu as été témoin de discriminations au cours de l'intégration ? N'hésite pas à visiter d'autres pages pour continuer à te renseigner :",
+    "Tu subis du <b>harcèlement</b> ? Tu es victime d'<b>effet de groupe</b> ou tu as été témoin de discriminations au cours de l'<b>intégration</b> ? N'hésite pas à visiter d'autres pages pour continuer à te renseigner :",
 
   autres_pages_global: [
     {
@@ -159,7 +159,7 @@ const fr = {
   /** Sexisme */
   sexistesTitle: "Discriminations sexistes",
   sexismes_paragraph1:
-    "Le sexisme désigne toute inégalité ou violence fondée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités d’accès ou de traitement. Il repose sur l’idée qu’un sexe serait supérieur à un autre, ce qui légitime depuis longtemps une hiérarchie entre hommes et femmes. Dès l’enfance, les stéréotypes genrés sont transmis par les jouets, l’école, les médias ou le langage, influençant les comportements, les attentes et les rôles sociaux assignés à chacun·e. Ces représentations peuvent ensuite s’exprimer à travers des discriminations, des micro-agressions ou des violences sexistes . Le sexisme structurel se manifeste aussi dans l’emploi, la politique, la culture ou le sport, par des inégalités de traitement, une invisibilisation des voix féminines ou des discours paternalistes « bienveillants » qui perpétuent les rapports de pouvoir.",
+    "<b>Le sexisme</b> désigne toute inégalité ou violence fondée sur le sexe ou le genre : harcèlement, remarques, violences sexuelles, inégalités d’accès ou de traitement. Il repose sur l’idée qu’un sexe serait supérieur à un autre, ce qui légitime depuis longtemps une hiérarchie entre hommes et femmes. Dès l’enfance, <b>les stéréotypes genrés</b> sont transmis par les jouets, l’école, les médias ou le langage, influençant les comportements, les attentes et les rôles sociaux assignés à chacun·e. Ces représentations peuvent ensuite s’exprimer à travers des discriminations, des micro-agressions ou <b>des violences sexistes</b>. Le sexisme structurel se manifeste aussi dans l’emploi, la politique, la culture ou le sport, par des inégalités de traitement, une invisibilisation des voix féminines ou des discours paternalistes « bienveillants » qui perpétuent les rapports de pouvoir.",
 
   sexistesFrequentTitle: "Les discriminations sexistes fréquentes et leurs conséquences",
   sexistesFrequentList: [
@@ -303,7 +303,7 @@ const fr = {
   },
 
   racistesParagraph1:
-    "Les discriminations racistes sont fondées sur l’origine, la nationalité, la couleur de peau, ou des attributs culturels ou religieux. Elles se manifestent parfois par des propos, des exclusions sociales, ou des violences, ou encore des stéréotypes dans les cours, le logement ou même les stages et emplois.",
+    "Les discriminations racistes sont fondées sur <b>l’origine</b>, <b>la nationalité</b>, <b>la couleur de peau</b>, ou des attributs culturels ou religieux. Elles se manifestent parfois par <b>des propos</b>, <b>des exclusions sociales</b>, ou <b>des violences</b>, ou encore des stéréotypes dans les cours, le logement ou même les stages et emplois.",
 
   racistesFrequentTitle: "Les discriminations racistes fréquentes et leurs conséquences",
   racistesFrequentList: [
@@ -374,7 +374,7 @@ const fr = {
   },
 
   lgbtParagraph1:
-    "Les LGBTphobies regroupent plusieurs formes de rejet ou de haine envers les personnes en raison de leur orientation sexuelle ou de leur identité de genre. L’homophobie vise les personnes attirées par des individus du même genre ; la lesbophobie désigne les formes spécifiques de rejet ou de sexualisation subies par les femmes lesbiennes ; la biphobie renvoie aux préjugés envers les personnes bisexuelles, souvent accusées d’indécision ou d’infidélité ; la transphobie cible les personnes transgenres ou en questionnement sur leur identité de genre, à travers le refus du prénom d’usage, des moqueries ou des violences. Ces attitudes peuvent s’exprimer dans les milieux scolaire, professionnel, familial, sportif et avoir des conséquences graves sur la santé mentale et le sentiment de sécurité des personnes concernées.",
+    "Les LGBTphobies regroupent plusieurs formes de rejet ou de haine envers les personnes en raison de leur orientation sexuelle ou de leur identité de genre. <b>L’homophobie</b> vise les personnes attirées par des individus du même genre ; <b>la lesbophobie</b> désigne les formes spécifiques de rejet ou de sexualisation subies par les femmes lesbiennes ; <b>la biphobie</b> renvoie aux préjugés envers les personnes bisexuelles, souvent accusées d’indécision ou d’infidélité ; <b>la transphobie</b> cible les personnes transgenres ou en questionnement sur leur identité de genre, à travers le refus du prénom d’usage, des moqueries ou des violences. Ces attitudes peuvent s’exprimer dans les milieux scolaire, professionnel, familial, sportif et avoir des conséquences graves sur la santé mentale et le sentiment de sécurité des personnes concernées.",
 
   lgbtFrequentTitle: "Les discriminations LGBT-phobes fréquentes et leurs conséquences",
   lgbtFrequentList: [
@@ -489,7 +489,7 @@ const fr = {
   /** Témoin / victime */
   temoinTitle: "Que faire en tant que victime/témoin de discrimination ?",
   temoinIntro:
-    "Être confronté·e à une discrimination, que l’on en soit directement victime ou témoin, n’est jamais simple. On peut se sentir choqué·e, impuissant·e ou craindre de mal réagir. Pourtant, il existe toujours des façons d’agir ou de chercher du soutien. Même de petits gestes comptent : parler de ce qui s’est passé, tendre une oreille attentive, ou simplement ne pas laisser la situation dans le silence.",
+    "Être confronté·e à une discrimination, que l’on en soit directement victime ou témoin, n’est jamais simple. On peut se sentir choqué·e, impuissant·e ou craindre de mal réagir. Pourtant, <b>il existe toujours des façons d’agir ou de chercher du soutien</b>. Même de petits gestes comptent : <b>parler de ce qui s’est passé</b>, <b>tendre une oreille attentive</b>, ou simplement <b>ne pas laisser la situation dans le silence</b>.",
 
   actionsPossibleTitle: "Actions possibles",
   actionsPossibleSubtitle: "Quelques étapes pour réagir face à une discrimination",
@@ -517,11 +517,11 @@ const fr = {
   ],
 
   temoinConclusion:
-    "Rappelle-toi : tu n’es jamais obligé·e de tout faire seul·e. Le simple fait de ne pas fermer les yeux est déjà un premier pas important. Chacun·e peut agir à son échelle, et ensemble, ces petites actions construisent un environnement plus sûr et respectueux.",
+    "Rappelle-toi : <b>tu n’es jamais obligé·e de tout faire seul·e</b>. Le simple fait de ne pas fermer les yeux est déjà un premier pas important. Chacun·e peut agir à son échelle, et ensemble, ces petites actions construisent un environnement plus sûr et respectueux.",
 
   /** Sources */
-  sources:
-    "Crous, Ministère de l’Enseignement supérieur et de la Recherche, SOS Homophobie, Dépêche & enquêtes nationales, Haut Conseil à l’Égalité (rapport 2024), Service-public.fr, Question Sexualité, Ministère de l’Éducation nationale, Fondation Émergence, LICRA, Égalité contre le racisme, Centre LGBTI+ Lyon"
+  sourcesPrefix: "Sources:",
+  sources: "CROUS, Ministry of Higher Education and Research, SOS Homophobie, national surveys, High Council for Equality (2024 report), Service-public.fr, Question Sexualité, Ministry of Education, Fondation Émergence, LICRA, Égalité contre le Racisme, LGBTI+ Centre Lyon"
 };
 
 export default fr;

@@ -39,16 +39,16 @@ const Discriminations = () => {
           suit="coeur"
         />
 
-        <p className="texte">{t.definitionParagraph} </p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.definitionParagraph }}/>
         <BulletList items={t.motifsList}/>
 
-        <p className="texte">{t.legalStatusParagraph}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.legalStatusParagraph }}/>
 
         <ExternalLinkBlock resources={t.discrimetreResources} />  
 
-        <p className="texte">{t.rightsParagraph1}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.rightsParagraph1 }}/>
 
-        <p className="texte">{t.socialNetworksParagraph}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.socialNetworksParagraph }}/>
 
         <ExternalLinkBlock
           resources={t.resourcesPenale1}
@@ -76,7 +76,7 @@ const Discriminations = () => {
 
       </div>
       
-      <p className="texte">{t.autresPagesIntro} </p>
+      <p className="texte" dangerouslySetInnerHTML={{ __html: t.autresPagesIntro }} />
         <ExternalLinkBlock
         title=""
         subtitle=""
@@ -88,7 +88,7 @@ const Discriminations = () => {
 
       <div id="sexistes">
         <h1 className="titre">{t.sexistesTitle}</h1>
-        <p className="texte">{t.sexismes_paragraph1}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.sexismes_paragraph1 }} />
 
         <h2 className="sous-titre-2">{t.sexistesFrequentTitle}</h2>
         <BulletList
@@ -154,7 +154,7 @@ const Discriminations = () => {
           textButton={t.carte8carreau.buttonText}
           suit="carreau"
         />
-        <p className="texte">{t.racistesParagraph1}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.racistesParagraph1 }} />
         <h2 className="sous-titre-2">{t.racistesFrequentTitle}</h2>
         <BulletList
           items={t.racistesFrequentList}
@@ -185,9 +185,15 @@ const Discriminations = () => {
 
       <div id="lgbtphobes">
         <h1 className="titre">{t.lgbtTitle}</h1>
-        <ImageTextPopup {...t.carte9carreau}  />
-
-        <p className="texte">{t.lgbtParagraph1}</p>
+        <ImageTextPopup
+          image="/assets/cartes/9_carreau.png"
+          title={t.carte9carreau.title}
+          shortText={t.carte9carreau.shortText}
+          longText={t.carte9carreau.longText}
+          textButton={t.carte9carreau.buttonText}
+          suit="carreau"
+        />
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.lgbtParagraph1 }} />
 
         <h2 className="sous-titre-2">{t.lgbtFrequentTitle}</h2>
         <BulletList
@@ -232,7 +238,7 @@ const Discriminations = () => {
 
       <div id="temoin">
         <h1 className="titre">{t.temoinTitle}</h1>
-        <p className="texte">{t.temoinIntro}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.temoinIntro }} />
 
 
         <ListeNumerotee
@@ -241,12 +247,13 @@ const Discriminations = () => {
           items={t.actionsPossibleList}
         />
 
-        <p className="texte">{t.temoinConclusion}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.temoinConclusion }} />
       </div>
       <Separateur />
 
-      <p className="texte">{t.sources}</p>
-
+      <p className="texte">
+        <em><b>{t.sourcesPrefix}</b> {t.sources}</em>
+      </p>
       
     </div>
   );

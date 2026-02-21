@@ -13,7 +13,7 @@ const fr = {
 
   carteA_coeur: {
     image: "/assets/cartes/as_coeur.png",
-    title: "The A♥ card",
+    title: "A♥ card",
     shortText: "Sexual orientation: understanding and respecting diversity",
     longText:
       "Sexual orientation is part of each person’s identity. It expresses who we feel attraction toward (whether it is romantic, emotional, or sexual). All orientations are legitimate and deserve respect and confidentiality.",

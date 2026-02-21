@@ -9,7 +9,7 @@ const en = {
 
   carte5_pique: {
     image: "/assets/cartes/5_pique.png",
-    title: "The 5♠ card",
+    title: "5♠ card",
     shortText: "Sports and their benefits for body and mind",
     longText:
       "Practicing regular physical activity is not just about burning calories or improving performance: it also means nurturing your mind, strengthening social connections, and learning to listen to your body. Every step, every movement, every moderate effort contributes to overall health and the pleasure of being active. Everyday actions (walking, taking the stairs, cycling) all play a role in this path toward balance and well-being.",

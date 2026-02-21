@@ -11,7 +11,7 @@ const en = {
   /** Definition */
   definitionTitle: "Definition",
   popup: {
-    title: "The 5♦ Card",
+    title: "5♦ Card",
     shortText: "Cyberbullying: Understand and Take Action",
     longText:
       "Cyberbullying turns digital spaces into a place of attack. Messages, mockery or rumours can circulate endlessly, sometimes day and night. The screen, meant to connect people, becomes a barrier made of fear and shame, and an instrument of isolation. But behind every message, there are ways to act, report, and seek help. The virtual world should never erase respect.",

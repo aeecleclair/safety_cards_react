@@ -137,7 +137,7 @@ const en = {
 
   carteValet: {
     image: "/assets/cartes/valet_pique.png",
-    title: "The V♠ Card",
+    title: "V♠ Card",
     shortText: "Disability situation: understand and help",
     longText: "Disability can take many forms, visible or invisible. Some affect mobility, vision, or hearing; others concern concentration, memory, mental health, or chronic pain. These situations are not always visible at first glance but have a real impact on daily life and studies.",
     buttonText: "⤢ Enlarge card",
