@@ -40,7 +40,7 @@ const ContactsUrgence = () => {
       textColor: "#ff8c00",
     },
         {
-      image: assetPath("/assets/bds.png"),
+      image: assetPath("/assets/BDS.png"),
       title: "Aubane (Sehbra)",
       subtitle: "Prez' BDS",
       phone: "📱",
