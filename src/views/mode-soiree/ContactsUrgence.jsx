@@ -43,9 +43,9 @@ const ContactsUrgence = () => {
       image: assetPath("/assets/BDS.png"),
       title: "Aubane (Sehbra)",
       subtitle: "Prez' BDS",
-      phone: "📱",
+      phone: "📱 07 66 51 28 98",
       textButton: "📞 Appeler",
-      link: "tel:",
+      link: "tel:0766512898",
       bgColor: "white",
       textColor: "#000000",
     }
