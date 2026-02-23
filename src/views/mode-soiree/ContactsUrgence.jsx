@@ -33,11 +33,21 @@ const ContactsUrgence = () => {
       image: assetPath("/assets/logo_challenge.png"),
       title: "Zoé (Billy)",
       subtitle: "Prez' Challenge",
-      phone: "📱 ",
+      phone: "📱 06 77 39 52 88",
+      textButton: "📞 Appeler",
+      link: "tel:0677395288",
+      bgColor: "white",
+      textColor: "#ff8c00",
+    },
+        {
+      image: assetPath("/assets/bds.png"),
+      title: "Aubane (Sehbra)",
+      subtitle: "Prez' BDS",
+      phone: "📱",
       textButton: "📞 Appeler",
       link: "tel:",
       bgColor: "white",
-      textColor: "#ff8c00",
+      textColor: "#000000",
     }
   ];
 
