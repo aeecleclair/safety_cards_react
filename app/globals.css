@@ -45,6 +45,18 @@ html, body {
   font-size: 2.2em;
   font-weight: 700;
   scroll-margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titre::before {
+  content: "";
+  width: 6px;
+  height: 40px;
+  background: linear-gradient(180deg, #b22133 0%, rgba(178, 33, 51, 0.5) 100%);
+  border-radius: 3px;
+  flex-shrink: 0;
 }
 
 .titre-2{
@@ -55,6 +67,18 @@ html, body {
   font-size: 2.2em;
   font-weight: normal;
   scroll-margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titre-2::before {
+  content: "";
+  width: 6px;
+  height: 40px;
+  background: linear-gradient(180deg, #b22133 0%, rgba(178, 33, 51, 0.5) 100%);
+  border-radius: 3px;
+  flex-shrink: 0;
 }
 .sous-titre-1{
   text-align: left;
@@ -149,12 +173,23 @@ body.dark-mode .tableau td {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  .titre::before {
+    width: 5px;
+    height: 32px;
+  }
+
   .titre-2 {
     font-size: 2em;
     line-height: 1.1;
     color: rgb(0, 0, 0);
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .titre-2::before {
+    width: 5px;
+    height: 32px;
   }
 }
 
