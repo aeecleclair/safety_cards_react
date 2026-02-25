@@ -3,315 +3,128 @@
 import React from "react";
 import "@/src/App.css";
 
-import Quote from "@/components/Citation"; 
-import ImageTextPopup from "@/components/Cartes"; 
+import Quote from "@/components/Citation";
+import ImageTextPopup from "@/components/Cartes";
 import ListeNumerotee from "@/components/Listes";
 import ExternalLinkBlock from "@/components/Liens-ext";
-import { BulletList, NumberedList, TextImageRight, ImageCenter, YouTubeVideo } from "@/components/Common";
+import { BulletList } from "@/components/Common";
 import Sommaire from "@/components/Sommaire";
 import ContactCard from "@/components/Contact";
 import Separateur from "@/components/Separateur";
-import { Chiffre, ChiffresGroup } from "@/components/Chiffres";
+import { ChiffresGroup } from "@/components/Chiffres";
+import { useLanguage } from "@/app/providers/LanguageProvider";
 
-const navLinks = [
-  { label: "Qu'est-ce que l'IVG ?", target: "ivg" },
-  { label: "Comment se déroule une IVG ?", target: "deroulement" },
-  { label: "Où et qui contacter à Écully / Lyon ?", target: "contacts" },
-  { label: "Aide, droits & urgences", target: "aide" },
-];
+import fr from "@/locales/Sexe-amour/IVG/_fr.js";
+import en from "@/locales/Sexe-amour/IVG/_en.js";
 
-const chiffres = [
-  { number: "14", title: "semaines : délai légal", description: "maximum pour réaliser une IVG en France" },
-  { number: "7e", title: "semaine : IVG médicamenteuse", description: "possible jusqu'à la fin de la 7ᵉ semaine de grossesse. " },
-  { number: "251 270 ", title: "IVG en France en 2024", description: "soit 7000 de plus qu'en 2023." }
-];
-
-const localResources = [
-
-  {
-    link: "https://www.planning-familial.org/fr/le-numero-vert-national-sexualites-contraception-ivg-0800-08-11-11-261",
-    imageSrc: "/assets/planning-familial.jpg",
-    label: "Numéro vert national (Planning Familial)",
-    description: "0 800 08 11 11 — information gratuite, anonyme : sexualités, contraception, IVG."
-  },
-  {
-    link: "https://ivg.gouv.fr/",
-    imageSrc: "/assets/min.png",
-    label: "Service public IVG",
-    description: "Informations officielles et aide pour trouver des lieux de prise en charge."
-  }
-];
-
-const resources_infos = [
-
-  {
-    link: "https://ivg.gouv.fr/",
-    imageSrc: "/assets/gouv.png",
-    label: "Site officiel du gouvernement",
-    description: "pour répondre aux questions en lien avec l'IVG."
-  }
-];
-
-const resources_questionsex = [
-
-  {
-    link: "https://questionsexualite.fr/choisir-sa-contraception/l-interruption-volontaire-de-grossesse",
-    imageSrc: "/assets/question_sexualite.png",
-    label: "Question Sexualité -",
-    description: "IVG médicamenteuse, IVG instrumentale, effets indésirables, suivi ..."
-  }
-];
-
-const resources_etapes = [
-
-  {
-    link: "https://ivg.gouv.fr/ivg-etape-par-etape",
-    imageSrc: "/assets/gouv.png",
-    label: "Site officiel sur l'IVG -",
-    description: "l'IVG, étape par étape"
-  }
-];
-
-const contraception = [
-  {
-    link: "/contraception",
-    label: "Sexualité et contraception",
-    description: "Quels sont les différents moyens contraceptifs ?",
-    emoji : "😘",
-  }
-];
+const dict = { fr, en };
 
 const IVG = () => {
+  const { lang } = useLanguage();
+  const t = dict[lang] ?? fr;
+
   return (
     <div className="page">
-      <h1 className="titre-page">Interruption Volontaire de Grossesse</h1>
+      <h1 className="titre-page">{t.title}</h1>
 
-      <Sommaire links={navLinks} />
+      <Sommaire links={t.navLinks} />
 
-      {/* INTRO */}
       <div id="ivg">
-        <h2 className="titre">Qu'est-ce que l'IVG ?</h2>
+        <h2 className="titre">{t.introTitle}</h2>
 
-        <ImageTextPopup
-          image="/assets/cartes/5_coeur.png"
-          title="La carte 5♥"
-          shortText="IVG : comprendre, choisir et se faire accompagner"
-          longText="L’IVG est un acte médical légal, confidentiel, et accessible à toute personne enceinte. Ce choix est personnel, protégé par la loi, et s’accompagne d’un suivi bienveillant et d’une totale discrétion médicale."
-          textButton="⤢ Agrandir la carte"
-          suit="coeur"
-        />
+        <ImageTextPopup {...t.popup} suit="coeur" />
 
-        <p className="texte">
-          L'IVG est un acte médical accessible en France. Il existe plusieurs façons d'y accéder (consultations d'information, entretien psycho-social si proposé, méthode adaptée selon le terme). Le choix de la méthode se fait avec l'équipe soignante en tenant compte de l'état de santé et du terme de la grossesse.
-        </p>
+        <p className="texte">{t.introText}</p>
 
-        <Quote
-          text="Le droit à avorter, et à pratiquer l'avortement, est garanti par la loi et permet aux femmes qui souhaitent interrompre leur grossesse de le faire sans risque d'être sanctionnées."
-          author="Source : Site officiel du gouvernement"
-        />
+        <Quote text={t.quote.text} author={t.quote.author} />
 
-        <ChiffresGroup chiffres={chiffres} />
-        <p className="texte">
-          Il existe aujourd’hui de nombreuses méthodes de <b>contraception</b> : pilule, préservatif, implant, DIU (stérilet), patch, et bien d’autres. 
-          Chacune a ses avantages et ses spécificités, et le choix dépend de ton mode de vie, de ta santé et de tes préférences. 
-          Si tu souhaites en savoir plus sur la contraception ou la sexualité, tu peux consulter notre page dédiée :
-        </p>
-        <ExternalLinkBlock resources={contraception} />
-        <p className="texte">
-          Tu peux aussi consulter le site de Question Sexualité qui regroupe un grand nombre d'informations en tout genre sur l'IVG, mais sur lequel il y a également des contacts :
-        </p>
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={resources_questionsex}
-        />
+        <ChiffresGroup chiffres={t.chiffres} />
+
+        <p className="texte">{t.contraceptionText}</p>
+        <ExternalLinkBlock resources={t.contraception} />
+
+        <p className="texte">{t.questionSexText}</p>
+        <ExternalLinkBlock resources={t.resources_questionsex} />
       </div>
-
 
       <Separateur />
 
-      {/* DEROULEMENT */}
       <div id="deroulement">
-        <h2 className="titre">Comment se déroule une IVG ?</h2>
+        <h2 className="titre">{t.deroulementTitle}</h2>
 
-        <h3 className="sous-titre-2">Les deux grandes méthodes</h3>
-        <BulletList
-          items={[
-            <><b>IVG médicamenteuse :</b> prise de médicaments sous contrôle médical. Possible en ville (médecin, sage-femme) ou à l'hôpital selon le cas, et jusqu'à la fin de la 7ᵉ semaine de grossesse.</>,
-            <><b>IVG instrumentale (ou chirurgicale) :</b> intervention réalisée en milieu hospitalier ou clinique, utilisée après la 7ᵉ semaine et jusqu'au délai légal.</>,
-          ]}
-        />
+        <h3 className="sous-titre-2">{t.methodesTitle}</h3>
+        <BulletList items={t.methodes} />
 
-        <h3 className="sous-titre-2">Qu'en est-il des mineur·e·s ?</h3>
-        <p className="texte">
-          Les mineur·e·s peuvent demander une IVG sans avoir besoin d'une autorisation parentale : dans ce cas, il faut cependant être accompagnées d'une personne majeure de leur choix (accompagnement obligatoire), et la confidentialité est protégée par la loi. Les professionnels doivent proposer une information adaptée et l'accès aux soins se fait gratuitement via l'Assurance maladie. 
-        </p>
+        <h3 className="sous-titre-2">{t.mineursTitle}</h3>
+        <p className="texte">{t.mineursText}</p>
 
-        <h3 className="sous-titre-2">Accompagner l’IVG : la place du partenaire</h3>
+        <h3 className="sous-titre-2">{t.partenaireTitle}</h3>
+        <p className="texte">{t.partenaireText1}</p>
+        <p className="texte">{t.partenaireText2}</p>
+        <p className="texte">{t.partenaireText3}</p>
 
-        <p className="texte">
-          Une grossesse ne concerne pas uniquement la personne enceinte.
-          L'IVG reste bien sûr un <b>droit individuel</b> et la personne enceinte est <b>la seule</b> à pouvoir en décider, mais il est essentiel de rappeler que le <b>soutien du ou de la partenaire</b> peut être précieux.
-        </p>
-
-        <p className="texte">
-          Être présent, écouter sans juger, accompagner aux rendez-vous si c’est souhaité, partager les démarches ou simplement manifester de la bienveillance 
-          peut <b>aider la personne à se sentir soutenue</b> dans un moment souvent complexe émotionnellement. 
-          La responsabilité de la contraception, de la prévention et de l’écoute <b>incombe aux deux partenaires</b> : une approche partagée favorise un climat de confiance et de respect mutuel.
-        </p>
-
-        <p className="texte">
-          Dans certains centres (notamment les CPEF et les centres IVG hospitaliers), <b>des entretiens de couple ou de soutien psychologique</b> peuvent être proposés, 
-          afin d’aider à traverser cette période ensemble, sereinement et sans culpabilité.
-        </p>
-        <h3 className="sous-titre-2">Le parcours concret d’une IVG</h3>
-        <p className="texte">
-          Le parcours d’une IVG se déroule en plusieurs étapes encadrées par la loi, afin d’assurer un accompagnement médical, psychologique et administratif adapté à chaque personne.
-        </p>
+        <h3 className="sous-titre-2">{t.parcoursTitle}</h3>
+        <p className="texte">{t.parcoursIntro}</p>
 
         <ListeNumerotee
           title=""
-          subtitle="Voici les principales étapes :"
-          items={[
-            {
-              title: "1. Prendre rendez-vous",
-              subtitle: "Avec un médecin, une sage-femme, un centre IVG ou un centre de planification (CPEF). Le rendez-vous permet de confirmer la grossesse, d’évaluer le terme et de présenter les différentes méthodes possibles."
-            },
-            {
-              title: "2. Première consultation médicale",
-              subtitle: "Le ou la professionnelle de santé informe sur les deux méthodes (médicamenteuse ou instrumentale), leurs effets, leurs contraintes et répond à toutes les questions. Un entretien psychosocial est proposé, obligatoire pour les mineur·e·s."
-            },
-            {
-              title: "3. Délai de réflexion (facultatif)",
-              subtitle: "Aucune obligation d’attente n’est imposée, mais la personne peut demander un temps de réflexion avant de confirmer sa décision."
-            },
-            {
-              title: "4. Réalisation de l’IVG",
-              subtitle: "L’IVG se pratique selon la méthode choisie, en ville (médecin, sage-femme) ou à l’hôpital. Elle est encadrée médicalement et peut être accompagnée d’un suivi psychologique si souhaité."
-            },
-            {
-              title: "5. Consultation de suivi",
-              subtitle: "Un rendez-vous de contrôle est proposé après l’intervention pour s’assurer que tout va bien, échanger sur la contraception et le bien-être physique et émotionnel."
-            }
-          ]}
+          subtitle={t.parcoursSubtitle}
+          items={t.parcoursSteps}
         />
 
-        <p className="texte">
-          Tu peux aussi retrouver ces étapes avec plus de détails sur le site officiel du gouvernement dédié à ce sujet :
-        </p>
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={resources_etapes}
-        />
-        
-
+        <p className="texte">{t.parcoursLinkText}</p>
+        <ExternalLinkBlock resources={t.resources_etapes} />
       </div>
-
 
       <Separateur />
 
-      {/* AIDE, DROITS, URGENCES */}
       <div id="aide">
-        <h2 className="titre">Aide, droits & urgences</h2>
+        <h2 className="titre">{t.aideTitle}</h2>
 
-        <p className="texte">
-          Si tu as besoin d'information, du soutien pour te déplacer, d'un hébergement ou d'une aide financière, plusieurs dispositifs peuvent t'aider. Voici les points essentiels :
-        </p>
+        <p className="texte">{t.aideIntro}</p>
 
-        <BulletList
-          items={[
-            "Numéro vert national — 0 800 08 11 11 : information anonyme et gratuite (sexualités, contraception, IVG), du lundi au samedi de 9h à 20h.",
-            "Site officiel d'aide et d'information (chat, numéros et informations utiles) :"
-          ]}
-        />
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={resources_infos}
-        />
-        <BulletList
-          items={[
-            "Les consultations sont prises en charge à 100 % par l'Assurance maladie dans le cadre d'une IVG (se renseigner avec la structure)." ,
-            "En cas d'urgence (complication, saignement important, douleur intolérable), rends-toi au service des urgences ou appelle le 15.",
-          ]}
-        />
+        <BulletList items={t.aideList1} />
+        <ExternalLinkBlock resources={t.resources_infos} />
+        <BulletList items={t.aideList2} />
 
+        <h3 className="sous-titre-2">{t.suiviTitle}</h3>
+        <p className="texte">{t.suiviText}</p>
 
-
-        <h3 className="sous-titre-2">Aide psychologique et suivi</h3>
-        <p className="texte">
-          Les équipes qui réalisent des IVG proposent aussi un accompagnement médical et psychosocial. Si tu ressens le besoin de parler avant ou après l'IVG, demande un rendez-vous de suivi (infirmière, sage-femme, psychologue, assistante sociale).
-        </p>
-
-        <h3 className="sous-titre-2">Déroulement administratif et gratuité</h3>
-        <p className="texte">
-          L'IVG est prise en charge par l'Assurance maladie (avec le cas échéant le dispositif d'autorisation pour mineures souhaitant garder le secret). Les centres hospitaliers et CPEF (Centres de planification et d'éducation familiale) peuvent informer et orienter gratuitement.
-        </p>
+        <h3 className="sous-titre-2">{t.adminTitle}</h3>
+        <p className="texte">{t.adminText}</p>
       </div>
+
       <Separateur />
 
-      {/* CONTACTS LOCAUX */}
       <div id="contacts">
-        <h2 className="titre">Où se faire accompagner & qui contacter ?</h2>
+        <h2 className="titre">{t.contactsTitle}</h2>
 
-        <p className="texte">
-          Si tu es à Écully ou à Lyon, il y a des lieux et des contacts locaux qui pratiquent ou orientent vers l'IVG. En cas d'urgence, contacte le numéro national ou rends-toi au service des urgences le plus proche.
-        </p>
+        <p className="texte">{t.contactsIntro}</p>
 
-        <h3 className="sous-titre-2">Centres hospitaliers et planning familial</h3>
+        <h3 className="sous-titre-2">{t.hospitauxTitle}</h3>
 
         <ContactCard
-          image="/assets/EdouardHerriot.jpg"
-          title="Hôpital Édouard Herriot (Centre d’orthogénie / IVG)"
-          subtitle="5 place d’Arsonval - 69003 Lyon"
-          phone="04 72 11 03 96"
-          textButton="Prendre RDV / Infos"
-          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=21520"
-
-          bgColor="#ffffff"    //informations facultatives
-          textColor="#0da8e8"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+          image="/assets/EdouardHerriot.jpg" 
+          {...t.cardEdouartHerriot}
         />
-
         <ContactCard
-          image="/assets/CroixRousse.jpg"
-          title="Hôpital de la Croix-Rousse (Centre d’orthogénie / IVG)"
-          subtitle="103 grande rue de la Croix-Rousse - 69004 Lyon"
-          phone="04 72 07 16 63"
-          textButton="Prendre RDV / Infos"
-          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=24026"
-          bgColor="#ffffff"    //informations facultatives
-          textColor="#0da8e8"
+          image="/assets/CroixRousse.jpg" 
+          {...t.cardCroixRousse}
         />
-
         <ContactCard
-          image="/assets/LyonSud.png"
-          title="Hôpital Lyon Sud (Centre IVG)"
-          subtitle="165 chemin du Grand Revoyet - 69310 Pierre-Bénite"
-          phone="04 78 86 65 70"
-          textButton="Prendre RDV / Infos"
-          link="https://myhcl.sante-ra.fr/Espacepublic/rendezvous.aspx?CR=36118"
-
-          bgColor="#ffffff"    //informations facultatives
-          textColor="#0da8e8"  //elles seront chosies en fonction de la couleur du logo si non spécifiées
+          image="/assets/LyonSud.png" 
+          {...t.cardLyonSud}
         />
 
-        {/* Clinique / Ecully */}
-        <p className="texte">
-          À Écully plusieurs sages-femmes et cliniques proposent des consultations d'information et des IVG médicamenteuses selon les cas (prendre RDV et vérifier la disponibilité). Des praticiens locaux apparaissent sur Doctolib (ex. sages-femmes proposant IVG médicamenteuse à Écully). En cas de doute, appelle le numéro vert national pour être orienté·e.
-        </p>
+        <p className="texte">{t.ecullyText}</p>
+        <ExternalLinkBlock resources={t.localResources} />
 
-        <ExternalLinkBlock
-          title=""
-          subtitle=""
-          resources={localResources}
-        />
       </div>
 
       <Separateur />
 
       <p className="texte">
-        <em><b>Sources principales :</b> ivg.gouv.fr — Ministère de la Santé ; Info.gouv / loi (délai 14 semaines) ; Ameli (délais IVG médicamenteuse) ; Hospices Civils de Lyon (centres d'orthogénie) ; Planning Familial (numéro vert 0 800 08 11 11).</em>
+        <em><b>{t.sourcesPrefix}</b> {t.sources}</em>
       </p>
     </div>
   );
