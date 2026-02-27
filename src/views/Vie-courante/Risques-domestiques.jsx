@@ -32,7 +32,11 @@ const RisquesDomestiques = () => {
         <h2 className="titre">{t.resumeTitle}</h2>
 
         {t.conseilsUrgence.map((item, i) => (
-          <p key={i} className="mise-avant">{item}</p>
+          <p
+            key={i}
+            className="mise-avant"
+            dangerouslySetInnerHTML={{ __html: item }}
+          />
         ))}
       </div>
 

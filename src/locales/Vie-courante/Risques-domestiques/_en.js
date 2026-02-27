@@ -12,10 +12,10 @@ const fr = {
   resumeTitle: "Key Advice",
 
   conseilsUrgence: [
-    "In case of poisoning, keep the product packaging involved to show to emergency services. Call the Poison Control Center at +33 4 72 11 69 11.",
-    "In case of burns, cool the area with cold water for at least 10 minutes. If necessary, call the fire brigade at 18 or emergency medical services at 15.",
-    "In case of choking, alternate between 5 back blows between the shoulder blades and 5 abdominal thrusts (Heimlich maneuver) if you know how to perform it. If the situation does not improve, call emergency medical services at 15.",
-    "In case of electrocution, immediately cut off the power without touching the victim. Call emergency services at 18 (fire brigade) or 112 (European emergency number)."
+    "In case of <b>poisoning</b>, keep the product packaging involved to show to emergency services. Call the <b>Poison Control Center at +33 4 72 11 69 11</b>.",
+    "In case of <b>burns</b>, cool the area with cold water for at least 10 minutes. If necessary, call the <b>fire brigade at 18</b> or <b>emergency medical services at 15</b>.",
+    "In case of <b>choking</b>, alternate between 5 back blows between the shoulder blades and 5 abdominal thrusts (Heimlich maneuver) if you know how to perform it. If the situation does not improve, call <b>emergency medical services at 15</b>.",
+    "In case of <b>electrocution</b>, immediately cut off the power without touching the victim. Call emergency services at <b>18 (fire brigade)</b> or <b>112 (European emergency number)</b>."
   ],
 
   definitionTitle: "Understanding home hazards",

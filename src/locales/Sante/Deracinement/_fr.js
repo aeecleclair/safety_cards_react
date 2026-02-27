@@ -17,10 +17,10 @@ const fr = {
   },
   comprendreIntro: "Étudier à l’étranger est une expérience enrichissante : découverte, ouverture, aventure. Mais c’est aussi un défi. Apprendre dans une langue différente, s’adapter à de nouveaux codes, vivre loin de sa famille ou de ses repères, peut provoquer un sentiment de solitude ou de perte de sens.",
   comprendrePoints: [
-    "Barrière de la langue : peur de ne pas tout comprendre ou d’être mal compris.",
-    "Méthodes d’enseignement différentes : plus d’autonomie, moins de guidage.",
-    "Décalage social et culturel : humour, interactions, rythme de vie.",
-    "Isolement : difficultés à créer du lien ou à trouver sa place dans un nouveau groupe."
+    "<b>Barrière de la langue</b> : peur de ne pas tout comprendre ou d’être mal compris.",
+    "<b>Méthodes d’enseignement différentes</b> : plus d’autonomie, moins de guidage.",
+    "<b>Décalage social et culturel</b> : humour, interactions, rythme de vie.",
+    "<b>Isolement</b> : difficultés à créer du lien ou à trouver sa place dans un nouveau groupe."
   ],
   comprendreConclusion: "Ces sentiments sont normaux et transitoires. Le déracinement n’est pas une faiblesse : c’est une phase d’adaptation que traversent beaucoup d’étudiant·e·s internationaux·ales.",
 

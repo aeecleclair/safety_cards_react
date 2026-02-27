@@ -35,7 +35,7 @@ const en = {
   ],
 
   contraceptionText:
-    "Today, there are many contraception methods: pill, condom, implant, IUD, patch, and more. Each has its advantages and specific features, and the choice depends on your lifestyle, health, and preferences. If you would like to learn more about contraception or sexuality, you can visit our dedicated page:",
+    "Today, there are many <b>contraception</b> methods: pill, condom, implant, IUD, patch, and more. Each has its advantages and specific features, and the choice depends on your lifestyle, health, and preferences. If you would like to learn more about contraception or sexuality, you can visit our dedicated page:",
 
   contraception : [
     {
@@ -62,8 +62,8 @@ const en = {
   methodesTitle: "The two main methods",
 
   methodes: [
-    "Medical abortion: taking medication under medical supervision. Possible in private practice (doctor, midwife) or in hospital depending on the situation, and up to the end of the 7th week of pregnancy.",
-    "Surgical abortion (instrumental): procedure performed in a hospital or clinic, used after the 7th week and up to the legal limit."
+    "<b>Medical abortion</b>: taking medication under medical supervision. Possible in private practice (doctor, midwife) or in hospital depending on the situation, and up to the end of the 7th week of pregnancy.",
+    "<b>Surgical abortion</b> (instrumental): procedure performed in a hospital or clinic, used after the 7th week and up to the legal limit."
   ],
 
   mineursTitle: "What about minors?",
@@ -71,9 +71,9 @@ const en = {
     "Minors can request an abortion without parental authorization. However, they must be accompanied by an adult of their choice (mandatory accompaniment), and confidentiality is protected by law. Professionals must provide appropriate information, and care is covered free of charge through the national health insurance system.",
 
   partenaireTitle: "Supporting an abortion: the partner’s role",
-  partenaireText1: "A pregnancy does not concern only the pregnant person. Abortion remains an individual right, and the pregnant person is the only one who can decide, but it is important to recognize that a partner’s support can be valuable.",
-  partenaireText2: "Being present, listening without judgment, attending appointments if desired, helping with procedures, or simply showing kindness can help the person feel supported during what is often an emotionally complex time. Responsibility for contraception, prevention, and emotional support belongs to both partners: a shared approach fosters trust and mutual respect.",
-  partenaireText3: "In some centers (notably Family Planning Centers and hospital abortion units), couple counseling or psychological support may be offered to help navigate this period together calmly and without guilt.",
+  partenaireText1: "A pregnancy does not concern only the pregnant person. Abortion remains an <b>individual right</b>, and the pregnant person is <b>the only one</b> who can decide, but it is important to recognize that <b>a partner’s support</b> can be valuable.",
+  partenaireText2: "Being present, listening without judgment, attending appointments if desired, helping with procedures, or simply showing kindness can <b>help the person feel supported</b> during what is often an emotionally complex time. Responsibility for contraception, prevention, and emotional support <b>belongs to both partners</b>: a shared approach fosters trust and mutual respect.",
+  partenaireText3: "In some centers (notably Family Planning Centers and hospital abortion units), <b>couple counseling or psychological support</b> may be offered to help navigate this period together calmly and without guilt.",
 
   parcoursTitle: "The practical abortion process",
   parcoursIntro:

@@ -40,7 +40,8 @@ const IVG = () => {
 
         <ChiffresGroup chiffres={t.chiffres} />
 
-        <p className="texte">{t.contraceptionText}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.contraceptionText }} />
+
         <ExternalLinkBlock resources={t.contraception} />
 
         <p className="texte">{t.questionSexText}</p>
@@ -53,15 +54,19 @@ const IVG = () => {
         <h2 className="titre">{t.deroulementTitle}</h2>
 
         <h3 className="sous-titre-2">{t.methodesTitle}</h3>
-        <BulletList items={t.methodes} />
 
+        <BulletList
+          items={t.methodes.map((c, i) => (
+            <span key={i} dangerouslySetInnerHTML={{ __html: c }} />
+          ))}
+        />        
         <h3 className="sous-titre-2">{t.mineursTitle}</h3>
         <p className="texte">{t.mineursText}</p>
 
         <h3 className="sous-titre-2">{t.partenaireTitle}</h3>
-        <p className="texte">{t.partenaireText1}</p>
-        <p className="texte">{t.partenaireText2}</p>
-        <p className="texte">{t.partenaireText3}</p>
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.partenaireText1 }} />
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.partenaireText2 }} />
+        <p className="texte" dangerouslySetInnerHTML={{ __html: t.partenaireText3 }} />
 
         <h3 className="sous-titre-2">{t.parcoursTitle}</h3>
         <p className="texte">{t.parcoursIntro}</p>

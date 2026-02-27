@@ -43,10 +43,12 @@ return (
 
         <p className="texte">{t.comprendreIntro}</p>
 
-        <BulletList items={t.comprendrePoints.map(point => {
-          const [bold, rest] = point.split(':');
-          return <><span className="font-bold">{bold}:</span>{rest}</>;
-        })} />
+
+        <BulletList
+          items={t.comprendrePoints.map((c, i) => (
+            <span key={i} dangerouslySetInnerHTML={{ __html: c }} />
+          ))}
+        />
 
         <p className="texte">{t.comprendreConclusion}</p>
 

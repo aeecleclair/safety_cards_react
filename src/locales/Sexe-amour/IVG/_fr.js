@@ -35,7 +35,7 @@ const fr = {
   ],
 
   contraceptionText:
-    "Il existe aujourd’hui de nombreuses méthodes de contraception : pilule, préservatif, implant, DIU (stérilet), patch, et bien d’autres. Chacune a ses avantages et ses spécificités, et le choix dépend de ton mode de vie, de ta santé et de tes préférences. Si tu souhaites en savoir plus sur la contraception ou la sexualité, tu peux consulter notre page dédiée :",
+    "Il existe aujourd’hui de nombreuses méthodes de <b>contraception</b> : pilule, préservatif, implant, DIU (stérilet), patch, et bien d’autres. Chacune a ses avantages et ses spécificités, et le choix dépend de ton mode de vie, de ta santé et de tes préférences. Si tu souhaites en savoir plus sur la contraception ou la sexualité, tu peux consulter notre page dédiée :",
 
   contraception : [
     {
@@ -61,8 +61,8 @@ const fr = {
   methodesTitle: "Les deux grandes méthodes",
 
   methodes: [
-    "IVG médicamenteuse : prise de médicaments sous contrôle médical. Possible en ville (médecin, sage-femme) ou à l'hôpital selon le cas, et jusqu'à la fin de la 7ᵉ semaine de grossesse.",
-    "IVG instrumentale (ou chirurgicale) : intervention réalisée en milieu hospitalier ou clinique, utilisée après la 7ᵉ semaine et jusqu'au délai légal."
+    "<b>IVG médicamenteuse</b> : prise de médicaments sous contrôle médical. Possible en ville (médecin, sage-femme) ou à l'hôpital selon le cas, et jusqu'à la fin de la 7ᵉ semaine de grossesse.",
+    "<b>IVG instrumentale</b> (ou chirurgicale) : intervention réalisée en milieu hospitalier ou clinique, utilisée après la 7ᵉ semaine et jusqu'au délai légal."
   ],
 
   mineursTitle: "Qu'en est-il des mineur·e·s ?",
@@ -70,9 +70,9 @@ const fr = {
     "Les mineur·e·s peuvent demander une IVG sans avoir besoin d'une autorisation parentale : dans ce cas, il faut cependant être accompagnées d'une personne majeure de leur choix (accompagnement obligatoire), et la confidentialité est protégée par la loi. Les professionnels doivent proposer une information adaptée et l'accès aux soins se fait gratuitement via l'Assurance maladie.",
 
   partenaireTitle: "Accompagner l’IVG : la place du partenaire",
-  partenaireText1: "Une grossesse ne concerne pas uniquement la personne enceinte. L'IVG reste bien sûr un droit individuel et la personne enceinte est la seule à pouvoir en décider, mais il est essentiel de rappeler que le soutien du ou de la partenaire peut être précieux.",
-  partenaireText2: "Être présent, écouter sans juger, accompagner aux rendez-vous si c’est souhaité, partager les démarches ou simplement manifester de la bienveillance peut aider la personne à se sentir soutenue dans un moment souvent complexe émotionnellement. La responsabilité de la contraception, de la prévention et de l’écoute incombe aux deux partenaires : une approche partagée favorise un climat de confiance et de respect mutuel.",
-  partenaireText3: "Dans certains centres (notamment les CPEF et les centres IVG hospitaliers), des entretiens de couple ou de soutien psychologique peuvent être proposés, afin d’aider à traverser cette période ensemble, sereinement et sans culpabilité.",
+  partenaireText1: "Une grossesse ne concerne pas uniquement la personne enceinte. L'IVG reste bien sûr un <b>droit individuel</b> et la personne enceinte est <b>la seule</b> à pouvoir en décider, mais il est essentiel de rappeler que <b>le soutien du ou de la partenaire</b> peut être précieux.",
+  partenaireText2: "Être présent, écouter sans juger, accompagner aux rendez-vous si c’est souhaité, partager les démarches ou simplement manifester de la bienveillance peut <b>aider la personne à se sentir soutenue</b> dans un moment souvent complexe émotionnellement. La responsabilité de la contraception, de la prévention et de l’écoute <b>incombe aux deux partenaires</b> : une approche partagée favorise un climat de confiance et de respect mutuel.",
+  partenaireText3: "Dans certains centres (notamment les CPEF et les centres IVG hospitaliers), <b>des entretiens de couple ou de soutien psychologique</b> peuvent être proposés, afin d’aider à traverser cette période ensemble, sereinement et sans culpabilité.",
 
   parcoursTitle: "Le parcours concret d’une IVG",
   parcoursIntro:

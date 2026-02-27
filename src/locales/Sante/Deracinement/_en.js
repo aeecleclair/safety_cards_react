@@ -17,10 +17,10 @@ const en = {
   },
   comprendreIntro: "Studying abroad is an enriching experience: discovery, openness, adventure. But it is also a challenge. Learning in a different language, adapting to new norms, living far from family or familiar surroundings can lead to feelings of loneliness or loss of meaning.",
   comprendrePoints: [
-    "Language barrier: fear of not fully understanding or being misunderstood.",
-    "Different teaching methods: more autonomy, less guidance.",
-    "Social and cultural differences: humor, interactions, pace of life.",
-    "Isolation: difficulties building connections or finding your place in a new group."
+    "<b>Language barrier</b>: fear of not fully understanding or being misunderstood.",
+    "<b>Different teaching methods</b>: more autonomy, less guidance.",
+    "<b>Social and cultural differences</b>: humor, interactions, pace of life.",
+    "<b>Isolation</b>: difficulties building connections or finding your place in a new group."
   ],
   comprendreConclusion: "These feelings are normal and temporary. Cultural uprooting is not a weakness: it is an adaptation phase that many international students go through.",
 

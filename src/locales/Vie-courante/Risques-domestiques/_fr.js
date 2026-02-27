@@ -12,10 +12,10 @@ const fr = {
   resumeTitle: "Conseils clés",
 
   conseilsUrgence: [
-    "En cas d'intoxication, conservez l'emballage du produit en cause pour le montrer aux secours. Appelez le Centre Antipoison au 04 72 11 69 11.",
-    "En cas de brûlure, refroidissez la zone avec de l'eau froide pendant au moins 10 minutes. Si nécessaire, appelez les pompiers au 18 ou le SAMU au 15.",
-    "En cas d'étouffement, alternez entre 5 tapes dans le dos entre les ompoplates et 5 compressions abdominales (manœuvre de Heimlich) si vous savez effectuer ce geste. Si la situation ne s'améliore pas, appelez le SAMU au 15.",
-    "En cas d'électrocution, coupez immédiatement le courant sans toucher la victime. Appelez les secours au 18 (pompiers) ou 112 (numéro d'urgence européen)."
+    "En cas d'<b>intoxication</b>, conservez l'emballage du produit en cause pour le montrer aux secours. Appelez le <b>Centre Antipoison au 04 72 11 69 11</b>.",
+    "En cas de <b>brûlure</b>, refroidissez la zone avec de l'eau froide pendant au moins 10 minutes. Si nécessaire, appelez les <b>pompiers au 18</b> ou <b>le SAMU au 15</b>.",
+    "En cas d'<b>étouffement</b>, alternez entre 5 tapes dans le dos entre les ompoplates et 5 compressions abdominales (manœuvre de Heimlich) si vous savez effectuer ce geste. Si la situation ne s'améliore pas, appelez le <b>SAMU au 15</b>.",
+    "En cas d'<b>électrocution</b>, coupez immédiatement le courant sans toucher la victime. Appelez les secours au <b>18 (pompiers)</b> ou <b>112 (numéro d'urgence européen)</b>."
   ],
 
   definitionTitle: "Comprendre les risques domestiques",
