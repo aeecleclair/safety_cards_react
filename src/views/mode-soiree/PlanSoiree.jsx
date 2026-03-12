@@ -60,7 +60,19 @@ const PlanSoiree = () => {
       </div>
 
       <div className="plan-image-wrapper">
-        <img src={currentSrc} alt={`Plan ${niveau === 'campus' ? 'du campus' : niveau === 'soiree1' ? 'de la zone de soirée' : 'du sous-sol'}`} />
+        {niveau === 'campus' ? (
+          <iframe
+            src="https://www.google.com/maps/d/u/0/embed?mid=1ZV9HMQjh6xEp5q3pHHhxvEwZwUB3HUM&ehbc=2E312F&noprof=1"
+            width="100%"
+            height="480"
+            style={{ border: 0, maxWidth: '640px' }}
+            allowFullScreen=""
+            loading="lazy"
+            title="Plan du campus"
+          />
+        ) : (
+          <img src={currentSrc} alt={`Plan ${niveau === 'soiree1' ? 'de la zone de soirée' : 'du sous-sol'}`} />
+        )}
       </div>
 
             <div className="mode-soiree-note">
