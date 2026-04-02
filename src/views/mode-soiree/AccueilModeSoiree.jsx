@@ -18,17 +18,17 @@ const AccueilModeSoiree = () => {
   }, []);
   return (
     <div className="page">
-      <h1 className="titre-page">{/*Mode soirée*/}Mode Challenge</h1>
+      <h1 className="titre-page">Mode soirée{/*Mode Challenge*/}</h1>
       <p className="texte intro">
-        {/*Tu es en soirée. Cette interface te donne un accès rapide aux ressources essentielles.*/}
-        Bienvenue au Challenge 2026 ! Cette interface te donne un accès rapide aux ressources essentielles pour passer un week-end en toute sécurité.
+        Tu es en soirée. Cette interface te donne un accès rapide aux ressources essentielles.
+        {/*Bienvenue au Challenge 2026 ! Cette interface te donne un accès rapide aux ressources essentielles pour passer un week-end en toute sécurité.*/}
       </p>
       <div className="mode-soiree-buttons">
   <button className="ms-btn urgent" onClick={() => router.push("/contacts-urgence") }>
           🚨 Contacts d'urgence
         </button>
   <button className="ms-btn plan" onClick={() => router.push("/plan-soiree") }>
-          🗺️ Plan du campus
+          🗺️ Plan de la soirée
         </button>
       </div>
       <div className="mode-soiree-note">

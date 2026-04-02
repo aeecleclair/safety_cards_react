@@ -29,6 +29,11 @@ const ContactsUrgence = () => {
       bgColor: "white",
       textColor: "#245377",
     },
+
+      
+  ];
+
+      {/*
     {
       image: assetPath("/assets/logo_challenge.png"),
       title: "Zoé (Billy)",
@@ -49,7 +54,7 @@ const ContactsUrgence = () => {
       bgColor: "white",
       textColor: "#000000",
     }
-  ];
+    */}
 
   const router = useRouter();
   return (

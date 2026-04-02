@@ -15,25 +15,28 @@ const PLAN_IMAGES = {
 };
 
 const PlanSoiree = () => {
-  const [niveau, setNiveau] = useState('campus');
+  const [niveau, setNiveau] = useState('rdc');
   const router = useRouter();
 
   const currentSrc = assetPath(PLAN_IMAGES[niveau]);
 
   return (
     <div className="page">
-  <h1 className="titre-page">Plan du campus</h1>
+  <h1 className="titre-page">Plan de la soirée</h1>
   <button className="back-inline-btn" onClick={() => router.back()}>⟵ Retour</button>
       <p className="texte">
         Sélectionne un niveau pour afficher le plan correspondant.
       </p>
 
       <div className="plan-tabs">
+        {/* Mode CCL
  
         <button
           className={"plan-tab-btn" + (niveau==='campus' ? ' active' : '')}
           onClick={() => setNiveau('campus')}
         >Plan du campus</button>
+
+         
 
         <button
           className={"plan-tab-btn" + (niveau==='soiree1' ? ' active' : '')}
@@ -45,8 +48,10 @@ const PlanSoiree = () => {
           onClick={() => setNiveau('soiree0')}
         >Sous-sol </button>
 
+         */}
 
-        {/* Mode soirées
+
+        
         <button
           className={"plan-tab-btn" + (niveau==='rdc' ? ' active' : '')}
           onClick={() => setNiveau('rdc')}
@@ -56,8 +61,9 @@ const PlanSoiree = () => {
           onClick={() => setNiveau('soussol')}
         >Sous-sol</button>
 
-                */}
+                
       </div>
+
 
       <div className="plan-image-wrapper">
         {niveau === 'campus' ? (
@@ -70,6 +76,7 @@ const PlanSoiree = () => {
             loading="lazy"
             title="Plan du campus"
           />
+          
         ) : (
           <img src={currentSrc} alt={`Plan ${niveau === 'soiree1' ? 'de la zone de soirée' : 'du sous-sol'}`} />
         )}
