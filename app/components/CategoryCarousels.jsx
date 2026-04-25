@@ -243,7 +243,9 @@ const CategoryCarousels = ({ lang = "fr", labels, sections }) => {
             const doc = parser.parseFromString(html, "text/html");
 
             const imageSrc = getImageFromDocument(doc);
-            const excerpt = getExcerptFromDocument(doc, fallbackExcerpt);
+            const excerpt = lang === "en"
+              ? fallbackExcerpt
+              : getExcerptFromDocument(doc, fallbackExcerpt);
 
             return [item.path, { imageSrc, excerpt }];
           } catch (_error) {
@@ -264,7 +266,7 @@ const CategoryCarousels = ({ lang = "fr", labels, sections }) => {
     return () => {
       cancelled = true;
     };
-  }, [topicItems, labels.fallbackExcerpt]);
+  }, [topicItems, labels.fallbackExcerpt, lang]);
 
   useEffect(() => {
     let cancelled = false;

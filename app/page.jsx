@@ -264,7 +264,7 @@ export default function Home() {
 
         </div>
 
-        <div className="home-hero-stats" >
+        <div className="random-topic-preview" >
 
           <RandomTopicPreview
               lang={lang}

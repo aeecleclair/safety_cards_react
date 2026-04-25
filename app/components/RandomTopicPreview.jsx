@@ -83,9 +83,22 @@ const RandomTopicPreview = ({ lang = "fr", labels }) => {
   };
 
   useEffect(() => {
-    pickAnotherPage();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang, allPages.length]);
+    if (!allPages.length) {
+      setSelectedPage(null);
+      return;
+    }
+
+    setSelectedPage((current) => {
+      if (current) {
+        const samePathPage = allPages.find((item) => item.path === current.path);
+        if (samePathPage) {
+          return samePathPage;
+        }
+      }
+
+      return allPages[Math.floor(Math.random() * allPages.length)];
+    });
+  }, [allPages]);
 
   useEffect(() => {
     if (!selectedPage) return;
@@ -103,7 +116,8 @@ const RandomTopicPreview = ({ lang = "fr", labels }) => {
           throw new Error("Preview fetch failed");
         }
         const html = await response.text();
-        setPreviewText(extractPreview(html, fallback));
+        const content = lang === "en" ? fallback : extractPreview(html, fallback);
+        setPreviewText(content);
       } catch (_error) {
         setPreviewText(fallback);
       } finally {
@@ -114,7 +128,7 @@ const RandomTopicPreview = ({ lang = "fr", labels }) => {
     loadPreview();
 
     return () => controller.abort();
-  }, [selectedPage, labels.fallbackPreview]);
+  }, [selectedPage, labels.fallbackPreview, lang]);
 
   if (!selectedPage) {
     return null;

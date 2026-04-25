@@ -1,6 +1,7 @@
 .random-preview {
   margin-top: 20px;
   margin-bottom: 26px;
+  width: 100%;
 }
 
 .random-preview-head {
@@ -121,7 +122,7 @@
 }
 
 
-@media (max-width: 720px) {
+@media (max-width: 800px) {
   .random-preview-card {
     padding: 16px;
     border-radius: 14px;
