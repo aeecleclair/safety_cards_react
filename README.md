@@ -1,10 +1,22 @@
-# React + Vite
+# Safety Cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site de prevention etudiante (Next.js) deploye sur GitHub Pages.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `npm run dev` : lance le serveur de dev Next.js
+- `npm run build` : build statique (`output: export`)
+- `npm run start` : sert le build Next.js
 
-- 
+## Deploiement GitHub Pages
+
+Le deploiement est gere par le workflow GitHub Actions `Deploy Next.js site to Pages`.
+
+Pre-requis cote GitHub :
+
+- Dans `Settings > Pages`, choisir `Source: GitHub Actions`
+- Verifier que le workflow `Deploy Next.js site to Pages` est vert
+
+## Domaine personnalise
+
+Le fichier `CNAME` contient : `prevention.myecl.fr`.
