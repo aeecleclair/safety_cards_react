@@ -1,0 +1,159 @@
+.random-preview {
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.random-preview-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.random-preview-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+
+.random-preview-refresh:hover {
+  background-color: #b22133;
+  color: #ffffff;
+}
+
+.random-preview-card {
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #b22133, #720c18);
+  padding: 20px;
+}
+
+.random-preview-category {
+  display: inline-flex;
+  margin: 0;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.random-preview-topic {
+  margin: 12px 0 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.random-preview-text {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.random-preview-skeleton {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.random-preview-skeleton span {
+  display: block;
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.36) 50%, rgba(255, 255, 255, 0.2) 100%);
+  background-size: 220% 100%;
+  animation: random-preview-loading 1.3s linear infinite;
+}
+
+.random-preview-skeleton span:nth-child(2) {
+  width: 94%;
+}
+
+.random-preview-skeleton span:nth-child(3) {
+  width: 88%;
+}
+
+.random-preview-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.random-preview-open,
+.random-preview-another {
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.random-preview-open {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+.random-preview-open:hover {
+  background: #ffffff;
+  color: #b22133;
+}
+
+.random-preview-another {
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.random-preview-another:hover {
+  background: #ffffff;
+  color: #b22133;
+}
+
+
+@media (max-width: 720px) {
+  .random-preview-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .random-preview-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .random-preview-title {
+    font-size: 1.8rem;
+  }
+
+  .random-preview-actions {
+    flex-direction: column;
+  }
+
+  .random-preview-open,
+  .random-preview-another,
+  .random-preview-refresh {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@keyframes random-preview-loading {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}

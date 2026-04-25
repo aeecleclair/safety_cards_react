@@ -1,24 +1,39 @@
 "use client";
 
-import ExternalLinkBlock from "./components/Liens-ext";
-import RandomPageSelector from "./components/Randompage";
+import RandomTopicPreview from "./components/RandomTopicPreview";
+import CategoryCarousels from "./components/CategoryCarousels";
+import { pagesDataByLang } from "./components/pagesData";
 import { useLanguage } from "./providers/LanguageProvider";
+import "./home.css";
+import Separateur from "./components/Separateur";
 
 const fr = {
   titleWelcomePrefix: "Bienvenue sur",
   titleBrand: "safety cards",
-  introLine1:
-    "Tu trouveras sur ce site des informations et ressources concernant une liste non exhaustive de thématiques relatives aux risques de la vie étudiante.",
-  introLine2:
-    "Si tu es à la recherche d'une information précise, accèdes-y en naviguant via le menu. Si tu as ton jeu Safety Cards en main, tu peux commencer à le parcourir et flasher le code QR présent en haut à droite de la carte lorsque la thématique t'intéresse. Si tu ne sais pas ce que tu cherches, tu peux lancer une recherche aléatoire ci-dessous !",
-  introEmphasis:
-    "Seulement l'essentiel des informations est donné pour chaque thématique. N'hésite pas à accéder aux sites spécialisés via les liens présents sur chaque page !",
-  randomTitle: "Découvre une thématique aléatoire",
+  heroKicker: <>Retrouve ici toutes les informations et ressources concernant plus de 40 thématiques relatives aux risques de ta vie étudiante ! Tu peux découvrir une thématique aléatoire dans l'encadré à droite 👉 </>,
+  statsTopics: "thématiques de prévention",
+  statsFamilies: "grandes familles de risques",
+  randomSectionTitle: "Découvre une nouvelle page !",
+  randomReadMore: "Lire plus",
+  randomAnotherTopic: "Découvrir une autre thématique",
+  randomFallbackPreview:
+    "Cette fiche te donne les points cles, les signaux d'alerte et les ressources utiles sur {topic}.",
+  categoriesTitle: "Découvre toutes les thématiques abordées",
+  categoriesPrev: "←",
+  categoriesNext: "→",
+  categoriesReadMore: "Lire plus",
+  categoriesContactAction: "Contacter",
+  categoriesExternalAction: "Découvrir",
+  categoriesFallbackExcerpt:
+    "Les essentiels sur {topic} : repères, conseils et ressources utiles.",
+  categoriesResourceFallbackExcerpt:
+    "Infos utiles, points de contact et orientation rapide vers les bons interlocuteurs.",
+  supportSectionTitle: "Contacts et ressources externes",
   contactsTitle: "Contacts de Centrale Lyon",
-  contactsSubtitle: "Voici tous les contacts utiles pour les étudiants",
-  resourcesTitle: "Les ressources globales",
+  contactsSubtitle: "Aide, écoute et accompagnement au quotidien.",
+  resourcesTitle: "Ressources externes complètes",
   resourcesSubtitle:
-    "Voici quelques sites regoupant un grand nombre d'informations sur diverses thématiques",
+    "Des sites de confiance pour aller plus loin sur chaque sujet.",
 
   contacts: [
     { link: "/astreinte", emoji: "🌙", label: "Astreinte" },
@@ -26,15 +41,17 @@ const fr = {
       link: "https://campus.ec-lyon.fr/mission-egalite-femmes-hommes-12949.kjsp?RH=1460128042806",
       emoji: "📞",
       label: "Cellule d'écoute",
+      description: "Pour signaler à l'école un fait de VSS",
     },
     {
       link: "https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990",
       emoji: "🏥",
       label: "Infirmerie",
+      description: "Pour un soutien médical ou psychologique",
     },
-    { link: "/pole-handicap", emoji: "♿", label: "Pôle handicap" },
-    { link: "/service-social", emoji: "🤝", label: "Service social" },
-    { link: "/vie-etudiante", emoji: "🎓", label: "Vie étudiante" },
+    { link: "/pole-handicap", emoji: "♿", label: "Pôle handicap", description: "Pour un accompagnement lié à une situation de handicap" },
+    { link: "/service-social", emoji: "🤝", label: "Service social", description: "Pour un accompagnement social" },
+    { link: "/vie-etudiante", emoji: "🎓", label: "Vie étudiante", description: "Pour un accompagnement dans ta vie étudiante" },
   ],
 
   sites: [
@@ -80,17 +97,29 @@ const fr = {
 const en = {
   titleWelcomePrefix: "Welcome to",
   titleBrand: "safety cards",
-  introLine1:
-    "On this site you'll find information and resources about a non-exhaustive set of topics related to student life risks.",
-  introLine2:
-    "If you're looking for something specific, navigate via the menu. If you have your Safety Cards deck, start browsing it and scan the QR code at the top right of a card when the topic interests you. If you don't know what you need, try a random topic below!",
-  introEmphasis:
-    "Only the essentials are given for each topic. Feel free to open specialized sites using the links on each page!",
-  randomTitle: "Discover a random topic",
+  heroKicker: <>Find all the information and resources you need here for over 40 topics related to student life risks! You can also discover a random topic in the box on the right 👉</>,
+  statsTopics: "prevention topics",
+  statsFamilies: "risk categories",
+  randomSectionTitle: "Discover a new page!",
+  randomReadMore: "Read more",
+  randomAnotherTopic: "Show another page",
+  randomFallbackPreview:
+    "This page gives you key points, warning signs, and useful resources about {topic}.",
+  categoriesTitle: "Explore the 6 main categories",
+  categoriesPrev: "←",
+  categoriesNext: "→",
+  categoriesReadMore: "Read more",
+  categoriesContactAction: "Contact",
+  categoriesExternalAction: "Discover",
+  categoriesFallbackExcerpt:
+    "Key points on {topic}: warning signs, practical advice and useful resources.",
+  categoriesResourceFallbackExcerpt:
+    "Useful support information and direct access to trusted contacts and websites.",
+  supportSectionTitle: "Contacts and external resources",
   contactsTitle: "Centrale Lyon contacts",
-  contactsSubtitle: "All useful contacts for students",
-  resourcesTitle: "Global resources",
-  resourcesSubtitle: "Some sites that gather a large amount of information on diverse topics",
+  contactsSubtitle: "Support, listening and guidance for daily student life.",
+  resourcesTitle: "Top external resources",
+  resourcesSubtitle: "Reliable websites to explore each topic in depth.",
 
   contacts: [
     { link: "/astreinte", emoji: "🌙", label: "On-call support" },
@@ -98,15 +127,17 @@ const en = {
       link: "https://campus.ec-lyon.fr/mission-egalite-femmes-hommes-12949.kjsp?RH=1460128042806",
       emoji: "📞",
       label: "Listening unit",
+      description: "To report a VSS incident to the school",
     },
     {
       link: "https://campus.ec-lyon.fr/infirmerie-medecine-du-travail-et-action-sociale-13245.kjsp?RH=1548411153990",
       emoji: "🏥",
       label: "Medical office",
+      description: "For medical or psychological support",
     },
-    { link: "/pole-handicap", emoji: "♿", label: "Disability support" },
-    { link: "/service-social", emoji: "🤝", label: "Social service" },
-    { link: "/vie-etudiante", emoji: "🎓", label: "Student life" },
+    { link: "/pole-handicap", emoji: "♿", label: "Disability support", description: "For support related to disability" },
+    { link: "/service-social", emoji: "🤝", label: "Social service", description: "For social accompaniment" },
+    { link: "/vie-etudiante", emoji: "🎓", label: "Student life", description: "For accompaniment in student life" },
   ],
 
   sites: [
@@ -154,30 +185,134 @@ export default function Home() {
   const dict = { fr, en };
   const t = dict[lang] || fr;
 
+  const currentData = pagesDataByLang[lang] || pagesDataByLang.fr;
+  const topicCount = currentData.reduce((total, category) => total + category.items.length, 0);
+  const familyCount = currentData.length;
+
+  const categorySections = currentData.map((category) => ({
+    title: category.category,
+    items: category.items.map((item) => ({
+      id: item.path,
+      type: "topic",
+      path: item.path,
+      title: item.name,
+    })),
+  }));
+
+  const supportSections = [
+    {
+      title: t.contactsTitle,
+      gradientVariant: "support-contacts",
+      items: t.contacts.map((item, index) => ({
+        id: `contact-${index}`,
+        type: "resource",
+        title: item.label,
+        link: item.link,
+        imageSrc: item.imageSrc,
+        emoji: item.emoji,
+        excerpt: item.description || t.contactsSubtitle,
+        buttonLabel: t.categoriesContactAction,
+      })),
+    },
+    {
+      title: t.resourcesTitle,
+      gradientVariant: "support-resources",
+      items: t.sites.map((item, index) => ({
+        id: `resource-${index}`,
+        type: "resource",
+        title: item.label,
+        link: (item.link || "").trim(),
+        imageSrc: item.imageSrc,
+        excerpt: item.description || t.resourcesSubtitle,
+        buttonLabel: t.categoriesExternalAction,
+      })),
+    },
+  ];
+
+  const stats = [
+    { value: `${topicCount}+`, label: t.statsTopics },
+    { value: `${familyCount}`, label: t.statsFamilies },
+
+  ];
+
   return (
-    <div className="page">
-      <h1 className="titre-page">
-        {t.titleWelcomePrefix} <span style={{ color: "#b22133" }}>{t.titleBrand}</span>
-      </h1>
+    <div className="page home-modern-page">
 
-      <p className="texte">
-        {t.introLine1} <br /> {t.introLine2}
-        <br /> <em>{t.introEmphasis}</em>
-      </p>
+      <section className="home-hero" >
 
-      <h1 className="titre">{t.randomTitle}</h1>
-      <RandomPageSelector />
+          <h1 id="home-hero-title" className="home-hero-title">
+            {t.titleWelcomePrefix} <span>{t.titleBrand}</span>
+          </h1>
 
-      <h1 className="titre">{t.contactsTitle}</h1>
-      <ExternalLinkBlock
-        subtitle={t.contactsSubtitle}
-        resources={t.contacts}
+
+      <div className="home-hero-main">
+        <div className="home-hero-left">
+          <p className="home-hero-description">{t.heroKicker}</p>
+          <div className="home-hero-stats" >
+
+            {stats.map((stat) => (
+              <article key={stat.label} className="home-hero-stat-card">
+                <p className="home-hero-stat-value">{stat.value}</p>
+                <p className="home-hero-stat-label">{stat.label}</p>
+              </article>
+          
+          ))}
+
+          </div>
+
+
+
+        </div>
+
+        <div className="home-hero-stats" >
+
+          <RandomTopicPreview
+              lang={lang}
+              labels={{
+                readMoreCta: t.randomReadMore,
+                anotherTopicCta: t.randomAnotherTopic,
+                fallbackPreview: t.randomFallbackPreview,
+              }}
+            />
+
+        </div>
+      </div>
+    </section>
+
+    <Separateur />
+
+
+
+
+
+
+      <h1 className="titre">{t.categoriesTitle}</h1>
+      <CategoryCarousels
+        lang={lang}
+        sections={categorySections}
+        labels={{
+          prevLabel: t.categoriesPrev,
+          nextLabel: t.categoriesNext,
+          readMoreLabel: t.categoriesReadMore,
+          fallbackExcerpt: t.categoriesFallbackExcerpt,
+          resourceFallbackExcerpt: t.categoriesResourceFallbackExcerpt,
+        }}
       />
 
-      <h1 className="titre">{t.resourcesTitle}</h1>
-      <ExternalLinkBlock
-        subtitle={t.resourcesSubtitle}
-        resources={t.sites}
+          <Separateur />
+
+
+      <h1 className="titre">{t.supportSectionTitle}</h1>
+      <CategoryCarousels
+        lang={lang}
+        sections={supportSections}
+        labels={{
+          prevLabel: t.categoriesPrev,
+          nextLabel: t.categoriesNext,
+          readMoreLabel: t.categoriesReadMore,
+          fallbackExcerpt: t.categoriesFallbackExcerpt,
+          resourceFallbackExcerpt: t.categoriesResourceFallbackExcerpt,
+        }}
       />
     </div>
   );
