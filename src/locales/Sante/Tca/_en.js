@@ -8,7 +8,7 @@ const en = {
   defTitle: "Understanding Eating Disorders",
   defIntro: "<b>EDs</b> are more than just \"eating poorly\": they are <b>real psychiatric disorders</b>, often linked to great inner suffering and a loss of control regarding food, body image, or weight.",
   carteRoiPique: {
-    image: "/assets/cartes/roi_pique.png",
+    image: "/assets/cartes/anglais/roi_pique.png",
     title: "Card K♠",
     shortText: "Prevention on EDs",
     textButton: "⤢ Learn more",

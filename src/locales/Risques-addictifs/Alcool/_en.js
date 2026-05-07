@@ -79,7 +79,7 @@ const en = {
   ],
 
   carteRoi_trefle: {
-    image: "/assets/cartes/roi_trefle.png",
+    image: "/assets/cartes/anglais/roi_trefle.png",
     title: "Card R♣",
     shortText: "Prevention about drinking and driving",
     longText: "As a young driver, even a single drink can make you exceed the legal limit and have serious consequences if you drive. Alcohol decreases concentration, slows reflexes, and impairs judgment, greatly increasing accident risk. Since alcohol tolerance varies depending on weight, sex, age, and food intake, it's hard to determine a safe amount before driving.",
@@ -109,7 +109,7 @@ const en = {
   tooMuchText: "Upon arriving at school, you often find yourself in a new social environment where alcohol and parties are everywhere. It’s easy <b>to get swept up in drinking habits that can become problematic</b>. However, regular consumption can lead to <b>physical and psychological dependence</b>, making it difficult to stop or cut back. It is vital to stay vigilant about your drinking habits and not hesitate to <b>ask for help</b> if you feel you are losing control.",
 
   carte3_trefle: {
-    image: "/assets/cartes/3_trefle.png",
+    image: "/assets/cartes/anglais/3_trefle.png",
     title: "Card 3♣",
     shortText: "Prevention on regular alcohol consumption",
     longText: "Can't imagine a night without alcohol? Drink regularly, even alone? Over time, your body develops tolerance, needing more to feel the same effects. This can push you to drink more often, even outside parties, increasing health risks.",

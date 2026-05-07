@@ -60,6 +60,8 @@ body.dark-mode .raccourcis-card {
   transition: background .25s, color .25s, box-shadow .25s, transform .05s;
   -webkit-tap-highlight-color: transparent;
   font-family: "Poppins", sans-serif;
+  min-width: var(--btn-size);
+  min-height: var(--btn-size);
 }
 .raccourcis-nav .fab-btn:active { transform: scale(0.98); }
 /* conteneur de l'icône pour un centrage parfait */

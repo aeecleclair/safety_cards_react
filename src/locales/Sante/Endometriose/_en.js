@@ -15,7 +15,7 @@ const en = {
     "Menstrual pain is common and can sometimes be very intense. <b>If it becomes disabling, it may reveal a condition such as endometriosis.</b> It should not be minimized, and consulting a healthcare professional is important.",
 
   carte3Coeur: {
-    image: "/assets/cartes/3_coeur.png",
+    image: "/assets/cartes/anglais/3_coeur.png",
     title: "Card 3♥",
     shortText: "A card to better understand this invisible disease",
     longText:

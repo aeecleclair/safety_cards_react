@@ -10,7 +10,7 @@ const en = {
   ],
 
   carte2_pique: {
-    image: "/assets/cartes/2_pique.png",
+    image: "/assets/cartes/anglais/2_pique.png",
     title: "Card 2♠",
     shortText: "Anxiety and anxiety disorders",
     longText: "Anxiety and anxiety disorders can manifest in different ways, affecting both the mind and the body. They are often characterized by excessive worry, intrusive thoughts, and physical reactions such as increased heart rate, sweating, and muscle tension. Understanding these symptoms is crucial to recognize and manage anxiety effectively.",

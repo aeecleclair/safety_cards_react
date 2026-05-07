@@ -10,7 +10,7 @@ const en = {
   quoiTitle: "What is an STI?",
   quoiIntro: "<b>An STI (sexually transmitted infection)</b> is an infection transmitted through sexual intercourse, caused by bacteria, viruses, or parasites. Often silent but common, especially among young people, they can lead to serious complications if not detected and treated early.",
   carte7Coeur: {
-    image: "/assets/cartes/7_coeur.png",
+    image: "/assets/cartes/anglais/7_coeur.png",
     title: "Card 7♥",
     shortText: "Prevention of high-risk sexual practices",
     longText: "Certain sexual practices carry a higher risk of STI transmission, notably anal and vaginal intercourse without a condom. Systematic use of condoms is essential to reduce this risk. If a condom is not used, it is important to get tested quickly and, if necessary, follow an appropriate treatment.",

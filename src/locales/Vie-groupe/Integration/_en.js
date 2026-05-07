@@ -12,7 +12,7 @@ const fr = {
 
   /** Popup card D♣ (definition) */
   carteD_trefle: {
-    image: "/assets/cartes/dame_trefle.png",
+    image: "/assets/cartes/anglais/dame_trefle.png",
     title: "Card D♣",
     shortText: "Integration and hazing: laughing together doesn't always mean it's harmless",
     longText:
@@ -195,7 +195,7 @@ const fr = {
   bizutText: "We are all vulnerable to peer pressure. It's easy to be led somewhere you wouldn't want to go. When welcoming new students, show empathy and respect. If the situation escalates, speak up: your voice can make a difference.",
 
   carte8_trefle: {
-    image: "/assets/cartes/8_trefle.png",
+    image: "/assets/cartes/anglais/8_trefle.png",
     title: "Card 8♣",
     shortText: "Integration: never force others",
     longText: "Welcoming someone means never forcing them to do something they don't want. Everyone has their own history, limits, and energy. Pressuring, insisting, or mocking to get compliance is not integration: it's coercion that can hurt or isolate. True integration respects boundaries, allows voluntary participation, and prioritizes safety and dignity over games or atmosphere.",

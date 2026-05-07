@@ -16,7 +16,7 @@ const en = {
   ],
 
   card: {
-    image: "/assets/cartes/2_carreau.png",
+    image: "/assets/cartes/anglais/2_carreau.png",
     title: "Card 2♦",
     shortText: "Student isolation",
     longText:

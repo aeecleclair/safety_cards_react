@@ -10,7 +10,7 @@ const en = {
   resumeIntro: "Pornography addiction refers to a <b>compulsive and hard-to-control</b> use of explicit sexual content that ends up negatively affecting daily life. It can lead to unrealistic expectations, altered relationships, and a <b>loss of emotional well-being</b>.",
 
   carte6_coeur: {
-    image: "/assets/cartes/6_coeur.png",
+    image: "/assets/cartes/anglais/6_coeur.png",
     title: "Card 6♥",
     shortText: "Understanding problematic use",
     longText: "Frequent or regular pornography use is not necessarily pathological. We talk about problematic or addictive use when there is loss of control, impacts on daily life, or continued use despite negative consequences.",

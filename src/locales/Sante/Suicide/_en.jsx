@@ -9,7 +9,7 @@ export default {
   ],
 
   card7_pique: {
-    image: "/assets/cartes/7_pique.png",
+    image: "/assets/cartes/anglais/7_pique.png",
     title: "The 7♠ card",
     shortText: "You're not alone. Contact 3114 or a counselor.",
     longText:
@@ -116,7 +116,7 @@ export default {
 
   worriedTitle: "I'm worried about someone",
   card4_diamond: {
-    image: "/assets/cartes/4_carreau.png",
+    image: "/assets/cartes/anglais/4_carreau.png",
     title: "The 4♦ card",
     shortText:
       "If you notice someone is struggling, talking can change everything.",

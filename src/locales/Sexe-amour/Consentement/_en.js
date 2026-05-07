@@ -7,7 +7,7 @@ const en = {
   ],
   definitionTitle: "Understanding consent",
   carte4Coeur: {
-    image: "/assets/cartes/4_coeur.png",
+    image: "/assets/cartes/anglais/4_coeur.png",
     title: "Card 4♥",
     shortText: "The notion of consent",
     longText: "Consent is simply a yes given in a clear, lucid, specific, revocable, and enthusiastic way. Without consent, any sexual activity is an assault.",

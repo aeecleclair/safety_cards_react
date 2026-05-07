@@ -9,7 +9,7 @@ const en = {
   // --- Definition section ---
   sectionDefinitionTitle: "What are we talking about?",
   card1: {
-    image: "/assets/cartes/9_coeur.png",
+    image: "/assets/cartes/anglais/9_coeur.png",
     title: "The 9♥ card",
     shortText: "The pyramid of sexual and sexist violence",
     longText:
@@ -65,7 +65,7 @@ const en = {
   espaceVitalText:
     "Personal space is the space in which you feel safe, free from violence or pressure. It is a space that belongs to you and that you can define as you wish. It is important to respect everyone's personal space, and not to cross it without consent. Physically, it can correspond to a distance of about 40cm around the person, but this can vary depending on individuals and contexts.",
   card2: {
-    image: "/assets/cartes/9_trefle.png",
+    image: "/assets/cartes/anglais/9_trefle.png",
     title: "The 9♣ card",
     shortText: "VSS: Personal space",
     longText:
@@ -214,7 +214,7 @@ const en = {
   agirTemoinText2:
     "As a witness, you may also have experienced a traumatic situation. It is important to take care of yourself too. You can contact the Centrale Lyon nurse or the associations mentioned in the 'I am a victim' section to talk about it.",
   card3: {
-    image: "/assets/cartes/5_trefle.png",
+    image: "/assets/cartes/anglais/5_trefle.png",
     title: "The 5♣ card",
     shortText: "Reacting to sexual and sexist violence at a party",
     longText:

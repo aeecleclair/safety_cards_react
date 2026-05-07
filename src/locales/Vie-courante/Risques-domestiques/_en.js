@@ -21,7 +21,7 @@ const fr = {
   definitionTitle: "Understanding home hazards",
 
   popup: {
-    image: "/assets/cartes/4_trefle.png",
+    image: "/assets/cartes/anglais/4_trefle.png",
     title: "Card 4♣",
     shortText: "Fire hazards and domestic accidents",
     longText:

@@ -7,7 +7,7 @@ const en = {
   ],
   depressionTitle: "What is depression?",
   carte4Pique: {
-    image: "/assets/cartes/4_pique.png",
+    image: "/assets/cartes/anglais/4_pique.png",
     title: "Card 4♠",
     shortText: "Depression: reacting as a victim",
     longText: "When we suffer from depression, we become like prisoners of invisible glasses. The world may continue to be joyful, bright, and filled with beautiful things, but everything seems bland, distant, inaccessible. Through this image, we understand the painful disconnection between external reality and the internal experience of a depressed person. Even surrounded by love, nature, or pleasant moments, a victim may only feel a deep void, an absence of emotion, a sensation of isolation. Depression does not erase the beauty of the world, but it prevents it from reaching the person. It modifies the perception of the person affected; it is a real disorder.",
@@ -112,7 +112,7 @@ const en = {
     "Self-deprecating remarks about themselves, even if said jokingly"
   ],
     carte6Carreau: {
-    image: "/assets/cartes/6_carreau.png",
+    image: "/assets/cartes/anglais/6_carreau.png",
     title: "Card 6♦",
     shortText: "Depression: helping as a witness",
     longText: "This image confronts us with an essential truth: depression is not always visible. One can laugh, talk, play... while being deeply unwell inside. As a helper or simple witness, it is important to change your perspective. Appearances are deceptive and some smiles can be masks. Whether you are a parent, friend, colleague, or teacher, it is vital not to wait for obvious signals to be concerned and to always be present for those around you.",

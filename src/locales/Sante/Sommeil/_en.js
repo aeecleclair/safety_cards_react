@@ -83,7 +83,7 @@ const en = {
     "Sleep is essential for our physical and mental health. <b>Difficulty falling asleep, frequent awakenings, nighttime anxiety or chronic insomnia</b> should not be ignored: they can significantly affect daily quality of life.",
 
   carteSommeil: {
-    image: "/assets/cartes/9_pique.png",
+    image: "/assets/cartes/anglais/an9_pique.png",
     title: "Card 9♠",
     shortText: "Prevention and management of sleep disorders",
     longText:

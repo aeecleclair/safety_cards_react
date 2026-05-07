@@ -8,7 +8,7 @@ const fr = {
   ],
 
   carte_ri_trefle: {
-    image: "/assets/cartes/roi_trefle.png",
+    image: "/assets/cartes/anglais/roi_trefle.png",
     title: "Card R♣",
     shortText: "Road accidents: young people on the front line",
     longText: "On the road, everything can change in a second. Accidents aren’t just about speed or inattention: they often result from a series of small lapses, ordinary decisions that turn tragic. This card represents that fragile moment when life hangs by a thread : a message read, a glance away, one drink too many. It’s a reminder that driving means putting your life and others' lives in your hands. Behind every statistic is a story, a face, a family.",

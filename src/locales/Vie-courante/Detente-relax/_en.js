@@ -10,7 +10,7 @@ const en = {
   pourquoiTitle: "Why want to relax?",
   pourquoiIntro: "Relaxing allows you to release daily tensions and <b>preserve your physical, mental, and emotional balance</b>.",
   carte10Pique: {
-    image: "/assets/cartes/10_pique.png",
+    image: "/assets/cartes/anglais/10_pique.png",
     title: "Card 10♠",
     shortText: "Understand and act on stress",
     longText: "The chill guy, master of relaxation, guides you to understand stress and free yourself from it. Discover simple techniques to soothe your mind and body, in case of a stress crisis and to feel well-being daily.",

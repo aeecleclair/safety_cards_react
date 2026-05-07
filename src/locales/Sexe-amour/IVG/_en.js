@@ -12,7 +12,7 @@ const en = {
   introTitle: "What is abortion?",
 
   popup: {
-    image: "/assets/cartes/5_coeur.png",
+    image: "/assets/cartes/anglais/5_coeur.png",
     title: "5♥ card",
     shortText: "Abortion: understanding, choosing, and getting support",
     longText:

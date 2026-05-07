@@ -10,7 +10,7 @@ const en = {
   resumeIntro: `Screens are designed to <b>capture your attention</b> and, in excess, can cause <b>sleep</b>, <b>concentration</b> and <b>stress problems</b> or <b>social isolation</b>. To avoid dependency, try to find balance by <b>setting limits</b>, <b>turning off notifications</b> and favoring <b>screen-free activities</b>.`,
 
   carte6_pique: {
-    image: "/assets/cartes/6_pique.png",
+    image: "/assets/cartes/anglais/6_pique.png",
     title: "Card 6♠",
     shortText: "Prevention on excessive screen use",
     longText: `Do you reach for your phone at every break? Do you endlessly scroll through stories and videos without noticing? Are you increasingly tired and stressed from being glued to screens? You may be developing a screen addiction.`,

@@ -8,7 +8,7 @@ const en = {
   comprendreTitle: "What is period poverty?",
   comprendreIntro: "Period poverty affects many people who have <b>difficulty accessing hygienic protection suited to their periods</b>.",
   carte2Coeur: {
-    image: "/assets/cartes/2_coeur.png",
+    image: "/assets/cartes/anglais/2_coeur.png",
     title: "Card 2❤",
     shortText: "Prevention of period poverty",
     longText: "When we talk about period poverty, we refer to the difficulty of obtaining hygienic protection adapted to one's period (pads, tampons, period panties, menstrual cup) due to financial, social, or cultural constraints. This situation particularly affects young people in precarious economic situations who cannot always afford these essential products. This can lead to negative consequences on health, well-being, and social participation of those concerned.",

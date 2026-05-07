@@ -9,7 +9,7 @@ const en = {
   ],
   triTitle: "Waste sorting and composting",
   carte3Carreau: {
-    image: "/assets/cartes/3_carreau.png",
+    image: "/assets/cartes/anglais/3_carreau.png",
     title: "Card 3♦",
     shortText: "Discover all the ways to reduce your environmental impact.",
     longText: "Even on an individual scale, there are many concrete ways to reduce your environmental impact. You can work on your diet, waste management, or your internet usage. These small actions count, even if they must also be accompanied by collective and political actions to be truly effective.",

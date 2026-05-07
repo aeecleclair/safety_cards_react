@@ -112,7 +112,7 @@ const en = {
     "It’s important to think about the <b>reasons why you use</b> and whether it really matches what you want. At parties, <b>social pressure</b> can influence you to smoke a joint, but <b>using drugs does not make you stronger or more interesting</b>. The effects last beyond the party and can have long-term consequences, especially with dependence.",
 
   carteValetTrefle: {
-    image: "/assets/cartes/valet_trefle.png",
+    image: "/assets/cartes/anglais/valet_trefle.png",
     title: "Card V♣",
     shortText: "Prevention about occasional consumption",
     longText:
@@ -239,7 +239,7 @@ const en = {
   organiserTextImageRight:
     "Drugs are often present at parties, and it is important to ensure everyone’s safety. If you host or organise a party, you can set up preventative measures.<br/>To take care of everyone, you can find tools to host <b>safer and more responsible parties</b> on the following sites:",
 
-  organiserImage: "/assets/cartes/valet_trefle.png",
+  organiserImage: "/assets/cartes/anglais/valet_trefle.png",
 
   resources: [
     {

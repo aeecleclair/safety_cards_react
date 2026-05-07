@@ -8,7 +8,7 @@ const en = {
   ],
 
   carte5_pique: {
-    image: "/assets/cartes/5_pique.png",
+    image: "/assets/cartes/anglais/5_pique.png",
     title: "5♠ card",
     shortText: "Sports and their benefits for body and mind",
     longText:

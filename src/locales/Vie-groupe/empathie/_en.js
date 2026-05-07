@@ -7,7 +7,7 @@ export default {
   ],
   definitionTitle: "What is empathy?",
   card: {
-    image: "/assets/cartes/7_carreau.png",
+    image: "/assets/cartes/anglais/7_carreau.png",
     title: "The 7♦ card",
     shortText: "Empathy in student life",
     longText:

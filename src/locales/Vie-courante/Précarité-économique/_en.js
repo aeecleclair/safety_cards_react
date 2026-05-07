@@ -17,7 +17,7 @@ const en = {
   // --- Section 1: Understanding ---
   comprendreTitle: "Understanding economic precarity",
   carteValetCarreau: {
-    image: "/assets/cartes/valet_carreau.png",
+    image: "/assets/cartes/anglais/valet_carreau.png",
     title: "Card V♦",
     shortText: "Student economic precarity and existing solutions",
     longText: "Here you can find a concise overview of all the solutions in place to support students facing financial difficulties, both within the school and externally. Feel free to explore the different sections of the page to learn more about the available aid and the steps to take.",

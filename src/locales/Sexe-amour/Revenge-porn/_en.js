@@ -8,7 +8,7 @@ const en = {
   revengeTitle: "What is revenge porn?",
   revengeIntro: "Revenge porn refers to the <b>distribution of intimate images without consent</b>, often after a breakup or for blackmail, and constitutes an <b>offense punishable by 2 years in prison and a €60,000 fine</b>. This particularly affects young people, with risks of massive online distribution, humiliation, and blackmail, which is why it is important to <b>react quickly</b>, <b>protect yourself</b>, and <b>ask for help</b>.",
   carteRoiCoeur: {
-    image: "/assets/cartes/roi_coeur.png",
+    image: "/assets/cartes/anglais/roi_coeur.png",
     title: "Card K❤",
     shortText: "Revenge porn: information and advice",
     longText: "We cannot prevent the sending of nudes. In a couple or a relationship of trust, it seems unthinkable that the other person could keep or distribute our intimate photos and videos for revenge. Yet, the risk exists. If you choose to send them, try to minimize distinguishing features as much as possible: avoid showing your face, tattoos, piercings, recognizable clothing, or identifiable locations. The idea is to limit the elements that would prove it is indeed you, in order to better protect yourself in the event of non-consensual distribution.",

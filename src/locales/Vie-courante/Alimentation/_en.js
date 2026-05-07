@@ -7,7 +7,7 @@ const en = {
   habitudesTitle: "Poor eating habits",
   habitudesIntro: "Skipping meals, eating an unbalanced diet, or snacking regularly can <b>harm your energy</b> and <b>well-being</b>. A <b>regular and varied</b> diet is essential to stay in shape and prevent fatigue.",
   carteAsPique: {
-    image: "/assets/cartes/as_pique.png",
+    image: "/assets/cartes/anglais/as_pique.png",
     title: "Card A♠",
     shortText: "Prevention of poor eating habits",
     longText: "Do you always eat the same thing without ever varying? Do you often skip breakfast? Do you snack in front of screens? Your eating habits can have an impact on your health: fatigue, lack of concentration, feeling unwell... A \"poor\" diet can lead to nutritional deficiencies and affect your energy as well as your mood on a daily basis.",

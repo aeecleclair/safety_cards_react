@@ -13,7 +13,7 @@ const en = {
 
   effetsTitle: "What are the effects and risks of tobacco?",
   carteAs_trefle: {
-    image: "/assets/cartes/as_trefle.png",
+    image: "/assets/cartes/anglais/as_trefle.png",
     title: "Card A♣",
     shortText: "Prevention about tobacco consumption",
     longText:
@@ -112,7 +112,7 @@ const en = {
   regularTitle: "I smoke regularly (tobacco or vaping)",
 
   carte2_trefle: {
-    image: "/assets/cartes/2_trefle.png",
+    image: "/assets/cartes/anglais/2_trefle.png",
     title: "Card 2♣",
     shortText: "Prevention about vaping",
     longText:

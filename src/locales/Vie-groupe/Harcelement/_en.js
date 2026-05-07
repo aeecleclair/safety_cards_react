@@ -7,7 +7,7 @@ const en = {
   ],
   definitionTitle: "Understanding harassment",
   carteRoiCarreau: {
-    image: "/assets/cartes/roi_carreau.png",
+    image: "/assets/cartes/anglais/roi_carreau.png",
     title: "Card K♦",
     shortText: "The notion of harassment",
     longText: "When faced with harassment, there should be no doubt about the stance to take. If you are a witness, speak out and try to be there for the victim by supporting them and guiding them toward the right services. Your presence can make all the difference.",

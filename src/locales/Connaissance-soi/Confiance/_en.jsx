@@ -15,7 +15,7 @@ const en = {
   ],
 
   card: {
-    image: "/assets/cartes/as_carreau.png",
+    image: "/assets/cartes/anglais/as_carreau.png",
     title: "Card A♦",
     shortText: "Self-confidence: strengthen and support",
     longText:

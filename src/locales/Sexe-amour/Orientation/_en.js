@@ -12,7 +12,7 @@ const fr = {
   definitionsTitle: "What is sexual orientation?",
 
   carteA_coeur: {
-    image: "/assets/cartes/as_coeur.png",
+    image: "/assets/cartes/anglais/as_coeur.png",
     title: "A♥ card",
     shortText: "Sexual orientation: understanding and respecting diversity",
     longText:

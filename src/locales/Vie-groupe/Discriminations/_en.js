@@ -14,7 +14,7 @@ const en = {
   /** Definitions and V♥ card */
   definitionTitle: "What is discrimination?",
   carteVcoeur: {
-    image: "/assets/cartes/valet_coeur.png",
+    image: "/assets/cartes/anglais/valet_coeur.png",
     title: "V♥ card",
     shortText: "Discrimination: breaking everyday injustice",
     longText:
@@ -293,7 +293,7 @@ const en = {
   /** Racism */
   racistesTitle: "Racist discrimination",
   carte8carreau: {
-    image: "/assets/cartes/8_carreau.png",
+    image: "/assets/cartes/anglais/8_carreau.png",
     title: "8♦ card",
     shortText: "Racism: colour is not a boundary",
     longText:
@@ -369,7 +369,7 @@ const en = {
   /** LGBT-phobias */
   lgbtTitle: "LGBT-phobic discrimination",
   carte9carreau: {
-    image: "/assets/cartes/9_carreau.png",
+    image: "/assets/cartes/anglais/9_carreau.png",
     title: "9♦ card",
     shortText: "LGBT-phobias: being yourself should never be dangerous",
     longText:

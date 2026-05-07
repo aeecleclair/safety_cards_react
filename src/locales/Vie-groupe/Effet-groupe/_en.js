@@ -67,7 +67,7 @@ const en = {
   // --- Section 1: Understanding ---
   comprendreTitle: "Understanding group effect",
   carteDameCarreau: {
-    image: "/assets/cartes/dame_carreau.png",
+    image: "/assets/cartes/anglais/dame_carreau.png",
     title: "Card D♦",
     shortText: "Group effect: information and advice",
     longText:
