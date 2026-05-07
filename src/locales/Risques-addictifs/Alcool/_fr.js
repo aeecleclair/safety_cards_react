@@ -11,7 +11,7 @@ const fr = {
   risque1: "<b>Boire comporte des risques</b>, pour ta santé et celle des autres. Légalement, tu restes <b>responsable</b> de tes actes, même sous l'influence de l'alcool.",
 
   carte6_trefle: {
-    image: "/assets/cartes/6_trefle.jpg",
+    image: "/assets/cartes/6_trefle.png",
     title: "La carte 6♣",
     shortText: "Prévention sur la banalisation de l'alcool en soirée",
     longText: "Difficile de dire non face à la pression du groupe, surtout dans des situations aussi banalisées qu'en soirée, où l'alcool est omniprésent. On peut souvent se sentir poussé à boire pour s'intégrer ou parce que les autres trouvent ça cool, comme on peut le voir sur cette carte. Pourtant, beaucoup aimeraient ne pas boire, ou ne pas finir ivres mais n'osent pas le dire. Alors si tu aimes boire en soirée, ne force pas les autres à en faire autant et respecte leurs choix. Et si tu ne bois pas, n'hésite pas à le dire clairement et à proposer d'autres activités. Une vraie soirée entre amis ne se résume pas à votre consommation d'alcool.",
