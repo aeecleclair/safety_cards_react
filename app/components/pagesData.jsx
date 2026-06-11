@@ -26,6 +26,7 @@ const pagesDataFr = [
       { name: "🦓 Automutilation", path: "/automutil" },
       { name: "🗺️ Déracinement culturel & vie des internationaux", path: "/deracinement" },
       { name: "😶‍🌫️ Anxiété", path: "/anxiete" },
+      { name: "👂 Risques auditifs", path: "/audit" },
     ],
   },
   {
@@ -101,6 +102,7 @@ const pagesDataEn = [
       { name: "🦓 Self-harm", path: "/automutil" },
       { name: "🗺️ Cultural uprooting & international student life", path: "/deracinement" },
       { name: "😶‍🌫️ Anxiety", path: "/anxiete" },
+      { name: "👂 Risks of hearing damage", path: "/audit" },
     ],
   },
   {
