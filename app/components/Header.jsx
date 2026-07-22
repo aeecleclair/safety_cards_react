@@ -368,7 +368,7 @@ const Header = () => {
                       </svg>
                     )}
                   </span>
-                  {lang === 'fr' ? 'English version (coming soon)' : 'Version française'}
+                  {lang === 'fr' ? 'English version' : 'Version française'}
                 </button>
               </li>
 
@@ -441,7 +441,7 @@ const Header = () => {
                     </svg>
                   )}
                 </span>
-                {lang === 'fr' ? 'English version (coming soon)' : 'Version française'}
+                {lang === 'fr' ? 'English version' : 'Version française'}
               </button>
             </li>
 
