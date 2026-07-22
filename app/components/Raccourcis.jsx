@@ -121,7 +121,7 @@ export default function Raccourcis() {
                 </svg>
               )}
             </span>
-            <span className="fab-label">{lang === 'fr' ? 'English version (coming soon)' : 'Version française'}</span>
+            <span className="fab-label">{lang === 'fr' ? 'English version' : 'Version française'}</span>
           </button>
         </div>
         <div className="fab-item">
