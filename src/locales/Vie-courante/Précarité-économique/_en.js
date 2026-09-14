@@ -44,7 +44,7 @@ const en = {
     textColor: "#b22133",
   },
   crousIntro:
-    "You can also contact the CROUS social service in Lyon (for requests other than the allocation of housing in CROUS residences, management of scholarship files and catering).",
+    "You can also contact the CROUS social service in Lyon (for requests other than the allocation of housing in CROUS residences, management of scholarship files and catering), or access the aid portal for students of the Lyon Academy (UDL) to discover the support programs, assistance tools and useful contacts for all your student life needs.",
   contactCrous: {
     image: "/assets/logo_crous.png",
     title: "CROUS Social Service – Lyon (FR)",
@@ -53,6 +53,15 @@ const en = {
     link: "https://www.crous-lyon.fr/contacts/social-et-accompagnement/",
     bgColor: "#ffffff",
     textColor: "#e30613",
+  },
+  contactUDL: {
+    image: "/assets/logo_UDL.png",
+    title: "Aid Portal for Students of the Lyon Academy (FR)",
+    subtitle: "Support and contact information for all student needs",
+    textButton: "Access the portal",
+    link: "https://mesaides.universite-lyon.fr/",
+    bgColor: "#ffffff",
+    textColor: "#000000",
   },
   parcoursTitle: "Recommended support pathway",
   parcoursListTitle: "Key steps",
@@ -220,6 +229,19 @@ const en = {
       imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
     },
   ],
+
+    saintEtienneTitle: "Aid for students living in Saint-Étienne",
+  saintEtienneText:
+    "If you are a student living in Saint-Étienne, you can also find many great deals on the la borge website.",
+  contactSaintEtienne: {
+    image: "/assets/logo-laboge.jpg",
+    title: "Great deals in Saint-Étienne (EN)",
+    subtitle: "All the great deals for 13-29 year olds, to benefit from freebies and discounts.",
+    textButton: "See information",
+    link: "https://www.laboge.fr/",
+    bgColor: "#ffffff",
+    textColor: "#000000",
+  },
 
   // --- Section 4: Witness / close friend ---
   temoinTitle: "I'm a witness / close friend",

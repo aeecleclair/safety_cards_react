@@ -79,6 +79,16 @@ const PrecariteEconomique = () => {
         textColor={t.contactCrous.textColor}
       />
 
+      <ContactCard
+        image={t.contactUDL.image}
+        title={t.contactUDL.title}
+        subtitle={t.contactUDL.subtitle}
+        textButton={t.contactUDL.textButton}
+        link={t.contactUDL.link}
+        bgColor={t.contactUDL.bgColor}
+        textColor={t.contactUDL.textColor}
+      />
+
       <h2 className="sous-titre-2">{t.parcoursTitle}</h2>
       <ListeNumerotee
         title={t.parcoursListTitle}
@@ -140,6 +150,19 @@ const PrecariteEconomique = () => {
       <p className="texte">{t.mobiliteText}</p>
       <BulletList items={t.mobiliteList} />
       <ExternalLinkBlock resources={t.mobilite} />
+
+      <h2 className="sous-titre-2">{t.saintEtienneTitle}</h2>
+      <p className="texte">{t.saintEtienneText}</p>
+      <ContactCard
+        image={t.contactSaintEtienne.image}
+        title={t.contactSaintEtienne.title}
+        subtitle={t.contactSaintEtienne.subtitle}
+        phone={t.contactSaintEtienne.phone}
+        textButton={t.contactSaintEtienne.textButton}
+        link={t.contactSaintEtienne.link}
+        bgColor={t.contactSaintEtienne.bgColor}
+        textColor={t.contactSaintEtienne.textColor}
+      />
 
       <Separateur />
 

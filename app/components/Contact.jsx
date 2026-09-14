@@ -19,6 +19,10 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
   }, []);
 
   useEffect(() => {
+    if (!imageSrc || (propBgColor && propTextColor)) {
+      return;
+    }
+
     if (!propBgColor || !propTextColor) {
       const img = new Image(); 
       img.crossOrigin = "Anonymous";
@@ -65,7 +69,7 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
   if (variant === 'horizontal') {
     return (
       <div className="contact-card contact-card-horizontal" style={{ backgroundColor: baseColors.cardBg, borderColor: baseColors.border }}>
-        <img src={imageSrc} alt={title} className="contact-image" />
+        {imageSrc && <img src={imageSrc} alt={title} className="contact-image" />}
         <div className="contact-info">
           <h2 style={{ color: baseColors.text }}>{title}</h2>
           {subtitle && <h3 style={{ color: baseColors.text }}>{subtitle}</h3>}
@@ -94,7 +98,7 @@ const ContactCard = ({ image, title, subtitle, phone, email, hours, textButton, 
 
   return (
     <div className="contact-card" style={{ backgroundColor: baseColors.cardBg, borderColor: baseColors.border }}>
-      <img src={imageSrc} alt={title} className="contact-image" />
+      {imageSrc && <img src={imageSrc} alt={title} className="contact-image" />}
       <div className="contact-info">
         <h2 style={{ color: baseColors.text }}>{title}</h2>
         {subtitle && <h3 style={{ color: baseColors.text }}>{subtitle}</h3>}

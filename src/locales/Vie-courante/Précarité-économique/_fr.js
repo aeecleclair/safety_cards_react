@@ -44,7 +44,7 @@ const fr = {
     textColor: "#b22133",
   },
   crousIntro:
-    "Tu peux aussi contacter le service social du CROUS de Lyon (pour des demandes autres que l'attribution des logements en résidences Crous, la gestion des dossiers de bourse et la restauration).",
+    "Tu peux aussi contacter le service social du CROUS de Lyon (pour des demandes autres que l'attribution des logements en résidences Crous, la gestion des dossiers de bourse et la restauration), ou accéder au portail des aides pour les étudiants de l’Académie de Lyon (UDL) pour découvrir les dispositifs d’aide, de soutien et les contacts utiles à tous les besoins de ta vie étudiante.",
   contactCrous: {
     image: "/assets/logo_crous.png",
     title: "Service social du CROUS de Lyon",
@@ -54,6 +54,17 @@ const fr = {
     bgColor: "#ffffff",
     textColor: "#e30613",
   },
+  contactUDL: {
+    image: "/assets/logo_UDL.png",
+    title: "Portail des aides pour les étudiants de l’Académie de Lyon",
+    subtitle: "Dispositifs d’aide, de soutien et les contacts utiles à tous les besoins de votre vie étudiante",
+    textButton: "Accéder au portail",
+    link: "https://mesaides.universite-lyon.fr/",
+    bgColor: "#ffffff",
+    textColor: "#000000",
+  },
+
+
   parcoursTitle: "Parcours d'aide recommandé",
   parcoursListTitle: "Étapes clés",
   parcoursListSubtitle: "Qui contacter et quoi activer en priorité",
@@ -220,6 +231,20 @@ const fr = {
       imageSrc: "/assets/2024_LOGO-CENTRALE-H_ROUGE_CMJN_carre.png",
     },
   ],
+
+  saintEtienneTitle: "Aides pour les étudiants de Saint-Étienne",
+  saintEtienneText:
+    "Si tu es étudiant•e à Saint-Étienne, tu peux retrouver de nombreux bons plans sur le site la boge.",
+  
+    contactSaintEtienne: {
+    image: "/assets/logo-laboge.jpg",
+    title: "Bons plans de Saint-Étienne",
+    subtitle: "Tous les bons plans des 13-29 ans, pour bénéficier de gratuités et de réductions.",
+    textButton: "Voir le site",
+    link: "https://www.laboge.fr/",
+    bgColor: "#ffffff",
+    textColor: "#000000",
+  },
 
   // --- Section 4 : Témoin / proche ---
   temoinTitle: "Je suis témoin / proche",
